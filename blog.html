@@ -93,67 +93,47 @@
             color: var(--text);
             margin-bottom: 1.5rem;
         }
-        .blog-section-label {
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--accent);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
         }
-        .blog-section-label::after {
-            content: '';
-            flex: 1;
-            height: 1px;
-            background: var(--border);
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
         }
-        .knowledge-item {
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
             background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 8px;
-            margin-bottom: 0.75rem;
-            overflow: hidden;
-        }
-        .knowledge-item summary {
             padding: 1rem 1.25rem;
-            cursor: pointer;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
             color: var(--text);
-            font-weight: 500;
-            font-size: 0.95rem;
-            list-style: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: background 0.2s;
+            font-weight: 600;
         }
-        .knowledge-item summary::-webkit-details-marker {
-            display: none;
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
         }
-        .knowledge-item summary::after {
-            content: '+';
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 1.2rem;
-            color: var(--accent);
-            flex-shrink: 0;
-            margin-left: 1rem;
-            transition: transform 0.2s;
-        }
-        .knowledge-item[open] summary::after {
-            content: '-';
-        }
-        .knowledge-item summary:hover {
-            background: var(--surface);
-        }
-        .knowledge-answer {
-            padding: 0 1.25rem 1.25rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.7;
-            border-top: 1px solid var(--border);
-            padding-top: 1rem;
+        .blog-post-body h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
         }
        .hn-item {
            display: block;
@@ -257,47 +237,16 @@
 
         <article class="blog-post-card" id="post-2026-04-26">
             <div class="blog-post-date">April 26, 2026</div>
-            <h2 class="blog-post-title">The Dance of Code: Rails Concerns, AI Breakthroughs, and Why We&#39;re Still Building Things</h2>
-            <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;"><p>Today's exploration threads through the nuances of Rails development, AI-driven problem-solving, and the ever-present concerns of digital security. As we navigate these topics, we’ll see how shared practices in code and cross-domain innovations can help us build systems that are not only functional but also resilient.</p></p>
-            <div class="blog-section-label">Deep Dives</div>
-            <details class="knowledge-item" open>
-                <summary>
-                    <span>Harnessing Rails Concerns for Cleaner Code</span>
-                </summary>
-                <div class="knowledge-answer"><p>Rails concerns are an excellent way to keep our code DRY (Don't Repeat Yourself) while encapsulating shared functionality. For instance, if we define a concern for discount calculations, it might look something like this:</p><pre><code>module Discountable<br>  extend ActiveSupport::Concern<br><br>  def apply_discount(amount)<br>    amount - (amount * discount_rate)<br>  end<br>  <br>  private<br><br>  def discount_rate<br>    0.10 # or fetch from user attributes<br>  end<br>end</code></pre><p>By including this in our models, we centralize discount logic and make it easier to test and maintain.</p></div>
-            </details>
-            <details class="knowledge-item" open>
-                <summary>
-                    <span>Understanding Database Migrations in Rails</span>
-                </summary>
-                <div class="knowledge-answer"><p>Database migrations are crucial for version-controlling our schema changes in Rails. A key best practice is to keep migrations focused and descriptive. For example, instead of a vague migration like <code>change_users_table</code>, break it into:</p><pre><code>add_email_to_users.rb<br>remove_age_from_users.rb</code></pre><p>This level of granularity makes rollbacks simpler and enhances maintainability. Always test these migrations in a staging environment to prevent production surprises.</p></div>
-            </details>
-            <details class="knowledge-item" open>
-                <summary>
-                    <span>Race Conditions: A Cautionary Tale</span>
-                </summary>
-                <div class="knowledge-answer"><p>Race conditions can wreak havoc in multi-threaded applications when shared data is accessed simultaneously. To prevent these, we can utilize synchronization mechanisms. In Java, this might look like:</p><pre><code>synchronized(this) {<br>  // critical section<br>}</code></pre><p>This ensures that only one thread can execute this block at a time, thus safeguarding against concurrent modifications. However, be cautious — overusing synchronization can lead to performance bottlenecks. Always balance the need for safety with the need for speed.</p></div>
-            </details>
-            <details class="knowledge-item" open>
-                <summary>
-                    <span>Embracing PyTorch&#39;s Autograd for Gradient Calculation</span>
-                </summary>
-                <div class="knowledge-answer"><p>PyTorch's autograd system automates gradient calculations, which is a game-changer for neural network training. When a tensor with <code>requires_grad=True</code> calls <code>backward()</code>, PyTorch constructs a computation graph and calculates gradients efficiently. For manual calculations, we can temporarily disable autograd:</p><pre><code>with torch.no_grad():<br>  # manual forward pass<br>  output = model(input)<br>  loss = criterion(output, target)</code></pre><p>This control allows for experimentation while ensuring we maintain performance during training.</p></div>
-            </details>
-            <div class="blog-section-label" style="margin-top:1.5rem;">What Caught My Eye on HN</div>
-            <a href="https://techtrenches.dev/p/the-west-forgot-how-to-make-things" target="_blank" rel="noopener" class="hn-item">
-                <div class="hn-item-title"><span>The West Forgot How to Make Things. Now It&#39;s Forgetting How to Code</span><span class="hn-badge">&#9650; 51</span></div>
-                <div class="hn-item-take">An insightful reflection on our current state; it’s a wake-up call for us to remember that coding is just as much about craftsmanship as it is about logic.</div>
-            </a>
-            <a href="https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/" target="_blank" rel="noopener" class="hn-item">
-                <div class="hn-item-title"><span>Amateur armed with ChatGPT solves an Erdős problem</span><span class="hn-badge">&#9650; 304</span></div>
-                <div class="hn-item-take">This is a testament to AI&#39;s potential in democratizing access to complex problem-solving — making the impossible feel a bit more attainable.</div>
-            </a>
-            <a href="https://news.ycombinator.com/item?id=47906253" target="_blank" rel="noopener" class="hn-item">
-                <div class="hn-item-title"><span>Tell HN: An app is silently installing itself on my iPhone every day</span><span class="hn-badge">&#9650; 199</span></div>
-                <div class="hn-item-take">A stark reminder of the security implications we often overlook. We need to prioritize user consent and transparency in app behavior.</div>
-            </a>
-            <p style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--text);font-style:italic;font-size:0.95rem;">In a world where technology evolves rapidly, how can we ensure our systems remain both innovative and secure?</p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">rails</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">biomedical-engineering</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">craftsmanship</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">systems-design</span></div>
+            <h2 class="blog-post-title">That moment when Rails concerns remind me of biomedical systems</h2>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I've been diving deep into Rails lately, particularly how concerns can encapsulate shared behavior across models. It strikes me as similar to the modular design principles we apply in biomedical engineering, where components can be reused and maintained independently.</p>
+<p>Take Rails concerns, for instance. They offer a neat way to keep our code DRY (Don't Repeat Yourself). When I think about it, concerns are a bit like the individual organs in a body. Each organ has its responsibility, but they all work together as a system. If we modularize code effectively with concerns, just like we do with biological systems, we can achieve graceful failure. That's essential in engineering; a failure in one part doesn't mean the whole system collapses.</p>
+<p>On the flip side, I can’t help but wonder how many times I’ve encountered confusing behavior due to poorly defined scopes in Rails. Scopes allow us to chain queries, but if they're not clear, they can lead to unexpected results. That’s reminiscent of the feedback loops in biomedical systems—if one stage isn’t calibrated correctly, it can skew the entire outcome. What if we treated our Rails scopes with the same level of rigorous testing we apply in our biomedical systems?</p>
+<p>There's another parallel here that’s worth exploring: the importance of clean interfaces. In OOP, interfaces promote design flexibility, allowing for different implementations while keeping the consumer code untouched. It's like designing a new medical device; we need a clear interface for how the components interact, ensuring that any improvements or changes in one area don’t inadvertently impact others.</p>
+<p>While I've been pondering these design principles, I came across an HN story titled <a href="https://techtrenches.dev/p/the-west-forgot-how-to-make-things">"The West Forgot How to Make Things. Now It's Forgetting How to Code"</a>. It resonated with me because it reflects this lost craftsmanship. Are we too focused on getting the job done that we’ve forgotten the importance of constructing our code like we would a finely-tuned machine? When I think about what it means to build something robust, I realize that many of the best engineering practices—from controlling race conditions to effective database migrations—are simply about craftsmanship.</p>
+<p>Just the other day, I implemented a learning rate scheduler in PyTorch for a model training loop. It was one of those moments where I thought, 'Wow, if we treated our code with the same attention to detail as we do in clinical settings, we’d tackle so many more challenges.' The scheduler adjusts the learning rate dynamically, similar to how we modulate drug dosages based on patient feedback. It’s this iterative, responsive approach that keeps everything from breaking down.</p>
+<p>Ultimately, the art of engineering—whether in coding or biomedical design—lies in our ability to create systems that are inherently resilient. That makes me wonder: how can we innovate with the same passion for craftsmanship in our coding practices as we do in building life-saving technologies? Is it time to re-evaluate our understanding of what it means to build things?</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://techtrenches.dev/p/the-west-forgot-how-to-make-things" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The West Forgot How to Make Things. Now It&#39;s Forgetting How to Code</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲51</span></a></div>
         </article>
 
         <!-- BLOG_POSTS_END -->
