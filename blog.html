@@ -257,41 +257,47 @@
 
         <article class="blog-post-card" id="post-2026-04-26">
             <div class="blog-post-date">April 26, 2026</div>
-            <h2 class="blog-post-title">AI Problem Solvers, Forgotten Crafts, and the Digital Age Dilemma</h2>
-            <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;"><p>Today's tech landscape feels like a paradox: on one hand, we're witnessing AI tackle complex problems, while on the other, there's a haunting sense of a lost art in both coding and manufacturing. As we advance, we must ask ourselves: are we creating tools that empower us, or are we inadvertently crafting a digital labyrinth that complicates our lives?</p></p>
+            <h2 class="blog-post-title">The Dance of Code: Rails Concerns, AI Breakthroughs, and Why We&#39;re Still Building Things</h2>
+            <p style="color:var(--text-muted);font-size:0.95rem;line-height:1.8;margin-bottom:1.5rem;"><p>Today's exploration threads through the nuances of Rails development, AI-driven problem-solving, and the ever-present concerns of digital security. As we navigate these topics, we’ll see how shared practices in code and cross-domain innovations can help us build systems that are not only functional but also resilient.</p></p>
             <div class="blog-section-label">Deep Dives</div>
             <details class="knowledge-item" open>
                 <summary>
-                    <span>Rails Concerns: The Craft of Code Reuse</span>
+                    <span>Harnessing Rails Concerns for Cleaner Code</span>
                 </summary>
-                <div class="knowledge-answer"><p>Rails concerns are more than just a coding convenience; they embody a philosophy of modularity and simplicity. By encapsulating shared functionality, we can keep our codebases clean and maintainable. For instance, think about a concern like <code>Discountable</code> that can be reused across multiple models. This is akin to a musician borrowing a motif across different compositions — it resonates with familiarity but allows for fresh interpretations. The key takeaway? Embrace concerns to enhance collaboration and reduce technical debt.</p></div>
+                <div class="knowledge-answer"><p>Rails concerns are an excellent way to keep our code DRY (Don't Repeat Yourself) while encapsulating shared functionality. For instance, if we define a concern for discount calculations, it might look something like this:</p><pre><code>module Discountable<br>  extend ActiveSupport::Concern<br><br>  def apply_discount(amount)<br>    amount - (amount * discount_rate)<br>  end<br>  <br>  private<br><br>  def discount_rate<br>    0.10 # or fetch from user attributes<br>  end<br>end</code></pre><p>By including this in our models, we centralize discount logic and make it easier to test and maintain.</p></div>
             </details>
             <details class="knowledge-item" open>
                 <summary>
-                    <span>Concurrency: Guarding Against Digital Chaos</span>
+                    <span>Understanding Database Migrations in Rails</span>
                 </summary>
-                <div class="knowledge-answer"><p>Race conditions and deadlocks are the unsung villains in the realm of concurrency. Just as a conductor ensures every musician is in harmony, we must apply appropriate synchronization mechanisms, such as locks, to prevent chaos in our multi-threaded applications. But there’s a fine line; over-synchronizing can lead to performance bottlenecks. The lesson here is about balance: like in life, how we manage our resources can determine the symphony's success or its cacophony.</p></div>
+                <div class="knowledge-answer"><p>Database migrations are crucial for version-controlling our schema changes in Rails. A key best practice is to keep migrations focused and descriptive. For example, instead of a vague migration like <code>change_users_table</code>, break it into:</p><pre><code>add_email_to_users.rb<br>remove_age_from_users.rb</code></pre><p>This level of granularity makes rollbacks simpler and enhances maintainability. Always test these migrations in a staging environment to prevent production surprises.</p></div>
             </details>
             <details class="knowledge-item" open>
                 <summary>
-                    <span>AI and Problem Solving: A New Era of Collaboration</span>
+                    <span>Race Conditions: A Cautionary Tale</span>
                 </summary>
-                <div class="knowledge-answer"><p>The recent achievement of an amateur harnessing ChatGPT to tackle an Erdős problem is a testament to how AI can amplify human creativity. This intersection of technology and mathematical challenge is reminiscent of how artistic movements often emerge from the collaboration of various influences. As engineers, we should view AI not as a replacement, but as a collaborative partner that enhances our capabilities — an extension of our own thought processes.</p></div>
+                <div class="knowledge-answer"><p>Race conditions can wreak havoc in multi-threaded applications when shared data is accessed simultaneously. To prevent these, we can utilize synchronization mechanisms. In Java, this might look like:</p><pre><code>synchronized(this) {<br>  // critical section<br>}</code></pre><p>This ensures that only one thread can execute this block at a time, thus safeguarding against concurrent modifications. However, be cautious — overusing synchronization can lead to performance bottlenecks. Always balance the need for safety with the need for speed.</p></div>
+            </details>
+            <details class="knowledge-item" open>
+                <summary>
+                    <span>Embracing PyTorch&#39;s Autograd for Gradient Calculation</span>
+                </summary>
+                <div class="knowledge-answer"><p>PyTorch's autograd system automates gradient calculations, which is a game-changer for neural network training. When a tensor with <code>requires_grad=True</code> calls <code>backward()</code>, PyTorch constructs a computation graph and calculates gradients efficiently. For manual calculations, we can temporarily disable autograd:</p><pre><code>with torch.no_grad():<br>  # manual forward pass<br>  output = model(input)<br>  loss = criterion(output, target)</code></pre><p>This control allows for experimentation while ensuring we maintain performance during training.</p></div>
             </details>
             <div class="blog-section-label" style="margin-top:1.5rem;">What Caught My Eye on HN</div>
-            <a href="https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/" target="_blank" rel="noopener" class="hn-item">
-                <div class="hn-item-title"><span>Amateur armed with ChatGPT solves an Erdős problem</span><span class="hn-badge">▲ 304</span></div>
-                <div class="hn-item-take">This illustrates the profound potential of AI in tackling complex problems. Are we ready to embrace this collaboration?</div>
-            </a>
             <a href="https://techtrenches.dev/p/the-west-forgot-how-to-make-things" target="_blank" rel="noopener" class="hn-item">
-                <div class="hn-item-title"><span>The West Forgot How to Make Things. Now It&#39;s Forgetting How to Code</span><span class="hn-badge">▲ 51</span></div>
-                <div class="hn-item-take">A sobering reminder of the importance of craftsmanship in both physical and digital realms. How do we revive this culture of making?</div>
+                <div class="hn-item-title"><span>The West Forgot How to Make Things. Now It&#39;s Forgetting How to Code</span><span class="hn-badge">&#9650; 51</span></div>
+                <div class="hn-item-take">An insightful reflection on our current state; it’s a wake-up call for us to remember that coding is just as much about craftsmanship as it is about logic.</div>
             </a>
-            <a href="https://juraj.bednar.io/en/blog-en/2026/04/17/eu-age-control-the-trojan-horse-for-digital-ids/" target="_blank" rel="noopener" class="hn-item">
-                <div class="hn-item-title"><span>EU Age Control: The Trojan Horse for Digital IDs</span><span class="hn-badge">▲ 114</span></div>
-                <div class="hn-item-take">The implications of digital ID policies are profound. As we innovate, are we safeguarding privacy or sacrificing it on the altar of convenience?</div>
+            <a href="https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/" target="_blank" rel="noopener" class="hn-item">
+                <div class="hn-item-title"><span>Amateur armed with ChatGPT solves an Erdős problem</span><span class="hn-badge">&#9650; 304</span></div>
+                <div class="hn-item-take">This is a testament to AI&#39;s potential in democratizing access to complex problem-solving — making the impossible feel a bit more attainable.</div>
             </a>
-            <p style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--text);font-style:italic;font-size:0.95rem;">Are we building a future that liberates us or one that confines us?</p>
+            <a href="https://news.ycombinator.com/item?id=47906253" target="_blank" rel="noopener" class="hn-item">
+                <div class="hn-item-title"><span>Tell HN: An app is silently installing itself on my iPhone every day</span><span class="hn-badge">&#9650; 199</span></div>
+                <div class="hn-item-take">A stark reminder of the security implications we often overlook. We need to prioritize user consent and transparency in app behavior.</div>
+            </a>
+            <p style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--text);font-style:italic;font-size:0.95rem;">In a world where technology evolves rapidly, how can we ensure our systems remain both innovative and secure?</p>
         </article>
 
         <!-- BLOG_POSTS_END -->
