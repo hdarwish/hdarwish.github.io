@@ -97,7 +97,8 @@ body {
     letter-spacing: 0.02em;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--text);
 }
 

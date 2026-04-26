@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Insights - Hafs Ibrahim</title>
+    <meta name="description" content="Curated tech knowledge and interesting discussions from across the web.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+        .blog-hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: var(--accent-hover);
+        }
+        .blog-posts {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s;
+        }
+        .blog-post-card:hover {
+            border-color: var(--accent);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .blog-section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+        .knowledge-item {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 0.75rem;
+            overflow: hidden;
+        }
+        .knowledge-item summary {
+            padding: 1rem 1.25rem;
+            cursor: pointer;
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.2s;
+        }
+        .knowledge-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .knowledge-item summary::after {
+            content: '+';
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--accent);
+            flex-shrink: 0;
+            margin-left: 1rem;
+            transition: transform 0.2s;
+        }
+        .knowledge-item[open] summary::after {
+            content: '-';
+        }
+        .knowledge-item summary:hover {
+            background: var(--surface);
+        }
+        .knowledge-answer {
+            padding: 0 1.25rem 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+        .hn-item {
+            display: block;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            margin-bottom: 0.75rem;
+            text-decoration: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+        .hn-item:hover {
+            border-color: var(--accent);
+            background: var(--surface);
+        }
+        .hn-item-title {
+            color: var(--text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        .hn-item-meta {
+            display: flex;
+            gap: 1rem;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+        .hn-item-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+        .hn-item-take {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        .no-posts {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+        }
+        .no-posts p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .no-posts span {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="container">
+            <h1>Daily Insights<span class="accent">.</span></h1>
+            <p>Curated tech knowledge and interesting discussions from across the web</p>
+            <a href="index.html" class="back-link">&#8592; Back to Portfolio</a>
+        </div>
+    </header>
+
+    <main class="blog-posts">
+        <!-- BLOG_POSTS_START -->
+        <div class="no-posts">
+            <p>No posts yet</p>
+            <span>Check back soon for daily tech insights and discussions.</span>
+        </div>
+        <!-- BLOG_POSTS_END -->
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
