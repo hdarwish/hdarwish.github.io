@@ -155,73 +155,51 @@
             border-top: 1px solid var(--border);
             padding-top: 1rem;
         }
-        .hn-item {
-            display: block;
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 0.75rem;
-            text-decoration: none;
-            transition: border-color 0.25s, background 0.25s, transform 0.25s;
-        }
-        .hn-item:hover {
-            border-color: var(--accent);
-            background: var(--surface);
-            transform: translateX(4px);
-        }
-        .hn-item-title {
-            color: var(--text);
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
-        .hn-item-footer {
+       .hn-item {
+           display: block;
+           background: var(--bg-alt);
+           border: 1px solid var(--border);
+           border-radius: 10px;
+           padding: 1.25rem 1.5rem;
+           margin-bottom: 0.75rem;
+           text-decoration: none;
+           transition: border-color 0.25s, background 0.25s, transform 0.25s;
+       }
+       .hn-item:hover {
+           border-color: var(--accent);
+           background: var(--surface);
+           transform: translateX(4px);
+       }
+       .hn-item-title {
+           color: var(--text);
+           font-weight: 600;
+           font-size: 0.95rem;
+           line-height: 1.4;
             display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+       }
         .hn-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.3rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            font-weight: 500;
-            padding: 3px 10px;
-            border-radius: 20px;
-            background: var(--accent-glow);
-            color: var(--accent-hover);
-        }
-        .hn-badge-neutral {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-muted);
-        }
-        .hn-discuss {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--accent);
-            text-decoration: none;
-            padding: 3px 10px;
-            border-radius: 20px;
-            border: 1px solid rgba(59, 130, 246, 0.25);
-            transition: all 0.2s;
-            margin-left: auto;
-        }
-        .hn-discuss:hover {
-            background: var(--accent-glow);
-            border-color: var(--accent);
-        }
+           display: inline-flex;
+           align-items: center;
+           gap: 0.3rem;
+           font-family: 'JetBrains Mono', monospace;
+           font-size: 0.7rem;
+           font-weight: 500;
+           padding: 3px 10px;
+           border-radius: 20px;
+           background: var(--accent-glow);
+           color: var(--accent-hover);
+            flex-shrink: 0;
+            white-space: nowrap;
+       }
         .hn-item-take {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            line-height: 1.6;
-            margin-top: 0.75rem;
-            padding-top: 0.75rem;
-            border-top: 1px solid var(--border);
-        }
+           color: var(--text-muted);
+           font-size: 0.85rem;
+           line-height: 1.6;
+           margin-top: 0.75rem;
+       }
         .no-posts {
             text-align: center;
             padding: 4rem 2rem;
@@ -302,30 +280,15 @@
             </details>
             <div class="blog-section-label" style="margin-top:1.5rem;">What Caught My Eye on HN</div>
             <a href="https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/" target="_blank" rel="noopener" class="hn-item">
-                <div class="hn-item-title">Amateur armed with ChatGPT solves an Erdős problem</div>
-                <div class="hn-item-footer">
-                    <span class="hn-badge">▲ 304</span>
-                    <span class="hn-badge hn-badge-neutral">💬 185</span>
-                    <a href="https://news.ycombinator.com/item?id=47903126" target="_blank" rel="noopener" class="hn-discuss">discuss →</a>
-                </div>
+                <div class="hn-item-title"><span>Amateur armed with ChatGPT solves an Erdős problem</span><span class="hn-badge">▲ 304</span></div>
                 <div class="hn-item-take">This illustrates the profound potential of AI in tackling complex problems. Are we ready to embrace this collaboration?</div>
             </a>
             <a href="https://techtrenches.dev/p/the-west-forgot-how-to-make-things" target="_blank" rel="noopener" class="hn-item">
-                <div class="hn-item-title">The West Forgot How to Make Things. Now It&#39;s Forgetting How to Code</div>
-                <div class="hn-item-footer">
-                    <span class="hn-badge">▲ 51</span>
-                    <span class="hn-badge hn-badge-neutral">💬 19</span>
-                    <a href="https://news.ycombinator.com/item?id=47907879" target="_blank" rel="noopener" class="hn-discuss">discuss →</a>
-                </div>
+                <div class="hn-item-title"><span>The West Forgot How to Make Things. Now It&#39;s Forgetting How to Code</span><span class="hn-badge">▲ 51</span></div>
                 <div class="hn-item-take">A sobering reminder of the importance of craftsmanship in both physical and digital realms. How do we revive this culture of making?</div>
             </a>
             <a href="https://juraj.bednar.io/en/blog-en/2026/04/17/eu-age-control-the-trojan-horse-for-digital-ids/" target="_blank" rel="noopener" class="hn-item">
-                <div class="hn-item-title">EU Age Control: The Trojan Horse for Digital IDs</div>
-                <div class="hn-item-footer">
-                    <span class="hn-badge">▲ 114</span>
-                    <span class="hn-badge hn-badge-neutral">💬 38</span>
-                    <a href="https://news.ycombinator.com/item?id=47907130" target="_blank" rel="noopener" class="hn-discuss">discuss →</a>
-                </div>
+                <div class="hn-item-title"><span>EU Age Control: The Trojan Horse for Digital IDs</span><span class="hn-badge">▲ 114</span></div>
                 <div class="hn-item-take">The implications of digital ID policies are profound. As we innovate, are we safeguarding privacy or sacrificing it on the altar of convenience?</div>
             </a>
             <p style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);color:var(--text);font-style:italic;font-size:0.95rem;">Are we building a future that liberates us or one that confines us?</p>
