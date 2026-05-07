@@ -179,7 +179,7 @@ html[data-theme="drunk"],
 /* Theme toggle */
 .theme-toggle {
     position: fixed;
-    bottom: 24px;
+    top: 18px;
     right: 24px;
     z-index: 200;
     display: flex;
