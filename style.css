@@ -598,11 +598,11 @@ body {
     border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
-.project-what {
+.project-card p.project-what {
     font-size: 0.85rem;
     color: var(--accent);
     font-weight: 500;
-    margin-bottom: 8px !important;
+    margin-bottom: 8px;
     font-family: var(--mono);
     flex: none;
 }
