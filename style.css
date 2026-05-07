@@ -283,6 +283,44 @@ body {
     transition: transform 0.3s, opacity 0.3s;
 }
 
+/* Theme cycle button — sits in nav */
+.theme-cycle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 12px 6px 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.theme-cycle:hover {
+    border-color: var(--accent);
+    background: var(--accent-glow);
+}
+
+.theme-icon {
+    font-size: 0.85rem;
+    line-height: 1;
+}
+
+.theme-name {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    text-transform: lowercase;
+}
+
+.theme-cycle:hover .theme-name {
+    color: var(--text);
+}
+
 /* ---- Hero ---- */
 
 .hero {
@@ -1070,6 +1108,17 @@ body {
 
     .nav-toggle.open span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    .theme-name {
+        display: none;
+    }
+
+    .theme-cycle {
+        padding: 6px 8px;
+        margin-left: 0;
+        order: -1;
+        margin-right: 8px;
     }
 
     .hero-content {

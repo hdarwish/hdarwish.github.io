@@ -221,4 +221,37 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
     }
 })();
 
+// Theme cycle — single button that rotates through themes
+(function() {
+    var themes = [
+        { id: 'dark',  icon: '🌑', name: 'dark' },
+        { id: 'light', icon: '🌞', name: 'light' },
+        { id: 'eink',  icon: '📰', name: 'eink' },
+        { id: 'xterm', icon: '💻', name: 'xterm' },
+        { id: 'drunk', icon: '🥴', name: 'drunk' }
+    ];
 
+    var saved = localStorage.getItem('theme') || 'dark';
+    var idx = Math.max(0, themes.findIndex(function(t) { return t.id === saved; }));
+    document.documentElement.setAttribute('data-theme', themes[idx].id);
+
+    var btn = document.getElementById('theme-cycle');
+    if (!btn) return;
+
+    var iconEl = btn.querySelector('.theme-icon');
+    var nameEl = btn.querySelector('.theme-name');
+
+    function update() {
+        iconEl.textContent = themes[idx].icon;
+        nameEl.textContent = themes[idx].name;
+    }
+
+    update();
+
+    btn.addEventListener('click', function() {
+        idx = (idx + 1) % themes.length;
+        document.documentElement.setAttribute('data-theme', themes[idx].id);
+        localStorage.setItem('theme', themes[idx].id);
+        update();
+    });
+})();
