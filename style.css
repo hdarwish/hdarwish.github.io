@@ -436,7 +436,10 @@ body {
     padding: 2px 8px;
     border-radius: 4px;
     font-weight: 700;
-    white-space: nowrap;
+}
+
+@media (min-width: 769px) {
+    .hl { white-space: nowrap; }
 }
 
 .hl-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
