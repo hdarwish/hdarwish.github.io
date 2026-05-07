@@ -176,42 +176,7 @@ html[data-theme="drunk"],
 [data-theme="drunk"] .project-link-soon { color: #ffcc33; }
 [data-theme="drunk"] .project-card.featured { border-color: rgba(255,110,199,0.2); background: linear-gradient(135deg, #2d1350 0%, rgba(255,110,199,0.05) 100%); }
 
-/* Theme toggle */
-.theme-toggle {
-    position: fixed;
-    top: 18px;
-    right: 24px;
-    z-index: 200;
-    display: flex;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-}
 
-.theme-toggle button {
-    background: none;
-    border: none;
-    padding: 10px 14px;
-    cursor: pointer;
-    font-size: 1rem;
-    color: var(--text-muted);
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-
-.theme-toggle button:hover {
-    color: var(--text);
-    background: var(--accent-glow);
-}
-
-.theme-toggle button.active {
-    color: var(--accent);
-    background: var(--accent-glow);
-}
 
 *, *::before, *::after {
     margin: 0;
