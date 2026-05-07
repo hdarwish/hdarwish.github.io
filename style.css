@@ -188,6 +188,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
     overflow-x: hidden;
+    width: 100%;
 }
 
 body {
@@ -197,6 +198,8 @@ body {
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .container {
@@ -351,7 +354,7 @@ body {
 .hero-circle-1 {
     width: 320px;
     height: 320px;
-    right: -60px;
+    right: 0;
     top: 15%;
     background: radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, transparent 70%);
     animation: float-circle 8s ease-in-out infinite;
