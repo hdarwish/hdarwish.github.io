@@ -213,16 +213,16 @@ body::after {
         repeating-linear-gradient(
             90deg,
             transparent,
-            transparent 79px,
-            rgba(236, 72, 153, 0.06) 79px,
-            rgba(236, 72, 153, 0.06) 80px
+            transparent 78px,
+            rgba(236, 72, 153, 0.09) 78px,
+            rgba(236, 72, 153, 0.09) 80px
         ),
         repeating-linear-gradient(
             0deg,
             transparent,
-            transparent 79px,
-            rgba(236, 72, 153, 0.05) 79px,
-            rgba(236, 72, 153, 0.05) 80px
+            transparent 78px,
+            rgba(236, 72, 153, 0.07) 78px,
+            rgba(236, 72, 153, 0.07) 80px
         );
 }
 
