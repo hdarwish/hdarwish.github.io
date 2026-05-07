@@ -18,7 +18,7 @@
 }
 
 /* Light theme */
-[data-theme="light"] {
+html[data-theme="light"] {
     --bg: #faf8f5;
     --bg-alt: #f0ece6;
     --surface: #ffffff;
