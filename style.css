@@ -203,34 +203,31 @@ body {
 }
 
 /* Tron perspective grid — root background layer behind everything */
-body::before {
+body::after {
     content: '';
     position: fixed;
     inset: 0;
-    z-index: 0;
+    z-index: 9999;
     pointer-events: none;
     background:
         repeating-linear-gradient(
             90deg,
             transparent,
             transparent 79px,
-            rgba(236, 72, 153, 0.04) 79px,
-            rgba(236, 72, 153, 0.04) 80px
+            rgba(236, 72, 153, 0.06) 79px,
+            rgba(236, 72, 153, 0.06) 80px
         ),
         repeating-linear-gradient(
             0deg,
             transparent,
             transparent 79px,
-            rgba(236, 72, 153, 0.035) 79px,
-            rgba(236, 72, 153, 0.035) 80px
+            rgba(236, 72, 153, 0.05) 79px,
+            rgba(236, 72, 153, 0.05) 80px
         );
-    mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 100%);
-    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 100%);
 }
 
 body > * {
     position: relative;
-    z-index: 1;
 }
 
 .container {
