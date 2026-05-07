@@ -76,6 +76,24 @@ html[data-theme="light"],
     color: #a16207;
 }
 
+/* Light theme — hero + space overrides */
+[data-theme="light"] .bar-amber { background: #d97706; }
+[data-theme="light"] .bar-green { background: #16a34a; }
+[data-theme="light"] .bar-blue { background: #2563eb; }
+[data-theme="light"] .bar-dark { background: #9ca3af; }
+[data-theme="light"] .hero-label { color: #be185d; }
+[data-theme="light"] .hl-amber { background: rgba(217,119,6,0.12); color: #92400e; }
+[data-theme="light"] .hl-rose { background: rgba(190,24,93,0.1); color: #9d174d; }
+[data-theme="light"] .hl-green { background: rgba(22,163,74,0.1); color: #166534; }
+[data-theme="light"] .hl-blue { background: rgba(37,99,235,0.1); color: #1e40af; }
+[data-theme="light"] .hl-purple { background: rgba(126,34,206,0.1); color: #6b21a8; }
+[data-theme="light"] .broadcast-icon { color: #d97706; }
+[data-theme="light"] .ticker-text { color: var(--text-muted); }
+[data-theme="light"] .broadcast-ticker::before { background: linear-gradient(to right, var(--bg), transparent); }
+[data-theme="light"] .broadcast-ticker::after { background: linear-gradient(to left, var(--bg), transparent); }
+[data-theme="light"] body::before { background: #f0ece6; }
+[data-theme="light"] .hero-artifact { opacity: 0.2; }
+
 /* eInk theme — grayscale paper */
 html[data-theme="eink"],
 :root[data-theme="eink"] {
@@ -102,6 +120,20 @@ html[data-theme="eink"],
 [data-theme="eink"] .status-oss { background: rgba(0,0,0,0.04); color: #444; border-color: #bbb; }
 [data-theme="eink"] .status-wip { background: rgba(0,0,0,0.04); color: #555; border-color: #bbb; }
 [data-theme="eink"] .project-link-soon { color: #666; }
+
+/* eInk — hero overrides (grayscale) */
+[data-theme="eink"] .bar-amber, [data-theme="eink"] .bar-green,
+[data-theme="eink"] .bar-blue, [data-theme="eink"] .bar-dark { background: #999; }
+[data-theme="eink"] .hero-label { color: #555; }
+[data-theme="eink"] .hl-amber, [data-theme="eink"] .hl-rose,
+[data-theme="eink"] .hl-green, [data-theme="eink"] .hl-blue,
+[data-theme="eink"] .hl-purple { background: rgba(0,0,0,0.06); color: #1a1a1a; }
+[data-theme="eink"] .broadcast-icon { color: #555; }
+[data-theme="eink"] .ticker-text { color: #777; }
+[data-theme="eink"] .broadcast-ticker::before { background: linear-gradient(to right, var(--bg), transparent); }
+[data-theme="eink"] .broadcast-ticker::after { background: linear-gradient(to left, var(--bg), transparent); }
+[data-theme="eink"] body::before { background: #ddd9cf; }
+[data-theme="eink"] .hero-artifact { display: none; }
 
 /* xterm theme — green on black terminal */
 html[data-theme="xterm"],
@@ -132,6 +164,26 @@ html[data-theme="xterm"],
 [data-theme="xterm"] .project-link-soon { color: #20aa20; }
 [data-theme="xterm"] .project-card.featured { border-color: rgba(0,255,0,0.15); background: linear-gradient(135deg, #111 0%, rgba(0,255,0,0.02) 100%); }
 [data-theme="xterm"] .tag { background: rgba(0,255,0,0.06); color: #33ff33; }
+
+/* xterm — hero overrides (green terminal) */
+[data-theme="xterm"] .bar-amber, [data-theme="xterm"] .bar-green,
+[data-theme="xterm"] .bar-blue, [data-theme="xterm"] .bar-dark { background: #00ff00; }
+[data-theme="xterm"] .hero-label { color: #00ff00; }
+[data-theme="xterm"] .hl-amber, [data-theme="xterm"] .hl-rose,
+[data-theme="xterm"] .hl-green, [data-theme="xterm"] .hl-blue,
+[data-theme="xterm"] .hl-purple { background: rgba(0,255,0,0.08); color: #33ff33; }
+[data-theme="xterm"] .broadcast-icon { color: #00ff00; }
+[data-theme="xterm"] .ticker-text { color: #20aa20; }
+[data-theme="xterm"] .broadcast-ticker::before { background: linear-gradient(to right, #000, transparent); }
+[data-theme="xterm"] .broadcast-ticker::after { background: linear-gradient(to left, #000, transparent); }
+[data-theme="xterm"] body::before {
+    background:
+        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(0,255,0,0.06) 59px, rgba(0,255,0,0.06) 61px),
+        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(0,255,0,0.05) 59px, rgba(0,255,0,0.05) 61px),
+        radial-gradient(ellipse 120% 30% at 50% 58%, rgba(0,255,0,0.05) 0%, transparent 70%),
+        #000;
+}
+[data-theme="xterm"] .hero-artifact { color: #00ff00 !important; opacity: 0.15; }
 
 /* Drunk theme — wobbly chaos */
 html[data-theme="drunk"],
@@ -176,6 +228,34 @@ html[data-theme="drunk"],
 [data-theme="drunk"] .project-link-soon { color: #ffcc33; }
 [data-theme="drunk"] .project-card.featured { border-color: rgba(255,110,199,0.2); background: linear-gradient(135deg, #2d1350 0%, rgba(255,110,199,0.05) 100%); }
 
+/* Drunk — hero overrides (neon chaos) */
+[data-theme="drunk"] .bar-amber { background: #ff6ec7; }
+[data-theme="drunk"] .bar-green { background: #6ec8ff; }
+[data-theme="drunk"] .bar-blue { background: #ffcc33; }
+[data-theme="drunk"] .bar-dark { background: #cc88dd; }
+[data-theme="drunk"] .hero-label { color: #ff6ec7; }
+[data-theme="drunk"] .hl-amber { background: rgba(255,110,199,0.15); color: #ff99dd; }
+[data-theme="drunk"] .hl-rose { background: rgba(110,200,255,0.15); color: #88ccff; }
+[data-theme="drunk"] .hl-green { background: rgba(255,200,50,0.15); color: #ffcc33; }
+[data-theme="drunk"] .hl-blue { background: rgba(180,120,255,0.15); color: #cc88ff; }
+[data-theme="drunk"] .hl-purple { background: rgba(255,150,100,0.15); color: #ff9966; }
+[data-theme="drunk"] .broadcast-icon { color: #ff6ec7; }
+[data-theme="drunk"] .ticker-text { color: #cc88dd; }
+[data-theme="drunk"] .broadcast-ticker::before { background: linear-gradient(to right, var(--bg), transparent); }
+[data-theme="drunk"] .broadcast-ticker::after { background: linear-gradient(to left, var(--bg), transparent); }
+[data-theme="drunk"] body::before {
+    background:
+        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255,110,199,0.06) 59px, rgba(255,110,199,0.06) 61px),
+        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(110,200,255,0.04) 59px, rgba(110,200,255,0.04) 61px),
+        radial-gradient(ellipse 120% 30% at 50% 58%, rgba(255,110,199,0.06) 0%, transparent 70%),
+        #1a0a2e;
+}
+[data-theme="drunk"] .hero-artifact-1 { color: #ff6ec7; }
+[data-theme="drunk"] .hero-artifact-2 { color: #6ec8ff; }
+[data-theme="drunk"] .hero-artifact-3 { color: #ffcc33; }
+[data-theme="drunk"] .hero-artifact-4 { color: #cc88ff; }
+[data-theme="drunk"] .hero-artifact-5 { color: #ff9966; }
+
 
 
 *, *::before, *::after {
@@ -193,11 +273,75 @@ html {
 
 body {
     font-family: var(--font);
-    background: var(--bg);
+    background: #020204;
     color: var(--text);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
+}
+
+/* Tron deep space — the outer void behind the portfolio */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        /* Perspective grid floor receding to horizon */
+        linear-gradient(to bottom,
+            transparent 0%,
+            transparent 55%,
+            rgba(236, 72, 153, 0.03) 70%,
+            rgba(236, 72, 153, 0.07) 100%
+        ),
+        /* Vertical grid lines */
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 59px,
+            rgba(236, 72, 153, 0.06) 59px,
+            rgba(236, 72, 153, 0.06) 61px
+        ),
+        /* Horizontal grid lines */
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 59px,
+            rgba(236, 72, 153, 0.05) 59px,
+            rgba(236, 72, 153, 0.05) 61px
+        ),
+        /* Horizon glow */
+        radial-gradient(ellipse 120% 30% at 50% 58%, rgba(59, 130, 246, 0.06) 0%, transparent 70%),
+        /* Base void */
+        #020204;
+}
+
+/* Portfolio content island — floats over the void */
+.nav,
+.hero,
+.section,
+footer {
+    position: relative;
+    z-index: 1;
+    background: var(--bg);
+}
+
+/* Sections get side margins so the void peeks through on wide screens */
+@media (min-width: 1200px) {
+    .section,
+    footer {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        border-left: 1px solid var(--border);
+        border-right: 1px solid var(--border);
+    }
+}
+
+/* Hero is full-width but content stays narrow */
+.hero {
+    background: transparent;
 }
 
 .container {
