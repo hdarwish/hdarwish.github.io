@@ -243,10 +243,69 @@
 
     <section class="section" id="projects">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title">Proof of Work</h2>
+            <p class="section-subtitle">Things I've built that solve real problems. Some ship at scale, some are weekend obsessions &mdash; all are proof that I build.</p>
+
+            <h3 class="projects-category">
+                <span class="category-icon">&#9670;</span> Featured &mdash; What I Build at Scale
+            </h3>
+            <div class="projects-grid featured-grid">
+
+                <div class="project-card featured">
+                    <div class="project-status">
+                        <span class="status-badge status-live">Production</span>
+                    </div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </div>
+                    <h3>CareNex AI</h3>
+                    <p class="project-what">Multi-agent insurance assistant</p>
+                    <p>Conversational AI that infers medical specialties from symptoms, finds in-network providers, and books real appointments via browser automation. Orchestrates multiple specialized agents &mdash; booking, claims, quoting &mdash; so users talk to one assistant that handles everything.</p>
+                    <div class="project-tags">
+                        <span>Multi-Agent</span><span>LangGraph</span><span>Browser Automation</span><span>LLMs</span><span>FastAPI</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link-muted">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            Proprietary
+                        </span>
+                        <span class="project-link-soon">Live preview coming soon</span>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <div class="project-status">
+                        <span class="status-badge status-live">Production</span>
+                    </div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h3>InkSight</h3>
+                    <p class="project-what">AI document extraction engine</p>
+                    <p>OCR meets LLMs to extract structured data from insurance documents at scale. Async HTTP pipelines, connection pool tuning, and audit logging on every extraction call. The unglamorous reliability work that turns scanned paper into actionable data.</p>
+                    <div class="project-tags">
+                        <span>OCR</span><span>LLMs</span><span>Async Python</span><span>Document AI</span><span>ETL</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link-muted">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                            Proprietary
+                        </span>
+                        <span class="project-link-soon">Live preview coming soon</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <h3 class="projects-category">
+                <span class="category-icon">&#9671;</span> Personal Lab &mdash; Side Projects &amp; Experiments
+            </h3>
             <div class="projects-grid">
 
                 <a href="https://github.com/hdarwish/smart-product-assistant" target="_blank" rel="noopener" class="project-card">
+                    <div class="project-status">
+                        <span class="status-badge status-oss">Open Source</span>
+                    </div>
                     <div class="project-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
                     </div>
@@ -257,18 +316,44 @@
                     </div>
                 </a>
 
-                <a href="https://github.com/hdarwish/chatbot-davinci" target="_blank" rel="noopener" class="project-card">
+                <div class="project-card">
+                    <div class="project-status">
+                        <span class="status-badge status-wip">Building</span>
+                    </div>
                     <div class="project-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
                     </div>
-                    <h3>Chatbot Davinci</h3>
-                    <p>An early experiment with OpenAI's conversational models. Built when GPT was still new and everyone was figuring out what "prompt engineering" meant.</p>
+                    <h3>CCAT Guru</h3>
+                    <p>AI-powered learning companion that turns any topic into structured knowledge. Conversational interface backed by a cognitive architecture that actually remembers what you've learned.</p>
                     <div class="project-tags">
-                        <span>OpenAI</span><span>Chatbot</span><span>Node.js</span>
+                        <span>AI Agents</span><span>RAG</span><span>React</span><span>Python</span>
                     </div>
-                </a>
+                    <div class="project-links">
+                        <span class="project-link-soon">Live preview coming soon</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-status">
+                        <span class="status-badge status-wip">Building</span>
+                    </div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    </div>
+                    <h3>Herald</h3>
+                    <p>Daily knowledge briefing system that curates tech news, CS fundamentals, and system design concepts into bite-sized morning slides. Built for engineers who learn best in small doses.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>LLMs</span><span>Content Pipeline</span><span>Web</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link-soon">Live preview coming soon</span>
+                    </div>
+                </div>
 
                 <a href="https://github.com/hdarwish/og-production-analytics" target="_blank" rel="noopener" class="project-card">
+                    <div class="project-status">
+                        <span class="status-badge status-oss">Open Source</span>
+                    </div>
                     <div class="project-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
                     </div>
@@ -280,6 +365,9 @@
                 </a>
 
                 <a href="https://github.com/hdarwish/warmup-email-service" target="_blank" rel="noopener" class="project-card">
+                    <div class="project-status">
+                        <span class="status-badge status-oss">Open Source</span>
+                    </div>
                     <div class="project-icon">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     </div>
@@ -290,8 +378,25 @@
                     </div>
                 </a>
 
+                <div class="project-card">
+                    <div class="project-status">
+                        <span class="status-badge status-wip">Building</span>
+                    </div>
+                    <div class="project-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    </div>
+                    <h3>The Fountain of Life</h3>
+                    <p>A personal life operating system &mdash; automated routines, morning briefings, and intelligent task orchestration. Because the best productivity tool is the one that runs itself.</p>
+                    <div class="project-tags">
+                        <span>Python</span><span>Automation</span><span>AI Agents</span><span>Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <span class="project-link-soon">Live preview coming soon</span>
+                    </div>
+                </div>
 
             </div>
+
             <div class="projects-more">
                 <a href="https://github.com/hdarwish?tab=repositories" target="_blank" rel="noopener" class="btn btn-outline">
                     View All on GitHub

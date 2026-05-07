@@ -523,6 +523,114 @@ body {
     border-radius: 4px;
 }
 
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin-bottom: 48px;
+    line-height: 1.7;
+}
+
+.projects-category {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.projects-category:not(:first-of-type) {
+    margin-top: 56px;
+}
+
+.category-icon {
+    color: var(--accent);
+    font-size: 0.7rem;
+}
+
+.featured-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)) !important;
+}
+
+.project-card.featured {
+    border-color: rgba(59, 130, 246, 0.2);
+    background: linear-gradient(135deg, var(--surface) 0%, rgba(59, 130, 246, 0.03) 100%);
+}
+
+.project-card.featured:hover {
+    border-color: var(--accent);
+    box-shadow: 0 8px 32px var(--accent-glow);
+}
+
+.project-status {
+    margin-bottom: 12px;
+}
+
+.status-badge {
+    font-size: 0.7rem;
+    font-family: var(--mono);
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.status-live {
+    background: rgba(34, 197, 94, 0.12);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.status-oss {
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-hover);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.status-wip {
+    background: rgba(251, 191, 36, 0.1);
+    color: #fbbf24;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.project-what {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 8px !important;
+    font-family: var(--mono);
+}
+
+.project-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.project-link-muted {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.6;
+}
+
+.project-link-soon {
+    font-size: 0.75rem;
+    font-family: var(--mono);
+    color: #fbbf24;
+    opacity: 0.7;
+    font-style: italic;
+}
+
 .projects-more {
     text-align: center;
     margin-top: 40px;
@@ -687,6 +795,10 @@ body {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr !important;
     }
 
     .skills-grid {
