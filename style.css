@@ -91,7 +91,8 @@ html[data-theme="light"],
 [data-theme="light"] .ticker-text { color: var(--text-muted); }
 [data-theme="light"] .broadcast-ticker::before { background: linear-gradient(to right, var(--bg), transparent); }
 [data-theme="light"] .broadcast-ticker::after { background: linear-gradient(to left, var(--bg), transparent); }
-[data-theme="light"] body::before { background: #f0ece6; }
+[data-theme="light"] body::before { display: none; }
+[data-theme="light"] body::after { display: none; }
 [data-theme="light"] .hero-artifact { opacity: 0.2; }
 
 /* eInk theme — grayscale paper */
@@ -132,7 +133,8 @@ html[data-theme="eink"],
 [data-theme="eink"] .ticker-text { color: #777; }
 [data-theme="eink"] .broadcast-ticker::before { background: linear-gradient(to right, var(--bg), transparent); }
 [data-theme="eink"] .broadcast-ticker::after { background: linear-gradient(to left, var(--bg), transparent); }
-[data-theme="eink"] body::before { background: #ddd9cf; }
+[data-theme="eink"] body::before { display: none; }
+[data-theme="eink"] body::after { display: none; }
 [data-theme="eink"] .hero-artifact { display: none; }
 
 /* xterm theme — green on black terminal */
@@ -178,10 +180,12 @@ html[data-theme="xterm"],
 [data-theme="xterm"] .broadcast-ticker::after { background: linear-gradient(to left, #000, transparent); }
 [data-theme="xterm"] body::before {
     background:
-        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(0,255,0,0.06) 59px, rgba(0,255,0,0.06) 61px),
-        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(0,255,0,0.05) 59px, rgba(0,255,0,0.05) 61px),
-        radial-gradient(ellipse 120% 30% at 50% 58%, rgba(0,255,0,0.05) 0%, transparent 70%),
-        #000;
+        repeating-linear-gradient(90deg, transparent, transparent 58px, rgba(0,255,0,0.1) 58px, rgba(0,255,0,0.1) 60px),
+        repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(0,255,0,0.08) 38px, rgba(0,255,0,0.08) 40px);
+}
+[data-theme="xterm"] body::after {
+    background: linear-gradient(90deg, transparent 5%, rgba(0,255,0,0.2) 30%, rgba(0,255,0,0.15) 50%, rgba(0,255,0,0.2) 70%, transparent 95%);
+    box-shadow: 0 0 30px 8px rgba(0,255,0,0.05), 0 0 80px 20px rgba(0,255,0,0.03);
 }
 [data-theme="xterm"] .hero-artifact { color: #00ff00 !important; opacity: 0.15; }
 
@@ -245,10 +249,12 @@ html[data-theme="drunk"],
 [data-theme="drunk"] .broadcast-ticker::after { background: linear-gradient(to left, var(--bg), transparent); }
 [data-theme="drunk"] body::before {
     background:
-        repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(255,110,199,0.06) 59px, rgba(255,110,199,0.06) 61px),
-        repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(110,200,255,0.04) 59px, rgba(110,200,255,0.04) 61px),
-        radial-gradient(ellipse 120% 30% at 50% 58%, rgba(255,110,199,0.06) 0%, transparent 70%),
-        #1a0a2e;
+        repeating-linear-gradient(90deg, transparent, transparent 58px, rgba(255,110,199,0.1) 58px, rgba(255,110,199,0.1) 60px),
+        repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(110,200,255,0.07) 38px, rgba(110,200,255,0.07) 40px);
+}
+[data-theme="drunk"] body::after {
+    background: linear-gradient(90deg, transparent 5%, rgba(255,110,199,0.2) 30%, rgba(110,200,255,0.15) 50%, rgba(255,110,199,0.2) 70%, transparent 95%);
+    box-shadow: 0 0 30px 8px rgba(255,110,199,0.06), 0 0 80px 20px rgba(110,200,255,0.04);
 }
 [data-theme="drunk"] .hero-artifact-1 { color: #ff6ec7; }
 [data-theme="drunk"] .hero-artifact-2 { color: #6ec8ff; }
@@ -284,37 +290,45 @@ body {
 body::before {
     content: '';
     position: fixed;
-    inset: 0;
+    bottom: 0;
+    left: -50%;
+    right: -50%;
+    height: 60%;
     z-index: 0;
     pointer-events: none;
     background:
-        /* Perspective grid floor receding to horizon */
-        linear-gradient(to bottom,
-            transparent 0%,
-            transparent 55%,
-            rgba(236, 72, 153, 0.03) 70%,
-            rgba(236, 72, 153, 0.07) 100%
-        ),
         /* Vertical grid lines */
         repeating-linear-gradient(
             90deg,
             transparent,
-            transparent 59px,
-            rgba(236, 72, 153, 0.06) 59px,
-            rgba(236, 72, 153, 0.06) 61px
+            transparent 58px,
+            rgba(236, 72, 153, 0.1) 58px,
+            rgba(236, 72, 153, 0.1) 60px
         ),
         /* Horizontal grid lines */
         repeating-linear-gradient(
             0deg,
             transparent,
-            transparent 59px,
-            rgba(236, 72, 153, 0.05) 59px,
-            rgba(236, 72, 153, 0.05) 61px
-        ),
-        /* Horizon glow */
-        radial-gradient(ellipse 120% 30% at 50% 58%, rgba(59, 130, 246, 0.06) 0%, transparent 70%),
-        /* Base void */
-        #020204;
+            transparent 38px,
+            rgba(236, 72, 153, 0.08) 38px,
+            rgba(236, 72, 153, 0.08) 40px
+        );
+    transform: perspective(300px) rotateX(60deg);
+    transform-origin: center top;
+}
+
+/* Horizon glow line */
+body::after {
+    content: '';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 42%;
+    height: 2px;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(90deg, transparent 5%, rgba(236, 72, 153, 0.15) 30%, rgba(59, 130, 246, 0.12) 50%, rgba(236, 72, 153, 0.15) 70%, transparent 95%);
+    box-shadow: 0 0 30px 8px rgba(236, 72, 153, 0.05), 0 0 80px 20px rgba(59, 130, 246, 0.03);
 }
 
 /* Portfolio content island — floats over the void */
