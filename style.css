@@ -451,6 +451,8 @@ body {
 /* Broadcast feed — sci-fi marquee ticker */
 .broadcast-feed {
     margin-bottom: 32px;
+    max-width: 100%;
+    overflow: hidden;
 }
 
 .broadcast-divider {
