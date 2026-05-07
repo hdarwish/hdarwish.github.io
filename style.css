@@ -1197,7 +1197,7 @@ body {
 
 /* Experience card overlay */
 .journey-card-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -1206,29 +1206,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100;
 }
 
 .journey-card {
-    position: absolute;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(12px) scale(0.96);
     background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 24px;
-    max-width: 380px;
+    max-width: 420px;
     width: 90%;
     pointer-events: none;
     opacity: 0;
-    transform: translateY(12px) scale(0.96);
     transition: opacity 0.35s ease, transform 0.35s ease;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-    max-height: 80%;
+    z-index: 101;
+    max-height: 85vh;
     overflow-y: auto;
 }
 
 .journey-card.visible {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     pointer-events: auto;
 }
 
@@ -1329,11 +1332,13 @@ body {
     white-space: nowrap;
 }
 
-/* Card positions (approximate on-map locations) */
-#journey-card-cairo { left: 45%; top: 45%; }
-#journey-card-london { left: 8%; top: 5%; }
-#journey-card-dubai { right: 2%; top: 40%; }
-#journey-card-abudhabi { right: 2%; top: 50%; }
+/* Card positions - all centered in viewport */
+#journey-card-cairo,
+#journey-card-london,
+#journey-card-dubai,
+#journey-card-abudhabi {
+    /* All cards centered via fixed positioning above */
+}
 
 /* Mobile journey cards */
 .journey-mobile {
