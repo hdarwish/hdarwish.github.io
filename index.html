@@ -30,6 +30,7 @@
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="nav-links">
+                <li><a href="#journey">Journey</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -66,6 +67,290 @@
             </div>
         </div>
     </header>
+
+    <!-- Journey Map -->
+    <section class="section section-alt" id="journey" aria-label="Career journey across cities">
+        <div class="container">
+            <h2 class="section-title">The Journey</h2>
+        </div>
+
+        <!-- Desktop: Interactive SVG Map -->
+        <div class="journey-map-wrap" id="journey-map-wrap">
+            <svg id="journey-map" class="journey-map" viewBox="0 0 1000 556" preserveAspectRatio="xMidYMid meet" role="img" aria-label="World map showing career journey from Cairo to London to Dubai to Abu Dhabi">
+                <defs>
+                    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="4" result="blur"/>
+                        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                    </filter>
+                    <filter id="glow-strong" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="8" result="blur"/>
+                        <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+                    </filter>
+                    <radialGradient id="radar-grad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.4"/>
+                        <stop offset="100%" stop-color="var(--accent)" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+
+                <!-- Simplified continent outlines -->
+                <g class="journey-landmass" fill="none" stroke="var(--border)" stroke-width="0.8" opacity="0.5">
+                    <!-- British Isles -->
+                    <path d="M210,72 L218,65 L226,58 L232,52 L228,42 L220,36 L212,42 L208,52 L202,60 L198,68 L194,78 L196,88 L202,92 L210,88 L216,82 Z"/>
+                    <path d="M186,72 L192,64 L196,72 L192,80 L184,82 Z"/>
+                    <!-- Iberian Peninsula -->
+                    <path d="M118,248 L130,232 L158,218 L182,208 L210,204 L238,206 L254,212 L260,224 L252,238 L238,252 L218,260 L194,264 L166,266 L140,262 L122,256 Z"/>
+                    <!-- France -->
+                    <path d="M210,88 L216,82 L224,78 L236,82 L254,86 L268,92 L280,102 L292,114 L302,128 L312,148 L318,164 L312,176 L302,184 L288,192 L274,198 L260,204 L254,212 L238,206 L224,202 L212,196 L202,186 L196,174 L198,162 L202,148 L200,132 L202,118 L204,104 L210,94 Z"/>
+                    <!-- Italy -->
+                    <path d="M312,176 L326,170 L340,164 L356,162 L370,168 L378,178 L382,192 L378,206 L370,218 L362,230 L354,242 L348,252 L344,244 L340,234 L346,224 L350,214 L342,206 L334,198 L328,190 L320,184 Z"/>
+                    <path d="M342,264 L354,258 L366,260 L372,268 L364,276 L350,274 L342,268 Z"/>
+                    <!-- Scandinavia -->
+                    <path d="M288,8 L296,4 L308,2 L320,6 L332,14 L340,24 L344,36 L340,48 L332,56 L324,48 L316,40 L308,36 L296,38 L286,44 L278,52 L272,62 L268,72 L264,82 L260,72 L264,58 L270,44 L278,30 L284,18 Z"/>
+                    <!-- Central/Eastern Europe -->
+                    <path d="M268,92 L280,88 L296,82 L316,78 L336,76 L356,78 L376,84 L396,88 L416,84 L436,78 L456,74 L476,72 L496,74 L516,78 L536,76 L556,72"/>
+                    <path d="M376,84 L382,96 L386,110 L388,126 L384,140 L378,152 L370,168"/>
+                    <!-- Turkey -->
+                    <path d="M388,182 L404,178 L420,176 L440,178 L460,180 L480,184 L500,188 L520,192 L540,198 L556,204 L568,212 L576,222 L572,232 L560,238 L544,234 L528,228 L512,224 L496,222 L480,224 L464,220 L448,216 L432,212 L416,208 L400,202 L390,194 Z"/>
+                    <!-- North Africa coast -->
+                    <path d="M0,266 L40,262 L80,258 L118,248 L140,262 L166,266 L194,264 L218,260 L238,252 L260,256 L280,260 L300,258 L320,260 L340,264 L360,266 L380,270 L400,274 L420,278 L440,280 L460,284 L480,288 L500,294 L520,300 L540,308 L560,316 L572,324"/>
+                    <!-- Egypt/Nile region -->
+                    <path d="M560,316 L572,324 L580,336 L584,350 L580,366 L574,380 L568,396 L564,412 L562,430 L564,448 L570,466 L578,480 L590,490 L604,496 L620,498"/>
+                    <path d="M572,324 L586,328 L598,334 L608,342 L616,352"/>
+                    <!-- Arabian Peninsula -->
+                    <path d="M608,342 L620,338 L636,332 L654,328 L672,326 L690,330 L708,338 L724,348 L738,360 L748,374 L756,390 L760,408 L758,426 L752,444 L742,460 L728,472 L712,480 L694,484 L676,482 L658,476 L642,468 L628,456 L618,442 L612,426 L608,408 L606,390 L608,372 L612,356 L608,342"/>
+                    <!-- Persian Gulf -->
+                    <path d="M708,338 L720,328 L736,320 L752,316 L768,318 L782,324 L794,334 L802,346 L806,360 L804,374 L796,386 L784,394 L770,396 L758,390"/>
+                    <!-- Iran -->
+                    <path d="M576,222 L592,218 L610,216 L628,218 L648,222 L668,228 L688,236 L708,244 L728,254 L744,266 L756,280 L764,296 L768,312 L768,318 L752,316 L736,320 L720,328 L708,338 L690,330 L672,326 L654,328 L636,332 L620,338 L608,342 L598,334 L586,328 L572,324 L568,312 L566,296 L568,280 L572,264 L576,248 L576,234 Z"/>
+                    <!-- East Africa coast -->
+                    <path d="M620,498 L636,504 L652,510 L668,518 L682,528 L694,540 L702,552 L706,556"/>
+                </g>
+
+                <!-- Flight path (animated dashed line) -->
+                <path id="flight-path" class="journey-flight-path" 
+                      d="M569,334 Q400,140 221,95 Q120,220 569,334 Q620,320 837,387 Q845,392 827,395"
+                      fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="8 6" opacity="0.6"/>
+
+                <!-- Path segments for draw animation -->
+                <path id="flight-seg-1" class="journey-flight-seg" 
+                      d="M569,334 C480,220 340,120 221,95"
+                      fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                <path id="flight-seg-2" class="journey-flight-seg" 
+                      d="M221,95 C340,180 480,280 569,334"
+                      fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                <path id="flight-seg-3" class="journey-flight-seg" 
+                      d="M569,334 C620,340 750,370 837,387"
+                      fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+                <path id="flight-seg-4" class="journey-flight-seg" 
+                      d="M837,387 C834,390 830,393 827,395"
+                      fill="none" stroke="var(--accent)" stroke-width="1.5" opacity="0.7"/>
+
+                <!-- Abu Dhabi radar pulse -->
+                <circle class="journey-radar" cx="827" cy="395" r="0" fill="url(#radar-grad)"/>
+                <circle class="journey-radar journey-radar-2" cx="827" cy="395" r="0" fill="url(#radar-grad)"/>
+
+                <!-- City dots -->
+                <g class="journey-cities">
+                    <!-- Cairo -->
+                    <g class="journey-city" data-city="cairo" tabindex="0" role="button" aria-label="Cairo: 2010 to 2018, MCIT Egypt and Vodafone">
+                        <circle class="journey-dot-glow" cx="569" cy="334" r="12" fill="var(--accent)" opacity="0.15"/>
+                        <circle class="journey-dot-pulse" cx="569" cy="334" r="8" fill="var(--accent)" opacity="0.3"/>
+                        <circle class="journey-dot" cx="569" cy="334" r="5" fill="var(--accent)"/>
+                        <text class="journey-label" x="569" y="360" text-anchor="middle">Cairo</text>
+                    </g>
+                    <!-- London -->
+                    <g class="journey-city" data-city="london" tabindex="0" role="button" aria-label="London: 2019 to 2021, BBC">
+                        <circle class="journey-dot-glow" cx="221" cy="95" r="12" fill="var(--accent)" opacity="0.15"/>
+                        <circle class="journey-dot-pulse" cx="221" cy="95" r="8" fill="var(--accent)" opacity="0.3"/>
+                        <circle class="journey-dot" cx="221" cy="95" r="5" fill="var(--accent)"/>
+                        <text class="journey-label" x="221" y="78" text-anchor="middle">London</text>
+                    </g>
+                    <!-- Dubai -->
+                    <g class="journey-city" data-city="dubai" tabindex="0" role="button" aria-label="Dubai: 2021 to 2024, Talabat and Careem">
+                        <circle class="journey-dot-glow" cx="837" cy="387" r="12" fill="var(--accent)" opacity="0.15"/>
+                        <circle class="journey-dot-pulse" cx="837" cy="387" r="8" fill="var(--accent)" opacity="0.3"/>
+                        <circle class="journey-dot" cx="837" cy="387" r="5" fill="var(--accent)"/>
+                        <text class="journey-label" x="837" y="378" text-anchor="middle">Dubai</text>
+                    </g>
+                    <!-- Abu Dhabi -->
+                    <g class="journey-city journey-city-current" data-city="abudhabi" tabindex="0" role="button" aria-label="Abu Dhabi: 2024 to Present, Shory">
+                        <circle class="journey-dot-glow" cx="827" cy="395" r="14" fill="var(--accent)" opacity="0.2"/>
+                        <circle class="journey-dot-pulse" cx="827" cy="395" r="9" fill="var(--accent)" opacity="0.35"/>
+                        <circle class="journey-dot" cx="827" cy="395" r="6" fill="var(--accent)"/>
+                        <text class="journey-label" x="827" y="420" text-anchor="middle">Abu Dhabi</text>
+                    </g>
+                </g>
+            </svg>
+
+            <!-- Experience cards overlay -->
+            <div class="journey-card-overlay" id="journey-card-overlay">
+                <div class="journey-card" id="journey-card-cairo" data-city="cairo">
+                    <button class="journey-card-close" aria-label="Close card">&times;</button>
+                    <div class="journey-card-header">
+                        <span class="journey-card-city">Cairo</span>
+                        <span class="journey-card-years">2010 &ndash; 2018</span>
+                    </div>
+                    <div class="journey-card-role">
+                        <h3>Software Engineer</h3>
+                        <span class="journey-card-company">MCIT Egypt</span>
+                        <span class="journey-card-period">Mar 2010 &ndash; Nov 2016</span>
+                        <p>Led team of 4 engineers. Automated project management for ministries. Built alazharmemory.eg &mdash; digital archive for the Al-Azhar library.</p>
+                        <div class="journey-card-tags">
+                            <span>Full Stack</span><span>Team Lead</span><span>Digital Archives</span>
+                        </div>
+                    </div>
+                    <div class="journey-card-role">
+                        <h3>Senior Software Engineer</h3>
+                        <span class="journey-card-company">Vodafone</span>
+                        <span class="journey-card-period">Nov 2016 &ndash; Dec 2018</span>
+                        <p>eSIM platform &mdash; Remote SIM Provisioning for 20K+ users worldwide. Early eSIM days, building the product while the spec was still evolving.</p>
+                        <div class="journey-card-tags">
+                            <span>eSIM</span><span>API Design</span><span>Predictive Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-card" id="journey-card-london" data-city="london">
+                    <button class="journey-card-close" aria-label="Close card">&times;</button>
+                    <div class="journey-card-header">
+                        <span class="journey-card-city">London</span>
+                        <span class="journey-card-years">2019 &ndash; 2021</span>
+                    </div>
+                    <div class="journey-card-role">
+                        <h3>Senior Software Engineer</h3>
+                        <span class="journey-card-company">BBC</span>
+                        <span class="journey-card-period">Jan 2019 &ndash; May 2021</span>
+                        <p>Data pipelines connecting media content into graph representations. Cloud analytics for content performance at BBC scale.</p>
+                        <div class="journey-card-tags">
+                            <span>Graph Data</span><span>Analytics</span><span>Cloud</span><span>Data Pipelines</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-card" id="journey-card-dubai" data-city="dubai">
+                    <button class="journey-card-close" aria-label="Close card">&times;</button>
+                    <div class="journey-card-header">
+                        <span class="journey-card-city">Dubai</span>
+                        <span class="journey-card-years">2021 &ndash; 2024</span>
+                    </div>
+                    <div class="journey-card-role">
+                        <h3>Senior Software Engineer</h3>
+                        <span class="journey-card-company">Talabat / Delivery Hero</span>
+                        <span class="journey-card-period">May 2021 &ndash; May 2023</span>
+                        <p>Order Transmission Engine refactored to Grade A. Data integration pipeline with 100% consistency. Zero data quality incidents.</p>
+                        <div class="journey-card-tags">
+                            <span>Data Pipelines</span><span>ETL</span><span>Microservices</span>
+                        </div>
+                    </div>
+                    <div class="journey-card-role">
+                        <h3>Senior Software Engineer</h3>
+                        <span class="journey-card-company">Careem</span>
+                        <span class="journey-card-period">May 2023 &ndash; May 2024</span>
+                        <p>Rider-driver matching engine. Real-time location systems. Dynamic supply-demand balancing in Gulf traffic.</p>
+                        <div class="journey-card-tags">
+                            <span>Algorithms</span><span>Real-time</span><span>Location</span><span>Data Science</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-card" id="journey-card-abudhabi" data-city="abudhabi">
+                    <button class="journey-card-close" aria-label="Close card">&times;</button>
+                    <div class="journey-card-header">
+                        <span class="journey-card-city">Abu Dhabi</span>
+                        <span class="journey-card-years">2024 &ndash; Present</span>
+                    </div>
+                    <div class="journey-card-role">
+                        <h3>Lead AI Engineer</h3>
+                        <span class="journey-card-company">Shory</span>
+                        <span class="journey-card-period">May 2024 &ndash; Present</span>
+                        <p>Leading AI engineering. AIDA multi-agent insurance assistant. Nexes-ADE document extraction. LangGraph quote comparison. Full observability stack with Prometheus, Grafana, Loki, Tempo.</p>
+                        <div class="journey-card-tags">
+                            <span>Multi-Agent</span><span>LangGraph</span><span>LLMs</span><span>EKS</span><span>Terraform</span><span>Observability</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile: Horizontal scroll cards -->
+        <div class="journey-mobile" id="journey-mobile">
+            <div class="journey-mobile-track">
+                <div class="journey-mobile-card" data-city="cairo">
+                    <div class="journey-mobile-dot"></div>
+                    <span class="journey-mobile-city">Cairo</span>
+                    <span class="journey-mobile-period">2010 &ndash; 2018</span>
+                    <div class="journey-mobile-roles">
+                        <div class="journey-mobile-role">
+                            <strong>Software Engineer</strong>
+                            <span>MCIT Egypt &middot; 2010&ndash;2016</span>
+                            <p>Led team of 4. Automated project management for ministries. Built alazharmemory.eg digital archive.</p>
+                        </div>
+                        <div class="journey-mobile-role">
+                            <strong>Senior Software Engineer</strong>
+                            <span>Vodafone &middot; 2016&ndash;2018</span>
+                            <p>eSIM platform for 20K+ users worldwide.</p>
+                        </div>
+                    </div>
+                    <div class="journey-card-tags">
+                        <span>Full Stack</span><span>eSIM</span><span>Team Lead</span>
+                    </div>
+                </div>
+                <div class="journey-mobile-connector"></div>
+                <div class="journey-mobile-card" data-city="london">
+                    <div class="journey-mobile-dot"></div>
+                    <span class="journey-mobile-city">London</span>
+                    <span class="journey-mobile-period">2019 &ndash; 2021</span>
+                    <div class="journey-mobile-roles">
+                        <div class="journey-mobile-role">
+                            <strong>Senior Software Engineer</strong>
+                            <span>BBC &middot; 2019&ndash;2021</span>
+                            <p>Data pipelines, graph representations for media, cloud analytics at scale.</p>
+                        </div>
+                    </div>
+                    <div class="journey-card-tags">
+                        <span>Graph Data</span><span>Cloud</span><span>Analytics</span>
+                    </div>
+                </div>
+                <div class="journey-mobile-connector"></div>
+                <div class="journey-mobile-card" data-city="dubai">
+                    <div class="journey-mobile-dot"></div>
+                    <span class="journey-mobile-city">Dubai</span>
+                    <span class="journey-mobile-period">2021 &ndash; 2024</span>
+                    <div class="journey-mobile-roles">
+                        <div class="journey-mobile-role">
+                            <strong>Senior Software Engineer</strong>
+                            <span>Talabat &middot; 2021&ndash;2023</span>
+                            <p>Order Transmission Engine, data pipelines, zero incidents.</p>
+                        </div>
+                        <div class="journey-mobile-role">
+                            <strong>Senior Software Engineer</strong>
+                            <span>Careem &middot; 2023&ndash;2024</span>
+                            <p>Rider-driver matching, real-time location systems.</p>
+                        </div>
+                    </div>
+                    <div class="journey-card-tags">
+                        <span>Algorithms</span><span>Real-time</span><span>ETL</span>
+                    </div>
+                </div>
+                <div class="journey-mobile-connector"></div>
+                <div class="journey-mobile-card journey-mobile-current" data-city="abudhabi">
+                    <div class="journey-mobile-dot"></div>
+                    <span class="journey-mobile-city">Abu Dhabi</span>
+                    <span class="journey-mobile-period">2024 &ndash; Present</span>
+                    <div class="journey-mobile-roles">
+                        <div class="journey-mobile-role">
+                            <strong>Lead AI Engineer</strong>
+                            <span>Shory &middot; 2024&ndash;Present</span>
+                            <p>Multi-agent systems (AIDA), document extraction (Nexes-ADE), LangGraph, full observability stack.</p>
+                        </div>
+                    </div>
+                    <div class="journey-card-tags">
+                        <span>Multi-Agent</span><span>LangGraph</span><span>LLMs</span><span>EKS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="section" id="about">
         <div class="container">

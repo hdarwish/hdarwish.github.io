@@ -1067,3 +1067,422 @@ body {
         padding: 20px;
     }
 }
+
+/* ============================================
+   Journey Map Section
+   ============================================ */
+
+#journey {
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+.journey-map-wrap {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.journey-map {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: default;
+    transition: viewBox 0.6s ease;
+}
+
+/* City dots */
+.journey-city {
+    cursor: pointer;
+    outline: none;
+}
+
+.journey-city:focus-visible .journey-dot {
+    stroke: var(--text);
+    stroke-width: 2;
+}
+
+.journey-dot {
+    transition: r 0.3s ease, opacity 0.3s ease;
+    filter: url(#glow);
+}
+
+.journey-dot-pulse {
+    animation: journeyPulse 2.5s ease-in-out infinite;
+}
+
+.journey-dot-glow {
+    animation: journeyGlow 3s ease-in-out infinite;
+}
+
+@keyframes journeyPulse {
+    0%, 100% { opacity: 0.3; r: 8; }
+    50% { opacity: 0.15; r: 14; }
+}
+
+@keyframes journeyGlow {
+    0%, 100% { opacity: 0.15; r: 12; }
+    50% { opacity: 0.08; r: 20; }
+}
+
+.journey-city:hover .journey-dot { r: 7; }
+.journey-city:hover .journey-dot-pulse { r: 12; }
+.journey-city:hover .journey-label { opacity: 1; }
+
+.journey-label {
+    fill: var(--text-muted);
+    font-size: 12px;
+    font-family: var(--font);
+    font-weight: 500;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Radar/sonar for Abu Dhabi */
+.journey-radar {
+    animation: journeyRadar 3s ease-out infinite;
+}
+
+.journey-radar-2 {
+    animation-delay: 1.5s;
+}
+
+@keyframes journeyRadar {
+    0% { r: 6; opacity: 0.5; }
+    100% { r: 50; opacity: 0; }
+}
+
+/* Flight path segments - draw animation */
+.journey-flight-seg {
+    stroke-dasharray: 2000;
+    stroke-dashoffset: 2000;
+}
+
+.journey-flight-seg.drawn {
+    transition: stroke-dashoffset 1.2s ease-in-out;
+    stroke-dashoffset: 0;
+}
+
+.journey-flight-path {
+    display: none;
+}
+
+.journey-flight-path.visible {
+    display: block;
+    animation: journeyDash 20s linear infinite;
+}
+
+@keyframes journeyDash {
+    0% { stroke-dashoffset: 0; }
+    100% { stroke-dashoffset: -280; }
+}
+
+/* Zoomed state */
+.journey-map-wrap.zoomed .journey-city {
+    transition: opacity 0.4s ease;
+}
+
+.journey-map-wrap.zoomed .journey-city.faded {
+    opacity: 0.25;
+}
+
+.journey-map-wrap.zoomed .journey-city.faded .journey-label {
+    opacity: 0;
+}
+
+.journey-map-wrap.zoomed .journey-city.active .journey-dot { r: 8; }
+.journey-map-wrap.zoomed .journey-city.active .journey-dot-glow { r: 18; opacity: 0.25; }
+
+/* Experience card overlay */
+.journey-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.journey-card {
+    position: absolute;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 380px;
+    width: 90%;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.journey-card.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.journey-card-close {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.journey-card-close:hover {
+    color: var(--text);
+    background: var(--accent-glow);
+}
+
+.journey-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+.journey-card-city {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.journey-card-years {
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-weight: 500;
+}
+
+.journey-card-role {
+    margin-bottom: 16px;
+}
+
+.journey-card-role:last-child {
+    margin-bottom: 0;
+}
+
+.journey-card-role h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.journey-card-company {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.journey-card-period {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: var(--mono);
+    margin-bottom: 8px;
+}
+
+.journey-card-role p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+.journey-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.journey-card-tags span {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    background: var(--accent-glow);
+    color: var(--accent);
+    font-family: var(--mono);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+/* Card positions (approximate on-map locations) */
+#journey-card-cairo { left: 45%; top: 45%; }
+#journey-card-london { left: 8%; top: 5%; }
+#journey-card-dubai { right: 2%; top: 40%; }
+#journey-card-abudhabi { right: 2%; top: 50%; }
+
+/* Mobile journey cards */
+.journey-mobile {
+    display: none;
+    padding: 0 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.journey-mobile::-webkit-scrollbar {
+    display: none;
+}
+
+.journey-mobile-track {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    padding: 20px 0 24px;
+    min-width: max-content;
+}
+
+.journey-mobile-connector {
+    width: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.journey-mobile-connector::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--accent);
+    opacity: 0.3;
+}
+
+.journey-mobile-connector::after {
+    content: '';
+    position: absolute;
+    right: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 6px solid var(--accent);
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    opacity: 0.4;
+}
+
+.journey-mobile-card {
+    flex: 0 0 280px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+}
+
+.journey-mobile-current {
+    border-color: var(--accent);
+    box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.journey-mobile-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    margin-bottom: 12px;
+    box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.journey-mobile-current .journey-mobile-dot {
+    animation: journeyPulseMobile 2s ease-in-out infinite;
+}
+
+@keyframes journeyPulseMobile {
+    0%, 100% { box-shadow: 0 0 8px var(--accent-glow); }
+    50% { box-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow); }
+}
+
+.journey-mobile-city {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 2px;
+}
+
+.journey-mobile-period {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-family: var(--mono);
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.journey-mobile-roles {
+    margin-bottom: 12px;
+}
+
+.journey-mobile-role {
+    margin-bottom: 10px;
+}
+
+.journey-mobile-role:last-child {
+    margin-bottom: 0;
+}
+
+.journey-mobile-role strong {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text);
+    margin-bottom: 1px;
+}
+
+.journey-mobile-role span {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.journey-mobile-role p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* Responsive: show mobile, hide map */
+@media (max-width: 768px) {
+    .journey-map-wrap {
+        display: none;
+    }
+
+    .journey-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .journey-mobile {
+        display: none !important;
+    }
+}
