@@ -202,6 +202,37 @@ body {
     position: relative;
 }
 
+/* Tron perspective grid — root background layer behind everything */
+body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 79px,
+            rgba(236, 72, 153, 0.04) 79px,
+            rgba(236, 72, 153, 0.04) 80px
+        ),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 79px,
+            rgba(236, 72, 153, 0.035) 79px,
+            rgba(236, 72, 153, 0.035) 80px
+        );
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 0%, transparent 100%);
+}
+
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
 .container {
     max-width: 1100px;
     width: 100%;
@@ -343,40 +374,7 @@ body {
     pointer-events: none;
 }
 
-/* Tron perspective grid floor */
-.hero-bg::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: -20%;
-    right: -20%;
-    height: 45%;
-    background:
-        linear-gradient(to bottom,
-            transparent 0%,
-            rgba(236, 72, 153, 0.03) 30%,
-            rgba(236, 72, 153, 0.06) 100%),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 59px,
-            rgba(236, 72, 153, 0.08) 59px,
-            rgba(236, 72, 153, 0.08) 60px
-        ),
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 39px,
-            rgba(236, 72, 153, 0.06) 39px,
-            rgba(236, 72, 153, 0.06) 40px
-        );
-    transform: perspective(400px) rotateX(45deg);
-    transform-origin: center bottom;
-    mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 80%, transparent 100%);
-}
-
-/* Subtle top glow */
+/* Subtle hero glow */
 .hero-bg::after {
     content: '';
     position: absolute;
