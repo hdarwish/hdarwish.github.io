@@ -17,8 +17,9 @@
     --mono: 'JetBrains Mono', monospace;
 }
 
-/* Light theme */
-html[data-theme="light"] {
+/* Light theme — uses :root override to guarantee specificity */
+html[data-theme="light"],
+:root[data-theme="light"] {
     --bg: #faf8f5;
     --bg-alt: #f0ece6;
     --surface: #ffffff;
@@ -129,6 +130,7 @@ body {
     color: var(--text);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
