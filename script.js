@@ -35,3 +35,29 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
     el.classList.add('fade-in');
     observer.observe(el);
 });
+
+// Theme toggle
+(function() {
+    const saved = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', saved);
+
+    const toggle = document.getElementById('theme-toggle');
+    if (!toggle) return;
+
+    function setActive(theme) {
+        toggle.querySelectorAll('button').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.theme === theme);
+        });
+    }
+
+    setActive(saved);
+
+    toggle.addEventListener('click', (e) => {
+        const btn = e.target.closest('button');
+        if (!btn) return;
+        const theme = btn.dataset.theme;
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        setActive(theme);
+    });
+})();
