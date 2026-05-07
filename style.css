@@ -604,6 +604,7 @@ body {
     font-weight: 500;
     margin-bottom: 8px !important;
     font-family: var(--mono);
+    flex: none;
 }
 
 .project-links {
