@@ -332,29 +332,17 @@ body::after {
 }
 
 /* Portfolio content island — floats over the void */
-.nav,
-.hero,
-.section,
-footer {
+.nav {
     position: relative;
     z-index: 1;
     background: var(--bg);
 }
 
-/* Sections get side margins so the void peeks through on wide screens */
-@media (min-width: 1200px) {
-    .section,
-    footer {
-        max-width: 1200px;
-        margin-left: auto;
-        margin-right: auto;
-        border-left: 1px solid var(--border);
-        border-right: 1px solid var(--border);
-    }
-}
-
-/* Hero is full-width but content stays narrow */
-.hero {
+.hero,
+.section,
+footer {
+    position: relative;
+    z-index: 1;
     background: transparent;
 }
 
@@ -576,7 +564,7 @@ footer {
 .hero-content {
     position: relative;
     max-width: 720px;
-    padding: 120px 0 80px;
+    padding: 90px 0 40px;
 }
 
 /* Multi-color accent bar */
@@ -833,7 +821,7 @@ footer {
 }
 
 .section-alt {
-    background: var(--bg-alt);
+    background: transparent;
 }
 
 .section-title {
@@ -1393,7 +1381,7 @@ footer {
     }
 
     .hero-content {
-        padding: 100px 0 60px;
+        padding: 80px 0 30px;
     }
 
     .hero-artifact {
