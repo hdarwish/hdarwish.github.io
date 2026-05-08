@@ -474,7 +474,7 @@ footer {
 /* ---- Hero ---- */
 
 .hero {
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
     position: relative;
@@ -1381,7 +1381,7 @@ footer {
     }
 
     .hero-content {
-        padding: 80px 0 30px;
+        padding: 72px 0 20px;
     }
 
     .hero-artifact {
