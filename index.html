@@ -464,7 +464,8 @@
                             <span class="tag">LLMs</span>
                             <span class="tag">Multi-Agent Systems</span>
                             <span class="tag">LangGraph</span>
-                            <span class="tag">EKS</span>
+                            <span class="tag">GitOps</span>
+                            <span class="tag">AWS &amp; Azure</span>
                             <span class="tag">Terraform</span>
                             <span class="tag">Observability</span>
                         </div>
@@ -473,7 +474,7 @@
                             <li><strong>AIDA:</strong> The core AI insurance assistant &mdash; multi-agent system with a booking agent that infers specialties from symptoms, finds in-network providers, and books appointments via browser automation. Also owns the ETL pipeline that keeps the data fresh from legacy MSSQL sources.</li>
                             <li><strong>Nexes-ADE:</strong> Automated document extraction &mdash; OCR meets LLMs to process insurance documents at scale. Async HTTP clients, connection pool tuning, audit logging on every <code>/extract</code> call. The unglamorous reliability work that makes throughput real.</li>
                             <li><strong>Quote Compare:</strong> LangGraph-powered insurance quote comparison engine that helps users make sense of competing policies. The kind of product where AI needs to be accurate, not just fast.</li>
-                            <li><strong>Infrastructure:</strong> EKS cluster provisioning with Terraform IaC, Helm-based deployments, ArgoCD, DR planning. Set up the full observability stack &mdash; Prometheus, Grafana, Loki, Tempo, OpenTelemetry &mdash; across all services. Because if you can't see what's breaking, you're just waiting for someone to tell you.</li>
+                            <li><strong>Platform Engineering:</strong> Designed the GitOps foundation from scratch &mdash; app-of-apps ArgoCD pattern, shared Helm base charts, multi-env/multi-cloud directory layout (AWS EKS + Azure AKS). Terraform IaC modules for everything: clusters, Key Vaults, workload identity, managed databases. Built the full LGTM observability stack &mdash; Prometheus, Grafana, Loki, Tempo, OpenTelemetry &mdash; instrumented across all services. Engineers commit a YAML file and push; ArgoCD reconciles within 3 minutes. No kubectl apply, no scripts.</li>
                         </ul>
                     </div>
                 </div>
@@ -815,14 +816,17 @@
                     </div>
                 </div>
                 <div class="skill-group">
-                    <h3>Cloud &amp; DevOps</h3>
+                    <h3>Cloud &amp; Platform</h3>
                     <div class="skill-pills">
                         <span>AWS (EKS, Lambda, Bedrock)</span>
-                        <span>Terraform</span>
+                        <span>Azure (AKS, Key Vault, App Gateway)</span>
+                        <span>Terraform IaC</span>
                         <span>Docker</span>
                         <span>Helm</span>
-                        <span>ArgoCD</span>
+                        <span>ArgoCD / GitOps</span>
+                        <span>Kubernetes</span>
                         <span>CI/CD</span>
+                        <span>Secrets Management (CSI + Workload Identity)</span>
                         <span>Microservices</span>
                     </div>
                 </div>
