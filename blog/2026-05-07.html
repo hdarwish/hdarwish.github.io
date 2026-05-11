@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busywork is Killing Your Codebase - Hafs Ibrahim</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="Busywork is Killing Your Codebase">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hdarwish.github.io/blog/2026-05-07.html">
+    <meta property="og:image" content="https://hdarwish.github.io/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+        .blog-hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 10px 24px;
+            border-radius: 8px;
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: var(--font);
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+        }
+        .back-btn svg {
+            transition: transform 0.25s ease;
+        }
+        .back-btn:hover svg {
+            transform: translateX(-3px);
+        }
+        .blog-posts {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s;
+        }
+        .blog-post-card:hover {
+            border-color: var(--accent);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
+        }
+       .hn-item {
+           display: block;
+           background: var(--bg-alt);
+           border: 1px solid var(--border);
+           border-radius: 10px;
+           padding: 1.25rem 1.5rem;
+           margin-bottom: 0.75rem;
+           text-decoration: none;
+           transition: border-color 0.25s, background 0.25s, transform 0.25s;
+       }
+       .hn-item:hover {
+           border-color: var(--accent);
+           background: var(--surface);
+           transform: translateX(4px);
+       }
+       .hn-item-title {
+           color: var(--text);
+           font-weight: 600;
+           font-size: 0.95rem;
+           line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+       }
+        .hn-badge {
+           display: inline-flex;
+           align-items: center;
+           gap: 0.3rem;
+           font-family: 'JetBrains Mono', monospace;
+           font-size: 0.7rem;
+           font-weight: 500;
+           padding: 3px 10px;
+           border-radius: 20px;
+           background: var(--accent-glow);
+           color: var(--accent-hover);
+            flex-shrink: 0;
+            white-space: nowrap;
+       }
+        .hn-item-take {
+           color: var(--text-muted);
+           font-size: 0.85rem;
+           line-height: 1.6;
+           margin-top: 0.75rem;
+       }
+        .no-posts {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+        }
+        .no-posts p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .no-posts span {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+    <style>
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+<article class="blog-post-card" id="post-2026-05-07">
+            <div class="blog-post-date">May 07, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">productivity</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">innovation</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">workplace culture</span></div>
+            <h2 class="blog-post-title">Busywork is Killing Your Codebase</h2>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I stumbled upon an article about workplace productivity. It hit me: our obsession with looking busy is sabotaging real innovation.</p>
+
+<p>In tech, the illusion of productivity often overshadows actual results. Endless meetings, constant Slack notifications, and emails that demand immediate responses create a facade of activity.</p>
+
+<p>This isn't productivity. It's theater.</p>
+
+<p>Every morning, I see engineers in the office early. They’re tapping away furiously during standup. It looks impressive. But are they solving complex problems, or just rehearsing for the next status update?</p>
+
+<p>Back when I was new, I thought the key to recognition was constant activity. My GitHub activity graph was full of commits. But meaningful progress? Not as much.</p>
+
+<p>The reality dawned on me when a senior engineer pulled me aside. He said, "Hafs, it's not the hours you sit at your desk. It's the impact of your work." That was a wake-up call.</p>
+
+<p>Think about the last time you sat in a lengthy meeting that was more about appearances than outcomes. How much of your valuable focus did it steal?</p>
+
+<p>In a past role, I joined a project already a year behind schedule. The team was running in circles. They appeared busy, but they were trapped in a cycle of rewriting specs, shifting priorities, and firefighting bug reports.</p>
+
+<p>It was chaos. But upper management saw the team’s activity as a sign of dedication. No one realized the true issue: a flawed process.</p>
+
+<p>We restructured the team around clear objectives rather than random tasks. The noise dropped. Suddenly, we were delivering features, not just reports.</p>
+
+<p>There's a systemic flaw in how success is measured in tech environments. Activity is easy to observe. Output requires real scrutiny.</p>
+
+<p>Performance reviews often reward hours worked over problems solved. Promotions go to those who "seem engaged." Our tools don't help either. Metrics that track keystrokes or time in apps perpetuate the busywork trap.</p>
+
+<p>This illusion of productivity can crush creativity. It discourages downtime — the time when real innovation happens. You can't brute force brilliance; you need space to think.</p>
+
+<p>True productivity isn't about the volume of code, but its quality. It's not the number of meetings attended, but the problems resolved.</p>
+
+<p>Meaningful productivity might mean fewer lines of code. Simpler solutions. Less churn.</p>
+
+<p>I've seen teams pivot to minimal meetings and async communication. Output skyrocketed. More product shipped, less stress endured.</p>
+
+<p>Yet the business world is addicted to appearances. Busy calendars. Full inboxes.</p>
+
+<p>We need to recalibrate. Measure what matters. Celebrate the engineers who ask "Why?" more than "How quickly?"</p>
+
+<p>Recognize that the quiet moments — the ones that don't make noise — are where the magic happens.</p>
+
+<p>A few years ago, we were deep into a refactor of a legacy system. The codebase was a tangled mess. We threw bodies at it. More engineers, more busywork. Yet, the bug count didn't drop.</p>
+
+<p>Then someone suggested we halt all new feature work for a sprint. Focus on understanding and untangling just one critical module. It wasn't flashy. But our system's p95 latency went from 2 seconds to 500ms after that sprint. One sprint. That taught me volumes.</p>
+
+<p>Are you writing software or just scripts for the theater of productivity?</p>
+
+<p>Let go of the busywork. Focus on impact. Real innovation needs space to breathe.</p>
+
+<p>Reframe productivity as the art of doing less but achieving more. That's where the future lies.</p></div>
+            
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

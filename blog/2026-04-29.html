@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Your NoSQL Freedom Might Just Be a Trap - Hafs Ibrahim</title>
+    <meta name="description" content="">
+    <meta property="og:title" content="Why Your NoSQL Freedom Might Just Be a Trap">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hdarwish.github.io/blog/2026-04-29.html">
+    <meta property="og:image" content="https://hdarwish.github.io/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+        .blog-hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 10px 24px;
+            border-radius: 8px;
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: var(--font);
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+        }
+        .back-btn svg {
+            transition: transform 0.25s ease;
+        }
+        .back-btn:hover svg {
+            transform: translateX(-3px);
+        }
+        .blog-posts {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s;
+        }
+        .blog-post-card:hover {
+            border-color: var(--accent);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
+        }
+       .hn-item {
+           display: block;
+           background: var(--bg-alt);
+           border: 1px solid var(--border);
+           border-radius: 10px;
+           padding: 1.25rem 1.5rem;
+           margin-bottom: 0.75rem;
+           text-decoration: none;
+           transition: border-color 0.25s, background 0.25s, transform 0.25s;
+       }
+       .hn-item:hover {
+           border-color: var(--accent);
+           background: var(--surface);
+           transform: translateX(4px);
+       }
+       .hn-item-title {
+           color: var(--text);
+           font-weight: 600;
+           font-size: 0.95rem;
+           line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+       }
+        .hn-badge {
+           display: inline-flex;
+           align-items: center;
+           gap: 0.3rem;
+           font-family: 'JetBrains Mono', monospace;
+           font-size: 0.7rem;
+           font-weight: 500;
+           padding: 3px 10px;
+           border-radius: 20px;
+           background: var(--accent-glow);
+           color: var(--accent-hover);
+            flex-shrink: 0;
+            white-space: nowrap;
+       }
+        .hn-item-take {
+           color: var(--text-muted);
+           font-size: 0.85rem;
+           line-height: 1.6;
+           margin-top: 0.75rem;
+       }
+        .no-posts {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+        }
+        .no-posts p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .no-posts span {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+    <style>
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+<article class="blog-post-card" id="post-2026-04-29">
+            <div class="blog-post-date">April 29, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">database</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">NoSQL</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">data modeling</span></div>
+            <h2 class="blog-post-title">Why Your NoSQL Freedom Might Just Be a Trap</h2>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Last week, I was knee-deep in a project post-mortem where the allure of MongoDB's schema-less design had morphed into a nightmare. Initial excitement about flexibility turned into a mess of inconsistent data models that nobody wanted to touch.</p><p>Teams often embrace document-oriented NoSQL databases for their perceived freedom. No constraints, no tables, no columns to rigidly define. Just toss in your JSON documents and call it a day. But that freedom often breeds chaos without discipline.</p><p>In this project, multiple services wrote to the same MongoDB collection. Each service had its own interpretation of a “customer” document. One decided that phone numbers should be an array. Another stuck to a simple string. A third didn’t include it at all.</p><p>When a simple query needed a customer phone number, it turned into a guessing game. Do we check if it’s an array first? Do we assume it’s always a string? What happens when it’s missing?</p><p>That's the trap. Document-oriented databases give you flexibility but at the cost of structure. Structure is what keeps your sanity when systems grow complex.</p><p>Contrast this with a relational database. You’ve got schemas. You’ve got constraints. It forces you to think about your data model upfront. Not exciting, but it stops you from coloring outside the lines later.</p><p>I've seen teams spend months cleaning up inconsistent data models in MongoDB that could have been avoided with a few hours of upfront design. Racing to ship features often means schema design gets neglected, but neglect this and you pay back with interest.</p><p>The flexibility of a document-oriented database can be a lifesaver, especially when you need to iterate quickly or when your data model is uncertain. I’ve been in startups where pivoting the core data model overnight was what kept us afloat.</p><p>Even then, establishing some form of... [truncated]
+            
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

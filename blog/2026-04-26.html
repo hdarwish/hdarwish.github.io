@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concurrence, Neural Nets, and the Evolution of Expertise - Hafs Ibrahim</title>
+    <meta name="description" content="Go’s concurrency model isn’t magic. Everyone nods at goroutines and channels as if they’ve solved all multi-threading woes, but my experiences scream otherwise.">
+    <meta property="og:title" content="Concurrence, Neural Nets, and the Evolution of Expertise">
+    <meta property="og:description" content="Go’s concurrency model isn’t magic. Everyone nods at goroutines and channels as if they’ve solved all multi-threading woes, but my experiences scream otherwise.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hdarwish.github.io/blog/2026-04-26.html">
+    <meta property="og:image" content="https://hdarwish.github.io/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+        .blog-hero p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 10px 24px;
+            border-radius: 8px;
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            font-family: var(--font);
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
+        }
+        .back-btn svg {
+            transition: transform 0.25s ease;
+        }
+        .back-btn:hover svg {
+            transform: translateX(-3px);
+        }
+        .blog-posts {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem 4rem;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s;
+        }
+        .blog-post-card:hover {
+            border-color: var(--accent);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
+        }
+       .hn-item {
+           display: block;
+           background: var(--bg-alt);
+           border: 1px solid var(--border);
+           border-radius: 10px;
+           padding: 1.25rem 1.5rem;
+           margin-bottom: 0.75rem;
+           text-decoration: none;
+           transition: border-color 0.25s, background 0.25s, transform 0.25s;
+       }
+       .hn-item:hover {
+           border-color: var(--accent);
+           background: var(--surface);
+           transform: translateX(4px);
+       }
+       .hn-item-title {
+           color: var(--text);
+           font-weight: 600;
+           font-size: 0.95rem;
+           line-height: 1.4;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 1rem;
+       }
+        .hn-badge {
+           display: inline-flex;
+           align-items: center;
+           gap: 0.3rem;
+           font-family: 'JetBrains Mono', monospace;
+           font-size: 0.7rem;
+           font-weight: 500;
+           padding: 3px 10px;
+           border-radius: 20px;
+           background: var(--accent-glow);
+           color: var(--accent-hover);
+            flex-shrink: 0;
+            white-space: nowrap;
+       }
+        .hn-item-take {
+           color: var(--text-muted);
+           font-size: 0.85rem;
+           line-height: 1.6;
+           margin-top: 0.75rem;
+       }
+        .no-posts {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-muted);
+        }
+        .no-posts p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .no-posts span {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+    <style>
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+<article class="blog-post-card" id="post-2026-04-26">
+            <div class="blog-post-date">April 26, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">concurrency</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">pytorch</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">architecture</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software-craftsmanship</span></div>
+            <h2 class="blog-post-title">Concurrence, Neural Nets, and the Evolution of Expertise</h2>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Go’s concurrency model isn’t magic. Everyone nods at goroutines and channels as if they’ve solved all multi-threading woes, but my experiences scream otherwise. Traditional thread-based programming taught us to wrestle with locks, race conditions, and carefully structured state. In Go, you trade that explicit control for a model that invites a certain complacency. When a system overflows with goroutines doing nothing but channel-passing, the problem suddenly isn’t so much execution as it is design. I’ve seen teams deploy services where channel feeds were assumed to be an infinite resource, only to later watch them crumble under back-pressure and silent dead goroutines. The abstraction of concurrency is seductive until you hit the concrete case of resource leakage when channels aren’t properly buffered or closed.</p>
+
+<p>Deadlock and livelock aren’t just textbook footnotes—they’re realities that tear systems apart, often at inopportune moments. While the conventional view treats deadlocks as the obvious outcome of poor lock ordering, and livelocks as merely systems where nothing gets accomplished due to overactive conflict, the true picture is bleaker. I’ve seen systems where two components endlessly signal readiness without ever obtaining a mutually satisfactory lock. The problem isn’t “one or the other” but a narrow architectural oversight that fails to consider fallbacks or timeout approaches. Real systems need mechanisms that both detect stalling conditions and allow for a safe exit path without sacrificing state integrity. When settling on lock design, you have to contemplate that a common cause for what appears as a livelock may be external and not a mishandled mutex at all; it might be an external constraint that means the system is fighting on too many fronts.</p>
+
+<p>The debate between torch.nn.Module and torch.nn.functional in PyTorch is yet another instance where the high-level abstraction looks attractive until you consider sensible production needs. In practice, it’s not just about the trade-off between encapsulation and flexibility. I learned that Module is less about organizing code and more about controlling state. When you rely on the functional API, you’re spending more cycles tracking tensor dimensions and manually wiring parameters, which can be fatal when you’re debugging model scalabilities or deploying to production. I remember debugging a custom network where the functional call subtly overridden an expected module’s behavior, leading to weight sharing issues that echoed through a distributed training regime. It forced me to sharpen my model definitions and lean on Module to manage not just state but to give a structural integrity that functional can’t supply out-of-the-box. It’s a choice that can impact the performance of your code in subtle ways—memory usage, gradient flow, and even parallelization suffer if you don’t enforce the Module structure when needed.</p>
+
+<p>The shift in HN stories concerns me as well. One article showcased an amateur employing ChatGPT to solve an Erdős problem. That story upends the traditional belief that only lifelong experts can navigate deep mathematical enigmas. While the solution itself wasn’t game-changing, it revealed how computational assistants now democratize boundaries of expertise—forcing veterans to reckon with the fact that our years in the trenches now have a tangible “short-cut.” Yet, these upleveling tools can both help and hurt; deep thinking gets outsourced while surface-level errors might slip through if you’re not careful. Still, I remain cautiously intrigued by the augmentation it represents—a recalibration of what we call expertise.</p>
+
+<p>A separate article lamented how the West is losing its foundational skill sets, coding among them. I’m not against that sentiment, but the issue rarely is about the mere decline of a skill. It’s a warning sign about a slower pace in understanding underlying systems. Just as with concurrency models in Go, where the abstraction seduces the unwary, the loss of foundational knowledge in coding leaves one vulnerable to blindly shifting paradigms. It’s a reminder to any seasoned engineer: never let these advanced tools turn you into a user instead of a builder. If you rely on high-level frameworks without understanding the trade-offs, you’re dancing on the precipice of unexpected behavior when things inevitably go south.</p>
+
+<p>What remains to be figured out is how to maintain craftsmanship in an era of abstraction and assistance. How do we design systems where the trade-offs of concurrency models are deeply understood and anticipated? How do we manage the subtle breakdowns between a lock’s intention and a system’s overall health? On the neural network front, what are the long-term ramifications of increasingly ceding control over state management to frameworks? These questions aren’t answered by quick fixes or by dancing with convenient APIs. They require ongoing critical reflection on our models—both in code and in thought.</p>
+
+<p>The evolving landscape forces us to continuously re-read the fundamentals. Whether dealing with seemingly simplified concurrency, the nuanced battles against deadlock and livelock, or architectural decisions in deep learning frameworks, the devil’s in the details. Old wisdom now comes with new caveats, and our legacy of careful, foundational work is as critical today as ever.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Amateur armed with ChatGPT solves an Erdős problem</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲304</span></a><a href="https://techtrenches.dev/p/the-west-forgot-how-to-make-things" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The West Forgot How to Make Things. Now It&#39;s Forgetting How to Code</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲51</span></a></div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

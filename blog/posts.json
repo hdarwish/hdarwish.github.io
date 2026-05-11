@@ -1,0 +1,174 @@
+[
+  {
+    "date": "2026-05-10",
+    "title": "Banning Query Strings Isn’t Crazy, It's Necessary",
+    "tags": [
+      "web development",
+      "URLs",
+      "state management"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-05-08",
+    "title": "Stop Pretending AI Agents Can Thrive on Fancy Prompts",
+    "tags": [
+      "AI",
+      "control flow",
+      "automation"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-05-07",
+    "title": "Busywork is Killing Your Codebase",
+    "tags": [
+      "productivity",
+      "innovation",
+      "workplace culture"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-05-06",
+    "title": "Old Game Code is a Treasure Trove of Forgotten Lessons",
+    "tags": [
+      "reverse engineering",
+      "game development",
+      "digital preservation"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-05-05",
+    "title": "Bun's Shift to Rust: Why Ecosystems Matter More Than Code",
+    "tags": [
+      "programming languages",
+      "ecosystems",
+      "software development"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-05-04",
+    "title": "Your Abstraction Layers Are Costing You in Ways You Didn't Consider",
+    "tags": [
+      "abstraction",
+      "technical debt",
+      "performance"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-05-03",
+    "title": "Your Code Isn’t Yours: The Silent Shift in Authorship with AI Tools",
+    "tags": [
+      "AI Tools",
+      "Code Authorship",
+      "Ethics in Development"
+    ],
+    "excerpt": "",
+    "hn_refs": [
+      {
+        "title": "GitHub Copilot adding itself as Co-Author on every commit",
+        "url": "https://news.ycombinator.com/item?id=26123456",
+        "points": 150
+      }
+    ]
+  },
+  {
+    "date": "2026-05-02",
+    "title": "Why Changing a Fan's Color Isn't Just Cosmetic",
+    "tags": [
+      "product design",
+      "engineering complexity",
+      "manufacturing"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-05-01",
+    "title": "Your Linux Kernel Security Is Always a Step Behind",
+    "tags": [
+      "Linux",
+      "Security",
+      "Open Source"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-04-30",
+    "title": "Stop Forcing One-Size-Fits-All IDEs on Developers",
+    "tags": [
+      "IDE",
+      "developer tools",
+      "Zed 1.0"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-04-29",
+    "title": "Why Your NoSQL Freedom Might Just Be a Trap",
+    "tags": [
+      "database",
+      "NoSQL",
+      "data modeling"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-04-28",
+    "title": "More RAM Won't Save You from Bad Decisions",
+    "tags": [
+      "memory management",
+      "performance optimization",
+      "software architecture"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-04-27",
+    "title": "Buying Friendster for $30k: A Tech Experiment Worth Watching",
+    "tags": [
+      "Digital History",
+      "Legacy Systems",
+      "Tech Experimentation"
+    ],
+    "excerpt": "",
+    "hn_refs": []
+  },
+  {
+    "date": "2026-04-26",
+    "title": "Concurrence, Neural Nets, and the Evolution of Expertise",
+    "tags": [
+      "concurrency",
+      "pytorch",
+      "architecture",
+      "software-craftsmanship"
+    ],
+    "excerpt": "Go’s concurrency model isn’t magic. Everyone nods at goroutines and channels as if they’ve solved all multi-threading woes, but my experiences scream otherwise. Traditional thread-based programming...",
+    "hn_refs": [
+      {
+        "title": "Amateur armed with ChatGPT solves an Erdős problem",
+        "url": "https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/",
+        "points": 304
+      },
+      {
+        "title": "The West Forgot How to Make Things. Now It's Forgetting How to Code",
+        "url": "https://techtrenches.dev/p/the-west-forgot-how-to-make-things",
+        "points": 51
+      }
+    ]
+  }
+]
