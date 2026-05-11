@@ -1,5 +1,16 @@
 [
   {
+    "date": "2026-05-11",
+    "title": "Centralized AI Is Slowing Us Down",
+    "tags": [
+      "AI",
+      "Local AI",
+      "Innovation"
+    ],
+    "excerpt": "I read an impassioned call for local AI to become the norm and couldn't help but think about how much more control developers could have over their own projects. Centralized AI models are prevalent,...",
+    "hn_refs": []
+  },
+  {
     "date": "2026-05-10",
     "title": "Banning Query Strings Isn’t Crazy, It's Necessary",
     "tags": [
