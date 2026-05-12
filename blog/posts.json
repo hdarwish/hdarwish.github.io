@@ -1,5 +1,22 @@
 [
   {
+    "date": "2026-05-12",
+    "title": "Stop Trusting Humans with Supply Chain Security",
+    "tags": [
+      "supply chain security",
+      "software development",
+      "automation"
+    ],
+    "excerpt": "I read the TanStack postmortem on their NPM supply-chain compromise and immediately thought about how much we rely on human vigilance for security. It's scary. We think our systems are protected by...",
+    "hn_refs": [
+      {
+        "title": "TanStack Postmortem: NPM Supply-chain Compromise",
+        "url": "https://example.com/tanstack-postmortem",
+        "points": 150
+      }
+    ]
+  },
+  {
     "date": "2026-05-11",
     "title": "Centralized AI Is Slowing Us Down",
     "tags": [
