@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Gaming Is Winning with Windows&#39; Own APIs - Hafs Ibrahim</title>
+    <meta name="description" content="Linux Gaming Is Winning with Windows&#39; Own APIs">
+    <meta property="og:title" content="Linux Gaming Is Winning with Windows&#39; Own APIs">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hdarwish.github.io/blog/2026-05-14.html">
+    <meta property="og:image" content="https://hdarwish.github.io/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s;
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-05-14">
+            <div class="blog-post-date">May 14, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Linux</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">gaming</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">open source</span></div>
+            <h2 class="blog-post-title">Linux Gaming Is Winning with Windows&#39; Own APIs</h2>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I read about Linux gaming performance outpacing Windows and immediately thought about the implications of open-source systems adopting proprietary tech. This twist caught me off guard.</p><p>Gamers on Linux were underdogs for years. Developers prioritized Windows, forcing Linux users to struggle for smooth gameplay. That's changing fast, and it's more than just a feel-good story about open source.</p><p>The real shift is how the open-source community is using Windows APIs to enhance the Linux kernel. Wine and Proton are central to this change. What began as a way to run Windows software on Linux has become a heavyweight champion for gaming.</p><p>Valve's Proton, built on Wine, translates DirectX calls to Vulkan, allowing Windows games to run on Linux without a performance hit. It's ironic—using Windows' own tools against it. And it's working.</p><p>Dealing with Wine used to mean frustration. Compatibility layers were clunky and slow. A single misstep in configuration led to cryptic error messages like "err:module:import_dll Library X not found." Now, these tools are integral to gaming on Linux, and they work smoothly.</p><p>The performance gains are clear. Games like "DOOM Eternal" and "Shadow of the Tomb Raider" achieve higher frame rates on Linux with Proton compared to native Windows execution. That's not a fluke; it's a sign of things to come.</p><p>The Linux kernel is embracing more native support for these APIs. Vkd3d, the Direct3D 12 to Vulkan implementation, is being integrated and optimized. It's not just about making things work—it's about making them work better.</p><p>The open-source community's ability to adapt and integrate is impressive. They're not just copying; they're enhancing. They took Windows' playbook and rewrote it in a way that works better for them.</p><p>Another angle is the impact on hardware support. Traditionally, Linux gamers dealt with poor driver support from GPU vendors. But that's shifting. AMD's open-source drivers are thriving, and NVIDIA is starting to open up more. These developments mean better, more stable performance for Linux gamers using both Proton and native titles.</p><p>Game development studios are noticing the cultural shift. Developers are increasingly considering Linux support from the start. Valve's Steam Deck is a testament to this shift. It's a handheld Linux gaming device receiving rave reviews. The SteamOS, based on Arch Linux, showcases how far Linux has come as a gaming platform.</p><p>But it's not just about Steam Deck. The broader impact is on the ecosystem. With more games running smoothly on Linux, even die-hard Windows users might reconsider their OS choice. I've seen colleagues, lifelong Windows users, switch over after experiencing smoother gameplay and fewer crashes on Linux setups.</p><p>It's strange to see the open-source community pull ahead using the same APIs that were once exclusive to Windows. Yet here we are. The underdog is now playing the opponent's position with more finesse.</p><p>This might just be the beginning. As more developers see the benefits of cross-platform support, the lines between operating systems could blur further. Maybe one day, choosing an OS won't be about compatibility but about preference. We're not there yet, but this is a big step in that direction.</p><p>The open-source community's ability to innovate is reshaping the gaming landscape. It's doing so by integrating—and outperforming—proprietary tech. The lesson here? Sometimes the best way forward is by taking a page out of your rival's book and making it your own.</p><p>So the next time someone asks if Linux is good for gaming, the answer might just be, "It's not just good, it's better."</p></div>
+            
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
