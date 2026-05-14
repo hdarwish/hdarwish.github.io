@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support — Tiny Tell</title>
+    <meta name="description" content="Support and FAQ for Tiny Tell baby cry analyzer app">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=14">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+            </ul>
+            <button class="theme-cycle" id="theme-cycle" aria-label="Switch theme" title="Switch theme">
+                <span class="theme-icon">🌑</span>
+                <span class="theme-name">dark</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="container" style="max-width: 800px;">
+            <div style="margin-bottom: 48px;">
+                <div class="hero-accent-bar" style="max-width: 200px; margin-bottom: 16px;">
+                    <span class="bar-seg bar-green"></span>
+                    <span class="bar-seg bar-blue"></span>
+                    <span class="bar-seg bar-purple"></span>
+                    <span class="bar-seg bar-amber"></span>
+                </div>
+                <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 12px;">
+                    Support<span class="accent">.</span>
+                </h1>
+                <p style="color: var(--text-muted); font-size: 1.1rem;">
+                    Tiny Tell — Baby Cry Analyzer
+                </p>
+            </div>
+
+            <div style="line-height: 1.8; font-size: 1.05rem;">
+                <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
+                    Contact
+                </h2>
+                <p style="margin-bottom: 32px;">
+                    Need help or have feedback? Email me at <a href="mailto:hafs.darwish+tinytell@gmail.com" style="color: var(--accent); text-decoration: underline;">hafs.darwish+tinytell@gmail.com</a>
+                </p>
+
+                <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
+                    FAQ
+                </h2>
+
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
+                    Why does the app need <span class="hl hl-rose">microphone permission</span>?
+                </h3>
+                <p style="margin-bottom: 20px;">
+                    Tiny Tell records audio when you tap the analyze button so it can classify your baby's cry. The recording is sent to our ML server for analysis, then <span class="hl hl-amber">immediately discarded</span>. No audio is stored on our servers.
+                </p>
+
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
+                    What do the <span class="hl hl-blue">insights</span> mean?
+                </h3>
+                <p style="margin-bottom: 20px;">
+                    Each cry is classified into one of 9 categories — <span class="hl hl-green">hungry</span>, <span class="hl hl-purple">tired</span>, <span class="hl hl-rose">discomfort</span>, and more. The app returns the top 3 most likely reasons with confidence scores, plus actionable advice for the top prediction.
+                </p>
+
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
+                    Recording isn't working — <span class="hl hl-amber">troubleshooting</span>
+                </h3>
+                <ul style="margin-bottom: 20px; padding-left: 24px;">
+                    <li style="margin-bottom: 8px;">Check that you've granted microphone permission in iOS Settings → Tiny Tell</li>
+                    <li style="margin-bottom: 8px;">Ensure the app is running in the foreground when you tap Analyze</li>
+                    <li style="margin-bottom: 8px;">Try closing and reopening the app</li>
+                    <li style="margin-bottom: 8px;">If the issue persists, email me at the contact address above</li>
+                </ul>
+
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
+                    How accurate is the <span class="hl hl-green">classification model</span>?
+                </h3>
+                <p style="margin-bottom: 20px;">
+                    The current model achieves <span class="hl hl-blue">90.5% accuracy</span> on held-out test data. It was trained on real baby cry samples with phone microphone simulation to match your device's recording quality. The model runs entirely <span class="hl hl-purple">on-device</span> (via our Mac server) — no third-party AI services.
+                </p>
+
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
+                    Can I delete my <span class="hl hl-rose">insight history</span>?
+                </h3>
+                <p style="margin-bottom: 20px;">
+                    Yes — go to Settings within the app and tap "Clear History". Your insight history is stored <span class="hl hl-amber">locally on your device only</span>, so clearing it removes all records.
+                </p>
+
+                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
+                    Still have questions?
+                </h3>
+                <p style="margin-bottom: 32px;">
+                    Email <a href="mailto:hafs.darwish+tinytell@gmail.com" style="color: var(--accent); text-decoration: underline;">hafs.darwish+tinytell@gmail.com</a> — I respond to every message.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Hafs Ibrahim. Built by hand, shipped with care.</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
