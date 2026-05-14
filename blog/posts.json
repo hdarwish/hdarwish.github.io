@@ -9,7 +9,23 @@
     ],
     "excerpt": "I read about Linux gaming performance outpacing Windows and immediately thought about the implications of open-source systems adopting proprietary tech. This twist caught me off guard.Gamers on Linux...",
     "hn_refs": [],
-    "further_reading": []
+    "further_reading": [
+      {
+        "title": "WineHQ",
+        "url": "https://www.winehq.org/",
+        "kind": "docs"
+      },
+      {
+        "title": "ProtonDB",
+        "url": "https://www.protondb.com/",
+        "kind": "docs"
+      },
+      {
+        "title": "The Linux Programming Interface",
+        "url": "https://man7.org/tlpi/",
+        "kind": "book"
+      }
+    ]
   },
   {
     "date": "2026-05-13",
