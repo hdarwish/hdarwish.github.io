@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-15",
+    "title": "Your Car's Modem is a Privacy Nightmare",
+    "tags": [
+      "privacy",
+      "automotive",
+      "technology"
+    ],
+    "excerpt": "I read a blog about someone tearing out the modem and GPS from their new RAV4. It made me rethink privacy versus convenience in modern cars.This isn't car hacking. It's about control. DIY tech mods...",
+    "hn_refs": [
+      {
+        "title": "Removing the modem and GPS from my 2024 RAV4 hybrid",
+        "url": "https://arkadiyt.com/2026/05/13/removing-the-modem-and-gps-from-my-rav4/",
+        "points": 827
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Data and Goliath: The Hidden Battles to Collect Your Data and Control Your World",
+        "url": "https://www.schneier.com/books/data-and-goliath/",
+        "kind": "book"
+      },
+      {
+        "title": "The Connected Car: Who Is In the Driver's Seat?",
+        "url": "https://www.eff.org/wp/connected-car-who-drivers-seat",
+        "kind": "article"
+      },
+      {
+        "title": "Privacy and Security in the Era of the Internet of Things",
+        "url": "https://www.youtube.com/watch?v=6Af6b_wyiwI",
+        "kind": "talk"
+      }
+    ]
+  },
+  {
     "date": "2026-05-14",
     "title": "Linux Gaming Is Winning with Windows' Own APIs",
     "tags": [
