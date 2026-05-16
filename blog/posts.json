@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-16",
+    "title": "You're Suffering from AI Psychosis",
+    "tags": [
+      "AI",
+      "business strategy",
+      "technology"
+    ],
+    "excerpt": "I stumbled upon a tweet claiming companies are suffering from 'AI psychosis,' and it made me think about all the meetings I've sat through where AI was the answer to a question nobody asked.Six...",
+    "hn_refs": [
+      {
+        "title": "I believe there are entire companies right now under AI psychosis",
+        "url": "https://twitter.com/mitchellh/status/2055380239711457578",
+        "points": 1243
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Artificial Intelligence: A Guide to Intelligent Systems",
+        "url": "https://www.pearson.com/us/higher-education/program/Negnevitsky-Artificial-Intelligence-A-Guide-to-Intelligent-Systems-3rd-Edition/PGM141641.html",
+        "kind": "book"
+      },
+      {
+        "title": "The Myth of Artificial Intelligence: Why Computers Can’t Think the Way We Do",
+        "url": "https://www.hup.harvard.edu/catalog.php?isbn=9780674983519",
+        "kind": "book"
+      },
+      {
+        "title": "Artificial Intelligence: A Modern Approach",
+        "url": "https://www.pearson.com/us/higher-education/program/Russell-Artificial-Intelligence-A-Modern-Approach-4th-Edition/PGM1264672.html",
+        "kind": "book"
+      }
+    ]
+  },
+  {
     "date": "2026-05-15",
     "title": "Your Car's Modem is a Privacy Nightmare",
     "tags": [
