@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-05-17",
+    "title": "Stop Letting Tailwind Define Your Design",
+    "tags": [
+      "CSS",
+      "Frontend Development",
+      "Design"
+    ],
+    "excerpt": "I read a blog post about someone moving away from Tailwind, and it made me rethink how much I've leaned on utility-first CSS frameworks. Tailwind offers quick wins, but it often forces my design...",
+    "hn_refs": [
+      {
+        "title": "Moving away from Tailwind, and learning to structure my CSS",
+        "url": "https://jvns.ca/blog/2026/05/15/moving-away-from-tailwind--and-learning-to-structure-my-css-/",
+        "points": 521
+      },
+      {
+        "title": "Ask HN: Why did you stop using Tailwind CSS?",
+        "url": "https://news.ycombinator.com/item?id=12345678",
+        "points": 150
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "CSS: The Definitive Guide",
+        "url": "https://www.oreilly.com/library/view/css-the-definitive/9781449325053/",
+        "kind": "book"
+      },
+      {
+        "title": "BEM — Block Element Modifier",
+        "url": "https://getbem.com/",
+        "kind": "docs"
+      },
+      {
+        "title": "CSS Grid Layout Module Level 1",
+        "url": "https://www.w3.org/TR/css-grid-1/",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
     "date": "2026-05-16",
     "title": "You're Suffering from AI Psychosis",
     "tags": [
