@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-18",
+    "title": "Your Android Tablet Wants to Be a Workstation",
+    "tags": [
+      "Linux",
+      "Repurposing Hardware",
+      "Android"
+    ],
+    "excerpt": "The other day, I saw someone transform an $80 RK3562 Android tablet into a Debian Linux workstation. It was a wake-up call. We're surrounded by underutilized hardware. That cheap device collecting...",
+    "hn_refs": [
+      {
+        "title": "I turned a $80 RK3562 Android tablet into a Debian Linux workstation",
+        "url": "https://github.com/tech4bot/rk3562deb",
+        "points": 320
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "PostmarketOS Wiki",
+        "url": "https://wiki.postmarketos.org/wiki/Main_Page",
+        "kind": "docs"
+      },
+      {
+        "title": "Running Linux on Android Devices",
+        "url": "https://www.youtube.com/watch?v=V8rZWw9HE7o",
+        "kind": "video"
+      },
+      {
+        "title": "Debian on Mobile Devices",
+        "url": "https://wiki.debian.org/Mobile",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
     "date": "2026-05-17",
     "title": "Stop Letting Tailwind Define Your Design",
     "tags": [
