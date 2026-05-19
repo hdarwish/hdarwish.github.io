@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-05-19",
+    "title": "LLMs Are Changing How We Work, Not Just What We Do",
+    "tags": [
+      "AI",
+      "Ethics",
+      "LLMs"
+    ],
+    "excerpt": "I skimmed Simon Willison's summary of the last six months in LLMs and felt the ground shifting. It's not just tech evolution; it's a redefinition of our interaction with machines.These models aren't...",
+    "hn_refs": [
+      {
+        "title": "The last six months in LLMs in five minutes",
+        "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
+        "points": 373
+      },
+      {
+        "title": "The last six months in LLMs in five minutes",
+        "url": "https://simonwillison.net/2026/May/18/llms-six-months/",
+        "points": 210
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Ethical and Societal Implications of Algorithms, Data, and Artificial Intelligence: A Roadmap for Research",
+        "url": "https://arxiv.org/abs/1911.05755",
+        "kind": "paper"
+      },
+      {
+        "title": "Aligning AI With Human Values",
+        "url": "https://www.youtube.com/watch?v=3TYT1QfdfsM",
+        "kind": "talk"
+      },
+      {
+        "title": "AI Ethics Guidelines Global Inventory",
+        "url": "https://algorithmwatch.org/en/project/ai-ethics-guidelines-global-inventory/",
+        "kind": "article"
+      }
+    ]
+  },
+  {
     "date": "2026-05-18",
     "title": "Your Android Tablet Wants to Be a Workstation",
     "tags": [
