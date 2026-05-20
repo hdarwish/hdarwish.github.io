@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-20",
+    "title": "Our Tech Obsession Ignores the Lessons of the Past",
+    "tags": [
+      "operating systems",
+      "digital preservation",
+      "software evolution"
+    ],
+    "excerpt": "Last week, I stumbled into a virtual museum of operating systems and lost track of time. This wasn't just nostalgia. It made me rethink how we evaluate software progress.Most of us treat tech like a...",
+    "hn_refs": [
+      {
+        "title": "I’ve built a virtual museum with nearly every operating system you can think of",
+        "url": "https://virtualosmuseum.org/",
+        "points": 722
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Art of Unix Programming",
+        "url": "http://www.catb.org/esr/writings/taoup/",
+        "kind": "book"
+      },
+      {
+        "title": "Digital Preservation Handbook",
+        "url": "https://www.dpconline.org/handbook",
+        "kind": "docs"
+      },
+      {
+        "title": "The Architecture of Open Source Applications: Volume II",
+        "url": "http://aosabook.org/en/index.html",
+        "kind": "book"
+      }
+    ]
+  },
+  {
     "date": "2026-05-19",
     "title": "LLMs Are Changing How We Work, Not Just What We Do",
     "tags": [
