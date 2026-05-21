@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-05-21",
+    "title": "Your Development Tool Is a Trojan Horse",
+    "tags": [
+      "Security",
+      "VSCode",
+      "Supply Chain Attacks"
+    ],
+    "excerpt": "I read about the breach of 3,800 GitHub repositories via a malicious VSCode extension. It made me think about the vulnerabilities lurking in our development tools. We love VSCode for its...",
+    "hn_refs": [
+      {
+        "title": "GitHub confirms breach of 3,800 repos via malicious VSCode extension",
+        "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
+        "points": 753
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
+        "url": "https://itrevolution.com/the-phoenix-project/",
+        "kind": "book"
+      }
+    ]
+  },
+  {
     "date": "2026-05-20",
     "title": "Our Tech Obsession Ignores the Lessons of the Past",
     "tags": [

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Development Tool Is a Trojan Horse - Hafs Ibrahim</title>
+    <meta name="description" content="Your Development Tool Is a Trojan Horse">
+    <meta property="og:title" content="Your Development Tool Is a Trojan Horse">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hdarwish.github.io/blog/2026-05-21.html">
+    <meta property="og:image" content="https://hdarwish.github.io/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s;
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-05-21">
+            <div class="blog-post-date">May 21, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">VSCode</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Supply Chain Attacks</span></div>
+            <h2 class="blog-post-title">Your Development Tool Is a Trojan Horse</h2>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I read about the breach of 3,800 GitHub repositories via a malicious VSCode extension. It made me think about the vulnerabilities lurking in our development tools. We love VSCode for its extensibility, but that flexibility can be dangerous.</p>
+
+<p>VSCode has over 14 million active users. Its popularity makes it a target for malicious actors. The features that help us code effectively can be turned against us.</p>
+
+<p>Installing an extension isn't just adding a feature. It's trusting the security practices of someone you may never meet. I've overlooked this before.</p>
+
+<p>I've installed plugins that promised productivity boosts. Each click is a potential risk. We often treat these extensions as harmless, ignoring that they're nodes of trust.</p>
+
+<p>Think of your development environment. Each extension is a gate. Every gate needs to be secure. What if one isn't?</p>
+
+<p>The GitHub breach shows that an extension isn't just a tool; it's a conduit. Attackers injected malicious code into projects, compromising trusted repositories.</p>
+
+<p>This isn't theoretical. It's happening. It forces us to confront our reliance on open-source ecosystems. Shared responsibility means shared risk.</p>
+
+<p>I've seen npm packages go rogue. A small utility package becomes an attack vector. It's a reminder: every dependency is an opportunity for compromise.</p>
+
+<p>We can't live in fear, but we can be vigilant. Audit extensions. Check the source. Read reviews. Vet them like you'd vet a line of code for production.</p>
+
+<p>Consider permission scopes. Be wary of extensions requesting more permissions than they need. Apply the principle of least privilege everywhere.</p>
+
+<p>We should push for better tooling to manage and audit extensions. Imagine if VSCode had a built-in security scanner for extensions. A feature that warns you when an extension acts unexpectedly.</p>
+
+<p>Security isn't just a checkbox. It's a mindset. Our tools aren't infallible. They're as secure as the weakest link in their ecosystem.</p>
+
+<p>I now take extra time to review every extension I install. It's a step towards a more secure development environment. One we should all take.</p>
+
+<p>The breach is more than a cautionary tale. It's a call to action for developers, tool maintainers, and platform providers. We need a culture of security-first thinking in our open-source communities.</p>
+
+<p>As tools become more complex, the stakes get higher. VSCode's breach is a sign of the times. We need to adapt. We owe it to ourselves and the integrity of our code.</p>
+
+<p>The tools we use are powerful allies, but only if they're on our side. We can't afford to trust blindly. It's time to scrutinize the gates we're opening.</p>
+
+<p>The next time you install an extension, remember: your development tool could be a Trojan horse. Treat it with the caution it deserves.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">GitHub confirms breach of 3,800 repos via malicious VSCode extension</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲753</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://itrevolution.com/the-phoenix-project/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
