@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-22",
+    "title": "Your $48K GPU Server Is More Than Just Numbers",
+    "tags": [
+      "GPU",
+      "Machine Learning",
+      "Scalability"
+    ],
+    "excerpt": "I read a post questioning the worth of a $48K GPU server. It made me think about how such an investment reshapes your team's approach to problem-solving and scalability. It's not just about teraflops...",
+    "hn_refs": [
+      {
+        "title": "Was my $48K GPU server worth it?",
+        "url": "https://rosmine.ai/2026/05/13/was-my-48k-gpu-worth-it/",
+        "points": 435
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Deep Learning with Python",
+        "url": "https://www.manning.com/books/deep-learning-with-python",
+        "kind": "book"
+      },
+      {
+        "title": "NVIDIA Developer - CUDA Toolkit",
+        "url": "https://developer.nvidia.com/cuda-toolkit",
+        "kind": "docs"
+      },
+      {
+        "title": "Building Scalable Machine Learning Pipelines",
+        "url": "https://www.youtube.com/watch?v=6kd9sVfMk98",
+        "kind": "talk"
+      }
+    ]
+  },
+  {
     "date": "2026-05-21",
     "title": "Your Development Tool Is a Trojan Horse",
     "tags": [
