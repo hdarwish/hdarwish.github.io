@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-23",
+    "title": "Your Specialization Obsession is Holding You Back",
+    "tags": [
+      "business strategy",
+      "diversification",
+      "Japanese companies"
+    ],
+    "excerpt": "I read an article about why Japanese giants like Panasonic and Yamaha operate in diverse industries. It made me question the Western obsession with specialization. Why focus narrowly when you can...",
+    "hn_refs": [
+      {
+        "title": "Why Japanese companies do so many different things",
+        "url": "https://davidoks.blog/p/why-japanese-companies-do-so-many",
+        "points": 636
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Innovator's Dilemma: When New Technologies Cause Great Firms to Fail",
+        "url": "https://www.harvardbusiness.org/the-innovators-dilemma/",
+        "kind": "book"
+      },
+      {
+        "title": "The Essence of Strategy: Continuity and Change in Japanese Business",
+        "url": "https://www.jstor.org/stable/27750421",
+        "kind": "paper"
+      },
+      {
+        "title": "The Toyota Way: 14 Management Principles from the World's Greatest Manufacturer",
+        "url": "https://www.toyota-global.com/company/vision_philosophy/toyota_production_system/",
+        "kind": "book"
+      }
+    ]
+  },
+  {
     "date": "2026-05-22",
     "title": "Your $48K GPU Server Is More Than Just Numbers",
     "tags": [
