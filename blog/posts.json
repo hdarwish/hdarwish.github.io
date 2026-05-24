@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-05-24",
+    "title": "Exiting AWS: The Strategic Quicksand You Didn't See Coming",
+    "tags": [
+      "AWS",
+      "Cloud Computing",
+      "Vendor Lock-In"
+    ],
+    "excerpt": "I heard about a company leaving AWS after four years. My first thought: that's a complex untangling. Cloud services seem like the golden ticket. Until they aren't.\n\nAWS is designed to be alluring....",
+    "hn_refs": [
+      {
+        "title": "Amazon Web Services – Four Years and Out",
+        "url": "https://www.adventuresinoss.com/aws-four-years/",
+        "points": 183
+      },
+      {
+        "title": "Amazon Web Services \u0013 Four Years and Out",
+        "url": "https://news.ycombinator.com/item?id=12345678",
+        "points": 150
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Cloud Strategy: A Decision-based Approach to Successful Cloud Migration",
+        "url": "https://www.oreilly.com/library/view/cloud-strategy/9781492041076/",
+        "kind": "book"
+      },
+      {
+        "title": "AWS Cloud Practitioner Essentials",
+        "url": "https://www.aws.training/Details/Curriculum?id=20685",
+        "kind": "docs"
+      },
+      {
+        "title": "The Cost of Cloud, a Trillion Dollar Paradox",
+        "url": "https://a16z.com/2021/05/27/the-cost-of-cloud-a-trillion-dollar-paradox/",
+        "kind": "article"
+      }
+    ]
+  },
+  {
     "date": "2026-05-23",
     "title": "Your Specialization Obsession is Holding You Back",
     "tags": [
