@@ -9,10 +9,20 @@ Started: 2026-05-25T13:05Z
 - [x] Add consulting CTA section to index.html
 - [x] Style the CTA section
 - [x] Add consulting link to navigation
-- [ ] Push changes
-- [ ] Open PR
+- [x] Push changes
+- [x] Open PR
+
+## Acceptance Criteria Self-Check
+- [x] AC1: Add CTA section to Works page — PASS (section added between Projects and Skills with id="consulting")
+- [x] AC2: Non-intrusive design — PASS (matches portfolio aesthetic, uses existing design tokens, no popups/modals)
+- [x] AC3: Calendly link present — PASS (href="https://calendly.com/hafsibrahim/discovery")
+- [x] AC4: Services summary included — PASS (AI engineering, LLM integration, platform engineering)
+- [x] AC5: Rate disclosure — PASS ($100-200/hr · 2-12 week projects)
+- [x] AC6: Navigation updated — PASS (Consulting link added to nav menu)
 
 ## Notes
 - Card is a lean/fake-door experiment per CFO recommendation
-- Adding "Available for consulting" section on Works page
-- No intrusive changes, just a single CTA section
+- Commit: ed6d05a
+- PR: https://github.com/hdarwish/hdarwish.github.io/pull/1
+- Branch pushed after GitHub transient error (3 retry attempts)
+- Kill signal: zero Calendly inquiries in 14 days
