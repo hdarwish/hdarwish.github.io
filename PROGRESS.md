@@ -23,11 +23,12 @@ Started: 2026-05-25T14:57Z
 - [x] AC5: ATS optimization messaging — PASS (value props, "What gets tailored" section)
 - [x] AC6: No backend/no persistence — PASS (pure static HTML, no server calls)
 
-## Rework — Security Fix
-- [2026-05-25T11:11Z] Reviewer found XSS vulnerability at line 331
-- Blocker B1: email reflected into innerHTML without sanitization
-- Fix: Use textContent to safely insert user-controlled email value
-- Changed line 331-333 to create placeholder span and set textContent
+## Rework — Security Fix (2026-05-25T11:14Z)
+- [x] Blocker B1: XSS vulnerability at line 331 — FIXED
+  - Changed innerHTML concatenation to use placeholder span + textContent
+  - Email now inserted safely via `document.getElementById('user-email').textContent = email`
+  - Commit 6e5be65, pushed to origin/bld-30162-cforev
+  - PR #3 updated with security fix
 
 ## Notes
 - Following CodeReview Bot fake-door pattern from a5213e1
