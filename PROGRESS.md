@@ -12,7 +12,16 @@ Started: 2026-05-25T14:57Z
 - [x] Add form for resume + job description input
 - [x] Configure fake-door form submission
 - [x] Tests passing (none - static site)
-- [ ] Pushed to branch
+- [x] Pushed to branch
+- [x] PR opened
+
+## Acceptance Criteria Self-Check
+- [x] AC1: Landing page created — PASS (resume-boost/index.html exists)
+- [x] AC2: $8 price point displayed — PASS (hero, CTA, pricing section all show $8)
+- [x] AC3: Form accepts resume + job description — PASS (two textarea fields with validation)
+- [x] AC4: Fake-door submission — PASS (shows "coming soon" message, logs to console)
+- [x] AC5: ATS optimization messaging — PASS (value props, "What gets tailored" section)
+- [x] AC6: No backend/no persistence — PASS (pure static HTML, no server calls)
 
 ## Notes
 - Following CodeReview Bot fake-door pattern from a5213e1
@@ -20,3 +29,5 @@ Started: 2026-05-25T14:57Z
 - Kill signal: <5 orders in first 14 days
 - Price point: $8/resume
 - No backend - form will show interest collection message
+- Commit: b7bd0c9
+- PR: https://github.com/hdarwish/hdarwish.github.io/pull/3
