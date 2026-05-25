@@ -46,3 +46,10 @@ Started: 2026-05-25T15:17:00Z
 - [x] AC3: Fake-door form captures lead data — PASS (email, company, industry, tier)
 - [x] AC4: Kill signal documented — PASS (<10 customers in 30 days per FAQ section)
 - [x] AC5: Follows existing site style — PASS (uses ../style.css, matches CodeReview Bot structure)
+
+## Rework — Merge Conflict Resolution (2026-05-25T12:34Z)
+- [x] PR #4 had merge conflicts with master after PR #3 merged
+  - Conflict in PROGRESS.md (two different card progress files)
+  - Resolution: kept branch-specific progress (t_ea59322d), accepted master's new resume-boost/ directory
+  - Commit 0408d06, pushed to origin/bld-ea593-cforev
+  - PR #4 updated, mergeable status now clear
