@@ -328,7 +328,9 @@
                 timestamp: new Date().toISOString()
             });
 
-            formMessage.innerHTML = '🚧 <strong>Coming Soon!</strong><br>Thanks for your interest. We\'re still building this service. We\'ll email you at <strong>' + email + '</strong> when it launches.';
+            // Safely construct message to prevent XSS
+            formMessage.innerHTML = '🚧 <strong>Coming Soon!</strong><br>Thanks for your interest. We\'re still building this service. We\'ll email you at <strong id="user-email"></strong> when it launches.';
+            document.getElementById('user-email').textContent = email;
             formMessage.style.color = '#f59e0b';
             formMessage.style.display = 'block';
 

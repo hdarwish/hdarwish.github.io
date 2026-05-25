@@ -23,6 +23,12 @@ Started: 2026-05-25T14:57Z
 - [x] AC5: ATS optimization messaging — PASS (value props, "What gets tailored" section)
 - [x] AC6: No backend/no persistence — PASS (pure static HTML, no server calls)
 
+## Rework — Security Fix
+- [2026-05-25T11:11Z] Reviewer found XSS vulnerability at line 331
+- Blocker B1: email reflected into innerHTML without sanitization
+- Fix: Use textContent to safely insert user-controlled email value
+- Changed line 331-333 to create placeholder span and set textContent
+
 ## Notes
 - Following CodeReview Bot fake-door pattern from a5213e1
 - Lean/fake-door experiment per Architect decision (CFO recommendation)
