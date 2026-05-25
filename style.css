@@ -1259,6 +1259,118 @@ footer {
     color: var(--text);
 }
 
+/* ---- Consulting ---- */
+
+.section-consulting {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.consulting-box {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 48px 32px;
+    text-align: center;
+}
+
+.consulting-header {
+    margin-bottom: 32px;
+}
+
+.consulting-accent-bar {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.consulting-accent-bar .bar-seg {
+    width: 32px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+.consulting-box h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.consulting-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    text-transform: uppercase;
+}
+
+.consulting-content {
+    margin-bottom: 40px;
+}
+
+.consulting-content > p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.consulting-services {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.consulting-service {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-align: left;
+    padding: 12px 16px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text);
+}
+
+.consulting-service .service-icon {
+    color: var(--accent);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+}
+
+.consulting-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.consulting-note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .consulting-box {
+        padding: 32px 20px;
+    }
+
+    .consulting-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .consulting-services {
+        gap: 12px;
+    }
+}
+
 /* ---- Contact ---- */
 
 .contact-box {
