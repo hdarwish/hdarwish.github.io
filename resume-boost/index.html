@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeBoost — AI-tailored resumes for every job application</title>
+    <meta name="description" content="AI-powered resume tailoring. Paste your resume + job description, get an ATS-optimized, keyword-matched version in seconds. $8 per resume.">
+    <meta property="og:title" content="ResumeBoost — AI-tailored resumes for every job application">
+    <meta property="og:description" content="AI-powered resume tailoring for $8. ATS-optimized, keyword-matched, delivered instantly.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hafs.dev/resume-boost/">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=14">
+    <link rel="icon" type="image/png" href="../og-image.png">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-cycle" id="theme-cycle" aria-label="Switch theme" title="Switch theme">
+                <span class="theme-icon">🌑</span>
+                <span class="theme-name">dark</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="container" style="max-width: 920px;">
+
+            <!-- Hero -->
+            <div style="display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; margin-bottom: 64px;">
+                <div style="text-align: center;">
+                    <div class="hero-accent-bar" style="max-width: 220px; margin: 0 auto 20px;">
+                        <span class="bar-seg bar-amber"></span>
+                        <span class="bar-seg bar-rose"></span>
+                        <span class="bar-seg bar-green"></span>
+                        <span class="bar-seg bar-blue"></span>
+                    </div>
+                    <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 16px; line-height: 1.1;">
+                        ResumeBoost<span class="accent">.</span>
+                    </h1>
+                    <p style="font-size: 1.35rem; color: var(--text-muted); max-width: 560px; margin: 0 auto 24px; line-height: 1.5;">
+                        AI-tailored resumes for every job application.<br>
+                        <span class="hl hl-green">Paste once</span> — get an ATS-optimized, keyword-matched resume in 30 seconds.
+                    </p>
+                    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px;">
+                        <a href="#order" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--accent); color: white; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem; transition: background 0.2s;">
+                            Get Started — $8
+                        </a>
+                        <a href="#how" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem;">
+                            How It Works
+                        </a>
+                    </div>
+                    <p style="margin-top: 24px; color: var(--text-muted); font-size: 0.95rem;">
+                        $8 per resume · No subscription · Delivered via email in minutes
+                    </p>
+                </div>
+            </div>
+
+            <!-- Three-pillar value props -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 72px;">
+                <div style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #f59e0b; padding: 24px; border-radius: 10px;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; color: #f59e0b;">ATS-Optimized</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Designed to pass <span class="hl hl-amber">Applicant Tracking Systems</span>. Keyword matching, proper formatting, clean structure — optimized for both robots and recruiters.
+                    </p>
+                </div>
+                <div style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #10b981; padding: 24px; border-radius: 10px;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; color: #10b981;">Instant turnaround</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Paste your resume + job description, pay $8, get tailored version <span class="hl hl-green">within minutes</span> via email. No human review delay, no scheduling calls.
+                    </p>
+                </div>
+                <div style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #3b82f6; padding: 24px; border-radius: 10px;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; color: #3b82f6;">$8 flat</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        <span class="hl hl-blue">No subscription</span>, no hidden fees. One-time $8 payment per resume. Competitors charge $20-50 for human review — same result, 75% less.
+                    </p>
+                </div>
+            </div>
+
+            <!-- How it works -->
+            <div id="how" style="margin-bottom: 72px;">
+                <div style="margin-bottom: 32px;">
+                    <div class="hero-accent-bar" style="max-width: 160px; margin-bottom: 12px;">
+                        <span class="bar-seg bar-amber"></span>
+                        <span class="bar-seg bar-rose"></span>
+                        <span class="bar-seg bar-green"></span>
+                        <span class="bar-seg bar-blue"></span>
+                    </div>
+                    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 8px;">
+                        How it works<span class="accent">.</span>
+                    </h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
+                        Three steps from paste to tailored resume.
+                    </p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 16px;">01</div>
+                        <h3 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 12px;">Paste your content</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Copy your current resume text and the job posting you're applying to. No special formatting needed — plain text works fine.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 16px;">02</div>
+                        <h3 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 12px;">Pay $8</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Stripe checkout — card or Apple Pay. Secure, instant processing. No account creation, no subscription.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+                        <div style="font-family: 'JetBrains Mono', monospace; font-size: 2rem; font-weight: 700; color: var(--accent); margin-bottom: 16px;">03</div>
+                        <h3 style="font-size: 1.15rem; font-weight: 600; margin-bottom: 12px;">Get tailored resume</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Delivered to your email within minutes. PDF + Word formats, ready to upload. Keyword-optimized, ATS-friendly.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- What gets tailored -->
+            <div style="margin-bottom: 72px;">
+                <div style="margin-bottom: 32px; text-align: center;">
+                    <div class="hero-accent-bar" style="max-width: 160px; margin: 0 auto 12px;">
+                        <span class="bar-seg bar-amber"></span>
+                        <span class="bar-seg bar-rose"></span>
+                        <span class="bar-seg bar-green"></span>
+                        <span class="bar-seg bar-blue"></span>
+                    </div>
+                    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 8px;">
+                        What gets tailored<span class="accent">.</span>
+                    </h2>
+                    <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
+                        AI analyzes the job posting and rewrites your resume to match.
+                    </p>
+                </div>
+                <div style="max-width: 700px; margin: 0 auto; display: grid; gap: 16px;">
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 20px; border-radius: 10px;">
+                        <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--text);">✓ Keyword matching</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                            Job says "React, TypeScript, AWS"? We weave those exact terms into your experience bullets where relevant.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 20px; border-radius: 10px;">
+                        <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--text);">✓ Skill prioritization</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                            Moves your most relevant skills to the top. De-emphasizes unrelated experience.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 20px; border-radius: 10px;">
+                        <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--text);">✓ Tone adjustment</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                            Startup job? More casual, action-oriented language. Enterprise? Formal, process-focused bullets.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 20px; border-radius: 10px;">
+                        <h3 style="font-size: 1rem; font-weight: 600; margin-bottom: 8px; color: var(--text);">✓ ATS formatting</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                            Clean structure, standard section headers, no images/tables that break ATS parsers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order form -->
+            <div id="order" style="margin-bottom: 72px;">
+                <div style="max-width: 700px; margin: 0 auto; background: var(--surface); border: 1px solid var(--border); padding: 40px; border-radius: 10px;">
+                    <div style="text-align: center; margin-bottom: 32px;">
+                        <div class="hero-accent-bar" style="max-width: 160px; margin: 0 auto 12px;">
+                            <span class="bar-seg bar-amber"></span>
+                            <span class="bar-seg bar-rose"></span>
+                            <span class="bar-seg bar-green"></span>
+                            <span class="bar-seg bar-blue"></span>
+                        </div>
+                        <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 8px;">
+                            Get your tailored resume<span class="accent">.</span>
+                        </h2>
+                        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
+                            Paste your content below. $8 payment, delivered via email in minutes.
+                        </p>
+                    </div>
+                    <form id="order-form" style="display: flex; flex-direction: column; gap: 16px;">
+                        <div>
+                            <label for="email" style="display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.95rem;">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="you@example.com" style="width: 100%; padding: 12px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); font-family: inherit;">
+                        </div>
+                        <div>
+                            <label for="resume" style="display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.95rem;">Your Resume (plain text)</label>
+                            <textarea id="resume" name="resume" required placeholder="Paste your current resume here..." rows="8" style="width: 100%; padding: 12px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; font-size: 0.9rem; color: var(--text); font-family: 'JetBrains Mono', monospace; resize: vertical;"></textarea>
+                        </div>
+                        <div>
+                            <label for="job-posting" style="display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.95rem;">Job Posting (plain text)</label>
+                            <textarea id="job-posting" name="job-posting" required placeholder="Paste the job description here..." rows="8" style="width: 100%; padding: 12px 16px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; font-size: 0.9rem; color: var(--text); font-family: 'JetBrains Mono', monospace; resize: vertical;"></textarea>
+                        </div>
+                        <div style="background: var(--bg); border: 1px solid var(--border); padding: 16px; border-radius: 8px; margin-top: 8px;">
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-weight: 600; font-size: 1.1rem;">Total</span>
+                                <span style="font-weight: 700; font-size: 1.5rem; color: var(--accent);">$8</span>
+                            </div>
+                            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px; margin-bottom: 0;">
+                                One-time payment · No subscription · Delivered via email
+                            </p>
+                        </div>
+                        <button type="submit" style="padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s; margin-top: 8px;">
+                            Proceed to Payment
+                        </button>
+                        <p id="form-message" style="text-align: center; font-size: 0.9rem; margin-top: 8px; display: none;"></p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div style="margin-bottom: 72px;">
+                <div style="margin-bottom: 32px; text-align: center;">
+                    <div class="hero-accent-bar" style="max-width: 160px; margin: 0 auto 12px;">
+                        <span class="bar-seg bar-amber"></span>
+                        <span class="bar-seg bar-rose"></span>
+                        <span class="bar-seg bar-green"></span>
+                        <span class="bar-seg bar-blue"></span>
+                    </div>
+                    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 8px;">
+                        FAQ<span class="accent">.</span>
+                    </h2>
+                </div>
+                <div style="max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px;">
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">Why is this $8 when competitors charge $20-50?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Zero human labor. Competitors pay reviewers $15-30/hour to manually rewrite your resume. We use AI to do the same work in seconds. The savings pass to you.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">How long does it take?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Usually under 5 minutes. As soon as payment clears, the AI generates your tailored resume and sends it to your email. Check spam folder if it doesn't arrive within 10 minutes.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">What if I'm not satisfied?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Email us within 24 hours with your order ID. We'll refund you, no questions asked. Or request one free revision if the output missed something.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">Is my data private?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Yes. Your resume is processed via DeepSeek API and immediately discarded. No storage, no training on your data, no sharing. Fully automated, no human sees your resume.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">Can I use this for multiple jobs?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            Yes. Each job posting is unique, so you'll need a separate tailored resume for each. $8 per job application. No bulk pricing yet, but we're considering a 5-pack discount.
+                        </p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+                        <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px;">What formats do you deliver?</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                            PDF and Word (.docx). PDF for uploading to application portals, Word if you need to make manual tweaks before submitting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="background: var(--surface); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
+        <div class="container" style="max-width: 920px; text-align: center;">
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+                Built by <a href="../index.html" style="color: var(--accent);">Hafs Ibrahim</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">
+                Questions? Email <a href="mailto:hafs.darwish+resumeboost@gmail.com" style="color: var(--accent);">hafs.darwish+resumeboost@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+    <script>
+        // Order form submission (fake-door)
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const resume = document.getElementById('resume').value;
+            const jobPosting = document.getElementById('job-posting').value;
+            const formMessage = document.getElementById('form-message');
+
+            // Simple client-side validation
+            if (!email || !email.includes('@')) {
+                formMessage.textContent = 'Please enter a valid email address.';
+                formMessage.style.color = 'var(--accent)';
+                formMessage.style.display = 'block';
+                return;
+            }
+
+            if (resume.trim().length < 50) {
+                formMessage.textContent = 'Resume text seems too short. Please paste your full resume.';
+                formMessage.style.color = 'var(--accent)';
+                formMessage.style.display = 'block';
+                return;
+            }
+
+            if (jobPosting.trim().length < 50) {
+                formMessage.textContent = 'Job posting text seems too short. Please paste the full job description.';
+                formMessage.style.color = 'var(--accent)';
+                formMessage.style.display = 'block';
+                return;
+            }
+
+            // Fake-door: log interest and show coming-soon message
+            console.log('ResumeBoost order attempt:', {
+                email,
+                resumeLength: resume.length,
+                jobPostingLength: jobPosting.length,
+                timestamp: new Date().toISOString()
+            });
+
+            // Safely construct message to prevent XSS
+            formMessage.innerHTML = '🚧 <strong>Coming Soon!</strong><br>Thanks for your interest. We\'re still building this service. We\'ll email you at <strong id="user-email"></strong> when it launches.';
+            document.getElementById('user-email').textContent = email;
+            formMessage.style.color = '#f59e0b';
+            formMessage.style.display = 'block';
+
+            // Clear form
+            document.getElementById('order-form').reset();
+        });
+    </script>
+</body>
+</html>
