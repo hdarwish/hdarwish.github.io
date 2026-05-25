@@ -20,9 +20,13 @@ Started: 2026-05-25T13:05Z
 - [x] AC5: Rate disclosure — PASS ($100-200/hr · 2-12 week projects)
 - [x] AC6: Navigation updated — PASS (Consulting link added to nav menu)
 
+## Rework (Reviewer Findings)
+- [x] B1: Calendly 404 — FIXED (replaced with mailto: link for fake-door test)
+- [x] M1: Services omission — FIXED (added iOS Development per card spec)
+
 ## Notes
 - Card is a lean/fake-door experiment per CFO recommendation
-- Commit: ed6d05a
+- Commit: ed6d05a (initial), rework in progress
 - PR: https://github.com/hdarwish/hdarwish.github.io/pull/1
 - Branch pushed after GitHub transient error (3 retry attempts)
-- Kill signal: zero Calendly inquiries in 14 days
+- Kill signal: zero email inquiries in 14 days (mailto: replaces Calendly for fake-door test)
