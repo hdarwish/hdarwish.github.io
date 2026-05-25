@@ -1,0 +1,2305 @@
+{
+  "date": "2026-05-05",
+  "generated_at": "2026-05-05T19:59:18.746385+00:00",
+  "briefs": {
+    "generated_at": "2026-05-05T19:55:00.248559+00:00",
+    "cities": {
+      "Dubai": [
+        {
+          "topic": "Technology Dubai",
+          "location": "Dubai",
+          "article": "**Dubai Accelerates Shift to Agentic AI for Future Readiness**\n\nDubai is actively pursuing a transition to Agentic AI, focusing on integrating this technology into private sector decision-making processes. The initiative, announced by local authorities, aims to enhance efficiency and innovation in various industries through tailored training programs. This shift coincides with the acquisition of Dubai Technology Partners by Gentrack\u2019s Veovo, aiming to bolster technology capabilities at Middle Eastern airports and support the region's digital ecosystem.\n\nThis is not a routine development; it suggests a strategic pivot for Dubai as it seeks to establish itself as a leading global innovation hub and strengthen its digital economy, particularly in the face of post-pandemic growth challenges.",
+          "sources": [
+            {
+              "title": "Explained: Why Dubai targets future with Agentic AI shift - Gulf News",
+              "source": "Gulf News",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxONF9zM3RQZ01YZVprRDBaU0F3Mng2LXdyVXBseER0eTlWNi1CUGVqRFhaUVZpR1VtNEMwZWVwWWJrSmVFQXZOR2lYQXhZelllckJzVWxCWEc0T284cTY4dW1xR2txZFNuSGs0eEpQVl9zWmg1ZUlsenVZMnBRRHFvN1ZualVQUEVpSnJncFRUY0FLV1BCd0RlTEloaVJOZnJDcGfSAbIBQVVfeXFMT1NUdTJBRXRabGxUX1FVNnNINm1qSzhHNjhNWWJfczNqRDUwYVpNc3dKZm1Ed3B1UnhkUzVjVG1fMmx5R1FqazZRS2tGdXhjVlNzdjA2OGxVa3BLQU9wUGlyM080NThST0VmSll2UzNxTl8tQlhkcE1LRGkyUlBpS0R3a3ZYaDF6d29EZzZROGp1Zjk3N09DNzN4aXpVekt3YW03SklLODV0alNwNTdQQ3BqQQ?oc=5"
+            },
+            {
+              "title": "Gentrack\u2019s Veovo to buy Dubai Technology Partners in Middle East airport tech push - TipRanks",
+              "source": "TipRanks",
+              "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMlNUdXVCenBKajRUc1RVNzNQYlM0eUZldDVyUmsxSlA1QkJYeHlRUi04OGhjMUFQaW5rSG1NTnFkbFVSUGxEdUpqQ1dnWWp5bHZDTkFJQ0VLNHpnRVNfdHQ4VlZoSDRDcXpXZFhuUUdKeGVvWFNiRmhTeTJOMFJCY0RDZkhSLXJzLWh6SDY1elUxalI2YnV5VjVQajNtUWZlSFduZ0ZNTmw0Z3ByM1Nkbmo1SUZpd1ZweFhEWXF6dXptZ1pzd3dOdVNJRk9iQQ?oc=5"
+            },
+            {
+              "title": "Dubai\u2019s digital ecosystem drives resilience and record growth for tech leaders - Emirates 24|7",
+              "source": "Emirates 24|7",
+              "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQSGJfSk5iT3hTRndLd2RQQzgzT1ctd1pyTlR4eUliY2JqMFBoUk9kX2dVY3otNy1sdHExVGpQMnplRnByXzVQVUNQQ1R2TjR5aG90R2VwRlBReFNGVFEtNFFfa1dFanM0Zk5xZ1JsUHN1dTVTRUNUbzgxWFJVUW5rcjg3SXhLaWFITW10aV9uWEgxMHd1Y0VZSjAtMEQtTDRjNDR4bWRUSjhGbXR1RUQtUWVKV3VCZ25MTDBQUGlR0gHYAUFVX3lxTFBldV8yc3FBZ1YyM254amYzcjZuZ3VDTDRXZzVVSUhLTUpvY2FJSzhVNlQ1SHRydGJGVmlHVDlMNXZTcGRMcDJ1NWtjWGpwYUZCMEdWdVEyUDVrdk5nZzdOS21RWWZrbW1yYWVaUHBlOHZ6YjV0VGoxZ0tJUGNMTkpnMG5ZZ3A5YlY3M1Izc0JaVElHSkZodjdtRUFNcG9iTkZqWVVLZXFEc3B2aFJuVFFuNy1uUVZnUENPVkF6UXp0ZDZSMmdLQzZzdjFwTzU0bnUyaG5YTlV0dQ?oc=5"
+            },
+            {
+              "title": "Leaders of Dubai-Based Unicorns Hail City as Global Innovation Hub Shaping Future Technology and Driving the Digital Economy - Business Wire",
+              "source": "Business Wire",
+              "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOWkgxTlphSDJWRmMxYTdZRWl1VmxHdUlEclZlSjE3VzlZeVoyWENzSnJoNjJ1ZktNekFFWk94N0pZV1BtTmhoRV9KWEtuR3FtdGQ1Q1U3bWRlV2JjNkNkbG5ZTDRReHFHUmxxSVNWd25hLTBnekdnTWROSHFuVlhvV0k4RWdLamJWdUpOdU5GajE1R1dSYlZGSTkySmFaenBOVy05b2pDamt5RnFDSk5oNFRsRk1IY0I1a3IyUWI1emY2b3owaDZZaHdWTDhCaU52WUt4ekhrYi02WEFvWFNVX0E5ZVJQUE5RVTBxWGpOVkxhSjBvTzhlWkVKbU5neTlrdTR6aG5TUm1sdWFzelE?oc=5"
+            },
+            {
+              "title": "Tech making company decisions? Dubai to train private firms in 'Agentic AI' - Khaleej Times",
+              "source": "Khaleej Times",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNV1VYTl83WUc2OVh3cWY3SlNwLVA4TDFXamdOVjc3ZExJSE5nT0RNTjR6dDBaZTFoTi1YTjFHZGFTMHlQY1NiZlM2VlZTcW1VZVdKaWxvaGY4R0tVbTNCRmM2WjVDRDFkNEZTdkEyT2JfNVQ0aE91SUdQVTd6N3hzYTZqc3E0OFVJZ1NnYURyWG1xVjBFLXdFbNIBoAFBVV95cUxQX3ZJbk82QkhqXzcyN1JiLU1tV0JZMmt0emw1cjlCLVQ0eDJVWjVmX2lUXzdCU3BvaElWUmNuT2ItclZzYmZPLUxvVjdGc21DaGR1Z3dXZXJKb2ZOS0ltaUlWUWdnc3FFZUQtVzRyS2xIX0Z2VnZBX1RMNlRFLW9xSHFaaVA2czdSZGJjTjFtS2E5d2FFYVZiendXc2Jqc1c5?oc=5"
+            }
+          ],
+          "weather": "26.5\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Technology",
+          "city": "Dubai"
+        },
+        {
+          "topic": "Business Dubai",
+          "location": "Dubai",
+          "article": "**Dubai's Business Resilience Amid Regional Challenges**\n\nDubai's tourism sector is currently experiencing significant strain as reports indicate an exodus of foreign visitors amid ongoing regional conflicts. Although sentiments from local graduates reflect resilience and commitment to returning for work, the overall industry is in a precarious position, potentially impacting future economic stability in the region. Additionally, a shutdown in the Strait of Hormuz has disrupted local manufacturing exports destined for Dubai, further exacerbating the pressures on its economy.\n\nSignal check: This situation suggests broader vulnerabilities in Dubai\u2019s economy due to geopolitical tensions, requiring close monitoring of visitors' sentiment and export dynamics.",
+          "sources": [
+            {
+              "title": "Singapore, Dubai And The New Symbol Of Global Prosperity\u2014Panama City - Forbes",
+              "source": "Forbes",
+              "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNQ3VxdG1PT3lsMl9vQWhhVXZYa3JSSHUwcnhsRERkTVZiQ0JaTERxUGZabXpYWTQ3RXlpeUVtNXlCWURaX09XUW4yOU51WFBDUnU3elBhQU9mRTctSWd1Q2Zwamp6dkplc29UN09vQlo3dVBGZ3RfQkg5TzdhQXNtamQ1cDhIVmNqWXBtUXhTTVRVZ083V1drNDZIRUZGTkxXTHE1VnNLQlp3dGlROEVGSFk4VUVjRGVPT0xadTdENGQ2aWht?oc=5"
+            },
+            {
+              "title": "Lessons from business leaders in Dubai: How to continue operating during a conflict - The World Economic Forum",
+              "source": "The World Economic Forum",
+              "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxPek41bEJkaDd4YjExMzdTMHMwVzZXeHZyNzl5ZktrU2JSN3dFcFo0d1l4bTNXMS1mNmtWNEZqeW1ybkEzdUdLR0FLNXFIWjhzVGtTSU9pdW4xOUY2UjFsX0tsWTBpbm9neHRBT1I1eEp0ZEl4MVdqMk5sa2l6czJzNWtpQUd3NEtTZ3pfQkVpNWltT1ZkVmNoaFBOcS1tYmJmbm00a2pxb2dtTG53Rld0d2xJSDdOaFphOUZ5NzZUZDVXMlQ1bFpWaVczMA?oc=5"
+            },
+            {
+              "title": "I'm 18 and graduating in Dubai. Missile interceptions didn't scare me \u2014 I'd still come back to work after college. - Business Insider",
+              "source": "Business Insider",
+              "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQNmcxMU00SWJic1ZweWlIU25ucmlKdmhLeE9VSjZfbzdEUGs4ZFdQeW1YTm1zd3hILV9pUFgyYzFXY2kxYmlBeHVTSlNqZXUySlpxODM3VHc3LVF1anRnWVFFQWhuY0NjdDdSMnZ3RjdQOG1JVzZSeVJCdEhKU1JxZUppY3ZaRmdOZEJwMi1rdlhaNmhYS0wySG5MZVc5SnZhVTlUQ1lfdWhLamhpMDFETw?oc=5"
+            },
+            {
+              "title": "'We need people to come back': Dubai's tourism industry reels as foreigners flee - Middle East Eye",
+              "source": "Middle East Eye",
+              "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUldLREJmX3lPUEdvN0x6MUUxSXM3VF90bVdNN1k5WnVMNDNVYnNfcWNRMmJNaDY1VVJRS1k2THJybmN6WmNTYU5VQ1UzZWlxSV9CWWJNSUFpYzNSQ1pkOHdPd084YXp1SWFtWUEyeTh4NmJ2Y1JyNGVIOWpSZGwzRGdpVUlDMTdDSzRN?oc=5"
+            },
+            {
+              "title": "Hormuz shutdown stalls local manufacturer's exports en route to Dubai - The Business Journals",
+              "source": "The Business Journals",
+              "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQRVBGUWJwSU1QOTlpZW5vSlduZ1d3TWpkc2VMeUlBOERkMHdwNllEenpQRlpDNEQ4QUpKZ0dwNTBTeDR5Njk5X0dLZWZkSkljRldhSGExenRJZ3E4am9MNHdsbUlubUR1VzBHeDZSRF9FOEFIQjE1X3RSUGUyQU56NnpwYW1EWjZNS1ZuUmhFTTR2LUxHelJPVmZkQQ?oc=5"
+            }
+          ],
+          "weather": "26.5\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Business",
+          "city": "Dubai"
+        },
+        {
+          "topic": "Sports Dubai",
+          "location": "Dubai",
+          "article": "**Dubai's Al Mamzar Beach Reopens with New Night Swimming and Water Sports Activities**\n\nAl Mamzar Beach in Dubai has reopened, featuring night swimming, a floating walkway, and various water sport activities, enhancing the tourism and leisure offerings in the region. This initiative, reported by Gulf News, aims to attract more visitors and support Dubai's status as a premier tourist destination. \n\nThe reopening signals a strategic move by local authorities to capitalize on outdoor recreational activities, likely reflecting broader efforts to stimulate tourism as the region continues to recover from global disruptions.",
+          "sources": [
+            {
+              "title": "Dubai: Al Mamzar Beach reopens with night swimming, floating walkway and water sport activities - Gulf News",
+              "source": "Gulf News",
+              "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPVXRzd2dNanJnMl9HZmZhSlBEajg2YVRudUtvTS10V29JZk92ZGNuZ0lrVW53S0tfb1FkeC1VcnUtZzJSd2tha1FzSVY3TF9ZYVdSbl9fWXdmYk81ZW9ZTm0xYV9WZ2NaSUI0WGxUNXF1ekpibnhDTTN4Smt5NlVNV2MtNFB5ZFprRkZRQ1JVUm5VRms4REtfSnFkelFXYVNLZGZOdHJXMW9ySlphbVNGRkx2d0kzdDIySjlydE5rRXFCVEhUWDRrUG1R0gHaAUFVX3lxTFBEQU01cC03a1ViZjQyMERUc3AtRlQwRTdjTDg2UE9OY0xCSi1qdTVEMXRFNnh2N3E3ZUl1RXRqRHdoWHlaNzluMzB2R04za1BVUHdGOXVBYXRSVEhaa19PSElWVTZidktTRlNCaFIzSlBfMHpfTE9IMHlPSzRrS2YzRXpFOUo2QkxrNDQwOW1NSjFDRTIwNHk0Z2NKY2FvVzVBbDZjeVRHQnphTVg1NmxodENRU2plYVRMWWRmZkNaVXQzVHpHZlBfNzBnU0wzdVVMR0RTTjY1enRB?oc=5"
+            },
+            {
+              "title": "From Dubai to Africa: Scaling Sports Excellence through Dubai Sports Council with Strategic Partnerships - The Voice of Africa",
+              "source": "The Voice of Africa",
+              "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPcjZnOFpISm9HMWthWTdzZUtfc09yZ2Z1cFliQkFleWFtdDBwR01NNHA2TW5mSUlMdkhOTi1NUkxXS0NnaS1yUG16MmhzYnNJOUQ3dklWNWdCcDBuWjI3RzFORmswMHlpMVFuM21NYWlHWV9wdHhzVGRHcVl6ZEh4N0JoQzNtMDk5LXRlZnAxakZHY01DaUI2YnBVX1FmUXhMM1lTcUlnZDB2TFY2MzBxNXF2d0dfV3ItQXE4SFJXWHVjaC1JZ0ROLUhOTzFmaE8zdWt2RmJBLUJxaEhU?oc=5"
+            },
+            {
+              "title": "Ons Jabeur, Dubai Tennis, and UAE Sports Betting - The Grandstand",
+              "source": "The Grandstand",
+              "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPTXB1ZWdvVWY5NURDV2l6RGFyUzlLOHUyZWFiQWdQY3l0cG44bFBDUUFlSkdaLTd1c1hSWkFEa1lSR3Z4bFY0WHZ1bTgxU0cwYUYxTEJYeW1vSHV3OHNlTXFjUEFqcEs1S1dHRktOLVBkOWRUVEx4VHB6LVdyVlhzUmdxeF8?oc=5"
+            },
+            {
+              "title": "Dubai Police crown winners of 'Proud of UAE' cycling race - Emirates 24|7",
+              "source": "Emirates 24|7",
+              "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOZE1kVnVxUWJOTURzOU1UZDVjUmhSU3JrR0NoNlJZcDZpaHU0LVZJVUxpeFRXdmpPNHFSWVN1RWVBamVaS1VlMnVlWVhMbGdsS3B2T3FkQmFaNDY4MlBoZVFFLXdBR0ZzdVNCaUd4bkJTY08zdE5LM2w2cDNrTk96T1NzdGVCZjlLUDByS2pqVmxyV0szWndZdUNaNNIBtgFBVV95cUxQbzJBNnJXTVZabEdsOWVtZ2U1dHYzRW1mVjRBUGdSUDVLSXZGUlZvV0h4R2htRXNwNDlOVlV1SlhEY3hfdzJRRzJxbmgtbHEyYlRIZ0xQMmRDWGhVbXhTZ3pZNE5qRlFMME5JcWQwRVU1QkE0ZWN3eUVzTzhZckxRdkxEU3JCcnVMMzlfRlFhR1ZwVnhDLTdHb25kRUpURjB0UFFKTmcycjhsZDVsS2FKOW55cEhmZw?oc=5"
+            },
+            {
+              "title": "Experience Dubai Like Never Before: JA Resorts\u2019 New Active Sports Destination Will Blow Your Mind! - Travel And Tour World",
+              "source": "Travel And Tour World",
+              "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxONnF6WXhZeWNJWk5DWmpUVWVVVEYtazlTbGhyQ25VX0RKcHk2SEZtUmJCcUgxYW84amY0WWdadHl2UEtYYVA2eFpMVVd1MENwaFBlVDZPcG1pLUozT25qRUZLMUFfenhPTl9GYng5ZGY1ZzBIUHlGWGVubk91aFRoUi1wOFNCLUVkMXhRZFdac1JVS2cyMTg0UENzbU53eENrbnZyOE1aZnJDOFNfeGJ1NHRyNG9RYlJ3Zm1QVGk1YkZ5aEVCZVExTU1nOGJnRkdPVzd4WE1zc1I5U3Zn?oc=5"
+            }
+          ],
+          "weather": "26.5\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Sports",
+          "city": "Dubai"
+        },
+        {
+          "topic": "Health Dubai",
+          "location": "Dubai",
+          "article": "**Dolly Parton Cancels Las Vegas Residency Due to Health Issues**\n\nDolly Parton has canceled her planned Las Vegas residency due to health concerns. This decision comes amidst an increasing number of high-profile cancellations in the entertainment industry related to health, drawing attention to the pressures faced by artists. \n\nThis development raises questions about the health and well-being of public figures, potentially influencing public perceptions of celebrity wellness and performance sustainability. While routine among performers, frequent cancellations may signal growing concern regarding the industry's demands on health.",
+          "sources": [
+            {
+              "title": "Dolly Parton cancels Las Vegas residency for health reasons - Dubai Eye 103.8",
+              "source": "Dubai Eye 103.8",
+              "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQX05WLUpHQVVyTERZU1lRVm85YXFXX0hWeFlKd2hPR3B6S1g0QTlZby14UlMzZmoxV2phdFh5dHhwRWt0cnBSekMzcG15NXc5TF82ZGpweEJJSnNxTWtwYVlic19BOG5janlKTWdvaDVTVXB2Sm53b3Jka29WSVlDRDYtSjlmcHdOMEhiRW5ZQ0FPSEhxVzBNRnJHQVJRMTlncExoTTV2U0Rncm9Q?oc=5"
+            },
+            {
+              "title": "Dubai Health Authority launches unified medical report project to enhance services for People of Determination - Emirates 24|7",
+              "source": "Emirates 24|7",
+              "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOSm5IVC1SUHdULVBtVUlhMTg5Z0FWajFTREh1VTI2UUtWU2VvdEFYVVlJZEh4ci14NXhRcEZRTVY2dFE2SmRocklJUi1BMGxtVWdMLUJ1UFc5Y3NxTWhuV0xFOXhjNkNUb0VXd2pNcVRXbnpDM3lqWW5Nd2JWSkI4RkRvVW96bWx6UXljQVNfR0FsYWhkY0FNal9iZG83QzgxNzZqNmZpQV9aTG9OLXo3eFYtUkx6Z3FDdmlJeXpTcG8xWVE4NnBxTzdDRXBucHktUm5EQ2hqQVpNTWw1UVVWaV9ZVmZHTFgzeGFKT1JGdUU1Wmo3OExDRjgwa9IB-wFBVV95cUxOSm5IVC1SUHdULVBtVUlhMTg5Z0FWajFTREh1VTI2UUtWU2VvdEFYVVlJZEh4ci14NXhRcEZRTVY2dFE2SmRocklJUi1BMGxtVWdMLUJ1UFc5Y3NxTWhuV0xFOXhjNkNUb0VXd2pNcVRXbnpDM3lqWW5Nd2JWSkI4RkRvVW96bWx6UXljQVNfR0FsYWhkY0FNal9iZG83QzgxNzZqNmZpQV9aTG9OLXo3eFYtUkx6Z3FDdmlJeXpTcG8xWVE4NnBxTzdDRXBucHktUm5EQ2hqQVpNTWw1UVVWaV9ZVmZHTFgzeGFKT1JGdUU1Wmo3OExDRjgwaw?oc=5"
+            },
+            {
+              "title": "Informa to Host WHX Tech 2027 Alongside World Health Expo in Dubai - The Indian Practitioner",
+              "source": "The Indian Practitioner",
+              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQY1pXNTJVTG55QXdIUTdOTHkweXh2SkRLa0xVWW1xbjRyOHgxMWpLQWJGMXptdTZqNEVnZllCVW5qdFU0ZlBkdkU3SFpjM2FpV0E0VkdxSXJSQTFQZm9vN0ttWmQ3U2xNMHdEeWJEaW9IUmowODlTYXpXdlVBSzFWM2MtZTl6aWgyMkdWcW1ZLUtpSm1ObTVLckVUMURYRS15RUxV?oc=5"
+            },
+            {
+              "title": "Cedars-Sinai Experts Attend World Health Expo in Dubai - Cedars-Sinai",
+              "source": "Cedars-Sinai",
+              "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPLW1NQTB5SUVnajlFQy1Qam1uTXhfXzIzVUdNVTdlekROZWUyOVJrV3FGbVFCU1Jja0o3SlBXd1VUbmpLWnAxT25kem50NUZVemxZMUs3WVJhMW1MUks0c0I2TXFfZ1NGTUtjaXNCOEotSEpfVF9JdzhRbllyV0xBRnU1SkliQnItMlpLRTJ2NW1mYWhQV2xxaA?oc=5"
+            },
+            {
+              "title": "Dubai Health marks research milestone with global impact - Gulf News",
+              "source": "Gulf News",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxObE0xSmd6NUdsZmxGV1RZc1JyVjhhZjhBbEVPa2hZTXlDRnpQTDZSUzhnQ3RiX0ZUa3FHbEFzQm1RcDBEX0FCaEhxUUdMSEJkQ0ZnTnBnZHNVNUtYWnF1aEFxbnRoSV9UREtlY2JoaFhaMG14dUswNTZDLUxEWHF2MzFLT0pIY1hLM003YlNmYU1fd0sxQjlDX1h3M3VhRTlUaWfSAbQBQVVfeXFMT3hvYnNoMjZRUHJiMWhWS0IwRW05M2dBd25hTEFxdkZySUMzWG1BS256M3ZaVEtKZTE4Ry1YN0hHQkliZ0d0THZrVmlwYXNZVjVoMkd0WU9fWWNkZ0lRVjd5YzNRck5WX0ptWndKYnllRXBDSExvMW4ySDFrME1PR25HUFJxSjJ4NFVBSUVBUU5Nd19QNTl6VjJ0TVI0cW9jSktLckJhd0U2eU1Fc0NyQzBFMFYy?oc=5"
+            }
+          ],
+          "weather": "26.5\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Health",
+          "city": "Dubai"
+        },
+        {
+          "topic": "Entertainment Dubai",
+          "location": "Dubai",
+          "article": "**Dubai-Based Storyfied Ventures Launches as First Strategic Brand Entertainment Outfit in the Middle East**\n\nStoryfied Ventures has officially launched in Dubai, positioning itself as the first strategic brand entertainment company in the Middle East. This venture aims to integrate brand storytelling with entertainment, catering to a growing market for corporate narratives in the region. The launch underscores Dubai's ambitions to be a central hub for innovative brand experiences and creative industries.\n\nThis development is not routine; it signifies a potential shift in how brands engage with audiences in the Middle East, reflecting a deeper commitment to modern entertainment strategies and indicating an evolving economic landscape focused on creative solutions.",
+          "sources": [
+            {
+              "title": "Dubai-Based Storyfied Ventures Launches as \u2018First\u2019 Strategic Brand Entertainment Outfit in Middle East - IMDb",
+              "source": "IMDb",
+              "url": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1YenNLckNnd0ZXTFZPYm41ekxPeTROQ1JXeUdNc2ZFVEJPcUtWRHoyM0RpLVh1ZExvTkFlYWd4YThXemNOeEx4NGR2LUxvdw?oc=5"
+            },
+            {
+              "title": "Dubai-Based Storyfied Ventures Launches as \u2018First\u2019 Strategic Brand Entertainment Outfit in Middle East - Variety",
+              "source": "Variety",
+              "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNUmxjNnBfSGVpRndmOFYtOXp3allIemMyUVozX3pha3R0SklIWVhfTlZvQ1V1VFNIc2NLR1hFTU9xdzhoNjQwdjYyMTJZeUwyTlozZFlLUEF6WFhYbThfckpseWZxVy1YTncxNWdGNWNOZDY0cGEtVE9PajNsNy1xcFRYOHZLZFJXbEluLXRPb0hTd0NBRS1pVmVaZUhDQmhndW5qMkdRVGt0dw?oc=5"
+            },
+            {
+              "title": "Between productivity and entertainment.. Dubai to open first working site from the park in May - \u0635\u0648\u062a \u0627\u0644\u0625\u0645\u0627\u0631\u0627\u062a",
+              "source": "\u0635\u0648\u062a \u0627\u0644\u0625\u0645\u0627\u0631\u0627\u062a",
+              "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxNcF9nMVhsX0U2dlBSa2xZenhEOUN1R2w4SFF5X1RpcEdYc3FMWkszYjRtUHdfa05NRzRWRjVEX1lQamx5MXZmOFZLWWsxNmM0MWxoeDlIcG9IMlc5cEEzV1JQdHhsQzExdDdlME9uVlBZbzNQQjdRYUhlU2p1Vnk1M1dFekNva0tyQ2NlZ3dvejAyNVNTZlBnZU14eTBJdng0cjk4WjNnTlNIS3p2REt1VWdyOU9UOUd1cExqMGYzQWpZaFcwUkk4M2Zxd3pmRWQ2LVNsaWpMTFN0WTdxSXY3cUJn?oc=5"
+            },
+            {
+              "title": "Inside Dubai\u2019s live entertainment scene: What makes an event 'memorable' - Khaleej Times",
+              "source": "Khaleej Times",
+              "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5NUVNKZjRPVktKV3lSc3BZY0VQRmY3SHRQVFNaLWJMaG0yZmgwUG9MTEY3V3dPVTRNQUdPOXRzMnVpZGFpRUd0akREQ2dEdkVxNnZaZGg1NDNYWWhtTi02WEtPVlNCMW9GS1RJdHpaTFFWbTBNZzZEdm1uaEZEMTjSAYcBQVVfeXFMTjk2WjNYU1pxdVNxU3pXcTdId2ZURTN3aGNMcTVtd0RnNEVHMmlKcmZkd0gweWxqVW9MVnA2UTQwdVkxSnJaUURYS0VVNTAtTTdsU2VkY2pBV21abHFpc1NfNm02WHR2TUx1UHFvZ1g3X28wY21jOVkxQ2lYUlNQT1k5Y0VfeTl3?oc=5"
+            },
+            {
+              "title": "Little Lion Entertainment reveals plans for Dubai expansion - Blooloop",
+              "source": "Blooloop",
+              "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB5Q0NFZFN3ZmZoUTdNSXdQWnhWM0licGdZenl1bDBVaXJKdEdTa3lHMElXVzdhVFZ1NENCUkk3WGdBV3N0T1lkanQtbV9KWFFPdUVrNC1jOWx4TXJwTmJKTGNIT2xFdUlhanpITUY0dkE?oc=5"
+            }
+          ],
+          "weather": "26.5\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Entertainment",
+          "city": "Dubai"
+        },
+        {
+          "topic": "Politics Dubai",
+          "location": "Dubai",
+          "article": "**Dubai Advances with Agentic AI for Business Development**\n\nDubai is set to implement agentic AI technologies to enhance business operations, as reported by Gulf News. The initiative aims to boost productivity and innovation across various sectors, positioning Dubai as a leader in AI integration for commercial purposes. This development comes amidst broader discussions about regional geopolitical shifts and their impact on business narratives, as highlighted in recent sessions by the Dubai Press Club.\n\nThis push for AI signifies a strategic effort by Dubai to maintain its competitive edge and attract global businesses, indicating a potentially significant shift in the region's economic landscape.",
+          "sources": [
+            {
+              "title": "Dubai\u2019s next leap: Agentic AI for business - Gulf News",
+              "source": "Gulf News",
+              "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOdHFDZUVKWFZXVEhMRXFKbHdRdl82LUYyeWNEbkZRcXo1Zm5BVnI1c1lSU3dDclZRRG1PVDVoYjY2UVNTRnpmN1otZlRnWmlPdnI2MG9wSEI0QWhxSmgxMUt3V2hrRGRkdlEtM0NFQ0dMeVRTSHJpZHpMX3hzYjhBa2JhekRhRlJPRnVnamY1cHJ2THl5c0E5N09FRDJ1TzFwVEYwcldPWTFCdW91Q0JISUZtS0lXUjlPdEZYQTh5Y2c?oc=5"
+            },
+            {
+              "title": "Prudence or peril? The rational \u2013 and devastating \u2013 African capital exodus to Dubai - The Africa Report",
+              "source": "The Africa Report",
+              "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOOEJOdjNsaHAtaXo0NHB3QzQxZ01pblRhWWNLQzNFNWp3cGszMWM3YnhQaWlmSU5fV1gybnlvemJqc2UzbTd6ZFRNNEVVWmU4M19TT3gyWElFb3JZYm9lUzdxOUVYYkh0T3RJSXNnZ3ZHN3JHaWNjN2lDZ2p4d0J4TC0yMGloYkNncmlZVTdYd3JnOWxFNDh4SWFMNDhhQkdZRTBseXR0VE5fUjFFYmtQZHRNLVcxQmFnV1JCRG9B?oc=5"
+            },
+            {
+              "title": "Dubai Press Club session explores political narratives and media discourse amid regional geopolitical shifts - Emirates 24|7",
+              "source": "Emirates 24|7",
+              "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPb1hIU2hISHpLOUVjdjU2UmJTQXNhMUNHeHVMNkZBTzE3R1Q4U0ZHVXFWak1QVVh5NHBaOFoxS1lnQ3Z0NXp5eV9QcXBEUFVnb3YyckxVVnRITmFuaVdWUVFNSjUyZ2pOSnlRX1lhUVJJRGdDcExaZEN5STNENFF1UzNMSDhvZWJsUlRaT0pEUEJROFAta2dtUktQMWg3TXBMa3ZlV2ZZSjN4OHZkSmVLa1g3QU9hM3ZqVTBCeE1Lc3RrLXlhUC1vN3ItRVhrWUlUcnd0ckd3VWRuQ2NHb1HSAfgBQVVfeXFMUDladGxIVjNzUTlEUFBEX2djc0JmUTNTNVhYeHQxSEdlY1lvaEUwNWYwdUd6eVVBVVRZeXJtUFhCWkNNR0VVZTJYSGx0UmNVak1zbHBfLTZJeTNiSElOUGVPYmFxd1dFRGhacFBUVlM2ZnFBYXh1TVN6T2dPRlFoZlpBRUl5NV9heXF4UEc2VzNMaFJESDBpQWhqdmZQa2VBSlNUVDNheUI3OXJXOG04UklOTEJRZmdIT2FUSkJqYzc2czc3YnVYS0Ntd0xxd3hoQW9hTDFrMEs5c0hpbFBjekdzYXJPVThsN1k1cFFCRHpCOUNpWDlBZmE?oc=5"
+            },
+            {
+              "title": "St. Louis family in Dubai searching for options as conflict with Iran disrupts flights - STLPR",
+              "source": "STLPR",
+              "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQYXZySjVGUXpBR09zMmx5TDJ1dXZaTmp6bFdfYXp3TGJhSnRvcThFQWNHZ3ktM1hpaVIxYlRVT19DQ2ZRTUltMHNHejZ0OHR6T0JkanZ3MVRIY29LamY4Z0RhLWxuR3VBRjIxWHRVZndReFpUN1V2YjRKWGdfdzdYdlhGLXJxdUkzbXRSLXI3UnJEUTFJb1RnWW5PRWFCcW9nMGx3S2loYUhZR0JJaTJ1Q19FbmdXMWZrQzlPVHhncGhxcVdVUkhDbF9R?oc=5"
+            },
+            {
+              "title": "Dubai-run development in Texas abandoned amid political controversy - Semafor",
+              "source": "Semafor",
+              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOUUw1RXF0RVg3MHlmMnZsNWdNdjBDbkdfbjdoMk1IYVRTdVNPY3hTRFFNcnJocHd2aGVtNTJZemlyR1FfWlpwYzFkdGQ4QkEwbVJLU0hWR3VVWFhyeGVoVUJrSzRpc0lYbXRHOFpFSGpWX210MWM3TkV0NDN0MENaYjA0VndJajlYdlZmbXVfMy0wUDNMLUR0U3FhWGphc2xQSHQ4WUpKZw?oc=5"
+            }
+          ],
+          "weather": "26.5\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Politics",
+          "city": "Dubai"
+        },
+        {
+          "topic": "Science Dubai",
+          "location": "Dubai",
+          "article": "**RIT Dubai Launches New Bachelor of Science in Management Information Systems**\n\nRIT Dubai has introduced a new Bachelor of Science in Management Information Systems, aiming to equip students with essential skills in data management and technology. This program reflects the university's commitment to aligning educational offerings with the demands of an increasingly digital economy, particularly within the UAE's evolving market. \n\nThis development is significant as it underscores ongoing investments in higher education tailored to technological advancements. It signals a strategic focus on strengthening professional capabilities in the region, possibly indicating a broader trend of educational institutions adapting to industry needs.",
+          "sources": [
+            {
+              "title": "RIT Dubai launches new Bachelor of Science in Management Information Systems - ZAWYA",
+              "source": "ZAWYA",
+              "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdHRseXRuYjlReGJzTWgxS3lzdy1ZZ2dsbU1EaVdIektySHViZzJVWTVSaXZCTWhGTEoxeDFQMVN2T0JQUXQ1WktaS3hNc056RjRabHpQRjd3QmJtOVlqb3hXclBlcGRObU9vbFM0aWt0VWdjWjhvME1nUjNBSG5PdFR0MHF2RXhDOFZyZERjdGVia2hlaFY2dHVpdGlSQmFUbFFFTUgta1dfWWZubnhrWEpGdXRWZGh1MVJDZERVUnFvbWN4YVYxNFd4NHdyNmNyb1lzdjNn?oc=5"
+            },
+            {
+              "title": "RIT Dubai launches new Bachelor of Science in Management Information Systems - Khaleej Times",
+              "source": "Khaleej Times",
+              "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNNmpldEpjOThTWHQ1RkI3UDVsc3FmblVQbmpoaTZhVmg0RFBhSTktY3lDakxMVE9NelFzRDNwY0szR0gyM21KZnZSdGlJSHJabFNycFFYS2d4VFhLWHYwZkVIUHpILXhJaGxxaWQ5am9QTTZBVXR5WEhCdGd4cTVXTU5oMk1zcGhmOEhuUHJhS0tNdHJVRXpONTJzN1p5d05KM2NwdjNNYU15czBEVVJyaUdxdXNsZTDSAb8BQVVfeXFMUHBUY3F5a0MycGtoMTRDS1VRNHY0cEtpUG1YNVc4eFJpQV92SXVMa0dHM3Z6b2puNm1ROGlHZHpLVnllTllobnJMWTV2b0RLZ05NRHdJdDlocGZMR2JXcHNJNmJseUZzTzRHOWxra1FfRnNlLXpOdmk4ZUotODdOVG9yNkJXN0FUZVJrX3RMQldvdml0R3lsenJfREMtSGdVMTJESnd2YUJaU2ZIaXNYRmVNbG04QzlOczFpREVGUmM?oc=5"
+            },
+            {
+              "title": "Dubai Science Park celebrates two decades of enabling science to strengthen knowledge- and innovation-led economy - PR Newswire",
+              "source": "PR Newswire",
+              "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPNENEZ0J4Xzh1Y0lEZEFZTWZBZ3czbDFJNDl2cUZZNWl5T2kzck0ydl93NHBQWTJ5bGtqRXZLWHpYcmFjS2hpMFFjUnp6eGNHWGlpVk9GcEp4T1ZUVFdxX2VXYl9GdjJ0Y3RSY2Q0aWt4NDdSMDAxNy1JYmJmS2hCbjJTRjZ4NXBRS2VLV01SR2g3bGoyd2ZuelQ3Nk5fRjBqSmVHeG9HbTdDWjd2TFFDRy0xeFlGM1VPeENnYjdpbHl4RnpPQ0wzRHlueE8zcG10d0pMMW90bFVxd0U0OF9VR1FScXRmWmNoLWd5Ty1SSlM2ZV9VTndLWEZMdXAwUQ?oc=5"
+            },
+            {
+              "title": "Qatar wins three awards in 'Future Science Challenge' competition held in Dubai - MSN",
+              "source": "MSN",
+              "url": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxPUlJjMGc0NVUtRWs1dDhTeEZtOEFQcTFfV0ZJSFR3bFY5MTV4eXV1Ui16WUNZZ1BzRFNtRERLOGZsMkFuR3EzaDlkVU5EVko5Z1dqc0hONl9UT0p5Rmk1dFVKX0NmQm5rbEVBS0FvaUlKb3phN2dLc0xyQ1FIbjV5UHBTV1ZxME9DNzZfZ0NKdVRnY0t6c08yaWR5ZnFFVjBxUTlYQ1k1V2ZjS1ZLV0ljbUJ2eFNxSTRicTllRTBucktQZ201S045dHZ4N2dIX21VQy1scHpkdWVHZTZoV1pnUGJKNFhyQkpEV1IzVHJRM05hUUFySUY2OThyaHJfd3Y3My0xSml0dmRaRVp4amtleGtvQ0l1X0psby1lbVVRanRUUERSQVNwQm9aWDVaMTB6Qm5XWFBzdzhqdkxKLXF0ZThZQWhkVTktMWVFWTlmekl5b3h2cmtmMXN0NA?oc=5"
+            },
+            {
+              "title": "Science meets global strategy at Dubai\u2019s Nobel gathering - CNN",
+              "source": "CNN",
+              "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOMnJUbXBQX0hRSHk1SGIwamQxMnd3anY0YVFtNzBCRktKVFNkYVpscnBLellPTjd2eEhqaGZfWXNUdF9FSFRtQTdjekI5QndpR2RFbVRtRzdCVzR1Y2RjdDNJRmRPbi1fTmM3d1pxTHNjYVpBZExRc2xYMWh2X2V0dmNzT3RCcmsxMENUV2E2am04MzQ5bUowZVY1c20?oc=5"
+            }
+          ],
+          "weather": "26.5\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Science",
+          "city": "Dubai"
+        },
+        {
+          "topic": "AI Dubai",
+          "location": "Dubai",
+          "article": "**Dubai Initiates Major Shift to Embed Agentic AI Across Private Sector Operations**\n\nDubai's Crown Prince Sheikh Hamdan launched a two-year initiative to integrate agentic AI into the private sector, aiming to ensure the Emirate's global competitiveness. This effort is driven by the desire to revolutionize operational efficiency and service delivery in various sectors, aligning with Dubai's broader vision of technological leadership. The G42 unit has also introduced a sovereign enterprise AI assistant as part of this strategy.\n\nThis initiative is not routine; it reflects a significant commitment by Dubai to leverage advanced AI capabilities, potentially positioning the city as a leader in the global AI landscape. The implications for local businesses and international competitiveness are profound.",
+          "sources": [
+            {
+              "title": "Dubai Moves to Embed Agentic AI Across Private Sector Operations - MIT Sloan Management Review Middle East",
+              "source": "MIT Sloan Management Review Middle East",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNa0d2NXFtREJrNFRGUTJsemtQckNZeldoYVQ4TlZpMC0zdEF5QmxkZ3k1b1o0UVFtRXFnTWw0ZFdRdFh0YWNTQ0F1UlpLTVBEYVNrQXM2WkJrVzY0am5INkFYU1FCdnRUdnBTR0NGRjd6NDNWOEU0Uk8tWkxyemJISnAzanVzVXQ2T0phdHgxTktEUWNmTXVIQVpNdUxaN3hOWXc?oc=5"
+            },
+            {
+              "title": "Explained: Why Dubai targets future with Agentic AI shift - Gulf News",
+              "source": "Gulf News",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxONF9zM3RQZ01YZVprRDBaU0F3Mng2LXdyVXBseER0eTlWNi1CUGVqRFhaUVZpR1VtNEMwZWVwWWJrSmVFQXZOR2lYQXhZelllckJzVWxCWEc0T284cTY4dW1xR2txZFNuSGs0eEpQVl9zWmg1ZUlsenVZMnBRRHFvN1ZualVQUEVpSnJncFRUY0FLV1BCd0RlTEloaVJOZnJDcGfSAbIBQVVfeXFMT1NUdTJBRXRabGxUX1FVNnNINm1qSzhHNjhNWWJfczNqRDUwYVpNc3dKZm1Ed3B1UnhkUzVjVG1fMmx5R1FqazZRS2tGdXhjVlNzdjA2OGxVa3BLQU9wUGlyM080NThST0VmSll2UzNxTl8tQlhkcE1LRGkyUlBpS0R3a3ZYaDF6d29EZzZROGp1Zjk3N09DNzN4aXpVekt3YW03SklLODV0alNwNTdQQ3BqQQ?oc=5"
+            },
+            {
+              "title": "Sheikh Hamdan launches initiative to transition Dubai\u2019s private sector toward Agentic AI within two years - Economy Middle East",
+              "source": "Economy Middle East",
+              "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPVUdodV9qUVRnMEtOZHRFd0JzaXNUZldNNk5KQVpWVEx4VDc5X1lDeHF4SklwNktGa1lhWDVabmtsaFFSZzJDWjJPRHNWSm9EQ053UkdUeFI0Y3psUXpLc1hNaG5iWk5Ub0VVRDJkUXBlM09qTUJvYU83RG1JWFFWRVRxYTk3NnhXRmNxRkJpaUIyaC03bjRaYWl3dFVCQ0UzcWFJaGxvVTdxNzJaY3hHYVc3Zk9qZ3M5MmVVaFpQYW1mVnhmbWotU2VwWWhyTFpkOGNScWFYVQ?oc=5"
+            },
+            {
+              "title": "Dubai unveils plan to integrate agentic AI in private sector to secure global 'competitive edge' - The National",
+              "source": "The National",
+              "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOTTdjTDU2cG9uTXN6Ti1MbGFkSGJ4dkpfclVXRmFKa3FlQkNNY0FnYzg2czBRT1k5X280WkZvY09oc1EtZzdCSFNQUEc4aVRfd1V2Mnk1TEVBQzRBZ3g5cjZiaUNKZTI2RVFOS1RBLW1YYUJIalBnRWVHMXFBQlhSSnRJWEtvX2pjbFJWTHc0VFJSbE1OSTZHZWlUbHNKVHBac3hxd2oxQUdfS0YxSUxnVG8wUzkydlZpWFp1eFpydU40WGNVNGw1c21zRnZCcklkc0FtX1dVT2Fqb0g0ZlhCdA?oc=5"
+            },
+            {
+              "title": "UAE\u2019s G42 unit launches sovereign enterprise AI assistant - Gulf Business",
+              "source": "Gulf Business",
+              "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPd0JUNFF6bU5kS2JnTUV4RWZEbTFjaGYyNkN3SW5adUh2UzUyaGlWZS1zdDZxZ2lwOWxsM0t4ZXc4WUFPS3BOeHpmU0ZYdHV1OHhlY2xPQzA3OXhVbnYwV3lGVTkwWVZDOXpFZS15NmtPWFpJdW54MkZqalhsYUpPQ09TT0JJTkFiZEI5c2xTUEJ0SkJQNWRQbklUQk9DOUhWdndVb3U0QlNXbVVvdG9GMlpvYw?oc=5"
+            }
+          ],
+          "weather": "26.5\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "AI",
+          "city": "Dubai"
+        }
+      ],
+      "Abu Dhabi": [
+        {
+          "topic": "Technology Abu Dhabi",
+          "location": "Abu Dhabi",
+          "article": "**OPAQUE Acquires Cryptographic AI Technology from Abu Dhabi\u2019s TII**  \nOPAQUE has acquired advanced cryptographic AI technology developed by the Technology Innovation Institute (TII) in Abu Dhabi, specifically tailored for post-quantum security solutions across AI lifecycles. This acquisition underscores the growing influence and capability of Abu Dhabi in the tech domain, reflecting a strategic shift towards enhancing cybersecurity measures in artificial intelligence.  \n\nThis development is significant, as it indicates OPAQUE\u2019s ambition to expand its market presence and leverage cutting-edge technology, which may enhance their competitive edge in the cybersecurity landscape. It also points towards a stronger trend of international tech collaboration stemming from Abu Dhabi's innovations.",
+          "sources": [
+            {
+              "title": "OPAQUE Acquires Tech From Abu Dhabi\u2019s Technology Innovation Institute - CairoScene",
+              "source": "CairoScene",
+              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNNlR5MHE4LVhxS1FlU2VHVC1JNmNSaXU5d3ppMm85dDg3SWtpcEwyMGhQUkNtN25kOFBNcUNvWG9Cdi1hQTZSSFRubEo0MFpDbzZDamdPR2JWbUhBTHlLYUtERXE4eW1QZFdxQUJiRTY1S0Y1d2U2a19MUXRNaldnbEkwLWtKdi16YVlfeVlMb2lqeC1yNlYzaWQycWlSX2YweHlJ?oc=5"
+            },
+            {
+              "title": "Abu Dhabi sees returns from major tech investments - Semafor",
+              "source": "Semafor",
+              "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYmhPbVNsankzdWdjMDF1bW1lYTBMYm15V2sybnBrd213b2RnWFVvVHNHZWhjaVQwS2ZHVV9fUFNCcWJXS2YwX2s4TmhKWjQ0Tjd6dXNlSDgteFAtWGNMREY4cThjdW5jTXJ4eVZYbnVsRGNsWFZTUUVJb1hKZEMxa184NUxEWG5tS2VRaWc0VWxibkxZTUJKSmFYVWpxVi1f?oc=5"
+            },
+            {
+              "title": "OPAQUE Acquires Abu Dhabi-Developed Cryptographic AI Technology from TII, Extending Confidential AI Across the Full Lifecycle with Post-Quantum Protection - AiThority",
+              "source": "AiThority",
+              "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOTEhKWE1sU1BNZjJuUXRJQ0pKSnBKamxQV190XzhWSlFPMGRFY3YyVlNLUTJaVXNRNmk2VTFILVVlTm5EVlZ5WDRqUUY1VXEzM3M1MzNPZk5YNFRSWUU0UUdyNndkRmpPRmx3SlBzVTREMDBXNGJEYWE2Zml1NlQyTG5nRm1DdVRVT3FVRldoSzBiOHV3OThGbGJYN0dMaUdkTjFoNzhaSXg2WjlUR2lralRkNF9abjhxNmdick9QMEt6UFpVSzN3bDJIU0ZZM25WdkR4WmVrSUs3a3VfUmxsNGFLQTVqbnRZU2d2ZFRSU29rZlNwMkVIS3NzNU1IUnlPaFNEdlZfbnBsNkRvdGlTczNjUG02NjV1RUppXzZn?oc=5"
+            },
+            {
+              "title": "Opaque buys post-quantum cryptographic AI tech from Abu Dhabi\u2019s TII - SiliconANGLE",
+              "source": "SiliconANGLE",
+              "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUENjN21rUU9GZUUtQXVLLW9maXhnTGdVQTZyUHNQZjZ0WGREUUs4Uzk5SFJwc0NQelhnQTZnelJDUGlzMDYweFlwVDNrbG1QOTc5dGd3UkRjdURLc1p1V0xmcjVLcldXSlp1bVRjNUJKU1pSRlF0THJ0MjNIRWQ5QXN5SnR1eFNfY2NpMk5RRG16YldNYnB5djRRWmVTUkE?oc=5"
+            },
+            {
+              "title": "ZAWYA: Ministry of Industry and Advanced Technology honors winners of Make it in the Emirates Awards - TradingView",
+              "source": "TradingView",
+              "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxNX2lULTMzdHVxWWFrcjloTmowWFU2eXlxblVVX2llREZZR1JFcUNKWWV4SFlyekNNTWhBUzFPTGlUVC1wakpwR2M3ak9oVk84cEFoZGJON1J6bzhrY0piaG5CM3RkdkZ0RmN2alpkcTNtY1owREsxRldlRENneXdpOWZmR0lEY0s4bG9LeGZub0xIYVdJZkJsOVFaN2FhWnJQTVFRck8tZkFmZWtKWXZGVXUxUmNJck56UW05Zmc0OXlMQ2dMckc1dXlBUE1rUDIxcXlFbXgxUXNkc01zNlZlbHlOdXpKb0EzTFpsRWVlOWJWeGR3Y2FiRWxuLUZWdEZkNEJqWVV3?oc=5"
+            }
+          ],
+          "weather": "29.01\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Technology",
+          "city": "Abu Dhabi"
+        },
+        {
+          "topic": "Business Abu Dhabi",
+          "location": "Abu Dhabi",
+          "article": "**Abu Dhabi Business Expo Thrives Amid Iran Conflict Tensions**\n\nThe ongoing Abu Dhabi business expo is demonstrating resilience, continuing to attract significant attention despite heightened tensions stemming from renewed conflict with Iran. Attendees and participants, including international exhibitors, underscore the emirate\u2019s robust economic framework and strategic positioning in regional trade. \n\nIn related developments, Abu Dhabi Crown Prince Mohammed bin Zayed met with HSBC Group CEO Noel Quinn to explore further banking and financial collaborations, while the Abu Dhabi Youth Business Council signed a memorandum of understanding with ADRA to empower local entrepreneurs. \n\nThis active engagement in business and finance amidst geopolitical tensions suggests a strategic effort by Abu Dhabi to stabilize its economic landscape and reinforce its position as a regional hub.",
+          "sources": [
+            {
+              "title": "Bustling Abu Dhabi business expo defies renewed Iran conflict - circuit.news",
+              "source": "circuit.news",
+              "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPOUV0ai1MX2VNNEdxMDVnSUhiZ05XSnVzdmx2bmRFM2Y2UW5nOUlKRXhxMjdlS21xWFFZUGNIWjkwcFpKM0I0NzA4VHdicXJLell6VW5EMEpRTGFnb21rNFJjTld5dW0tek0ySUJJdGIzalJudVZxTGJyOUhHOGdtMFZ4OXJ1RE9sWVM2UFZYLTByd2lyZy00WXh3?oc=5"
+            },
+            {
+              "title": "Abu Dhabi Crown Prince Meets HSBC Group CEO to Explore Banking and Financial Collaboration - foreignpolicyjournal.com",
+              "source": "foreignpolicyjournal.com",
+              "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxPZHc1V0ViQnpuTnZDWmFJazFXekkzRUJvTWprZHRuTHVlVk4yNnVXcFBLdU9wVmhoT0JaNWl3UU5SY3FiNDBBZnJXZ25TZW0tOFphTFFOYUdaMXRDX0RBZ1BWckxtWjRSeVhKaDF1MWhSaVVseU1ra3hrTGtXcEZEMjlpay0wNl8zQ2FjZ2hObFZ6TkhJdU5hSGkzeU5GaUZack5BTkpjLTRybmQwclRZNzBlcDRKam5oRlE4VFlleHJaVE9BZm9pMl9NZXAwLWVCb0JTdERn?oc=5"
+            },
+            {
+              "title": "Food security 'guaranteed for the next 100 years\u2019, says Abu Dhabi producer Ghitha - The National",
+              "source": "The National",
+              "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOczVadmNERlZkLUlvTmx0OU9pZ2ZmR1dVN1JIUGsxZWg4VTBNVFlrUDVDNlFra1YyVkF5amVyUDJ3Y1QwWUZLR2Nnb0lqOXNhSjRxRVJMc0RNYVVxS1VhZ0JHRV93MWZLYnhwVG5CTDhacU9vQzA5aTZPZ2NKR0ZUYjZ1R2NndzhlT1YzeHU1SU9fTUYwa0RKc2J1NVhqT0dFU1VvbXNIWHp0Qm9BdjRkNzRmcFBKLVV2UFRDX1A5c0RPV0JjWEVrY0FLOHVVQQ?oc=5"
+            },
+            {
+              "title": "ADRA and Abu Dhabi Youth Business Council sign MoU to empower entrepreneurs - ZAWYA",
+              "source": "ZAWYA",
+              "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNWUdNVC1sZEpub0FqN3VLNVdFcE44eE5tU1VEb3ZvNEtvMzRETWxmZ2hzejRUeGV0U1JWWWhpR0dERnl0WVphSjZWU3RpZ1BReVRfbmRGR1hGWVo4aEh1MDM4N3pHbG5Rc2hfVlJRREJCV3Jwai1qVWRaUFRSUzV4OFRuTmhlMHh5UGthdmFaeTJsaVFuTnJRcHhVZExzSGdkZkR6dUpkYzV5V1QtVHNFX2RhNUxSd1NVWXhzT25nZXNHR19sNUdNN1lqMFNEVkZPbUppSUJ3?oc=5"
+            },
+            {
+              "title": "Air Arabia Abu Dhabi Expands Network with New Nonstop Flights to Amman Civil Airport, Boosting UAE\u2013Jordan Connectivity in 2026 - Travel And Tour World",
+              "source": "Travel And Tour World",
+              "url": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQV0U4TC1DTEFzQzBmR1B2SkZua0hrVlF6dGNkRUR4UDEzRGdZSHhiQXBjbENEcWxrXzZRR0l6T3hjOGE4ZFlHd1cxRG5SSmk5eWdvRWlrc282d1FoRzRTcnJCeUZtdXRtTFVxcUJydXJsWmxoWjZ5VHFfV2dYSjAxUy1TWXA5YWdVWkNQWW9iYzQ1UmNlTnpULVllc2stNW9hVE5vYlRhU0NZTkZhSnJCcFJ2bHhmZlR1Z21sVXNJU2xzS3hCdXFuOUFyQ21BbmFab3BsazFVVGFJZV9ERWFHSDNoalBCRjA5X3NkSERPMGVacm9rcHhRWGI5eFJWNXo2cUZBbA?oc=5"
+            }
+          ],
+          "weather": "29.01\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Business",
+          "city": "Abu Dhabi"
+        },
+        {
+          "topic": "Sports Abu Dhabi",
+          "location": "Abu Dhabi",
+          "article": "**Abu Dhabi Expands Partnership with NBA**\n\nAbu Dhabi has further solidified its collaboration with the NBA, emphasizing its commitment to becoming a key destination for global sports events. This expanded partnership signifies an increased investment in sports development and tourism, aiming to attract more international events and elevate Abu Dhabi's global profile. \n\nSignal check: This move is not routine; it indicates a strategic initiative to enhance Abu Dhabi's standing as a premier sports hub, potentially influencing future partnerships and events in the region.",
+          "sources": [
+            {
+              "title": "Abu Dhabi expands partnership with NBA - Yahoo Sports",
+              "source": "Yahoo Sports",
+              "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOUEFiX055Qi1CX3U1R1djanBDVkpFOGVpZ0gwMlFIMkgyUnRFVGhKSU9NLUdVdER4NEU1NGJJRTFCNzQxWnEyRzZwODZNS3RqM3ZKdFJCS25lWnMxSDdPVW5pMVlXbU5LUDF3RkQwM0x0aWZJMmdPWEExZzhkRGJya3o1QjY2RVpnVVE?oc=5"
+            },
+            {
+              "title": "2026 Mubadala Abu Dhabi Open presented by Abu Dhabi Sports Council Tennis Live Scores - ESPN",
+              "source": "ESPN",
+              "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQWEVIOEFpMTduS0l2UUtQb3JOOEw4ajQ5V0JOMUhydG9FcGdBRmVUWG1uOTcyZUQ2VUtoTFVPYjBJR3hiSm1VV3ZVYkxxS09BTlc2bkROY0tBZjRaOVRaMEN6aUFUc2hlQUc0RnJqVFZNMTRXNjg0UWJyN1lMeldTaW90Umo?oc=5"
+            },
+            {
+              "title": "Why Did FIFA Do a Deal With an Obscure Prediction Market? - Front Office Sports",
+              "source": "Front Office Sports",
+              "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNWDZ5VWcybE5nc0pXSTMyWi1vR3I3WFMzbGJzNU1JZGVYcFRUUjFzRmFURnR3eXRCZy0tZ2FmVXJpVklHdGdvNVJ6ekE1QjB2RXlEVnZZOEhUVU9Sck1tN05sZzlWbVpKcEphQXFsWnh2TWRGeVJOMmQ4S3R5QXFpclI0VmJOOFNNbWF3Vg?oc=5"
+            },
+            {
+              "title": "25,000+ athletes expected to compete in 38 events in Abu Dhabi - CNN",
+              "source": "CNN",
+              "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPRGI4Ujl2eFJLbTYwNHNFcVhNMWNJZWtnb3VDZ1VIZG5uQ1BJUnZ2QTc2TThxSTRvVWhCRzJONUotYUU5a3EyV2pWT3ZKTVlNNDZWTnRfLTJIckhGQmlSTnJmQkhBS0FqV2diaTl6SzFLNHVoR09OSFFtTWNzcFJORkFnYmVDSzNsVUx6czFSR285NEZJZnByUjQ2YTIyYmlpajh3WFRnN3VQakN6?oc=5"
+            },
+            {
+              "title": "INTERPOL conferences unite global efforts on anti-corruption, asset recovery and sports integrity - Interpol",
+              "source": "Interpol",
+              "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPWDJJQ0tqSERybUx3dUFlVGlwRU9iUnVxV2Z3d3pGNGlUZFJ0R09GTGZxdUwzLUk3LTlycXBfaHZCeXNHYkFxbUluNHdjYldKdk16ckppNTZfYWhwU09qMlFTTmVIYWFnYUNXWW9Nc1VTU1JKXzU4c2RuTFpPd2U0VXNVVUdkRG8wcVpkTThkbTRmUXkzVkl1aHowaVBOcGNQRXN5dVI2ZmFHSWp5WDM1Tzg2eHozV0piZVhUYWxPQTFaZmNraTUyNGxtNmZXWWFmT3VfSUh4YWdSTWYwTWJhMg?oc=5"
+            }
+          ],
+          "weather": "29.01\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Sports",
+          "city": "Abu Dhabi"
+        },
+        {
+          "topic": "Health Abu Dhabi",
+          "location": "Abu Dhabi",
+          "article": "**Abu Dhabi Biobank Partners with Human Life CORD Japan to Advance Stem Cell Therapies**\n\nThe Abu Dhabi Biobank has announced a partnership with Human Life CORD Japan aimed at advancing stem cell therapies in the UAE. This collaboration will enhance the capacity for regenerative medicine and could position Abu Dhabi as a regional hub for innovative healthcare solutions, particularly in treating chronic diseases and injuries. \n\nThis move indicates a strategic priority for Abu Dhabi to bolster its healthcare capabilities and attract global partnerships in health technology, reflecting a significant step in its vision for a sustainable health ecosystem.",
+          "sources": [
+            {
+              "title": "Abu Dhabi Biobank partners with Human Life CORD Japan to advance stem cell therapies in UAE - \u0645\u0643\u062a\u0628 \u0623\u0628\u0648\u0638\u0628\u064a \u0627\u0644\u0625\u0639\u0644\u0627\u0645\u064a",
+              "source": "\u0645\u0643\u062a\u0628 \u0623\u0628\u0648\u0638\u0628\u064a \u0627\u0644\u0625\u0639\u0644\u0627\u0645\u064a",
+              "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxOUFFIWV9RRGxlR3pLQUFJVXBDODBXXzVGZFBScll0NlZzWlNLT0ZlQ0M5SEZ4dE8tcmxEb2xaRjdKT0QxRW1lYlRodHViOW1UejAxTVd6UjJQZmtaZlRKR2U1bmVTNURXWkl2M1NIbFlMV21reWY2TENENHc0d3hRWDVzd1hNcXk2WmpsRDBhSWhGNnJreERUakNpT0VvMkkzVHBKaGZkb1lsNGpIQTlsNS1KTGNXbXMwMUZ6dC15RjdhSU5NcmV6VXdnZUZNeE16?oc=5"
+            },
+            {
+              "title": "Abu Dhabi Public Health Centre expands SEHHI programme - ZAWYA",
+              "source": "ZAWYA",
+              "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZVlKNmE3Mm5fVTBuSWh0N3FDV0FGOU4zaGd4aHp6RGJfb1JYMDVCMUotdmF2MmtfcnNlMXBDUEVoSHE1UXJwaUg3dnhqRU4wRXBhTy1NWFJnRUJ2Ym9vWnRWLUJCTDdLUDc0a0x6c0JTT3o2MFBySzl6RTFBZElITS00b3RSTEZuR2VzMElHSEtqcU5CTEpxM3Awc1Qta0hlVkxFWEFsdDdHSlViSVVjM0NodlQ2alIxdEE?oc=5"
+            },
+            {
+              "title": "A New Era for Digital Health: Abu Dhabi\u2019s Leap to Health Intelligence - The World Economic Forum",
+              "source": "The World Economic Forum",
+              "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQQUk3QXFRZjY4bHFNcDR3ZkFGa1c5OUhRWThLck85QVoyMEVlTkRka00tUTFVSkZLakpMaHBXV3NrQkJ1UndHdDA1Ym1HeGFmX0RGODFybURGU29ISi1mQkxxOUhZeS02blNsckZSYkhPOU9ybGtheFZ3SnhMV0FuOW8zZS13THJNVzYwUlNQSzJQUk9yMGd6cDlLYzBLRmNyWGN0MFhoVU0tdw?oc=5"
+            },
+            {
+              "title": "Abu Dhabi urges pilgrims to prepare early for Hajj - Gulf News",
+              "source": "Gulf News",
+              "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOTVZDSHlsWHVjVXZFWk9DLUJXREo0QmlFemE1M0s4YnRPVE80ek5ob2xnXzRYMlY1NnZmMkxTeEhTZkFRMkNHSXhsLW1hYVBmQVBNZXFVajZoNFh4aHVDQWhGNDdXVWFvaDVaVzBwbEpuUDVEWXpWOWhucHNCdXNVYUJNU1JWbmNsVEhIb0ZhONIBnwFBVV95cUxQdDJIRmxWLUVBZUhwdmhLX0NHRndDcTlwX3c0VGV5dldnMTJDd1JLaXEtNW9jS2kyMTVXeTRGbmJJVlVmOVJ6ejBZSG1kNVpMakJhbUkyNVE1TGVNZTZCdmpBb2xIUjZxY1BZeW5ZdlY3LWNpei1kX2NjcVdBMGN0MGItam1tS1RaS3d3NVFNUzU3Vl82TExsUmJfaVVmVmM?oc=5"
+            },
+            {
+              "title": "Planning To Visit Hajj This Year? Abu Dhabi Shares Health Tips You Shouldn\u2019t Ignore - curlytales.com",
+              "source": "curlytales.com",
+              "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxORlBnWjNXNGpQRFUxTlpVaVZ1OVJqbnFRalhSVHV6WWNLUXlkZlkwLVlid3dnRXRxZ0tBOEFUWGIySGJqM0hkelZsbVVTOTZ3c0RuTVlWRlZBZjBvSVFRMGxpbFU2TV9uaHd1OHBjVUF3OFJBejk1emRCbU1BcTFWZWU1cTBMc2lwekpzbHhoY2E2cF9zS2k1SW4yUUtWMnYwVHJnU0xuRjlmcDRGNnNzTmxDQUFyd3d0VDAtRlQ5b1QzUdIBxwFBVV95cUxNSXBFWnlvUFJORjFTTnlaeGpXcGlYanc0cndtTWhVSV9qLXJMRExiUGYwdFpjbDdyZ3JNTTByT1Jfal9rcVBFRXhzWm1xaXZDYkozMU1XVnJTYVdPNURvYzJqeFA2TWJaWjA0bFVKY2Z4VzJBOS15M3NKd3pSV1k3NWJNcG9WeC1MaThHeVlDNktEeVV4aEp2RGVrblBRaXNuWl90QjYwYnlPV2dXUC1XMV9nS2owVTF2dThIMGNzYmd1MTNOdHVR?oc=5"
+            }
+          ],
+          "weather": "29.01\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Health",
+          "city": "Abu Dhabi"
+        },
+        {
+          "topic": "Entertainment Abu Dhabi",
+          "location": "Abu Dhabi",
+          "article": "**Yas Island Abu Dhabi Strengthens Position as Global Entertainment Hub**\n\nYas Island has been highlighted as a leading entertainment destination, featuring attractions such as Yas Waterworld and Ferrari World, and positioning itself for significant growth with upcoming events, including the 2025 Abu Dhabi Grand Prix, which promises a full schedule of racing, music, and fan experiences. The inaugural Live Summit Middle East, uniting premier live entertainment industry conferences, indicates a growing commitment to enhancing live entertainment offerings in the region. \n\nThis development is not routine; it underscores Abu Dhabi\u2019s strategic investment in diversifying its entertainment portfolio and increasing its global appeal, potentially impacting tourism and economic growth in the UAE.",
+          "sources": [
+            {
+              "title": "Ultimate Guide to Yas Island Abu Dhabi: The World\u2019s Leading Entertainment and Leisure Hub - Travel And Tour World",
+              "source": "Travel And Tour World",
+              "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPRVhsYWNUTjlIanVwWFZmWDJyUU1uUjhHVktWVHctbkU1eW0xeTVfbnYxN2ZnaE5GRUNnSlk0V243WjVuQjlCUU1uYzF5UE5KNERWYlhRWHJqUjlsU3dSVmRrRmx4RHk4WW9WejR6enl4ZEtVLXhOY0hmZUQzUjhHMVY0SnBTMVo2MUFJc3ZKNDNlczBqSzRyclNKR0YxbTRQR2hOS29PX0Y2RmEzMGFBU1c3MV9mWnRyNWd5YW5QNDJKZ21aQmRJZ2lUb0dnNHBfSXc?oc=5"
+            },
+            {
+              "title": "WORLD'S PREMIER LIVE ENTERTAINMENT INDUSTRY CONFERENCES JOIN FORCES FOR INAUGURAL LIVE SUMMIT MIDDLE EAST - PR Newswire",
+              "source": "PR Newswire",
+              "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQYnlBaWhva0MwX2tjdl9rOGlUOGtjbzlsS2txanJiLU1NUnZieFhKU1pidnJOa1FQNHBtNl9lRzg3YzZORl9ja25HeXkxTjRqdVBFTGhXMU50THVaeDktNWhBN1RxTHoxajlpV1lyQ21QZTJ1VUZhd2xCOU95OU44Z2NXZXFPU3JyZ19nZXNyekxldmxwWjdWU25FTWJfTWVJQWJWQjR5LXhnVmptRnYyRGh0emFzbWNKd1I1ekpYUF91cDFidjR3NFp0UC1PLVBwc01ZM3lxZUtpZ1BBZHlTVUtweloycU5iYVN3LXl3Zm96UQ?oc=5"
+            },
+            {
+              "title": "Yas Island Abu Dhabi Emerges as Global Entertainment Force - Little Black Book | LBBOnline",
+              "source": "Little Black Book | LBBOnline",
+              "url": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Tc1g0S1phM29KMEpFdFJBZUJDQ0toV3Y0WVRCUTQ5azJFWnlIWF84S2xuLWxBT1Y1VTBOOVlSd2tfc1lLODJSbTdha2l3cExNS1hPbWM5X0FDZ1FsOUlERzBrUQ?oc=5"
+            },
+            {
+              "title": "Sphere Entertainment inks deal for second venue in United Arab Emirates - KSNV",
+              "source": "KSNV",
+              "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxPMDBmQlFxLTZRMzdGSG5TU29FS1k2NHZoeXlDUzllWG5OMzZIZ0ZnSmx1MTFfUndSLWxoRmE4WUttY05jbUlKbHQtdER5blNVWE9UT3FDOTFWQzhOUmZDTkVNLUtpdjBlTnZFaER5ZFE5UHNHVmZBbk1Pbk1uTnRoSGh5LTNEd3gxa2FlbXNGZDRtVHFZUTk0cExqZzZ6V1dRRURtNFFjSk9qd3F6MnFsdUFFOU1OWUwwWTRKYXhMVkNyX2RUbWpwRXRLeWJkbmZpWXkxc3ZOMDlBY0M5SXJoMThR?oc=5"
+            },
+            {
+              "title": "What\u2019s on at the 2025 Abu Dhabi Grand Prix \u2013 Full race schedule, music, food, fan experiences and more - Formula 1",
+              "source": "Formula 1",
+              "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPWkNXSjFaSVA1THNxTFpyQ0ExZ0dEeHQxNnhkR245R3VjRUxwZUhjWVg2VnplbU1XYkVMM1lKUnAxMGtSd3FRMWE2ZldIRkZoMTQ2aWlRaXpEMFVZQlhfU05XeWE4QTFkT2J4bzVoeUV0TnJtOTl4ZlFtU2NMTmxNZThsd1U4cDR4OW1YTVJtUVM3YUl2aWswQWdVbW04X3FSUHpQRHVEZEdkTXJJVEN4cUtBQnFFWlJLaC1ZSHppWlNQdmVlUTlub2hXelZDQmZWX1RuWVFJOGs?oc=5"
+            }
+          ],
+          "weather": "29.01\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Entertainment",
+          "city": "Abu Dhabi"
+        },
+        {
+          "topic": "Politics Abu Dhabi",
+          "location": "Abu Dhabi",
+          "article": "**Abu Dhabi Implements New 15-Category Leave Framework for Government Employees**\n\nThe Government of Abu Dhabi has introduced a structured leave framework comprising 15 categories, designed to streamline employee benefits and enhance workforce policies. This initiative reflects efforts to improve government employee welfare and operational efficiency, aiming to attract and retain talent in the public sector.\n\nThis development is notable as it marks a systematic shift in human resource management within the government, suggesting a shift towards more progressive employment practices. The move may signal Abu Dhabi\u2019s intent to enhance its appeal as both an employer and an administrative region, potentially improving overall public service performance.",
+          "sources": [
+            {
+              "title": "Abu Dhabi introduces 15-category leave framework for government employees - HR Katha",
+              "source": "HR Katha",
+              "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOOGYzcnh0aHllRWQ5LWpXTHpwM21id3lqb0kyYzExWTlHYkNMeFRaMko5VWk1Nnp1YlA3Vm40bU1BdDRrWmIyM2gydXFQYzVxcjUwZGFyem5BWDdmRVpfSmYzbGtjeTI1T2NRMDAxU29fbXpWZlZQMUR4NTBKZm9ocE5vcG56SXFvT2lRQVBRdmpvTjd6TE9DNnhSWU5QM2tMUFpEb09KcmpZRktTME53N3paQQ?oc=5"
+            },
+            {
+              "title": "Khaled bin Mohamed bin Zayed honours winners of Abu Dhabi Award for Excellence in Government Performance - \u0645\u0643\u062a\u0628 \u0623\u0628\u0648\u0638\u0628\u064a \u0627\u0644\u0625\u0639\u0644\u0627\u0645\u064a",
+              "source": "\u0645\u0643\u062a\u0628 \u0623\u0628\u0648\u0638\u0628\u064a \u0627\u0644\u0625\u0639\u0644\u0627\u0645\u064a",
+              "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNNThqbUtzTEszcnAxaFFpYXVZb1NSeUp5LThGOHhFUzVKbjJFRU1VUjhMMlNDMUNwMWo1TnZ5eUszQWdiMTJ3UlpoRjZMUlBwUmlMZkhBalliMVJGejJaWGhObnFfTlRfdk9aMGJoOG9oNkZVNkM0LUh6UWJIZFhDZXRZSkozeWRXa180UkNrUDFBZDI0RS1qQ3F2TFFzeWljY2VOZVVKTWJrc0VORUZFM2pmVjdCYW1feVphaWc5SmkxUlhkZ3JRMkE1TnhWU00tWGxKSlZlQ1VtejJuZ3p1RVMyYUZhNEVNRFNINDZNRkk?oc=5"
+            },
+            {
+              "title": "Abu Dhabi government departments honoured - The National",
+              "source": "The National",
+              "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNTTlVYWtielJOekZUbmtCUVJZb1VHTm9qWEg4UzBGVm01OF83U0VsMTNhX1VRRHFFc0Zza3hiOU9wazJWSzYyNWpwaEtTbVhaSEF1Nk5sQ3M3V2lVeHVmTTZGbnpLTVlCTjZYenBkdzhpTDMzZVFQbXhGdnJua2VtN2EteEFzV21teWJkTmZHczlYUTg?oc=5"
+            },
+            {
+              "title": "\u2018Spy Sheikh\u2019 Bought Secret Stake in Trump Company - WSJ",
+              "source": "WSJ",
+              "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQMGtVcDdSbUQ3RXRwbkxEZVRZSnJ1UjN2bWluS3ZHM2Z6M0VYY2Nlb3dDZ2gyMzk5eGNjLV8wRTUxb25leHRrSVpMV1pIdGlMUGNBNFRWVW5CMWFtTnUyb0tVb2ZlTTZIbUY4SXhkUWlyZWlqMzZjdUhrc3BUaDlNRXpIaEo0TVRtQ2ZQU3NUdGtfQUE?oc=5"
+            },
+            {
+              "title": "Talks with US and Ukraine in Abu Dhabi were constructive but major challenges remain, Kremlin says - Colorado Politics",
+              "source": "Colorado Politics",
+              "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPYnRXZlpTc2lVNXpUZlBWbHdwRnRJZzJaS2lEaGhKdVZjWjFBWFBaV3BDQmtRWEpBNmRzRzMwbXdFS2d2WG9ZNlhtcXN1bmdqQnZnTGxSV053NzdnZnN5ZV9sUUEwMGZWdmFfazZVbDUyalV0MTNrbzk1MFQ5eGQ4ZUxJaWllNGZaSzBlUGNCSmktdWxtYXEySHp1X3YwdVNLaWdHNDZEMnRlWDVVcG5rdzkwNzczdklUWUh6ZmpRZW5UNXVmYjdRb0RDTzQ4ZzRkeFZCREhmVlNXQQ?oc=5"
+            }
+          ],
+          "weather": "29.01\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Politics",
+          "city": "Abu Dhabi"
+        },
+        {
+          "topic": "Science Abu Dhabi",
+          "location": "Abu Dhabi",
+          "article": "**NYU Abu Dhabi Scientists Detect Magnetic Waves Deep Within the Sun**\n\nResearchers at NYU Abu Dhabi have successfully detected magnetic waves deep within the Sun, a breakthrough that could enhance the ability to predict solar activity. This study may have significant implications for understanding solar phenomena that can impact space weather and satellite operations on Earth. The findings were reported in the journal *EurekAlert!*.\n\nThis development indicates a notable advancement in solar research, potentially positioning NYU Abu Dhabi as a key player in astrophysical sciences. The ability to forecast solar activity more accurately could have broader implications for technology and infrastructure reliant on space-based systems. ",
+          "sources": [
+            {
+              "title": "Scientists at NYU Abu Dhabi detect magnetic waves deep within the sun, helping predict solar activity - EurekAlert!",
+              "source": "EurekAlert!",
+              "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBHQ2wxS1d1SG5seGNvWGdpeGNoSXNaUUdIMW9tRndOdHROQmJHUmxmMWdrTHRjbE5vVWRMT3VWZGd2TWRRQlh5NFgyNlZHUFRuY1Y3UUlBRHRzS2xo?oc=5"
+            },
+            {
+              "title": "European universities brace for disruption to Gulf campuses - Science|Business",
+              "source": "Science|Business",
+              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPRkxpeWEwektrNVV2XzAzOHUzRzZPa3Jsd1pnOG41ckltWDNlbEhkaURqMHBRQTRrZldwY1pILXdJdWR2bEo0UmZRMXBqajUwOTZrSmQ5SHBNdFRabFEzSmZBTmctQVlUNW5lWmY3S2JNRzB2WFVKNkFsRlJwRG9mRGo2VnViZjV0MEZqbWxNcXg2TGdlamVXT1NMVHlYclNXUEg3LWJGWQ?oc=5"
+            },
+            {
+              "title": "Microplastic pollution in marine waters and sediments of Abu Dhabi Emirate, UAE - Frontiers",
+              "source": "Frontiers",
+              "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQTEZickZybUdRLUg5UmIzX2xwMUxJSDVyTWJCUUFPS2pVa3dkcGtWZnBLVzREYlEzcUI5ZWpjNmpGQWtBZkUtYUJwTGNrODBJdlRHVEhvQjUtZW1mS0FseFpyOWtTeGhlQWY0eUl6bndsZ0U0cjBiS2ZfTjN5UGFRMjgzLW52cW9xTDN6cDFzRk9zS1M1ZXNJ?oc=5"
+            },
+            {
+              "title": "'Never too late': Science-led policy can reverse ocean damage, says Abu Dhabi environment chief - Euronews.com",
+              "source": "Euronews.com",
+              "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOMW85aGFjQjZDa0lyaDVrNFNSS2hhS3FBaHJQNmJQdTM5d3loMWNCRmkxNzZBWHhEVC0tNlJzaG85SmtfVU5hYzlZZ0NEN2FEcXhjOWMyX2pFcVlXT2F5OE5BR1JwbXQ5X0R6cWRVVWp4MTQ5YkZhU19Ub3dkWFJaQkZRbWpaeS1HZkVJek5SaUVrMmJrQnZoSzNWTmI0VnMzUnJaOXdCeXFHLWN2V2VWdUpiUDlRYWVid20zZURpcENqZXRy?oc=5"
+            },
+            {
+              "title": "Abu Dhabi scientists map magnetic waves deep inside the Sun - The National",
+              "source": "The National",
+              "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPNC03VlBiQzMxNFR6cjFsS2FHT3RscUdQczBuNXc3OTNqV0g4UmxOeDdmX2FCRmk2VFM2R0tPOHRqVllIMHIxSVYxQUFIb3RTMFg5OVE1ekQ3dWVBd0ZDb1BObjZ2cjNJYW52ZWtMemxFVnJIZXpRR0hCeEtfcVpUTWJfa3k5OWFSNWZyQzlLWVdjblVEZFlZVUo2N3J2bTR2eDJPaHhFSUJRdUFsaGRUdnJ3?oc=5"
+            }
+          ],
+          "weather": "29.01\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Science",
+          "city": "Abu Dhabi"
+        },
+        {
+          "topic": "AI Abu Dhabi",
+          "location": "Abu Dhabi",
+          "article": "**Opaque Acquires Post-Quantum Cryptographic AI Technology from Abu Dhabi\u2019s TII**\n\nOpaque has acquired advanced post-quantum cryptographic AI technology from the Technology Innovation Institute (TII) in Abu Dhabi. This technology aims to enhance data confidentiality across various applications, a significant step for Opaque in bolstering its secure AI capabilities amid increasing cybersecurity threats.\n\nThis acquisition indicates a growing emphasis on securing AI technologies against emerging quantum computing threats and reflects Abu Dhabi\u2019s strategic investment in innovative technology, positioning the region as a hub for advanced tech solutions. The deal not only enhances Opaque's product offerings but potentially symbolizes a shift towards more collaboration in the tech sector between Western companies and Abu Dhabi institutions.",
+          "sources": [
+            {
+              "title": "Opaque buys post-quantum cryptographic AI tech from Abu Dhabi\u2019s TII - SiliconANGLE",
+              "source": "SiliconANGLE",
+              "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUENjN21rUU9GZUUtQXVLLW9maXhnTGdVQTZyUHNQZjZ0WGREUUs4Uzk5SFJwc0NQelhnQTZnelJDUGlzMDYweFlwVDNrbG1QOTc5dGd3UkRjdURLc1p1V0xmcjVLcldXSlp1bVRjNUJKU1pSRlF0THJ0MjNIRWQ5QXN5SnR1eFNfY2NpMk5RRG16YldNYnB5djRRWmVTUkE?oc=5"
+            },
+            {
+              "title": "OPAQUE Acquires Abu Dhabi-Developed Cryptographic AI Technology from TII, Extending Confidential AI Across the Full Lifecycle with Post-Quantum Protection - AiThority",
+              "source": "AiThority",
+              "url": "https://news.google.com/rss/articles/CBMingJBVV95cUxOTEhKWE1sU1BNZjJuUXRJQ0pKSnBKamxQV190XzhWSlFPMGRFY3YyVlNLUTJaVXNRNmk2VTFILVVlTm5EVlZ5WDRqUUY1VXEzM3M1MzNPZk5YNFRSWUU0UUdyNndkRmpPRmx3SlBzVTREMDBXNGJEYWE2Zml1NlQyTG5nRm1DdVRVT3FVRldoSzBiOHV3OThGbGJYN0dMaUdkTjFoNzhaSXg2WjlUR2lralRkNF9abjhxNmdick9QMEt6UFpVSzN3bDJIU0ZZM25WdkR4WmVrSUs3a3VfUmxsNGFLQTVqbnRZU2d2ZFRSU29rZlNwMkVIS3NzNU1IUnlPaFNEdlZfbnBsNkRvdGlTczNjUG02NjV1RUppXzZn?oc=5"
+            },
+            {
+              "title": "OPAQUE Acquires Tech From Abu Dhabi\u2019s Technology Innovation Institute - CairoScene",
+              "source": "CairoScene",
+              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNNlR5MHE4LVhxS1FlU2VHVC1JNmNSaXU5d3ppMm85dDg3SWtpcEwyMGhQUkNtN25kOFBNcUNvWG9Cdi1hQTZSSFRubEo0MFpDbzZDamdPR2JWbUhBTHlLYUtERXE4eW1QZFdxQUJiRTY1S0Y1d2U2a19MUXRNaldnbEkwLWtKdi16YVlfeVlMb2lqeC1yNlYzaWQycWlSX2YweHlJ?oc=5"
+            },
+            {
+              "title": "AI filmmaker James Gerde finds a creative testing ground in Abu Dhabi\u2019s push towards the future - The National",
+              "source": "The National",
+              "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNY3lDNk5uY1Y0UGJGdlRPcTllRUtrZ0Zob1VnT19aN0k3TEQ2SUpEU2hqY19BSTlLeUJpMnhoVmRGeXJLM0RVVU1mV0QzSEE4MjhSRnJlS1VWQWxtNU1oWWZjSnFyMXlBcW03a1BfcUtIRDhUWFFYQWU5a241dDRaVnpvZFhkSEFZVlNTR3ItQk5BQXlCR1UzQWxJQ1l5Nk52RnowRTJwME05NW9hcXM1TFloN1hDYnNVYjlCRVV2VThXbUxzMG5LcmtYT01KeElRR0NCV1Eyd0ozNzN5RFJ4YXpkc3I1QQ?oc=5"
+            },
+            {
+              "title": "Generative AI Leap: Insilico Medicine Nominates First Preclinical Candidate in the UAE - Insilico Medicine",
+              "source": "Insilico Medicine",
+              "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQLU5pRHJ2bGtoLV9SNERoX3h5VjlfaEk4cGlxNnBZekR3MC1WaUQ3T0Z6REFkdUlyWHZScGpNYjdMX1p6djlNRGwyakVTMlRKU1loSUNPclUzWTU1ZVhITXpYQzhFcUgwUEdXV3RzaFVpUWNMYzhleGpXQ0xRZHY4OE83UQ?oc=5"
+            }
+          ],
+          "weather": "29.01\u00b0C, clear sky",
+          "currency": "1 USD = 3.6725 AED",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "AI",
+          "city": "Abu Dhabi"
+        }
+      ],
+      "Cairo": [
+        {
+          "topic": "Technology Cairo",
+          "location": "Cairo",
+          "article": "**TTEC Expands Cairo Operations with Major Hiring Initiative to Support Global Growth**\n\nTTEC has announced a significant expansion of its operations in Cairo, launching a major hiring initiative aimed at bolstering its global growth strategy. This initiative is part of TTEC's ongoing commitment to enhancing its service capabilities and will likely create hundreds of new jobs in the region. Concurrently, new IT initiatives in Cairo, including Hexaware's opening of a delivery center, underscore the growing importance of Egypt as a tech hub.\n\nThis development signals a sustained investment in Cairo's tech sector, indicating a strategic pivot toward leveraging local talent for global operations, which may attract further international companies to the region.",
+          "sources": [
+            {
+              "title": "TTEC Expands Cairo Operations with Major Hiring Initiative to Support Global Growth - GlobeNewswire",
+              "source": "GlobeNewswire",
+              "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxObGZvdEI2Y2Z6VDk5SmdIWE5DYzBCckFGYjVUSENTRm5QSHVLaXlBM3ZyM0piclE1aHRlT2oyMmYxc1Flc0d2cVVuTG1jQ2N5UnFYNkVRTWtiWDRVZEJyTFhxZ0t5Q0hRWGN4ZElmZ05wUGhkcVVNS3BRaEJQMnJvX19KYVh2VlQ0bHVPMUliWUtKWFRFQlVob1Q0UG1EcWpCRmpWdy01MVFWVFVfaTc0cWJpamt0UkgweWh5Z0JuVVFuWGhmUkdSc09nTHVRazQwaEJhMXdBVUhod1pGUDBaaU42ZnJGRDNSZWFv?oc=5"
+            },
+            {
+              "title": "ITIDA CEO inaugurates Alshaya Group\u2019s first Offshoring Global Talent Centre in Cairo, marking 20 years in Egypt - Egypt Independent",
+              "source": "Egypt Independent",
+              "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQeXZZTWo3V3lXc0U3a0dYZXNCTzRrTE03aGthTHVBX2VYcy1pMTZzMF91WkpGRmlBZXpweHRER0ZtX3dRR0RXVjNsaTdOQjJSYk5MX0VVd21LcUhNb0xZWURpYWp6M2pORjdLM3dzbXcyb0R4XzltbUh1bXdFdWhzTjZwaFlIYWN4akN1a2RoeUtPSmJjUm02aXl2OS13N01SWFMtVVZXbmVhTWNvUnhSOHJiNnNCN05OQV9KOWRYZjhPbkZKdkdtQndrWjZJZDJ6cWRuTnNGM0ZHSEE?oc=5"
+            },
+            {
+              "title": "Ai Everything MEA Egypt 2026 Kicks Off in Cairo - Morocco World News",
+              "source": "Morocco World News",
+              "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPZmhDX05BYVJhSVc1S2FyYTJ5UFhUNExLbHZ4eWZpZmVWbFJ3X2w3MHp6LXhBOUZRV3BRZENiYUR4dms0UTFkVEdDdF83Q09ycThuem51N2lwWFBua19nMmM1YUZrTXd2eWNOZFMtdWp2akJESjZhcWZGYnVCQXR5VGtEY2Z3R3pZam9yR2lmTy1aNXhzNEFYM25id3I?oc=5"
+            },
+            {
+              "title": "Hexaware Opens New Delivery Center In Cairo - CIO Africa",
+              "source": "CIO Africa",
+              "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9ZT1E0YTh3bDBQSURzeGt0TC1uR0pBQzBQZnhmdlBxZVZoVWlsQU1qeVBDcXcwaGpKTXNYLUI4ZDd0LUlsbDZGUkFoY0J4V1BqbS1XRVNXZGRsNllqSk5FSkhwaHpVTXhIbDFOX2tRVFhyQkk?oc=5"
+            },
+            {
+              "title": "Egypt Seeks Chinese Defense Tech, Manufacturing Base in Cairo - Modern Diplomacy",
+              "source": "Modern Diplomacy",
+              "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOZl8wVnhEbmh1MnFuVFRBVVpKME1fQUtOSEFDMExGLWlSRl9OZVBiVFY0Y1ZmWjcxTU00UV9PWEtMaVM0Q0FsVFU1a1ZVSXVYUjlBUmFfS0lXek5BekduVXNwU19naVg3ZjcxT2RqNExxWHZuYzJWUDZVdTJLVG1tZHNMem1mX2lFVmNlcTBna1J5WXk4ZllIZUNMV3prZjFq?oc=5"
+            }
+          ],
+          "weather": "18.42\u00b0C, clear sky",
+          "currency": "1 USD = 53.531117 EGP",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Technology",
+          "city": "Cairo"
+        },
+        {
+          "topic": "Business Cairo",
+          "location": "Cairo",
+          "article": "**Cairo Judge Rules Against Blackhead Developers, Impacting Local Projects**\n\nA Cairo judge has ruled against the developers of the Blackhead project, which has implications for future developments in the region. This decision reflects tensions between urban planning authorities and private development interests, potentially stalling progress on other projects in Cairo. \n\nIn related developments, Cairo's local business community is facing challenges due to increased alcohol licensing fees, which may hinder local establishments' operations amidst an evolving economic landscape. \n\nThese decisions highlight ongoing regulatory challenges in Cairo's business environment, suggesting potential instability in urban development and local business operations.",
+          "sources": [
+            {
+              "title": "Judge rules against Blackhead developers, Cairo board - The Daily Gazette",
+              "source": "The Daily Gazette",
+              "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQS1NybTBydHdmTXFocm1aSzZlTTd2di1BYWM0Y3hkRDhwakx5eHQ2TjdQNHl5UHlMZ3lGN3Y0QXRobFBHTEZYLVVuVzljSFZKNVdUWjFDVHc5ekxoVDExX2hDT3R5NkFvRlRpTDIyUjNOYTJUaUQ1SUhuODVEeDFXMVpVRlFfSkRwWlZRR3RrUXJLcGFhaW1jdzJWYlBNaU1BZ3BWalZ0ck5ja2ZMRjVRaGh2QzdnbFc1a0pCSmdFY3JFX2NMMHJHbWE1RnA?oc=5"
+            },
+            {
+              "title": "$27 Billion City to be Built East of Cairo - Asharq Al-Awsat English",
+              "source": "Asharq Al-Awsat English",
+              "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNOGlzVENOR2RhY0p1NFl5WDhKR2d3MER0VzFsQXNPTEFoMExKemx1RXdDQ1c4amZYckVoRlpVNEFnSVJ5NXpxZGdYUVpjNlV5cE1LWG1RblF2NEh6aVU0LXRmeTFlcHM0UjJ5MzU4cFU2bzdqalk2MG16RWlvS2NCNmd2WjdRUQ?oc=5"
+            },
+            {
+              "title": "New increased alcohol licensing fees in Cairo threaten local business owners - WALB",
+              "source": "WALB",
+              "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNMGdka3ZfNWRNWFhydzFyQWFUcGdLLWtKNDFYWFFsS3dFd0VvbHJpcFJrRExfTmdja3NSUnAyNS1kSTFuaEVLTzdlLUN5NElqT2J4U3NVUVNmVGNEMG1FcUM0NHZNX1ZnQTNjRjFzbTZtTFh3S2Rwc01vWTR0WXBQMHpWVTdkU2otYzRQUDc2REdYSUItTHFra3dXYmZyanlPWnFXaUFTWU1QUdIBvgFBVV95cUxOU0Y1eFJ4djhxSGowTlR1WjVMUUJfR050MUU0dkhiWGVjX2k4WEdyNkNoTUVuT1JDRy15Um1CMjVTQXh3X0N1SjRhLUNzVXFlRmllMkxmYmo1ckdyRlBaUXhHVVZ0Zk1LWmMyR3czYlJRZ3diZE5WVm82RWpCaDJ3OHFuUmwzYVA5dnpuLV9yR1kxazNjQTFHQnpjNlBBX0ZBc1Vpd2ZtUDVnNGFtTXBjWmVnbVBsYXZoMnR5UjJn?oc=5"
+            },
+            {
+              "title": "New increased alcohol licensing fees in Cairo threaten local business owners - WCTV",
+              "source": "WCTV",
+              "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxObE5hbEhvNFZtOWpYZDNiUjFwUEkxN2M2cXZmSDcwMk9CcVNMQXM3T0prWTk3ZHlITUpXeFdkWVpQOHN5b3lkOXJKV2pQRDVndmt4RjJkMHpDVVFqejVwOEFMZzR4UHNQaVdWblpZd3hHbVVjc3RiOUNmTW5XWHg4OTkzaUhVNGtKc3lkVzdoTk1rUUFkM2d2bm1wam1zMS1pZFVrQkJqRkNzMVloRkVXaQ?oc=5"
+            },
+            {
+              "title": "New Era of Connectivity: Riyadh Air\u2019s Daily Nonstop Service to Cairo Set to Boost Tourism and Business Ties - Travel And Tour World",
+              "source": "Travel And Tour World",
+              "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPOE93US1oeVRXZXV6cVAxaWRuWF81dXBXOTBxRHMwYXFQamo3UENkczlZVk41VFFDVlhiMWZWS01WcWJwUnA5aVpmTlVTOGlpTTl0bHhWLVlrWWVxMjZHZ2NUd0dRaGxOU1dCbjJ6RmhydWdLa0gyRjhqY1JqVW9Dbl9vcmJBZVNnc2xDVzJPX0kxUUhoOXBrLWF3R0dHZzhFVWxaQ0pmTHBBZHR2MlM4d0dvZm9kQ0FGQzE4bWx2V3BkVDdINVMxeENEeFJ6SHd3THg1MlRicjU1eXFkNmplOUFGZGx2eVJPaEE?oc=5"
+            }
+          ],
+          "weather": "18.42\u00b0C, clear sky",
+          "currency": "1 USD = 53.531117 EGP",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Business",
+          "city": "Cairo"
+        },
+        {
+          "topic": "Sports Cairo",
+          "location": "Cairo",
+          "article": "**Yankees Celebrate Miguel Cairo's Birthday and Cairo Seals Sports Agreements with BRICS+**  \n\nMiguel Cairo, a former New York Yankees player, celebrates his birthday today. Concurrently, Cairo, Egypt, formalized two Memoranda of Understanding (MoUs) related to youth and sports initiatives with BRICS+ nations, indicating a strategic move to enhance international sports collaboration and development.  \n\nThis dual focus on cultural celebration and international agreements highlights Cairo's positioning as a key player in regional and international sports diplomacy, potentially influencing sports policy and youth engagement across member countries.",
+          "sources": [
+            {
+              "title": "Today\u2019s Yankees birthday: Miguel Cairo - Yahoo Sports",
+              "source": "Yahoo Sports",
+              "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQ2NBNVk5MEllNnQzdDFoRFFZOUJzakFiUEVWWUJyNkhzSTBOQ1Q3OXNkZlBfUWlBV0ExYnZYMlFrWXM1TUxCTUFISVREankyTHNPMHl6RFVsUFNTdnZZcl8wZU0ydjdEOHVpLXdvTGZ4U3FTTURIRHhQcnVFZVl6YjZwTGY0THFTOFlLNA?oc=5"
+            },
+            {
+              "title": "Surprises at NCAA regional finals \u2014 Kaylia Nemour wins Cairo - The IX Sports",
+              "source": "The IX Sports",
+              "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPRU84NHJ2bllBbkNzdG1PSXBHTUo3c0ctY3dySEhXQmM0bDBaWjI5Ri1lMC0wV0xfdzhJS0V2OXN1Nm14QnJwQnVqZjRXTjZLTXFrXzlrb1hhclFpWDNIU3ZwWUx4dF9iektzcm9lQXk1cV9RMzY2WGZoWGtkM01lLTBGT0kyMmpsMkpOS3ZpVEpMbUt2RkZ4MC1qNklhV1pOcFZZ?oc=5"
+            },
+            {
+              "title": "Cairo seals youth, sports 2 MoUs with BRICS+ - Egyptian Gazette",
+              "source": "Egyptian Gazette",
+              "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNU2FtekNUSy1KUWRDckdvZmxLRkVXUjF0ZXA4WDlDRjgtMXNUQjgtazZDWm93dlNPTWljUm1kTzRHTW16N1R5THpfbV9TWHloMTd1WjdTNEFUZ1lYc3AzU2hsMXZWa1R3UTVYR0JNNjVsdUN4SGtGZkYxSTFfNjVMZ3cxV04?oc=5"
+            },
+            {
+              "title": "Bencharki Shines in Dramatic Cairo Derby - Devdiscourse",
+              "source": "Devdiscourse",
+              "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPY2hDRVVrRXM4aFJvV2pOZUhIM3Y0MjV3bnNRTERtbDE0QU8yQ014LUlsNzh4aEJpUEk0WlUzZWlHWU1yQ3R3dzVVTlJCSTZUSFFjX09pb1dMMnVQV2RlaXdtMEsyZ0xidkpUVTA0ZjhxckNaS1IyZGtjWHNteGJLUHVEOWhidURCSS0weDc0Ymp4MlpUczNUclgwMlI4Z0XSAaQBQVVfeXFMTWF6MWdLRHpSV3V2ZlhtYjVCQ2JZUUdyOXdIYkI1OFVtNElOeG5jSmhZMEEtSVZqTVE5RFJaY1d3MktCb1dXYjhBQTRvVlZGRExiU3JMcGNPa1lsTjI0YXcyY2tmdUNmMHBVWFdXcFdCcVktc3U1ZGhfeGVmNnVuOHhnRl9HMUxTeVBSRllEUDZlY1NzNF9zSnlwYy1vTzdfV2ZxcWc?oc=5"
+            },
+            {
+              "title": "Cairo (IL) High School Sports - Football, Basketball, Baseball, Softball, Volleyball, and more - MaxPreps",
+              "source": "MaxPreps",
+              "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1lblRQdTBCeVZYR084NWZ1b25UemkxekFiMUx1elBib3doTjEwQ2ZBeDV0XzcxUFZKeFJHOC1SaGRXZEEzVlVUUHRwODh1S0xoLWJFdUktdzR2OEk?oc=5"
+            }
+          ],
+          "weather": "18.42\u00b0C, clear sky",
+          "currency": "1 USD = 53.531117 EGP",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Sports",
+          "city": "Cairo"
+        },
+        {
+          "topic": "Health Cairo",
+          "location": "Cairo",
+          "article": "**Cairo Expands Health and Beauty Sector with Bloom Hub**\n\nBloom, a new health and beauty hub, has been launched in Cairo, highlighting the city's growing focus on wellness and aesthetic services. This initiative aims to centralize health and beauty offerings, potentially enhancing access for residents while positioning Cairo as a regional leader in this sector. \n\nAdditionally, MIDAR and Gruppo GKSD have signed a \u20ac600 million agreement to develop an integrated medical hub in MADA, East Cairo, demonstrating significant investment in healthcare infrastructure. \n\nWhile these developments are ambitious and indicative of Cairo's evolving market landscape, they also raise questions about the allocation of resources in a city with ongoing public health challenges and infrastructural needs.",
+          "sources": [
+            {
+              "title": "Bloom: Cairo's New Health & Beauty Hub - CairoScene",
+              "source": "CairoScene",
+              "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFBzZ0Z4ZTVzelJCbnVaeDc3MEdFR3p0b05TZFN4ZDJhSTczbGhGNlZaRkZpUFpOOFRONUMyMHdIZGs1SkVFeE9rcDRnNlBFRW1rcWVfYmV4T1p5UV9fZzFBV1luek1lNEtTbXVqNWdvVDNyQQ?oc=5"
+            },
+            {
+              "title": "Holcut-cairo Water Association - Mississippi State Health Department (.gov)",
+              "source": "Mississippi State Health Department (.gov)",
+              "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE8wcVV3RjJydTIyWkxjNTBUbldJYzdySnhxQ0lHZEF6M0FjaDhtUnlDbDdMNjMxOTJmVFJOdWV2MEZURkJOdTQwbGNiXzREdnlxdVAtbjNwd2RHRlJ4UVN0cTM5UGU?oc=5"
+            },
+            {
+              "title": "In Rapidly Growing Cairo, Safer Streets For Pedestrians Remain Elusive - Health Policy Watch",
+              "source": "Health Policy Watch",
+              "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZG9qVlRVQkdiWW9KVDZ2WDFvdUtHUERTRVlTNVdyQi1BNkFiR2pGRUZkY2ZLM3lMTHNjeWtobUd4ZG9qbTNiN01MWTFVSjFSQmQzaVR4M1FmQ1puUnJfUlNESkF6Ul9VMEJ1VC04RzFSR1c4RGpoNlRWUk1nVmpKLWJNMGdZTVN1NVR6Mm8wZ1JUTnU2c1k0cmU2RzJYZEpQeDVDVg?oc=5"
+            },
+            {
+              "title": "Cairo summit urges early diagnosis, stronger care for rare diseases - Health - Life & Style - Ahram Online",
+              "source": "Ahram Online",
+              "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE8xVHhZUGJKY2dFWTZkakhmMkQ3UEw2emZjX21adXp0dFhFMnd0Skl2djJfZ0ZGRWhySnhtLW1rbW9aeUZrZHNZV0gwdTJMRU9yYjdtNkN5Rkg?oc=5"
+            },
+            {
+              "title": "MIDAR, Gruppo GKSD sign \u20ac600m agreement for integrated medical hub in MADA, East Cairo - Dailynewsegypt",
+              "source": "Dailynewsegypt",
+              "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNRjMyLUpLQ3hwZnhKNmdCNjU2LW9wLTJac0k0LXdkaUMzTXl1NGJoRnRqcDBiS1pqTDZXRUpYQjhORnpOVFF0Vkc5RjNhaU1yTE1CRkVpUTRXN3ZGR3llX0pSNXNFdlRMczJVSEIxZHQzaC1nWnZoR0JlRUlkeW9pdHFHNkRveG42MG1WMzZ0Qnk1X0k0RzhNY2hMaVBPSkxxRUtxMnl1c2xrc25uSDBTZlM4TE1RalZsN2FhRUJtZ1ZxNzA0d2c?oc=5"
+            }
+          ],
+          "weather": "18.42\u00b0C, clear sky",
+          "currency": "1 USD = 53.531117 EGP",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Health",
+          "city": "Cairo"
+        },
+        {
+          "topic": "Entertainment Cairo",
+          "location": "Cairo",
+          "article": "**Kemet Entertainment Opens New Studio in Cairo**\n\nKemet Entertainment has officially launched a new studio in Cairo, aiming to bolster the Egyptian gaming industry. The studio is anticipated to contribute to the local economy and job market by fostering game development in the region.  \n\nThis opening signifies a strategic move towards enhancing Egypt's position in the global entertainment sector, particularly in gaming, which is experiencing rapid growth. Given the focus on developing local talent and content, this could indicate a broader trend of investment and interest in the creative industries within Egypt.",
+          "sources": [
+            {
+              "title": "New studio Kemet Entertainment opens in Cairo - Pocket Gamer.biz",
+              "source": "Pocket Gamer.biz",
+              "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5QMFJZamd4eDhMY3hJRU5FbzV1Vmc3akw3LTVRQlI5Vk9jckNGLWpzc1F4QzhOMzg0UG5CMk5hLWRtbTdtcnp4dXJyWjVjZnJrNVVsbnBlZU1GRmppckdyLUFsZTI3X2VGVHNYQ0JMR1JrdkVZdVhPZ0MwOU41cDg?oc=5"
+            },
+            {
+              "title": "Nell Nolan: Olympians Ball, Caliphs of Cairo Ball - NOLA.com",
+              "source": "NOLA.com",
+              "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxQY0xHZ01jcTQ4dDFjaDNmZW5qQjlRcmJDemUxdnVULUhiLWlvbmp1V05vNkNGMEhlMkk3T2xFQ2kxV0MtTE0tbWduTGhxUnhSTzFfbl92WDc2clpIRG9jOTk3VlFsZTF1RWlWX0RTaGFCR2RCVmZWb0JiWUtkUWZoSmNIODZyYmNwSWNKWXAwUEg4cFctWm1PVDZXdkV5aG03ak5FcHZkZkpaZlNFT0VqVk9OY05xRzZPNFAtdTg3cF94OFpmTEpIVTVfNTIzdTdWd2Jv0gHYAUFVX3lxTE82SDJKOURNa3F6XzJnNXNwMlpLLWlTcFZSaTZRZjZVeER4eWpPTjFlYV9tZXV0Y1pqLXZ6U0tpendjaTlFZUJ3c0o1b1Z6bGw3b1pkQ200S2ZVbnM1WThTQVctcDVkcE5JTHFyVzBvQ3QyWjJIZkpSQzRua3hXekt4V3BGcnlud1I0cUJYd1pGNGhMZG9MWjVtR0JYeDdNNnhLNU1mSS1kc0hoSUhkbWNadDYwQnZEb2ZUS0RtMFNiM0hiNHRWZVJaRzdTVndlNlUyMnlGVVQ3OA?oc=5"
+            },
+            {
+              "title": "Turki Alalshikh meets Egypt\u2019s culture minister in Cairo - Saudi Gazette",
+              "source": "Saudi Gazette",
+              "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE81U080R2dUdmU0NmtwRDFHSlFRSkxoMDJRUDBBT3BpSkpxWks0ek1TZXhMNy1DeDdnZVpFV2tBTXlyVXVZNk9rU0N6V0NSRE9aMmVkVw?oc=5"
+            },
+            {
+              "title": "Karol G Takes Us on a Desert Joyride in the \"Cairo\" Music Video - Popsugar",
+              "source": "Popsugar",
+              "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5iT0xsaU9WRWpER2pzcjZWS1NnSGduX25LS0hWS1hSOHh6d0p0aHdmZ3VoaHZrNzdKWlE3LXU2em53VUM3UHpGa1NtcEhkVUx4bkV6V3JTVnFrMHFFUUc4eUt2NUFCeFZnc3U2cFA1SnZsNXpTY05XT0tzS21fdw?oc=5"
+            },
+            {
+              "title": "In Cairo, after Ramadan prayers comes night-time entertainment | Hassan Abdel Zaher | AW - The Arab Weekly",
+              "source": "The Arab Weekly",
+              "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPRG1JX1FnaGUtZExENTczcDc5ZkZUX2tTaG84WnRfUjRMd3pFMjlMNloydEUwUU1JSUtKOGdBek5MVXhuRGxFUWVOajV4dzVTdmNVWnlVVkhQQTYxMWUyY0d6Nk9acG9YaGZEb0pBM3gzNklscDlYNHI1Sm5UZmxObjJBMlY0b1dXdk8zTw?oc=5"
+            }
+          ],
+          "weather": "18.42\u00b0C, clear sky",
+          "currency": "1 USD = 53.531117 EGP",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Entertainment",
+          "city": "Cairo"
+        },
+        {
+          "topic": "Politics Cairo",
+          "location": "Cairo",
+          "article": "**Cairo Courts American Investment Amid Political Shifts with US**\n\nEgypt is actively seeking American investment despite shifting political dynamics, underscoring the resilience of Egypt-US relations. This effort highlights Cairo's intention to stabilize and enhance its economic position, demonstrating its strategic importance to the United States in the region. The ongoing dialogue includes a focus on fostering deeper economic collaboration, particularly as Egypt navigates its role amid regional tension.\n\nThis initiative is not routine; it reflects Cairo's adaptive strategy to leverage external economic partnerships while fortifying its geopolitical influence, particularly in the context of ongoing conflicts such as the US-Israel war and its mediation efforts related to Iran.",
+          "sources": [
+            {
+              "title": "Egypt-US ties defy political shifts as Cairo courts American investment - Dailynewsegypt",
+              "source": "Dailynewsegypt",
+              "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNR0pUd0NJZ1Y0djFSVUh5aWVJWGVSUElqV1lybUE2OWx4M0s3M2hud2dfSHREcktycVN1X2FKRU9kZUF5V250Rk1wV0NPSzZNelVYZ25MUzQ3YmRlMk96SHhZVDZ6RXJDbHk0b2QyM1AyV0dNUXliek5TZXVIZFJGZXdGcUtfazM1c2MtMnFhT3h0Vmd0NzZxR1Qzak8zeFQ5OEdSejB0YkZUR0x1WTJuYUdyRVI?oc=5"
+            },
+            {
+              "title": "Egypt, Peru hold 6th round of political consultations in Cairo - Egyptian Gazette",
+              "source": "Egyptian Gazette",
+              "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxOWkNiOVF4c3pzakJ2WDV5OC1NZV9yb0lnbFdZYTR4X3JBRUtQaGlYUHFreU9OeGcxOUZPclhvYVVFNjY0QlVTVFV6OHRQdkZYVVNSbkRnMGp0enJLUTRDaVJuME1nSW5YaS1HWTd5cnNseU96Q2tzMVlTbVl5OG84V2hHR0lQaXI1UXktbVZndF9ld0RsMW1xcXRlcW9Udw?oc=5"
+            },
+            {
+              "title": "How Cairo Keeps Democracy Out of Reach in Sudan - horn review",
+              "source": "horn review",
+              "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPa3Raam1YSDhIWmJWT1Jpc3Y0OHJNakNXMGdIRm1COWE2RnZJUmRGN3FGTDBMeEFYWHFsS2hRYnRJRVVjTG9YZk8yek45RlZGcHp2c3pmZXVWajE2QkllQjdVVmFRR05ZY0w4QV9kUDctakt2WC1SamRWbjVDRkNDbUZoMXQ5dFB1bnc?oc=5"
+            },
+            {
+              "title": "Cairo Enters High-Stakes Iran Mediation - \u0627\u0644\u062d\u0631\u0629",
+              "source": "\u0627\u0644\u062d\u0631\u0629",
+              "url": "https://news.google.com/rss/articles/CBMiQkFVX3lxTFBsbHNOWXBrTU1lS0VFM19GcjNLUHBnMUJhR3BaVXI2NHZ1cjZteGNHcW5NUVJfbDJSQ3F5dTJwUVJ4Zw?oc=5"
+            },
+            {
+              "title": "Egypt Offers a Mix of Messages About the U.S.-Israel War in Iran - Foundation for Defense of Democracies",
+              "source": "Foundation for Defense of Democracies",
+              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOSGhkLTJOOXNIcW9uYnB1ckFxZFdRNkItR193NlpwTXFEM0lUOVZnbnRBdWVyOUY5bW9aY1pQdi1hUHFFSGZyRGtrTzRKM2FqMmJLaTJQTkFYVHFHTGg4NXdBTGEzdlpYdDNraTcta1pvR0NYRUQ2a3JUdFZGT0tKY3hJaFhJSjdZWVE5WU1oNGo5bjF5bU5yaDJYb182QzZKZTFpLUxtRQ?oc=5"
+            }
+          ],
+          "weather": "18.42\u00b0C, clear sky",
+          "currency": "1 USD = 53.531117 EGP",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Politics",
+          "city": "Cairo"
+        },
+        {
+          "topic": "Science Cairo",
+          "location": "Cairo",
+          "article": "**Cairo University and Northwest University of China Explore Scientific Research Partnership**\n\nCairo University and Northwest University of China have initiated discussions regarding scientific research cooperation, following a recent meeting that underscores both institutions' commitment to advancing research efforts. This collaboration aims to strengthen academic ties and enhance research outcomes, potentially leading to joint publications and improved technological innovations. \n\nThis development is not routine; it signals an increasing emphasis on international collaboration in scientific research from Egyptian universities, potentially positioning Cairo University as a significant player in global research networks.",
+          "sources": [
+            {
+              "title": "Cairo University, Northwest University of China discuss Scientific Research Cooperation - Egypt Independent",
+              "source": "Egypt Independent",
+              "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPZ2twYnZDQ0RlUHV5eTRfcGswVzB5RHFHOV9KNWhDVWtQR1U0cWFDNHdYSTUydl9WMGU1bzFibmc0c2JJcDA3TTRiWURQWXp4WElpeEI2OWFfVzN1Zlpud05DNEoyUnVKZXAtQ0VqVlp1UGhxMmJTay1wSkhEb3hCNkVJWHM0R2poaG9NaHItbU5FVU1kRU1wSmxkcF84b21WVHo5cHBzM3VKLUdJeTU2bEN6bWtFWlZMS0J2Vw?oc=5"
+            },
+            {
+              "title": "Sustainability awareness assessment for university-level students in Cairo, Egypt - nature.com",
+              "source": "nature.com",
+              "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5rcDlBVHdNcGgtZXFGRnJic1gxbF9hUTZMTTdFMHU3dE43RUpYOUhrcTR6djRhb2lXREpDZnlpX2tRd3lBQ2E1WHMxOWUwQXhfXy1EWnNHMExPVG8zcGdZ?oc=5"
+            },
+            {
+              "title": "Cairo, Egypt - NASA Science (.gov)",
+              "source": "NASA Science (.gov)",
+              "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBXdTlQeXI1aEZHckQ2OWtacURhLXFjejRuWGVsNnp2MWRzclhCZHpBNi10RmluX3p5SlZVOGJVSHdNM1hZX2FUY3BrTERPcW1NOExBcFVfN1NEXzM5U3pNazFVQ3pBSjZ5NS1nMnF6aXpFc182?oc=5"
+            },
+            {
+              "title": "Cairo U. Issues Guide on Use of Artificial Intelligence in Scientific Research - Al-Fanar Media",
+              "source": "Al-Fanar Media",
+              "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOVEU0dm54N1RhWmpVWmVhSnR5bnNEUHVpWGNjdkxFaFhVY1BJNC15aUVyVWN0aTFHbHdRQ0xDY2hqdnhTSmk0SlI2bjk1OEhfVTBvTVJ2WDhzaF9nUFM3VnV1TGlvbHluSTI4dEh3b3Z6RTYxZHZsS3lEY0lEV1ptanNoaUZaTjVSX1BIdjBKb0tvVVpra0QxcDN5dk04Ymhpb2NFS2paNGNSa1lIX01PS0tB?oc=5"
+            },
+            {
+              "title": "Confluence of Ohio and Mississippi Rivers at Cairo, IL - NASA Science (.gov)",
+              "source": "NASA Science (.gov)",
+              "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNVUdBOEM1OWtNQXR6YlJmd3lJMGkybVg2ajJwVkxRbmQ2M1dhUWtramswU1dQMHkxbm02SVM2MkQ0eUx2MFhhaEV5azc3MTd1Y1JWd3AyS1VZQm1YMDdKWTJKYnlvMFk3MkFUMUVLRk5JeW9FUWsxaUREWVZrbEVIQmd6ZzVtSG5yVU92aHJ2UjVGREM5bU5YZzc0S2NLaWVoa21LMER1ZWpIUXha?oc=5"
+            }
+          ],
+          "weather": "18.42\u00b0C, clear sky",
+          "currency": "1 USD = 53.531117 EGP",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Science",
+          "city": "Cairo"
+        },
+        {
+          "topic": "AI Cairo",
+          "location": "Cairo",
+          "article": "**Egypt Launches $27 Billion AI-Powered \u2018Cognitive City\u2019 Near Cairo**\n\nEgypt has initiated the development of a $27 billion AI-powered 'Cognitive City' near Cairo, aimed at enhancing urban living through advanced technology and smarter infrastructure. This project includes the establishment of a logistics hub on the Cairo\u2013Suez Road, powered by AI, indicating a significant investment in urban transformation and logistical efficiency. \n\nThe scale and ambition of this initiative go beyond typical urban development, suggesting Egypt's intention to position itself as a leader in digital transformation in Africa. This could attract further foreign investment and promote regional competition in technology and infrastructure development.",
+          "sources": [
+            {
+              "title": "What to Know About Egypt\u2019s New AI\u2011Powered \u2018Cognitive City\u2019 Near Cairo - Newsweek",
+              "source": "Newsweek",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRXBvemt0RFBwc3cxUEI4X0NzS1pObmM0RDczcFg4b2ZZN2lzbDZRR1NGQjZTVDRyNFo4RzhBVm5nUG1jcDRkME13X240Wk05aEd3Ri1Bd2hQbXdNcXFOYTNzd0xEcXY1RDhHT2NoeEQxUFNLNkszczc5X05fVVgyNFg0TWJQcnNBdzRNLW9IM3Btb0s0NW1HMnB6QXgzMTdSbGc?oc=5"
+            },
+            {
+              "title": "Egypt Launches Massive AI-Powered Talabat Logistics Hub on Cairo\u2013Suez Road - TechAfrica News",
+              "source": "TechAfrica News",
+              "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNNzU0SEJfMjRDNXY4Q2tTTDljc2NsLWpQVUxNb3gxRkhvbHJwTjlVYWhsMklseHVhbFQxWldhZlNsN2FQc1VWMXhNWkFmMGdCdWVUa3lVTFVfX01EZkU1SmZBd0xqR1ZFbDNkYkdSTTRMWEpSMlhtS1RVNFZyQ0tBX0lVMVNZZUVxakc1MWRVX0pKZmp1bDlqaTRRV0x0MmpUa2tWNWItUDl5QmFvM08zYXZvTQ?oc=5"
+            },
+            {
+              "title": "Egypt Launches $27 Billion AI-Powered Cognitive City in New Cairo - Tech In Africa",
+              "source": "Tech In Africa",
+              "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPYzd1UXJQV3FpLXNBaG1KUVpvRHZtQml6MjVEbGpyS0wyVEFSM21RNDRONTVoZGJoS0cyaG5qXy1TUlBmNG84Tk5yR2FBSm5LaFRzZzNhY1dETC1KM3EtN2VGd0p5R3UtWFdxRFVMdWRlNTM5c2lNcWJ4ZTNmVHJLcXUzUlZPLVhlejZJQk1GTTNXN3FNX3RPNHR3?oc=5"
+            },
+            {
+              "title": "Inside 'The Spine,' Egypt\u2019s AI-powered \u2018cognitive city\u2019 near Cairo - Firstpost",
+              "source": "Firstpost",
+              "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOcGRhUjd2RDRLSzVHSUs0SXMxSWZLMVdHbUpLS1J1eExHNi1GeDNhcVhpNjJ5THgxU2FTWjc2VHZmM2ZZWVBjNlFuSFRHQ0ZCcjFpUHk1TGFPZXozekZOYWpHZmhsTVYxbGtEcldBOFJ5Z2FWTThxSkRaMlBxTWJZYUZCMnlLeW95cWh6aGU0ZXFUNzgxX0U0TTRZYzNlQnlVV3dRemVPS3VCMkc3dHZGQ9IBtgFBVV95cUxPNkRVTjZVNEhSb2Q3Q3UxVDk5M0tHcU9Sb1U5R2t3UGNodDhQakpmZGpFb3R3QXhjdk1XbFFKTXcwd0dzSDVEdFdzSTBBWXFUbDIxNWhyTWxBMElwbm92cnRoTzRQX3FIcXJWOVRTM2hfYm5ldFlHbVY0OGR5UEJfcV84RVctU0VPdko4YU1fTGJJbDF6N1I5LUpkVFgtaUNJcGZ0YkEtM0l0TkoxQzFneWVGXzNBdw?oc=5"
+            },
+            {
+              "title": "Huawei launches AI-focused network solutions in Cairo to support Egypt and Africa\u2019s digital transformation - Ahram Online",
+              "source": "Ahram Online",
+              "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRmZ3Rkk4VUtXMWhPNWJTcy1vWFNObjNkY3dkUGc5eGhlMHlnOHpTeUtzczJVeC0wMWVyaHpqVlNIU05yMUFDNVd5bTVVbUlKT3J2dWlBRUpYZFZzU3NYTzdXTEVUY2daQmlISDZDRVFFa3VqQ0I3bHBKU0NQcDVLNlRXM1dUY2R2b3pkUHlqZFZIV3NwakJFbUdoNE10OGYwdTE2eXJZS0ZmOElkQkpLMzBaSlVFUQ?oc=5"
+            }
+          ],
+          "weather": "18.42\u00b0C, clear sky",
+          "currency": "1 USD = 53.531117 EGP",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "AI",
+          "city": "Cairo"
+        }
+      ],
+      "World": [
+        {
+          "topic": "Technology",
+          "location": "New York",
+          "article": "**White House Plans A.I. Model Vetting Before Release**\n\nThe Biden administration is evaluating the implementation of a vetting process for artificial intelligence (A.I.) models prior to public release, driven by growing concerns over the potential risks associated with A.I. technologies. This initiative indicates a move towards increased oversight in the tech sector and reflects heightened scrutiny of A.I.'s implications for security and ethical use.  \n\nThis development signals a significant shift in federal policy, aiming to bolster regulatory frameworks around emerging technologies. It suggests the administration recognizes the urgent need to manage the fast pace of A.I. advancements amid ongoing national and global discussions on technology governance.",
+          "sources": [
+            {
+              "title": "White House Considers Vetting A.I. Models Before They Are Released - The New York Times",
+              "source": "The New York Times",
+              "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE95MUd1NzV6M0VweHpKbTM1YXdmemJQUnBKVEp6LU1kb3NLMEZnUEhQTWoxcmo0aDZLN3h6WF9iU3VlemdyT2RtVmlDd1o3M2Y5QjlDYUZ1dzgwWldBVWZtMDFzTHZiRDVDMmZYbXhYa3Zkekkx?oc=5"
+            },
+            {
+              "title": "Tech trouble for NY\u2019s state math tests: Some schools pause and reschedule exams - Chalkbeat",
+              "source": "Chalkbeat",
+              "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPVjJ4Qkp2SzFyMjhjRm92QjFkUG12YTBHUGg2bXRTc09ERXhJSjlKVjFJNzhfVURSaUd2blhBT2JHUExNQzd5MnhGYTdfb1RIS1ZaSXNsQmFoRkVPLTIzQ1B2cjVmc2tDSEwxbklraW1XcGZQYUpyOTBhOGFST2hPWXl4bWhLUndKWTRNQ2tFR2RIU2lrcU9maXJQUHR5d3N3TE11NUp5UnBOdw?oc=5"
+            },
+            {
+              "title": "'Is San Francisco okay?': A tech bro\u2019s viral visit to New York City has the internet dunking on Silicon Valley - Fast Company",
+              "source": "Fast Company",
+              "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOT1JUanlLMThpakZaekRKX20tNWdhZFVvN0Z5TGItZEFicE5mZU1zOEl1Vm00b0M5T3R0WkRGa3ZvUG80TGlPNUtIcWVZNy1QX2lRdWt0NmktZ2ZQOS1MNGhMS1NTREhYRHhTeUdfcjJuZVQ2eTFNMkVWcGtJMS1sZC0xOXphZEZIN0dyV21SNXpCaWFhS0txMTF6VmNXNTljVml0dmk4ZnZGZFpUcmFnM2hRNGxETFdrejJNRF9mekpzQQ?oc=5"
+            },
+            {
+              "title": "Behind the Trump Administration\u2019s Potential Rethink on A.I. - The New York Times",
+              "source": "The New York Times",
+              "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOTU1FaDVRcmFaOXh4NUlqN1pxa0JISnVVcjlkZ3htdUNEc3lYbEdrbWxSd3loVVZJSTJZMWlENm5GVTRNb1BsRmNtb3RMcnY3NzQtWlNVWlVvUGV0QnN4M2xSaWptc3NoZ2xxbXVHb1NZanBrZlZNbjNsdnJVZmVWV0w3aw?oc=5"
+            },
+            {
+              "title": "Using Technology for Good - New York Institute of Technology",
+              "source": "New York Institute of Technology",
+              "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTFAxUUVqOVE1NFFYX1Z3WlBtb3I0Q0tLb1o2bzRVcmxMQTJ1LWlfd3NmVlJVeXI5Q2JBb09wUWFPbVhKTG5lYzVQUFpsUjB2UXdES0VyUHBaa0xSNFEwSnhLeHRTQjRseUc0N181WkVn?oc=5"
+            }
+          ],
+          "weather": "28.2\u00b0C, clear sky",
+          "currency": "1 USD = 1 USD",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Technology",
+          "city": "World"
+        },
+        {
+          "topic": "Business",
+          "location": "New York",
+          "article": "**James Murdoch in Discussions to Acquire New York Magazine and Vox Podcast Division**\n\nJames Murdoch's investment firm is reportedly in talks to acquire Vox Media's New York Magazine and its podcast division, indicating a strategic move to bolster his media portfolio. This potential acquisition reflects ongoing consolidation within the media landscape and could enable Murdoch to leverage New York Magazine's established brand and audience. \n\nThis development is not routine; it signals a significant shift in media ownership dynamics and represents Murdoch's re-entry into high-profile media assets, highlighting potential changes in editorial direction and market competition.",
+          "sources": [
+            {
+              "title": "Will New York Magazine Be Once Again Owned By a Murdoch? - The Hollywood Reporter",
+              "source": "The Hollywood Reporter",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQcTJUcVVsVC11enZfVGFhSFRYZ19xdUt6RDZMa3dhSFU0Y1FBV0g0TmR1S25BM2Y2WFkteDZTQnNVRnREZm5rdDhuLXFVNWUzTEdtamZNVS1kbHRBdHY2SW96X3JteU9zM1BvZ2haVUp3X21vNmRrRk9rcGdEdW55bjNfVktVckRkMXJnRW5ueTVuTWozV3RBemZhYVExNHV6Wnc?oc=5"
+            },
+            {
+              "title": "James Murdoch\u2019s Company Said to Be in Talks to Acquire Major Parts of Vox Media - The New York Times",
+              "source": "The New York Times",
+              "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQZUJpWWFEYmN5cjltUFpINEZlVmY2NS1wNDlkUGhXam1jMFdaV0FkQnBUZXhvNm5GcU9lVWNrWlVJbGRhSlBIcFZJVDlTeFBSb1hocEVTVXV5elBRYlYyN0swa1cta185bjl5YVFhNmgxcXoxRzdLVmNCeVBqdGNwRGZreVc?oc=5"
+            },
+            {
+              "title": "James Murdoch in Talks to Buy Vox\u2019s New York Magazine and Podcast Division - WSJ",
+              "source": "WSJ",
+              "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOYjlCWHNtdnp1MFVqelM5ZWxFd1dMM0t4OVFuTjkwVGo3Smt5YWxOTDRKWkVrV2xYTENacHVWSDBmcEE2dEhwNGtjVnVHbzBnZGJFaldyRHByRWgxYWJ6SDNRNk1FbXozWlBzeE5yX1NNdGx6SFdGcGY0VzdaczZrS3JOWW9TNlpQVkZEQ004WkU5M1c2VTJ4NXB6OVRfV01UNk00eEVILVFOS3E2UGNzUEZiSHNCcm52?oc=5"
+            },
+            {
+              "title": "New York Life Investment Management Names Lisa Hornby as Head of Public Fixed Income - Rutland Herald",
+              "source": "Rutland Herald",
+              "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxPdVRYNEZmZ2M1X2hnUzB0bm1yUlhIcWFfNnUxX2doSHhLd2JmZ2J4SFg2cUV5b2oya1EtWk93RUh1WG5hVEExV0I3aDJvR1YzYktwdFlpNzZFN0s1M183SDd3UDdvMXQ1N0pZYzRGdkNKVHgtOVpzeUhXbktTa21Na0JvczJLeDFMeGlfLV9QMjRSSHR6V0d4cUtlNHpmZURYQlhGbW14bGl6V25BdjFlRmtEaGwzc2JFZ1E0cEhqMVVzN21xNEV4ZzlJQmJjczQ1SldiZUpBb1o1N0xDOEpYaFEtc1RVLTd5RHlWVlY2SDl6WldaaURwcjBmampudGRsek9paDVWTE9oQQ?oc=5"
+            },
+            {
+              "title": "Hochul talks Ken Griffin, redistricting and more at housing announcement - Crain's New York Business",
+              "source": "Crain's New York Business",
+              "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQajhOcGFTa3hyWl9EOHJKRTNQVXNnUURscFJERHdXOEdleDZwV3FMN2xRZ2pkMUVHU0w4ckhPNHpUa0QxVF9EcTVzZ19TSm9UVW1ZUlhKMWdfbjVIbEZ0S1Y0OFF1NDFsd1dueXVLeFN1V1NGa2tHSVlGRllZRndneENBU3pzT0tzX3Q5OGFYWUlLT1daSjBVTWptTVpCQ1U?oc=5"
+            }
+          ],
+          "weather": "28.2\u00b0C, clear sky",
+          "currency": "1 USD = 1 USD",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Business",
+          "city": "World"
+        },
+        {
+          "topic": "Sports",
+          "location": "New York",
+          "article": "**Texas Rangers Face New York Yankees in Key Matchup Tonight**\n\nThe Texas Rangers will take on the New York Yankees tonight, with the game scheduled to begin at 7:05 PM EST. This matchup is critical as both teams are competing for playoff positioning in the American League, affecting their chances for postseason success. \n\nWhile games like these are routine during the MLB season, the intense rivalry and current standings underscore the significance of tonight's game, with both teams eager to secure a win. This event reflects ongoing dynamics in the league and could impact the teams' strategies moving forward.",
+          "sources": [
+            {
+              "title": "Where to watch Texas Rangers vs. New York Yankees: Live stream, start time, TV channel, odds for Tuesday, May 5 - Yahoo Sports",
+              "source": "Yahoo Sports",
+              "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNZWVZSFZaNWkwSzY4bmswQXpnQk9saDRDUzhmeUpyZTBfZDJ4VURpSjFRTmFfNUM1MWhkQ0tQbTVWb3RRNTJZQ1hTd3VJVzB2eko3S00tT0lfWmV5ZC1vbzNQSFFqNGhwRGpTN29jSWlYS09PVWgwQ3AxVDR2S2FVSklRXy1qaVkwMEFkNi1qMFZVSTBielB6cGFzaXlLeXFOekE3MVkxakw5Rk1JQ0k4djk4bjk1VkFnRUdLVjBaNXJzemtGaTRGdDJpLS1RU0FaWFpBQUg2TmZEbkNPWE5yQ1JoQUVLanYtYmw3ZVBB?oc=5"
+            },
+            {
+              "title": "How to watch the Yankees game tonight: MLB free live stream - NewYorkUpstate.com",
+              "source": "NewYorkUpstate.com",
+              "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPMm9VcWNsaTlfNXRhU09YZHFtWHRySXgzVC0yQzR0QmZielZET2ZPb1pxb1FuMVpycjBEeUdIWmk3djVFcEk1eWh1YlZWOHNwVDNZV0M3cm1ISkJPOG5uazM1d2NObi1VSVN3NUVTel84RUJ0NGM4cGNic3NUUGp5c3luRnp1VFlDUUtNZWE0dnpsR1B5cUpvMTlLRllwSVhkM3pVZE9vWVljak9hTEHSAcIBQVVfeXFMUHo4VlMzeW9UdG1qVFk3WDV1T3hRMW1Lck1NRnNLUjlfMEFMbU9jX3RPMm9RWWwyWEJUN0VjMWloSDlndWg2Wm9pMHR1dnNHajVDNG9MaFlyUFgzM3ROSnJjWXZzY2tkVUJUaU5oTUlwalh4ZTRuTHBZLVZINzAzZ1phS3dWOFB2ZXk3US1Hb3NEUGxJenh4akx4Q1VqREt4V2l3TmJ6ckNtWEhteUkxZUxrdUNmRVRYTjd2a2Qzel8yOXc?oc=5"
+            },
+            {
+              "title": "Jets Celebrate as Girls Flag Football Becomes a Sanctioned Sport in New Jersey - New York Jets",
+              "source": "New York Jets",
+              "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPQm5HRXlHZGljX1hOcUoxYkdpSTNNZkczcEV1STdRU2s0eDhXTm5UQ3VHSkJJT2dNcG4zRFc2REE4dzBsYUZ0cnJaVHoxMzRpSGhQUWVrSGZldlNYQmZfR3NtVFNvV0FCaGhCX1ZYSHQ5S0FsbFc1RmxxV2paSS16dGZLWEhSMFl5dmtkc19HZ0xIMk5DdnJldE0tTTJwWloxRUtKQ3NENUdZM21ZVVdNeGpqZUo?oc=5"
+            },
+            {
+              "title": "Where to watch New York Mets vs Colorado Rockies: TV channel, start time, streaming for May 5 - MSN",
+              "source": "MSN",
+              "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxQNE5HUVBmbjZ6N1c2UGVEbDRabkVzcFNMbHlTQVRZeG5kdnR5N3RYQ04tZy1vUUxIMGxBVUc1YndyMGxaaFFRby1JZDBqY2Vpc0w2N1NCd1ZUOFd6OGJDNGJFWUFZaDBMblBPaFpldWhvdVMwcGIwaVlCT0Z2QnY2enpaUlF4eUZNSlB2dkxzWDFvc2tZN1NVRzFsdEJZMzd2MDRPRkd3a1Nma2RVR2RyRGwzWF84WWo5bXgxLXdFdElTZDEwdWxtYXBoeGRJbUdaSV9sOHZ3?oc=5"
+            },
+            {
+              "title": "New York's shooting clinic: Knicks blow out Sixers 137-98 - KITV",
+              "source": "KITV",
+              "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPR290UUt1SmNseXg3WVgzbVZHVHJvdlo1YTFDTVBGak9UZ3BWenJYQ3U3WFZTWXI3MmZTMFFvVks1S3FfVzZjb3AzZEl5UW5rOENySlNWd3duaGhEa1RZbWltOGp4ZVlia3J4eWlMSUJ5ZjlwM0oyVUdEbEpWRG15cnRka3YtVGRGMzFJaFBLNTB4MjdHbXYxWEhEa01ya3JXcEItVnVyNHpQSzZ5Wjc1SVRBck9HeDNEXzlLWHdlWmUtb2pfZHpVTWhpNDNUbFZoTjZJ?oc=5"
+            }
+          ],
+          "weather": "28.2\u00b0C, clear sky",
+          "currency": "1 USD = 1 USD",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Sports",
+          "city": "World"
+        },
+        {
+          "topic": "Health",
+          "location": "New York",
+          "article": "**New York Road Runners Host Mindful 5K to Raise Mental Health Awareness**\n\nThe New York Road Runners held a Mindful 5K, aimed at increasing awareness of mental health issues. This event not only promotes physical wellness but highlights the importance of mental health within the community, underscoring a growing recognition of mental health challenges in urban settings. \n\nThis initiative reflects a broader movement toward integrating mental health advocacy into public events, indicating a potential shift in public health priorities in New York City. Such awareness campaigns are integral as the city grapples with increased mental health needs post-pandemic.",
+          "sources": [
+            {
+              "title": "New York Road Runners Mindful 5K raises awareness of mental health issues - ABC7 New York",
+              "source": "ABC7 New York",
+              "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSDc4Mk81VXdGMVN1T01BN2FyVk56cUlSdjdwZWY3R0FmY2VvWEhxV2swekwzLXlMQ0JvLS1za2VXX3Vaa3VRX0FmQUw1bGR3d2o2azlFcnFpQm9uUXpJR0hjcnhkcC1OZTdIa19kOWhKbWdoMnQ5NEkxVTNndEE5ZkhEVW1Id3FzMTN1WDhacTRxcDFMdmVYNVYwalFtU1R6MmllWGlwWdIBrAFBVV95cUxQX0syUS12UzdDeGNRd0U3RG1VWkVrVEo5M3pTYTVmNFVrZ3hLc3R3cWdVWTNaNjFaMURqXy04Z1lPcDlXZXJ5d2VSaUJSZVI5MG5rZDNsUU9palhmcGluNEoyRVFLY2kxOG50XzRzeFgtR0hTb2hlUGpRV0VJbnFVclFtZU9rUk9qYU5ESXhsSUZUeDEtcU9lNERNZEliSE0tdkl0VzJ3eEw5MHNF?oc=5"
+            },
+            {
+              "title": "City providers resume mailing abortion pill after Supreme Court halts restriction - Crain's New York Business",
+              "source": "Crain's New York Business",
+              "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQaGxQU0xpYmNXOE44TXNJOUlIa0JyeUo2M0xpd2lWcjRibGs5MGNrcjdrNF9DRzEyYldURUxlczIzM2lVajFvRjc2RkpseVF6eFlBdkJ5VUI3RE1maGVIanc5YnZZOERvMUdwc0tpZ0k3QVpiODhzUTlUclhod3pBUEtCaXdMLVdoQndlaA?oc=5"
+            },
+            {
+              "title": "Buzzkill: NYC Health Department Launches Campaign To Reduce New Yorkers\u2019 Risk of Alcohol-Related Cancers - NYC.gov",
+              "source": "NYC.gov",
+              "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObUZ6MUtDQ09iVDh6bjlyLUhDbmpsN21SS3JnOVBvNXp4cGRLaXQ5cVBEaDlEUHRWb3h3LVRhNzlTbnhpelI4RzVRWWhOd3hlajlTTUJYaEZncHBaZm9xczhIY2FZSXVoOWlHcUZKYmxNMzYzeTV2N3ZkcEp3UGxRZUdackJyaWFsQVFOMXR6eXp2QlJkTVg5TVBJWnFVYk9QN2t5MEJLVmJNQQ?oc=5"
+            },
+            {
+              "title": "Rudy Giuliani health update: Former NYC mayor recovering from pneumonia - FOX 5 New York",
+              "source": "FOX 5 New York",
+              "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcUM3WHJrYVMzQ1ZUaHFSckNCTUd1UG56aG52QmJISTFCT1FKaldXRTNnQ25ETzVHb1ZMaU04OWRhQTh3bGpDcU1XSmI5elNCa05VNm9KSjNRNU5oalAzMkFZSW5tWVFtV0M5SWJEMk1UcmU2aXE5WW1lRVViM1RibXV4aU1nTEt5cklvdnFJREs5cFhzVTlrWEZDSlNOQ2vSAaQBQVVfeXFMUFNibXlHdXpnSlE3TGdYZ0o0cGw0aTJBaFVjeWNOZ0h4TGJCU2pSR25taFBDUDR1QUpaaFlVMGN3R1ZRNHZEbFBnNks5b190SjQxeHhjTnFkR0NPVEFmZkVvQlNfS3loZnpnNW1rU2Rlb1RydUpLWFMyUG9tbnZ3Y0lmS0xHQTVCSFlNdnhObW96Mll6a0lIVmdvLU1za1NGMzRuTUk?oc=5"
+            },
+            {
+              "title": "NYC hospitals gearing up for nightmarish World Cup diseases as fans descend on metro - New York Post",
+              "source": "New York Post",
+              "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOS1ktR3AwRmg5MjBhdUpkUWVTeFdIdmtNSFhrNTAyTkhjWU5qdXFNNGtfZ05PcVVrTld5YVpRTXkwQ1RndVIzaE55RmJncmlubmptdmpXUHR2emJvYVA4bXRPVnBWTUZJUlpRejNUeFZDYlhUc0tjWDRxV2l5UUM1R3l4RzEtWklHMzZ5ekQ5Rl9SMndjX05TclQ4ck9wX2xpa1R1MnlIdWFsYVA4eWNNY3JubEVhbl9Bcm9z?oc=5"
+            }
+          ],
+          "weather": "28.2\u00b0C, clear sky",
+          "currency": "1 USD = 1 USD",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Health",
+          "city": "World"
+        },
+        {
+          "topic": "Entertainment",
+          "location": "New York",
+          "article": "**A.I. Revolutionizes China\u2019s Entertainment Sector, Influences Global Trends**\n\nChina's entertainment industry is increasingly integrating artificial intelligence, with notable advancements in content creation, audience engagement, and real-time analytics, as reported by The New York Times. This transformation highlights the competitive advantage AI offers to domestic companies and positions them as potential leaders in global entertainment innovation. \n\nThis development is significant as it reflects not just technological progress, but also China's ambition to shape cultural narratives and influence global entertainment standards. The emphasis on AI suggests a broader shift towards high-tech solutions that could impact production and distribution practices worldwide, hinting at a potential reconfiguration of the international entertainment landscape.",
+          "sources": [
+            {
+              "title": "How A.I. Is Transforming China\u2019s Entertainment Industry - The New York Times",
+              "source": "The New York Times",
+              "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNM2FKeHZCT01ROWJ1aVNMemctSFg5VkE0Z2R2V1Jwa3FzSS00UktvQ2pscEtLZno1N0R1NUdYbTVOSjk0OE5hWjNsUVYxQUhZMkxVX2pwVjJnX0tZSnZiS21UYlczNVZWejBCSEhobDVyYWxYeGtpWkdmaDJkcXl1bHg4Vi1nQQ?oc=5"
+            },
+            {
+              "title": "Spotlighting the standout looks from this year's Met Gala - NBC New York",
+              "source": "NBC New York",
+              "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQTzU0ZWRWRHRuLUxrRDJUOHoybG85cm5TX245cnlFSW9JaFVyTGVWSUx4eE1YenpYN0NyX1pNWWxkeUhqRUFEaUFGQVRwRTFqcU92OS1MalJnWGpwbzVZSS1VQUFta3I4R0xaWC01cmtsNEM2VEIzOTVWQ2NubEtlT3RmTFpnUXhpaGhyd2kxSWRnTnk2am5QT2lGR3ViVG5iRXh6UFo4Sk5zdjlMNVdMaG5pallEYlFuN0lqczZReEdUel9nSHdjY0RSM0pLRkw4QmfSAdoBQVVfeXFMTmpUUl9jS3V6Ym55RjhNcFdaLURmd05sell3aWNjd3NTUVRvZ21tNnh3UThzSnIyallRRk81MjR0RWJrdGtRakZJLXJhd1NfV2Z2X2xWVlp1dnRsdlZ4cDR4NktxdWRKX21VOGxlRlQtUGdyUmZvT3NzSDZ3QTI4ZnR1TkhWYjlFY2lrUmJpSnFPd1BxRi1aajl5a3dTdG02a2ZwYmpBcDlUZjhSZnhRbEM3TW9POXFtaWRJV3RwajNJRWN0cEM4clNjRzdLeVFTZWQ4T0ZIdW9sMEE?oc=5"
+            },
+            {
+              "title": "Visit Filming Sights From Both \u2018Devil Wears Prada\u2019 Movies With This New NYC Tour - TravelPulse",
+              "source": "TravelPulse",
+              "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOQTZTSUkxRXVMYmdMWHJ6NHNIbTNvNTl4QzBOVDJrYlNLNC0zOU9IekNHUW9NakVDZEF1eTFfTDRiUVhsM1k3MG1TZTI3SVZUczNBU3cwUFNsb0JQZlhFdi1hdEdLSDZlNF9BcmNseUN3Y1B4aS0yUnpINmJUWVB4S2N3bGRMZFRXNHM1bHJ6RlpWVDZXQkdMR1VjaHlZWXE3T1pWVVJ6TUNNMkNFb0JRREI4d3ZxMmZBOFNYNnQ4YldlWUE?oc=5"
+            },
+            {
+              "title": "Things to do this weekend in NYC, May 1-3: pop-ups, Free Comic Book Day, live music and more - amNewYork",
+              "source": "amNewYork",
+              "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPSUs5TW1qVEZ1OWRpaFFBQThySUFBQWN1bmJGODJWeGU1dmViT2pSNWZ3VDNWX3dnakI4WVVRYzZpYkhZSUMxU1BZc0VQWi1GY05aalJ1TUJOQnlESUN4NzEtaUlicE5lVlZ5dGZWU0dvLXJzNUNwd2dEWExPdTUwVGhGU21GYURUZzZfNEtNN2tVQQ?oc=5"
+            },
+            {
+              "title": "New York State Canal System Opens May 15 for Navigation Season - WKTV",
+              "source": "WKTV",
+              "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPeU1yQ1NxZ2dsdThROERkZlJ4THVwQV9NNThlTUdxenRMS1hSeU9LTUd0QmRJSW9pNW9OZHVtUU1IeC15WHBJVHlyXzhLRDBjeUoyaWE1b2FLU1BpR3lKREtKdk5ac1RGWUMtN2dCdy1qRzVfQ3owYjFrZGl6c0ZfQjM4WFNPSS1FajczUG4xWF9qaGZPSDVRRlVfalpYN09EUTgwTmxpSWxORnZKWVZHcmsydnZmM09JSVBYcG5RamRXelprazNVakRmd25idUoxam5KeTZuejNsR045ckhSNC1ubjlQVmc?oc=5"
+            }
+          ],
+          "weather": "28.2\u00b0C, clear sky",
+          "currency": "1 USD = 1 USD",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Entertainment",
+          "city": "World"
+        },
+        {
+          "topic": "Politics",
+          "location": "New York",
+          "article": "**Rudy Giuliani in Critical Condition with Pneumonia**\n\nFormer New York Mayor Rudy Giuliani is currently hospitalized in critical condition due to pneumonia, as confirmed by his spokesperson. This serious health issue follows his involvement in various high-profile political and legal matters, potentially impacting ongoing discussions surrounding his legal challenges and public persona. \n\nThe situation is significant, as Giuliani has been a pivotal figure in American politics, particularly relating to the Trump administration, and his health could alter public and media narratives surrounding his legal controversies and the Republican Party dynamics in New York.",
+          "sources": [
+            {
+              "title": "Former New York Mayor Rudy Giuliani in critical condition with pneumonia, spokesperson says - CNN",
+              "source": "CNN",
+              "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1nMy1OSGpwWU5yeHZqRVhnU2tOQjRKdG56cEdKWlZOSDA4dlowUDRTWlBVRExvYTVKanNSVXMtV2FGVGUzMlJMZk5FMHVmak1vUkl3bFhkdElaNTZlcFhVUXMwMnFteGFJRWtiRmkyR2hTOUdNZVFjMENn?oc=5"
+            },
+            {
+              "title": "Ex-NYC Mayor Rudy Giuliani in hospital, condition 'critical' - dw.com",
+              "source": "dw.com",
+              "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOOHB3ZWV2RVY0UHdWWVJXNS1RSXlfbUE1TzNPaXZjWUcteVhiYmxMT01XbDFTV1NhbEtXcUxnSWc2R19QdGhoYlVoNVVpTV9Oeng5dFJqcy0xSTBiU3UzU3lhTWduMTl0MHdzSUtvdC1vZ3dvbnVZZGREeERxN3lzQ0NtQUhuNHlGMEJrWXhiOHJmZG8x0gGUAUFVX3lxTE1fUVhWZi1ZRUpFcUg4RlVZUjIyNTNqWTBacWE4NkxwX1ppUnBELW1pdTFJSTBSUkxzbERINkt1WGJNeHBRcTF2Tk80aVl1MWJ0ZXM5Y2k5bXhCQmtyZ3RfV2REOXRnOTM5T3RVeDZPb3BEUWlGbjNoMVIzazhiZE1WN21lelBNazdxSWZGdGRNOUJEdWo?oc=5"
+            },
+            {
+              "title": "Rudy Giuliani hospitalized in critical condition, his spokesman says - Spectrum News NY1",
+              "source": "Spectrum News NY1",
+              "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPcGZjOUxNZktPNUhyUzBYUTVOUmhJbktXYS1pMkU3b0VQaHdPclo4V3dDNTE0Z0txN1RaYXFsVlRrWkhJSTlXdDlhb2YxZUY1ZDFVd0N5Z1dWQk9ISzN0aXN5NGxhVmpKT0FTNmNteXl6SFhzbEY0YlVLSnZLTE5wSnBFS2Vidw?oc=5"
+            },
+            {
+              "title": "Former New York mayor Rudy Giuliani in critical condition with pneumonia - The Times",
+              "source": "The Times",
+              "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxObzlVZFNWZHVJb2JOTzVHUllIMXBTWGtTYnVJVEVybFRCN2h2akkwaXBXNlZwR0l3TzVHYmhuSUFNZkRPcXd1TkwtVWJyc2xfM0F3QkRneEpYcWF4ckM5Umd2MlM3bVNFT1p4SGl3Zmw4SlV5SWZBTlJkR2FBRnVEU2hBU1hYYkJ4YjJFbW9iaUVtVWNJdjJ1dkJMLXJnUWt0RGl0UW4zWWU0SU1BTWdN?oc=5"
+            },
+            {
+              "title": "Jeffries launches New York gerrymander push after redistricting clash with DeSantis - Fox News",
+              "source": "Fox News",
+              "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTWg1STlHb0Z2V2U2cF9ZMkhMbVBvbWRab1dWU0pfd0JFMWpQbUR6TEVINmZfdV9JbmU0aXhsUUQ4T19sbDN2WDM4SlY2SWk0MjhXcnNmMlRGUUNUS3FqTlJ5NERwNEw1TURpblhIWU1ZNjA0dVR6aDlIcDdZd2NMNzduQnpPX0dyTWpHUlJKUTFydUV1YnZDek5KNDFZdDhKTEFiMnJCWW0?oc=5"
+            }
+          ],
+          "weather": "28.2\u00b0C, clear sky",
+          "currency": "1 USD = 1 USD",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Politics",
+          "city": "World"
+        },
+        {
+          "topic": "Science",
+          "location": "New York",
+          "article": "**New Deputy Editor Appointed at The New York Times Science Section**\n\nThe New York Times Company has announced the appointment of a new Deputy Editor in its Science section. This leadership change signifies a potential shift in editorial direction or priorities within one of the leading science journalism platforms, emphasizing the importance of robust reporting in an era increasingly defined by scientific discourse.\n\nThe appointment is noteworthy as it could affect the framing of scientific issues covered by The New York Times, particularly amid ongoing debates about science policy and public health. This move suggests the organization is re-evaluating its editorial strategy to better engage with contemporary scientific challenges.",
+          "sources": [
+            {
+              "title": "New Deputy Editor in Science - The New York Times Company",
+              "source": "The New York Times Company",
+              "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5meU9FcnRsRW0tTXZwUXJDTTBydkxHQkNySzhSeVF2SWRKbHlSM19YX2gzU0JLT0J4bE1hUVFhMl9zZVhSQU1fb1RJNnFXdE9aNHpTc0hkLXdYbkJ4eHh4eWt1a2Z6SE5U?oc=5"
+            },
+            {
+              "title": "Social Sciences in the News: History Professor Trevor Jackson in The New York Times - University of California, Berkeley",
+              "source": "University of California, Berkeley",
+              "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNbGdTbFc0YU5oWVExRHd4VTc1QW1qUm5uMVYzU18zcW4tMVFOYXJRVmVVTDRvdjlLamI3QWNUbWpvcS1qaERIYU00SDkzRmNBMDcxQlF0QThzWkd1MVNtTWd5NXYxZWZSZ2tJV2ZLQlpsYjd3Y0w5SjllOXZFb05jMVNkMkN5T2dickZ6bnZWRDJpNGczNUstb280VEhadw?oc=5"
+            },
+            {
+              "title": "The Hill : New York\u2019s race-based STEM programs face constitutional challenges - Pacific Legal Foundation",
+              "source": "Pacific Legal Foundation",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPcTY1LXZZRG96MlE4dzZadThLdW9fVjlpVWVUb00xdWJ2R0RGOXliSlliZFlja1RCd3ZudGhadFV1b2ZGUTdiWDNfd3JBSEZ5V0xUUWNZWDNiTldqYVFaNlhSaVAyN3o3VkltbkdaWnN2NUxHZFNzZXE4WnA1emlpcVd1QmtrcS1heEtNQ0MtcWQ5bTlpRm5ra3ZvNnBtdkFwRkE?oc=5"
+            },
+            {
+              "title": "Business Executive Maria Gotsch named \u201cVisionary\u201d Awardee - The New York Academy of Sciences",
+              "source": "The New York Academy of Sciences",
+              "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQLTNHanhFcTQ4Y0NETk94V2NxNUVBODBYYUJOaEs0WEdjOThNWjJUWlV0d3diWDFpMGlackNsX0hDX3ludkJkMVAtazBLZ2tuZjFCcGI2MHUtWEVnT2VsbFFTSlpSM1pWOXdWWG9UdW93cXNoYlp5UUgxU2piRlJrRGtmQUJZcVhubGRZZVJjZFg5YVBTTV9IempXbFg0QQ?oc=5"
+            },
+            {
+              "title": "How the Trump Administration Ended Independent Science at the E.P.A. - The New York Times",
+              "source": "The New York Times",
+              "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE1rRXhaUXk0OWtZUnBWZzJHSG1YWVdGOVh5RTVLR0ZiY0FoOU43SmdsYWZQRHMyUU9URFhDYjQzVnJ5dXhnMmwtMno2dUluRi1aVFlTSU13eHp1Yk5JNThhekY4V3dqT2x0NEZJTE1OaGVvQzdsNmxKVUN3?oc=5"
+            }
+          ],
+          "weather": "28.2\u00b0C, clear sky",
+          "currency": "1 USD = 1 USD",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "Science",
+          "city": "World"
+        },
+        {
+          "topic": "AI",
+          "location": "New York",
+          "article": "**AI's Impact on China's Entertainment Industry Intensifies**\n\nChina's entertainment sector is increasingly leveraging AI technologies, with significant advancements in content creation and distribution. This transformation is reshaping consumer experiences and contributing to a booming market; AI-generated films and music are gaining traction among audiences, enhancing China's competitive edge in global entertainment. As AI tools enable faster and more personalized productions, they pose both opportunities and challenges for traditional creators.\n\nThis development indicates a broader trend in the use of AI across major industries, potentially positioning China as a leader in AI-driven entertainment. The implications for intellectual property, privacy, and creative jobs should be closely monitored.",
+          "sources": [
+            {
+              "title": "How A.I. Is Transforming China\u2019s Entertainment Industry - The New York Times",
+              "source": "The New York Times",
+              "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNM2FKeHZCT01ROWJ1aVNMemctSFg5VkE0Z2R2V1Jwa3FzSS00UktvQ2pscEtLZno1N0R1NUdYbTVOSjk0OE5hWjNsUVYxQUhZMkxVX2pwVjJnX0tZSnZiS21UYlczNVZWejBCSEhobDVyYWxYeGtpWkdmaDJkcXl1bHg4Vi1nQQ?oc=5"
+            },
+            {
+              "title": "Anthropic deepens finance push with 10 new AI agents for banks, insurers - KFGO",
+              "source": "KFGO",
+              "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZUhleHZjVU1hZko4OW5MTkRwVU5ZRWV5Ym5rRXdBY3QxLU84V3d1eEFIX2RTeWFrNjR5Zkxsa2ZCYXI1MVkwSHJSbGNIaHBSX0N6em5SUGJSUU9WUG1xa251a3AwYXh5akd1ZG5SNzJVM1otQTMwTllHQVozZmR0eUlmMDZmczFCYkUyVFZHSXotbHIyalZaNk5pY1FDaVZKQlE?oc=5"
+            },
+            {
+              "title": "Opinion | I\u2019m a Doctor. Here\u2019s What A.I. Cannot Do. - The New York Times",
+              "source": "The New York Times",
+              "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTFB3Z0RwdDdXZGxiNGR5SFNFWUVXbi1ndFZ1ZjFTMVB4VUY3SERPV1hRelNHbFgtZ0dtdFVxVGN4NnU1SHhrLTRnMVRpYkdVQUdCNFh5TC14bVpaaUEtUHFMaU9FcmxkNWdN?oc=5"
+            },
+            {
+              "title": "AI State Regulatory Frontiers: Inside the New Wave of State AI Laws - Regulatory Oversight",
+              "source": "Regulatory Oversight",
+              "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNMkRhZ2VzQ0hpNDVhV3dyVm13aURuV3VNT29TMFJzeHdoTEFRTXhvcjNLR1RaN2RKdTJMRHU5YkFoNlBkUjBsU2RieFVfTFV0M2hTWHAxbUpKSGNiMS1YM3hqREdaMVpvdXhiUjg3S0VNZDUzM3dZbU1vNVExbGNaejJFNjRTYzgxUWNqb1NTZUJ4Mi0yTkdxMU1kWnN1eWZSZDZYbllLV2VUTHhTMDlZTA?oc=5"
+            },
+            {
+              "title": "Anthropic deepens finance push as CEO Amodei warns of software disruption - Reuters",
+              "source": "Reuters",
+              "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOYnNUSm00b1o1NmpMVTNvTHgzdnZOYjZFRnh3MjdiaFo5WU5uMDBUZVczc2t2elFoSzBvTV8ydVp5eldIMGlxRE9fbXlRVjFEVGpaWkktZEo2MkRzTGVla0M3UklmbGVPLTVicUtUWU5hRlktUzFER2R0dkdOYWkxdmtkMHBQOWZFbTh2aUxsbGNtVURfbFdIclpoTmRNdWtEQUx6WkFkcHBsT3YtSVVVUEc5ZW9BZVpuNlZxbg?oc=5"
+            }
+          ],
+          "weather": "28.2\u00b0C, clear sky",
+          "currency": "1 USD = 1 USD",
+          "media": {
+            "error": "PEXELS_KEY not set in environment"
+          },
+          "category": "AI",
+          "city": "World"
+        }
+      ]
+    }
+  },
+  "weather": {
+    "generated_at": "2026-05-05T19:59:16.010720+00:00",
+    "cities": [
+      {
+        "city": "Singapore",
+        "country": "SG",
+        "temp": 25.1,
+        "feels_like": 26.3,
+        "description": "broken clouds",
+        "wind_speed": 0.51,
+        "humidity": 98,
+        "icon": "04n",
+        "flags": [
+          "very humid"
+        ]
+      },
+      {
+        "city": "Reykjavik",
+        "country": "IS",
+        "temp": 3.8,
+        "feels_like": -0.2,
+        "description": "few clouds",
+        "wind_speed": 5.14,
+        "humidity": 45,
+        "icon": "02d",
+        "flags": []
+      },
+      {
+        "city": "Dubai",
+        "country": "AE",
+        "temp": 31.0,
+        "feels_like": 33.6,
+        "description": "clear sky",
+        "wind_speed": 3.09,
+        "humidity": 55,
+        "icon": "01n",
+        "flags": []
+      },
+      {
+        "city": "Mumbai",
+        "country": "IN",
+        "temp": 29.0,
+        "feels_like": 32.7,
+        "description": "haze",
+        "wind_speed": 3.09,
+        "humidity": 70,
+        "icon": "50n",
+        "flags": []
+      },
+      {
+        "city": "Bangkok",
+        "country": "TH",
+        "temp": 28.9,
+        "feels_like": 32.1,
+        "description": "few clouds",
+        "wind_speed": 2.94,
+        "humidity": 67,
+        "icon": "02n",
+        "flags": []
+      },
+      {
+        "city": "Sydney",
+        "country": "AU",
+        "temp": 11.6,
+        "feels_like": 10.9,
+        "description": "few clouds",
+        "wind_speed": 4.12,
+        "humidity": 79,
+        "icon": "02n",
+        "flags": []
+      },
+      {
+        "city": "S\u00e3o Paulo",
+        "country": "BR",
+        "temp": 27.3,
+        "feels_like": 27.7,
+        "description": "clear sky",
+        "wind_speed": 1.54,
+        "humidity": 50,
+        "icon": "01d",
+        "flags": []
+      },
+      {
+        "city": "London",
+        "country": "GB",
+        "temp": 13.3,
+        "feels_like": 12.4,
+        "description": "light rain",
+        "wind_speed": 4.12,
+        "humidity": 67,
+        "icon": "10n",
+        "flags": []
+      },
+      {
+        "city": "New York",
+        "country": "US",
+        "temp": 26.6,
+        "feels_like": 26.6,
+        "description": "clear sky",
+        "wind_speed": 11.83,
+        "humidity": 38,
+        "icon": "01d",
+        "flags": []
+      },
+      {
+        "city": "Tokyo",
+        "country": "JP",
+        "temp": 15.6,
+        "feels_like": 15.1,
+        "description": "broken clouds",
+        "wind_speed": 2.57,
+        "humidity": 73,
+        "icon": "04d",
+        "flags": []
+      },
+      {
+        "city": "Moscow",
+        "country": "RU",
+        "temp": 16.3,
+        "feels_like": 16,
+        "description": "light rain",
+        "wind_speed": 2.02,
+        "humidity": 77,
+        "icon": "10n",
+        "flags": []
+      },
+      {
+        "city": "Nairobi",
+        "country": "KE",
+        "temp": 18.6,
+        "feels_like": 18.8,
+        "description": "scattered clouds",
+        "wind_speed": 3.09,
+        "humidity": 88,
+        "icon": "03n",
+        "flags": []
+      }
+    ]
+  },
+  "knowledge": {
+    "generated_at": "2026-05-05T19:59:15.224326+00:00",
+    "sections": [
+      {
+        "domain": "Full-Stack, Web & Mobile",
+        "category": "Node.js",
+        "shorts": [
+          {
+            "title": "Understanding Middleware in Express.js",
+            "difficulty": "Junior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What is Middleware?",
+                "body": "**Middleware** in Express.js is a function that has access to the request, response, and the next middleware function in the application\u2019s request-response cycle. It can modify the request or response objects, terminate the request, or call the next middleware function. Understanding middleware is crucial because it helps in creating modular and reusable components in web applications."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How Middleware Works",
+                "body": [
+                  "- **Request Logging**: Middleware can log requests for debugging and monitoring purposes.",
+                  "- **Body Parsing**: Use body-parser middleware to transform incoming request data into usable formats.",
+                  "- **Error Handling**: Middleware can catch errors and send appropriate responses.",
+                  "- **Authentication**: Middleware can handle user authentication before accessing protected routes."
+                ],
+                "pro_tip": "Always place your middleware in the correct order; it runs top to bottom!"
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Mistakes with Middleware",
+                "body": "One pitfall is failing to call the `next()` function, leading to requests hanging indefinitely. Moreover, placing middleware after route handlers can prevent it from executing when you expect it to."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "You have written custom middleware to parse JSON, but it seems not to run for certain routes, causing a 500 error.",
+                "why_wrong": "This happens likely because the middleware is placed after the route definitions in your Express app, preventing it from running for incoming requests.",
+                "the_fix": "To resolve this, ensure your middleware is defined before any route handlers. This ensures all requests pass through it for processing before reaching the respective route handler."
+              }
+            ]
+          },
+          {
+            "title": "Node.js Event Loop Explained",
+            "difficulty": "Mid",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What is the Event Loop?",
+                "body": "The **Event Loop** is a core component of Node.js, allowing it to perform **non-blocking I/O operations** despite being single-threaded. It utilizes a loop to handle asynchronous function calls, enabling efficient execution of JavaScript. Grasping the event loop is crucial as it directly impacts application performance and responsiveness."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How the Event Loop Works",
+                "body": [
+                  "- **Call Stack**: The stack where function calls are pushed and popped as they execute.",
+                  "- **Event Queue**: Queue holding messages/events to be processed by the call stack.",
+                  "- **Microtask Queue**: For promises and process.nextTick(), it gets prioritized over the event queue.",
+                  "- **Phases**: The loop runs in phases, checking queues and processing events in a specific sequence."
+                ],
+                "pro_tip": "Beware of heavy computations in your callbacks; they can block the event loop and degrade performance!"
+              },
+              {
+                "type": "gotchas",
+                "heading": "Event Loop Misconceptions",
+                "body": "A common mistake is misunderstanding how process.nextTick() affects execution order. Developers may assume it will execute after the current iteration, but it actually runs before I/O tasks. Similarly, confusions about the difference between the event queue and microtask queue can result in unanticipated behavior."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "Your application is unresponsive and slows down when processing large datasets due to blocking operations in your event callbacks.",
+                "why_wrong": "The root cause is that you are performing synchronous computations in the main thread, blocking the event loop from processing other I/O operations.",
+                "the_fix": "To fix this, refactor your heavy computations into asynchronous operations, such as using worker threads or breaking the task into smaller chunks with setImmediate or setTimeout, ensuring the event loop remains responsive."
+              }
+            ]
+          },
+          {
+            "title": "Debugging in Node.js",
+            "difficulty": "Senior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "Effective Debugging Techniques",
+                "body": "Debugging in Node.js can be daunting, but using the right tools and practices, like the **Node.js Inspector**, can streamline the process. The inspector allows you to set breakpoints, inspect variables, and step through code easily. Mastering debugging is vital for efficient development and faster resolution of bugs."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "Key Debugging Tools",
+                "body": [
+                  "- **Node Inspector**: Enables you to use Chrome DevTools for debugging Node.js applications.",
+                  "- **Console.log()**: A simple yet powerful tool to trace variable values and flow.",
+                  "- **Debugger Statement**: Inserting `debugger;` in your code pauses execution when run with the inspector.",
+                  "- **Error Logging**: Implement structured error logging using libraries like Winston or Bunyan."
+                ],
+                "pro_tip": "Combine console.log() statements with a conditional breakpoint for quicker understanding of complex issues."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Debugging Pitfalls",
+                "body": "A frequent error is overlooking asynchronous code execution, which can lead to unexpected values or lack of breakpoints hit. Another issue arises when trying to debug in production without appropriate tools or logging, causing valuable insights to be missed."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "You notice that certain errors are not being logged in production, making debugging a nightmare.",
+                "why_wrong": "This could be due to using a development-only logging approach, which doesn't capture errors in production environments.",
+                "the_fix": "To fix this, implement a robust logging framework like Winston, ensuring it captures all error levels and logs them to accessible storage. Adjust the logging level and format based on the environment to maintain clarity and usability."
+              }
+            ]
+          },
+          {
+            "title": "Understanding Promises in Node.js",
+            "difficulty": "Mid",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What are Promises?",
+                "body": "A **Promise** is an object representing the eventual completion (or failure) of an asynchronous operation in Node.js. It allows you to write cleaner, more manageable asynchronous code compared to using callbacks, avoiding **callback hell**. Promises are fundamental for handling asynchronous flows more gracefully."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How Promises Work",
+                "body": [
+                  "- **States**: A promise can be in one of three states: pending, fulfilled, or rejected.",
+                  "- **Constructing a Promise**: Use `new Promise((resolve, reject) => {})`. The resolve function is called when the async operation is successful, and reject for errors.",
+                  "- **Chaining Promises**: Use `.then()` to handle fulfilled promises and `.catch()` for rejections.",
+                  "- **Promise.all()**: Waits for all promises to complete, returning an array of results or an error if any promise fails."
+                ],
+                "pro_tip": "Avoid nesting promises; instead, always chain them for cleaner syntax and better error handling."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Mistakes with Promises",
+                "body": "A common mistake is forgetting to return promises in chained `.then()` calls, which can lead to unexpected behavior. Additionally, many developers neglect to handle rejections properly, leading to unhandled promise rejection warnings or crashes."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "You have a chain of promises where the last promise sometimes fails, but the error isn\u2019t being caught.",
+                "why_wrong": "This likely occurs because the final `.catch()` is not connected to the preceding promises in the chain, leading to unhandled rejections.",
+                "the_fix": "To remedy this, verify that each promise in the chain returns the next promise. Additionally, ensure there\u2019s a single `.catch()` at the end of the chain to handle any errors that occur at any point in the promise lifecycle."
+              }
+            ]
+          },
+          {
+            "title": "Error Handling Best Practices in Node.js",
+            "difficulty": "Senior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "Effective Error Handling",
+                "body": "Proper error handling is critical in Node.js applications to prevent crashes and ensure smooth user experiences. By utilizing **try/catch** with async/await in conjunction with centralized error handling middleware, developers can create robust applications. Good error handling is paramount for maintainability and reliability in production."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "Techniques for Error Handling",
+                "body": [
+                  "- **Global Error Handling Middleware**: Catch all errors in one centralized location to manage responses effectively.",
+                  "- **Try/Catch with Async/Await**: Wrap your async calls with try/catch for catching errors cleanly.",
+                  "- **Custom Error Classes**: Create classes for different error types to provide better context and handling logic.",
+                  "- **Logging Errors**: Implement structured logging of errors to track issues over time."
+                ],
+                "pro_tip": "Always include error details in your logs without exposing sensitive information to users."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Error Handling Missteps",
+                "body": "Many developers fail to handle asynchronous errors properly, leading to unexpected crashes. Furthermore, neglecting to log errors can result in critical issues going unnoticed until users experience them."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "An uncaught error in your application causes it to crash, and users experience abrupt service interruptions.",
+                "why_wrong": "The error likely isn't being caught because it's occurring in an asynchronous callback without proper error handling.",
+                "the_fix": "To fix this, ensure all asynchronous functions either return promises or use try/catch for async/await syntax. Moreover, implement a global error handler to manage unexpected errors gracefully and log them for future debugging."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "Algorithms & Data Structures",
+        "category": "Design Patterns in OOP",
+        "shorts": [
+          {
+            "title": "Singleton Pattern: Ensuring Single Instances",
+            "difficulty": "Junior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What is the Singleton Pattern?",
+                "body": "**Singleton Pattern** restricts a class to a single instance and provides a global point of access to that instance. This is particularly useful for managing configurations or logging where having multiple instances would lead to inconsistent behaviors. It ensures controlled access to shared resources."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How it Works",
+                "body": [
+                  "- **Private Constructor**: Prevents creating instances outside the class.",
+                  "- **Static Variable**: Holds the single instance of the class.",
+                  "- **Static Method**: Provides access to the instance, creating it if it doesn't exist.",
+                  "- **Thread Safety**: Ensure the instance creation is thread-safe."
+                ],
+                "pro_tip": "Use a mutex in multi-threaded environments to avoid creating multiple instances."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Mistakes",
+                "body": "A common pitfall is neglecting **thread safety** when using the Singleton pattern in multi-threaded applications. This can lead to creating multiple instances. Ensure your implementation explicitly handles synchronization."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "Suppose your Lazy Singleton implementation is failing under load by creating multiple instances.",
+                "why_wrong": "This often happens when multiple threads call the instance method simultaneously before the instance is fully initialized.",
+                "the_fix": "Implement a locking mechanism (e.g., a mutex) around the instance creation block to ensure that even under concurrent access, only one instance is created."
+              },
+              {
+                "type": "leetcode",
+                "heading": "Implement Singleton Class",
+                "lc_difficulty": "Easy",
+                "problem": "Design a class `Singleton` that ensures only one instance can be created. It must have a method `getInstance()` that returns the sole instance.",
+                "examples": [
+                  {
+                    "input": "s1 = Singleton.getInstance()",
+                    "output": "SingletonInstance"
+                  },
+                  {
+                    "input": "s2 = Singleton.getInstance()",
+                    "output": "SingletonInstance"
+                  }
+                ],
+                "hint": "Focus on managing the instance creation carefully.",
+                "solution_code": {
+                  "language": "python",
+                  "snippet": "class Singleton:\n    _instance = None\n    \n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super(Singleton, cls).__new__(cls)\n        return cls._instance"
+                },
+                "solution_explanation": "This implementation ensures that `Singleton` can only be created once. The `__new__` method controls the object creation, ensuring a single instance is returned each time."
+              }
+            ]
+          },
+          {
+            "title": "Observer Pattern: Building Responsive Systems",
+            "difficulty": "Mid",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What is the Observer Pattern?",
+                "body": "The **Observer Pattern** defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically. This promotes decoupling, making the system easier to manage and extend."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How it Works",
+                "body": [
+                  "- **Subject**: Maintains a list of observers and sends notifications.",
+                  "- **Observer**: Interface with an update method for receiving updates.",
+                  "- **Attach/Detach**: Methods for observers to subscribe or unsubscribe from updates.",
+                  "- **Notify**: Iterates through the observers and calls their update method."
+                ],
+                "pro_tip": "Consider implementing a threshold approach to reduce notifications during rapid state changes."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Pitfalls to Avoid",
+                "body": "Overusing the Observer pattern can lead to tight coupling among objects; if not managed carefully, it can result in a memory leak due to lingering references. Test for circular dependencies and utilize weak references where appropriate."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "Your observer list isn't updating correctly when subscribers unsubscribe.",
+                "why_wrong": "If you're modifying the list while iterating over it, this can lead to skipped or incorrectly notified observers.",
+                "the_fix": "Instead of modifying the list during iteration, maintain a separate list of updates to apply after the iteration is complete."
+              },
+              {
+                "type": "leetcode",
+                "heading": "Implement Observer Pattern",
+                "lc_difficulty": "Medium",
+                "problem": "Create a Subject class that allows Observers to subscribe and receive updates when the state changes. The observers should implement an `update()` method.",
+                "examples": [
+                  {
+                    "input": "subject.subscribe(observer)",
+                    "output": "[]"
+                  },
+                  {
+                    "input": "subject.setState('new state')",
+                    "output": "[observer1 update, observer2 update]"
+                  }
+                ],
+                "hint": "Keep track of observers in a list and iterate over them upon state changes.",
+                "solution_code": {
+                  "language": "python",
+                  "snippet": "class Subject:\n    def __init__(self):\n        self._observers = []\n    \n    def subscribe(self, observer):\n        self._observers.append(observer)\n    \n    def notify(self):\n        for observer in self._observers:\n            observer.update()"
+                },
+                "solution_explanation": "This defines a basic Subject that maintains a list of observers. When `notify()` is called, each observer's `update()` method is invoked. Complexity is O(n) for notifying observers."
+              }
+            ]
+          },
+          {
+            "title": "Strategy Pattern: Encapsulating Algorithms",
+            "difficulty": "Senior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What is the Strategy Pattern?",
+                "body": "The **Strategy Pattern** allows selecting an algorithm's behavior at runtime. By encapsulating algorithms in separate classes, you can switch between them easily while adhering to the **Open/Closed Principle**. This flexibility aids in complex systems where algorithms may evolve."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How it Works",
+                "body": [
+                  "- **Context Class**: Contains a reference to the current strategy object.",
+                  "- **Strategy Interface**: Defines a common interface for all strategies.",
+                  "- **Concrete Strategies**: Implement specific algorithms and inherit from the strategy interface.",
+                  "- **Set Strategy Method**: Allows the context to switch strategies dynamically."
+                ],
+                "pro_tip": "Favor composition over inheritance to keep the system flexible."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Issues",
+                "body": "Often, developers mix the Strategy pattern with the State pattern which both use interfaces but serve different purposes. Ensure you clearly understand the context of their usage to avoid misuse."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "Your implemented strategy is not being applied correctly in the context.",
+                "why_wrong": "It may result from poor state management or incorrect strategy instantiation that leads to methods not being called.",
+                "the_fix": "Verify that the context correctly provides the right strategy to execute during runtime and ensure strategies are properly instantiated before being set."
+              },
+              {
+                "type": "leetcode",
+                "heading": "Perform Actions Based on Strategy",
+                "lc_difficulty": "Hard",
+                "problem": "Create a strategy pattern to perform different calculations (like addition, subtraction) based on the provided strategy. The `Calculator` class should allow users to switch strategies.",
+                "examples": [
+                  {
+                    "input": "calculator.set_strategy(Addition())",
+                    "output": "5 + 3 = 8"
+                  },
+                  {
+                    "input": "calculator.set_strategy(Subtraction())",
+                    "output": "5 - 3 = 2"
+                  }
+                ],
+                "hint": "Design an interface for strategies to encapsulate the algorithm implementations.",
+                "solution_code": {
+                  "language": "python",
+                  "snippet": "class Strategy:\n    def calculate(self, a, b): pass\n\nclass Addition(Strategy):\n    def calculate(self, a, b): return a + b\n\nclass Calculator:\n    def set_strategy(self, strategy):\n        self.strategy = strategy\n    def calculate(self, a, b):\n        return self.strategy.calculate(a, b)"
+                },
+                "solution_explanation": "This design separates the calculation logic into different strategies. The `Calculator` class can switch between additions and subtractions dynamically, demonstrating flexibility. Complexity is O(1) for calculation operations."
+              }
+            ]
+          },
+          {
+            "title": "Decorator Pattern: Enhancing Functionality",
+            "difficulty": "Expert",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What is the Decorator Pattern?",
+                "body": "The **Decorator Pattern** provides a flexible alternative to subclassing for extending functionality. It allows behaviors to be added to individual objects at runtime without affecting other objects. This is particularly useful in adhering to the **Single Responsibility Principle**."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How it Works",
+                "body": [
+                  "- **Component Interface**: Defines the interface that all decorators and concrete components will implement.",
+                  "- **Concrete Component**: The object to which new behaviors can be added.",
+                  "- **Decorator Class**: Holds a reference to a component and adds new functionality.",
+                  "- **Dynamic Composition**: Creates a stack of decorators at runtime, allowing for complex combinations."
+                ],
+                "pro_tip": "Be mindful of the order in which decorators are applied, as it can significantly impact behavior."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Missteps",
+                "body": "Using decorators indiscriminately can lead to complex and hard-to-read code. Always weigh the benefits of composition against potential over-engineering, and ensure that the final product remains maintainable."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "Your decorators are not preserving the behavior of the component correctly.",
+                "why_wrong": "Decorators can override methods unintentionally if not carefully designed, leading to unexpected behavior.",
+                "the_fix": "Always call the wrapped method within the decorator's method to maintain original functionality, and ensure proper delegation of responsibilities."
+              },
+              {
+                "type": "leetcode",
+                "heading": "Implement Decorators for Coffee Types",
+                "lc_difficulty": "Hard",
+                "problem": "Build a coffee ordering system that allows adding condiments like milk or sugar using the decorator pattern. Each condiment should enhance the coffee's description and cost.",
+                "examples": [
+                  {
+                    "input": "coffee = MilkDecorator(SimpleCoffee())",
+                    "output": "Coffee with Milk, cost: $2.5"
+                  },
+                  {
+                    "input": "coffee = SugarDecorator(MilkDecorator(SimpleCoffee()))",
+                    "output": "Coffee with Milk, Sugar, cost: $3.0"
+                  }
+                ],
+                "hint": "Implement decorators to add flavors dynamically while preserving the component's contract.",
+                "solution_code": {
+                  "language": "python",
+                  "snippet": "class Coffee:\n    def cost(self): return 2.0\n    def description(self): return 'Simple Coffee'\n\nclass MilkDecorator:\n    def __init__(self, coffee):\n        self._coffee = coffee\n    def cost(self): return self._coffee.cost() + 0.5\n    def description(self): return self._coffee.description() + ', Milk'"
+                },
+                "solution_explanation": "This code demonstrates the Decorator Pattern, allowing the `Coffee` class to be enhanced dynamically with decorators. The complexity remains constant for adding each new flavor."
+              }
+            ]
+          },
+          {
+            "title": "Factory Method: Creating Objects",
+            "difficulty": "Mid",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What is the Factory Method?",
+                "body": "The **Factory Method** is a method that returns an object of a certain type. This design pattern allows a class to delegate the responsibility of instantiating classes to subclasses, thus following the **DRY Principle** by avoiding code duplication in object creation."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How it Works",
+                "body": [
+                  "- **Base Class**: Defines the factory method (e.g., `createProduct`).",
+                  "- **Concrete Classes**: Subclasses implement the factory method to produce specific instances.",
+                  "- **Client Code**: Interacts with the base class, unaware of the concrete classes being instantiated.",
+                  "- **Encapsulation**: The instantiation logic is centralized, reducing complexity."
+                ],
+                "pro_tip": "Consider using callbacks for dynamic behavior when creating objects in the factory."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Mistakes to Watch Out For",
+                "body": "One common issue is hardcoding logic in the factory method, which defeats its purpose. Another is failing to consider extension points, making future modifications cumbersome."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "New product types can't be added without modifying the existing factory method.",
+                "why_wrong": "By hardcoding logic for specific types, the factory violates the Open/Closed Principle.",
+                "the_fix": "Refactor the factory method to use a registration system or configuration that allows new types to be added easily without altering existing code."
+              },
+              {
+                "type": "leetcode",
+                "heading": "Implement a Simple Factory for Shapes",
+                "lc_difficulty": "Medium",
+                "problem": "Create a factory that generates different shapes (Circle, Square). The factory method should instantiate the requested shape based on input.",
+                "examples": [
+                  {
+                    "input": "shape_factory.create_shape('Circle')",
+                    "output": "Circle Object"
+                  },
+                  {
+                    "input": "shape_factory.create_shape('Square')",
+                    "output": "Square Object"
+                  }
+                ],
+                "hint": "Utilize a mapping of shape types to their respective classes for instantiation.",
+                "solution_code": {
+                  "language": "python",
+                  "snippet": "class ShapeFactory:\n    def create_shape(self, shape_type):\n        if shape_type == 'Circle':\n            return Circle()\n        elif shape_type == 'Square':\n            return Square()\n        raise ValueError('Unknown shape type')"
+                },
+                "solution_explanation": "This implementation demonstrates the Factory Method to create shapes. It maps shape type strings to object instantiations, maintaining flexibility and adhering to clean code practices."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "System Design & Architecture",
+        "category": "Azure Architecture",
+        "shorts": [
+          {
+            "title": "Understanding Azure Resource Manager (ARM)",
+            "difficulty": "Junior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What Azure Resource Manager Is",
+                "body": "**Azure Resource Manager (ARM)** is the management layer that enables you to create, update, and delete resources in your Azure account. It provides a unified management experience and simplifies resource deployment workflows, making it easier to manage costs and security across multiple resources."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How ARM Works",
+                "body": [
+                  "- **Resource Groups**: Organize your related Azure resources for better management and access control.",
+                  "- **Templates**: Use **JSON templates** to define the infrastructure and configuration for your project, ensuring consistency.",
+                  "- **Management APIs**: Interact with Azure services programmatically, using a RESTful API to automate tasks.",
+                  "- **Role-Based Access Control**: Secure your resources by assigning roles at both resource and resource group levels."
+                ],
+                "pro_tip": "Always use resource tags for better cost management and resource tracking."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Pitfalls",
+                "body": "Many beginners struggle with the concept of **resource groups**, often treating them like folders rather than management boundaries. Interviewers often probe understanding here, focusing on how ARM\u2019s role-based access control can complicate permissions."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "A developer deployed multiple resources across different resource groups but failed to apply consistent tags.",
+                "why_wrong": "This oversight led to confusion in cost tracking and resource management, causing delays in monthly budgeting reviews.",
+                "the_fix": "To rectify this, all resources should have a mandatory tagging policy enforced at the management group level. This means setting a policy that requires tags to be defined upon resource creation, improving tracking and accountability."
+              }
+            ]
+          },
+          {
+            "title": "Designing for Scalability in Azure",
+            "difficulty": "Mid",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "Scalability in Azure",
+                "body": "Scalability refers to the ability of your Azure applications to handle increased load by adjusting resources as needed. **Horizontal scaling**, adding more instances of a service, and **vertical scaling**, upgrading existing resources, are both vital concepts for cloud architecture."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "Key Patterns for Scaling",
+                "body": [
+                  "- **Load Balancing**: Distribute incoming traffic across multiple instances to ensure no single resource is overwhelmed.",
+                  "- **Auto Scaling**: Automatically increase or decrease the number of active instances based on performance metrics.",
+                  "- **Microservices**: Break the application into smaller services that can be scaled independently based on demand."
+                ],
+                "pro_tip": "Make sure to define clear scaling policies and monitor your metrics closely to avoid overspending."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Scaling Challenges",
+                "body": "A common mistake is assuming vertical scaling is sufficient for performance; this can lead to downtime during upgrades. Many still confuse scaling strategies with load testing and don\u2019t consider how to react under stress."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "An application experienced slow performance during peak hours because only vertical scaling was implemented, causing resource limits to be reached.",
+                "why_wrong": "The architecture did not allow for horizontal scaling; as a result, the app couldn't handle increased loads effectively.",
+                "the_fix": "Implement a hybrid scaling strategy that incorporates both horizontal and vertical scaling. This would involve migrating components to a microservices architecture and using Azure's auto-scaling features based on usage metrics."
+              }
+            ]
+          },
+          {
+            "title": "Implementing Azure Functions Effectively",
+            "difficulty": "Senior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What Are Azure Functions?",
+                "body": "Azure Functions is a serverless compute service that enables you to run event-driven code without managing infrastructure. This **serverless architecture** allows for rapid development and scalability, making it a great choice for microservices or APIs."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How Azure Functions Work",
+                "body": [
+                  "- **Triggers**: Events that start the execution of your function, such as HTTP requests, timers, or message queue messages.",
+                  "- **Bindings**: Connect your function to various Azure services easily, enabling automatic data integration.",
+                  "- **Durable Functions**: Use this extension to manage state and handle complex workflows, like chaining or fan-out processes."
+                ],
+                "pro_tip": "Use Application Insights to monitor functions and capture telemetry automatically."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Missteps",
+                "body": "Developers often underestimate cold start issues in serverless architectures, which can lead to latency when functions are idle. Understanding pricing models is also crucial, as many miscalculate costs based on invocations and execution times."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "A service using Azure Functions faced slow response times during peak usage due to cold starts.",
+                "why_wrong": "The functions were not configured to optimize for high usage, leading to unresponsive behavior during initial requests.",
+                "the_fix": "Implement a strategy that keeps a minimum number of instances warm or consider using the Premium plan to avoid cold starts. Additionally, analyze the triggers and optimize function code to reduce execution time."
+              }
+            ]
+          },
+          {
+            "title": "Navigating Azure Networking Fundamentals",
+            "difficulty": "Junior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "Understanding Azure Networking",
+                "body": "Azure Networking encompasses the services and solutions used to connect Azure resources and on-premises infrastructures. It is key to data exchange, governance, and security in cloud architecture, ensuring that data can flow seamlessly."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "Key Networking Components",
+                "body": [
+                  "- **Virtual Networks (VNet)**: Provide an isolated networking environment for your Azure resources to communicate.",
+                  "- **Network Security Groups (NSG)**: Filter network traffic and ensure designated security rules are in place.",
+                  "- **Azure VPN Gateway**: Enable secure connections between your Azure VNet and on-premises networks."
+                ],
+                "pro_tip": "Always set up NSGs as soon as you create a VNet to avoid future security misconfigurations."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Mistakes",
+                "body": "New users often forget to account for subnet mask settings when deploying VNets, which can lead to network overlap issues. Understanding the implications of regional deployment on connectivity should also be emphasized."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "A company deployed multiple VNets but encountered connectivity issues due to overlapping subnets.",
+                "why_wrong": "The team did not account for the existing IP address schemes, leading to conflicts and a failure to establish necessary connections.",
+                "the_fix": "Reassess the IP address plan and implement a clear strategy for subnet allocation before deploying resources. Create documentation outlining the plan to avoid overlap, and ensure all teams are aware."
+              }
+            ]
+          },
+          {
+            "title": "Data Storage Options in Azure",
+            "difficulty": "Mid",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "Overview of Azure Storage Options",
+                "body": "Azure offers a variety of storage solutions, including **Blob Storage**, **Table Storage**, and **Azure SQL Database**. Understanding these options allows architects to choose the best fit for their application\u2019s needs and performance requirements."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "Exploring Storage Types",
+                "body": [
+                  "- **Blob Storage**: Ideal for unstructured data like images or logs, highly scalable and accessible via REST APIs.",
+                  "- **Table Storage**: NoSQL key-value store that is perfect for rapid development and low-cost storage requirements.",
+                  "- **Azure SQL Database**: Fully managed relational database service designed for high availability and performance."
+                ],
+                "pro_tip": "Always benchmark your storage choices based on anticipated load and access patterns to ensure optimal performance."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Storage Pitfalls",
+                "body": "Misunderstanding **data access patterns** can lead to inefficient storage solutions. Similarly, many developers underestimate the costs associated with data retrieval and redundancy settings, impacting budgeting."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "A project used Azure Blob Storage for a heavily transactional workload, resulting in poor performance.",
+                "why_wrong": "The team's choice did not align with the workload\u2019s requirements for transactional support, which Azure Blob Storage is not optimized for.",
+                "the_fix": "Switching to Azure SQL Database would provide better transactional integrity and performance. Ensure to set up performance monitoring after switching to evaluate the effectiveness of the solution."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "domain": "ML & Data Science",
+        "category": "Classification",
+        "shorts": [
+          {
+            "title": "Understanding Decision Trees",
+            "difficulty": "Mid",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What are Decision Trees?",
+                "body": "**Decision Trees** are a supervised learning method used for both classification and regression tasks. They model decisions and their possible consequences, resembling a tree structure where each node represents a decision based on attribute values. This approach matters because it provides a clear way to visualize data-driven decisions."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How Decision Trees Work",
+                "body": [
+                  "- **Splitting**: The process begins by selecting the best feature to split the data based on a criterion such as Gini impurity or entropy.",
+                  "- **Node Creation**: Each split creates nodes that represent subsets of the data, further split until a stopping condition is met.",
+                  "- **Pruning**: To prevent overfitting, trees can be pruned by removing splits that have little importance based on a validation set.",
+                  "- **Leaf Nodes**: The end points of the tree, these reflect the outcome or classification based on the majority class within that subset."
+                ],
+                "pro_tip": "Use cross-validation to determine the optimal depth before pruning \u2014 too deep can overfit, too shallow can underfit."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Common Pitfalls",
+                "body": "A frequent pitfall with Decision Trees is **overfitting**, where the model learns noise rather than the signal in the training data. Data imbalance can also skew tree predictions, leading interviewers to ask how you'd handle class imbalance in practical scenarios."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "Imagine your Decision Tree model performs beautifully on training data but fails miserably on the test set. It classifies everything incorrectly due to overfitting.",
+                "why_wrong": "This typically occurs when the tree is allowed to grow too deep and captures outliers or noise from the training set.",
+                "the_fix": "To fix this, apply preemptive pruning during the initial build or set a maximum depth parameter. Additionally, consider using ensemble methods like Random Forests to improve generalization without excessively increasing model complexity."
+              }
+            ]
+          },
+          {
+            "title": "Attributes in Classification",
+            "difficulty": "Junior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What are Class Attributes?",
+                "body": "**Class attributes** are features used to determine the category of data points in a classification problem. These attributes help fine-tune the model by discriminating between classes. Understanding these is vital for building accurate and efficient classifiers."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "Choosing the Right Attributes",
+                "body": [
+                  "- **Relevance**: Ensure attributes have a strong correlation with the target class; irrelevant attributes can confound the model.",
+                  "- **Cardinality**: High cardinality attributes can lead to overfitting, especially in smaller datasets; balancing this is critical.",
+                  "- **Normalizing**: Scale numerical features to ensure they contribute equally; techniques include Min-Max scaling or Z-score normalization.",
+                  "- **Encoding**: Categorical features should be converted to numerical formats, using methods like One-Hot Encoding or Label Encoding."
+                ],
+                "pro_tip": "Consider using feature selection techniques like recursive feature elimination to optimize attribute selection without manual trial and error."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Missteps in Attribute Selection",
+                "body": "Oftentimes, people neglect to standardize their numerical features or fail to encode categorical variables properly. Interviewers look for your understanding of the balance between model complexity and data cleanliness."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "Your classification model is achieving low accuracy because you included too many irrelevant features during training.",
+                "why_wrong": "Irrelevant features introduce noise, making it harder for the model to identify patterns that truly matter for classification.",
+                "the_fix": "To correct this, implement feature selection methods, such as recursive feature elimination or leverage regularization techniques like Lasso for automatic feature selection. This will simplify the model, enhance performance, and reduce overfitting risks."
+              }
+            ]
+          },
+          {
+            "title": "Ensemble Methods in Classification",
+            "difficulty": "Senior",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What are Ensemble Methods?",
+                "body": "**Ensemble Methods** combine multiple models to improve classification accuracy and robustness. Techniques like Bagging and Boosting help create stronger predictive performance than any individual model could provide. This is crucial in battle against overfitting and improves generalization on unseen data."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "Key Ensemble Techniques",
+                "body": [
+                  "- **Bagging**: Bootstrap aggregating builds multiple models on subsets of data and averages the predictions \u2014 Random Forest is a well-known example.",
+                  "- **Boosting**: Sequentially trains models, adjusting weights for misclassified instances to minimize errors; AdaBoost is a popular algorithm.",
+                  "- **Stacking**: Combines predictions of multiple models using a higher-level model, effectively capturing different perspectives of the data.",
+                  "- **Voting**: Uses majority voting or averaging to combine predictions from various models; it enhances robustness against choices of flawed individual models."
+                ],
+                "pro_tip": "Always analyze the diversity of base models in an ensemble; diverse models often yield better performance than homogeneous ones."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Ensemble Errors",
+                "body": "One common mistake is neglecting the complexity added by ensembles without addressing overfitting in individual models. Recruiters may ask how you'd manage complexity versus performance trade-offs in ensemble approaches."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "Your ensemble classifier is overfitting, but individual models still perform well on training data.",
+                "why_wrong": "Overfitting can arise from combining weak learners that capture noise instead of signal, leading to high variance in the ensemble.",
+                "the_fix": "To combat this, avoid overly complex models in the ensemble. Pre-select models with simplicity in mind, use cross-validation during parameter tuning, and explore model averaging strategies to smooth out erratic predictions."
+              }
+            ]
+          },
+          {
+            "title": "Evaluating Classification Models",
+            "difficulty": "Expert",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "Why Evaluate Classification Models?",
+                "body": "**Model evaluation** is essential to understand how a classification model performs on unseen data. Key metrics like accuracy, precision, recall, and F1 score help identify a model's strengths and weaknesses. This understanding guides iterative improvements and enhances predictive reliability."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "Evaluation Metrics Explained",
+                "body": [
+                  "- **Accuracy**: Measures the overall correctness of the model, but may be misleading in imbalanced datasets.",
+                  "- **Precision**: Indicates the proportion of true positive predictions relative to all positive predictions; it\u2019s vital in scenarios where false positives carry high costs.",
+                  "- **Recall**: Reflects the true positive rate, essential for applications sensitive to false negatives, like medical diagnosis.",
+                  "- **F1 Score**: The harmonic mean of precision and recall, offering a balance when algorithms face precision-recall trade-offs."
+                ],
+                "pro_tip": "Use a confusion matrix to gain insights into performance beyond scalar metrics; it allows you to see where misclassifications occur."
+              },
+              {
+                "type": "gotchas",
+                "heading": "Evaluation Misunderstandings",
+                "body": "Many analysts mistakenly prioritize accuracy without considering class distribution, which can hide performance issues. Be prepared for interviewer questions about how you'd address misclassifications in multiple classes."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "After deployment, a classification model is producing high accuracy yet systematically misclassifying a small group of critical cases.",
+                "why_wrong": "This issue often arises from class imbalance affecting model behavior; if the model sees far more of one class, it may bias its predictions unconsciously.",
+                "the_fix": "To fix this, implement stratified sampling during cross-validation and adjust class weights in your loss function during training. Balancing classes can lead to better robustness and performance across all categories."
+              }
+            ]
+          },
+          {
+            "title": "Understanding K-Nearest Neighbors",
+            "difficulty": "Mid",
+            "slides": [
+              {
+                "type": "intro",
+                "heading": "What is K-Nearest Neighbors?",
+                "body": "**K-Nearest Neighbors (KNN)** is a non-parametric, instance-based learning algorithm where the class of a data point is determined by the classes of its closest neighbors. The beauty of KNN lies in its simplicity and flexibility. It matters because it can adapt well to various data distributions."
+              },
+              {
+                "type": "deep_dive",
+                "heading": "How KNN Works",
+                "body": [
+                  "- **Distance Calculation**: KNN requires a distance metric, commonly Euclidean or Manhattan, to find proximity among data points.",
+                  "- **Selecting 'K'**: The choice of K, the number of neighbors to consider, directly impacts model performance; too small may lead to noise sensitivity, while too large can smooth out important distinctions.",
+                  "- **Voting Mechanism**: The majority class among the K neighbors determines the classification of the new point, which can also include weighted voting based on distance.",
+                  "- **Normalization**: Data normalization is crucial since distance metrics can be skewed by attribute scales, ensuring fair comparisons among features."
+                ],
+                "pro_tip": "Experiment with different values of K using cross-validation to optimally tune the model before final evaluation."
+              },
+              {
+                "type": "gotchas",
+                "heading": "KNN Traps",
+                "body": "Many practitioners overlook the computational cost of KNN during inference, especially with large datasets. Interviewers may ask you how you'd optimize this aspect in real-world scenarios."
+              },
+              {
+                "type": "fix_it",
+                "heading": "How would you fix this?",
+                "what_went_wrong": "Your KNN model is slow to predict because it recalculates distances from scratch for each new instance.",
+                "why_wrong": "The exhaustive distance computation leads to inefficiencies, particularly when faced with a large dataset and high dimensionality.",
+                "the_fix": "To address this, consider using effective data structures like KD-trees or Ball trees to speed up nearest neighbor searches. Implementing dimensionality reduction techniques, such as PCA, can also help reduce the computational burden before applying KNN."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "hn_digest": {
+    "generated_at": "2026-05-05T19:59:18.744970+00:00",
+    "digest": "Today, the tech community is on fire, primarily over Google's controversial decision to silently install a hefty 4 GB AI model through Chrome, igniting debates about user consent and privacy. Meanwhile, discussions around the economic implications of AI are brewing with the article on the inverse laws of AI and a comparison highlighting the steep costs of traditional computer use versus structured APIs. On the innovation front, advancements like Gemma 4's faster inference and GLM-5V-Turbo are drawing attention, showcasing the relentless push for efficiency in AI. Additionally, a nostalgic nod to computing history with the 555 Timer anniversary and insights into user interface design via the Tab key reminds us of the foundation upon which today's technologies are built. With California's peach trees facing destruction post-Del Monte's bankruptcy, the implications on agriculture and tech-adjacent industries also warrant attention as they signal broader economic ripples.",
+    "stories": [
+      {
+        "title": "Accelerating Gemma 4: faster inference with multi-token prediction drafters",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/multi-token-prediction-gemma-4/",
+        "hn_url": "https://news.ycombinator.com/item?id=48024540",
+        "points": 251,
+        "comments": 97,
+        "by": "amrrs"
+      },
+      {
+        "title": "Three Inverse Laws of AI",
+        "url": "https://susam.net/inverse-laws-of-robotics.html",
+        "hn_url": "https://news.ycombinator.com/item?id=48023861",
+        "points": 263,
+        "comments": 172,
+        "by": "blenderob"
+      },
+      {
+        "title": "Computer Use is 45x more expensive than structured APIs",
+        "url": "https://reflex.dev/blog/computer-use-is-45x-more-expensive-than-structured-apis/",
+        "hn_url": "https://news.ycombinator.com/item?id=48024859",
+        "points": 153,
+        "comments": 92,
+        "by": "palashawas"
+      },
+      {
+        "title": "EEVblog: The 555 Timer is 55 years old [video]",
+        "url": "https://www.youtube.com/watch?v=6JhK8iCQuqI",
+        "hn_url": "https://news.ycombinator.com/item?id=48024129",
+        "points": 139,
+        "comments": 36,
+        "by": "brudgers"
+      },
+      {
+        "title": "Google Chrome silently installs a 4 GB AI model on your device without consent",
+        "url": "https://www.thatprivacyguy.com/blog/chrome-silent-nano-install/",
+        "hn_url": "https://news.ycombinator.com/item?id=48019219",
+        "points": 938,
+        "comments": 639,
+        "by": "john-doe"
+      },
+      {
+        "title": "GLM-5V-Turbo: Toward a Native Foundation Model for Multimodal Agents",
+        "url": "https://arxiv.org/abs/2604.26752",
+        "hn_url": "https://news.ycombinator.com/item?id=48026021",
+        "points": 57,
+        "comments": 12,
+        "by": "gmays"
+      },
+      {
+        "title": "Show HN: Explore color palettes inspired by 3000 master painter artworks",
+        "url": "https://paletteinspiration.com/",
+        "hn_url": "https://news.ycombinator.com/item?id=48026342",
+        "points": 28,
+        "comments": 13,
+        "by": "ouli"
+      },
+      {
+        "title": "Agents for financial services and insurance",
+        "url": "https://www.anthropic.com/news/finance-agents",
+        "hn_url": "https://news.ycombinator.com/item?id=48023533",
+        "points": 135,
+        "comments": 107,
+        "by": "louiereederson"
+      },
+      {
+        "title": "IBM didn't want Microsoft to use the Tab key to move between dialog fields",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260505-00/?p=112298",
+        "hn_url": "https://news.ycombinator.com/item?id=48025687",
+        "points": 190,
+        "comments": 107,
+        "by": "SeenNotHeard"
+      },
+      {
+        "title": "California farmers to destroy 420k peach trees following Del Monte bankruptcy",
+        "url": "https://www.sfgate.com/centralcoast/article/usda-aid-california-farmers-22240694.php",
+        "hn_url": "https://news.ycombinator.com/item?id=48026349",
+        "points": 98,
+        "comments": 100,
+        "by": "littlexsparkee"
+      }
+    ]
+  }
+}
