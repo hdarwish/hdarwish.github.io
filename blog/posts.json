@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-25",
+    "title": "Stop Pretending Go Can Teach You Rust's Philosophy",
+    "tags": [
+      "Go",
+      "Rust",
+      "Programming Philosophy"
+    ],
+    "excerpt": "Last year, we considered migrating a project from Go to Rust. Our Go codebase was sprawling with goroutines, and initially, it felt liberating. But then, data races emerged, causing bugs that only...",
+    "hn_refs": [
+      {
+        "title": "Migrating from Go to Rust",
+        "url": "https://corrode.dev/learn/migration-guides/go-to-rust/",
+        "points": 281
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Rust Programming Language (The Book)",
+        "url": "https://doc.rust-lang.org/book/",
+        "kind": "book"
+      },
+      {
+        "title": "Programming Rust",
+        "url": "https://www.oreilly.com/library/view/programming-rust-2nd/9781492052586/",
+        "kind": "book"
+      },
+      {
+        "title": "Rust for Rustaceans",
+        "url": "https://nostarch.com/rust-rustaceans",
+        "kind": "book"
+      }
+    ]
+  },
+  {
     "date": "2026-05-24",
     "title": "Exiting AWS: The Strategic Quicksand You Didn't See Coming",
     "tags": [
