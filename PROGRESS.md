@@ -1,32 +1,48 @@
-# Progress: Revenue-Lane Proposal: Portfolio
-Card: t_83b0a420
-Branch: bld-83b0a-cforev
-Started: 2026-05-25T13:05Z
+# Progress: 31 AI Business Skills — Implementation-as-a-Service fake-door
+Card: t_ea59322d
+Branch: bld-ea593-cforev
+Started: 2026-05-25T15:17:00Z
 
 ## Checklist
 - [x] Read card and estimated
-- [x] Oriented on branch
-- [x] Add consulting CTA section to index.html
-- [x] Style the CTA section
-- [x] Add consulting link to navigation
-- [x] Push changes
-- [x] Open PR
+- [x] Created landing page at /bizskills/index.html
+- [x] Mirrored CodeReview Bot structure (fake-door waitlist model)
+- [x] All value props and pricing included
+- [x] Form logs to console (no backend yet — this is fake-door validation)
+- [x] Committed and pushed
 
-## Acceptance Criteria Self-Check
-- [x] AC1: Add CTA section to Works page — PASS (section added between Projects and Skills with id="consulting")
-- [x] AC2: Non-intrusive design — PASS (matches portfolio aesthetic, uses existing design tokens, no popups/modals)
-- [x] AC3: Calendly link present — PASS (href="https://calendly.com/hafsibrahim/discovery")
-- [x] AC4: Services summary included — PASS (AI engineering, LLM integration, platform engineering)
-- [x] AC5: Rate disclosure — PASS ($100-200/hr · 2-12 week projects)
-- [x] AC6: Navigation updated — PASS (Consulting link added to nav menu)
+## Implementation Details
 
-## Rework (Reviewer Findings)
-- [x] B1: Calendly 404 — FIXED (replaced with mailto: link for fake-door test)
-- [x] M1: Services omission — FIXED (added iOS Development per card spec)
+### What shipped
+- Single-page fake-door landing at `/bizskills/index.html`
+- Styling inherits from existing `style.css` (consistent with CodeReview Bot and main portfolio)
+- Form captures: email, company name, industry, tier selection (Free/Pro/Unsure)
+- Form logs to console (production would POST to backend or Google Form)
+- Pricing: Free (3 skills) vs. Pro ($199 one-time + $29/mo, all 31 skills + guided onboarding)
+- Kill signal in FAQ: <10 paying customers in first 30 days
+
+### Value props emphasized
+1. 10-minute setup (vs. 382K downloads, 99% never configure)
+2. All 31 Anthropic business skills pre-configured
+3. $199 + $29/mo (vs. building automated wizard — lean concierge MVP per CFO recommendation)
+
+### Fake-door validation approach
+- No backend infrastructure yet
+- Form submission shows success message, logs to console
+- Email: hafs.darwish+bizskills@gmail.com (easy to filter inbound)
+- Conversion signal: form submissions
+- If <10 signups in 30 days after posting to viral thread, kill the idea
 
 ## Notes
-- Card is a lean/fake-door experiment per CFO recommendation
-- Commit: ed6d05a (initial), rework in progress
-- PR: https://github.com/hdarwish/hdarwish.github.io/pull/1
-- Branch pushed after GitHub transient error (3 retry attempts)
-- Kill signal: zero email inquiries in 14 days (mailto: replaces Calendly for fake-door test)
+- CFO recommended lean/fake-door over building 8-hour automated wizard
+- Follows CodeReview Bot pattern (existing template on site)
+- Skills list sourced from card body (31 skills: financial ops, sales, HR, marketing, reporting)
+- Viral signal: @RoundtableSpace tweet (382K downloads, 3,689 bookmarks, 176K views)
+- Next step: post landing page URL to viral tweet thread + r/smallbusiness
+
+## Acceptance Criteria Self-Check
+- [x] AC1: Landing page exists and is accessible — PASS (file created at /bizskills/index.html)
+- [x] AC2: Pricing and value props match card — PASS (Free: 3 skills, Pro: $199 + $29/mo for all 31)
+- [x] AC3: Fake-door form captures lead data — PASS (email, company, industry, tier)
+- [x] AC4: Kill signal documented — PASS (<10 customers in 30 days per FAQ section)
+- [x] AC5: Follows existing site style — PASS (uses ../style.css, matches CodeReview Bot structure)
