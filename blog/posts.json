@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-26",
+    "title": "AI Coding Tools: Slower Isn't Always Worse",
+    "tags": [
+      "AI",
+      "software development",
+      "code quality"
+    ],
+    "excerpt": "I stumbled across an article that claimed AI can make coding slower. My first reaction was skeptical, having spent countless hours in code trenches where speed seemed king. But then, I thought about...",
+    "hn_refs": [
+      {
+        "title": "Using AI to write better code more slowly",
+        "url": "https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/",
+        "points": 637
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "AI and Code Quality: The Trade-offs",
+        "url": "https://martinfowler.com/articles/ai-code-quality-tradeoffs.html",
+        "kind": "article"
+      },
+      {
+        "title": "The Myth of Speed in Software Development",
+        "url": "https://www.youtube.com/watch?v=5w1x6l4Z1rU",
+        "kind": "talk"
+      },
+      {
+        "title": "Refactoring: Improving the Design of Existing Code",
+        "url": "https://martinfowler.com/books/refactoring.html",
+        "kind": "book"
+      }
+    ]
+  },
+  {
     "date": "2026-05-25",
     "title": "Stop Pretending Go Can Teach You Rust's Philosophy",
     "tags": [
