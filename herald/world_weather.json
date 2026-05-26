@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-05-03T07:56:30.607636+00:00",
+  "cities": [
+    {
+      "city": "Dubai",
+      "country": "AE",
+      "temp": 40.0,
+      "feels_like": 38.0,
+      "description": "clear sky",
+      "wind_speed": 3.09,
+      "humidity": 15,
+      "icon": "01d",
+      "flags": [
+        "very hot"
+      ]
+    },
+    {
+      "city": "Bangkok",
+      "country": "TH",
+      "temp": 37.0,
+      "feels_like": 44.0,
+      "description": "overcast clouds",
+      "wind_speed": 6.1,
+      "humidity": 55,
+      "icon": "04d",
+      "flags": [
+        "very hot"
+      ]
+    },
+    {
+      "city": "S\u00e3o Paulo",
+      "country": "BR",
+      "temp": 18.4,
+      "feels_like": 18.8,
+      "description": "overcast clouds",
+      "wind_speed": 5.14,
+      "humidity": 95,
+      "icon": "04n",
+      "flags": [
+        "very humid"
+      ]
+    },
+    {
+      "city": "Reykjavik",
+      "country": "IS",
+      "temp": 4.8,
+      "feels_like": 3.7,
+      "description": "broken clouds",
+      "wind_speed": 1.54,
+      "humidity": 60,
+      "icon": "04d",
+      "flags": []
+    },
+    {
+      "city": "Mumbai",
+      "country": "IN",
+      "temp": 34.0,
+      "feels_like": 40.2,
+      "description": "haze",
+      "wind_speed": 5.66,
+      "humidity": 55,
+      "icon": "50d",
+      "flags": []
+    },
+    {
+      "city": "New York",
+      "country": "US",
+      "temp": 8.8,
+      "feels_like": 5.8,
+      "description": "overcast clouds",
+      "wind_speed": 5.81,
+      "humidity": 50,
+      "icon": "04n",
+      "flags": []
+    },
+    {
+      "city": "Singapore",
+      "country": "SG",
+      "temp": 28.7,
+      "feels_like": 33.6,
+      "description": "moderate rain",
+      "wind_speed": 3.09,
+      "humidity": 78,
+      "icon": "10d",
+      "flags": []
+    },
+    {
+      "city": "London",
+      "country": "GB",
+      "temp": 14.5,
+      "feels_like": 14.0,
+      "description": "scattered clouds",
+      "wind_speed": 3.6,
+      "humidity": 78,
+      "icon": "03d",
+      "flags": []
+    },
+    {
+      "city": "Moscow",
+      "country": "RU",
+      "temp": 16.4,
+      "feels_like": 15.4,
+      "description": "scattered clouds",
+      "wind_speed": 5.16,
+      "humidity": 47,
+      "icon": "03d",
+      "flags": []
+    },
+    {
+      "city": "Tokyo",
+      "country": "JP",
+      "temp": 22.6,
+      "feels_like": 22.6,
+      "description": "broken clouds",
+      "wind_speed": 9.77,
+      "humidity": 64,
+      "icon": "04d",
+      "flags": []
+    },
+    {
+      "city": "Sydney",
+      "country": "AU",
+      "temp": 21.5,
+      "feels_like": 21.7,
+      "description": "overcast clouds",
+      "wind_speed": 8.23,
+      "humidity": 76,
+      "icon": "04n",
+      "flags": []
+    },
+    {
+      "city": "Nairobi",
+      "country": "KE",
+      "temp": 20.9,
+      "feels_like": 20.9,
+      "description": "broken clouds",
+      "wind_speed": 4.12,
+      "humidity": 68,
+      "icon": "04d",
+      "flags": []
+    }
+  ]
+}
