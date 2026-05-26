@@ -45,51 +45,86 @@
                     Tiny Tell — Baby Cry Analyzer
                 </p>
                 <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 8px;">
-                    Last updated: May 15, 2026
+                    Last updated: May 22, 2026
                 </p>
             </div>
 
             <div style="line-height: 1.8; font-size: 1.05rem;">
-                <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
-                    Data Collection
-                </h2>
-                <p style="margin-bottom: 16px;">
-                    Tiny Tell collects <span class="hl hl-amber">audio recordings</span> when you use the cry analysis feature. We also collect your <span class="hl hl-blue">account email</span> if you create an account in future versions.
+                <div style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #f59e0b; padding: 20px 24px; margin-bottom: 32px; border-radius: 8px;">
+                    <p style="margin: 0; font-size: 1rem;">
+                        <strong style="color: #f59e0b;">⚠ Not a medical device.</strong> Tiny Tell is intended for caregiver convenience only. It is not designed for medical diagnosis, treatment, or clinical decision-making. If your baby is in distress or you have concerns about their health, contact your pediatrician or emergency services.
+                    </p>
+                </div>
+
+                <p style="margin-bottom: 24px;">
+                    This policy describes what data Tiny Tell collects, how it is processed, and how long it is kept. Tiny Tell is operated by <span class="hl hl-blue">Hafs Ibrahim</span> as an independent developer.
                 </p>
 
                 <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
-                    How Data is Processed
+                    What we collect
                 </h2>
                 <p style="margin-bottom: 16px;">
-                    Audio recordings are processed <span class="hl hl-rose">locally on your device</span> and sent to a <span class="hl hl-green">private ML server</span> running on Mac hardware. The server performs cry classification using an on-device machine learning model — <span class="hl hl-purple">no third-party AI services</span> are used.
+                    When you tap the analyze button, Tiny Tell records a short <span class="hl hl-amber">audio sample</span> of the cry and transmits it to a private inference server for classification. No other data is collected — no name, no email, no account, no device identifier, no usage analytics.
                 </p>
 
                 <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
-                    Data Retention
+                    How your audio is processed
                 </h2>
                 <p style="margin-bottom: 16px;">
-                    Audio files are <span class="hl hl-amber">discarded immediately</span> after inference completes. Your <span class="hl hl-blue">insight history</span> (cry classifications + timestamps) is stored <span class="hl hl-green">locally on your device only</span> — we do not maintain server-side records of your analyses.
+                    Audio is sent over an encrypted connection to a <span class="hl hl-green">private inference server</span> operated by the developer (Hafs Ibrahim). The server runs an on-device machine learning model to classify the cry into one of the supported categories. <span class="hl hl-rose">No third-party AI services, no cloud LLM providers, no analytics vendors</span> have access to your audio.
+                </p>
+                <p style="margin-bottom: 16px;">
+                    After classification, the audio file is <span class="hl hl-amber">discarded immediately</span> from the server. It is not stored, archived, logged, or used to train models. The server retains only ephemeral classification results long enough to return them to your app.
                 </p>
 
                 <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
-                    Third Parties
+                    What stays on your device
                 </h2>
                 <p style="margin-bottom: 16px;">
-                    Tiny Tell does not share data with third parties beyond Apple's infrastructure (App Store, iCloud if you enable device backup). We do not use analytics services, ad networks, or external cloud providers.
+                    Your <span class="hl hl-blue">insight history</span> — the classification results plus timestamps — is stored <span class="hl hl-green">only on your iPhone</span>. There is no server-side history, no cross-device sync, no backup unless you have iCloud Drive enabled at the iOS level. You can clear all local history at any time from the app's Settings screen.
                 </p>
 
                 <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
-                    Your Rights
+                    Children's data
                 </h2>
                 <p style="margin-bottom: 16px;">
-                    You can delete all insight history from the app's Settings screen at any time. Since audio is processed transiently and not stored, there is no audio data to delete from our servers.
+                    Tiny Tell is intended for use by caregivers (adults) to analyze sounds from infants. Audio samples may include the voices of children under 13. We do not knowingly collect identifying information about any child. Audio samples are transient (discarded after inference) and are never linked to a name, account, profile, or other identifier. If you believe an audio sample containing identifying information about a child was sent in error, email the address below and we will confirm it has been discarded.
+                </p>
+
+                <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
+                    Third parties
+                </h2>
+                <p style="margin-bottom: 16px;">
+                    Tiny Tell does not share data with any third party. The only infrastructure involved is Apple's (App Store delivery, iOS device runtime, and iCloud if you have iOS-level backup enabled) and the developer's own private inference server. No advertising networks, no analytics SDKs, no crash-reporting vendors, no marketing tools are integrated.
+                </p>
+
+                <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
+                    Your rights
+                </h2>
+                <p style="margin-bottom: 16px;">
+                    Because the audio you send is discarded immediately and no account or identifier is associated with it, there is typically no personal data to request, export, or delete from our side. You may at any time:
+                </p>
+                <ul style="margin-bottom: 24px; padding-left: 24px;">
+                    <li style="margin-bottom: 8px;"><strong>Delete your local insight history</strong> from the app's Settings screen.</li>
+                    <li style="margin-bottom: 8px;"><strong>Stop sending audio</strong> by simply not tapping the analyze button or by uninstalling the app.</li>
+                    <li style="margin-bottom: 8px;"><strong>Email us with a request</strong> regarding access, deletion, correction, portability, or restriction of processing. We will respond within 30 days.</li>
+                </ul>
+
+                <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
+                    Changes to this policy
+                </h2>
+                <p style="margin-bottom: 16px;">
+                    If we make material changes to how data is collected or processed, we will update the "Last updated" date at the top of this page and surface a notice in the app on next launch. Continued use after a material change constitutes acceptance of the updated policy.
                 </p>
 
                 <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
                     Contact
                 </h2>
-                <p style="margin-bottom: 32px;">
-                    Questions about privacy? Email <a href="mailto:hafs.darwish+tinytell@gmail.com" style="color: var(--accent); text-decoration: underline;">hafs.darwish+tinytell@gmail.com</a>
+                <p style="margin-bottom: 12px;">
+                    Privacy questions or requests: <a href="mailto:hafs.darwish+tinytell@gmail.com" style="color: var(--accent); text-decoration: underline;">hafs.darwish+tinytell@gmail.com</a>
+                </p>
+                <p style="margin-bottom: 32px; color: var(--text-muted); font-size: 0.95rem;">
+                    Responses typically within 48 hours.
                 </p>
             </div>
         </div>

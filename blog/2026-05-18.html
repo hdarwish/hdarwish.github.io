@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Android Tablet Wants to Be a Workstation - Hafs Ibrahim</title>
+    <meta name="description" content="Your Android Tablet Wants to Be a Workstation">
+    <meta property="og:title" content="Your Android Tablet Wants to Be a Workstation">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hdarwish.github.io/blog/2026-05-18.html">
+    <meta property="og:image" content="https://hdarwish.github.io/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: border-color 0.3s;
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-05-18">
+            <div class="blog-post-date">May 18, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Linux</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Repurposing Hardware</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Android</span></div>
+            <h2 class="blog-post-title">Your Android Tablet Wants to Be a Workstation</h2>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>The other day, I saw someone transform an $80 RK3562 Android tablet into a Debian Linux workstation. It was a wake-up call. We're surrounded by underutilized hardware. That cheap device collecting dust? It's more capable than you think.</p>
+
+<p>Old tablets often sit forgotten at home. We assume they're obsolete. But turning them into a Linux environment opens up new possibilities. It's like finding an extra tool in your garage you never used.</p>
+
+<p>This made me reconsider the potential in low-cost consumer electronics. We chase the latest hardware, dismissing budget devices as inadequate. But that's not always true. With some ingenuity, an $80 tablet can handle more than just streaming videos.</p>
+
+<p>I once ran a small web server on a Raspberry Pi. At $35, it worked well. But seeing a tablet with a built-in screen and battery do the same? That's a significant upgrade. It's like buying a car radio and getting a free car.</p>
+
+<p>Performance-wise, the RK3562 isn't a Snapdragon, but it's competent. With 4 ARM Cortex-A55 cores and a Mali-G52 GPU, it handles a light Linux desktop workload. It's enough for coding, web browsing, or server management.</p>
+
+<p>Unlike a phone, a tablet offers a decent screen size for multitasking. Debugging a Kubernetes cluster on a 6-inch screen is a nightmare. A tablet's 10-inch screen is a relief.</p>
+
+<p>The software is where the real magic happens. Android is versatile, but Linux offers unmatched tools and flexibility. Installing Debian on an Android tablet opens up everything from Docker to Emacs. It's not just converting; it's expanding possibilities.</p>
+
+<p>Consider connectivity. Android tablets come with Wi-Fi, Bluetooth, and sometimes a SIM slot. They offer more connectivity options than a Raspberry Pi. With USB-C, you can connect peripherals like a keyboard or mouse.</p>
+
+<p>It's not just about workstations. Think custom kiosks, home automation, or digital signage. Tablets can be embedded into appliances or used as control panels. Once you break free from the Android sandbox, the limits disappear.</p>
+
+<p>Security might be a concern. With Linux, you can secure the system as you like. Regular updates and a vast community ensure you're not alone. Android security can be iffy, but a well-maintained Linux distro is robust.</p>
+
+<p>There are caveats. Some tablets have locked bootloaders or proprietary drivers. A bit of research goes a long way. But when you succeed, it's worth the effort.</p>
+
+<p>In an industry that equates expense with quality, these projects challenge that notion. They show that sometimes, the best solution isn't the most expensive. It's the one you build yourself.</p>
+
+<p>I've seen folks build entire NAS systems using old hardware. Each time, it amazes me what's possible with creativity. This tablet conversion is another example of that spirit.</p>
+
+<p>The next time you see a stack of old gadgets, remember: they might be your new favorite tool. Your Android tablet wants to be a workstation. Let it.</p>
+
+<p>There's hidden potential in our unused tech. Maybe it's time we find out.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://github.com/tech4bot/rk3562deb" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">I turned a $80 RK3562 Android tablet into a Debian Linux workstation</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲320</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://wiki.postmarketos.org/wiki/Main_Page" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">PostmarketOS Wiki</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.youtube.com/watch?v=V8rZWw9HE7o" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Running Linux on Android Devices</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">VIDEO</span></a><a href="https://wiki.debian.org/Mobile" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Debian on Mobile Devices</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
