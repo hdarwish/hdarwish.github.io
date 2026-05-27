@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-27",
+    "title": "Stop Treating Git Like It's Just for Code",
+    "tags": [
+      "Git",
+      "Creative Process",
+      "Version Control"
+    ],
+    "excerpt": "I read about someone building a Git-tracked book production pipeline and thought, why didn't I consider this before? Using Git branches to manage drafts, feedback, and edits in a creative project is...",
+    "hn_refs": [
+      {
+        "title": "I built a Git-tracked book production pipeline",
+        "url": "https://www.djspeckhals.com/posts/2026-05-22-how-i-bypassed-adobe-and-microsoft-to-build-a-git-tracked-book-production-pipeline/",
+        "points": 237
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Pro Git",
+        "url": "https://git-scm.com/book/en/v2",
+        "kind": "book"
+      },
+      {
+        "title": "Version Control for Writers: A Git Workflow",
+        "url": "https://www.youtube.com/watch?v=7kT6pG5l0hY",
+        "kind": "video"
+      },
+      {
+        "title": "Git for Writers: How to Use Version Control in Your Writing Process",
+        "url": "https://writingcooperative.com/git-for-writers-how-to-use-version-control-in-your-writing-process-3b5c5a9e2c4d",
+        "kind": "article"
+      }
+    ]
+  },
+  {
     "date": "2026-05-26",
     "title": "AI Coding Tools: Slower Isn't Always Worse",
     "tags": [
