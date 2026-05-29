@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-29",
+    "title": "You're Underestimating Postgres as a Workflow Engine",
+    "tags": [
+      "Postgres",
+      "Workflows",
+      "Orchestration"
+    ],
+    "excerpt": "I stumbled upon a blog post claiming that Postgres could handle durable workflows. My first thought was about the potential to simplify our tech stack by dropping a dedicated workflow engine.We've...",
+    "hn_refs": [
+      {
+        "title": "Building durable workflows on Postgres",
+        "url": "https://www.dbos.dev/blog/postgres-is-all-you-need-for-durable-execution",
+        "points": 248
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "PostgreSQL as a Data Platform: Triggers, JSONB, and LISTEN/NOTIFY",
+        "url": "https://www.youtube.com/watch?v=9kZ2mT2s2cQ",
+        "kind": "talk"
+      },
+      {
+        "title": "Using PostgreSQL as a Job Queue",
+        "url": "https://brandur.org/postgres-queues",
+        "kind": "article"
+      },
+      {
+        "title": "PostgreSQL: The Power of Triggers and JSONB",
+        "url": "https://www.postgresql.org/docs/current/plpgsql-trigger.html",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
     "date": "2026-05-27",
     "title": "Stop Treating Git Like It's Just for Code",
     "tags": [
