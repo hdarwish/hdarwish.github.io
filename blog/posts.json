@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-05-30",
+    "title": "Stop Overengineering: SQLite Handles More Than You Think",
+    "tags": [
+      "SQLite",
+      "workflows",
+      "simplicity"
+    ],
+    "excerpt": "Last month, I read a post claiming SQLite could manage durable workflows. My initial reaction was skepticism. But then I thought about its simplicity. We hear a lot about orchestration tools and...",
+    "hn_refs": [
+      {
+        "title": "SQLite is all you need for durable workflows",
+        "url": "https://obeli.sk/blog/sqlite-is-all-you-need-for-durable-workflows/",
+        "points": 503
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Design and Implementation of SQLite",
+        "url": "https://sqlite.org/books.html",
+        "kind": "book"
+      }
+    ]
+  },
+  {
     "date": "2026-05-29",
     "title": "You're Underestimating Postgres as a Workflow Engine",
     "tags": [
