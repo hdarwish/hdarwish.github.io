@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-05-31",
+    "title": "Tech Isn't Your Moat—Domain Expertise Is",
+    "tags": [
+      "domain expertise",
+      "technology",
+      "innovation"
+    ],
+    "excerpt": "I stumbled upon a blog post suggesting that domain expertise is the real competitive advantage in today's business landscape. It made me pause. In an industry that reveres the newest tech, this idea...",
+    "hn_refs": [
+      {
+        "title": "Domain expertise has always been the real moat",
+        "url": "https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/",
+        "points": 551
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Innovator's Prescription: A Disruptive Solution for Health Care",
+        "url": "https://www.amazon.com/Innovators-Prescription-Disruptive-Solution-Health/dp/0071592083",
+        "kind": "book"
+      },
+      {
+        "title": "Competing on Analytics: The New Science of Winning",
+        "url": "https://www.amazon.com/Competing-Analytics-New-Science-Winning/dp/1422103323",
+        "kind": "book"
+      },
+      {
+        "title": "The Role of Domain Expertise in Requirements Engineering",
+        "url": "https://ieeexplore.ieee.org/document/1001234",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
     "date": "2026-05-30",
     "title": "Stop Overengineering: SQLite Handles More Than You Think",
     "tags": [
