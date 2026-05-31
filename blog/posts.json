@@ -1,13 +1,13 @@
 [
   {
     "date": "2026-05-31",
-    "title": "Tech Stacks Are Temporary; Domain Expertise Is Forever",
+    "title": "Your AI Model Won't Save You from Ignorance",
     "tags": [
-      "domain-expertise",
-      "software-development",
-      "competitive-advantage"
+      "domain expertise",
+      "technology",
+      "business strategy"
     ],
-    "excerpt": "I stumbled upon a blog post that claimed domain expertise is the ultimate competitive edge. It was a stark reminder. In our obsession with shiny new tech stacks, we often forget that the real moat is...",
+    "excerpt": "I read an article claiming domain expertise is the ultimate moat in business. It made me rethink how often we underestimate deep, specialized knowledge in favor of flashy tech solutions. In an age...",
     "hn_refs": [
       {
         "title": "Domain expertise has always been the real moat",
@@ -17,18 +17,18 @@
     ],
     "further_reading": [
       {
-        "title": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
-        "url": "https://itrevolution.com/the-phoenix-project/",
+        "title": "The Alignment Problem: Machine Learning and Human Values",
+        "url": "https://www.harpercollins.com/products/the-alignment-problem-brian-christian",
         "kind": "book"
       },
       {
-        "title": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
-        "url": "https://www.informit.com/store/domain-driven-design-tackling-complexity-in-the-heart-9780321125217",
-        "kind": "book"
+        "title": "Why Domain Knowledge is Critical for Data Science",
+        "url": "https://www.kdnuggets.com/2019/04/why-domain-knowledge-critical-data-science.html",
+        "kind": "article"
       },
       {
-        "title": "The Importance of Domain Knowledge in Software Development",
-        "url": "https://martinfowler.com/articles/domain-oriented-observability.html",
+        "title": "The Importance of Domain Expertise in Data Science",
+        "url": "https://towardsdatascience.com/the-importance-of-domain-expertise-in-data-science-5f0d2f1cbd2d",
         "kind": "article"
       }
     ]
