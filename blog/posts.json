@@ -1,13 +1,13 @@
 [
   {
     "date": "2026-05-31",
-    "title": "Tech Isn't Your Moat—Domain Expertise Is",
+    "title": "Stop Chasing Tech, Start Embracing Domain Expertise",
     "tags": [
       "domain expertise",
       "technology",
-      "innovation"
+      "industry knowledge"
     ],
-    "excerpt": "I stumbled upon a blog post suggesting that domain expertise is the real competitive advantage in today's business landscape. It made me pause. In an industry that reveres the newest tech, this idea...",
+    "excerpt": "I read a blog post claiming domain expertise is the ultimate competitive advantage. It made me rethink the value of deep industry knowledge over the latest tech trends. I've seen the pendulum swing...",
     "hn_refs": [
       {
         "title": "Domain expertise has always been the real moat",
@@ -17,19 +17,14 @@
     ],
     "further_reading": [
       {
-        "title": "The Innovator's Prescription: A Disruptive Solution for Health Care",
-        "url": "https://www.amazon.com/Innovators-Prescription-Disruptive-Solution-Health/dp/0071592083",
+        "title": "The Lean Startup",
+        "url": "https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898/",
         "kind": "book"
       },
       {
-        "title": "Competing on Analytics: The New Science of Winning",
-        "url": "https://www.amazon.com/Competing-Analytics-New-Science-Winning/dp/1422103323",
+        "title": "Domain Driven Design: Tackling Complexity in the Heart of Software",
+        "url": "https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/",
         "kind": "book"
-      },
-      {
-        "title": "The Role of Domain Expertise in Requirements Engineering",
-        "url": "https://ieeexplore.ieee.org/document/1001234",
-        "kind": "paper"
       }
     ]
   },
