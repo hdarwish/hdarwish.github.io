@@ -1,13 +1,13 @@
 [
   {
     "date": "2026-05-31",
-    "title": "Stop Chasing Tech, Start Embracing Domain Expertise",
+    "title": "Tech Stacks Are Temporary; Domain Expertise Is Forever",
     "tags": [
-      "domain expertise",
-      "technology",
-      "industry knowledge"
+      "domain-expertise",
+      "software-development",
+      "competitive-advantage"
     ],
-    "excerpt": "I read a blog post claiming domain expertise is the ultimate competitive advantage. It made me rethink the value of deep industry knowledge over the latest tech trends. I've seen the pendulum swing...",
+    "excerpt": "I stumbled upon a blog post that claimed domain expertise is the ultimate competitive edge. It was a stark reminder. In our obsession with shiny new tech stacks, we often forget that the real moat is...",
     "hn_refs": [
       {
         "title": "Domain expertise has always been the real moat",
@@ -17,14 +17,19 @@
     ],
     "further_reading": [
       {
-        "title": "The Lean Startup",
-        "url": "https://www.amazon.com/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898/",
+        "title": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
+        "url": "https://itrevolution.com/the-phoenix-project/",
         "kind": "book"
       },
       {
-        "title": "Domain Driven Design: Tackling Complexity in the Heart of Software",
-        "url": "https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/",
+        "title": "Domain-Driven Design: Tackling Complexity in the Heart of Software",
+        "url": "https://www.informit.com/store/domain-driven-design-tackling-complexity-in-the-heart-9780321125217",
         "kind": "book"
+      },
+      {
+        "title": "The Importance of Domain Knowledge in Software Development",
+        "url": "https://martinfowler.com/articles/domain-oriented-observability.html",
+        "kind": "article"
       }
     ]
   },
