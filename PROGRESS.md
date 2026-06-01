@@ -1,55 +1,21 @@
-# Progress: 31 AI Business Skills — Implementation-as-a-Service fake-door
-Card: t_ea59322d
-Branch: bld-ea593-cforev
-Started: 2026-05-25T15:17:00Z
+# Progress: Apply hover solid-card treatment to normal blog/list state
+Card: t_ecdb8d35
+Branch: bld-ecdb8-hoverfix
+Started: 2026-06-01T14:08Z
 
 ## Checklist
 - [x] Read card and estimated
-- [x] Created landing page at /bizskills/index.html
-- [x] Mirrored CodeReview Bot structure (fake-door waitlist model)
-- [x] All value props and pricing included
-- [x] Form logs to console (no backend yet — this is fake-door validation)
-- [x] Committed and pushed
-
-## Implementation Details
-
-### What shipped
-- Single-page fake-door landing at `/bizskills/index.html`
-- Styling inherits from existing `style.css` (consistent with CodeReview Bot and main portfolio)
-- Form captures: email, company name, industry, tier selection (Free/Pro/Unsure)
-- Form logs to console (production would POST to backend or Google Form)
-- Pricing: Free (3 skills) vs. Pro ($199 one-time + $29/mo, all 31 skills + guided onboarding)
-- Kill signal in FAQ: <10 paying customers in first 30 days
-
-### Value props emphasized
-1. 10-minute setup (vs. 382K downloads, 99% never configure)
-2. All 31 Anthropic business skills pre-configured
-3. $199 + $29/mo (vs. building automated wizard — lean concierge MVP per CFO recommendation)
-
-### Fake-door validation approach
-- No backend infrastructure yet
-- Form submission shows success message, logs to console
-- Email: hafs.darwish+bizskills@gmail.com (easy to filter inbound)
-- Conversion signal: form submissions
-- If <10 signups in 30 days after posting to viral thread, kill the idea
+- [x] Inspect prior builder branch (bld-ecdb8-hovercards) — partial fix, not merged to master
+- [ ] Fix blog.html .blog-card normal state (accent border + shadow)
+- [ ] Fix blog/2026-06-01.html .blog-post-card (opaque bg, stronger border, shadow)
+- [ ] Batch-fix all blog/*.html post files (same treatment)
+- [ ] Fix herald/blog/generate_blog_post.py template (future posts inherit)
+- [ ] Commit and push to bld-ecdb8-hoverfix
+- [ ] Merge to master and push
+- [ ] Acceptance criteria self-check
 
 ## Notes
-- CFO recommended lean/fake-door over building 8-hour automated wizard
-- Follows CodeReview Bot pattern (existing template on site)
-- Skills list sourced from card body (31 skills: financial ops, sales, HR, marketing, reporting)
-- Viral signal: @RoundtableSpace tweet (382K downloads, 3,689 bookmarks, 176K views)
-- Next step: post landing page URL to viral tweet thread + r/smallbusiness
-
-## Acceptance Criteria Self-Check
-- [x] AC1: Landing page exists and is accessible — PASS (file created at /bizskills/index.html)
-- [x] AC2: Pricing and value props match card — PASS (Free: 3 skills, Pro: $199 + $29/mo for all 31)
-- [x] AC3: Fake-door form captures lead data — PASS (email, company, industry, tier)
-- [x] AC4: Kill signal documented — PASS (<10 customers in 30 days per FAQ section)
-- [x] AC5: Follows existing site style — PASS (uses ../style.css, matches CodeReview Bot structure)
-
-## Rework — Merge Conflict Resolution (2026-05-25T12:34Z)
-- [x] PR #4 had merge conflicts with master after PR #3 merged
-  - Conflict in PROGRESS.md (two different card progress files)
-  - Resolution: kept branch-specific progress (t_ea59322d), accepted master's new resume-boost/ directory
-  - Commit 0408d06, pushed to origin/bld-ea593-cforev
-  - PR #4 updated, mergeable status now clear
+- Prior builder branch bld-ecdb8-hovercards had partial CSS fixes but was never merged to master
+- Architect review fail: post card still uses rgba(16, 20, 28, 0.98) — needs explicit opaque
+- Key fix: var(--border) = #2a2a2e against var(--surface) = #1a1a1e is nearly invisible; accent border at 0.35 opacity makes cards pop
+- All blog/*.html files need batch treatment; generator updated for future posts

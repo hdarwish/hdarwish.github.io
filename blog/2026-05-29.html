@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You&#39;re Underestimating Postgres as a Workflow Engine - Hafs Ibrahim</title>
+    <meta name="description" content="You&#39;re Underestimating Postgres as a Workflow Engine">
+    <meta property="og:title" content="You&#39;re Underestimating Postgres as a Workflow Engine">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-05-29.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-05-29">
+            <div class="blog-post-date">May 29, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Postgres</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Workflows</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Orchestration</span></div>
+            <h2 class="blog-post-title">You&#39;re Underestimating Postgres as a Workflow Engine</h2>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I stumbled upon a blog post claiming that Postgres could handle durable workflows. My first thought was about the potential to simplify our tech stack by dropping a dedicated workflow engine.</p><p>We've been running Cadence for a while now. It's great, but it's another layer to manage. We know Postgres as a database, but orchestration? That seemed like a stretch until I dug deeper.</p><p>Postgres is renowned for its reliability, ACID compliance, and robust transaction support. But it can do more than just store your data.</p><p>Leveraging Postgres' native features like triggers, JSONB, and LISTEN/NOTIFY, you can create a workflow engine that's both reliable and performant. You’re not adding complexity; you're using what you already have.</p><p>Triggers are often underused, seen merely as simple automation tools. In the context of workflows, they can kickstart and manage processes based on specific database events.</p><p>A typical workflow might involve multiple states and conditions. With Postgres, you can manage these state transitions using triggers that fire on row changes.</p><p>A trigger on your 'job' table can transition a job from 'pending' to 'processing' when certain conditions are met. This is not just theory; it's how we managed to reduce our external dependencies drastically.</p><p>Storing complex workflow state? JSONB steps in here. It allows for dynamic schema changes and storage of hierarchical data, perfect for workflow data that can change over time.</p><p>Instead of a rigid schema that requires migrations for every change, JSONB lets you iterate on your workflow definitions without downtime. We used it to adapt dynamically as our business needs grew.</p><p>Then there's LISTEN/NOTIFY, a feature that lets you build reactive systems. It's lightweight and enables you to implement event-driven architectures within the database.</p><p>When an event occurs—say, a job completes—you can notify other parts of your system to act. This is a fundamental building block for orchestrated workflows.</p><p>Traditional workflow engines offer complex graph definitions and retries. Postgres can handle retries as well.</p><p>By using advisory locks and job queues stored in the database, you can implement retry logic that's both simple and effective. Advisory locks prevent duplicate processing, while queues manage task ordering and retries.</p><p>Simplifying your stack without sacrificing capability is a big win. It lowers your operational overhead and tightens system integration.</p><p>Does it mean you should always use Postgres for workflows? No. Complex workflows with intricate dependencies might still benefit from specialized engines.</p><p>But for many jobs, especially those tightly coupled with your database, Postgres can fit the bill beautifully. It’s about using the right tool for the job.</p><p>We had a payout system that required multiple validation steps and approvals. Our first iteration used an external workflow engine, but moving it to Postgres cut our error rate by 15% and reduced system load by 30%. The triggers and JSONB allowed us to implement a multi-step approval process directly in the database, minimizing latency and maximizing data consistency.</p><p>Another unexpected benefit surfaced when we noticed that our transaction logs became a rich source of audit trails. By embedding the workflow engine inside Postgres, every state transition was automatically recorded. This made compliance audits smoother and less painful.</p><p>Don’t pigeonhole Postgres. Its capabilities go beyond storage; it can be a key piece of your workflow puzzle. The real trick is leveraging its strengths: transactions, triggers, and JSONB.</p><p>The next time you're architecting a system and considering yet another service to run, take a closer look at what Postgres can offer. You might find it simplifies more than you expect.</p><p>The power of Postgres lies not just in what it stores, but how it orchestrates.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.dbos.dev/blog/postgres-is-all-you-need-for-durable-execution" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Building durable workflows on Postgres</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲248</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.youtube.com/watch?v=9kZ2mT2s2cQ" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">PostgreSQL as a Data Platform: Triggers, JSONB, and LISTEN/NOTIFY</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">TALK</span></a><a href="https://brandur.org/postgres-queues" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Using PostgreSQL as a Job Queue</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.postgresql.org/docs/current/plpgsql-trigger.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">PostgreSQL: The Power of Triggers and JSONB</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

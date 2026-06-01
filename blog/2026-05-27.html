@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Treating Git Like It&#39;s Just for Code - Hafs Ibrahim</title>
+    <meta name="description" content="Stop Treating Git Like It&#39;s Just for Code">
+    <meta property="og:title" content="Stop Treating Git Like It&#39;s Just for Code">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-05-27.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-05-27">
+            <div class="blog-post-date">May 27, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Git</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Creative Process</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Version Control</span></div>
+            <h2 class="blog-post-title">Stop Treating Git Like It&#39;s Just for Code</h2>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I read about someone building a Git-tracked book production pipeline and thought, why didn't I consider this before? Using Git branches to manage drafts, feedback, and edits in a creative project is a revelation.</p>
+
+<p>Git's been solving version control nightmares for developers since Linus Torvalds got annoyed with CVS. But it doesn't have to stop at software. Applying Git's branching and merging capabilities to a book project is both exciting and logical.</p>
+
+<p>Writing a book can be chaotic: drafts scattered across Word docs, feedback in email threads, revisions in files labeled "final_final_reallyfinal.docx." It's a mess. Git can turn this chaos into a structured, traceable history.</p>
+
+<p>Last year, I managed a documentation project with Git. I set up a repository and created branches for each chapter. This changed my perception of writing entirely.</p>
+
+<p>Branching for new ideas meant I could experiment without fear. In traditional setups, you'd be overriding text or losing track of changes. With Git, every wild idea has a safe space to either flourish or fizzle.</p>
+
+<p>Merging in creative work isn't just about integrating text. It's about integrating ideas. When I merged a side branch back into the main storyline, it felt like deploying a feature that just works.</p>
+
+<p>The commit messages document evolution. Each "fix awkward phrasing," "add more context," or "delete redundant metaphor" is a slice of the creative process made visible, searchable, and undoable.</p>
+
+<p>Collaboration is where Git shines. Reviewers can make pull requests with inline comments. Feedback becomes actionable, and accepted changes are tracked as contributions, not edits lost in email attachments.</p>
+
+<p>Collaboration maintains the integrity of the original text while allowing for communal input. No more accidental overwrites or "who changed this?" mysteries.</p>
+
+<p>There's also the audit trail aspect. Tracing back through versions to see when and why a change was made is like a window into the decision-making process.</p>
+
+<p>The workflow becomes a progression of versions, each a snapshot of creative intent. You can compare drafts side by side, view the evolution of plotlines, or revert a controversial plot twist without losing other progress.</p>
+
+<p>This isn't perfect for every project. Massive binary files, like high-resolution images, can make Git repositories cumbersome. But for text-heavy projects, Git is transformative.</p>
+
+<p>Tools like GitBook and Bookdown are catching onto this, making it easier for authors to adopt version control. They integrate with Git to provide platforms that feel like home for writers who aren't developers.</p>
+
+<p>The real insight is seeing developer tools not just as technical solutions, but as enablers for creative processes. It's about expanding the toolbox we use to manage projects, whether they compile or not.</p>
+
+<p>Git isn't just about code. It's about managing change. Whether you're refining a paragraph or refactoring a function, the challenges are more similar than different.</p>
+
+<p>If you're wrangling a messy creative project, give Git a shot. It's like hiring a librarian who never sleeps.</p>
+
+<p>The real gift of Git is control. Control over chaos. And every writer, artist, or creator craves just that.</p>
+
+<p>Next time you're lost in a sea of document versions, remember: branching out might just be the answer.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.djspeckhals.com/posts/2026-05-22-how-i-bypassed-adobe-and-microsoft-to-build-a-git-tracked-book-production-pipeline/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">I built a Git-tracked book production pipeline</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲237</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://git-scm.com/book/en/v2" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Pro Git</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://www.youtube.com/watch?v=7kT6pG5l0hY" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Version Control for Writers: A Git Workflow</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">VIDEO</span></a><a href="https://writingcooperative.com/git-for-writers-how-to-use-version-control-in-your-writing-process-3b5c5a9e2c4d" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Git for Writers: How to Use Version Control in Your Writing Process</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

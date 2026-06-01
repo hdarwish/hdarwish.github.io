@@ -1,5 +1,155 @@
 [
   {
+    "date": "2026-06-01",
+    "title": "Cloudflare Turnstile: Security at the Cost of Privacy?",
+    "tags": [
+      "security",
+      "privacy",
+      "web technology"
+    ],
+    "excerpt": "The other day, I stumbled upon a heated debate about Cloudflare's new Turnstile and its reliance on WebGL. It got me thinking about the privacy implications of such a security measure.WebGL isn't...",
+    "hn_refs": [
+      {
+        "title": "Cloudflare Turnstile requiring fingerprintable WebGL",
+        "url": "https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting",
+        "points": 689
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Web Tracking: Mechanisms, Implications, and Defenses",
+        "url": "https://www.cl.cam.ac.uk/~rja14/Papers/webtracking.pdf",
+        "kind": "paper"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-31",
+    "title": "Your AI Model Won't Save You from Ignorance",
+    "tags": [
+      "domain expertise",
+      "technology",
+      "business strategy"
+    ],
+    "excerpt": "I read an article claiming domain expertise is the ultimate moat in business. It made me rethink how often we underestimate deep, specialized knowledge in favor of flashy tech solutions. In an age...",
+    "hn_refs": [
+      {
+        "title": "Domain expertise has always been the real moat",
+        "url": "https://www.brethorsting.com/blog/2026/05/domain-expertise-has-always-been-the-real-moat/",
+        "points": 551
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Alignment Problem: Machine Learning and Human Values",
+        "url": "https://www.harpercollins.com/products/the-alignment-problem-brian-christian",
+        "kind": "book"
+      },
+      {
+        "title": "Why Domain Knowledge is Critical for Data Science",
+        "url": "https://www.kdnuggets.com/2019/04/why-domain-knowledge-critical-data-science.html",
+        "kind": "article"
+      },
+      {
+        "title": "The Importance of Domain Expertise in Data Science",
+        "url": "https://towardsdatascience.com/the-importance-of-domain-expertise-in-data-science-5f0d2f1cbd2d",
+        "kind": "article"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-30",
+    "title": "Stop Overengineering: SQLite Handles More Than You Think",
+    "tags": [
+      "SQLite",
+      "workflows",
+      "simplicity"
+    ],
+    "excerpt": "Last month, I read a post claiming SQLite could manage durable workflows. My initial reaction was skepticism. But then I thought about its simplicity. We hear a lot about orchestration tools and...",
+    "hn_refs": [
+      {
+        "title": "SQLite is all you need for durable workflows",
+        "url": "https://obeli.sk/blog/sqlite-is-all-you-need-for-durable-workflows/",
+        "points": 503
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Design and Implementation of SQLite",
+        "url": "https://sqlite.org/books.html",
+        "kind": "book"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-29",
+    "title": "You're Underestimating Postgres as a Workflow Engine",
+    "tags": [
+      "Postgres",
+      "Workflows",
+      "Orchestration"
+    ],
+    "excerpt": "I stumbled upon a blog post claiming that Postgres could handle durable workflows. My first thought was about the potential to simplify our tech stack by dropping a dedicated workflow engine.We've...",
+    "hn_refs": [
+      {
+        "title": "Building durable workflows on Postgres",
+        "url": "https://www.dbos.dev/blog/postgres-is-all-you-need-for-durable-execution",
+        "points": 248
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "PostgreSQL as a Data Platform: Triggers, JSONB, and LISTEN/NOTIFY",
+        "url": "https://www.youtube.com/watch?v=9kZ2mT2s2cQ",
+        "kind": "talk"
+      },
+      {
+        "title": "Using PostgreSQL as a Job Queue",
+        "url": "https://brandur.org/postgres-queues",
+        "kind": "article"
+      },
+      {
+        "title": "PostgreSQL: The Power of Triggers and JSONB",
+        "url": "https://www.postgresql.org/docs/current/plpgsql-trigger.html",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
+    "date": "2026-05-27",
+    "title": "Stop Treating Git Like It's Just for Code",
+    "tags": [
+      "Git",
+      "Creative Process",
+      "Version Control"
+    ],
+    "excerpt": "I read about someone building a Git-tracked book production pipeline and thought, why didn't I consider this before? Using Git branches to manage drafts, feedback, and edits in a creative project is...",
+    "hn_refs": [
+      {
+        "title": "I built a Git-tracked book production pipeline",
+        "url": "https://www.djspeckhals.com/posts/2026-05-22-how-i-bypassed-adobe-and-microsoft-to-build-a-git-tracked-book-production-pipeline/",
+        "points": 237
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Pro Git",
+        "url": "https://git-scm.com/book/en/v2",
+        "kind": "book"
+      },
+      {
+        "title": "Version Control for Writers: A Git Workflow",
+        "url": "https://www.youtube.com/watch?v=7kT6pG5l0hY",
+        "kind": "video"
+      },
+      {
+        "title": "Git for Writers: How to Use Version Control in Your Writing Process",
+        "url": "https://writingcooperative.com/git-for-writers-how-to-use-version-control-in-your-writing-process-3b5c5a9e2c4d",
+        "kind": "article"
+      }
+    ]
+  },
+  {
     "date": "2026-05-26",
     "title": "AI Coding Tools: Slower Isn't Always Worse",
     "tags": [
