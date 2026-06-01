@@ -346,6 +346,78 @@ footer {
     background: transparent;
 }
 
+/* Blog page containers must sit above the body::before grid (z-index: 0),
+   otherwise opaque cards look "transparent" because the grid paints over them. */
+.blog-hero,
+.blog-posts,
+.blog-pagination,
+.post-nav,
+.post-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Solid foreground panels for blog list + article cards. Override the
+   inline per-page rules so the surface reads as a real opaque slab,
+   not a pane of glass laid over the grid behind it. */
+.blog-card,
+.blog-post-card {
+    background: #1f1f25 !important;
+    border: 1px solid #34343d !important;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.04) inset,
+        0 0 0 1px rgba(0, 0, 0, 0.5),
+        0 18px 38px -12px rgba(0, 0, 0, 0.75),
+        0 6px 14px rgba(0, 0, 0, 0.45) !important;
+}
+.blog-card:hover {
+    border-color: var(--accent) !important;
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.06) inset,
+        0 0 0 1px rgba(0, 0, 0, 0.5),
+        0 22px 44px -12px rgba(0, 0, 0, 0.8),
+        0 8px 18px rgba(0, 0, 0, 0.55) !important;
+}
+.blog-post-card:hover {
+    box-shadow:
+        0 1px 0 rgba(255, 255, 255, 0.06) inset,
+        0 0 0 1px rgba(0, 0, 0, 0.5),
+        0 22px 44px -12px rgba(0, 0, 0, 0.8),
+        0 8px 18px rgba(0, 0, 0, 0.55) !important;
+}
+
+/* Hero image inside an article: own crisp dark frame, clear gap to text. */
+.blog-hero-image-wrapper {
+    margin: 0 0 1.75rem !important;
+    border: 1px solid #2a2a32 !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+    box-shadow:
+        0 0 0 1px rgba(0, 0, 0, 0.55),
+        0 10px 24px rgba(0, 0, 0, 0.55) !important;
+    background: #0d0d10;
+}
+.blog-hero-image-wrapper img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 1 !important;
+}
+
+/* Inner text slab inside the article card — gives the body copy its own
+   solid surface so it doesn't feel laid directly on top of the hero. */
+.blog-post-card .blog-post-body {
+    background: #161619;
+    border: 1px solid #26262c;
+    border-radius: 8px;
+    padding: 1.5rem 1.5rem 1.25rem;
+}
+@media (max-width: 768px) {
+    .blog-post-card .blog-post-body {
+        padding: 1rem 1rem 0.75rem;
+    }
+}
+
 .container {
     max-width: 1100px;
     width: 100%;
