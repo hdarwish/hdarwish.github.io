@@ -32,12 +32,16 @@
             pointer-events: none;
         }
         .blog-post-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
+            background: rgba(16, 20, 28, 0.98);
+            border: 1px solid rgba(59, 130, 246, 0.15);
             border-radius: 12px;
             padding: 2rem;
             margin-bottom: 2rem;
-            transition: border-color 0.3s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 1px rgba(59, 130, 246, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), 0 0 2px rgba(59, 130, 246, 0.2);
         }
         .blog-post-date {
             font-family: 'JetBrains Mono', monospace;
@@ -161,7 +165,7 @@
             <div class="blog-post-date">May 31, 2026</div>
             <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">domain expertise</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">technology</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">business strategy</span></div>
             <h2 class="blog-post-title">Your AI Model Won&#39;t Save You from Ignorance</h2>
-            <div style="margin:-0.5rem 0 1.5rem;border-radius:8px;overflow:hidden;"><img src="assets/2026-05-31-hero.png" alt="Your AI Model Won&#39;t Save You from Ignorance" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;"/></div>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-05-31-hero.png" alt="Your AI Model Won&#39;t Save You from Ignorance" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
             <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I read an article claiming domain expertise is the ultimate moat in business. It made me rethink how often we underestimate deep, specialized knowledge in favor of flashy tech solutions. In an age where AI is hailed as the savior of every industry, this felt like a truth I'd been ignoring.</p>  
 <p>I've worked with tech teams obsessed with tooling. They'd spend weeks optimizing Kubernetes clusters. But ask about the business problem they were solving, and they'd draw blanks. Technology without context is useless.</p>  
 <p>Consider an AI model. Feed it data, and it might predict trends. But without domain knowledge, what informs the dataset? How do you know what's missing or what's noise? I've seen companies pour resources into ML only to realize they built models on irrelevant data.</p>  
