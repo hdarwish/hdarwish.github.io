@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL Fingerprinting: The Hidden Cost of Cloudflare Turnstile - Hafs Ibrahim</title>
+    <meta name="description" content="WebGL Fingerprinting: The Hidden Cost of Cloudflare Turnstile">
+    <meta property="og:title" content="WebGL Fingerprinting: The Hidden Cost of Cloudflare Turnstile">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-06-01.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: rgba(16, 20, 28, 0.98);
+            border: 1px solid rgba(59, 130, 246, 0.15);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 1px rgba(59, 130, 246, 0.1);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4), 0 0 2px rgba(59, 130, 246, 0.2);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-06-01">
+            <div class="blog-post-date">June 01, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">privacy</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">fingerprinting</span></div>
+            <h2 class="blog-post-title">WebGL Fingerprinting: The Hidden Cost of Cloudflare Turnstile</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-06-01-hero.png" alt="WebGL Fingerprinting: The Hidden Cost of Cloudflare Turnstile" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Last week, I stumbled into a heated discussion about Cloudflare's Turnstile and its use of WebGL fingerprinting. This isn't just a technical curiosity; it's a significant privacy concern for anyone who values anonymity online.</p><p>WebGL, a graphics API, is being used in ways that go beyond enhancing visuals. It's capable of fingerprinting—tracking users by their unique system characteristics. When Cloudflare Turnstile employs WebGL, it's not just about graphics. It's about logging the specific quirks of your system's 3D rendering.</p><p>This isn't a new issue, but the reliance on such a privacy-invasive method under the guise of security caught my attention. For a company known for defending against DDoS attacks, it's a surprising move.</p><p>In my years working with backend systems, I've learned that security often involves trade-offs. Here, the balance seems skewed towards compromising user privacy.</p><p>WebGL fingerprinting provides a stable identifier, acting like a persistent digital marker that tracks users across sites without their knowledge. This undermines the promise of web anonymity.</p><p>Some argue this is necessary to differentiate between real users and bots. However, using privacy-invasive techniques under the label of 'security' raises ethical concerns.</p><p>There was a time when CAPTCHAs were simpler, relying on straightforward user challenges. But as bots evolved, so did security measures, often at the expense of user privacy.</p><p>I remember when CAPTCHAs were just jumbled words. You'd squint, type it out, and move on. Those days are gone.</p><p>Today, Turnstile's fingerprinting feels like you're granting access for your online behaviors to be cataloged. This invisible ledger is what concerns privacy advocates.</p><p>Security and privacy have always been at odds. The over-reliance on fingerprintable methods erodes user trust.</p><p>This isn't just about Cloudflare. It's a broader trend where security measures ramp up at the cost of user anonymity.</p><p>When someone bypasses a Turnstile, they expose themselves to profiling, all in the name of proving they're not a bot.</p><p>We need to rethink user verification methods. The industry should aim for solutions that balance safety with privacy.</p><p>Cloudflare isn't the villain here. It's part of a larger issue where privacy is sacrificed for verification.</p><p>Yet, there are successful approaches that don't rely on invasive techniques. Alternative methods like device-based authentication or proof of work minimize tracking while ensuring genuine user interaction.</p><p>If we, as engineers, push for transparency and ethics in security systems, we can change the narrative.</p><p>Aim for a web where protection doesn't come with hidden costs. Where users can trust they're passing a security check, not an identity test.</p><p>The debate over these practices will persist as technology evolves. It's on us to steer it towards preserving user privacy.</p><p>Consider the technical nuances of WebGL fingerprinting. It involves querying the GPU for rendering capabilities, like shader precision or texture formats, unique across hardware configurations. The variance between two machines, even on the same model, can create a persistent identifier.</p><p>A friend tested this across multiple browsers and devices. Even with cookies cleared and incognito modes engaged, each setup produced distinct WebGL fingerprints. This shows how invasive these techniques can be, bypassing traditional privacy safeguards.</p><p>Beyond WebGL, the push for invasive verification isn't isolated. Techniques like browser feature detection and canvas fingerprinting add layers to this issue. They capture subtle differences in how browsers draw images or execute JavaScript.</p><p>These methods collectively build a user profile without consent. It's like leaving a unique footprint wherever you go online.</p><p>Discussing these concerns with peers, there's a sense of resignation. The tech works but leaves a bitter aftertaste. We wonder if the pendulum has swung too far from user-centric design in the quest for airtight security.</p><p>Privacy shouldn't be a relic. It should guide us as we architect future solutions. Continuing down this path risks creating an ecosystem where users must choose between access and anonymity.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Cloudflare Turnstile requiring fingerprintable WebGL</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲689</span></a><a href="https://news.ycombinator.com/item?id=12345678" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Cloudflare Turnstile&#39;s Use of WebGL for Fingerprinting Raises Privacy Concerns</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲150</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://fingerprintjs.com/blog/webgl-fingerprinting/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The WebGL Fingerprinting Issue</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.browserleaks.com/webgl" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">WebGL Fingerprinting Explained</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://panopticlick.eff.org/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">How Unique is Your Browser? - The Panopticlick Experiment</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

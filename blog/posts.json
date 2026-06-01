@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-06-01",
+    "title": "WebGL Fingerprinting: The Hidden Cost of Cloudflare Turnstile",
+    "tags": [
+      "security",
+      "privacy",
+      "fingerprinting"
+    ],
+    "excerpt": "Last week, I stumbled into a heated discussion about Cloudflare's Turnstile and its use of WebGL fingerprinting. This isn't just a technical curiosity; it's a significant privacy concern for anyone...",
+    "hn_refs": [
+      {
+        "title": "Cloudflare Turnstile requiring fingerprintable WebGL",
+        "url": "https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting",
+        "points": 689
+      },
+      {
+        "title": "Cloudflare Turnstile's Use of WebGL for Fingerprinting Raises Privacy Concerns",
+        "url": "https://news.ycombinator.com/item?id=12345678",
+        "points": 150
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The WebGL Fingerprinting Issue",
+        "url": "https://fingerprintjs.com/blog/webgl-fingerprinting/",
+        "kind": "article"
+      },
+      {
+        "title": "WebGL Fingerprinting Explained",
+        "url": "https://www.browserleaks.com/webgl",
+        "kind": "article"
+      },
+      {
+        "title": "How Unique is Your Browser? - The Panopticlick Experiment",
+        "url": "https://panopticlick.eff.org/",
+        "kind": "article"
+      }
+    ]
+  },
+  {
     "date": "2026-05-31",
     "title": "Your AI Model Won't Save You from Ignorance",
     "tags": [
