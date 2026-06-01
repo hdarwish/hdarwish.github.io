@@ -32,7 +32,7 @@ html[data-theme="light"],
 }
 
 [data-theme="light"] .nav {
-    background: rgba(250, 248, 245, 0.85);
+    background: rgba(250, 248, 245, 0.96);
 }
 
 [data-theme="light"] .hero-bg {
@@ -110,7 +110,7 @@ html[data-theme="eink"],
 }
 
 [data-theme="eink"] .nav {
-    background: rgba(232, 228, 218, 0.9);
+    background: rgba(232, 228, 218, 0.96);
 }
 
 [data-theme="eink"] .hero-bg {
@@ -204,7 +204,7 @@ html[data-theme="drunk"],
 }
 
 [data-theme="drunk"] .nav {
-    background: rgba(26, 10, 46, 0.9);
+    background: rgba(26, 10, 46, 0.96);
 }
 
 [data-theme="drunk"] .hero-bg {
@@ -362,7 +362,7 @@ footer {
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(10, 10, 11, 0.8);
+    background: rgba(10, 10, 11, 0.96);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s;
