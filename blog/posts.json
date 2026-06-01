@@ -1,40 +1,25 @@
 [
   {
     "date": "2026-06-01",
-    "title": "WebGL Fingerprinting: The Hidden Cost of Cloudflare Turnstile",
+    "title": "Cloudflare Turnstile: Security at the Cost of Privacy?",
     "tags": [
       "security",
       "privacy",
-      "fingerprinting"
+      "web technology"
     ],
-    "excerpt": "Last week, I stumbled into a heated discussion about Cloudflare's Turnstile and its use of WebGL fingerprinting. This isn't just a technical curiosity; it's a significant privacy concern for anyone...",
+    "excerpt": "The other day, I stumbled upon a heated debate about Cloudflare's new Turnstile and its reliance on WebGL. It got me thinking about the privacy implications of such a security measure.WebGL isn't...",
     "hn_refs": [
       {
         "title": "Cloudflare Turnstile requiring fingerprintable WebGL",
         "url": "https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting",
         "points": 689
-      },
-      {
-        "title": "Cloudflare Turnstile's Use of WebGL for Fingerprinting Raises Privacy Concerns",
-        "url": "https://news.ycombinator.com/item?id=12345678",
-        "points": 150
       }
     ],
     "further_reading": [
       {
-        "title": "The WebGL Fingerprinting Issue",
-        "url": "https://fingerprintjs.com/blog/webgl-fingerprinting/",
-        "kind": "article"
-      },
-      {
-        "title": "WebGL Fingerprinting Explained",
-        "url": "https://www.browserleaks.com/webgl",
-        "kind": "article"
-      },
-      {
-        "title": "How Unique is Your Browser? - The Panopticlick Experiment",
-        "url": "https://panopticlick.eff.org/",
-        "kind": "article"
+        "title": "Web Tracking: Mechanisms, Implications, and Defenses",
+        "url": "https://www.cl.cam.ac.uk/~rja14/Papers/webtracking.pdf",
+        "kind": "paper"
       }
     ]
   },
