@@ -6,16 +6,30 @@ Started: 2026-06-01T14:08Z
 ## Checklist
 - [x] Read card and estimated
 - [x] Inspect prior builder branch (bld-ecdb8-hovercards) — partial fix, not merged to master
-- [ ] Fix blog.html .blog-card normal state (accent border + shadow)
-- [ ] Fix blog/2026-06-01.html .blog-post-card (opaque bg, stronger border, shadow)
-- [ ] Batch-fix all blog/*.html post files (same treatment)
-- [ ] Fix herald/blog/generate_blog_post.py template (future posts inherit)
-- [ ] Commit and push to bld-ecdb8-hoverfix
-- [ ] Merge to master and push
-- [ ] Acceptance criteria self-check
+- [x] Fix blog.html .blog-card normal state (accent border + shadow)
+- [x] Fix blog/2026-06-01.html .blog-post-card (opaque var(--surface) bg, stronger border, shadow)
+- [x] Batch-fix all 35 blog/*.html post files (same treatment)
+- [x] Fix herald/blog/generate_blog_post.py template (future posts inherit)
+- [x] Commit and push to bld-ecdb8-hoverfix (SHA: 0d383a4)
+- [x] Merge to master and push (merge SHA: 214d08d)
+- [x] Herald generator pushed (SHA: e2d6b9f)
+- [x] Live deployment verified via curl
+
+## Acceptance Criteria Self-Check
+- [x] AC1: blog.html .blog-card normal state has accent border + shadow — PASS
+  Evidence: live curl shows `border: 1px solid rgba(59, 130, 246, 0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.35)` not only under :hover
+- [x] AC2: blog/2026-06-01.html .blog-post-card is opaque + solid border — PASS
+  Evidence: live curl shows `background: var(--surface)` (opaque #1a1a1e, no alpha), `border: 1px solid rgba(59,130,246,0.35)`, shadow in resting state; rgba(16,20,28,0.98) removed
+- [x] AC3: All 35 existing post pages updated — PASS
+  Evidence: batch Python script changed 34 (var(--border) pattern) + 1 (rgba pattern for 2026-05-31) = 35 total; verified 0 files with old pattern
+- [x] AC4: Herald generator updated for future posts — PASS
+  Evidence: herald/blog/generate_blog_post.py commit e2d6b9f on main; template now uses var(--surface) + rgba(0.35) border + shadow
+- [x] AC5: No regression to hero image or HN discussion refs — PASS
+  Evidence: only .blog-post-card and .blog-card CSS touched; hero wrapper and HN reference filtering untouched
+- [x] AC6: Changes on master (Pages source) not just branch — PASS
+  Evidence: master SHA 214d08d pushed to origin; live curl confirms deployment
 
 ## Notes
 - Prior builder branch bld-ecdb8-hovercards had partial CSS fixes but was never merged to master
-- Architect review fail: post card still uses rgba(16, 20, 28, 0.98) — needs explicit opaque
-- Key fix: var(--border) = #2a2a2e against var(--surface) = #1a1a1e is nearly invisible; accent border at 0.35 opacity makes cards pop
-- All blog/*.html files need batch treatment; generator updated for future posts
+- Architect review fail resolved: rgba(16,20,28,0.98) → var(--surface) (opaque); border 0.15 → 0.35
+- Screenshots: Reviewer/Architect visual verification still required per card AC
