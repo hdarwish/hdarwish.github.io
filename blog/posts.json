@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-06-02",
+    "title": "Social Media's Security Model: An Illusion of Growth Over Substance",
+    "tags": [
+      "security",
+      "social media",
+      "software engineering"
+    ],
+    "excerpt": "I read about an Instagram exploit that made private photos public just by tweaking URL parameters. It was a simple oversight, but it exposed a bigger issue: the fragility of social media's security...",
+    "hn_refs": [
+      {
+        "title": "The newest Instagram “exploit” is the goofiest I've seen",
+        "url": "https://www.0xsid.com/blog/meta-account-takeover-fiasco",
+        "points": 1822
+      },
+      {
+        "title": "Instagram exploit highlights security fragility",
+        "url": "https://news.ycombinator.com/item?id=36268271",
+        "points": 132
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Security and Privacy in Social Networks",
+        "url": "https://www.springer.com/gp/book/9781461443417",
+        "kind": "book"
+      },
+      {
+        "title": "The Tangled Web: A Guide to Securing Modern Web Applications",
+        "url": "https://www.nostarch.com/tangledweb",
+        "kind": "book"
+      },
+      {
+        "title": "OWASP Top Ten Web Application Security Risks",
+        "url": "https://owasp.org/www-project-top-ten/",
+        "kind": "docs"
+      }
+    ]
+  },
+  {
     "date": "2026-06-01",
     "title": "Cloudflare Turnstile: Security at the Cost of Privacy?",
     "tags": [
