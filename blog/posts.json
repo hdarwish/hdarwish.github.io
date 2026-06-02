@@ -1,40 +1,35 @@
 [
   {
     "date": "2026-06-02",
-    "title": "Social Media's Security Model: An Illusion of Growth Over Substance",
+    "title": "The Most Dangerous Vulnerabilities Are the Dumbest",
     "tags": [
       "security",
-      "social media",
-      "software engineering"
+      "vulnerabilities",
+      "tech industry"
     ],
-    "excerpt": "I read about an Instagram exploit that made private photos public just by tweaking URL parameters. It was a simple oversight, but it exposed a bigger issue: the fragility of social media's security...",
+    "excerpt": "Last night, I read about an Instagram exploit so absurd it shook my faith in digital security. The exploit involved taking over accounts—high-profile ones like the White House account—using a method...",
     "hn_refs": [
       {
-        "title": "The newest Instagram “exploit” is the goofiest I've seen",
+        "title": "The Newest Instagram 'Exploit' is the Goofiest I've Seen",
         "url": "https://www.0xsid.com/blog/meta-account-takeover-fiasco",
-        "points": 1822
-      },
-      {
-        "title": "Instagram exploit highlights security fragility",
-        "url": "https://news.ycombinator.com/item?id=36268271",
-        "points": 132
+        "points": 234
       }
     ],
     "further_reading": [
       {
-        "title": "Security and Privacy in Social Networks",
-        "url": "https://www.springer.com/gp/book/9781461443417",
+        "title": "Security Engineering: A Guide to Building Dependable Distributed Systems",
+        "url": "https://www.cl.cam.ac.uk/~rja14/book.html",
         "kind": "book"
       },
       {
         "title": "The Tangled Web: A Guide to Securing Modern Web Applications",
-        "url": "https://www.nostarch.com/tangledweb",
+        "url": "https://www.manning.com/books/the-tangled-web",
         "kind": "book"
       },
       {
-        "title": "OWASP Top Ten Web Application Security Risks",
-        "url": "https://owasp.org/www-project-top-ten/",
-        "kind": "docs"
+        "title": "Common Vulnerabilities in Web Applications and How to Avoid Them",
+        "url": "https://www.youtube.com/watch?v=H5ZfHZO4Kls",
+        "kind": "talk"
       }
     ]
   },
