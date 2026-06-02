@@ -1,35 +1,35 @@
 [
   {
     "date": "2026-06-02",
-    "title": "The Most Dangerous Vulnerabilities Are the Dumbest",
+    "title": "Instagram's Security Blunder: A Wake-Up Call",
     "tags": [
-      "security",
-      "vulnerabilities",
-      "tech industry"
+      "Security",
+      "AI",
+      "Exploit"
     ],
-    "excerpt": "Last night, I read about an Instagram exploit so absurd it shook my faith in digital security. The exploit involved taking over accounts—high-profile ones like the White House account—using a method...",
+    "excerpt": "I came across a blog post about an Instagram exploit that was so straightforward it was almost laughable. Yet, it exposed serious vulnerabilities. This wasn't about brute force attacks or complex...",
     "hn_refs": [
       {
-        "title": "The Newest Instagram 'Exploit' is the Goofiest I've Seen",
+        "title": "The newest Instagram “exploit” is the goofiest I've seen",
         "url": "https://www.0xsid.com/blog/meta-account-takeover-fiasco",
-        "points": 234
+        "points": 1822
       }
     ],
     "further_reading": [
       {
-        "title": "Security Engineering: A Guide to Building Dependable Distributed Systems",
-        "url": "https://www.cl.cam.ac.uk/~rja14/book.html",
-        "kind": "book"
+        "title": "The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation",
+        "url": "https://arxiv.org/abs/1802.07228",
+        "kind": "paper"
       },
       {
-        "title": "The Tangled Web: A Guide to Securing Modern Web Applications",
-        "url": "https://www.manning.com/books/the-tangled-web",
-        "kind": "book"
-      },
-      {
-        "title": "Common Vulnerabilities in Web Applications and How to Avoid Them",
-        "url": "https://www.youtube.com/watch?v=H5ZfHZO4Kls",
+        "title": "AI and Security: The Good, the Bad, and the Ugly",
+        "url": "https://www.usenix.org/conference/enigma2020/presentation/engler",
         "kind": "talk"
+      },
+      {
+        "title": "Security and Privacy in Machine Learning",
+        "url": "https://www.youtube.com/watch?v=3C9E2yL5tJ8",
+        "kind": "video"
       }
     ]
   },
