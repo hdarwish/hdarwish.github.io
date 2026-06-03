@@ -1,35 +1,35 @@
-# Progress: Apply hover solid-card treatment to normal blog/list state
-Card: t_ecdb8d35
-Branch: bld-ecdb8-hoverfix
-Started: 2026-06-01T14:08Z
+# Progress: [tinytell] Refresh Privacy + FAQ/Support pages to match app revamp
+Card: t_7373ba1b
+Branch: bld-7373b-tinypages
+Started: 2026-06-04T00:00Z
 
 ## Checklist
-- [x] Read card and estimated
-- [x] Inspect prior builder branch (bld-ecdb8-hovercards) — partial fix, not merged to master
-- [x] Fix blog.html .blog-card normal state (accent border + shadow)
-- [x] Fix blog/2026-06-01.html .blog-post-card (opaque var(--surface) bg, stronger border, shadow)
-- [x] Batch-fix all 35 blog/*.html post files (same treatment)
-- [x] Fix herald/blog/generate_blog_post.py template (future posts inherit)
-- [x] Commit and push to bld-ecdb8-hoverfix (SHA: 0d383a4)
-- [x] Merge to master and push (merge SHA: 214d08d)
-- [x] Herald generator pushed (SHA: e2d6b9f)
-- [x] Live deployment verified via curl
+- [x] Read card and audited existing pages
+- [x] Update privacy.html (favicon, brand header, nav fix, copy update)
+- [x] Update support.html (favicon, brand header, nav fix, accent bar fix, copy update)
+- [x] Create faq.html (meta-refresh + JS redirect to support.html)
+- [x] Commit SHA: 940553d and push to branch
+- [x] PR #9 opened: https://github.com/hdarwish/hdarwish.github.io/pull/9
+- [x] Raw GitHub URLs verified HTTP 200
+- [ ] Comment launch card t_eecc90ee — BLOCKED: VM SSH tunnel down, hermes kanban unavailable from Mac
 
 ## Acceptance Criteria Self-Check
-- [x] AC1: blog.html .blog-card normal state has accent border + shadow — PASS
-  Evidence: live curl shows `border: 1px solid rgba(59, 130, 246, 0.35); box-shadow: 0 2px 8px rgba(0,0,0,0.35)` not only under :hover
-- [x] AC2: blog/2026-06-01.html .blog-post-card is opaque + solid border — PASS
-  Evidence: live curl shows `background: var(--surface)` (opaque #1a1a1e, no alpha), `border: 1px solid rgba(59,130,246,0.35)`, shadow in resting state; rgba(16,20,28,0.98) removed
-- [x] AC3: All 35 existing post pages updated — PASS
-  Evidence: batch Python script changed 34 (var(--border) pattern) + 1 (rgba pattern for 2026-05-31) = 35 total; verified 0 files with old pattern
-- [x] AC4: Herald generator updated for future posts — PASS
-  Evidence: herald/blog/generate_blog_post.py commit e2d6b9f on main; template now uses var(--surface) + rgba(0.35) border + shadow
-- [x] AC5: No regression to hero image or HN discussion refs — PASS
-  Evidence: only .blog-post-card and .blog-card CSS touched; hero wrapper and HN reference filtering untouched
-- [x] AC6: Changes on master (Pages source) not just branch — PASS
-  Evidence: master SHA 214d08d pushed to origin; live curl confirms deployment
+
+- [x] AC1: Visual match to app revamp — PASS: app icon brand header added, favicon added, accent bar fixed (bar-purple→bar-rose), nav consistent with landing page
+- [x] AC2: Copy accuracy — auth/sign-in required: PASS: both pages explicitly require account
+- [x] AC3: Copy accuracy — audio sent to private ML server over HTTPS: PASS: both pages state this clearly, no on-device audio claim
+- [x] AC4: Copy accuracy — no medical diagnosis claims: PASS: both pages have explicit "Not a medical device" disclaimer box
+- [x] AC5: Copy accuracy — history is local/on-device: PASS: both pages state on-device only, no server history
+- [x] AC6: Copy accuracy — advice accurately described: PASS: support.html FAQ describes top-3 results + confidence + actionable advice
+- [x] AC7: faq.html created: PASS: meta-refresh + JS redirect to support.html
+- [x] AC8: Branch/commit/PR proof: PASS: SHA 940553d, branch bld-7373b-tinypages, PR #9
+- [x] AC9: HTTP 200 proof: PASS: curl verified all 3 raw GitHub URLs return 200
+- [ ] AC10: Launch card t_eecc90ee comment: BLOCKED (VM tunnel down) — not agent-executable without hermes
+- [x] AC11: No app code / EAS build / App Store submission / secrets touched: PASS — only tinytell/*.html and PROGRESS.md changed
 
 ## Notes
-- Prior builder branch bld-ecdb8-hovercards had partial CSS fixes but was never merged to master
-- Architect review fail resolved: rgba(16,20,28,0.98) → var(--surface) (opaque); border 0.15 → 0.35
-- Screenshots: Reviewer/Architect visual verification still required per card AC
+- VM SSH tunnel at localhost:2222 is down; hermes CLI unavailable on Mac
+- Launch card comment URLs: Privacy=https://hdarwish.github.io/tinytell/privacy.html, Support=https://hdarwish.github.io/tinytell/support.html, FAQ=https://hdarwish.github.io/tinytell/faq.html
+- Pages will be live after PR #9 merges to master
+- support.html previously had bar-purple (undefined class) in accent bar — corrected to amber/rose/green/blue
+- "waitlist management" → "access management" in both pages for launch-readiness
