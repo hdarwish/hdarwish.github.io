@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-06-03",
+    "title": "Stop Trusting Your Developer Tools Blindly",
+    "tags": [
+      "Security",
+      "Developer Tools",
+      "VSCode"
+    ],
+    "excerpt": "I read about a bug in VSCode that could lead to GitHub token theft. It made me rethink how much trust we place in our developer tools. This wasn't a minor glitch; it was a vulnerability that exposed...",
+    "hn_refs": [
+      {
+        "title": "1-Click GitHub Token Stealing via a VSCode Bug",
+        "url": "https://blog.ammaraskar.com/github-token-stealing/",
+        "points": 431
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Security Risks of Developer Tools and IDEs",
+        "url": "https://www.youtube.com/watch?v=9Uu4eQOFRQk",
+        "kind": "talk"
+      },
+      {
+        "title": "Security Considerations for WebView in VSCode",
+        "url": "https://code.visualstudio.com/docs/extensions/webview",
+        "kind": "docs"
+      },
+      {
+        "title": "Securing Your Development Environment: Best Practices",
+        "url": "https://www.owasp.org/index.php/Securing_Your_Development_Environment",
+        "kind": "article"
+      }
+    ]
+  },
+  {
     "date": "2026-06-02",
     "title": "Instagram's Security Blunder: A Wake-Up Call",
     "tags": [
