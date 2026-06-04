@@ -1,159 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support &amp; FAQ — Tiny Tell</title>
-    <meta name="description" content="Support and FAQ for Tiny Tell baby cry analyzer. Get help with accounts, audio processing, microphone permissions, and more.">
-    <meta property="og:title" content="Support &amp; FAQ — Tiny Tell">
-    <meta property="og:description" content="Get help with Tiny Tell baby cry analyzer. Frequently asked questions about accounts, audio privacy, and troubleshooting.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://hdarwish.github.io/tinytell/support.html">
-    <meta name="twitter:card" content="summary">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css?v=14">
-    <link rel="icon" type="image/png" href="assets/app-icon-1024.png">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Support &amp; FAQ — TinyTell</title>
+<meta name="description" content="Help and frequently asked questions for TinyTell, the private baby cry analyzer." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  :root{ --paper:#FDF7F1; --ink:#3A3550; --ink-soft:#6B6580; --ink-faint:#9A93AB;
+    --coral:#FF6F59; --coral-light:#FFA48F; --surface:#FFFFFF; --hairline:#EFE7E0; }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  body{ font-family:'Nunito',system-ui,sans-serif; background:var(--paper); color:var(--ink);
+    -webkit-font-smoothing:antialiased; line-height:1.6; }
+  .wrap{ max-width:720px; margin:0 auto; padding:24px 18px 64px; }
+  header.band{ background:linear-gradient(135deg,var(--coral-light),var(--coral));
+    border-radius:24px; padding:34px 28px; text-align:center; color:#fff;
+    box-shadow:0 16px 40px rgba(255,111,89,.22); margin-bottom:28px; }
+  .brand{ font-size:30px; font-weight:900; letter-spacing:-.5px; }
+  .brand b{ color:#FFE7E0; font-weight:900; }
+  .tagline{ font-size:14px; font-weight:700; color:#FFEDE8; margin-top:4px; }
+  nav{ display:flex; gap:18px; justify-content:center; margin-bottom:24px; flex-wrap:wrap; }
+  nav a{ color:var(--coral); font-weight:800; font-size:14px; text-decoration:none; }
+  nav a:hover{ text-decoration:underline; }
+  h1{ font-size:28px; font-weight:900; letter-spacing:-.5px; margin-bottom:6px; }
+  .meta{ font-size:14px; font-weight:700; color:var(--ink-faint); margin-bottom:20px; }
+  .card{ background:var(--surface); border-radius:24px; padding:24px; box-shadow:0 6px 22px rgba(58,53,80,.06); margin-bottom:18px; }
+  h2{ font-size:19px; font-weight:800; margin:4px 0 10px; }
+  .q{ font-size:16px; font-weight:800; color:var(--ink); margin:18px 0 6px; }
+  .q:first-of-type{ margin-top:0; }
+  p{ font-size:15.5px; font-weight:600; color:var(--ink-soft); margin-bottom:12px; }
+  p:last-child{ margin-bottom:0; }
+  ul{ margin:6px 0 12px 20px; }
+  li{ font-size:15.5px; font-weight:600; color:var(--ink-soft); margin-bottom:8px; }
+  strong{ color:var(--ink); font-weight:800; }
+  a.inline{ color:var(--coral); font-weight:800; text-decoration:none; }
+  .contact-card{ background:linear-gradient(160deg,#FFF0EB,#FFE4DC); border-radius:24px; padding:24px; margin-bottom:18px; }
+  .contact-card p{ color:#7A4A3E; }
+  .disclaimer{ background:#FFF6E8; border:1px solid #F5D9A8; border-radius:18px; padding:16px 18px; margin-bottom:24px; }
+  .disclaimer p{ color:#8A6516; font-weight:700; margin:0; }
+  footer{ text-align:center; font-size:13px; font-weight:600; color:var(--ink-faint); margin-top:28px; }
+</style>
 </head>
 <body>
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="index.html">Tiny Tell</a></li>
-                <li><a href="../blog.html">Blog</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
-            </ul>
-            <button class="theme-cycle" id="theme-cycle" aria-label="Switch theme" title="Switch theme">
-                <span class="theme-icon">🌑</span>
-                <span class="theme-name">dark</span>
-            </button>
-        </div>
+  <div class="wrap">
+    <header class="band">
+      <div class="brand">Tiny<b>Tell</b></div>
+      <div class="tagline">Understand your baby's cries</div>
+    </header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="support.html">Support &amp; FAQ</a>
+      <a href="privacy.html">Privacy</a>
     </nav>
 
-    <section class="section" style="padding-top: 120px;">
-        <div class="container" style="max-width: 800px;">
-            <div style="margin-bottom: 48px;">
-                <a href="index.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); margin-bottom: 28px;">
-                    <img src="assets/app-icon-1024.png" alt="Tiny Tell" style="width: 44px; height: 44px; border-radius: 10px; box-shadow: 0 4px 14px rgba(0,0,0,0.25);">
-                    <span style="font-weight: 600; font-size: 1.05rem;">Tiny Tell</span>
-                </a>
-                <div class="hero-accent-bar" style="max-width: 200px; margin-bottom: 16px;">
-                    <span class="bar-seg bar-amber"></span>
-                    <span class="bar-seg bar-rose"></span>
-                    <span class="bar-seg bar-green"></span>
-                    <span class="bar-seg bar-blue"></span>
-                </div>
-                <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 12px;">
-                    Support &amp; FAQ<span class="accent">.</span>
-                </h1>
-                <p style="color: var(--text-muted); font-size: 1.1rem;">
-                    Tiny Tell — Baby Cry Analyzer
-                </p>
-            </div>
+    <h1>Support &amp; FAQ</h1>
+    <div class="meta">TinyTell — Baby Cry Analyzer</div>
 
-            <div style="line-height: 1.8; font-size: 1.05rem;">
-                <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
-                    Contact
-                </h2>
-                <p style="margin-bottom: 12px;">
-                    Need help or have feedback? Email me at <a href="mailto:hafs.darwish+tinytell@gmail.com" style="color: var(--accent); text-decoration: underline;">hafs.darwish+tinytell@gmail.com</a>
-                </p>
-                <p style="margin-bottom: 32px; color: var(--text-muted); font-size: 0.95rem;">
-                    Responses typically within 48 hours. Tiny Tell is free with no in-app purchases or subscriptions.
-                </p>
+    <div class="contact-card">
+      <h2>Contact</h2>
+      <p>Need help or have feedback? Email <a class="inline" href="mailto:hafs.darwish+tinytell@gmail.com">hafs.darwish+tinytell@gmail.com</a>. Responses typically within 48 hours.</p>
+      <p>TinyTell is free with no in-app purchases or subscriptions.</p>
+    </div>
 
-                <div style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #f59e0b; padding: 20px 24px; margin-bottom: 32px; border-radius: 8px;">
-                    <p style="margin: 0; font-size: 1rem;">
-                        <strong style="color: #f59e0b;">⚠ Not a medical device.</strong> Tiny Tell is intended for caregiver convenience only. It is not designed for medical diagnosis or treatment. If your baby is in distress, contact your pediatrician.
-                    </p>
-                </div>
+    <div class="disclaimer"><p>⚠ Not a medical device. TinyTell is intended for caregiver convenience only. It is not designed for medical diagnosis or treatment. If your baby is in distress, contact your pediatrician.</p></div>
 
-                <h2 style="font-size: 1.5rem; font-weight: 600; margin: 32px 0 16px; color: var(--accent);">
-                    FAQ
-                </h2>
+    <div class="card">
+      <h2>Frequently asked questions</h2>
 
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
-                    Why do I need an account?
-                </h3>
-                <p style="margin-bottom: 20px;">
-                    Tiny Tell requires an account for authentication and <span class="hl hl-green">access management</span>. Your account lets you use the app without interruption and ensures a fast, reliable experience. We do not use your email for marketing or tracking — it's solely for authentication and essential service communications.
-                </p>
+      <div class="q">Why do I need an account?</div>
+      <p>TinyTell requires an account for authentication and access management. Your account lets you use the app without interruption and ensures a fast, reliable experience. We do not use your email for marketing or tracking — it's solely for authentication and essential service communications.</p>
 
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
-                    Why does the app need <span class="hl hl-rose">microphone permission</span>?
-                </h3>
-                <p style="margin-bottom: 20px;">
-                    Tiny Tell records a short audio sample when you tap the analyze button so it can classify your baby's cry. The recording is sent to a <span class="hl hl-green">private inference server</span> operated by the developer, classified, and then <span class="hl hl-amber">immediately discarded</span>. No audio is stored on the server.
-                </p>
+      <div class="q">Why does the app need microphone permission?</div>
+      <p>TinyTell records a short audio sample when you tap the analyze button so it can classify your baby's cry. The recording is sent to a private inference server operated by the developer, classified, and then <strong>immediately discarded</strong>. No audio is stored on the server.</p>
 
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
-                    Where is my audio processed?
-                </h3>
-                <p style="margin-bottom: 20px;">
-                    On a private inference server operated by the developer (Hafs Ibrahim). Audio is transmitted over an encrypted connection, classified by a single ML model, and discarded immediately after the result is returned. <span class="hl hl-purple">No third-party AI services, no cloud LLM providers, no analytics vendors</span> have access to your audio.
-                </p>
+      <div class="q">Where is my audio processed?</div>
+      <p>On a private inference server operated by the developer (Hafs Ibrahim). Audio is transmitted over an encrypted connection, classified by a machine learning model, and discarded immediately after the result is returned. No third-party AI services, no cloud LLM providers, and no analytics vendors have access to your audio.</p>
 
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
-                    What do the <span class="hl hl-blue">insights</span> mean?
-                </h3>
-                <p style="margin-bottom: 20px;">
-                    Each cry is classified into one of 9 categories — <span class="hl hl-green">hungry</span>, <span class="hl hl-purple">tired</span>, <span class="hl hl-rose">discomfort</span>, and more. The app returns the top 3 most likely reasons with confidence scores, plus actionable advice for the top prediction.
-                </p>
+      <div class="q">What do the insights mean?</div>
+      <p>Each cry is classified into one of 9 categories — hungry, sleepy, gassy, and more. The app returns the most likely reasons with confidence scores, plus actionable advice for the top prediction.</p>
 
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
-                    Recording isn't working — <span class="hl hl-amber">troubleshooting</span>
-                </h3>
-                <ul style="margin-bottom: 20px; padding-left: 24px;">
-                    <li style="margin-bottom: 8px;">Check that you've granted microphone permission in iOS Settings → Tiny Tell</li>
-                    <li style="margin-bottom: 8px;">Ensure the app is running in the foreground when you tap Analyze</li>
-                    <li style="margin-bottom: 8px;">Verify your network connection — audio is sent to the inference server, so a connection is required at analyze time</li>
-                    <li style="margin-bottom: 8px;">Try closing and reopening the app</li>
-                    <li style="margin-bottom: 8px;">If the issue persists, email me at the contact address above</li>
-                </ul>
+      <div class="q">Recording isn't working — troubleshooting</div>
+      <ul>
+        <li>Check that you've granted microphone permission in iOS Settings → TinyTell.</li>
+        <li>Ensure the app is running in the foreground when you tap Analyze.</li>
+        <li>Verify your network connection — audio is sent to the inference server, so a connection is required at analyze time.</li>
+        <li>Try closing and reopening the app.</li>
+        <li>If the issue persists, email me at the contact address above.</li>
+      </ul>
 
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
-                    How accurate is the <span class="hl hl-green">classification model</span>?
-                </h3>
-                <p style="margin-bottom: 20px;">
-                    The current model achieves <span class="hl hl-blue">90.5% accuracy</span> on held-out test data. It was trained on real baby cry samples with phone microphone simulation to match your device's recording quality. The model is operated entirely by the developer — <span class="hl hl-purple">no third-party AI services</span>.
-                </p>
+      <div class="q">How accurate is the classification model?</div>
+      <p>The current model achieves 90.5% accuracy on held-out test data. It was trained on real baby cry samples with phone-microphone simulation to match your device's recording quality. The model is operated entirely by the developer — no third-party AI services.</p>
 
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
-                    Can I delete my <span class="hl hl-rose">insight history</span>?
-                </h3>
-                <p style="margin-bottom: 20px;">
-                    Yes — go to Settings within the app and tap "Clear History". Your insight history is stored <span class="hl hl-amber">locally on your device only</span>, so clearing it removes all records. The server has no copy.
-                </p>
+      <div class="q">Can I delete my insight history?</div>
+      <p>Yes — go to Settings within the app and tap "Clear cry history". Your insight history is stored <strong>locally on your device only</strong>, so clearing it removes all records. The server has no copy.</p>
 
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
-                    Is this app a medical device?
-                </h3>
-                <p style="margin-bottom: 20px;">
-                    No. Tiny Tell is a caregiver-convenience tool only. It is not designed for medical diagnosis, treatment, or any clinical use. If you have concerns about your baby's health, contact your pediatrician or emergency services.
-                </p>
+      <div class="q">Is this app a medical device?</div>
+      <p>No. TinyTell is a caregiver-convenience tool only. It is not designed for medical diagnosis, treatment, or any clinical use. If you have concerns about your baby's health, contact your pediatrician or emergency services.</p>
+    </div>
 
-                <h3 style="font-size: 1.2rem; font-weight: 600; margin: 24px 0 12px;">
-                    Still have questions?
-                </h3>
-                <p style="margin-bottom: 32px;">
-                    Email <a href="mailto:hafs.darwish+tinytell@gmail.com" style="color: var(--accent); text-decoration: underline;">hafs.darwish+tinytell@gmail.com</a> — I respond to every message within 48 hours.
-                </p>
-            </div>
-        </div>
-    </section>
+    <div class="card">
+      <h2>Still have questions?</h2>
+      <p>Email <a class="inline" href="mailto:hafs.darwish+tinytell@gmail.com">hafs.darwish+tinytell@gmail.com</a> — I respond to every message within 48 hours.</p>
+    </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Hafs Ibrahim. Built by hand, shipped with care.</p>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
+    <footer>© 2026 Hafs Ibrahim · TinyTell</footer>
+  </div>
 </body>
 </html>
