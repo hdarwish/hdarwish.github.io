@@ -1,5 +1,39 @@
 [
   {
+    "date": "2026-06-04",
+    "title": "AI Isn't Hacking Your App Anytime Soon",
+    "tags": [
+      "AI",
+      "Security",
+      "Machine Learning"
+    ],
+    "excerpt": "I read about someone who built a vulnerable app to test if large language models (LLMs) could exploit it. It made me reconsider the boundaries between AI potential and human creativity. Kasra...",
+    "hn_refs": [
+      {
+        "title": "I built a vulnerable app and spent $1,500 seeing if LLMs could hack it",
+        "url": "https://kasra.blog/blog/i-spent-1500-seeing-if-llms-could-hack-my-app/",
+        "points": 217
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Concrete Problems in AI Safety",
+        "url": "https://arxiv.org/abs/1606.06565",
+        "kind": "paper"
+      },
+      {
+        "title": "AI Safety: Exploring Failure Modes",
+        "url": "https://www.youtube.com/watch?v=2Zp6pC2kq9U",
+        "kind": "talk"
+      },
+      {
+        "title": "AI Alignment: Why It’s Hard, and Where to Start",
+        "url": "https://intelligence.org/2018/12/12/alignment-why-it-is-hard/",
+        "kind": "article"
+      }
+    ]
+  },
+  {
     "date": "2026-06-03",
     "title": "Stop Trusting Your Developer Tools Blindly",
     "tags": [
