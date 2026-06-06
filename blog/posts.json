@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-06",
+    "title": "Open Sourcing pg_durable: A Game Changer for Database Durability",
+    "tags": [
+      "database",
+      "open-source",
+      "durability"
+    ],
+    "excerpt": "When I came across Microsoft's latest GitHub release, pg_durable, it made me rethink the role of open source in democratizing complex database technologies. Microsoft opening up something like...",
+    "hn_refs": [
+      {
+        "title": "pg_durable: Microsoft open sources in-database durable execution",
+        "url": "https://github.com/microsoft/pg_durable",
+        "points": 387
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Internals of PostgreSQL: Understanding the World’s Most Advanced Open Source Database",
+        "url": "http://www.interdb.jp/pg/",
+        "kind": "book"
+      },
+      {
+        "title": "PostgreSQL: Up and Running",
+        "url": "https://www.oreilly.com/library/view/postgresql-up-and/9781491963398/",
+        "kind": "book"
+      },
+      {
+        "title": "PostgreSQL Documentation: Durability and Reliability",
+        "url": "https://www.postgresql.org/docs/current/durability.html",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-05",
     "title": "Security Tools Shouldn't Be Just for the Big Players",
     "tags": [
