@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Data Story Audit — Send your spreadsheet, get an executive dashboard</title>
+    <meta name="description" content="Send your spreadsheet. Get an executive dashboard plus three action items in 48 hours. Done-for-you, human-powered data audits for SMB operators.">
+    <meta property="og:title" content="AI Data Story Audit — Send your spreadsheet, get an executive dashboard">
+    <meta property="og:description" content="Done-for-you executive dashboard plus action memo in 48 hours. Three slots this month. Manual, human-powered audit — no signup, no upload, just email.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hafs.dev/dataaudit/">
+    <meta name="twitter:card" content="summary">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=14">
+    <link rel="icon" type="image/png" href="../og-image.png">
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+                <li><a href="#tiers">Tiers</a></li>
+                <li><a href="#request">Request audit</a></li>
+            </ul>
+            <button class="theme-cycle" id="theme-cycle" aria-label="Switch theme" title="Switch theme">
+                <span class="theme-icon">🌑</span>
+                <span class="theme-name">dark</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="container" style="max-width: 920px;">
+
+            <!-- Hero -->
+            <div style="text-align: center; margin-bottom: 64px;">
+                <div class="hero-accent-bar" style="max-width: 220px; margin: 0 auto 20px;">
+                    <span class="bar-seg bar-amber"></span>
+                    <span class="bar-seg bar-rose"></span>
+                    <span class="bar-seg bar-green"></span>
+                    <span class="bar-seg bar-blue"></span>
+                </div>
+                <h1 style="font-size: 2.6rem; font-weight: 700; margin-bottom: 16px; line-height: 1.15;">
+                    Send your spreadsheet<span class="accent">.</span><br>
+                    Get an executive dashboard <span class="hl hl-amber">+ 3 action items</span>.
+                </h1>
+                <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 620px; margin: 0 auto 24px; line-height: 1.55;">
+                    A done-for-you data audit for SMB operators. <strong>48-hour turnaround.</strong>
+                    Human-powered, no dashboards-as-a-service contract, no procurement cycle.
+                    You send the data, I send back the story your numbers are already telling you.
+                </p>
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 28px;">
+                    <a href="#request" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--accent); color: white; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem;">
+                        Request an audit
+                    </a>
+                    <a href="#tiers" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem;">
+                        See the three tiers
+                    </a>
+                </div>
+                <p style="margin-top: 24px; color: var(--text-muted); font-size: 0.95rem;">
+                    <strong>3 manual audit slots open this month.</strong> First-come, first-served.
+                </p>
+            </div>
+
+            <!-- Three-pillar value props -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-bottom: 72px;">
+                <div style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #f59e0b; padding: 24px; border-radius: 10px;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; color: #f59e0b;">Done for you</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        I do the cleaning, the charting, and the narrative. You get a dashboard image plus a short action memo &mdash; not another tool to learn or another login to manage.
+                    </p>
+                </div>
+                <div style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #10b981; padding: 24px; border-radius: 10px;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; color: #10b981;">48 hours, fixed price</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        Tiers are fixed-price and capped at three slots a month. No estimates, no scope-creep, no monthly retainer. If I can't turn it around in 48 hours, you don't pay.
+                    </p>
+                </div>
+                <div style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #3b82f6; padding: 24px; border-radius: 10px;">
+                    <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 12px; color: #3b82f6;">Human-powered</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin: 0;">
+                        No autonomous-agent black box deciding what your business should do. AI tools assist; an operator reads your data and writes the memo. You get one human's read, not five.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tiers -->
+            <div id="tiers" style="margin-bottom: 72px;">
+                <div style="margin-bottom: 32px; text-align: center;">
+                    <div class="hero-accent-bar" style="max-width: 160px; margin: 0 auto 12px;">
+                        <span class="bar-seg bar-amber"></span>
+                        <span class="bar-seg bar-rose"></span>
+                        <span class="bar-seg bar-green"></span>
+                    </div>
+                    <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px;">Three tiers, fixed price</h2>
+                    <p style="color: var(--text-muted); max-width: 560px; margin: 0 auto;">
+                        Pick the one that matches the data you already have. Not sure which fits? Email me and I'll tell you straight.
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+
+                    <!-- Basic -->
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-top: 4px solid #f59e0b; padding: 28px; border-radius: 12px; display: flex; flex-direction: column;">
+                        <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #f59e0b; margin-bottom: 8px;">Basic &middot; L5 Conversational Viz</div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0 0 8px;">$500</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; margin-bottom: 20px;">
+                            One dataset, cleaned charts, plain-English action memo. Best when you have a single export (sales CSV, ad-spend report, support tickets) and a single question you want answered.
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+                            <li>&#10003; One spreadsheet / CSV in</li>
+                            <li>&#10003; Cleaned, executive-ready chart pack</li>
+                            <li>&#10003; 3-action memo (what to do this week)</li>
+                            <li>&#10003; 48-hour turnaround</li>
+                        </ul>
+                        <a href="mailto:hafs.darwish@gmail.com?subject=AI%20Data%20Story%20Audit%20%E2%80%94%20Basic%20%28%24500%29&body=Hi%20Hafs%2C%0A%0AI%27d%20like%20a%20Basic%20%28%24500%29%20Data%20Story%20Audit.%0A%0ABusiness%2Findustry%3A%0AThe%20one%20question%20I%20want%20answered%3A%0AData%20I%20have%20%28file%20type%2C%20rough%20row%20count%29%3A%0A%0AI%20can%20send%20the%20file%20once%20you%20confirm%20a%20slot.%0A%0AThanks%2C%0A" style="margin-top: auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: #f59e0b; color: #1a1a1a; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                            Request Basic
+                        </a>
+                    </div>
+
+                    <!-- Deep -->
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-top: 4px solid #10b981; padding: 28px; border-radius: 12px; display: flex; flex-direction: column; position: relative;">
+                        <div style="position: absolute; top: -12px; right: 16px; background: #10b981; color: #0a1f17; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px;">Most useful</div>
+                        <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #10b981; margin-bottom: 8px;">Deep &middot; L6 Predictive Viz</div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0 0 8px;">$2,000</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; margin-bottom: 20px;">
+                            Multi-source. I stitch your data together, build a forward-looking view (forecast or what-if), and we walk through it on a 30-minute strategy call.
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+                            <li>&#10003; Multiple data sources reconciled</li>
+                            <li>&#10003; Forecast or what-if scenario model</li>
+                            <li>&#10003; Action memo with quantified upside</li>
+                            <li>&#10003; 30-minute strategy call</li>
+                        </ul>
+                        <a href="mailto:hafs.darwish@gmail.com?subject=AI%20Data%20Story%20Audit%20%E2%80%94%20Deep%20%28%242%2C000%29&body=Hi%20Hafs%2C%0A%0AI%27d%20like%20a%20Deep%20%28%242%2C000%29%20Data%20Story%20Audit.%0A%0ABusiness%2Findustry%3A%0AThe%20decision%20I%27m%20trying%20to%20make%3A%0AData%20sources%20I%20can%20provide%3A%0A%0AI%20can%20send%20the%20files%20once%20you%20confirm%20a%20slot.%0A%0AThanks%2C%0A" style="margin-top: auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: #10b981; color: #0a1f17; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                            Request Deep
+                        </a>
+                    </div>
+
+                    <!-- Full -->
+                    <div style="background: var(--surface); border: 1px solid var(--border); border-top: 4px solid #3b82f6; padding: 28px; border-radius: 12px; display: flex; flex-direction: column;">
+                        <div style="font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #3b82f6; margin-bottom: 8px;">Full &middot; L7 Autonomous Pipeline</div>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; margin: 0 0 8px;">$5,000</h3>
+                        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.55; margin-bottom: 20px;">
+                            Pipeline design plus a decision layer and a written playbook for how to act on it &mdash; so the audit doesn't have to be re-bought every quarter.
+                        </p>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 20px; color: var(--text-muted); font-size: 0.92rem; line-height: 1.7;">
+                            <li>&#10003; Pipeline design (sources &rarr; warehouse &rarr; report)</li>
+                            <li>&#10003; Dashboard + decision layer mock-up</li>
+                            <li>&#10003; Operator playbook: when to act, on what</li>
+                            <li>&#10003; Handoff doc for your engineer or BI vendor</li>
+                        </ul>
+                        <a href="mailto:hafs.darwish@gmail.com?subject=AI%20Data%20Story%20Audit%20%E2%80%94%20Full%20%28%245%2C000%29&body=Hi%20Hafs%2C%0A%0AI%27d%20like%20a%20Full%20%28%245%2C000%29%20Data%20Story%20Audit.%0A%0ABusiness%2Findustry%3A%0AHow%20decisions%20get%20made%20today%3A%0ASystems%20%2F%20data%20sources%20in%20play%3A%0A%0AHappy%20to%20jump%20on%20a%2015-minute%20call%20before%20committing.%0A%0AThanks%2C%0A" style="margin-top: auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 20px; background: #3b82f6; color: white; border-radius: 8px; text-decoration: none; font-weight: 600;">
+                            Request Full
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- How a slot works -->
+            <div style="margin-bottom: 72px;">
+                <div style="margin-bottom: 32px; text-align: center;">
+                    <h2 style="font-size: 1.6rem; font-weight: 700; margin-bottom: 8px;">How a slot works</h2>
+                    <p style="color: var(--text-muted); max-width: 540px; margin: 0 auto;">No portal, no signup, no upload widget. Just email.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;">
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 20px; border-radius: 10px;">
+                        <div style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 8px;">STEP 1</div>
+                        <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 8px;">Email me the tier</h3>
+                        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.55; margin: 0;">Pick Basic, Deep, or Full. Use the buttons above &mdash; they pre-fill the email. I'll reply within one business day to confirm a slot or wave you off.</p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 20px; border-radius: 10px;">
+                        <div style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 8px;">STEP 2</div>
+                        <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 8px;">Send the data</h3>
+                        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.55; margin: 0;">After I confirm, attach the file to your reply or share a private link you already use (Drive, Dropbox). I do not host uploads here.</p>
+                    </div>
+                    <div style="background: var(--surface); border: 1px solid var(--border); padding: 20px; border-radius: 10px;">
+                        <div style="font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; color: var(--accent); margin-bottom: 8px;">STEP 3</div>
+                        <h3 style="font-size: 1rem; font-weight: 600; margin: 0 0 8px;">Get the audit</h3>
+                        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.55; margin: 0;">Within 48 hours of receiving the data: dashboard image, written memo, and (for Deep/Full) a call invite. Payment after delivery on Basic; 50/50 on Deep/Full.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Request CTA -->
+            <div id="request" style="background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 36px 28px; text-align: center;">
+                <div class="hero-accent-bar" style="max-width: 180px; margin: 0 auto 16px;">
+                    <span class="bar-seg bar-amber"></span>
+                    <span class="bar-seg bar-green"></span>
+                    <span class="bar-seg bar-blue"></span>
+                </div>
+                <h2 style="font-size: 1.8rem; font-weight: 700; margin: 0 0 12px;">Request an audit</h2>
+                <p style="color: var(--text-muted); max-width: 560px; margin: 0 auto 24px; line-height: 1.55;">
+                    Three slots open this month. If they're gone, the form will tell you &mdash; or just email me and I'll be honest about the queue.
+                </p>
+                <a href="mailto:hafs.darwish@gmail.com?subject=AI%20Data%20Story%20Audit%20%E2%80%94%20Inquiry&body=Hi%20Hafs%2C%0A%0AI%27d%20like%20a%20Data%20Story%20Audit.%0A%0ATier%20I%27m%20considering%20%28Basic%20%24500%20%2F%20Deep%20%242%2C000%20%2F%20Full%20%245%2C000%29%3A%0ABusiness%2Findustry%3A%0AThe%20question%20I%20want%20answered%3A%0AData%20I%20have%3A%0A%0AThanks%2C%0A" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    hafs.darwish@gmail.com
+                </a>
+                <p style="margin-top: 18px; color: var(--text-muted); font-size: 0.88rem;">
+                    No signup. No upload. No payment until you've seen the work.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim &mdash; from Dubai, with love</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
