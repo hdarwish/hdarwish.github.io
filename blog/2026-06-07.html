@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgia in Emulation: A Lesson in Digital Impermanence - Hafs Ibrahim</title>
+    <meta name="description" content="Nostalgia in Emulation: A Lesson in Digital Impermanence">
+    <meta property="og:title" content="Nostalgia in Emulation: A Lesson in Digital Impermanence">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-06-07.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-06-07">
+            <div class="blog-post-date">June 07, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">nostalgia</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">user experience</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">digital media</span></div>
+            <h2 class="blog-post-title">Nostalgia in Emulation: A Lesson in Digital Impermanence</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-06-07-hero.png" alt="Nostalgia in Emulation: A Lesson in Digital Impermanence" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I stumbled upon Ntsc-rs and was immediately reminded of adjusting rabbit ears on a TV for a clearer picture. As someone who's spent years with high-definition digital streams, the idea of reviving VHS static seemed almost absurd.</p>
+
+<p>Ntsc-rs isn't a gimmick. It's an open-source project that accurately mimics analog TV and VHS artifacts. Instead of simple overlays or color lookups, it uses algorithms to replicate NTSC transmission and VHS encoding. This isn't about slapping a filter on a video; it's about diving into the mechanics of a bygone era.</p>
+
+<p>The technical aspect is impressive. Ntsc-rs runs in Rust, is multithreaded, and SIMD-accelerated. It operates in real-time at resolutions higher than traditional NTSC footage. But that's not what truly caught my attention.</p>
+
+<p>What really hit home was how this project highlights the impermanence of digital media. We often think of digital as everlasting. Yet, there's something in the fuzzy lines and color bleeds of VHS that makes you remember how fleeting each moment can be.</p>
+
+<p>In the digital age, we archive everything. Photos, messages, and videos are stored neatly on servers. The analog world was different. There was decay and loss baked into the experience. That felt more human.</p>
+
+<p>Nostalgia plays a powerful role in user experience design. When I see Ntsc-rs, it reminds me of how we reach back to familiar experiences, craving that connection to our past.</p>
+
+<p>Look at how vinyl records have made a comeback. It’s not just about sound quality. It’s about the ritual—the tactile feeling of putting a record on the turntable and dropping the needle. Ntsc-rs taps into that same feeling with video.</p>
+
+<p>This matters for us in tech because it shows that users value experiences that connect to their memories. In a world of ever-improving fidelity, sometimes what we miss is the imperfection.</p>
+
+<p>Consider interface design. The pixel-perfect corners and smooth gradients are beautiful, but they may not evoke the same emotional response as a hand-sketched icon or a rough-edged button.</p>
+
+<p>Even in software systems, there's a push for fault tolerance and always-on reliability. It's crucial, but there's also a lesson in what we choose to let disappear—what's okay to fade away.</p>
+
+<p>Ntsc-rs is a reminder that there's value in the transient. It’s a nod to the fact that not everything needs to be pristine and that sometimes, degradation tells a richer story.</p>
+
+<p>I've faced this in production environments. We had a monitoring system that was too eager to alert on every minor blip. The result? Alert fatigue. It took us a while to learn that not every anomaly needs to be stomped out. Some fluctuation is natural, and the system can self-heal.</p>
+
+<p>Imagine logging. We log everything these days, but sifting through endless logs for meaningful data is tedious. An old developer once told me, "Logs are like VHS tapes. You keep running them until they break and hope they captured the moment you need." Sometimes, it’s the gaps between logs that tell you the most.</p>
+
+<p>There’s a beauty in watching Ntsc-rs transform crisp digital footage into something flawed. It’s the digital equivalent of a patina on antique furniture. It tells you a story, one that perfection can’t quite capture.</p>
+
+<p>The takeaway: the digital world is not just about clarity and perfection. It’s also about the memories we cherish and the stories we tell through the artifacts we create. Nostalgia isn't just a longing for the past—it’s a bridge to more meaningful human experiences.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://ntsc.rs/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Ntsc-rs – open-source video emulation of analog TV and VHS artifacts</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲338</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://journals.sagepub.com/doi/abs/10.1177/0022242914563911" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Nostalgia Effect: How Nostalgia Shapes Consumer Preferences and Brand Relationships</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="http://www.mystran.com/chipdisaster/ntsc.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Simulating NTSC Video Artifacts</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.cambridge.org/core/journals/design-science/article/aesthetics-of-imperfection-in-digital-media/9A2E5E6B3A9B1E3C8A3E2F9E7B4D3D8F" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Aesthetics of Imperfection in Digital Media</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

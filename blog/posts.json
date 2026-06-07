@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-07",
+    "title": "Nostalgia in Emulation: A Lesson in Digital Impermanence",
+    "tags": [
+      "nostalgia",
+      "user experience",
+      "digital media"
+    ],
+    "excerpt": "I stumbled upon Ntsc-rs and was immediately reminded of adjusting rabbit ears on a TV for a clearer picture. As someone who's spent years with high-definition digital streams, the idea of reviving...",
+    "hn_refs": [
+      {
+        "title": "Ntsc-rs – open-source video emulation of analog TV and VHS artifacts",
+        "url": "https://ntsc.rs/",
+        "points": 338
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Nostalgia Effect: How Nostalgia Shapes Consumer Preferences and Brand Relationships",
+        "url": "https://journals.sagepub.com/doi/abs/10.1177/0022242914563911",
+        "kind": "paper"
+      },
+      {
+        "title": "Simulating NTSC Video Artifacts",
+        "url": "http://www.mystran.com/chipdisaster/ntsc.html",
+        "kind": "article"
+      },
+      {
+        "title": "The Aesthetics of Imperfection in Digital Media",
+        "url": "https://www.cambridge.org/core/journals/design-science/article/aesthetics-of-imperfection-in-digital-media/9A2E5E6B3A9B1E3C8A3E2F9E7B4D3D8F",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-06",
     "title": "Open Sourcing pg_durable: A Game Changer for Database Durability",
     "tags": [
