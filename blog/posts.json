@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-06-08",
+    "title": "Tech's Redemption Myth Needs a Reality Check",
+    "tags": [
+      "tech industry",
+      "redemption",
+      "inclusivity"
+    ],
+    "excerpt": "I came across a blog post about an engineer's journey from addiction and prison to a fresh start in tech. It made me question the industry's narratives about opportunity and redemption.We often claim...",
+    "hn_refs": [
+      {
+        "title": "Building from zero after addiction, prison, and a felony",
+        "url": "https://gavinray97.github.io/blog/building-from-zero-after-addiction-prison-felony",
+        "points": 637
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
+        "url": "https://www.goodreads.com/book/show/17255186-the-phoenix-project",
+        "kind": "book"
+      },
+      {
+        "title": "Mindset: The New Psychology of Success",
+        "url": "https://www.goodreads.com/book/show/40745.Mindset",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-07",
     "title": "Nostalgia in Emulation: A Lesson in Digital Impermanence",
     "tags": [
