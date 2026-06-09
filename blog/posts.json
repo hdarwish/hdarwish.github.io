@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-09",
+    "title": "AI Firms Are Becoming Real Estate Moguls, and It's Killing Innovation",
+    "tags": [
+      "AI",
+      "Infrastructure",
+      "Innovation"
+    ],
+    "excerpt": "Last week, I read a post about xAI turning into a datacentre REIT. It got me thinking about the future of AI research. Are we focusing more on server farms than algorithms? It seems so.\n\nxAI's...",
+    "hn_refs": [
+      {
+        "title": "xAI is looking more like a datacentre REIT than a frontier lab",
+        "url": "https://martinalderson.com/posts/xais-new-rental-business",
+        "points": 556
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World",
+        "url": "https://www.pedrosdomingos.org/",
+        "kind": "book"
+      },
+      {
+        "title": "The Bitter Lesson",
+        "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+        "kind": "article"
+      },
+      {
+        "title": "AI and Compute",
+        "url": "https://openai.com/research/ai-and-compute",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-08",
     "title": "Tech's Redemption Myth Needs a Reality Check",
     "tags": [
