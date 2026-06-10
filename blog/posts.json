@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-06-10",
+    "title": "Your Next Hackathon Should Be a Hardware Playground",
+    "tags": [
+      "hardware",
+      "hackathons"
+    ],
+    "excerpt": "I read a blog post predicting the end of software hackathons. It made me think about the last hackathon I attended. The standout project wasn't an app; it was a physical gadget.One team transformed...",
+    "hn_refs": [
+      {
+        "title": "RIP software hackathons. Long live the hardware hackathon",
+        "url": "https://blog.oscars.dev/posts/rip-software-hackathons-long-live-the-hardware-hackathon",
+        "points": 172
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Getting Started with Raspberry Pi",
+        "url": "https://www.raspberrypi.org/documentation/computers/getting-started.html",
+        "kind": "docs"
+      },
+      {
+        "title": "Make: Electronics: Learning by Discovery",
+        "url": "https://www.makershed.com/products/make-electronics-2nd-edition",
+        "kind": "book"
+      },
+      {
+        "title": "Arduino Project Hub",
+        "url": "https://create.arduino.cc/projecthub",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-09",
     "title": "AI Firms Are Becoming Real Estate Moguls, and It's Killing Innovation",
     "tags": [
