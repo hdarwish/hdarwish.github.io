@@ -11,7 +11,7 @@ Started: 2026-06-11T18:21Z
 - [x] Updated index.html projects grid — added Services project card
 - [x] Verified all relative paths (../style.css, ../script.js, ../index.html)
 - [x] Committed and pushed to bld-2d7d-services
-- [ ] PR opened
+- [x] PR opened: https://github.com/hdarwish/hdarwish.github.io/pull/11
 
 ## Acceptance Criteria Self-Check
 - [x] AC1: services/index.html exists at hafs.dev/services/ — PASS (file created, static site)
