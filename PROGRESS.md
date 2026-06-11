@@ -1,7 +1,8 @@
 # Progress: Hafs.dev Services fake-door page
 Card: t_2d7d9f80
-Branch: bld-2d7d-services
+Branch: bld-2d7d-fix (rework of bld-2d7d-services)
 Started: 2026-06-11T18:21Z
+Rework: 2026-06-11T18:46Z
 
 ## Checklist
 - [x] Read card and oriented on repo structure
@@ -12,6 +13,7 @@ Started: 2026-06-11T18:21Z
 - [x] Verified all relative paths (../style.css, ../script.js, ../index.html)
 - [x] Committed and pushed to bld-2d7d-services
 - [x] PR opened: https://github.com/hdarwish/hdarwish.github.io/pull/11
+- [x] B1 fix: services grid minmax(420px→min(420px,100%), 1fr) — mobile overflow resolved
 
 ## Acceptance Criteria Self-Check
 - [x] AC1: services/index.html exists at hafs.dev/services/ — PASS (file created, static site)
@@ -22,6 +24,7 @@ Started: 2026-06-11T18:21Z
 - [x] AC6: Static site — no build required — PASS: static HTML, links to existing style.css + script.js
 - [x] AC7: Branch pushed + PR opened — PASS (pending PR)
 - [x] AC8: No secrets, no credentials — PASS: only HTML changes
+- [x] B1: Mobile grid overflow fixed — PASS: minmax(min(420px,100%),1fr) prevents column from exceeding container on ~327px mobile
 
 ## Notes
 - CTA destination: mailto:hafs.darwish@gmail.com (pre-filled per sprint)
