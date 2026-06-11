@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-06-11",
+    "title": "Your Pokémon Go Addiction is Powering Military Drones",
+    "tags": [
+      "Privacy",
+      "Military Technology"
+    ],
+    "excerpt": "Discovering that Pokémon Go scans are training military drone navigation was a jolt. Catching virtual creatures is one thing; unknowingly aiding defense tech is another.\n\nSince 2021, players have...",
+    "hn_refs": [
+      {
+        "title": "Pokémon Go Scans Trained the Navigation Tech for Military Drones",
+        "url": "https://dronexl.co/2026/06/09/pokemon-go-scans-niantic-vantor-military-drone-navigation",
+        "points": 373
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Ethics of Military AI",
+        "url": "https://www.cambridge.org/core/journals/ethics-and-international-affairs/article/ethics-of-military-ai/...",
+        "kind": "paper"
+      },
+      {
+        "title": "Crowdsourcing and Privacy: The Unseen Implications",
+        "url": "https://www.jstor.org/stable/10.5325/jinfopolicy.6.2016.0001",
+        "kind": "paper"
+      },
+      {
+        "title": "The Militarization of AI and the Risks of AI-Powered Warfare",
+        "url": "https://www.youtube.com/watch?v=...",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-10",
     "title": "Your Next Hackathon Should Be a Hardware Playground",
     "tags": [
