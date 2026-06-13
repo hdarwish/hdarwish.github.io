@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-13",
+    "title": "Open Source AI Isn't Just a Choice — It's a Necessity",
+    "tags": [
+      "open source",
+      "AI",
+      "innovation"
+    ],
+    "excerpt": "Scrolling through tech articles, I hit a manifesto shouting that open source AI must win. It wasn't just noise; it was a call to arms.The piece warned of AI becoming a subscription service for...",
+    "hn_refs": [
+      {
+        "title": "Open source AI must win",
+        "url": "https://opensourceaimustwin.com/?share=v2",
+        "points": 626
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Future of Open Source AI: Risks and Opportunities",
+        "url": "https://www.youtube.com/watch?v=XYZ123",
+        "kind": "talk"
+      },
+      {
+        "title": "OpenAI's Charter",
+        "url": "https://openai.com/about/charter/",
+        "kind": "article"
+      },
+      {
+        "title": "The Open Source Definition",
+        "url": "https://opensource.org/osd",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-11",
     "title": "Your Pokémon Go Addiction is Powering Military Drones",
     "tags": [
