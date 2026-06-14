@@ -1,5 +1,44 @@
 [
   {
+    "date": "2026-06-14",
+    "title": "Banning Noise Infusion: When Privacy Handcuffs Accuracy",
+    "tags": [
+      "privacy",
+      "data-accuracy"
+    ],
+    "excerpt": "Three days ago, the Census Bureau's decision to ban noise infusion from its statistical products hit the wire. It felt like the kind of corporate policy shift that gets a shrug and ends up as a...",
+    "hn_refs": [
+      {
+        "title": "Noise infusion banned from statistical products published by Census Bureau",
+        "url": "https://desfontain.es/blog/banning-noise.html",
+        "points": 789
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Differential Privacy: A Primer for a Non-Technical Audience",
+        "url": "https://privacytools.seas.harvard.edu/files/privacytools/files/pedagogical-document-dp_new.pdf",
+        "kind": "paper"
+      },
+      {
+        "title": "The Algorithmic Foundations of Differential Privacy",
+        "url": "https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf",
+        "kind": "book"
+      },
+      {
+        "title": "Differential Privacy in the 2020 US Census: What Will It Do?",
+        "url": "https://www.youtube.com/watch?v=G5rj2Qp1iQY",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-13",
     "title": "Open Source AI Isn't Just a Choice — It's a Necessity",
     "tags": [
