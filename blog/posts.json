@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-16",
+    "title": "LinkedIn Job Offers: A Security Breach Waiting to Happen",
+    "tags": [
+      "security",
+      "social engineering",
+      "trust"
+    ],
+    "excerpt": "I read a post today about a LinkedIn job offer that hid a backdoor. It wasn't a technical flaw in the platform, but a breach of trust in a place we consider professional and safe. This made me...",
+    "hn_refs": [
+      {
+        "title": "A backdoor in a LinkedIn job offer",
+        "url": "https://roman.pt/posts/linkedin-backdoor",
+        "points": 961
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Art of Deception: Controlling the Human Element of Security",
+        "url": "https://www.wiley.com/en-us/The+Art+of+Deception%3A+Controlling+the+Human+Element+of+Security-p-9780764542800",
+        "kind": "book"
+      },
+      {
+        "title": "Social Engineering: The Science of Human Hacking",
+        "url": "https://www.wiley.com/en-us/Social+Engineering%3A+The+Science+of+Human+Hacking%2C+2nd+Edition-p-9781119433385",
+        "kind": "book"
+      },
+      {
+        "title": "SANS Institute: Social Engineering Attacks: Common Techniques & How to Prevent an Attack",
+        "url": "https://www.sans.org/white-papers/37065/",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-14",
     "title": "Banning Noise Infusion: When Privacy Handcuffs Accuracy",
     "tags": [
