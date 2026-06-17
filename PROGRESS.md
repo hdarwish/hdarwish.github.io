@@ -1,33 +1,34 @@
-# Progress: Hafs.dev Services fake-door page
-Card: t_2d7d9f80
-Branch: bld-2d7d-fix (rework of bld-2d7d-services)
-Started: 2026-06-11T18:21Z
-Rework: 2026-06-11T18:46Z
+# Progress: Portfolio — CCAT Guru update + section/tag audit
+Card: t_5d55793c
+Branch: bld-5d557-portfoli
+Started: 2026-06-16T08:13Z
+Completed: 2026-06-16T08:30Z
 
 ## Checklist
-- [x] Read card and oriented on repo structure
-- [x] Audited existing pages (dataaudit, codereview) for conventions
-- [x] Created services/index.html — 4 service sprint cards + mailto CTAs
-- [x] Updated index.html nav — added "Services" link
-- [x] Updated index.html projects grid — added Services project card
-- [x] Verified all relative paths (../style.css, ../script.js, ../index.html)
-- [x] Committed and pushed to bld-2d7d-services
-- [x] PR opened: https://github.com/hdarwish/hdarwish.github.io/pull/11
-- [x] B1 fix: services grid minmax(420px→min(420px,100%), 1fr) — mobile overflow resolved
+- [x] Read card and estimated
+- [x] Orientation check passed
+- [x] Verify live URLs (ccat-guru.hafs.dev=200, herald.hafs.dev=200, tinytell.hafs.dev=404)
+- [x] Add status-offer and status-waitlist CSS classes to style.css
+- [x] Update CCAT Guru card (description, status Live, link to verified URL)
+- [x] Update TinyTell card (description updated to baby cry classification, tags updated)
+- [x] Restructure projects section into Live/Public Systems, Consulting Offers, Labs
+- [x] Normalize status badges across all cards
+- [x] Normalize tags across all cards (Title Case, 4-6 per card)
+- [x] Static check (grep stale phrases — all removed)
+- [x] Commit 804871b and push to origin/bld-5d557-portfoli
+- [x] PR opened: https://github.com/hdarwish/hdarwish.github.io/pull/14
 
 ## Acceptance Criteria Self-Check
-- [x] AC1: services/index.html exists at hafs.dev/services/ — PASS (file created, static site)
-- [x] AC2: 3–4 service offers, not full 10-skill catalog — PASS: 4 sprints (AI automation, dashboard, MVP, infra rescue)
-- [x] AC3: CTA uses existing contact/email link — PASS: mailto:hafs.darwish@gmail.com (no Calendly/Stripe)
-- [x] AC4: No Stripe/Calendly accounts created — PASS: only mailto links; TODO comment left in HTML
-- [x] AC5: Nav/home link added — PASS: "Services" added to homepage nav + project card in projects grid
-- [x] AC6: Static site — no build required — PASS: static HTML, links to existing style.css + script.js
-- [x] AC7: Branch pushed + PR opened — PASS (pending PR)
-- [x] AC8: No secrets, no credentials — PASS: only HTML changes
-- [x] B1: Mobile grid overflow fixed — PASS: minmax(min(420px,100%),1fr) prevents column from exceeding container on ~327px mobile
+- [x] AC1: index.html no longer contains "creator community awareness tool" — PASS (grep confirms removed)
+- [x] AC2: index.html no longer contains "voice journaling/sentiment" text — PASS (grep confirms removed)
+- [x] AC3: CCAT Guru linked accurately to https://ccat-guru.hafs.dev/ (200 OK verified) — PASS
+- [x] AC4: Project statuses/tags consistent, not visually noisy — PASS (5-class taxonomy: Live, Building, Open Source, Offer, Waitlist)
+- [x] AC5: Final proof — commit SHA 804871b, PR #14, URLs checked (see above) — PASS
 
 ## Notes
-- CTA destination: mailto:hafs.darwish@gmail.com (pre-filled per sprint)
-- Public URL: https://hafs.dev/services/ (static GitHub Pages)
-- No Stripe/Calendly — TODO comment in services/index.html CTA section for follow-up billing card
-- Static site; no build step; style.css?v=14 and script.js referenced identically to other sub-pages
+- ccat-guru.hafs.dev returns 200 — marked Live and linked
+- tinytell.hafs.dev returns 404 — kept as Building, local tinytell/index.html link preserved
+- herald.hafs.dev returns 200 — kept as Live
+- Added CSS classes status-offer (amber/orange) and status-waitlist (purple) with overrides for all 5 themes
+- "Launching Q3 2026" retained as body text only in CodeReview Bot description (not a badge)
+- PR: https://github.com/hdarwish/hdarwish.github.io/pull/14

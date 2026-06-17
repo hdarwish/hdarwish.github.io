@@ -72,6 +72,18 @@ html[data-theme="light"],
     border-color: rgba(202, 138, 4, 0.15);
 }
 
+[data-theme="light"] .status-offer {
+    background: rgba(234, 88, 12, 0.06);
+    color: #c2410c;
+    border-color: rgba(234, 88, 12, 0.15);
+}
+
+[data-theme="light"] .status-waitlist {
+    background: rgba(109, 40, 217, 0.06);
+    color: #6d28d9;
+    border-color: rgba(109, 40, 217, 0.15);
+}
+
 [data-theme="light"] .project-link-soon {
     color: #a16207;
 }
@@ -120,6 +132,8 @@ html[data-theme="eink"],
 [data-theme="eink"] .status-live { background: rgba(0,0,0,0.06); color: #333; border-color: #bbb; }
 [data-theme="eink"] .status-oss { background: rgba(0,0,0,0.04); color: #444; border-color: #bbb; }
 [data-theme="eink"] .status-wip { background: rgba(0,0,0,0.04); color: #555; border-color: #bbb; }
+[data-theme="eink"] .status-offer { background: rgba(0,0,0,0.04); color: #444; border-color: #bbb; }
+[data-theme="eink"] .status-waitlist { background: rgba(0,0,0,0.04); color: #555; border-color: #bbb; }
 [data-theme="eink"] .project-link-soon { color: #666; }
 
 /* eInk — hero overrides (grayscale) */
@@ -163,6 +177,8 @@ html[data-theme="xterm"],
 [data-theme="xterm"] .status-live { background: rgba(0,255,0,0.08); color: #33ff33; border-color: rgba(0,255,0,0.3); }
 [data-theme="xterm"] .status-oss { background: rgba(0,255,0,0.05); color: #20cc20; border-color: rgba(0,255,0,0.2); }
 [data-theme="xterm"] .status-wip { background: rgba(0,255,0,0.05); color: #20aa20; border-color: rgba(0,255,0,0.15); }
+[data-theme="xterm"] .status-offer { background: rgba(0,255,0,0.05); color: #20cc20; border-color: rgba(0,255,0,0.2); }
+[data-theme="xterm"] .status-waitlist { background: rgba(0,255,0,0.04); color: #20aa20; border-color: rgba(0,255,0,0.15); }
 [data-theme="xterm"] .project-link-soon { color: #20aa20; }
 [data-theme="xterm"] .project-card.featured { border-color: rgba(0,255,0,0.15); background: linear-gradient(135deg, #111 0%, rgba(0,255,0,0.02) 100%); }
 [data-theme="xterm"] .tag { background: rgba(0,255,0,0.06); color: #33ff33; }
@@ -229,6 +245,8 @@ html[data-theme="drunk"],
 [data-theme="drunk"] .status-live { background: rgba(255,110,199,0.12); color: #ff99dd; border-color: rgba(255,110,199,0.3); }
 [data-theme="drunk"] .status-oss { background: rgba(110,200,255,0.1); color: #88ccff; border-color: rgba(110,200,255,0.25); }
 [data-theme="drunk"] .status-wip { background: rgba(255,200,50,0.1); color: #ffcc33; border-color: rgba(255,200,50,0.2); }
+[data-theme="drunk"] .status-offer { background: rgba(255,160,80,0.1); color: #ffaa55; border-color: rgba(255,160,80,0.25); }
+[data-theme="drunk"] .status-waitlist { background: rgba(200,120,255,0.1); color: #cc88ff; border-color: rgba(200,120,255,0.25); }
 [data-theme="drunk"] .project-link-soon { color: #ffcc33; }
 [data-theme="drunk"] .project-card.featured { border-color: rgba(255,110,199,0.2); background: linear-gradient(135deg, #2d1350 0%, rgba(255,110,199,0.05) 100%); }
 
@@ -1238,6 +1256,18 @@ footer {
     background: rgba(251, 191, 36, 0.1);
     color: #fbbf24;
     border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.status-offer {
+    background: rgba(251, 146, 60, 0.1);
+    color: #fb923c;
+    border: 1px solid rgba(251, 146, 60, 0.2);
+}
+
+.status-waitlist {
+    background: rgba(167, 139, 250, 0.1);
+    color: #a78bfa;
+    border: 1px solid rgba(167, 139, 250, 0.2);
 }
 
 .project-card p.project-what {
