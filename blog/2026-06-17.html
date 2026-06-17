@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Models Aren&#39;t Dead: They&#39;re Just Getting Started - Hafs Ibrahim</title>
+    <meta name="description" content="Local Models Aren&#39;t Dead: They&#39;re Just Getting Started">
+    <meta property="og:title" content="Local Models Aren&#39;t Dead: They&#39;re Just Getting Started">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-06-17.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-06-17">
+            <div class="blog-post-date">June 17, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Local Models</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Cloud Computing</span></div>
+            <h2 class="blog-post-title">Local Models Aren&#39;t Dead: They&#39;re Just Getting Started</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-06-17-hero.png" alt="Local Models Aren&#39;t Dead: They&#39;re Just Getting Started" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>A blog post caught my eye recently, challenging the cloud-first mindset we've embraced for years. Running AI models locally is making a comeback, and it's not just nostalgia—it's practicality.</p>
+<p>Local models used to be cumbersome. They were slow and inaccurate, and I thought the cloud had made them obsolete.</p>
+<p>But here we are in 2026, and local models are not only viable but maybe even preferable for certain scenarios. That surprised me.</p>
+<p>Vicki Boykis highlighted that with a 2022 M2 Mac and some smart setup, local models like Mistral 7B and Gemma 3 are handling tasks that seemed out of reach not long ago.</p>
+<p>Running fast, personalized searches and even agentic coding loops with up to 75% of the performance of frontier models—all without the cloud.</p>
+<p>This shift isn't magic. It's the result of years of iteration and optimization, driven by the need to escape cloud fees.</p>
+<p>Relying on the cloud for AI felt like defaulting to the internet for everything. It's easy, but not always best.</p>
+<p>There's something freeing about having control. You dictate the environment, the model, and how the data gets processed. No waiting, no sharing with the NSA.</p>
+<p>Vicki mentions using Gemma-4 models locally to refactor Python scripts, lint code, and proofread blog posts. These aren't trivial tasks anymore. They require real processing power.</p>
+<p>And here's the beauty. You can run this on Docker with limited execution permissions. Security and control go hand in hand here, allowing you to tailor your setup exactly how you want it.</p>
+<p>The cloud's convenience is undeniable. But it also comes with dependency—on internet speed, server reliability, and often opaque pricing models.</p>
+<p>Running these models locally shifts power back to developers. It means fewer surprise spikes on your AWS invoice.</p>
+<p>It also means more privacy. Your data doesn't have to leave your machine, reducing the threat surface significantly.</p>
+<p>Consider a real-world scenario: a development team using ONNX Runtime for local model inference. By leveraging quantization and optimization techniques, they managed to run a Gemma-4 model with only 2GB of RAM, achieving 80% of the cloud model's accuracy.</p>
+<p>They cut their cloud costs by 50% in the first month. That's not just a win for the budget—it's peace of mind for engineers tired of watching the budget ticker.</p>
+<p>The push for efficiency in AI has been palpable. Gemma-4-12b-qat is a testament to that, marrying performance with a smaller footprint. It's an elegant reminder that efficiency doesn't have to mean compromise.</p>
+<p>I'm not saying throw your cloud infrastructure out the window. But this local resurgence is a nudge to rethink what's possible.</p>
+<p>It's about finding the right balance between flexibility, cost, and performance.</p>
+<p>The most thrilling part is the autonomy. You're no longer bound by someone else's infrastructure priorities or downtime schedules.</p>
+<p>So maybe it's time to pull those dusty local setups out of storage. Polish them up, test them out, and see what fits your workflow.</p>
+<p>In a world becoming increasingly centralized, the shift back to local feels like a small rebellion. And honestly, it feels good.</p>
+<p>We talked about cloud-first as if it was the only way. Now, it seems like there's a viable alternative, and I'm here for it.</p>
+<p>If you're feeling the strain of cloud dependency or just want more control, run a local model—or ten. You might just find it changes your perspective.</p>
+<p>The tools we use shape the work we do. With local models, those tools are once again in our hands.</p>
+<p>And that’s the point. It's autonomy in a package, a return to a sense of control. The cloud isn't dead—it's just not the only game in town anymore.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://vickiboykis.com/2026/06/15/running-local-models-is-good-now" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Running local models is good now</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲1174</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://onnxruntime.ai/docs/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">ONNX Runtime Documentation</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.oreilly.com/library/view/running-machine-learning/9781492057892/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Running Machine Learning Models Locally: A Practical Guide</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://www.youtube.com/watch?v=E3gS4B3u9rE" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Local-first Software: You Own Your Data, in Real Time</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">TALK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

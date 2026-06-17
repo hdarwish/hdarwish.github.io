@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-17",
+    "title": "Local Models Aren't Dead: They're Just Getting Started",
+    "tags": [
+      "AI",
+      "Local Models",
+      "Cloud Computing"
+    ],
+    "excerpt": "A blog post caught my eye recently, challenging the cloud-first mindset we've embraced for years. Running AI models locally is making a comeback, and it's not just nostalgia—it's practicality.\nLocal...",
+    "hn_refs": [
+      {
+        "title": "Running local models is good now",
+        "url": "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now",
+        "points": 1174
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "ONNX Runtime Documentation",
+        "url": "https://onnxruntime.ai/docs/",
+        "kind": "docs"
+      },
+      {
+        "title": "Running Machine Learning Models Locally: A Practical Guide",
+        "url": "https://www.oreilly.com/library/view/running-machine-learning/9781492057892/",
+        "kind": "book"
+      },
+      {
+        "title": "Local-first Software: You Own Your Data, in Real Time",
+        "url": "https://www.youtube.com/watch?v=E3gS4B3u9rE",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-16",
     "title": "LinkedIn Job Offers: A Security Breach Waiting to Happen",
     "tags": [
