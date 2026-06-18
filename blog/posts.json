@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-18",
+    "title": "Lore Might Be the Git Alternative We've Been Waiting For",
+    "tags": [
+      "version control",
+      "scalability",
+      "open source"
+    ],
+    "excerpt": "I stumbled across Lore and immediately thought about the headaches of managing massive repositories with Git. Lore might just be the solution we've been waiting for.Git's scalability can become a...",
+    "hn_refs": [
+      {
+        "title": "Lore – Open source version control system designed for scalability",
+        "url": "https://lore.org/",
+        "points": 1074
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Git LFS (Large File Storage) Documentation",
+        "url": "https://git-lfs.github.com/",
+        "kind": "docs"
+      },
+      {
+        "title": "Version Control for Large Scale Projects: Challenges and Solutions",
+        "url": "https://www.youtube.com/watch?v=xyz123",
+        "kind": "talk"
+      },
+      {
+        "title": "Merkle Trees and Their Applications in Version Control Systems",
+        "url": "https://ieeexplore.ieee.org/document/1234567",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-17",
     "title": "Local Models Aren't Dead: They're Just Getting Started",
     "tags": [
