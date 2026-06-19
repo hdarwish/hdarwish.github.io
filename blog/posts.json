@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-19",
+    "title": "Open Source Security Theater: When GitHub Becomes a Trojan Horse",
+    "tags": [
+      "security",
+      "open-source",
+      "malware"
+    ],
+    "excerpt": "Last night, I read a blog post that made me pause. It detailed how someone found 10,000 GitHub repositories hosting Trojan malware. Ten thousand. Just sitting there, waiting for the unsuspecting to...",
+    "hn_refs": [
+      {
+        "title": "I found 10k GitHub repositories distributing Trojan malware",
+        "url": "https://orchidfiles.com/github-repositories-distributing-malware",
+        "points": 745
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Securing Open Source Software: A Critical Need for a Secure Software Supply Chain",
+        "url": "https://www.linuxfoundation.org/research/securing-open-source-software-a-critical-need-for-a-secure-software-supply-chain",
+        "kind": "paper"
+      },
+      {
+        "title": "Supply Chain Security Best Practices",
+        "url": "https://github.blog/2021-09-01-introducing-supply-chain-security-best-practices/",
+        "kind": "article"
+      },
+      {
+        "title": "Detecting Malicious Repositories on GitHub",
+        "url": "https://www.usenix.org/conference/usenixsecurity20/presentation/han",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-18",
     "title": "Lore Might Be the Git Alternative We've Been Waiting For",
     "tags": [
