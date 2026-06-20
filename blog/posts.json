@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-20",
+    "title": "More Servers, More Problems",
+    "tags": [
+      "load-balancing",
+      "cloud-economics",
+      "scaling"
+    ],
+    "excerpt": "Reading Marc Brooker's post on the economics of load-balanced systems was a wake-up call. Adding servers to a load-balanced system can actually increase latency and costs. Conventional wisdom...",
+    "hn_refs": [
+      {
+        "title": "Surprising economics of load-balanced systems",
+        "url": "https://brooker.co.za/blog/2020/08/06/erlang.html",
+        "points": 78
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Art of Scalability: Scalable Web Architecture, Processes, and Organizations for the Modern Enterprise",
+        "url": "https://www.pearson.com/store/p/the-art-of-scalability-scalable-web-architecture-processes-and-organizations-for-the-modern-enterprise/P10000053282",
+        "kind": "book"
+      },
+      {
+        "title": "Scalable Web Architecture and Distributed Systems",
+        "url": "https://www.youtube.com/watch?v=-W9F__D3oY4",
+        "kind": "talk"
+      },
+      {
+        "title": "Amdahl's Law in the Cloud: Performance Optimization of Massively Parallel Systems",
+        "url": "https://ieeexplore.ieee.org/document/7551373",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-19",
     "title": "Open Source Security Theater: When GitHub Becomes a Trojan Horse",
     "tags": [
