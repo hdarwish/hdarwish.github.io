@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Job Might Be More Fiction Than Function - Hafs Ibrahim</title>
+    <meta name="description" content="Your Job Might Be More Fiction Than Function">
+    <meta property="og:title" content="Your Job Might Be More Fiction Than Function">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-06-22.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-06-22">
+            <div class="blog-post-date">June 22, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">corporate-structures</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">fraud</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">career-development</span></div>
+            <h2 class="blog-post-title">Your Job Might Be More Fiction Than Function</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-06-22-hero.png" alt="Your Job Might Be More Fiction Than Function" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Last night, I read a blog that made me pause. It asked if my old job was only possible because of fraud. This wasn't just a jab at corporate inefficiency. It was a genuine search for answers about a career shaped by unexpected forces.</p>
+
+<p>The blog recounted the tale of GenieDB—an endeavor tangled in a web spun by venture capitalists. Allegations of fraud centered around excessive fees and dubious expenses. For the author, this revelation sparked a retrospective gaze into his past: realizing that what he thought was a legitimate career move might have been a side effect of financial shenanigans.</p>
+
+<p>This got me reflecting on my own journey in tech. How many of my roles were more about optics than output? It's unsettling. Corporate structures are often a maze of inefficiencies, where the alignment of roles and real value creation isn't always clear-cut. But fraud? That takes inefficiency to a new level.</p>
+
+<p>In that blog, the author described how GenieDB’s strategy seemed more about creating appearances than pursuing meaningful technological advances. They had just three customers, while bigger players outpaced them. Yet, they continued to exist and even drew talent across continents. Was their creation just a byproduct of a VC's scheme? This story is more common in tech than we’d like to admit. The allure of startup culture, with its promises of rapid innovation and wealth, can sometimes mask these darker undercurrents.</p>
+
+<p>I've had my share of waking up in a cold sweat, questioning the purpose of a role I once held. “Why am I here?” I’ve asked myself, especially when the company goals seemed nebulous or constantly shifting. But fraud? That's a different beast. It turns the typical job insecurity into an existential crisis, where your career’s very foundation feels shaky.</p>
+
+<p>These roles persist because of systemic vulnerabilities. Companies often operate with a blend of genuine innovation and layers of bureaucracy. The latter provides the perfect cover for roles that, on paper, seem indispensable but in practice, exist to serve alternative agendas.</p>
+
+<p>GenieDB’s story is a cautionary tale that invites scrutiny of the systemic issues that allow such roles to flourish. The CEO testified to paying excessive fees, and yet, it continued. This isn’t just a quirk of GenieDB; it’s emblematic of a larger issue in tech and beyond. Organizations are often built on trust, which can be easily abused when oversight is lax and incentives are misaligned.</p>
+
+<p>In my career, I’ve seen the repercussions of unchecked roles and misaligned incentives first-hand. Departments set up merely to tick compliance boxes but added no real value. Projects that seemed more about padding portfolios than solving real problems. They don’t just waste resources—they demoralize teams who genuinely want to contribute.</p>
+
+<p>For the author of the blog, despite his mixed feelings about GenieDB, there was an upside—his career trajectory changed because of it. But not everyone caught in such situations gets a silver lining. Fraud and inefficiency can derail careers, stunt professional growth, and degrade morale.</p>
+
+<p>The lesson here is vigilance. As engineers, we’re trained to optimize systems, identify inefficiencies, and create value. That mindset shouldn’t stop at code. It should extend to the roles and structures within our companies. By questioning and understanding the purpose behind our work, we can better navigate these murky corporate waters.</p>
+
+<p>Reflecting on my own path, I urge fellow engineers to remain critical of their roles. Ask the hard questions. If a job feels misaligned with its stated purpose, dig deeper. Often, it’s not about finding fraud but about ensuring your efforts truly contribute to something meaningful.</p>
+
+<p>When the dust settles, remember this: your career is not just a sequence of roles and responsibilities. It’s a narrative shaped by the choices you make in response to the currents, whether dark or light, that propel you forward.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Did my old job only exist because of fraud?</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲688</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.penguinrandomhouse.com/books/563769/bad-blood-by-john-carreyrou/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Bad Blood: Secrets and Lies in a Silicon Valley Startup</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://www.youtube.com/watch?v=1gZ1iJYy6B0" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Rise and Fall of WeWork</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">VIDEO</span></a><a href="https://www.imdb.com/title/tt1016268/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Enron: The Smartest Guys in the Room</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">VIDEO</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
