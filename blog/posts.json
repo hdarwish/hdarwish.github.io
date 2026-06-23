@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-23",
+    "title": "Memcached: The Timeless Elegance of Simplicity",
+    "tags": [
+      "caching",
+      "infrastructure",
+      "devops"
+    ],
+    "excerpt": "I read a blog post today praising memcached, and it took me back to when simplicity in caching wasn't just assumed—it was debated. Those were the days of wrestling with cache solutions that promised...",
+    "hn_refs": [
+      {
+        "title": "In praise of memcached",
+        "url": "https://jchri.st/blog/in-praise-of-memcached",
+        "points": 105
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Memcached Official Documentation",
+        "url": "https://memcached.org",
+        "kind": "docs"
+      },
+      {
+        "title": "High Performance Browser Networking",
+        "url": "https://hpbn.co",
+        "kind": "book"
+      },
+      {
+        "title": "Scaling Web Applications with Memcached",
+        "url": "https://www.youtube.com/watch?v=example",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-22",
     "title": "Your Job Might Be More Fiction Than Function",
     "tags": [
