@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-25",
+    "title": "OpenAI's Custom Chip is a Warning",
+    "tags": [
+      "AI",
+      "hardware",
+      "performance"
+    ],
+    "excerpt": "OpenAI just announced their first custom chip, Jalapeño, built with Broadcom. This isn't just a new piece of hardware; it's a strategic shift. The AI landscape is moving from software tricks to...",
+    "hn_refs": [
+      {
+        "title": "OpenAI unveils its first custom chip, built by Broadcom",
+        "url": "https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom",
+        "points": 641
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Domain-Specific Hardware Accelerators for AI: A Survey",
+        "url": "https://arxiv.org/abs/2009.05202",
+        "kind": "paper"
+      },
+      {
+        "title": "The Hardware Lottery",
+        "url": "https://arxiv.org/abs/2009.06489",
+        "kind": "paper"
+      },
+      {
+        "title": "Google's TPU: A Case Study in Domain-Specific Hardware",
+        "url": "https://www.youtube.com/watch?v=tLZvn0sC1a8",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    }
+  },
+  {
     "date": "2026-06-24",
     "title": "Vulnerability Reports Are Just Another Tuesday",
     "tags": [
