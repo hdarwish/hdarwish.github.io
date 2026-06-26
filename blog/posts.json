@@ -139,6 +139,15 @@
   },
   {
     "date": "2026-06-26",
+    "slug": "hermes-harness-architecture",
+    "title": "Hermes Agent Harness — Reference Architecture",
+    "tags": ["AI Agents", "Architecture", "Systems"],
+    "excerpt": "A visual reference for the 4-layer Hermes multi-agent harness: Runtime, Capabilities, Orchestration, and Safety & Scale. Part 0 of a planned technical series on building with and around the Claude API.",
+    "hn_refs": [],
+    "canonical_url": "https://hafs.dev/blog/hermes-harness-architecture.html"
+  },
+  {
+    "date": "2026-06-26",
     "title": "USB-C Simplicity Is a Myth: Framework's 10G Ethernet Module Shows Why",
     "tags": [
       "USB-C",

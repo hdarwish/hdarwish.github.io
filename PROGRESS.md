@@ -26,9 +26,17 @@ Started: 2026-06-26
 - [x] AC10: No merge/live publish/social post/5-post series — PASS
 - [x] AC11: t_0130aa99 remains deferred — PASS (noted in PR body)
 
+## Rework (Reviewer M1 fix)
+- [x] Add hermes-harness-architecture entry to blog/posts.json with slug field — PASS
+- [x] Add slug support to blog.html link template (post.slug || post.date) — PASS
+- [x] JSON valid (58 entries, hermes entry at top) — PASS
+- [x] SVG sha256 unchanged: 824b2311f02261540e8a3e3f740e6b899203e18a338cfce140178ce777923aea — PASS
+- [x] xmllint valid — PASS
+- [x] Diff scoped to blog.html + blog/posts.json only (2 files, +10/-1 lines) — PASS
+
 ## Notes
 - Source SVG: git show 86f600c18c93:assets/hermes-harness-architecture.svg
-- Changes scoped to: SVG draft-warning removal + minimal blog page
+- Changes scoped to: SVG draft-warning removal + minimal blog page + posts.json wiring
 - NOT creating the 5-post series (t_0130aa99 stays deferred)
 - No merge/live publish/social post
 - PR: https://github.com/hdarwish/hdarwish.github.io/pull/15

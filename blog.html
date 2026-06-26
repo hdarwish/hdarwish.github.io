@@ -281,7 +281,7 @@
                 ).join('');
 
                 html += `
-                <a href="blog/${post.date}.html" class="blog-card">
+                <a href="blog/${post.slug || post.date}.html" class="blog-card">
                     <div class="blog-card-date">${formatDate(post.date)}</div>
                     <div class="blog-card-tags">${tagsHtml}</div>
                     <h2 class="blog-card-title">${escapeHtml(post.title)}</h2>
