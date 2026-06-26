@@ -83,7 +83,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "OpenAI just announced their first custom chip, Jalapeño, built with Broadcom. This isn't just a new piece of hardware; it's a strategic shift. The AI...",
+    "social_teasers": {
+      "linkedin": "OpenAI's Custom Chip is a Warning\n\nOpenAI just announced their first custom chip, Jalapeño, built with Broadcom. This isn't just a new piece of hardware; it's a strategic shift. The AI...\n\nhttps://hafs.dev/blog/2026-06-25.html\n\n#AI #hardware #performance",
+      "x": "OpenAI's Custom Chip is a Warning\nhttps://hafs.dev/blog/2026-06-25.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-25.html"
   },
   {
     "date": "2026-06-24",
