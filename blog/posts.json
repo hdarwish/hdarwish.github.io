@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-06-26",
+    "title": "USB-C Simplicity Is a Myth: Framework's 10G Ethernet Module Shows Why",
+    "tags": [
+      "USB-C",
+      "Networking",
+      "Hardware"
+    ],
+    "excerpt": "I read Jeff Geerling's post about the Framework 10G Ethernet module and it highlighted the hidden complexities of USB-C that most users never see. The promise of USB-C is simplicity and universality....",
+    "hn_refs": [
+      {
+        "title": "Framework's 10G Ethernet module exposes USB-C's complexity",
+        "url": "https://www.jeffgeerling.com/blog/2026/framework-10g-ethernet-module-usb-c-complexity",
+        "points": 117
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "USB Type-C: Cable and Connector Specification",
+        "url": "https://www.usb.org/document-library/usb-type-cr-cable-and-connector-specification-release-20",
+        "kind": "docs"
+      },
+      {
+        "title": "The Realities of USB-C and Thunderbolt 3",
+        "url": "https://www.youtube.com/watch?v=5tqH-Un9SFU",
+        "kind": "talk"
+      },
+      {
+        "title": "Understanding USB-C: How to Avoid Paying for the Wrong Thing",
+        "url": "https://arstechnica.com/gadgets/2020/02/usb-c-explained-how-to-get-the-most-from-it-and-why-it-keeps-getting-better/",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "I read Jeff Geerling's post about the Framework 10G Ethernet module and it highlighted the hidden complexities of USB-C that most users never see. The...",
+    "social_teasers": {
+      "linkedin": "USB-C Simplicity Is a Myth: Framework's 10G Ethernet Module Shows Why\n\nI read Jeff Geerling's post about the Framework 10G Ethernet module and it highlighted the hidden complexities of USB-C that most users never see. The...\n\nhttps://hafs.dev/blog/2026-06-26.html\n\n#USB-C #Networking #Hardware",
+      "x": "USB-C Simplicity Is a Myth: Framework's 10G Ethernet Module Shows Why\nhttps://hafs.dev/blog/2026-06-26.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-26.html"
+  },
+  {
     "date": "2026-06-25",
     "title": "OpenAI's Custom Chip is a Warning",
     "tags": [
