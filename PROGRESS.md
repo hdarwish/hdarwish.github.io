@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-# Progress: Update portfolio with TinyTell App Store launch
-Card: t_69717abc
-Branch: bld-69717-ttapp
-Started: 2026-06-29
-
-## Checklist
-- [x] Read card and estimated
-- [x] Inspect portfolio structure — TinyTell card at index.html:790, tinytell/index.html exists
-- [x] Verify App Store URL returns 200 — https://apps.apple.com/us/app/tinytell/id6771931037
-- [x] Update index.html TinyTell card (status: Building→Live, copy, App Store link)
-- [x] Update tinytell/index.html (add App Store download button)
-- [ ] Commit and push
-- [ ] PR opened
-
-## Notes
-- TinyTell card currently shows status-wip "Building" with "App Store submission in progress."
-- Need to flip to status-live "Live" and add App Store link
-- No test suite in this repo (static HTML site)
-- tinytell/index.html is the marketing page; card links to it
-- App Store URL verified HTTP 200
-=======
 # Progress: Hermes Harness Architecture SVG — Publication Prep (Part 0)
 Card: t_0796439a
 Branch: bld-07964-portfoli
@@ -28,16 +6,29 @@ Started: 2026-06-26
 ## Checklist
 - [x] Read card and estimated
 - [x] Verified source SVG sha256 matches (857a38b202284920bea680e82b71a8c05f3137b2f8e8744fcb1eacd12219c8e7)
-- [ ] Create publication-ready SVG (remove draft warnings, preserve labels/attribution)
-- [ ] Add assets/ directory and place SVG
-- [ ] Create minimal blog/visual-explainer page following existing site patterns
-- [ ] Verify XML parses cleanly
-- [ ] Commit and push
-- [ ] Open PR
+- [x] Create publication-ready SVG (remove draft warnings, preserve labels/attribution)
+- [x] Add assets/ directory and place SVG
+- [x] Create minimal blog/visual-explainer page following existing site patterns
+- [x] Verify XML parses cleanly
+- [x] Commit b8064d3 and push to origin/bld-07964-portfoli
+- [x] PR opened: https://github.com/hdarwish/hdarwish.github.io/pull/15
+
+## Acceptance Criteria Self-Check
+- [x] AC1: Branch created, HEAD SHA b8064d3 — PASS
+- [x] AC2: Draft warning badge removed, "DRAFT — NOT FOR PUBLICATION" text gone — PASS (grep confirms 0 matches)
+- [x] AC3: "Draft infographic:" prefix removed from <desc> — PASS (grep confirms 0 matches)
+- [x] AC4: Architecture labels and source attribution preserved unchanged — PASS (verified diff)
+- [x] AC5: Updated SVG sha256: 824b2311f02261540e8a3e3f740e6b899203e18a338cfce140178ce777923aea — PASS
+- [x] AC6: xmllint validates SVG — PASS (XML valid)
+- [x] AC7: blog/hermes-harness-architecture.html created with accessible alt text and Part 0 framing — PASS
+- [x] AC8: No existing local build command found (static HTML site, GitHub Pages) — PASS (stated explicitly)
+- [x] AC9: PR #15 open, not merged — PASS
+- [x] AC10: No merge/live publish/social post/5-post series — PASS
+- [x] AC11: t_0130aa99 remains deferred — PASS (noted in PR body)
 
 ## Notes
 - Source SVG: git show 86f600c18c93:assets/hermes-harness-architecture.svg
 - Changes scoped to: SVG draft-warning removal + minimal blog page
 - NOT creating the 5-post series (t_0130aa99 stays deferred)
 - No merge/live publish/social post
->>>>>>> b8064d3 (feat(t_0796439a): publish-prep Hermes harness architecture SVG — Part 0 visual explainer)
+- PR: https://github.com/hdarwish/hdarwish.github.io/pull/15
