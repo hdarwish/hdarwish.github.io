@@ -1,0 +1,27 @@
+{
+  "share_description": "I stumbled upon AWS's announcement of MicroVMs, and it hit me like a jolt of caffeine. Our deploy pipeline might never look the same. MicroVMs offer the...",
+  "social_teasers": {
+    "linkedin": "MicroVMs: The Future of Serverless Isn't What You Think\n\nI stumbled upon AWS's announcement of MicroVMs, and it hit me like a jolt of caffeine. Our deploy pipeline might never look the same. MicroVMs offer the...\n\nhttps://hafs.dev/blog/2026-06-27.html\n\n#MicroVMs #Serverless #CloudComputing",
+    "x": "MicroVMs: The Future of Serverless Isn't What You Think\nhttps://hafs.dev/blog/2026-06-27.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-27.html",
+  "title": "MicroVMs: The Future of Serverless Isn't What You Think",
+  "tags": [
+    "MicroVMs",
+    "Serverless",
+    "Cloud Computing"
+  ],
+  "hn_refs": [
+    {
+      "title": "MicroVMs: Run isolated sandboxes with full lifecycle control",
+      "url": "https://aws.amazon.com/blogs/aws/run-isolated-sandboxes-with-full-lifecycle-control-aws-lambda-introduces-microvms",
+      "points": 307
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
