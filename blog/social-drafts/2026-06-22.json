@@ -1,0 +1,27 @@
+{
+  "share_description": "Last night, I read a blog that made me pause. It asked if my old job was only possible because of fraud. This wasn't just a jab at corporate inefficiency....",
+  "social_teasers": {
+    "linkedin": "Your Job Might Be More Fiction Than Function\n\nLast night, I read a blog that made me pause. It asked if my old job was only possible because of fraud. This wasn't just a jab at corporate inefficiency....\n\nhttps://hafs.dev/blog/2026-06-22.html\n\n#corporate-structures #fraud #career-development",
+    "x": "Your Job Might Be More Fiction Than Function\nhttps://hafs.dev/blog/2026-06-22.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-22.html",
+  "title": "Your Job Might Be More Fiction Than Function",
+  "tags": [
+    "corporate-structures",
+    "fraud",
+    "career-development"
+  ],
+  "hn_refs": [
+    {
+      "title": "Did my old job only exist because of fraud?",
+      "url": "https://david.newgas.net/did-my-old-job-only-exist-because-of-fraud",
+      "points": 688
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

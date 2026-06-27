@@ -1,0 +1,22 @@
+{
+  "share_description": "Last week, I stumbled into a virtual museum of operating systems and lost track of time. This wasn't just nostalgia. It made me rethink how we evaluate...",
+  "social_teasers": {
+    "linkedin": "Our Tech Obsession Ignores the Lessons of the Past\n\nLast week, I stumbled into a virtual museum of operating systems and lost track of time. This wasn't just nostalgia. It made me rethink how we evaluate...\n\nhttps://hafs.dev/blog/2026-05-20.html\n\n#operatingsystems #digitalpreservation #softwareevolution",
+    "x": "Our Tech Obsession Ignores the Lessons of the Past\nhttps://hafs.dev/blog/2026-05-20.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-20.html",
+  "title": "Our Tech Obsession Ignores the Lessons of the Past",
+  "tags": [
+    "operating systems",
+    "digital preservation",
+    "software evolution"
+  ],
+  "hn_refs": [
+    {
+      "title": "I’ve built a virtual museum with nearly every operating system you can think of",
+      "url": "https://virtualosmuseum.org/",
+      "points": 722
+    }
+  ],
+  "source_attribution": null
+}

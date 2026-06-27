@@ -1,0 +1,22 @@
+{
+  "share_description": "The other day, I saw someone transform an $80 RK3562 Android tablet into a Debian Linux workstation. It was a wake-up call. We're surrounded by...",
+  "social_teasers": {
+    "linkedin": "Your Android Tablet Wants to Be a Workstation\n\nThe other day, I saw someone transform an $80 RK3562 Android tablet into a Debian Linux workstation. It was a wake-up call. We're surrounded by...\n\nhttps://hafs.dev/blog/2026-05-18.html\n\n#Linux #RepurposingHardware #Android",
+    "x": "Your Android Tablet Wants to Be a Workstation\nhttps://hafs.dev/blog/2026-05-18.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-18.html",
+  "title": "Your Android Tablet Wants to Be a Workstation",
+  "tags": [
+    "Linux",
+    "Repurposing Hardware",
+    "Android"
+  ],
+  "hn_refs": [
+    {
+      "title": "I turned a $80 RK3562 Android tablet into a Debian Linux workstation",
+      "url": "https://github.com/tech4bot/rk3562deb",
+      "points": 320
+    }
+  ],
+  "source_attribution": null
+}

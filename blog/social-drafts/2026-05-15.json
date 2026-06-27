@@ -1,0 +1,22 @@
+{
+  "share_description": "I read a blog about someone tearing out the modem and GPS from their new RAV4. It made me rethink privacy versus convenience in modern cars.This isn't car...",
+  "social_teasers": {
+    "linkedin": "Your Car's Modem is a Privacy Nightmare\n\nI read a blog about someone tearing out the modem and GPS from their new RAV4. It made me rethink privacy versus convenience in modern cars.This isn't car...\n\nhttps://hafs.dev/blog/2026-05-15.html\n\n#privacy #automotive #technology",
+    "x": "Your Car's Modem is a Privacy Nightmare\nhttps://hafs.dev/blog/2026-05-15.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-15.html",
+  "title": "Your Car's Modem is a Privacy Nightmare",
+  "tags": [
+    "privacy",
+    "automotive",
+    "technology"
+  ],
+  "hn_refs": [
+    {
+      "title": "Removing the modem and GPS from my 2024 RAV4 hybrid",
+      "url": "https://arkadiyt.com/2026/05/13/removing-the-modem-and-gps-from-my-rav4/",
+      "points": 827
+    }
+  ],
+  "source_attribution": null
+}

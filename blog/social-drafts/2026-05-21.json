@@ -1,0 +1,22 @@
+{
+  "share_description": "I read about the breach of 3,800 GitHub repositories via a malicious VSCode extension. It made me think about the vulnerabilities lurking in our development...",
+  "social_teasers": {
+    "linkedin": "Your Development Tool Is a Trojan Horse\n\nI read about the breach of 3,800 GitHub repositories via a malicious VSCode extension. It made me think about the vulnerabilities lurking in our development...\n\nhttps://hafs.dev/blog/2026-05-21.html\n\n#Security #VSCode #SupplyChainAttacks",
+    "x": "Your Development Tool Is a Trojan Horse\nhttps://hafs.dev/blog/2026-05-21.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-21.html",
+  "title": "Your Development Tool Is a Trojan Horse",
+  "tags": [
+    "Security",
+    "VSCode",
+    "Supply Chain Attacks"
+  ],
+  "hn_refs": [
+    {
+      "title": "GitHub confirms breach of 3,800 repos via malicious VSCode extension",
+      "url": "https://www.bleepingcomputer.com/news/security/github-confirms-breach-of-3-800-repos-via-malicious-vscode-extension/",
+      "points": 753
+    }
+  ],
+  "source_attribution": null
+}

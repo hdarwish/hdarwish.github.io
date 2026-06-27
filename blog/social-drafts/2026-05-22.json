@@ -1,0 +1,22 @@
+{
+  "share_description": "I read a post questioning the worth of a $48K GPU server. It made me think about how such an investment reshapes your team's approach to problem-solving and...",
+  "social_teasers": {
+    "linkedin": "Your $48K GPU Server Is More Than Just Numbers\n\nI read a post questioning the worth of a $48K GPU server. It made me think about how such an investment reshapes your team's approach to problem-solving and...\n\nhttps://hafs.dev/blog/2026-05-22.html\n\n#GPU #MachineLearning #Scalability",
+    "x": "Your $48K GPU Server Is More Than Just Numbers\nhttps://hafs.dev/blog/2026-05-22.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-22.html",
+  "title": "Your $48K GPU Server Is More Than Just Numbers",
+  "tags": [
+    "GPU",
+    "Machine Learning",
+    "Scalability"
+  ],
+  "hn_refs": [
+    {
+      "title": "Was my $48K GPU server worth it?",
+      "url": "https://rosmine.ai/2026/05/13/was-my-48k-gpu-worth-it/",
+      "points": 435
+    }
+  ],
+  "source_attribution": null
+}

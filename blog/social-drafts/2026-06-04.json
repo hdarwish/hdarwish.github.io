@@ -1,0 +1,22 @@
+{
+  "share_description": "I read about someone who built a vulnerable app to test if large language models (LLMs) could exploit it. It made me reconsider the boundaries between AI...",
+  "social_teasers": {
+    "linkedin": "AI Isn't Hacking Your App Anytime Soon\n\nI read about someone who built a vulnerable app to test if large language models (LLMs) could exploit it. It made me reconsider the boundaries between AI...\n\nhttps://hafs.dev/blog/2026-06-04.html\n\n#AI #Security #MachineLearning",
+    "x": "AI Isn't Hacking Your App Anytime Soon\nhttps://hafs.dev/blog/2026-06-04.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-04.html",
+  "title": "AI Isn't Hacking Your App Anytime Soon",
+  "tags": [
+    "AI",
+    "Security",
+    "Machine Learning"
+  ],
+  "hn_refs": [
+    {
+      "title": "I built a vulnerable app and spent $1,500 seeing if LLMs could hack it",
+      "url": "https://kasra.blog/blog/i-spent-1500-seeing-if-llms-could-hack-my-app/",
+      "points": 217
+    }
+  ],
+  "source_attribution": null
+}

@@ -1,0 +1,27 @@
+{
+  "share_description": "Reading Marc Brooker's post on the economics of load-balanced systems was a wake-up call. Adding servers to a load-balanced system can actually increase...",
+  "social_teasers": {
+    "linkedin": "More Servers, More Problems\n\nReading Marc Brooker's post on the economics of load-balanced systems was a wake-up call. Adding servers to a load-balanced system can actually increase...\n\nhttps://hafs.dev/blog/2026-06-20.html\n\n#load-balancing #cloud-economics #scaling",
+    "x": "More Servers, More Problems\nhttps://hafs.dev/blog/2026-06-20.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-20.html",
+  "title": "More Servers, More Problems",
+  "tags": [
+    "load-balancing",
+    "cloud-economics",
+    "scaling"
+  ],
+  "hn_refs": [
+    {
+      "title": "Surprising economics of load-balanced systems",
+      "url": "https://brooker.co.za/blog/2020/08/06/erlang.html",
+      "points": 78
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

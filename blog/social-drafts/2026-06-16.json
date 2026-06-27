@@ -1,0 +1,27 @@
+{
+  "share_description": "I read a post today about a LinkedIn job offer that hid a backdoor. It wasn't a technical flaw in the platform, but a breach of trust in a place we consider...",
+  "social_teasers": {
+    "linkedin": "LinkedIn Job Offers: A Security Breach Waiting to Happen\n\nI read a post today about a LinkedIn job offer that hid a backdoor. It wasn't a technical flaw in the platform, but a breach of trust in a place we consider...\n\nhttps://hafs.dev/blog/2026-06-16.html\n\n#security #socialengineering #trust",
+    "x": "LinkedIn Job Offers: A Security Breach Waiting to Happen\nhttps://hafs.dev/blog/2026-06-16.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-16.html",
+  "title": "LinkedIn Job Offers: A Security Breach Waiting to Happen",
+  "tags": [
+    "security",
+    "social engineering",
+    "trust"
+  ],
+  "hn_refs": [
+    {
+      "title": "A backdoor in a LinkedIn job offer",
+      "url": "https://roman.pt/posts/linkedin-backdoor",
+      "points": 961
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

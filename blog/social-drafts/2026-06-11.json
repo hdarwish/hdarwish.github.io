@@ -1,0 +1,26 @@
+{
+  "share_description": "Discovering that Pokémon Go scans are training military drone navigation was a jolt. Catching virtual creatures is one thing; unknowingly aiding defense...",
+  "social_teasers": {
+    "linkedin": "Your Pokémon Go Addiction is Powering Military Drones\n\nDiscovering that Pokémon Go scans are training military drone navigation was a jolt. Catching virtual creatures is one thing; unknowingly aiding defense...\n\nhttps://hafs.dev/blog/2026-06-11.html\n\n#Privacy #MilitaryTechnology",
+    "x": "Your Pokémon Go Addiction is Powering Military Drones\nhttps://hafs.dev/blog/2026-06-11.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-11.html",
+  "title": "Your Pokémon Go Addiction is Powering Military Drones",
+  "tags": [
+    "Privacy",
+    "Military Technology"
+  ],
+  "hn_refs": [
+    {
+      "title": "Pokémon Go Scans Trained the Navigation Tech for Military Drones",
+      "url": "https://dronexl.co/2026/06/09/pokemon-go-scans-niantic-vantor-military-drone-navigation",
+      "points": 373
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

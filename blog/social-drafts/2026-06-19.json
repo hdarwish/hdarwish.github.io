@@ -1,0 +1,27 @@
+{
+  "share_description": "Last night, I read a blog post that made me pause. It detailed how someone found 10,000 GitHub repositories hosting Trojan malware. Ten thousand. Just...",
+  "social_teasers": {
+    "linkedin": "Open Source Security Theater: When GitHub Becomes a Trojan Horse\n\nLast night, I read a blog post that made me pause. It detailed how someone found 10,000 GitHub repositories hosting Trojan malware. Ten thousand. Just...\n\nhttps://hafs.dev/blog/2026-06-19.html\n\n#security #open-source #malware",
+    "x": "Open Source Security Theater: When GitHub Becomes a Trojan Horse\nhttps://hafs.dev/blog/2026-06-19.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-19.html",
+  "title": "Open Source Security Theater: When GitHub Becomes a Trojan Horse",
+  "tags": [
+    "security",
+    "open-source",
+    "malware"
+  ],
+  "hn_refs": [
+    {
+      "title": "I found 10k GitHub repositories distributing Trojan malware",
+      "url": "https://orchidfiles.com/github-repositories-distributing-malware",
+      "points": 745
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

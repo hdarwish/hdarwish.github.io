@@ -1,0 +1,27 @@
+{
+  "share_description": "I read a blog post about someone moving away from Tailwind, and it made me rethink how much I've leaned on utility-first CSS frameworks. Tailwind offers...",
+  "social_teasers": {
+    "linkedin": "Stop Letting Tailwind Define Your Design\n\nI read a blog post about someone moving away from Tailwind, and it made me rethink how much I've leaned on utility-first CSS frameworks. Tailwind offers...\n\nhttps://hafs.dev/blog/2026-05-17.html\n\n#CSS #FrontendDevelopment #Design",
+    "x": "Stop Letting Tailwind Define Your Design\nhttps://hafs.dev/blog/2026-05-17.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-17.html",
+  "title": "Stop Letting Tailwind Define Your Design",
+  "tags": [
+    "CSS",
+    "Frontend Development",
+    "Design"
+  ],
+  "hn_refs": [
+    {
+      "title": "Moving away from Tailwind, and learning to structure my CSS",
+      "url": "https://jvns.ca/blog/2026/05/15/moving-away-from-tailwind--and-learning-to-structure-my-css-/",
+      "points": 521
+    },
+    {
+      "title": "Ask HN: Why did you stop using Tailwind CSS?",
+      "url": "https://news.ycombinator.com/item?id=12345678",
+      "points": 150
+    }
+  ],
+  "source_attribution": null
+}

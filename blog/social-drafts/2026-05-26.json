@@ -1,0 +1,22 @@
+{
+  "share_description": "I stumbled across an article that claimed AI can make coding slower. My first reaction was skeptical, having spent countless hours in code trenches where...",
+  "social_teasers": {
+    "linkedin": "AI Coding Tools: Slower Isn't Always Worse\n\nI stumbled across an article that claimed AI can make coding slower. My first reaction was skeptical, having spent countless hours in code trenches where...\n\nhttps://hafs.dev/blog/2026-05-26.html\n\n#AI #softwaredevelopment #codequality",
+    "x": "AI Coding Tools: Slower Isn't Always Worse\nhttps://hafs.dev/blog/2026-05-26.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-26.html",
+  "title": "AI Coding Tools: Slower Isn't Always Worse",
+  "tags": [
+    "AI",
+    "software development",
+    "code quality"
+  ],
+  "hn_refs": [
+    {
+      "title": "Using AI to write better code more slowly",
+      "url": "https://nolanlawson.com/2026/05/25/using-ai-to-write-better-code-more-slowly/",
+      "points": 637
+    }
+  ],
+  "source_attribution": null
+}

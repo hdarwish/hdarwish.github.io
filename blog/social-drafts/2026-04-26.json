@@ -1,0 +1,28 @@
+{
+  "share_description": "Go’s concurrency model isn’t magic. Everyone nods at goroutines and channels as if they’ve solved all multi-threading woes, but my experiences scream...",
+  "social_teasers": {
+    "linkedin": "Concurrence, Neural Nets, and the Evolution of Expertise\n\nGo’s concurrency model isn’t magic. Everyone nods at goroutines and channels as if they’ve solved all multi-threading woes, but my experiences scream...\n\nhttps://hafs.dev/blog/2026-04-26.html\n\n#concurrency #pytorch #architecture",
+    "x": "Concurrence, Neural Nets, and the Evolution of Expertise\nhttps://hafs.dev/blog/2026-04-26.html"
+  },
+  "url": "https://hafs.dev/blog/2026-04-26.html",
+  "title": "Concurrence, Neural Nets, and the Evolution of Expertise",
+  "tags": [
+    "concurrency",
+    "pytorch",
+    "architecture",
+    "software-craftsmanship"
+  ],
+  "hn_refs": [
+    {
+      "title": "Amateur armed with ChatGPT solves an Erdős problem",
+      "url": "https://www.scientificamerican.com/article/amateur-armed-with-chatgpt-vibe-maths-a-60-year-old-problem/",
+      "points": 304
+    },
+    {
+      "title": "The West Forgot How to Make Things. Now It's Forgetting How to Code",
+      "url": "https://techtrenches.dev/p/the-west-forgot-how-to-make-things",
+      "points": 51
+    }
+  ],
+  "source_attribution": null
+}

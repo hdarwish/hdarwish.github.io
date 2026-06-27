@@ -1,0 +1,22 @@
+{
+  "share_description": "I read about Linux gaming performance outpacing Windows and immediately thought about the implications of open-source systems adopting proprietary tech....",
+  "social_teasers": {
+    "linkedin": "Linux Gaming Is Winning with Windows' Own APIs\n\nI read about Linux gaming performance outpacing Windows and immediately thought about the implications of open-source systems adopting proprietary tech....\n\nhttps://hafs.dev/blog/2026-05-14.html\n\n#Linux #gaming #opensource",
+    "x": "Linux Gaming Is Winning with Windows' Own APIs\nhttps://hafs.dev/blog/2026-05-14.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-14.html",
+  "title": "Linux Gaming Is Winning with Windows' Own APIs",
+  "tags": [
+    "Linux",
+    "gaming",
+    "open source"
+  ],
+  "hn_refs": [
+    {
+      "title": "Linux gaming is faster because Windows APIs are becoming Linux kernel features",
+      "url": "https://www.xda-developers.com/linux-gaming-is-getting-faster-because-windows-apis-are-becoming-linux-kernel-features/",
+      "points": 696
+    }
+  ],
+  "source_attribution": null
+}

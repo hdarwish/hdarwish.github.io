@@ -1,0 +1,27 @@
+{
+  "share_description": "I stumbled upon Ntsc-rs and was immediately reminded of adjusting rabbit ears on a TV for a clearer picture. As someone who's spent years with...",
+  "social_teasers": {
+    "linkedin": "Nostalgia in Emulation: A Lesson in Digital Impermanence\n\nI stumbled upon Ntsc-rs and was immediately reminded of adjusting rabbit ears on a TV for a clearer picture. As someone who's spent years with...\n\nhttps://hafs.dev/blog/2026-06-07.html\n\n#nostalgia #userexperience #digitalmedia",
+    "x": "Nostalgia in Emulation: A Lesson in Digital Impermanence\nhttps://hafs.dev/blog/2026-06-07.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-07.html",
+  "title": "Nostalgia in Emulation: A Lesson in Digital Impermanence",
+  "tags": [
+    "nostalgia",
+    "user experience",
+    "digital media"
+  ],
+  "hn_refs": [
+    {
+      "title": "Ntsc-rs – open-source video emulation of analog TV and VHS artifacts",
+      "url": "https://ntsc.rs/",
+      "points": 338
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

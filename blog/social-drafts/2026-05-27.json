@@ -1,0 +1,22 @@
+{
+  "share_description": "I read about someone building a Git-tracked book production pipeline and thought, why didn't I consider this before? Using Git branches to manage drafts,...",
+  "social_teasers": {
+    "linkedin": "Stop Treating Git Like It's Just for Code\n\nI read about someone building a Git-tracked book production pipeline and thought, why didn't I consider this before? Using Git branches to manage drafts,...\n\nhttps://hafs.dev/blog/2026-05-27.html\n\n#Git #CreativeProcess #VersionControl",
+    "x": "Stop Treating Git Like It's Just for Code\nhttps://hafs.dev/blog/2026-05-27.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-27.html",
+  "title": "Stop Treating Git Like It's Just for Code",
+  "tags": [
+    "Git",
+    "Creative Process",
+    "Version Control"
+  ],
+  "hn_refs": [
+    {
+      "title": "I built a Git-tracked book production pipeline",
+      "url": "https://www.djspeckhals.com/posts/2026-05-22-how-i-bypassed-adobe-and-microsoft-to-build-a-git-tracked-book-production-pipeline/",
+      "points": 237
+    }
+  ],
+  "source_attribution": null
+}
