@@ -1,0 +1,22 @@
+{
+  "share_description": "I read the TanStack postmortem on their NPM supply-chain compromise and immediately thought about how much we rely on human vigilance for security. It's...",
+  "social_teasers": {
+    "linkedin": "Stop Trusting Humans with Supply Chain Security\n\nI read the TanStack postmortem on their NPM supply-chain compromise and immediately thought about how much we rely on human vigilance for security. It's...\n\nhttps://hafs.dev/blog/2026-05-12.html\n\n#supplychainsecurity #softwaredevelopment #automation",
+    "x": "Stop Trusting Humans with Supply Chain Security\nhttps://hafs.dev/blog/2026-05-12.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-12.html",
+  "title": "Stop Trusting Humans with Supply Chain Security",
+  "tags": [
+    "supply chain security",
+    "software development",
+    "automation"
+  ],
+  "hn_refs": [
+    {
+      "title": "TanStack Postmortem: NPM Supply-chain Compromise",
+      "url": "https://example.com/tanstack-postmortem",
+      "points": 150
+    }
+  ],
+  "source_attribution": null
+}

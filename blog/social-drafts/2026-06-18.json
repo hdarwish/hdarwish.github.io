@@ -1,0 +1,27 @@
+{
+  "share_description": "I stumbled across Lore and immediately thought about the headaches of managing massive repositories with Git. Lore might just be the solution we've been...",
+  "social_teasers": {
+    "linkedin": "Lore Might Be the Git Alternative We've Been Waiting For\n\nI stumbled across Lore and immediately thought about the headaches of managing massive repositories with Git. Lore might just be the solution we've been...\n\nhttps://hafs.dev/blog/2026-06-18.html\n\n#versioncontrol #scalability #opensource",
+    "x": "Lore Might Be the Git Alternative We've Been Waiting For\nhttps://hafs.dev/blog/2026-06-18.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-18.html",
+  "title": "Lore Might Be the Git Alternative We've Been Waiting For",
+  "tags": [
+    "version control",
+    "scalability",
+    "open source"
+  ],
+  "hn_refs": [
+    {
+      "title": "Lore – Open source version control system designed for scalability",
+      "url": "https://lore.org/",
+      "points": 1074
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

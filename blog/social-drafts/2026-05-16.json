@@ -1,0 +1,22 @@
+{
+  "share_description": "I stumbled upon a tweet claiming companies are suffering from 'AI psychosis,' and it made me think about all the meetings I've sat through where AI was the...",
+  "social_teasers": {
+    "linkedin": "You're Suffering from AI Psychosis\n\nI stumbled upon a tweet claiming companies are suffering from 'AI psychosis,' and it made me think about all the meetings I've sat through where AI was the...\n\nhttps://hafs.dev/blog/2026-05-16.html\n\n#AI #businessstrategy #technology",
+    "x": "You're Suffering from AI Psychosis\nhttps://hafs.dev/blog/2026-05-16.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-16.html",
+  "title": "You're Suffering from AI Psychosis",
+  "tags": [
+    "AI",
+    "business strategy",
+    "technology"
+  ],
+  "hn_refs": [
+    {
+      "title": "I believe there are entire companies right now under AI psychosis",
+      "url": "https://twitter.com/mitchellh/status/2055380239711457578",
+      "points": 1243
+    }
+  ],
+  "source_attribution": null
+}

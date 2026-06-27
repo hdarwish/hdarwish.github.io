@@ -1,0 +1,26 @@
+{
+  "share_description": "I read a blog post predicting the end of software hackathons. It made me think about the last hackathon I attended. The standout project wasn't an app; it...",
+  "social_teasers": {
+    "linkedin": "Your Next Hackathon Should Be a Hardware Playground\n\nI read a blog post predicting the end of software hackathons. It made me think about the last hackathon I attended. The standout project wasn't an app; it...\n\nhttps://hafs.dev/blog/2026-06-10.html\n\n#hardware #hackathons",
+    "x": "Your Next Hackathon Should Be a Hardware Playground\nhttps://hafs.dev/blog/2026-06-10.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-10.html",
+  "title": "Your Next Hackathon Should Be a Hardware Playground",
+  "tags": [
+    "hardware",
+    "hackathons"
+  ],
+  "hn_refs": [
+    {
+      "title": "RIP software hackathons. Long live the hardware hackathon",
+      "url": "https://blog.oscars.dev/posts/rip-software-hackathons-long-live-the-hardware-hackathon",
+      "points": 172
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

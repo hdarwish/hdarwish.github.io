@@ -1,0 +1,27 @@
+{
+  "share_description": "I came across a blog post about an engineer's journey from addiction and prison to a fresh start in tech. It made me question the industry's narratives...",
+  "social_teasers": {
+    "linkedin": "Tech's Redemption Myth Needs a Reality Check\n\nI came across a blog post about an engineer's journey from addiction and prison to a fresh start in tech. It made me question the industry's narratives...\n\nhttps://hafs.dev/blog/2026-06-08.html\n\n#techindustry #redemption #inclusivity",
+    "x": "Tech's Redemption Myth Needs a Reality Check\nhttps://hafs.dev/blog/2026-06-08.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-08.html",
+  "title": "Tech's Redemption Myth Needs a Reality Check",
+  "tags": [
+    "tech industry",
+    "redemption",
+    "inclusivity"
+  ],
+  "hn_refs": [
+    {
+      "title": "Building from zero after addiction, prison, and a felony",
+      "url": "https://gavinray97.github.io/blog/building-from-zero-after-addiction-prison-felony",
+      "points": 637
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

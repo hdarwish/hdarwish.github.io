@@ -1,0 +1,22 @@
+{
+  "share_description": "Last month, I read a post claiming SQLite could manage durable workflows. My initial reaction was skepticism. But then I thought about its simplicity. We...",
+  "social_teasers": {
+    "linkedin": "Stop Overengineering: SQLite Handles More Than You Think\n\nLast month, I read a post claiming SQLite could manage durable workflows. My initial reaction was skepticism. But then I thought about its simplicity. We...\n\nhttps://hafs.dev/blog/2026-05-30.html\n\n#SQLite #workflows #simplicity",
+    "x": "Stop Overengineering: SQLite Handles More Than You Think\nhttps://hafs.dev/blog/2026-05-30.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-30.html",
+  "title": "Stop Overengineering: SQLite Handles More Than You Think",
+  "tags": [
+    "SQLite",
+    "workflows",
+    "simplicity"
+  ],
+  "hn_refs": [
+    {
+      "title": "SQLite is all you need for durable workflows",
+      "url": "https://obeli.sk/blog/sqlite-is-all-you-need-for-durable-workflows/",
+      "points": 503
+    }
+  ],
+  "source_attribution": null
+}

@@ -1,0 +1,27 @@
+{
+  "share_description": "I came across Anthropic's new GitHub repository, the 'Defending Code Reference Harness', and it made me pause. It's rare to see a tool that could genuinely...",
+  "social_teasers": {
+    "linkedin": "Security Tools Shouldn't Be Just for the Big Players\n\nI came across Anthropic's new GitHub repository, the 'Defending Code Reference Harness', and it made me pause. It's rare to see a tool that could genuinely...\n\nhttps://hafs.dev/blog/2026-06-05.html\n\n#AI #Security #OpenSource",
+    "x": "Security Tools Shouldn't Be Just for the Big Players\nhttps://hafs.dev/blog/2026-06-05.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-05.html",
+  "title": "Security Tools Shouldn't Be Just for the Big Players",
+  "tags": [
+    "AI",
+    "Security",
+    "Open Source"
+  ],
+  "hn_refs": [
+    {
+      "title": "Anthropic's open-source framework for AI-powered vulnerability discovery",
+      "url": "https://github.com/anthropics/defending-code-reference-harness",
+      "points": 416
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

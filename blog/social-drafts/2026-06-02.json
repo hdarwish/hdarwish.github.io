@@ -1,0 +1,22 @@
+{
+  "share_description": "I came across a blog post about an Instagram exploit that was so straightforward it was almost laughable. Yet, it exposed serious vulnerabilities. This...",
+  "social_teasers": {
+    "linkedin": "Instagram's Security Blunder: A Wake-Up Call\n\nI came across a blog post about an Instagram exploit that was so straightforward it was almost laughable. Yet, it exposed serious vulnerabilities. This...\n\nhttps://hafs.dev/blog/2026-06-02.html\n\n#Security #AI #Exploit",
+    "x": "Instagram's Security Blunder: A Wake-Up Call\nhttps://hafs.dev/blog/2026-06-02.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-02.html",
+  "title": "Instagram's Security Blunder: A Wake-Up Call",
+  "tags": [
+    "Security",
+    "AI",
+    "Exploit"
+  ],
+  "hn_refs": [
+    {
+      "title": "The newest Instagram “exploit” is the goofiest I've seen",
+      "url": "https://www.0xsid.com/blog/meta-account-takeover-fiasco",
+      "points": 1822
+    }
+  ],
+  "source_attribution": null
+}

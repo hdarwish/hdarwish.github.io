@@ -1,0 +1,22 @@
+{
+  "share_description": "The other day, I stumbled upon a heated debate about Cloudflare's new Turnstile and its reliance on WebGL. It got me thinking about the privacy implications...",
+  "social_teasers": {
+    "linkedin": "Cloudflare Turnstile: Security at the Cost of Privacy?\n\nThe other day, I stumbled upon a heated debate about Cloudflare's new Turnstile and its reliance on WebGL. It got me thinking about the privacy implications...\n\nhttps://hafs.dev/blog/2026-06-01.html\n\n#security #privacy #webtechnology",
+    "x": "Cloudflare Turnstile: Security at the Cost of Privacy?\nhttps://hafs.dev/blog/2026-06-01.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-01.html",
+  "title": "Cloudflare Turnstile: Security at the Cost of Privacy?",
+  "tags": [
+    "security",
+    "privacy",
+    "web technology"
+  ],
+  "hn_refs": [
+    {
+      "title": "Cloudflare Turnstile requiring fingerprintable WebGL",
+      "url": "https://hacktivis.me/articles/cloudflare-turnstile-webgl-fingerprinting",
+      "points": 689
+    }
+  ],
+  "source_attribution": null
+}

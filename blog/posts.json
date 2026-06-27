@@ -175,7 +175,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "Yesterday, I read Filippo Valsorda's post about the changing nature of vulnerability reports. It made me rethink how we treat security in software...",
+    "social_teasers": {
+      "linkedin": "Vulnerability Reports Are Just Another Tuesday\n\nYesterday, I read Filippo Valsorda's post about the changing nature of vulnerability reports. It made me rethink how we treat security in software...\n\nhttps://hafs.dev/blog/2026-06-24.html\n\n#security #vulnerabilitymanagement #softwaredevelopment",
+      "x": "Vulnerability Reports Are Just Another Tuesday\nhttps://hafs.dev/blog/2026-06-24.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-24.html"
   },
   {
     "date": "2026-06-23",
@@ -215,7 +221,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "I read a blog post today praising memcached, and it took me back to when simplicity in caching wasn't just assumed—it was debated. Those were the days of...",
+    "social_teasers": {
+      "linkedin": "Memcached: The Timeless Elegance of Simplicity\n\nI read a blog post today praising memcached, and it took me back to when simplicity in caching wasn't just assumed—it was debated. Those were the days of...\n\nhttps://hafs.dev/blog/2026-06-23.html\n\n#caching #infrastructure #devops",
+      "x": "Memcached: The Timeless Elegance of Simplicity\nhttps://hafs.dev/blog/2026-06-23.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-23.html"
   },
   {
     "date": "2026-06-22",
@@ -255,7 +267,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "Last night, I read a blog that made me pause. It asked if my old job was only possible because of fraud. This wasn't just a jab at corporate inefficiency....",
+    "social_teasers": {
+      "linkedin": "Your Job Might Be More Fiction Than Function\n\nLast night, I read a blog that made me pause. It asked if my old job was only possible because of fraud. This wasn't just a jab at corporate inefficiency....\n\nhttps://hafs.dev/blog/2026-06-22.html\n\n#corporate-structures #fraud #career-development",
+      "x": "Your Job Might Be More Fiction Than Function\nhttps://hafs.dev/blog/2026-06-22.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-22.html"
   },
   {
     "date": "2026-06-20",
@@ -295,7 +313,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "Reading Marc Brooker's post on the economics of load-balanced systems was a wake-up call. Adding servers to a load-balanced system can actually increase...",
+    "social_teasers": {
+      "linkedin": "More Servers, More Problems\n\nReading Marc Brooker's post on the economics of load-balanced systems was a wake-up call. Adding servers to a load-balanced system can actually increase...\n\nhttps://hafs.dev/blog/2026-06-20.html\n\n#load-balancing #cloud-economics #scaling",
+      "x": "More Servers, More Problems\nhttps://hafs.dev/blog/2026-06-20.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-20.html"
   },
   {
     "date": "2026-06-19",
@@ -335,7 +359,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "Last night, I read a blog post that made me pause. It detailed how someone found 10,000 GitHub repositories hosting Trojan malware. Ten thousand. Just...",
+    "social_teasers": {
+      "linkedin": "Open Source Security Theater: When GitHub Becomes a Trojan Horse\n\nLast night, I read a blog post that made me pause. It detailed how someone found 10,000 GitHub repositories hosting Trojan malware. Ten thousand. Just...\n\nhttps://hafs.dev/blog/2026-06-19.html\n\n#security #open-source #malware",
+      "x": "Open Source Security Theater: When GitHub Becomes a Trojan Horse\nhttps://hafs.dev/blog/2026-06-19.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-19.html"
   },
   {
     "date": "2026-06-18",
@@ -375,7 +405,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "I stumbled across Lore and immediately thought about the headaches of managing massive repositories with Git. Lore might just be the solution we've been...",
+    "social_teasers": {
+      "linkedin": "Lore Might Be the Git Alternative We've Been Waiting For\n\nI stumbled across Lore and immediately thought about the headaches of managing massive repositories with Git. Lore might just be the solution we've been...\n\nhttps://hafs.dev/blog/2026-06-18.html\n\n#versioncontrol #scalability #opensource",
+      "x": "Lore Might Be the Git Alternative We've Been Waiting For\nhttps://hafs.dev/blog/2026-06-18.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-18.html"
   },
   {
     "date": "2026-06-17",
@@ -415,7 +451,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "A blog post caught my eye recently, challenging the cloud-first mindset we've embraced for years. Running AI models locally is making a comeback, and it's...",
+    "social_teasers": {
+      "linkedin": "Local Models Aren't Dead: They're Just Getting Started\n\nA blog post caught my eye recently, challenging the cloud-first mindset we've embraced for years. Running AI models locally is making a comeback, and it's...\n\nhttps://hafs.dev/blog/2026-06-17.html\n\n#AI #LocalModels #CloudComputing",
+      "x": "Local Models Aren't Dead: They're Just Getting Started\nhttps://hafs.dev/blog/2026-06-17.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-17.html"
   },
   {
     "date": "2026-06-16",
@@ -455,7 +497,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "I read a post today about a LinkedIn job offer that hid a backdoor. It wasn't a technical flaw in the platform, but a breach of trust in a place we consider...",
+    "social_teasers": {
+      "linkedin": "LinkedIn Job Offers: A Security Breach Waiting to Happen\n\nI read a post today about a LinkedIn job offer that hid a backdoor. It wasn't a technical flaw in the platform, but a breach of trust in a place we consider...\n\nhttps://hafs.dev/blog/2026-06-16.html\n\n#security #socialengineering #trust",
+      "x": "LinkedIn Job Offers: A Security Breach Waiting to Happen\nhttps://hafs.dev/blog/2026-06-16.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-16.html"
   },
   {
     "date": "2026-06-14",
@@ -494,7 +542,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "Three days ago, the Census Bureau's decision to ban noise infusion from its statistical products hit the wire. It felt like the kind of corporate policy...",
+    "social_teasers": {
+      "linkedin": "Banning Noise Infusion: When Privacy Handcuffs Accuracy\n\nThree days ago, the Census Bureau's decision to ban noise infusion from its statistical products hit the wire. It felt like the kind of corporate policy...\n\nhttps://hafs.dev/blog/2026-06-14.html\n\n#privacy #data-accuracy",
+      "x": "Banning Noise Infusion: When Privacy Handcuffs Accuracy\nhttps://hafs.dev/blog/2026-06-14.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-14.html"
   },
   {
     "date": "2026-06-13",
@@ -534,7 +588,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "Scrolling through tech articles, I hit a manifesto shouting that open source AI must win. It wasn't just noise; it was a call to arms.The piece warned of AI...",
+    "social_teasers": {
+      "linkedin": "Open Source AI Isn't Just a Choice — It's a Necessity\n\nScrolling through tech articles, I hit a manifesto shouting that open source AI must win. It wasn't just noise; it was a call to arms.The piece warned of AI...\n\nhttps://hafs.dev/blog/2026-06-13.html\n\n#opensource #AI #innovation",
+      "x": "Open Source AI Isn't Just a Choice — It's a Necessity\nhttps://hafs.dev/blog/2026-06-13.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-13.html"
   },
   {
     "date": "2026-06-11",
@@ -573,7 +633,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "Discovering that Pokémon Go scans are training military drone navigation was a jolt. Catching virtual creatures is one thing; unknowingly aiding defense...",
+    "social_teasers": {
+      "linkedin": "Your Pokémon Go Addiction is Powering Military Drones\n\nDiscovering that Pokémon Go scans are training military drone navigation was a jolt. Catching virtual creatures is one thing; unknowingly aiding defense...\n\nhttps://hafs.dev/blog/2026-06-11.html\n\n#Privacy #MilitaryTechnology",
+      "x": "Your Pokémon Go Addiction is Powering Military Drones\nhttps://hafs.dev/blog/2026-06-11.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-11.html"
   },
   {
     "date": "2026-06-10",
@@ -612,7 +678,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "I read a blog post predicting the end of software hackathons. It made me think about the last hackathon I attended. The standout project wasn't an app; it...",
+    "social_teasers": {
+      "linkedin": "Your Next Hackathon Should Be a Hardware Playground\n\nI read a blog post predicting the end of software hackathons. It made me think about the last hackathon I attended. The standout project wasn't an app; it...\n\nhttps://hafs.dev/blog/2026-06-10.html\n\n#hardware #hackathons",
+      "x": "Your Next Hackathon Should Be a Hardware Playground\nhttps://hafs.dev/blog/2026-06-10.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-10.html"
   },
   {
     "date": "2026-06-09",
@@ -652,7 +724,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "Last week, I read a post about xAI turning into a datacentre REIT. It got me thinking about the future of AI research. Are we focusing more on server farms...",
+    "social_teasers": {
+      "linkedin": "AI Firms Are Becoming Real Estate Moguls, and It's Killing Innovation\n\nLast week, I read a post about xAI turning into a datacentre REIT. It got me thinking about the future of AI research. Are we focusing more on server farms...\n\nhttps://hafs.dev/blog/2026-06-09.html\n\n#AI #Infrastructure #Innovation",
+      "x": "AI Firms Are Becoming Real Estate Moguls, and It's Killing Innovation\nhttps://hafs.dev/blog/2026-06-09.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-09.html"
   },
   {
     "date": "2026-06-08",
@@ -687,7 +765,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "I came across a blog post about an engineer's journey from addiction and prison to a fresh start in tech. It made me question the industry's narratives...",
+    "social_teasers": {
+      "linkedin": "Tech's Redemption Myth Needs a Reality Check\n\nI came across a blog post about an engineer's journey from addiction and prison to a fresh start in tech. It made me question the industry's narratives...\n\nhttps://hafs.dev/blog/2026-06-08.html\n\n#techindustry #redemption #inclusivity",
+      "x": "Tech's Redemption Myth Needs a Reality Check\nhttps://hafs.dev/blog/2026-06-08.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-08.html"
   },
   {
     "date": "2026-06-07",
@@ -727,7 +811,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "I stumbled upon Ntsc-rs and was immediately reminded of adjusting rabbit ears on a TV for a clearer picture. As someone who's spent years with...",
+    "social_teasers": {
+      "linkedin": "Nostalgia in Emulation: A Lesson in Digital Impermanence\n\nI stumbled upon Ntsc-rs and was immediately reminded of adjusting rabbit ears on a TV for a clearer picture. As someone who's spent years with...\n\nhttps://hafs.dev/blog/2026-06-07.html\n\n#nostalgia #userexperience #digitalmedia",
+      "x": "Nostalgia in Emulation: A Lesson in Digital Impermanence\nhttps://hafs.dev/blog/2026-06-07.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-07.html"
   },
   {
     "date": "2026-06-06",
@@ -767,7 +857,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "When I came across Microsoft's latest GitHub release, pg_durable, it made me rethink the role of open source in democratizing complex database technologies....",
+    "social_teasers": {
+      "linkedin": "Open Sourcing pg_durable: A Game Changer for Database Durability\n\nWhen I came across Microsoft's latest GitHub release, pg_durable, it made me rethink the role of open source in democratizing complex database technologies....\n\nhttps://hafs.dev/blog/2026-06-06.html\n\n#database #open-source #durability",
+      "x": "Open Sourcing pg_durable: A Game Changer for Database Durability\nhttps://hafs.dev/blog/2026-06-06.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-06.html"
   },
   {
     "date": "2026-06-05",
@@ -807,7 +903,13 @@
       "name": "Hacker News",
       "tier": 1,
       "trust_score": 1.0
-    }
+    },
+    "share_description": "I came across Anthropic's new GitHub repository, the 'Defending Code Reference Harness', and it made me pause. It's rare to see a tool that could genuinely...",
+    "social_teasers": {
+      "linkedin": "Security Tools Shouldn't Be Just for the Big Players\n\nI came across Anthropic's new GitHub repository, the 'Defending Code Reference Harness', and it made me pause. It's rare to see a tool that could genuinely...\n\nhttps://hafs.dev/blog/2026-06-05.html\n\n#AI #Security #OpenSource",
+      "x": "Security Tools Shouldn't Be Just for the Big Players\nhttps://hafs.dev/blog/2026-06-05.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-05.html"
   },
   {
     "date": "2026-06-04",
@@ -841,7 +943,13 @@
         "url": "https://intelligence.org/2018/12/12/alignment-why-it-is-hard/",
         "kind": "article"
       }
-    ]
+    ],
+    "share_description": "I read about someone who built a vulnerable app to test if large language models (LLMs) could exploit it. It made me reconsider the boundaries between AI...",
+    "social_teasers": {
+      "linkedin": "AI Isn't Hacking Your App Anytime Soon\n\nI read about someone who built a vulnerable app to test if large language models (LLMs) could exploit it. It made me reconsider the boundaries between AI...\n\nhttps://hafs.dev/blog/2026-06-04.html\n\n#AI #Security #MachineLearning",
+      "x": "AI Isn't Hacking Your App Anytime Soon\nhttps://hafs.dev/blog/2026-06-04.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-04.html"
   },
   {
     "date": "2026-06-03",
@@ -875,7 +983,13 @@
         "url": "https://www.owasp.org/index.php/Securing_Your_Development_Environment",
         "kind": "article"
       }
-    ]
+    ],
+    "share_description": "I read about a bug in VSCode that could lead to GitHub token theft. It made me rethink how much trust we place in our developer tools. This wasn't a minor...",
+    "social_teasers": {
+      "linkedin": "Stop Trusting Your Developer Tools Blindly\n\nI read about a bug in VSCode that could lead to GitHub token theft. It made me rethink how much trust we place in our developer tools. This wasn't a minor...\n\nhttps://hafs.dev/blog/2026-06-03.html\n\n#Security #DeveloperTools #VSCode",
+      "x": "Stop Trusting Your Developer Tools Blindly\nhttps://hafs.dev/blog/2026-06-03.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-03.html"
   },
   {
     "date": "2026-06-02",
@@ -909,7 +1023,13 @@
         "url": "https://www.youtube.com/watch?v=3C9E2yL5tJ8",
         "kind": "video"
       }
-    ]
+    ],
+    "share_description": "I came across a blog post about an Instagram exploit that was so straightforward it was almost laughable. Yet, it exposed serious vulnerabilities. This...",
+    "social_teasers": {
+      "linkedin": "Instagram's Security Blunder: A Wake-Up Call\n\nI came across a blog post about an Instagram exploit that was so straightforward it was almost laughable. Yet, it exposed serious vulnerabilities. This...\n\nhttps://hafs.dev/blog/2026-06-02.html\n\n#Security #AI #Exploit",
+      "x": "Instagram's Security Blunder: A Wake-Up Call\nhttps://hafs.dev/blog/2026-06-02.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-02.html"
   },
   {
     "date": "2026-06-01",
@@ -933,7 +1053,13 @@
         "url": "https://www.cl.cam.ac.uk/~rja14/Papers/webtracking.pdf",
         "kind": "paper"
       }
-    ]
+    ],
+    "share_description": "The other day, I stumbled upon a heated debate about Cloudflare's new Turnstile and its reliance on WebGL. It got me thinking about the privacy implications...",
+    "social_teasers": {
+      "linkedin": "Cloudflare Turnstile: Security at the Cost of Privacy?\n\nThe other day, I stumbled upon a heated debate about Cloudflare's new Turnstile and its reliance on WebGL. It got me thinking about the privacy implications...\n\nhttps://hafs.dev/blog/2026-06-01.html\n\n#security #privacy #webtechnology",
+      "x": "Cloudflare Turnstile: Security at the Cost of Privacy?\nhttps://hafs.dev/blog/2026-06-01.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-01.html"
   },
   {
     "date": "2026-05-31",
@@ -967,7 +1093,13 @@
         "url": "https://towardsdatascience.com/the-importance-of-domain-expertise-in-data-science-5f0d2f1cbd2d",
         "kind": "article"
       }
-    ]
+    ],
+    "share_description": "I read an article claiming domain expertise is the ultimate moat in business. It made me rethink how often we underestimate deep, specialized knowledge in...",
+    "social_teasers": {
+      "linkedin": "Your AI Model Won't Save You from Ignorance\n\nI read an article claiming domain expertise is the ultimate moat in business. It made me rethink how often we underestimate deep, specialized knowledge in...\n\nhttps://hafs.dev/blog/2026-05-31.html\n\n#domainexpertise #technology #businessstrategy",
+      "x": "Your AI Model Won't Save You from Ignorance\nhttps://hafs.dev/blog/2026-05-31.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-31.html"
   },
   {
     "date": "2026-05-30",
@@ -991,7 +1123,13 @@
         "url": "https://sqlite.org/books.html",
         "kind": "book"
       }
-    ]
+    ],
+    "share_description": "Last month, I read a post claiming SQLite could manage durable workflows. My initial reaction was skepticism. But then I thought about its simplicity. We...",
+    "social_teasers": {
+      "linkedin": "Stop Overengineering: SQLite Handles More Than You Think\n\nLast month, I read a post claiming SQLite could manage durable workflows. My initial reaction was skepticism. But then I thought about its simplicity. We...\n\nhttps://hafs.dev/blog/2026-05-30.html\n\n#SQLite #workflows #simplicity",
+      "x": "Stop Overengineering: SQLite Handles More Than You Think\nhttps://hafs.dev/blog/2026-05-30.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-30.html"
   },
   {
     "date": "2026-05-29",
@@ -1025,7 +1163,13 @@
         "url": "https://www.postgresql.org/docs/current/plpgsql-trigger.html",
         "kind": "docs"
       }
-    ]
+    ],
+    "share_description": "I stumbled upon a blog post claiming that Postgres could handle durable workflows. My first thought was about the potential to simplify our tech stack by...",
+    "social_teasers": {
+      "linkedin": "You're Underestimating Postgres as a Workflow Engine\n\nI stumbled upon a blog post claiming that Postgres could handle durable workflows. My first thought was about the potential to simplify our tech stack by...\n\nhttps://hafs.dev/blog/2026-05-29.html\n\n#Postgres #Workflows #Orchestration",
+      "x": "You're Underestimating Postgres as a Workflow Engine\nhttps://hafs.dev/blog/2026-05-29.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-29.html"
   },
   {
     "date": "2026-05-27",
@@ -1059,7 +1203,13 @@
         "url": "https://writingcooperative.com/git-for-writers-how-to-use-version-control-in-your-writing-process-3b5c5a9e2c4d",
         "kind": "article"
       }
-    ]
+    ],
+    "share_description": "I read about someone building a Git-tracked book production pipeline and thought, why didn't I consider this before? Using Git branches to manage drafts,...",
+    "social_teasers": {
+      "linkedin": "Stop Treating Git Like It's Just for Code\n\nI read about someone building a Git-tracked book production pipeline and thought, why didn't I consider this before? Using Git branches to manage drafts,...\n\nhttps://hafs.dev/blog/2026-05-27.html\n\n#Git #CreativeProcess #VersionControl",
+      "x": "Stop Treating Git Like It's Just for Code\nhttps://hafs.dev/blog/2026-05-27.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-27.html"
   },
   {
     "date": "2026-05-26",
@@ -1093,7 +1243,13 @@
         "url": "https://martinfowler.com/books/refactoring.html",
         "kind": "book"
       }
-    ]
+    ],
+    "share_description": "I stumbled across an article that claimed AI can make coding slower. My first reaction was skeptical, having spent countless hours in code trenches where...",
+    "social_teasers": {
+      "linkedin": "AI Coding Tools: Slower Isn't Always Worse\n\nI stumbled across an article that claimed AI can make coding slower. My first reaction was skeptical, having spent countless hours in code trenches where...\n\nhttps://hafs.dev/blog/2026-05-26.html\n\n#AI #softwaredevelopment #codequality",
+      "x": "AI Coding Tools: Slower Isn't Always Worse\nhttps://hafs.dev/blog/2026-05-26.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-26.html"
   },
   {
     "date": "2026-05-25",
@@ -1127,7 +1283,13 @@
         "url": "https://nostarch.com/rust-rustaceans",
         "kind": "book"
       }
-    ]
+    ],
+    "share_description": "Last year, we considered migrating a project from Go to Rust. Our Go codebase was sprawling with goroutines, and initially, it felt liberating. But then,...",
+    "social_teasers": {
+      "linkedin": "Stop Pretending Go Can Teach You Rust's Philosophy\n\nLast year, we considered migrating a project from Go to Rust. Our Go codebase was sprawling with goroutines, and initially, it felt liberating. But then,...\n\nhttps://hafs.dev/blog/2026-05-25.html\n\n#Go #Rust #ProgrammingPhilosophy",
+      "x": "Stop Pretending Go Can Teach You Rust's Philosophy\nhttps://hafs.dev/blog/2026-05-25.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-25.html"
   },
   {
     "date": "2026-05-24",
@@ -1166,7 +1328,13 @@
         "url": "https://a16z.com/2021/05/27/the-cost-of-cloud-a-trillion-dollar-paradox/",
         "kind": "article"
       }
-    ]
+    ],
+    "share_description": "I heard about a company leaving AWS after four years. My first thought: that's a complex untangling. Cloud services seem like the golden ticket. Until they...",
+    "social_teasers": {
+      "linkedin": "Exiting AWS: The Strategic Quicksand You Didn't See Coming\n\nI heard about a company leaving AWS after four years. My first thought: that's a complex untangling. Cloud services seem like the golden ticket. Until they...\n\nhttps://hafs.dev/blog/2026-05-24.html\n\n#AWS #CloudComputing #VendorLock-In",
+      "x": "Exiting AWS: The Strategic Quicksand You Didn't See Coming\nhttps://hafs.dev/blog/2026-05-24.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-24.html"
   },
   {
     "date": "2026-05-23",
@@ -1200,7 +1368,13 @@
         "url": "https://www.toyota-global.com/company/vision_philosophy/toyota_production_system/",
         "kind": "book"
       }
-    ]
+    ],
+    "share_description": "I read an article about why Japanese giants like Panasonic and Yamaha operate in diverse industries. It made me question the Western obsession with...",
+    "social_teasers": {
+      "linkedin": "Your Specialization Obsession is Holding You Back\n\nI read an article about why Japanese giants like Panasonic and Yamaha operate in diverse industries. It made me question the Western obsession with...\n\nhttps://hafs.dev/blog/2026-05-23.html\n\n#businessstrategy #diversification #Japanesecompanies",
+      "x": "Your Specialization Obsession is Holding You Back\nhttps://hafs.dev/blog/2026-05-23.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-23.html"
   },
   {
     "date": "2026-05-22",
@@ -1234,7 +1408,13 @@
         "url": "https://www.youtube.com/watch?v=6kd9sVfMk98",
         "kind": "talk"
       }
-    ]
+    ],
+    "share_description": "I read a post questioning the worth of a $48K GPU server. It made me think about how such an investment reshapes your team's approach to problem-solving and...",
+    "social_teasers": {
+      "linkedin": "Your $48K GPU Server Is More Than Just Numbers\n\nI read a post questioning the worth of a $48K GPU server. It made me think about how such an investment reshapes your team's approach to problem-solving and...\n\nhttps://hafs.dev/blog/2026-05-22.html\n\n#GPU #MachineLearning #Scalability",
+      "x": "Your $48K GPU Server Is More Than Just Numbers\nhttps://hafs.dev/blog/2026-05-22.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-22.html"
   },
   {
     "date": "2026-05-21",
@@ -1258,7 +1438,13 @@
         "url": "https://itrevolution.com/the-phoenix-project/",
         "kind": "book"
       }
-    ]
+    ],
+    "share_description": "I read about the breach of 3,800 GitHub repositories via a malicious VSCode extension. It made me think about the vulnerabilities lurking in our development...",
+    "social_teasers": {
+      "linkedin": "Your Development Tool Is a Trojan Horse\n\nI read about the breach of 3,800 GitHub repositories via a malicious VSCode extension. It made me think about the vulnerabilities lurking in our development...\n\nhttps://hafs.dev/blog/2026-05-21.html\n\n#Security #VSCode #SupplyChainAttacks",
+      "x": "Your Development Tool Is a Trojan Horse\nhttps://hafs.dev/blog/2026-05-21.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-21.html"
   },
   {
     "date": "2026-05-20",
@@ -1292,7 +1478,13 @@
         "url": "http://aosabook.org/en/index.html",
         "kind": "book"
       }
-    ]
+    ],
+    "share_description": "Last week, I stumbled into a virtual museum of operating systems and lost track of time. This wasn't just nostalgia. It made me rethink how we evaluate...",
+    "social_teasers": {
+      "linkedin": "Our Tech Obsession Ignores the Lessons of the Past\n\nLast week, I stumbled into a virtual museum of operating systems and lost track of time. This wasn't just nostalgia. It made me rethink how we evaluate...\n\nhttps://hafs.dev/blog/2026-05-20.html\n\n#operatingsystems #digitalpreservation #softwareevolution",
+      "x": "Our Tech Obsession Ignores the Lessons of the Past\nhttps://hafs.dev/blog/2026-05-20.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-20.html"
   },
   {
     "date": "2026-05-19",
@@ -1331,7 +1523,13 @@
         "url": "https://algorithmwatch.org/en/project/ai-ethics-guidelines-global-inventory/",
         "kind": "article"
       }
-    ]
+    ],
+    "share_description": "I skimmed Simon Willison's summary of the last six months in LLMs and felt the ground shifting. It's not just tech evolution; it's a redefinition of our...",
+    "social_teasers": {
+      "linkedin": "LLMs Are Changing How We Work, Not Just What We Do\n\nI skimmed Simon Willison's summary of the last six months in LLMs and felt the ground shifting. It's not just tech evolution; it's a redefinition of our...\n\nhttps://hafs.dev/blog/2026-05-19.html\n\n#AI #Ethics #LLMs",
+      "x": "LLMs Are Changing How We Work, Not Just What We Do\nhttps://hafs.dev/blog/2026-05-19.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-19.html"
   },
   {
     "date": "2026-05-18",
@@ -1365,7 +1563,13 @@
         "url": "https://wiki.debian.org/Mobile",
         "kind": "docs"
       }
-    ]
+    ],
+    "share_description": "The other day, I saw someone transform an $80 RK3562 Android tablet into a Debian Linux workstation. It was a wake-up call. We're surrounded by...",
+    "social_teasers": {
+      "linkedin": "Your Android Tablet Wants to Be a Workstation\n\nThe other day, I saw someone transform an $80 RK3562 Android tablet into a Debian Linux workstation. It was a wake-up call. We're surrounded by...\n\nhttps://hafs.dev/blog/2026-05-18.html\n\n#Linux #RepurposingHardware #Android",
+      "x": "Your Android Tablet Wants to Be a Workstation\nhttps://hafs.dev/blog/2026-05-18.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-18.html"
   },
   {
     "date": "2026-05-17",
@@ -1404,7 +1608,13 @@
         "url": "https://www.w3.org/TR/css-grid-1/",
         "kind": "docs"
       }
-    ]
+    ],
+    "share_description": "I read a blog post about someone moving away from Tailwind, and it made me rethink how much I've leaned on utility-first CSS frameworks. Tailwind offers...",
+    "social_teasers": {
+      "linkedin": "Stop Letting Tailwind Define Your Design\n\nI read a blog post about someone moving away from Tailwind, and it made me rethink how much I've leaned on utility-first CSS frameworks. Tailwind offers...\n\nhttps://hafs.dev/blog/2026-05-17.html\n\n#CSS #FrontendDevelopment #Design",
+      "x": "Stop Letting Tailwind Define Your Design\nhttps://hafs.dev/blog/2026-05-17.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-17.html"
   },
   {
     "date": "2026-05-16",
@@ -1438,7 +1648,13 @@
         "url": "https://www.pearson.com/us/higher-education/program/Russell-Artificial-Intelligence-A-Modern-Approach-4th-Edition/PGM1264672.html",
         "kind": "book"
       }
-    ]
+    ],
+    "share_description": "I stumbled upon a tweet claiming companies are suffering from 'AI psychosis,' and it made me think about all the meetings I've sat through where AI was the...",
+    "social_teasers": {
+      "linkedin": "You're Suffering from AI Psychosis\n\nI stumbled upon a tweet claiming companies are suffering from 'AI psychosis,' and it made me think about all the meetings I've sat through where AI was the...\n\nhttps://hafs.dev/blog/2026-05-16.html\n\n#AI #businessstrategy #technology",
+      "x": "You're Suffering from AI Psychosis\nhttps://hafs.dev/blog/2026-05-16.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-16.html"
   },
   {
     "date": "2026-05-15",
@@ -1472,7 +1688,13 @@
         "url": "https://www.youtube.com/watch?v=6Af6b_wyiwI",
         "kind": "talk"
       }
-    ]
+    ],
+    "share_description": "I read a blog about someone tearing out the modem and GPS from their new RAV4. It made me rethink privacy versus convenience in modern cars.This isn't car...",
+    "social_teasers": {
+      "linkedin": "Your Car's Modem is a Privacy Nightmare\n\nI read a blog about someone tearing out the modem and GPS from their new RAV4. It made me rethink privacy versus convenience in modern cars.This isn't car...\n\nhttps://hafs.dev/blog/2026-05-15.html\n\n#privacy #automotive #technology",
+      "x": "Your Car's Modem is a Privacy Nightmare\nhttps://hafs.dev/blog/2026-05-15.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-15.html"
   },
   {
     "date": "2026-05-14",
@@ -1506,7 +1728,13 @@
         "url": "https://man7.org/tlpi/",
         "kind": "book"
       }
-    ]
+    ],
+    "share_description": "I read about Linux gaming performance outpacing Windows and immediately thought about the implications of open-source systems adopting proprietary tech....",
+    "social_teasers": {
+      "linkedin": "Linux Gaming Is Winning with Windows' Own APIs\n\nI read about Linux gaming performance outpacing Windows and immediately thought about the implications of open-source systems adopting proprietary tech....\n\nhttps://hafs.dev/blog/2026-05-14.html\n\n#Linux #gaming #opensource",
+      "x": "Linux Gaming Is Winning with Windows' Own APIs\nhttps://hafs.dev/blog/2026-05-14.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-14.html"
   },
   {
     "date": "2026-05-13",
@@ -1517,7 +1745,13 @@
       "industry culture"
     ],
     "excerpt": "Last week, I found myself in a heated discussion about why senior developers often struggle to convey their expertise. The common claim is that it's a failure of communication skills. That's missing...",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Last week, I found myself in a heated discussion about why senior developers often struggle to convey their expertise. The common claim is that it's a...",
+    "social_teasers": {
+      "linkedin": "The Industry's Deaf Ear to Developer Narratives\n\nLast week, I found myself in a heated discussion about why senior developers often struggle to convey their expertise. The common claim is that it's a...\n\nhttps://hafs.dev/blog/2026-05-13.html\n\n#communication #softwaredevelopment #industryculture",
+      "x": "The Industry's Deaf Ear to Developer Narratives\nhttps://hafs.dev/blog/2026-05-13.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-13.html"
   },
   {
     "date": "2026-05-12",
@@ -1534,7 +1768,13 @@
         "url": "https://example.com/tanstack-postmortem",
         "points": 150
       }
-    ]
+    ],
+    "share_description": "I read the TanStack postmortem on their NPM supply-chain compromise and immediately thought about how much we rely on human vigilance for security. It's...",
+    "social_teasers": {
+      "linkedin": "Stop Trusting Humans with Supply Chain Security\n\nI read the TanStack postmortem on their NPM supply-chain compromise and immediately thought about how much we rely on human vigilance for security. It's...\n\nhttps://hafs.dev/blog/2026-05-12.html\n\n#supplychainsecurity #softwaredevelopment #automation",
+      "x": "Stop Trusting Humans with Supply Chain Security\nhttps://hafs.dev/blog/2026-05-12.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-12.html"
   },
   {
     "date": "2026-05-11",
@@ -1545,7 +1785,13 @@
       "Innovation"
     ],
     "excerpt": "I read an impassioned call for local AI to become the norm and couldn't help but think about how much more control developers could have over their own projects. Centralized AI models are prevalent,...",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "I read an impassioned call for local AI to become the norm and couldn't help but think about how much more control developers could have over their own...",
+    "social_teasers": {
+      "linkedin": "Centralized AI Is Slowing Us Down\n\nI read an impassioned call for local AI to become the norm and couldn't help but think about how much more control developers could have over their own...\n\nhttps://hafs.dev/blog/2026-05-11.html\n\n#AI #LocalAI #Innovation",
+      "x": "Centralized AI Is Slowing Us Down\nhttps://hafs.dev/blog/2026-05-11.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-11.html"
   },
   {
     "date": "2026-05-10",
@@ -1556,7 +1802,13 @@
       "state management"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Banning Query Strings Isn’t Crazy, It's Necessary",
+    "social_teasers": {
+      "linkedin": "Banning Query Strings Isn’t Crazy, It's Necessary\n\nBanning Query Strings Isn’t Crazy, It's Necessary\n\nhttps://hafs.dev/blog/2026-05-10.html\n\n#webdevelopment #URLs #statemanagement",
+      "x": "Banning Query Strings Isn’t Crazy, It's Necessary\nhttps://hafs.dev/blog/2026-05-10.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-10.html"
   },
   {
     "date": "2026-05-08",
@@ -1567,7 +1819,13 @@
       "automation"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Stop Pretending AI Agents Can Thrive on Fancy Prompts",
+    "social_teasers": {
+      "linkedin": "Stop Pretending AI Agents Can Thrive on Fancy Prompts\n\nStop Pretending AI Agents Can Thrive on Fancy Prompts\n\nhttps://hafs.dev/blog/2026-05-08.html\n\n#AI #controlflow #automation",
+      "x": "Stop Pretending AI Agents Can Thrive on Fancy Prompts\nhttps://hafs.dev/blog/2026-05-08.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-08.html"
   },
   {
     "date": "2026-05-07",
@@ -1578,7 +1836,13 @@
       "workplace culture"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Busywork is Killing Your Codebase",
+    "social_teasers": {
+      "linkedin": "Busywork is Killing Your Codebase\n\nBusywork is Killing Your Codebase\n\nhttps://hafs.dev/blog/2026-05-07.html\n\n#productivity #innovation #workplaceculture",
+      "x": "Busywork is Killing Your Codebase\nhttps://hafs.dev/blog/2026-05-07.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-07.html"
   },
   {
     "date": "2026-05-06",
@@ -1589,7 +1853,13 @@
       "digital preservation"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Old Game Code is a Treasure Trove of Forgotten Lessons",
+    "social_teasers": {
+      "linkedin": "Old Game Code is a Treasure Trove of Forgotten Lessons\n\nOld Game Code is a Treasure Trove of Forgotten Lessons\n\nhttps://hafs.dev/blog/2026-05-06.html\n\n#reverseengineering #gamedevelopment #digitalpreservation",
+      "x": "Old Game Code is a Treasure Trove of Forgotten Lessons\nhttps://hafs.dev/blog/2026-05-06.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-06.html"
   },
   {
     "date": "2026-05-05",
@@ -1600,7 +1870,13 @@
       "software development"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Bun's Shift to Rust: Why Ecosystems Matter More Than Code",
+    "social_teasers": {
+      "linkedin": "Bun's Shift to Rust: Why Ecosystems Matter More Than Code\n\nBun's Shift to Rust: Why Ecosystems Matter More Than Code\n\nhttps://hafs.dev/blog/2026-05-05.html\n\n#programminglanguages #ecosystems #softwaredevelopment",
+      "x": "Bun's Shift to Rust: Why Ecosystems Matter More Than Code\nhttps://hafs.dev/blog/2026-05-05.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-05.html"
   },
   {
     "date": "2026-05-04",
@@ -1611,7 +1887,13 @@
       "performance"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Your Abstraction Layers Are Costing You in Ways You Didn't Consider",
+    "social_teasers": {
+      "linkedin": "Your Abstraction Layers Are Costing You in Ways You Didn't Consider\n\nYour Abstraction Layers Are Costing You in Ways You Didn't Consider\n\nhttps://hafs.dev/blog/2026-05-04.html\n\n#abstraction #technicaldebt #performance",
+      "x": "Your Abstraction Layers Are Costing You in Ways You Didn't Consider\nhttps://hafs.dev/blog/2026-05-04.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-04.html"
   },
   {
     "date": "2026-05-03",
@@ -1628,7 +1910,13 @@
         "url": "https://news.ycombinator.com/item?id=26123456",
         "points": 150
       }
-    ]
+    ],
+    "share_description": "Your Code Isn’t Yours: The Silent Shift in Authorship with AI Tools",
+    "social_teasers": {
+      "linkedin": "Your Code Isn’t Yours: The Silent Shift in Authorship with AI Tools\n\nYour Code Isn’t Yours: The Silent Shift in Authorship with AI Tools\n\nhttps://hafs.dev/blog/2026-05-03.html\n\n#AITools #CodeAuthorship #EthicsinDevelopment",
+      "x": "Your Code Isn’t Yours: The Silent Shift in Authorship with AI Tools\nhttps://hafs.dev/blog/2026-05-03.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-03.html"
   },
   {
     "date": "2026-05-02",
@@ -1639,7 +1927,13 @@
       "manufacturing"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Why Changing a Fan's Color Isn't Just Cosmetic",
+    "social_teasers": {
+      "linkedin": "Why Changing a Fan's Color Isn't Just Cosmetic\n\nWhy Changing a Fan's Color Isn't Just Cosmetic\n\nhttps://hafs.dev/blog/2026-05-02.html\n\n#productdesign #engineeringcomplexity #manufacturing",
+      "x": "Why Changing a Fan's Color Isn't Just Cosmetic\nhttps://hafs.dev/blog/2026-05-02.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-02.html"
   },
   {
     "date": "2026-05-01",
@@ -1650,7 +1944,13 @@
       "Open Source"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Your Linux Kernel Security Is Always a Step Behind",
+    "social_teasers": {
+      "linkedin": "Your Linux Kernel Security Is Always a Step Behind\n\nYour Linux Kernel Security Is Always a Step Behind\n\nhttps://hafs.dev/blog/2026-05-01.html\n\n#Linux #Security #OpenSource",
+      "x": "Your Linux Kernel Security Is Always a Step Behind\nhttps://hafs.dev/blog/2026-05-01.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-05-01.html"
   },
   {
     "date": "2026-04-30",
@@ -1661,7 +1961,13 @@
       "Zed 1.0"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Stop Forcing One-Size-Fits-All IDEs on Developers",
+    "social_teasers": {
+      "linkedin": "Stop Forcing One-Size-Fits-All IDEs on Developers\n\nStop Forcing One-Size-Fits-All IDEs on Developers\n\nhttps://hafs.dev/blog/2026-04-30.html\n\n#IDE #developertools #Zed1.0",
+      "x": "Stop Forcing One-Size-Fits-All IDEs on Developers\nhttps://hafs.dev/blog/2026-04-30.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-04-30.html"
   },
   {
     "date": "2026-04-29",
@@ -1672,7 +1978,13 @@
       "data modeling"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Why Your NoSQL Freedom Might Just Be a Trap",
+    "social_teasers": {
+      "linkedin": "Why Your NoSQL Freedom Might Just Be a Trap\n\nWhy Your NoSQL Freedom Might Just Be a Trap\n\nhttps://hafs.dev/blog/2026-04-29.html\n\n#database #NoSQL #datamodeling",
+      "x": "Why Your NoSQL Freedom Might Just Be a Trap\nhttps://hafs.dev/blog/2026-04-29.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-04-29.html"
   },
   {
     "date": "2026-04-28",
@@ -1683,7 +1995,13 @@
       "software architecture"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "More RAM Won't Save You from Bad Decisions",
+    "social_teasers": {
+      "linkedin": "More RAM Won't Save You from Bad Decisions\n\nMore RAM Won't Save You from Bad Decisions\n\nhttps://hafs.dev/blog/2026-04-28.html\n\n#memorymanagement #performanceoptimization #softwarearchitecture",
+      "x": "More RAM Won't Save You from Bad Decisions\nhttps://hafs.dev/blog/2026-04-28.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-04-28.html"
   },
   {
     "date": "2026-04-27",
@@ -1694,7 +2012,13 @@
       "Tech Experimentation"
     ],
     "excerpt": "",
-    "hn_refs": []
+    "hn_refs": [],
+    "share_description": "Buying Friendster for $30k: A Tech Experiment Worth Watching",
+    "social_teasers": {
+      "linkedin": "Buying Friendster for $30k: A Tech Experiment Worth Watching\n\nBuying Friendster for $30k: A Tech Experiment Worth Watching\n\nhttps://hafs.dev/blog/2026-04-27.html\n\n#DigitalHistory #LegacySystems #TechExperimentation",
+      "x": "Buying Friendster for $30k: A Tech Experiment Worth Watching\nhttps://hafs.dev/blog/2026-04-27.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-04-27.html"
   },
   {
     "date": "2026-04-26",
@@ -1717,6 +2041,12 @@
         "url": "https://techtrenches.dev/p/the-west-forgot-how-to-make-things",
         "points": 51
       }
-    ]
+    ],
+    "share_description": "Go’s concurrency model isn’t magic. Everyone nods at goroutines and channels as if they’ve solved all multi-threading woes, but my experiences scream...",
+    "social_teasers": {
+      "linkedin": "Concurrence, Neural Nets, and the Evolution of Expertise\n\nGo’s concurrency model isn’t magic. Everyone nods at goroutines and channels as if they’ve solved all multi-threading woes, but my experiences scream...\n\nhttps://hafs.dev/blog/2026-04-26.html\n\n#concurrency #pytorch #architecture",
+      "x": "Concurrence, Neural Nets, and the Evolution of Expertise\nhttps://hafs.dev/blog/2026-04-26.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-04-26.html"
   }
 ]

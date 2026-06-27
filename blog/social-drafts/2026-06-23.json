@@ -1,0 +1,27 @@
+{
+  "share_description": "I read a blog post today praising memcached, and it took me back to when simplicity in caching wasn't just assumed—it was debated. Those were the days of...",
+  "social_teasers": {
+    "linkedin": "Memcached: The Timeless Elegance of Simplicity\n\nI read a blog post today praising memcached, and it took me back to when simplicity in caching wasn't just assumed—it was debated. Those were the days of...\n\nhttps://hafs.dev/blog/2026-06-23.html\n\n#caching #infrastructure #devops",
+    "x": "Memcached: The Timeless Elegance of Simplicity\nhttps://hafs.dev/blog/2026-06-23.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-23.html",
+  "title": "Memcached: The Timeless Elegance of Simplicity",
+  "tags": [
+    "caching",
+    "infrastructure",
+    "devops"
+  ],
+  "hn_refs": [
+    {
+      "title": "In praise of memcached",
+      "url": "https://jchri.st/blog/in-praise-of-memcached",
+      "points": 105
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

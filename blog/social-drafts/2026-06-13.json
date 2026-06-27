@@ -1,0 +1,27 @@
+{
+  "share_description": "Scrolling through tech articles, I hit a manifesto shouting that open source AI must win. It wasn't just noise; it was a call to arms.The piece warned of AI...",
+  "social_teasers": {
+    "linkedin": "Open Source AI Isn't Just a Choice — It's a Necessity\n\nScrolling through tech articles, I hit a manifesto shouting that open source AI must win. It wasn't just noise; it was a call to arms.The piece warned of AI...\n\nhttps://hafs.dev/blog/2026-06-13.html\n\n#opensource #AI #innovation",
+    "x": "Open Source AI Isn't Just a Choice — It's a Necessity\nhttps://hafs.dev/blog/2026-06-13.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-13.html",
+  "title": "Open Source AI Isn't Just a Choice — It's a Necessity",
+  "tags": [
+    "open source",
+    "AI",
+    "innovation"
+  ],
+  "hn_refs": [
+    {
+      "title": "Open source AI must win",
+      "url": "https://opensourceaimustwin.com/?share=v2",
+      "points": 626
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

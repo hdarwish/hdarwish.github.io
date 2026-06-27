@@ -1,0 +1,27 @@
+{
+  "share_description": "A blog post caught my eye recently, challenging the cloud-first mindset we've embraced for years. Running AI models locally is making a comeback, and it's...",
+  "social_teasers": {
+    "linkedin": "Local Models Aren't Dead: They're Just Getting Started\n\nA blog post caught my eye recently, challenging the cloud-first mindset we've embraced for years. Running AI models locally is making a comeback, and it's...\n\nhttps://hafs.dev/blog/2026-06-17.html\n\n#AI #LocalModels #CloudComputing",
+    "x": "Local Models Aren't Dead: They're Just Getting Started\nhttps://hafs.dev/blog/2026-06-17.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-17.html",
+  "title": "Local Models Aren't Dead: They're Just Getting Started",
+  "tags": [
+    "AI",
+    "Local Models",
+    "Cloud Computing"
+  ],
+  "hn_refs": [
+    {
+      "title": "Running local models is good now",
+      "url": "https://vickiboykis.com/2026/06/15/running-local-models-is-good-now",
+      "points": 1174
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

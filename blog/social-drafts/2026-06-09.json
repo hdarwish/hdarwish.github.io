@@ -1,0 +1,27 @@
+{
+  "share_description": "Last week, I read a post about xAI turning into a datacentre REIT. It got me thinking about the future of AI research. Are we focusing more on server farms...",
+  "social_teasers": {
+    "linkedin": "AI Firms Are Becoming Real Estate Moguls, and It's Killing Innovation\n\nLast week, I read a post about xAI turning into a datacentre REIT. It got me thinking about the future of AI research. Are we focusing more on server farms...\n\nhttps://hafs.dev/blog/2026-06-09.html\n\n#AI #Infrastructure #Innovation",
+    "x": "AI Firms Are Becoming Real Estate Moguls, and It's Killing Innovation\nhttps://hafs.dev/blog/2026-06-09.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-09.html",
+  "title": "AI Firms Are Becoming Real Estate Moguls, and It's Killing Innovation",
+  "tags": [
+    "AI",
+    "Infrastructure",
+    "Innovation"
+  ],
+  "hn_refs": [
+    {
+      "title": "xAI is looking more like a datacentre REIT than a frontier lab",
+      "url": "https://martinalderson.com/posts/xais-new-rental-business",
+      "points": 556
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

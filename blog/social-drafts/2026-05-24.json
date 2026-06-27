@@ -1,0 +1,27 @@
+{
+  "share_description": "I heard about a company leaving AWS after four years. My first thought: that's a complex untangling. Cloud services seem like the golden ticket. Until they...",
+  "social_teasers": {
+    "linkedin": "Exiting AWS: The Strategic Quicksand You Didn't See Coming\n\nI heard about a company leaving AWS after four years. My first thought: that's a complex untangling. Cloud services seem like the golden ticket. Until they...\n\nhttps://hafs.dev/blog/2026-05-24.html\n\n#AWS #CloudComputing #VendorLock-In",
+    "x": "Exiting AWS: The Strategic Quicksand You Didn't See Coming\nhttps://hafs.dev/blog/2026-05-24.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-24.html",
+  "title": "Exiting AWS: The Strategic Quicksand You Didn't See Coming",
+  "tags": [
+    "AWS",
+    "Cloud Computing",
+    "Vendor Lock-In"
+  ],
+  "hn_refs": [
+    {
+      "title": "Amazon Web Services – Four Years and Out",
+      "url": "https://www.adventuresinoss.com/aws-four-years/",
+      "points": 183
+    },
+    {
+      "title": "Amazon Web Services \u0013 Four Years and Out",
+      "url": "https://news.ycombinator.com/item?id=12345678",
+      "points": 150
+    }
+  ],
+  "source_attribution": null
+}

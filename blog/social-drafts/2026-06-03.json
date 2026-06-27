@@ -1,0 +1,22 @@
+{
+  "share_description": "I read about a bug in VSCode that could lead to GitHub token theft. It made me rethink how much trust we place in our developer tools. This wasn't a minor...",
+  "social_teasers": {
+    "linkedin": "Stop Trusting Your Developer Tools Blindly\n\nI read about a bug in VSCode that could lead to GitHub token theft. It made me rethink how much trust we place in our developer tools. This wasn't a minor...\n\nhttps://hafs.dev/blog/2026-06-03.html\n\n#Security #DeveloperTools #VSCode",
+    "x": "Stop Trusting Your Developer Tools Blindly\nhttps://hafs.dev/blog/2026-06-03.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-03.html",
+  "title": "Stop Trusting Your Developer Tools Blindly",
+  "tags": [
+    "Security",
+    "Developer Tools",
+    "VSCode"
+  ],
+  "hn_refs": [
+    {
+      "title": "1-Click GitHub Token Stealing via a VSCode Bug",
+      "url": "https://blog.ammaraskar.com/github-token-stealing/",
+      "points": 431
+    }
+  ],
+  "source_attribution": null
+}

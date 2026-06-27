@@ -1,0 +1,22 @@
+{
+  "share_description": "Last year, we considered migrating a project from Go to Rust. Our Go codebase was sprawling with goroutines, and initially, it felt liberating. But then,...",
+  "social_teasers": {
+    "linkedin": "Stop Pretending Go Can Teach You Rust's Philosophy\n\nLast year, we considered migrating a project from Go to Rust. Our Go codebase was sprawling with goroutines, and initially, it felt liberating. But then,...\n\nhttps://hafs.dev/blog/2026-05-25.html\n\n#Go #Rust #ProgrammingPhilosophy",
+    "x": "Stop Pretending Go Can Teach You Rust's Philosophy\nhttps://hafs.dev/blog/2026-05-25.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-25.html",
+  "title": "Stop Pretending Go Can Teach You Rust's Philosophy",
+  "tags": [
+    "Go",
+    "Rust",
+    "Programming Philosophy"
+  ],
+  "hn_refs": [
+    {
+      "title": "Migrating from Go to Rust",
+      "url": "https://corrode.dev/learn/migration-guides/go-to-rust/",
+      "points": 281
+    }
+  ],
+  "source_attribution": null
+}

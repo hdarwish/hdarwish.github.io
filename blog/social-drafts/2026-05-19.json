@@ -1,0 +1,27 @@
+{
+  "share_description": "I skimmed Simon Willison's summary of the last six months in LLMs and felt the ground shifting. It's not just tech evolution; it's a redefinition of our...",
+  "social_teasers": {
+    "linkedin": "LLMs Are Changing How We Work, Not Just What We Do\n\nI skimmed Simon Willison's summary of the last six months in LLMs and felt the ground shifting. It's not just tech evolution; it's a redefinition of our...\n\nhttps://hafs.dev/blog/2026-05-19.html\n\n#AI #Ethics #LLMs",
+    "x": "LLMs Are Changing How We Work, Not Just What We Do\nhttps://hafs.dev/blog/2026-05-19.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-19.html",
+  "title": "LLMs Are Changing How We Work, Not Just What We Do",
+  "tags": [
+    "AI",
+    "Ethics",
+    "LLMs"
+  ],
+  "hn_refs": [
+    {
+      "title": "The last six months in LLMs in five minutes",
+      "url": "https://simonwillison.net/2026/May/19/5-minute-llms/",
+      "points": 373
+    },
+    {
+      "title": "The last six months in LLMs in five minutes",
+      "url": "https://simonwillison.net/2026/May/18/llms-six-months/",
+      "points": 210
+    }
+  ],
+  "source_attribution": null
+}

@@ -1,0 +1,22 @@
+{
+  "share_description": "I stumbled upon a blog post claiming that Postgres could handle durable workflows. My first thought was about the potential to simplify our tech stack by...",
+  "social_teasers": {
+    "linkedin": "You're Underestimating Postgres as a Workflow Engine\n\nI stumbled upon a blog post claiming that Postgres could handle durable workflows. My first thought was about the potential to simplify our tech stack by...\n\nhttps://hafs.dev/blog/2026-05-29.html\n\n#Postgres #Workflows #Orchestration",
+    "x": "You're Underestimating Postgres as a Workflow Engine\nhttps://hafs.dev/blog/2026-05-29.html"
+  },
+  "url": "https://hafs.dev/blog/2026-05-29.html",
+  "title": "You're Underestimating Postgres as a Workflow Engine",
+  "tags": [
+    "Postgres",
+    "Workflows",
+    "Orchestration"
+  ],
+  "hn_refs": [
+    {
+      "title": "Building durable workflows on Postgres",
+      "url": "https://www.dbos.dev/blog/postgres-is-all-you-need-for-durable-execution",
+      "points": 248
+    }
+  ],
+  "source_attribution": null
+}

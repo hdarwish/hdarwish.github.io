@@ -1,0 +1,27 @@
+{
+  "share_description": "When I came across Microsoft's latest GitHub release, pg_durable, it made me rethink the role of open source in democratizing complex database technologies....",
+  "social_teasers": {
+    "linkedin": "Open Sourcing pg_durable: A Game Changer for Database Durability\n\nWhen I came across Microsoft's latest GitHub release, pg_durable, it made me rethink the role of open source in democratizing complex database technologies....\n\nhttps://hafs.dev/blog/2026-06-06.html\n\n#database #open-source #durability",
+    "x": "Open Sourcing pg_durable: A Game Changer for Database Durability\nhttps://hafs.dev/blog/2026-06-06.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-06.html",
+  "title": "Open Sourcing pg_durable: A Game Changer for Database Durability",
+  "tags": [
+    "database",
+    "open-source",
+    "durability"
+  ],
+  "hn_refs": [
+    {
+      "title": "pg_durable: Microsoft open sources in-database durable execution",
+      "url": "https://github.com/microsoft/pg_durable",
+      "points": 387
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
