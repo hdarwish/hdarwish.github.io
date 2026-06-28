@@ -1,0 +1,27 @@
+{
+  "share_description": "I stumbled upon a GitHub repository where an anonymous account was systematically dropping undisclosed 0-days. The potential chaos these could unleash on...",
+  "social_teasers": {
+    "linkedin": "Your Security Through Obscurity is a Joke\n\nI stumbled upon a GitHub repository where an anonymous account was systematically dropping undisclosed 0-days. The potential chaos these could unleash on...\n\nhttps://hafs.dev/blog/2026-06-28.html\n\n#security #vulnerabilitydisclosure #ethicalhacking",
+    "x": "Your Security Through Obscurity is a Joke\nhttps://hafs.dev/blog/2026-06-28.html"
+  },
+  "url": "https://hafs.dev/blog/2026-06-28.html",
+  "title": "Your Security Through Obscurity is a Joke",
+  "tags": [
+    "security",
+    "vulnerability disclosure",
+    "ethical hacking"
+  ],
+  "hn_refs": [
+    {
+      "title": "Anonymous GitHub account mass-dropping undisclosed 0-days",
+      "url": "https://github.com/bikini/exploitarium",
+      "points": 748
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

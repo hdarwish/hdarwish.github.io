@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-06-28",
+    "title": "Your Security Through Obscurity is a Joke",
+    "tags": [
+      "security",
+      "vulnerability disclosure",
+      "ethical hacking"
+    ],
+    "excerpt": "I stumbled upon a GitHub repository where an anonymous account was systematically dropping undisclosed 0-days. The potential chaos these could unleash on unpatched systems was immediately clear. The...",
+    "hn_refs": [
+      {
+        "title": "Anonymous GitHub account mass-dropping undisclosed 0-days",
+        "url": "https://github.com/bikini/exploitarium",
+        "points": 748
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Ethics of Vulnerability Disclosure",
+        "url": "https://www.schneier.com/essays/archives/2007/01/the_ethics_of_vulnera.html",
+        "kind": "article"
+      },
+      {
+        "title": "Responsible Disclosure of Security Vulnerabilities",
+        "url": "https://www.microsoft.com/en-us/msrc/cvd",
+        "kind": "docs"
+      },
+      {
+        "title": "The Risks of Vulnerability Disclosure",
+        "url": "https://www.youtube.com/watch?v=1T1pY2m7KfQ",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "I stumbled upon a GitHub repository where an anonymous account was systematically dropping undisclosed 0-days. The potential chaos these could unleash on...",
+    "social_teasers": {
+      "linkedin": "Your Security Through Obscurity is a Joke\n\nI stumbled upon a GitHub repository where an anonymous account was systematically dropping undisclosed 0-days. The potential chaos these could unleash on...\n\nhttps://hafs.dev/blog/2026-06-28.html\n\n#security #vulnerabilitydisclosure #ethicalhacking",
+      "x": "Your Security Through Obscurity is a Joke\nhttps://hafs.dev/blog/2026-06-28.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-28.html"
+  },
+  {
     "date": "2026-06-27",
     "title": "MicroVMs: The Future of Serverless Isn't What You Think",
     "tags": [

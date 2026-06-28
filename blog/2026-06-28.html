@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Security Through Obscurity is a Joke - Hafs Ibrahim</title>
+    <meta name="description" content="I stumbled upon a GitHub repository where an anonymous account was systematically dropping undisclosed 0-days. The potential chaos these could unleash on...">
+    <meta property="og:title" content="Your Security Through Obscurity is a Joke">
+    <meta property="og:description" content="I stumbled upon a GitHub repository where an anonymous account was systematically dropping undisclosed 0-days. The potential chaos these could unleash on...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-06-28.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Security Through Obscurity is a Joke">
+    <meta name="twitter:description" content="I stumbled upon a GitHub repository where an anonymous account was systematically dropping undisclosed 0-days. The potential chaos these could unleash on...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-06-28">
+            <div class="blog-post-date">June 28, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">vulnerability disclosure</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">ethical hacking</span></div>
+            <h2 class="blog-post-title">Your Security Through Obscurity is a Joke</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-06-28-hero.png" alt="Your Security Through Obscurity is a Joke" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I stumbled upon a GitHub repository where an anonymous account was systematically dropping undisclosed 0-days. The potential chaos these could unleash on unpatched systems was immediately clear. The repository, named 'exploitarium', was a collection of potential nightmares.</p>
+<p>Mass-released 0-days by an anonymous entity raise a critical issue: balancing responsible disclosure with open publication. The account behind 'exploitarium' seems to enjoy the chaos it can create, inviting others to report these vulnerabilities for CVE credit while ignoring the potential for abuse.</p>
+<p>In the security community, the ethics of disclosure are a constant debate. Responsible disclosure is meant to protect users by giving vendors time to patch vulnerabilities. But when patches are delayed, or vendors ignore issues, the motivation to keep things under wraps fades.</p>
+<p>The anonymous developer claims their goal is to attract more people to the security field. By showcasing vulnerabilities, they aim to ignite curiosity and drive engagement. But this approach risks teaching carelessness instead of curiosity.</p>
+<p>Security through obscurity is a weak concept. If vulnerabilities aren't public knowledge, systems might seem secure. But this anonymity is fragile. One GitHub account or one pasted link can expose everything.</p>
+<p>I've seen how a single unreported 0-day can cause havoc. A few years ago, a colleague found a similar repository. Within days, our intrusion detection systems flagged an exploit targeting one of our older services, listed among others like those in 'exploitarium'.</p>
+<p>The damage was significant. We acted quickly, but the exploit had already spread among less ethical peers. It took days of sleepless nights to patch systems, assess damages, and strengthen defenses. It was a costly reminder of how fast things can escalate.</p>
+<p>The 'exploitarium' repository's README is candid. It admits that some findings are of lesser quality, even self-mocking with phrases like "findings are kinda ass." Yet, it promises more serious disclosures in the future, using AI to automate fuzzing workflows.</p>
+<p>The use of AI, specifically GPT-5.5-3-Codex-Spark, for fuzzing raises concerns. It's pitched as a tool requiring minimal "thought" when paired with a decent harness. But this automation of vulnerability discovery blurs the line between augmentation and negligence. The claim that such tools only offer marginal benefits without proper oversight highlights the need for human judgment in security.</p>
+<p>We, the custodians of countless lines of code, face a stark reality: relying solely on obscurity is no protection. It challenges us to rethink our strategies and reconsider our stances on disclosure.</p>
+<p>If 'exploitarium' continues to grow, each undisclosed 0-day not only risks specific systems but also questions the ethos of security practices. It demands a shift from patches to prevention, from secrecy to transparency, and from complacency to vigilance.</p>
+<p>The repository's existence could be seen as a call to action—a wake-up call for both sides of the fence. Vendors must take vulnerabilities seriously and respond swiftly. Security researchers must weigh the impact of their disclosures beyond the allure of CVE credits or notoriety.</p>
+<p>The true lesson isn't just about vulnerabilities—it's about responsibility. Recognizing that while vulnerabilities can be patched, trust and security culture take years to build.</p>
+<p>Our digital world is full of 'exploitariums' waiting to be discovered. They remind us that in security, we can't afford to sit idle, clinging to false promises of safety through obscurity. We need to choose our paths carefully, understanding that every disclosure, every patch, and every overlooked detail shapes our collective future.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://github.com/bikini/exploitarium" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Anonymous GitHub account mass-dropping undisclosed 0-days</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲748</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.schneier.com/essays/archives/2007/01/the_ethics_of_vulnera.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Ethics of Vulnerability Disclosure</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.microsoft.com/en-us/msrc/cvd" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Responsible Disclosure of Security Vulnerabilities</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.youtube.com/watch?v=1T1pY2m7KfQ" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Risks of Vulnerability Disclosure</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">TALK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
