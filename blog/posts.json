@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-06-29",
+    "title": "Benchmark Numbers Lie: The Real Cost of GLM 5.2",
+    "tags": [
+      "AI",
+      "Benchmarking",
+      "Model Integration"
+    ],
+    "excerpt": "When I read that GLM 5.2 outperformed Claude Opus 4.8 in Cyber Benchmarks, it made me think about what those numbers don't show. Sure, GLM 5.2 scored higher, but what does that mean for actual...",
+    "hn_refs": [
+      {
+        "title": "GLM 5.2 beats Claude in our benchmarks",
+        "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks",
+        "points": 661
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Hidden Technical Debt in Machine Learning Systems",
+        "url": "https://proceedings.neurips.cc/paper/2015/file/86df7dcfd896fcaf2674f757a2463eba-Paper.pdf",
+        "kind": "paper"
+      },
+      {
+        "title": "The Mythos of Model Interpretability",
+        "url": "https://arxiv.org/abs/1606.03490",
+        "kind": "paper"
+      },
+      {
+        "title": "Machine Learning: The High Interest Credit Card of Technical Debt",
+        "url": "https://research.google/pubs/pub43146/",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "When I read that GLM 5.2 outperformed Claude Opus 4.8 in Cyber Benchmarks, it made me think about what those numbers don't show. Sure, GLM 5.2 scored...",
+    "social_teasers": {
+      "linkedin": "Benchmark Numbers Lie: The Real Cost of GLM 5.2\n\nWhen I read that GLM 5.2 outperformed Claude Opus 4.8 in Cyber Benchmarks, it made me think about what those numbers don't show. Sure, GLM 5.2 scored...\n\nhttps://hafs.dev/blog/2026-06-29.html\n\n#AI #Benchmarking #ModelIntegration",
+      "x": "Benchmark Numbers Lie: The Real Cost of GLM 5.2\nhttps://hafs.dev/blog/2026-06-29.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-29.html"
+  },
+  {
     "date": "2026-06-28",
     "title": "Your Security Through Obscurity is a Joke",
     "tags": [
