@@ -34,6 +34,13 @@ Started: 2026-06-26
 - [x] xmllint valid — PASS
 - [x] Diff scoped to blog.html + blog/posts.json only (2 files, +10/-1 lines) — PASS
 
+## Conflict Resolution (2026-06-29)
+- [x] Rebased bld-07964-portfoli onto master (3 commits over PRs #16/#17/#18)
+- [x] PROGRESS.md conflict: kept t_0796439a version (other was t_69717abc's)
+- [x] SVG sha256 unchanged: 824b2311f02261540e8a3e3f740e6b899203e18a338cfce140178ce777923aea — PASS
+- [x] xmllint valid post-rebase — PASS
+- [x] Force-pushed to origin/bld-07964-portfoli; PR #15 now MERGEABLE/CLEAN
+
 ## Notes
 - Source SVG: git show 86f600c18c93:assets/hermes-harness-architecture.svg
 - Changes scoped to: SVG draft-warning removal + minimal blog page + posts.json wiring
