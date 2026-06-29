@@ -22,6 +22,11 @@
   .brand b{ color:#FFE7E0; }
   .tagline{ font-size:17px; font-weight:700; color:#FFEDE8; margin-top:8px; }
   .lede{ font-size:16px; font-weight:600; color:#FFF3EF; margin-top:18px; max-width:520px; margin-left:auto; margin-right:auto; }
+  .appstore-btn{ display:inline-flex; align-items:center; gap:10px; background:#fff; color:var(--coral); font-weight:900; font-size:15px;
+    padding:13px 24px; border-radius:14px; text-decoration:none; margin-top:22px;
+    box-shadow:0 4px 16px rgba(255,111,89,.3); transition:transform .15s,box-shadow .15s; }
+  .appstore-btn:hover{ transform:translateY(-2px); box-shadow:0 8px 24px rgba(255,111,89,.4); }
+  .appstore-btn svg{ flex-shrink:0; }
   nav{ display:flex; gap:18px; justify-content:center; margin-bottom:24px; flex-wrap:wrap; }
   nav a{ color:var(--coral); font-weight:800; font-size:14px; text-decoration:none; }
   nav a:hover{ text-decoration:underline; }
@@ -43,6 +48,10 @@
       <div class="brand">Tiny<b>Tell</b></div>
       <div class="tagline">Understand your baby's cries</div>
       <p class="lede">A private, fast baby cry analyzer for parents and caregivers. Tap record, capture a few seconds of a cry, and get an honest classification of what your baby might need.</p>
+      <a class="appstore-btn" href="https://apps.apple.com/us/app/tinytell/id6771931037" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download on the App Store
+      </a>
     </div>
     <nav>
       <a href="index.html">Home</a>
