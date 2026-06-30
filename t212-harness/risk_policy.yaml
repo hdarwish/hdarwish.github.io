@@ -1,0 +1,51 @@
+# T212 Paper-Trading Risk Policy
+# Card: t_932391ac
+# All limits are advisory in paper mode; enforced as hard blocks in proposal mode.
+
+kill_switch:
+  live_enabled_env: T212_LIVE_ENABLED   # must be "true" to attempt any live path
+  default: false                          # false = all live paths blocked
+
+position_limits:
+  max_position_usd: 500          # max notional per single order
+  max_daily_notional_usd: 1000   # cumulative buy+sell notional per calendar day
+
+allowed_instruments:
+  # Plain equities / ETFs only — no leveraged products
+  - AMZN
+  - AAPL
+  - MSFT
+  - GOOGL
+  - META
+  - VOO    # Vanguard S&P 500 ETF
+  - VTI    # Vanguard Total Market ETF
+  - VWRA   # Vanguard All-World (LSE ticker, for UAE investors)
+
+allowed_order_types:
+  - MARKET
+  - LIMIT
+
+disallowed_instruments:
+  patterns:
+    - "*_CFD"       # any CFD suffix
+    - "*_LEVERAGE*" # any leveraged product
+    - "OPT:*"       # options
+
+leverage_allowed: false
+cfds_allowed: false
+options_allowed: false
+
+advisory_only:
+  stop_loss: true    # stop-loss levels are suggestions, never auto-submitted
+  take_profit: true  # take-profit levels are suggestions, never auto-submitted
+
+audit:
+  log_file: t212-harness/audit.jsonl
+  log_all_blocked: true
+  log_all_paper: true
+  log_policy_violations: true
+
+compliance_footer: >
+  Educational purposes only. Not financial advice.
+  Capital at risk. Past paper-trade results do not predict real returns.
+  No specific stock picks or buy/sell recommendations.

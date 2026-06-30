@@ -1,28 +1,86 @@
-# Progress: UAE T212 Educational Landing Page
-Card: t_6eab0c84
-Branch: bld-6eab0-t212
-Started: 2026-06-30T09:41Z
+# Progress: T212 Paper-Trading Safety Harness
+Card: t_932391ac
+Branch: bld-93239-t212safe
+Started: 2026-06-30T15:40Z
 
 ## Checklist
-- [x] Read card and estimated
-- [x] Explore site conventions (style.css, services/index.html)
-- [x] Create /uae-invest/index.html — bilingual Arabic/English landing page
-- [x] CTA: mailto fake-door with UTM tracking (no T212 referral link available)
-- [x] All required compliance copy included
-- [x] No stock picks, no leverage/CFD/options promotion
+- [x] Read card and Architect routing decision
+- [x] Create DESIGN.md (design + threat model)
+- [x] Create risk_policy.yaml (policy config)
+- [x] Create audit_schema.sql (audit log schema)
+- [x] Create harness.py (dry-run harness)
+- [x] Run paper-trade proof (capture output)
+- [x] Run live-submit-block proof (capture output)
+- [x] Compute SHA256 of all artifacts
 - [x] Commit and push to branch
-- [x] PR opened
 
-## Notes
-- Target live URL after Architect merge/deploy: hafs.dev/uae-invest/; current proof is local static artifact /uae-invest/index.html; live URL pending Architect merge/deploy
-- Uses existing style.css + Cairo Arabic font
-- CTA = mailto to hafs.darwish@gmail.com with pre-filled subject/body + UTM params in URL
-- Arabic-first layout (RTL), bilingual throughout
-- All 5 compliance requirements in dedicated disclaimer block
+## Artifacts
+
+| File | SHA256 |
+|------|--------|
+| t212-harness/DESIGN.md | `9e10b0e3fc7f6811c87b66f0945640dfcbe43b66cc4cf49ece28b72326175be0` |
+| t212-harness/risk_policy.yaml | `599f7766a835e91986f59decc1337ca511242c815fdb7f9d1d3ea390ea855c9a` |
+| t212-harness/audit_schema.sql | `9b03620984d350a0deba21cae589a01817c84320248a67b7607e06034e66d58c` |
+| t212-harness/harness.py | `a3f5ed22a805319b1bdcdce277063fab3d500a0b110c56933838183ba1e2017e` |
+| t212-harness/audit.jsonl | `be75ce299695e615965af956eb4ee430f570c28f911606e1704b60db15030380` |
+
+## Paper Trade Proof
+
+```
+============================================================
+PAPER TRADE SIMULATED (no real order placed)
+============================================================
+  Instrument : AMZN
+  Side       : BUY
+  Qty        : 2.0
+  Mock price : $185.50
+  Notional   : $371.00
+  Thesis     : Amazon AWS growth story; diversified revenue; paper-only exploration
+  Sources    : mock-data,public-filings
+  Audit log  : …/t212-harness/audit.jsonl
+  Live mode  : DISABLED (kill switch active)
+
+EDUCATIONAL PURPOSES ONLY. Not financial advice. Capital at risk.
+No stock picks or buy/sell recommendations.
+```
+
+## Live-Submit Block Proof
+
+```
+============================================================
+LIVE ORDER BLOCKED
+============================================================
+  REASON: T212_LIVE_ENABLED is not set to 'true' (kill switch active)
+  REASON: T212_APPROVAL_TOKEN not set (per-order Hafs approval required)
+  REASON: Live order execution is not implemented in this harness —
+          a separate approved card is required for any real broker integration
+
+  Audit log  : …/t212-harness/audit.jsonl
+exit_code=1
+```
+
+## No Secrets / No Live Endpoints Statement
+- No Trading 212 API key, secret, or credential is present anywhere in this codebase.
+- No HTTP call to `api.trading212.com` or any live broker endpoint is made by this harness.
+- The harness uses mock price data only; no live market data feed is connected.
+- Live order submission requires `T212_LIVE_ENABLED=true` + `T212_APPROVAL_TOKEN` env vars
+  set manually by Hafs, AND even then the execution stub exits with an explicit block.
 
 ## Acceptance Criteria Self-Check
-- [x] AC1: Artifact — static file /uae-invest/index.html committed to branch; live URL (hafs.dev/uae-invest/) pending Architect merge/deploy — NOT yet public
-- [x] AC2: Changed files + commit/branch/PR — committed to bld-6eab0-t212, PR opened
-- [x] AC3: CTA/tracking proof — mailto CTA + UTM params (utm_source=site, utm_medium=landing, utm_campaign=uae_t212_poc)
-- [x] AC4: Copy/disclaimer proof — full disclaimer block: not financial advice, capital at risk, no stock pick, no leverage/CFDs, UAE residents only
-- [x] AC5: No stock pick / price target / leverage / CFD / options / broad platform build — confirmed absent; explicit "Out of Scope" card states this
+
+- [x] AC1: Short design + threat model exists — `t212-harness/DESIGN.md` committed
+- [x] AC2: Dry-run harness proves attempted live submit is blocked by default — `live-order` exits 1 with 3 explicit block reasons; audit log records `LIVE_ORDER_BLOCKED`
+- [x] AC3: Paper trade simulation works on harmless example — `paper-trade AMZN BUY 2 $185.50` succeeds; audit log records `PAPER_TRADE` with full thesis/source/mode fields
+- [x] AC4: No Trading 212 live API keys/secrets printed or required — confirmed; no credentials in any file
+- [x] AC5: Risk policy file exists — `t212-harness/risk_policy.yaml` with max position, max daily notional, allowed instruments, no CFD/leverage/options
+- [x] AC6: Audit trail — every event writes JSON to `audit.jsonl` with thesis, size, risk, timestamp, data sources, paper/blocked mode
+- [x] AC7: Kill switch — single env var `T212_LIVE_ENABLED` disables all broker write paths (default: false)
+- [x] AC8: Compliance copy — educational-only footer in harness output and DESIGN.md
+- [x] AC9: No autonomous real-money trading — confirmed; no live endpoint code exists
+- [x] AC10: No ASTS buy/sell recommendation — confirmed absent
+- [x] AC11: No leverage/CFDs/options — policy enforced in risk_policy.yaml and harness check
+
+## Notes
+- Architect explicitly said: no new app/repo needed; deliver artifacts + proof on this card
+- Per Architect routing (2026-06-30 14:09): DONE condition is artifact proof, not a PR
+- `audit.jsonl` is committed with both proof events (paper trade + live block)
