@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-06-30",
+    "title": "The Myth of Infinite GPUs: Why AI Infrastructure Needs a Rethink",
+    "tags": [
+      "AI development",
+      "GPU market",
+      "Infrastructure"
+    ],
+    "excerpt": "I read about a potential collapse in the GPU market, and suddenly, the foundations of AI infrastructure don't look so solid.For the past few years, GPU demand has felt unstoppable. But there's always...",
+    "hn_refs": [],
+    "further_reading": [
+      {
+        "title": "Efficient Processing of Deep Neural Networks: A Tutorial and Survey",
+        "url": "https://arxiv.org/abs/1703.09039",
+        "kind": "paper"
+      },
+      {
+        "title": "Hardware for Machine Learning: Challenges and Opportunities",
+        "url": "https://proceedings.mlsys.org/paper/2020/file/0c8e8c5f7d955c8d7f4c3b0f2b3fba6d-Paper.pdf",
+        "kind": "paper"
+      },
+      {
+        "title": "The Hardware Lottery",
+        "url": "https://arxiv.org/abs/2009.06489",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "I read about a potential collapse in the GPU market, and suddenly, the foundations of AI infrastructure don't look so solid.For the past few years, GPU...",
+    "social_teasers": {
+      "linkedin": "The Myth of Infinite GPUs: Why AI Infrastructure Needs a Rethink\n\nI read about a potential collapse in the GPU market, and suddenly, the foundations of AI infrastructure don't look so solid.For the past few years, GPU...\n\nhttps://hafs.dev/blog/2026-06-30.html\n\n#AIdevelopment #GPUmarket #Infrastructure",
+      "x": "The Myth of Infinite GPUs: Why AI Infrastructure Needs a Rethink\nhttps://hafs.dev/blog/2026-06-30.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-06-30.html"
+  },
+  {
     "date": "2026-06-29",
     "title": "Benchmark Numbers Lie: The Real Cost of GLM 5.2",
     "tags": [
