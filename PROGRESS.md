@@ -1,49 +1,28 @@
-# Progress: Hermes Harness Architecture SVG — Publication Prep (Part 0)
-Card: t_0796439a
-Branch: bld-07964-portfoli
-Started: 2026-06-26
+# Progress: UAE T212 Educational Landing Page
+Card: t_6eab0c84
+Branch: bld-6eab0-t212
+Started: 2026-06-30T09:41Z
 
 ## Checklist
 - [x] Read card and estimated
-- [x] Verified source SVG sha256 matches (857a38b202284920bea680e82b71a8c05f3137b2f8e8744fcb1eacd12219c8e7)
-- [x] Create publication-ready SVG (remove draft warnings, preserve labels/attribution)
-- [x] Add assets/ directory and place SVG
-- [x] Create minimal blog/visual-explainer page following existing site patterns
-- [x] Verify XML parses cleanly
-- [x] Commit b8064d3 and push to origin/bld-07964-portfoli
-- [x] PR opened: https://github.com/hdarwish/hdarwish.github.io/pull/15
-
-## Acceptance Criteria Self-Check
-- [x] AC1: Branch created, HEAD SHA b8064d3 — PASS
-- [x] AC2: Draft warning badge removed, "DRAFT — NOT FOR PUBLICATION" text gone — PASS (grep confirms 0 matches)
-- [x] AC3: "Draft infographic:" prefix removed from <desc> — PASS (grep confirms 0 matches)
-- [x] AC4: Architecture labels and source attribution preserved unchanged — PASS (verified diff)
-- [x] AC5: Updated SVG sha256: 824b2311f02261540e8a3e3f740e6b899203e18a338cfce140178ce777923aea — PASS
-- [x] AC6: xmllint validates SVG — PASS (XML valid)
-- [x] AC7: blog/hermes-harness-architecture.html created with accessible alt text and Part 0 framing — PASS
-- [x] AC8: No existing local build command found (static HTML site, GitHub Pages) — PASS (stated explicitly)
-- [x] AC9: PR #15 open, not merged — PASS
-- [x] AC10: No merge/live publish/social post/5-post series — PASS
-- [x] AC11: t_0130aa99 remains deferred — PASS (noted in PR body)
-
-## Rework (Reviewer M1 fix)
-- [x] Add hermes-harness-architecture entry to blog/posts.json with slug field — PASS
-- [x] Add slug support to blog.html link template (post.slug || post.date) — PASS
-- [x] JSON valid (58 entries, hermes entry at top) — PASS
-- [x] SVG sha256 unchanged: 824b2311f02261540e8a3e3f740e6b899203e18a338cfce140178ce777923aea — PASS
-- [x] xmllint valid — PASS
-- [x] Diff scoped to blog.html + blog/posts.json only (2 files, +10/-1 lines) — PASS
-
-## Conflict Resolution (2026-06-29)
-- [x] Rebased bld-07964-portfoli onto master (3 commits over PRs #16/#17/#18)
-- [x] PROGRESS.md conflict: kept t_0796439a version (other was t_69717abc's)
-- [x] SVG sha256 unchanged: 824b2311f02261540e8a3e3f740e6b899203e18a338cfce140178ce777923aea — PASS
-- [x] xmllint valid post-rebase — PASS
-- [x] Force-pushed to origin/bld-07964-portfoli; PR #15 now MERGEABLE/CLEAN
+- [x] Explore site conventions (style.css, services/index.html)
+- [x] Create /uae-invest/index.html — bilingual Arabic/English landing page
+- [x] CTA: mailto fake-door with UTM tracking (no T212 referral link available)
+- [x] All required compliance copy included
+- [x] No stock picks, no leverage/CFD/options promotion
+- [x] Commit and push to branch
+- [x] PR opened
 
 ## Notes
-- Source SVG: git show 86f600c18c93:assets/hermes-harness-architecture.svg
-- Changes scoped to: SVG draft-warning removal + minimal blog page + posts.json wiring
-- NOT creating the 5-post series (t_0130aa99 stays deferred)
-- No merge/live publish/social post
-- PR: https://github.com/hdarwish/hdarwish.github.io/pull/15
+- Page at hafs.dev/uae-invest/ (noindex — POC only)
+- Uses existing style.css + Cairo Arabic font
+- CTA = mailto to hafs.darwish@gmail.com with pre-filled subject/body + UTM params in URL
+- Arabic-first layout (RTL), bilingual throughout
+- All 5 compliance requirements in dedicated disclaimer block
+
+## Acceptance Criteria Self-Check
+- [x] AC1: Public URL/artifact — hafs.dev/uae-invest/ (file at /uae-invest/index.html)
+- [x] AC2: Changed files + commit/branch/PR — committed to bld-6eab0-t212, PR opened
+- [x] AC3: CTA/tracking proof — mailto CTA + UTM params (utm_source=site, utm_medium=landing, utm_campaign=uae_t212_poc)
+- [x] AC4: Copy/disclaimer proof — full disclaimer block: not financial advice, capital at risk, no stock pick, no leverage/CFDs, UAE residents only
+- [x] AC5: No stock pick / price target / leverage / CFD / options / broad platform build — confirmed absent; explicit "Out of Scope" card states this
