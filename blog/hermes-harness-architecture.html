@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hermes Agent Harness — Reference Architecture - Hafs Ibrahim</title>
+    <meta name="description" content="A visual reference for the 4-layer Hermes multi-agent harness architecture: Runtime, Capabilities, Orchestration, and Safety &amp; Scale. Part 0 of a planned technical series.">
+    <meta property="og:title" content="Hermes Agent Harness — Reference Architecture">
+    <meta property="og:description" content="A visual reference for the 4-layer Hermes multi-agent harness architecture: Runtime, Capabilities, Orchestration, and Safety &amp; Scale.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/hermes-harness-architecture.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hermes Agent Harness — Reference Architecture">
+    <meta name="twitter:description" content="A visual reference for the 4-layer Hermes multi-agent harness architecture.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .post-nav {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1rem;
+        }
+        .infographic-wrapper {
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            background: #0f172a;
+        }
+        .infographic-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .post-body {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.85;
+        }
+        .post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .post-body p:last-child {
+            margin-bottom: 0;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+        <article class="blog-post-card">
+            <div class="blog-post-date">June 26, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;">
+                <span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI Agents</span>
+                <span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Architecture</span>
+                <span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Systems</span>
+                <span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Part 0</span>
+            </div>
+            <h2 class="blog-post-title">Hermes Agent Harness — Reference Architecture</h2>
+
+            <div class="infographic-wrapper">
+                <img
+                    src="../assets/hermes-harness-architecture.svg"
+                    alt="Hermes Agent Harness Reference Architecture: a 4-layer diagram on a dark background. Layer 1 (cyan) — Runtime: Claude Code CLI sessions, per-agent isolation, tool call dispatch loop, context window management, worktree isolation, session branch management, subagents, output parsing and error handling. Layer 2 (violet) — Capabilities: Bash, Read/Edit, Write, WebFetch, WebSearch, Agent tool, MCP servers including Atlassian Rovo, Google Drive, Gmail, Slack. Layer 3 (green) — Orchestration: Moirai (Orchestrator), Daedalus (Architect), Kanban/A2A, Workflows; worker agents: Builder, Scout, Designer, Reviewer, Operator, CFO/Aurelius. Layer 4 (orange) — Safety and Scale: Permission allowlist, pre/post-tool hooks, quality-gate skill, SOUL v2 rules, Sandbox, tool scoping, provider fallback/retry policy. Header quote: 'If you're not the model, you're the Harness.' The AI model (Claude API) is the core; these 4 layers constitute the harness that wraps it."
+                    width="960"
+                    height="760"
+                    loading="lazy"
+                />
+            </div>
+
+            <div class="post-body">
+                <p>This infographic is a visual reference for the Hermes multi-agent harness — the 4-layer system that wraps the AI model (Claude API) and gives it useful agency without giving it unsupervised control.</p>
+                <p>The core observation: <em>"If you're not the model, you're the Harness."</em> Every tool, permission rule, dispatch loop, and quality gate exists to shape what the model can do and how its outputs land in the world.</p>
+                <p>The four layers from bottom to top — Runtime, Capabilities, Orchestration, Safety &amp; Scale — each address a distinct concern. Runtime keeps sessions alive and isolated. Capabilities exposes the right surface to each agent. Orchestration routes work across a team of specialized agents. Safety &amp; Scale enforces quality gates and keeps the blast radius bounded.</p>
+                <p>This is Part 0 — a standalone visual explainer before a planned deeper technical series. The architecture shown reflects Hermes as deployed in my own systems as of mid-2026.</p>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
