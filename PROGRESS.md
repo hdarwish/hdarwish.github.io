@@ -11,7 +11,7 @@ Started: 2026-06-30T09:56Z
 - [x] Write landing-page headline/subhead alternatives
 - [x] Write short-form disclaimers for small creative surfaces
 - [x] Write compliance checklist
-- [ ] Commit to branch des-dd31-t212
+- [x] Commit to branch des-dd31-t212 (022ed85)
 
 ## Notes
 - Existing page at uae-invest/index.html establishes tone: bilingual AR/EN, Cairo+Inter fonts, dark fintech aesthetic, UAE flag color accent bar
