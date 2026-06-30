@@ -1,33 +1,25 @@
-# Progress: Hafs.dev Services fake-door page
-Card: t_2d7d9f80
-Branch: bld-2d7d-fix (rework of bld-2d7d-services)
-Started: 2026-06-11T18:21Z
-Rework: 2026-06-11T18:46Z
+# Progress: UAE Trading 212 Creative Copy Pack
+Card: t_dd31b21e
+Branch: des-dd31-t212
+Started: 2026-06-30T09:56Z
 
 ## Checklist
-- [x] Read card and oriented on repo structure
-- [x] Audited existing pages (dataaudit, codereview) for conventions
-- [x] Created services/index.html — 4 service sprint cards + mailto CTAs
-- [x] Updated index.html nav — added "Services" link
-- [x] Updated index.html projects grid — added Services project card
-- [x] Verified all relative paths (../style.css, ../script.js, ../index.html)
-- [x] Committed and pushed to bld-2d7d-services
-- [x] PR opened: https://github.com/hdarwish/hdarwish.github.io/pull/11
-- [x] B1 fix: services grid minmax(420px→min(420px,100%), 1fr) — mobile overflow resolved
-
-## Acceptance Criteria Self-Check
-- [x] AC1: services/index.html exists at hafs.dev/services/ — PASS (file created, static site)
-- [x] AC2: 3–4 service offers, not full 10-skill catalog — PASS: 4 sprints (AI automation, dashboard, MVP, infra rescue)
-- [x] AC3: CTA uses existing contact/email link — PASS: mailto:hafs.darwish@gmail.com (no Calendly/Stripe)
-- [x] AC4: No Stripe/Calendly accounts created — PASS: only mailto links; TODO comment left in HTML
-- [x] AC5: Nav/home link added — PASS: "Services" added to homepage nav + project card in projects grid
-- [x] AC6: Static site — no build required — PASS: static HTML, links to existing style.css + script.js
-- [x] AC7: Branch pushed + PR opened — PASS (pending PR)
-- [x] AC8: No secrets, no credentials — PASS: only HTML changes
-- [x] B1: Mobile grid overflow fixed — PASS: minmax(min(420px,100%),1fr) prevents column from exceeding container on ~327px mobile
+- [x] Read card and understood requirements (copy pack, not visual asset)
+- [x] Read existing uae-invest/index.html for brand/tone context
+- [x] Draft 3 social/ad copy variants (colloquial Arabic, MSA, English/bilingual)
+- [x] Write visual brief for each variant
+- [x] Write landing-page headline/subhead alternatives
+- [x] Write short-form disclaimers for small creative surfaces
+- [x] Write compliance checklist
+- [ ] Commit to branch des-dd31-t212
 
 ## Notes
-- CTA destination: mailto:hafs.darwish@gmail.com (pre-filled per sprint)
-- Public URL: https://hafs.dev/services/ (static GitHub Pages)
-- No Stripe/Calendly — TODO comment in services/index.html CTA section for follow-up billing card
-- Static site; no build step; style.css?v=14 and script.js referenced identically to other sub-pages
+- Existing page at uae-invest/index.html establishes tone: bilingual AR/EN, Cairo+Inter fonts, dark fintech aesthetic, UAE flag color accent bar
+- Copy pack delivered as t212-uae-copy-pack.md — markdown artifact, no image generation needed
+- Recommended winning variant: Variant 3 (English/bilingual) — widest reach for UAE expat-majority audience (~90% expats)
+- All variants comply with educational-only content boundaries
+
+## Acceptance Criteria Self-Check
+- [x] AC1: Copy pack posted to card with recommended winning variant — PASS (Variant 3 flagged as recommended)
+- [x] AC2: Compliance checklist mapping each variant to boundaries — PASS (full table in copy pack)
+- [x] AC3: If visual generated, include artifact URL/path and alt text — PASS (no image generated; visual briefs are design prompts only, within spec)
