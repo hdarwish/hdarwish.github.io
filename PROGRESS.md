@@ -14,14 +14,14 @@ Started: 2026-06-30T09:41Z
 - [x] PR opened
 
 ## Notes
-- Page at hafs.dev/uae-invest/ (noindex — POC only)
+- Target live URL after Architect merge/deploy: hafs.dev/uae-invest/; current proof is local static artifact /uae-invest/index.html; live URL pending Architect merge/deploy
 - Uses existing style.css + Cairo Arabic font
 - CTA = mailto to hafs.darwish@gmail.com with pre-filled subject/body + UTM params in URL
 - Arabic-first layout (RTL), bilingual throughout
 - All 5 compliance requirements in dedicated disclaimer block
 
 ## Acceptance Criteria Self-Check
-- [x] AC1: Public URL/artifact — hafs.dev/uae-invest/ (file at /uae-invest/index.html)
+- [x] AC1: Artifact — static file /uae-invest/index.html committed to branch; live URL (hafs.dev/uae-invest/) pending Architect merge/deploy — NOT yet public
 - [x] AC2: Changed files + commit/branch/PR — committed to bld-6eab0-t212, PR opened
 - [x] AC3: CTA/tracking proof — mailto CTA + UTM params (utm_source=site, utm_medium=landing, utm_campaign=uae_t212_poc)
 - [x] AC4: Copy/disclaimer proof — full disclaimer block: not financial advice, capital at risk, no stock pick, no leverage/CFDs, UAE residents only
