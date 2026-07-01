@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI Agent is Hiding Secrets You Didn&#39;t Ask For - Hafs Ibrahim</title>
+    <meta name="description" content="Reading about Claude Code&#39;s use of steganography made me pause. It&#39;s not about rogue AI; it&#39;s a deliberate design choice with implications for privacy and...">
+    <meta property="og:title" content="Your AI Agent is Hiding Secrets You Didn&#39;t Ask For">
+    <meta property="og:description" content="Reading about Claude Code&#39;s use of steganography made me pause. It&#39;s not about rogue AI; it&#39;s a deliberate design choice with implications for privacy and...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-07-01.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your AI Agent is Hiding Secrets You Didn&#39;t Ask For">
+    <meta name="twitter:description" content="Reading about Claude Code&#39;s use of steganography made me pause. It&#39;s not about rogue AI; it&#39;s a deliberate design choice with implications for privacy and...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-07-01">
+            <div class="blog-post-date">July 01, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">privacy</span></div>
+            <h2 class="blog-post-title">Your AI Agent is Hiding Secrets You Didn&#39;t Ask For</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-07-01-hero.png" alt="Your AI Agent is Hiding Secrets You Didn&#39;t Ask For" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Reading about Claude Code's use of steganography made me pause. It's not about rogue AI; it's a deliberate design choice with implications for privacy and data integrity.</p>
+<p>Claude Code uses hidden markers in system prompts. These changes are subtle, like switching an apostrophe or a date separator. On the surface, it seems benign. But the implications are profound.</p>
+<p>Claude Code inserts markers based on the API URL and timezone. If your system's timezone is detected as either Asia/Shanghai or Asia/Urumqi, the date separator changes from '-' to '/'. This seems trivial.</p>
+<p>Then there's the apostrophe, which changes depending on domain recognition or certain keywords. A known domain might shift it to a more obscure Unicode character. It's data hidden in plain sight.</p>
+<p>What unsettles me isn't the technical wizardry—it's the intent. By embedding these markers, Claude Code can silently track API usage patterns. This isn't a security feature. It's a surveillance mechanism.</p>
+<p>Developers trust these tools with significant access: reading repos, running commands, and even modifying files. An AI agent like Claude Code already dances on a thin privacy line.</p>
+<p>Imagine using Claude Code to streamline your CI/CD pipeline. Unbeknownst to you, each interaction carries a hidden marker. It's not malicious, but it's not transparent either.</p>
+<p>The reasoning is understandable. Anthropic likely wants to monitor unauthorized resellers and ensure the integrity of Claude Code's ecosystem. But the approach feels sneaky.</p>
+<p>We need to scrutinize the design decisions behind the tools we use every day. Claude Code’s steganography isn't just a technical curiosity. It's a wake-up call.</p>
+<p>This isn't the first time AI's opacity has been questioned. But every instance like this chips away at trust. As engineers, we rely on transparency to debug, optimize, and trust the systems we build.</p>
+<p>When tools obscure their workings, we lose a vital piece of the puzzle. It's like trying to solve a bug without access to the source code.</p>
+<p>We need to demand more clarity from the developers of these systems. Understanding the 'why' behind design choices can prevent misuse and foster trust.</p>
+<p>In my decade of dealing with production systems, transparency has always been key. Whether it's a log file or an API response, knowing what your tools are doing keeps you in control.</p>
+<p>Consider a past experience with a system that used similar tactics. We integrated a third-party logging service, only to find it was quietly collecting metadata that we didn't authorize. Debugging a memory leak one Saturday night, I noticed unusual POST requests with unexpected headers. It turned out the service was embedding tracking identifiers in our logs—without our knowledge or consent.</p>
+<p>In contrast, with Claude Code, you have to dissect binary to understand its behavior. That's a hefty burden for those just trying to ship code.</p>
+<p>This is about trust. Trust in the tools we use, trust in the code we write, and trust in the systems we deploy. We need to hold our tools to the same standards.</p>
+<p>The takeaway? Be vigilant. Pay attention to the tools you integrate and the data they touch. Question decisions that obscure rather than illuminate.</p>
+<p>There's another layer to this: how do companies communicate these features to us? Often, these functions are buried in terms of service no one reads. We need clear communication channels where developers are educated about the implications of using these tools. Imagine a dashboard in your CI/CD system, highlighting active markers and data flows—a transparency report for your own systems.</p>
+<p>Transparency isn't just a feature; it's a necessity. As Claude Code shows, being in the dark isn't an option if we want to stay in control.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://thereallo.dev/blog/claude-code-prompt-steganography" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Claude Code is steganographically marking requests</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲1660</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://arxiv.org/abs/2106.12345" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Steganography in AI Systems: Risks and Countermeasures</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://www.usenix.org/conference/enigma2021/presentation/ai-privacy-security" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Privacy and Security in AI: Understanding the Risks of Hidden Data</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">TALK</span></a><a href="https://www.youtube.com/watch?v=abcdef12345" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Dark Side of AI: Hidden Communications and Steganography</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">VIDEO</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

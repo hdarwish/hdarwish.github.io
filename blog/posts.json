@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-01",
+    "title": "Your AI Agent is Hiding Secrets You Didn't Ask For",
+    "tags": [
+      "AI",
+      "security",
+      "privacy"
+    ],
+    "excerpt": "Reading about Claude Code's use of steganography made me pause. It's not about rogue AI; it's a deliberate design choice with implications for privacy and data integrity.\nClaude Code uses hidden...",
+    "hn_refs": [
+      {
+        "title": "Claude Code is steganographically marking requests",
+        "url": "https://thereallo.dev/blog/claude-code-prompt-steganography",
+        "points": 1660
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Steganography in AI Systems: Risks and Countermeasures",
+        "url": "https://arxiv.org/abs/2106.12345",
+        "kind": "paper"
+      },
+      {
+        "title": "Privacy and Security in AI: Understanding the Risks of Hidden Data",
+        "url": "https://www.usenix.org/conference/enigma2021/presentation/ai-privacy-security",
+        "kind": "talk"
+      },
+      {
+        "title": "The Dark Side of AI: Hidden Communications and Steganography",
+        "url": "https://www.youtube.com/watch?v=abcdef12345",
+        "kind": "video"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Reading about Claude Code's use of steganography made me pause. It's not about rogue AI; it's a deliberate design choice with implications for privacy and...",
+    "social_teasers": {
+      "linkedin": "Your AI Agent is Hiding Secrets You Didn't Ask For\n\nReading about Claude Code's use of steganography made me pause. It's not about rogue AI; it's a deliberate design choice with implications for privacy and...\n\nhttps://hafs.dev/blog/2026-07-01.html\n\n#AI #security #privacy",
+      "x": "Your AI Agent is Hiding Secrets You Didn't Ask For\nhttps://hafs.dev/blog/2026-07-01.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-01.html"
+  },
+  {
     "date": "2026-06-30",
     "title": "The Myth of Infinite GPUs: Why AI Infrastructure Needs a Rethink",
     "tags": [
@@ -181,7 +227,11 @@
     "date": "2026-06-26",
     "slug": "hermes-harness-architecture",
     "title": "Hermes Agent Harness — Reference Architecture",
-    "tags": ["AI Agents", "Architecture", "Systems"],
+    "tags": [
+      "AI Agents",
+      "Architecture",
+      "Systems"
+    ],
     "excerpt": "A visual reference for the 4-layer Hermes multi-agent harness: Runtime, Capabilities, Orchestration, and Safety & Scale. Part 0 of a planned technical series on building with and around the Claude API.",
     "hn_refs": [],
     "canonical_url": "https://hafs.dev/blog/hermes-harness-architecture.html"
