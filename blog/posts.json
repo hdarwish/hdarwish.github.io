@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-03",
+    "title": "Convenience vs. Security: The LUKS Dilemma",
+    "tags": [
+      "Linux",
+      "Security",
+      "LUKS"
+    ],
+    "excerpt": "I read that Linux 6.9 no longer wipes disk-encryption keys from memory during suspend. This change made me think about the hidden costs of prioritizing convenience over security.When a system...",
+    "hn_refs": [
+      {
+        "title": "Since Linux 6.9, LUKS suspend stopped wiping disk-encryption keys from memory",
+        "url": "https://mathstodon.xyz/@iblech/116769502749142438",
+        "points": 436
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Applied Cryptography: Protocols, Algorithms, and Source Code in C",
+        "url": "https://www.schneier.com/books/applied_cryptography/",
+        "kind": "book"
+      },
+      {
+        "title": "Linux Journal: Understanding LUKS Disk Encryption",
+        "url": "https://www.linuxjournal.com/content/understanding-luks-disk-encryption",
+        "kind": "article"
+      },
+      {
+        "title": "DEF CON Talk: Linux Security, Explained",
+        "url": "https://www.youtube.com/user/TheDEFCONConference",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "I read that Linux 6.9 no longer wipes disk-encryption keys from memory during suspend. This change made me think about the hidden costs of prioritizing...",
+    "social_teasers": {
+      "linkedin": "Convenience vs. Security: The LUKS Dilemma\n\nI read that Linux 6.9 no longer wipes disk-encryption keys from memory during suspend. This change made me think about the hidden costs of prioritizing...\n\nhttps://hafs.dev/blog/2026-07-03.html\n\n#Linux #Security #LUKS",
+      "x": "Convenience vs. Security: The LUKS Dilemma\nhttps://hafs.dev/blog/2026-07-03.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-03.html"
+  },
+  {
     "date": "2026-07-02",
     "title": "Synthetic Cells: The Ethical Dilemma of Playing Creator",
     "tags": [
