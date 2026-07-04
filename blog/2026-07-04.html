@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheaper Performance, Bigger Stakes - Hafs Ibrahim</title>
+    <meta name="description" content="I stumbled upon a blog post from Wafer.ai about performance per dollar accelerating faster than ever. It made me think about the strategic implications for...">
+    <meta property="og:title" content="Cheaper Performance, Bigger Stakes">
+    <meta property="og:description" content="I stumbled upon a blog post from Wafer.ai about performance per dollar accelerating faster than ever. It made me think about the strategic implications for...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-07-04.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cheaper Performance, Bigger Stakes">
+    <meta name="twitter:description" content="I stumbled upon a blog post from Wafer.ai about performance per dollar accelerating faster than ever. It made me think about the strategic implications for...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-07-04">
+            <div class="blog-post-date">July 04, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Tech Strategy</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Performance Optimization</span></div>
+            <h2 class="blog-post-title">Cheaper Performance, Bigger Stakes</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-07-04-hero.png" alt="Cheaper Performance, Bigger Stakes" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I stumbled upon a blog post from Wafer.ai about performance per dollar accelerating faster than ever. It made me think about the strategic implications for startups and incumbents.</p>
+<p>This isn't just about getting more for less money. It's about how this shift reshuffles the playing field. When performance per dollar improves rapidly, the tech industry becomes more ruthless.</p>
+<p>The post discussed the new GLM-5.2 model on AMD's MI355X GPUs, promising over two times cheaper operating costs compared to NVIDIA. This shift could be a game-changer, but not in the obvious way.</p>
+<p>Cost savings sound great. More performance for less money seems like it should increase accessibility.</p>
+<p>But AMD's hardware still lags in day-0 software support compared to NVIDIA. The challenge isn't just leveraging cheaper performance. It's anticipating how it reshapes competitive dynamics.</p>
+<p>This isn't just a tech arms race. It's a race against time. Startups can use these cheaper options to undercut incumbents. But they must also overcome software and integration hurdles.</p>
+<p>Consider a startup trying to disrupt an industry giant. They see the cheaper AMD option as their ticket in, but integration time eats into their runway. By the time they're live, the giant may have adapted or leapfrogged them.</p>
+<p>For incumbents, the situation is equally precarious. They have resources to adopt new tech, but scale makes implementation complex.</p>
+<p>I remember a few years back, our team jumped on a cost-saving infrastructure switch. Transition costs nearly canceled out the savings. We had the hardware, but our software couldn't leverage it efficiently for months. Migration logs were filled with "incompatible driver" errors and "unsupported architecture" warnings.</p>
+<p>Performance per dollar improvements create a high-stakes environment where agility trumps pure power. But who’s agile enough?</p>
+<p>Small teams can pivot faster but risk being outpaced by the tech they choose. Larger corporations can absorb growing pains but often react slower to market changes.</p>
+<p>This shift isn't a new opportunity; it's a stress test. It pressures startups to optimize engineering processes to exploit new hardware. It demands incumbents refine integration strategies or risk irrelevance.</p>
+<p>Wafer.ai’s work with AMD could set a precedent. They've managed impressive performance improvements with these cheaper GPUs, showing it's possible. But for every success, there are failures where cost efficiency promises were buried under integration hell.</p>
+<p>During another project, we opted for a new, cheaper network switch. The specs promised high throughput and reduced latency. In practice, the firmware was so buggy that uptime plummeted. We were inundated with "packet loss" and "dropped connection" alerts. Our savings vanished in support hours spent troubleshooting.</p>
+<p>Software vendors often prioritize support for market leaders like NVIDIA, leaving others with delayed updates or lacking features. This creates a lag that can be deadly for startups betting on AMD or similar alternatives.</p>
+<p>The real victors in this game will be those who can anticipate not just the tech but the ripple effects it creates in their competitive landscape.</p>
+<p>By the time you've fully integrated today’s cheaper solution, tomorrow's breakthrough may already be here.</p>
+<p>Improving performance per dollar is a double-edged sword. It doesn’t just lower costs; it raises the stakes, altering how tech companies must operate to stay competitive.</p>
+<p>The lesson? Don’t just prepare for cheaper hardware. Prepare for a faster game where rules constantly change. Adaptation isn't optional; it's survival.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.wafer.ai/blog/glm52-amd" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Performance per dollar is getting faster and cheaper</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲190</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://dataintensive.net" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Designing Data-Intensive Applications</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://www.coursera.org/learn/hardware-software-interface" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Hardware/Software Interface</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">VIDEO</span></a><a href="https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Mythical Man-Month: Essays on Software Engineering</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "share_description": "I stumbled upon a blog post from Wafer.ai about performance per dollar accelerating faster than ever. It made me think about the strategic implications for...",
+  "social_teasers": {
+    "linkedin": "Cheaper Performance, Bigger Stakes\n\nI stumbled upon a blog post from Wafer.ai about performance per dollar accelerating faster than ever. It made me think about the strategic implications for...\n\nhttps://hafs.dev/blog/2026-07-04.html\n\n#TechStrategy #PerformanceOptimization",
+    "x": "Cheaper Performance, Bigger Stakes\nhttps://hafs.dev/blog/2026-07-04.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-04.html",
+  "title": "Cheaper Performance, Bigger Stakes",
+  "tags": [
+    "Tech Strategy",
+    "Performance Optimization"
+  ],
+  "hn_refs": [
+    {
+      "title": "Performance per dollar is getting faster and cheaper",
+      "url": "https://www.wafer.ai/blog/glm52-amd",
+      "points": 190
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
