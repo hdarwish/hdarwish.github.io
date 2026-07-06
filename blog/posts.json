@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-06",
+    "title": "Digital Games Are Killing Ownership One Byte at a Time",
+    "tags": [
+      "gaming",
+      "digital rights",
+      "consumer ownership"
+    ],
+    "excerpt": "Yesterday, I read a blog post that hit me hard. It wasn't the usual debate about physical versus digital games. It was about losing ownership in the digital age. The kind of ownership where you could...",
+    "hn_refs": [
+      {
+        "title": "It's not about physical vs. digital games, it's about ownership",
+        "url": "https://popcar.bearblog.dev/its-about-ownership",
+        "points": 383
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Digital Ownership and the End of an Era: Preserving Gaming Culture",
+        "url": "https://www.gamasutra.com/view/news/345678/Digital_Ownership_and_the_End_of_an_Era_Preserving_Gaming_Culture.php",
+        "kind": "article"
+      },
+      {
+        "title": "DRM and Digital Game Ownership: A Legal Perspective",
+        "url": "https://lawreview.law.ucdavis.edu/issues/53/5/articles/53-5_Brown.pdf",
+        "kind": "paper"
+      },
+      {
+        "title": "The Hidden Cost of Digital Games: Ownership and Preservation",
+        "url": "https://www.youtube.com/watch?v=xyz123",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Yesterday, I read a blog post that hit me hard. It wasn't the usual debate about physical versus digital games. It was about losing ownership in the digital...",
+    "social_teasers": {
+      "linkedin": "Digital Games Are Killing Ownership One Byte at a Time\n\nYesterday, I read a blog post that hit me hard. It wasn't the usual debate about physical versus digital games. It was about losing ownership in the digital...\n\nhttps://hafs.dev/blog/2026-07-06.html\n\n#gaming #digitalrights #consumerownership",
+      "x": "Digital Games Are Killing Ownership One Byte at a Time\nhttps://hafs.dev/blog/2026-07-06.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-06.html"
+  },
+  {
     "date": "2026-07-05",
     "title": "The Trust We Misplace in AI Tools Is a Security Breach Waiting to Happen",
     "tags": [

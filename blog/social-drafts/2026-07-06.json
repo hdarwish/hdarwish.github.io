@@ -1,0 +1,27 @@
+{
+  "share_description": "Yesterday, I read a blog post that hit me hard. It wasn't the usual debate about physical versus digital games. It was about losing ownership in the digital...",
+  "social_teasers": {
+    "linkedin": "Digital Games Are Killing Ownership One Byte at a Time\n\nYesterday, I read a blog post that hit me hard. It wasn't the usual debate about physical versus digital games. It was about losing ownership in the digital...\n\nhttps://hafs.dev/blog/2026-07-06.html\n\n#gaming #digitalrights #consumerownership",
+    "x": "Digital Games Are Killing Ownership One Byte at a Time\nhttps://hafs.dev/blog/2026-07-06.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-06.html",
+  "title": "Digital Games Are Killing Ownership One Byte at a Time",
+  "tags": [
+    "gaming",
+    "digital rights",
+    "consumer ownership"
+  ],
+  "hn_refs": [
+    {
+      "title": "It's not about physical vs. digital games, it's about ownership",
+      "url": "https://popcar.bearblog.dev/its-about-ownership",
+      "points": 383
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
