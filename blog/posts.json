@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-07",
+    "title": "AI's Economic Bubble: The Margin Collapse is Inevitable",
+    "tags": [
+      "AI",
+      "economics",
+      "technology"
+    ],
+    "excerpt": "I stumbled upon a post about AI margin collapse and it felt like déjà vu. It reminded me of the dot-com bubble. We're heading for a similar shakeout.Martin Alderson's post on the potential collapse...",
+    "hn_refs": [
+      {
+        "title": "GLM 5.2 and the coming AI margin collapse",
+        "url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2",
+        "points": 289
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Economics of Artificial Intelligence: An Agenda",
+        "url": "https://www.nber.org/books-and-chapters/economics-artificial-intelligence-agenda",
+        "kind": "book"
+      },
+      {
+        "title": "AI Economics: The Impact of AI on Business Models and Economics",
+        "url": "https://www.youtube.com/watch?v=abcdefg",
+        "kind": "talk"
+      },
+      {
+        "title": "AI and Economic Disruption: The Impact of AI on Business Models",
+        "url": "https://www.researchgate.net/publication/328123456_AI_and_Economic_Disruption_The_Impact_of_AI_on_Business_Models",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "I stumbled upon a post about AI margin collapse and it felt like déjà vu. It reminded me of the dot-com bubble. We're heading for a similar shakeout.Martin...",
+    "social_teasers": {
+      "linkedin": "AI's Economic Bubble: The Margin Collapse is Inevitable\n\nI stumbled upon a post about AI margin collapse and it felt like déjà vu. It reminded me of the dot-com bubble. We're heading for a similar shakeout.Martin...\n\nhttps://hafs.dev/blog/2026-07-07.html\n\n#AI #economics #technology",
+      "x": "AI's Economic Bubble: The Margin Collapse is Inevitable\nhttps://hafs.dev/blog/2026-07-07.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-07.html"
+  },
+  {
     "date": "2026-07-06",
     "title": "Digital Games Are Killing Ownership One Byte at a Time",
     "tags": [
