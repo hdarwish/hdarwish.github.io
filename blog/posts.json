@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-08",
+    "title": "Local TTS is the Future. Say Goodbye to Cloud Dependence.",
+    "tags": [
+      "TTS",
+      "privacy",
+      "AI"
+    ],
+    "excerpt": "Last week, I came across Kokoro, a local TTS solution, and it got me thinking about privacy in AI applications. Running high-quality TTS locally, without cloud reliance, is a game-changer for...",
+    "hn_refs": [
+      {
+        "title": "Local, CPU-Friendly, High-Quality TTS (Text-to-Speech) with Kokoro",
+        "url": "https://ariya.io/2026/03/local-cpu-friendly-high-quality-tts-text-to-speech-with-kokoro",
+        "points": 366
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Speech and Language Processing",
+        "url": "https://web.stanford.edu/~jurafsky/slp3/",
+        "kind": "book"
+      },
+      {
+        "title": "AI for Everyone",
+        "url": "https://www.coursera.org/learn/ai",
+        "kind": "course"
+      },
+      {
+        "title": "Decentralized AI: A New AI Frontier",
+        "url": "https://www.youtube.com/watch?v=_Xcmh1LQB9I",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Last week, I came across Kokoro, a local TTS solution, and it got me thinking about privacy in AI applications. Running high-quality TTS locally, without...",
+    "social_teasers": {
+      "linkedin": "Local TTS is the Future. Say Goodbye to Cloud Dependence.\n\nLast week, I came across Kokoro, a local TTS solution, and it got me thinking about privacy in AI applications. Running high-quality TTS locally, without...\n\nhttps://hafs.dev/blog/2026-07-08.html\n\n#TTS #privacy #AI",
+      "x": "Local TTS is the Future. Say Goodbye to Cloud Dependence.\nhttps://hafs.dev/blog/2026-07-08.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-08.html"
+  },
+  {
     "date": "2026-07-07",
     "title": "AI's Economic Bubble: The Margin Collapse is Inevitable",
     "tags": [
