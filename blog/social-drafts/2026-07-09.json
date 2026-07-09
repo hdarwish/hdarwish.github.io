@@ -1,0 +1,27 @@
+{
+  "share_description": "I read about John Deere's FTC settlement this morning. This isn't just about fixing tractors. It's about redefining ownership in a software-driven...",
+  "social_teasers": {
+    "linkedin": "Ownership in a Software-Driven World: The Real Fight\n\nI read about John Deere's FTC settlement this morning. This isn't just about fixing tractors. It's about redefining ownership in a software-driven...\n\nhttps://hafs.dev/blog/2026-07-09.html\n\n#righttorepair #ownership #technology",
+    "x": "Ownership in a Software-Driven World: The Real Fight\nhttps://hafs.dev/blog/2026-07-09.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-09.html",
+  "title": "Ownership in a Software-Driven World: The Real Fight",
+  "tags": [
+    "right to repair",
+    "ownership",
+    "technology"
+  ],
+  "hn_refs": [
+    {
+      "title": "John Deere owners will get the right to repair equipment under FTC settlement",
+      "url": "https://apnews.com/article/john-deere-right-to-repair-agriculture-equipment-cb7514ffedb95c130a976af661f2bc02",
+      "points": 604
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
