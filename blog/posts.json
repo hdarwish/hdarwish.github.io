@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-10",
+    "title": "Rewriting Postgres in Rust: A Game Changer?",
+    "tags": [
+      "Rust",
+      "Databases",
+      "Postgres"
+    ],
+    "excerpt": "While browsing GitHub, I found something intriguing: Postgres rewritten in Rust, passing all regression tests. At first, it looked like an ambitious hobby project. But the implications? Potentially...",
+    "hn_refs": [
+      {
+        "title": "Postgres rewritten in Rust, now passing 100% of the Postgres regression tests",
+        "url": "https://github.com/malisper/pgrust",
+        "points": 692
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Rust for Systems Programmers",
+        "url": "https://www.youtube.com/watch?v=zF34dRivLOw",
+        "kind": "talk"
+      },
+      {
+        "title": "Building High-Performance Systems in Rust",
+        "url": "https://www.youtube.com/watch?v=8q83n7cZKpI",
+        "kind": "talk"
+      },
+      {
+        "title": "Rust and Postgres: Safety and Performance",
+        "url": "https://www.youtube.com/watch?v=9_3krAQtD2k",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "While browsing GitHub, I found something intriguing: Postgres rewritten in Rust, passing all regression tests. At first, it looked like an ambitious hobby...",
+    "social_teasers": {
+      "linkedin": "Rewriting Postgres in Rust: A Game Changer?\n\nWhile browsing GitHub, I found something intriguing: Postgres rewritten in Rust, passing all regression tests. At first, it looked like an ambitious hobby...\n\nhttps://hafs.dev/blog/2026-07-10.html\n\n#Rust #Databases #Postgres",
+      "x": "Rewriting Postgres in Rust: A Game Changer?\nhttps://hafs.dev/blog/2026-07-10.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-10.html"
+  },
+  {
     "date": "2026-07-09",
     "title": "Ownership in a Software-Driven World: The Real Fight",
     "tags": [
