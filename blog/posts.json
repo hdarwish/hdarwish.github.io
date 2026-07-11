@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-11",
+    "title": "AI Talent Wars: The New Cold War in Tech",
+    "tags": [
+      "AI",
+      "legal",
+      "innovation"
+    ],
+    "excerpt": "When I read that Apple was suing OpenAI over trade secrets, I thought about the implications for AI talent wars in Silicon Valley. This isn't just another corporate spat over IP. It's the latest...",
+    "hn_refs": [
+      {
+        "title": "Apple sues OpenAI, accuses ex-employees of stealing trade secrets",
+        "url": "https://9to5mac.com/2026/07/10/apple-sues-openai-trade-secret-theft",
+        "points": 851
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The AI Talent War: How to Attract and Retain the Best Minds in Artificial Intelligence",
+        "url": "https://hbr.org/2021/03/the-ai-talent-war-how-to-attract-and-retain-the-best-minds-in-artificial-intelligence",
+        "kind": "article"
+      },
+      {
+        "title": "Trade Secrets: A Legal Overview",
+        "url": "https://crsreports.congress.gov/product/pdf/R/R43714",
+        "kind": "paper"
+      },
+      {
+        "title": "AI and the Law: Navigating Intellectual Property and Trade Secrets",
+        "url": "https://www.law.berkeley.edu/research/bclt/ai-and-the-law-navigating-intellectual-property-and-trade-secrets/",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "When I read that Apple was suing OpenAI over trade secrets, I thought about the implications for AI talent wars in Silicon Valley. This isn't just another...",
+    "social_teasers": {
+      "linkedin": "AI Talent Wars: The New Cold War in Tech\n\nWhen I read that Apple was suing OpenAI over trade secrets, I thought about the implications for AI talent wars in Silicon Valley. This isn't just another...\n\nhttps://hafs.dev/blog/2026-07-11.html\n\n#AI #legal #innovation",
+      "x": "AI Talent Wars: The New Cold War in Tech\nhttps://hafs.dev/blog/2026-07-11.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-11.html"
+  },
+  {
     "date": "2026-07-10",
     "title": "Rewriting Postgres in Rust: A Game Changer?",
     "tags": [
