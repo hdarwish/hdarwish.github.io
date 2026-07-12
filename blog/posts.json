@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-12",
+    "title": "The GPU Boom: More Financial Chess than Chip Innovation",
+    "tags": [
+      "AI Infrastructure",
+      "GPU Financing",
+      "Neoclouds"
+    ],
+    "excerpt": "I used to think the GPU boom was purely about tech. Faster chips, better AI models. Then I dug into the financial maneuvers behind it, and my perspective shifted. It's not just about silicon; it's...",
+    "hn_refs": [
+      {
+        "title": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
+        "url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+        "points": 215
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Economics of Cloud Computing: An Overview For Decision Makers",
+        "url": "https://www.oreilly.com/library/view/the-economics-of/9780137036818/",
+        "kind": "book"
+      },
+      {
+        "title": "Understanding the Financial Mechanics Behind Cloud Infrastructure",
+        "url": "https://www.datacenterknowledge.com/archives/2022/06/15/understanding-financial-mechanics-behind-cloud-infrastructure",
+        "kind": "article"
+      },
+      {
+        "title": "The Financialization of Technology and Its Impact on Innovation",
+        "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=54583",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "I used to think the GPU boom was purely about tech. Faster chips, better AI models. Then I dug into the financial maneuvers behind it, and my perspective...",
+    "social_teasers": {
+      "linkedin": "The GPU Boom: More Financial Chess than Chip Innovation\n\nI used to think the GPU boom was purely about tech. Faster chips, better AI models. Then I dug into the financial maneuvers behind it, and my perspective...\n\nhttps://hafs.dev/blog/2026-07-12.html\n\n#AIInfrastructure #GPUFinancing #Neoclouds",
+      "x": "The GPU Boom: More Financial Chess than Chip Innovation\nhttps://hafs.dev/blog/2026-07-12.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-12.html"
+  },
+  {
     "date": "2026-07-11",
     "title": "AI Talent Wars: The New Cold War in Tech",
     "tags": [
