@@ -1,0 +1,27 @@
+{
+  "share_description": "I stumbled upon the GhostLock vulnerability report and was struck by how a subtle performance tweak could quietly undermine Linux security for over a...",
+  "social_teasers": {
+    "linkedin": "When Performance Optimizations Haunt: The GhostLock Saga\n\nI stumbled upon the GhostLock vulnerability report and was struck by how a subtle performance tweak could quietly undermine Linux security for over a...\n\nhttps://hafs.dev/blog/2026-07-13.html\n\n#security #linux #vulnerability",
+    "x": "When Performance Optimizations Haunt: The GhostLock Saga\nhttps://hafs.dev/blog/2026-07-13.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-13.html",
+  "title": "When Performance Optimizations Haunt: The GhostLock Saga",
+  "tags": [
+    "security",
+    "linux",
+    "vulnerability"
+  ],
+  "hn_refs": [
+    {
+      "title": "GhostLock, a stack-UAF that has existed in all Linux distributions for 15 years",
+      "url": "https://nebusec.ai/research/ionstack-part-2",
+      "points": 194
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
