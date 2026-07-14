@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Treating Xcode as Gospel for Mac and iOS Development - Hafs Ibrahim</title>
+    <meta name="description" content="I stumbled upon a developer&#39;s unconventional approach to building and shipping Mac and iOS apps without ever touching Xcode. It made me rethink the...">
+    <meta property="og:title" content="Stop Treating Xcode as Gospel for Mac and iOS Development">
+    <meta property="og:description" content="I stumbled upon a developer&#39;s unconventional approach to building and shipping Mac and iOS apps without ever touching Xcode. It made me rethink the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-07-14.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Stop Treating Xcode as Gospel for Mac and iOS Development">
+    <meta name="twitter:description" content="I stumbled upon a developer&#39;s unconventional approach to building and shipping Mac and iOS apps without ever touching Xcode. It made me rethink the...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-07-14">
+            <div class="blog-post-date">July 14, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">iOS Development</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Xcode</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">DevOps</span></div>
+            <h2 class="blog-post-title">Stop Treating Xcode as Gospel for Mac and iOS Development</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-07-14-hero.png" alt="Stop Treating Xcode as Gospel for Mac and iOS Development" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I stumbled upon a developer's unconventional approach to building and shipping Mac and iOS apps without ever touching Xcode. It made me rethink the traditional toolchain we take for granted. In a world where Xcode is the default, bypassing it entirely for app development feels almost rebellious.</p>
+
+<p>Xcode isn’t bad — it’s just not the only way. I saw a method using Xcode's underbelly without opening its GUI. Tools like <code>xcodebuild</code>, <code>notarytool</code>, and <code>stapler</code> operate perfectly from the shell. This isn't magic, it's a pragmatic use of Apple's tooling minus the IDE overhead.</p>
+
+<p>This revelation is liberating, especially for those who prefer alternative environments. With some initial setup, like signing into your Apple ID and handling certificates, you can automate the build and release process with scripts. This method caters to those who want more control over the build pipeline or simply loathe the Xcode GUI.</p>
+
+<p>We wrote a single script, <code>scripts/release.sh</code>, that handles everything: archiving, signing, notarizing, and installing. Once set up, your interaction with Xcode is essentially headless. The keychain handles the signing, and your shell does the rest. From a DevOps perspective, this is efficient compared to the standard GUI route.</p>
+
+<p>You need Xcode installed due to dependencies like the iOS SDK and various command line tools. But having it installed doesn’t mean you need to touch it. Just ensure it’s set as your command line toolchain with <code>sudo xcode-select -s /Applications/Xcode.app/Contents/Developer</code>.</p>
+
+<p>For managing Xcode projects, XcodeGen is useful. It converts a <code>project.yml</code> YAML file into the Xcode project structure, ensuring you only commit the YAML to version control. This keeps your repo lean and avoids the constant churn of Xcode project files.</p>
+
+<p>Some argue this requires more initial setup and isn't worth it. But anyone who's resolved merge conflicts in <code>.xcodeproj</code> files will recognize the value here. Maintaining only a YAML configuration vastly simplifies collaboration.</p>
+
+<p>Breaking away from Xcode democratizes iOS and Mac app development. Developers from different ecosystems, like those in the Linux or Windows world, can now consider Mac app development without feeling trapped by the need for a Mac-native IDE.</p>
+
+<p>There’s a broader implication for education and accessibility. Schools and educators can teach app development without investing heavily in Mac infrastructure. Students can focus on learning coding and development concepts using tools and environments they're comfortable with.</p>
+
+<p>This headless approach also invites experimentation. Integrating your build process into a CI/CD pipeline becomes straightforward. You can automate your builds, tests, deployments, and even rollbacks without ever dragging a window or clicking a button.</p>
+
+<p>Sidestepping Xcode isn’t about rejecting a tool — it's about choosing flexibility. Development paradigms can shift, and we don’t have to be tied to a single IDE simply because it’s the most common.</p>
+
+<p>If your tools feel like a trap, it’s okay to find another way. The tech landscape is vast and versatile, and sometimes, the path less traveled offers the most freedom.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Building and shipping Mac and iOS apps without opening Xcode</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲491</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://developer.apple.com/xcode/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Command Line Tools for Xcode</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://github.com/yonaskolb/XcodeGen" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">XcodeGen: A Tool to Generate Xcode Projects from YAML</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://docs.fastlane.tools/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Automating iOS Builds with Fastlane</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

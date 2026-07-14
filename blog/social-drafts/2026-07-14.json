@@ -1,0 +1,27 @@
+{
+  "share_description": "I stumbled upon a developer's unconventional approach to building and shipping Mac and iOS apps without ever touching Xcode. It made me rethink the...",
+  "social_teasers": {
+    "linkedin": "Stop Treating Xcode as Gospel for Mac and iOS Development\n\nI stumbled upon a developer's unconventional approach to building and shipping Mac and iOS apps without ever touching Xcode. It made me rethink the...\n\nhttps://hafs.dev/blog/2026-07-14.html\n\n#iOSDevelopment #Xcode #DevOps",
+    "x": "Stop Treating Xcode as Gospel for Mac and iOS Development\nhttps://hafs.dev/blog/2026-07-14.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-14.html",
+  "title": "Stop Treating Xcode as Gospel for Mac and iOS Development",
+  "tags": [
+    "iOS Development",
+    "Xcode",
+    "DevOps"
+  ],
+  "hn_refs": [
+    {
+      "title": "Building and shipping Mac and iOS apps without opening Xcode",
+      "url": "https://scottwillsey.com/building-and-shipping-mac-and-ios-apps-without-ever-opening-xcode",
+      "points": 491
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
