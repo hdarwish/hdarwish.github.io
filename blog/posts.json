@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-15",
+    "title": "Your Phone Can Now Host a 27B-Class Model. Here’s Why That Matters.",
+    "tags": [
+      "AI",
+      "Edge Computing",
+      "Privacy"
+    ],
+    "excerpt": "I stumbled upon the announcement of Bonsai 27B. Running a 27B-class AI model in my pocket? A few years ago, that was pure science fiction. Now, it fits within the memory budget of an iPhone 17 Pro.We...",
+    "hn_refs": [
+      {
+        "title": "Announcing Bonsai 27B: The First 27B-Class Model to Run on a Phone",
+        "url": "https://prismml.com/news/bonsai-27b",
+        "points": 324
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Efficient Processing of Deep Neural Networks: A Tutorial and Survey",
+        "url": "https://ieeexplore.ieee.org/document/8675201",
+        "kind": "paper"
+      },
+      {
+        "title": "On-Device Machine Learning: An Algorithms and Learning Theory Perspective",
+        "url": "https://arxiv.org/abs/1904.07235",
+        "kind": "paper"
+      },
+      {
+        "title": "Edge AI: A Vision for On-Device Artificial Intelligence",
+        "url": "https://www.microsoft.com/en-us/research/publication/edge-ai-a-vision-for-on-device-artificial-intelligence/",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "I stumbled upon the announcement of Bonsai 27B. Running a 27B-class AI model in my pocket? A few years ago, that was pure science fiction. Now, it fits...",
+    "social_teasers": {
+      "linkedin": "Your Phone Can Now Host a 27B-Class Model. Here’s Why That Matters.\n\nI stumbled upon the announcement of Bonsai 27B. Running a 27B-class AI model in my pocket? A few years ago, that was pure science fiction. Now, it fits...\n\nhttps://hafs.dev/blog/2026-07-15.html\n\n#AI #EdgeComputing #Privacy",
+      "x": "Your Phone Can Now Host a 27B-Class Model. Here’s Why That Matters.\nhttps://hafs.dev/blog/2026-07-15.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-15.html"
+  },
+  {
     "date": "2026-07-14",
     "title": "Stop Treating Xcode as Gospel for Mac and iOS Development",
     "tags": [
