@@ -1,8 +1,10 @@
 # Experiment: Resume Engine fake-door (no-upload CV bullet review)
 
-**Status:** Draft — PR/preview prep only. NOT launched. NOT publicly merged.
-**Card:** `t_946ac540` — [portfolio][builder][P1] Draft no-upload Resume Engine fake-door CTA PR
-**Surface:** `resume-engine/index.html` → live URL after any future launch merge: `https://hafs.dev/resume-engine/`
+**Status:** Launching — public entry point added from the homepage. The page (PR #24) is already
+merged/live; this step makes it discoverable.
+**Cards:** `t_946ac540` (page draft PR #24, merged) · `t_2fe0aa48` (this card — homepage entry point + 7-day kill note)
+**Surface:** `resume-engine/index.html` — live URL: `https://hafs.dev/resume-engine/`
+**Entry point:** one card in the homepage "Labs / Experiments" grid (`index.html`) → `resume-engine/index.html`
 **Type:** Fake-door demand test. Static page + mailto CTA. No backend, no upload, no storage, no payment, no tracking.
 
 ---
@@ -30,11 +32,14 @@ A privacy-safe, no-upload contact CTA is enough to measure that interest before 
   for the theme toggle only — no tracking code introduced by this card.)
 - **NO_PUBLIC_MERGE_FROM_THIS_CARD** — delivered as a branch/PR for review only.
 
-## Proposed launch (pending Architect/Reviewer approval — NOT yet done)
-- **Launch window:** 7 days, first Monday–Sunday after approval to merge.
+## Launch (this PR adds the entry point)
+- **Entry point:** a single `project-card` in the homepage "Labs / Experiments" grid linking to
+  `resume-engine/index.html`. Chosen as the smallest reversible surface — no top-nav item, no redesign,
+  no new CSS (reuses the existing `status-waitlist` badge styling with the label "Experiment"). Rollback
+  is deleting that one card block; the link is isolated and touches nothing else.
+- **Launch clock:** the 7-day window STARTS when this entry point reaches live `hafs.dev` (PR merged +
+  GitHub Pages deploy). Until merge/deploy the page stays reachable only by direct URL.
 - **Owner:** Hafs Ibrahim (inbound email review + reply).
-- **Launch step (not in this PR):** link the page from the homepage projects grid / nav so it is discoverable.
-  Until then the page is reachable only by direct URL for preview.
 
 ## Success metric
 - **Primary:** ≥ 3 qualified inbound CV-review requests to `hafs.darwish+resumeengine@gmail.com`
@@ -50,13 +55,14 @@ A privacy-safe, no-upload contact CTA is enough to measure that interest before 
 - Any privacy complaint or confusion about data handling → pull immediately and revisit copy.
 
 ## Rollback path (exact)
-- **Files introduced by this card:**
-  - `resume-engine/index.html`
-  - `docs/experiments/resume-engine-fakedoor.md`
-- **Branch:** `bld-946ac-resume-engine`
-- **To revert before merge:** simply do not merge the PR (branch is isolated from `master`).
-- **To revert after any future launch merge:** `git revert <merge_commit_sha>` (or delete the two files above
-  and the homepage link added at launch), then redeploy. No data migration, no infra teardown — it is static.
+- **Files touched by the launch card (`t_2fe0aa48`):**
+  - `index.html` — one added `project-card` block (with an adjacent kill-note HTML comment) in the
+    "Labs / Experiments" grid.
+  - `docs/experiments/resume-engine-fakedoor.md` — this note.
+- **Underlying page (already live from PR #24):** `resume-engine/index.html`.
+- **To kill the experiment:** delete the single homepage `project-card` block (and its comment), then
+  redeploy. The page can stay or be removed separately. No data migration, no infra teardown — it is static.
+- **To revert the whole launch commit:** `git revert <this_PR_merge_sha>`.
 
 ## Launch copy (for reference / future homepage card)
 > **Resume Engine** — A focused 6-filter pass on your CV bullet points, so each line earns its space and
