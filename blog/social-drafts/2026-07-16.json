@@ -1,0 +1,27 @@
+{
+  "share_description": "Inkling landed on my radar yesterday, and it got me thinking. It's not just another AI model; it's open-weights. That's a big deal.\n\nWe've seen open-source...",
+  "social_teasers": {
+    "linkedin": "Open-Weights Models Aren't Just About Sharing Code\n\nInkling landed on my radar yesterday, and it got me thinking. It's not just another AI model; it's open-weights. That's a big deal.\n\nWe've seen open-source...\n\nhttps://hafs.dev/blog/2026-07-16.html\n\n#AI #OpenSource #Innovation",
+    "x": "Open-Weights Models Aren't Just About Sharing Code\nhttps://hafs.dev/blog/2026-07-16.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-16.html",
+  "title": "Open-Weights Models Aren't Just About Sharing Code",
+  "tags": [
+    "AI",
+    "Open Source",
+    "Innovation"
+  ],
+  "hn_refs": [
+    {
+      "title": "Inkling: Our Open-Weights Model",
+      "url": "https://thinkingmachines.ai/news/introducing-inkling",
+      "points": 854
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
