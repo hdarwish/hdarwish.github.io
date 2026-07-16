@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Flow — Faceless Shorts Engine</title>
+    <meta name="description" content="Media Flow turns topic packs and Sensei lessons into faceless vertical Shorts — script, voiceover, visuals, captions, and proof artifacts — generated locally. Pilot: language-learning Shorts for Arabic speakers.">
+    <meta property="og:title" content="Media Flow — Faceless Shorts Engine">
+    <meta property="og:description" content="Turn a topic pack or a Sensei lesson into a faceless vertical Short — script, voiceover, visuals, and captions — with a verifiable proof artifact for each render.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hafs.dev/media-flow/">
+    <meta property="og:image" content="https://hafs.dev/media-flow/assets/airport.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Media Flow — Faceless Shorts Engine">
+    <meta name="twitter:description" content="Topic pack in, faceless vertical Short out — script, voiceover, visuals, captions, and a proof artifact per render.">
+    <meta name="twitter:image" content="https://hafs.dev/media-flow/assets/airport.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=14">
+    <link rel="icon" type="image/png" href="../og-image.png">
+    <style>
+        .mf-video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .mf-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .mf-card video {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background: #000;
+            display: block;
+            object-fit: cover;
+        }
+        .mf-card-body { padding: 16px 18px 20px; }
+        .mf-card-body h3 { font-size: 1.05rem; font-weight: 600; margin: 0 0 6px; }
+        .mf-card-body p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.55; margin: 0; }
+        .mf-tag {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+            letter-spacing: 0.03em;
+        }
+        .mf-pipeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 14px;
+        }
+        .mf-step {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 18px 16px;
+        }
+        .mf-step .n { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 0.8rem; }
+        .mf-step h4 { font-size: 1rem; font-weight: 600; margin: 8px 0 6px; }
+        .mf-step p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.5; margin: 0; }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog.html">Blog</a></li>
+            </ul>
+            <button class="theme-cycle" id="theme-cycle" aria-label="Switch theme" title="Switch theme">
+                <span class="theme-icon">🌑</span>
+                <span class="theme-name">dark</span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="section" style="padding-top: 120px;">
+        <div class="container" style="max-width: 960px;">
+
+            <!-- Hero -->
+            <div style="text-align: center; margin-bottom: 56px;">
+                <div class="hero-accent-bar" style="max-width: 220px; margin: 0 auto 20px;">
+                    <span class="bar-seg bar-amber"></span>
+                    <span class="bar-seg bar-rose"></span>
+                    <span class="bar-seg bar-green"></span>
+                    <span class="bar-seg bar-blue"></span>
+                </div>
+                <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 16px; line-height: 1.1;">
+                    Media Flow<span class="accent">.</span>
+                </h1>
+                <p style="font-size: 1.05rem; font-family: 'JetBrains Mono', monospace; color: var(--accent); margin-bottom: 18px;">
+                    Faceless Shorts Engine
+                </p>
+                <p style="font-size: 1.3rem; color: var(--text-muted); max-width: 660px; margin: 0 auto 28px; line-height: 1.5;">
+                    Media Flow turns a <span class="hl hl-amber">topic pack</span> or a <span class="hl hl-green">Sensei lesson</span>
+                    into a faceless vertical Short — generating the script, voiceover, visuals, and burned-in captions,
+                    and emitting a <span class="hl hl-blue">verifiable proof artifact</span> for every render.
+                </p>
+                <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#examples" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--accent); color: white; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem;">
+                        Watch the examples
+                    </a>
+                    <a href="#pipeline" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem;">
+                        How it works
+                    </a>
+                </div>
+                <p style="margin-top: 22px; color: var(--text-muted); font-size: 0.95rem;">
+                    Generated locally · No auto-posting · No account required
+                </p>
+            </div>
+
+            <!-- Examples -->
+            <div id="examples" style="margin-bottom: 72px;">
+                <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px; text-align: center;">Example renders</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; text-align: center; max-width: 640px; margin: 0 auto 36px; line-height: 1.6;">
+                    Four unedited outputs from the current pipeline — vertical 720&times;1280, ~20&ndash;25s each, with voiceover and
+                    burned-in bilingual captions. Tap to play; they work on a phone.
+                </p>
+
+                <div class="mf-video-grid">
+                    <div class="mf-card">
+                        <video controls preload="none" playsinline poster="assets/airport.jpg">
+                            <source src="assets/airport.mp4" type="video/mp4">
+                        </video>
+                        <div class="mf-card-body">
+                            <span class="mf-tag">TOPIC PACK · ENGLISH4ARABS</span>
+                            <h3>3 English Words for the Airport</h3>
+                            <p>Passport, Gate, Suitcase — beginner English vocabulary for Arabic speakers.</p>
+                        </div>
+                    </div>
+                    <div class="mf-card">
+                        <video controls preload="none" playsinline poster="assets/restaurant.jpg">
+                            <source src="assets/restaurant.mp4" type="video/mp4">
+                        </video>
+                        <div class="mf-card-body">
+                            <span class="mf-tag">TOPIC PACK · ENGLISH4ARABS</span>
+                            <h3>3 English Words for the Restaurant</h3>
+                            <p>Menu, Water, Bill — everyday English vocabulary for Arabic speakers.</p>
+                        </div>
+                    </div>
+                    <div class="mf-card">
+                        <video controls preload="none" playsinline poster="assets/kitchen.jpg">
+                            <source src="assets/kitchen.mp4" type="video/mp4">
+                        </video>
+                        <div class="mf-card-body">
+                            <span class="mf-tag">TOPIC PACK · ENGLISH4ARABS</span>
+                            <h3>3 English Words for the Kitchen</h3>
+                            <p>Spoon, Plate, Fridge — household English vocabulary for Arabic speakers.</p>
+                        </div>
+                    </div>
+                    <div class="mf-card">
+                        <video controls preload="none" playsinline poster="assets/ml-algos.jpg">
+                            <source src="assets/ml-algos.mp4" type="video/mp4">
+                        </video>
+                        <div class="mf-card-body">
+                            <span class="mf-tag">SENSEI LESSON · MACHINE LEARNING</span>
+                            <h3>3 Machine Learning Algorithms</h3>
+                            <p>Linear Regression, Decision Tree, K-Means — built from an archived Sensei lesson and its diagrams.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pipeline -->
+            <div id="pipeline" style="margin-bottom: 72px;">
+                <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px; text-align: center;">How it works</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; text-align: center; max-width: 640px; margin: 0 auto 36px; line-height: 1.6;">
+                    One topic in, one finished vertical Short out. Each stage is deterministic and leaves an artifact you can inspect.
+                </p>
+                <div class="mf-pipeline">
+                    <div class="mf-step">
+                        <div class="n">01</div><h4>Script</h4>
+                        <p>A topic pack or Sensei lesson becomes a tight, segmented script sized for a ~20&ndash;30s Short.</p>
+                    </div>
+                    <div class="mf-step">
+                        <div class="n">02</div><h4>Voiceover</h4>
+                        <p>Text-to-speech narration per segment, with selectable persona and tone presets.</p>
+                    </div>
+                    <div class="mf-step">
+                        <div class="n">03</div><h4>Visuals</h4>
+                        <p>Per-segment imagery — generated frames or archived Sensei diagrams — composited to 720&times;1280.</p>
+                    </div>
+                    <div class="mf-step">
+                        <div class="n">04</div><h4>Captions</h4>
+                        <p>Burned-in captions, including right-to-left Arabic, aligned to the narration.</p>
+                    </div>
+                    <div class="mf-step">
+                        <div class="n">05</div><h4>Proof</h4>
+                        <p>Every render emits a manifest with SHA-256 hashes for the video, thumbnail, script, and caption.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proof / boundaries -->
+            <div style="background: var(--surface); border: 1px solid var(--border); border-left: 3px solid #3b82f6; padding: 28px; border-radius: 10px; margin-bottom: 64px;">
+                <h2 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 16px;">🔎 What this demo is — and isn't</h2>
+                <ul style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.8; margin: 0; padding-left: 20px;">
+                    <li><strong>Generated locally.</strong> Every clip on this page was rendered on a local machine and reviewed before publishing.</li>
+                    <li><strong>No public auto-posting.</strong> Media Flow does not post to YouTube, TikTok, or Instagram. There is no channel or upload connected here.</li>
+                    <li><strong>No OAuth, no account, no spend.</strong> This page has no login, no sign-up, and no payment. It is a static showcase.</li>
+                    <li><strong>Verifiable artifacts.</strong> Each render ships with a manifest of SHA-256 hashes, so a given video can be tied back to the exact script and caption that produced it.</li>
+                    <li><strong>Early pilot.</strong> This is a working prototype shown with real outputs — not a launched product, and no usage or revenue is claimed.</li>
+                </ul>
+            </div>
+
+            <!-- CTA -->
+            <div style="text-align: center; margin-bottom: 32px;">
+                <span class="mf-tag" style="font-size: 0.8rem;">CURRENT PILOT</span>
+                <h2 style="font-size: 1.8rem; font-weight: 700; margin: 8px 0 12px;">Language-learning Shorts for Arabic speakers</h2>
+                <p style="color: var(--text-muted); font-size: 1.05rem; max-width: 580px; margin: 0 auto 24px; line-height: 1.6;">
+                    The first pilot turns everyday themes into short English-vocabulary lessons for Arabic speakers.
+                    If that's useful to you — or you have a topic pack you'd like to see rendered — say hello.
+                    No signup, no payment; you start the conversation.
+                </p>
+                <a href="mailto:hafs.darwish+mediaflow@gmail.com?subject=Media%20Flow%20%E2%80%94%20interest&body=Hi%20Hafs%2C%0A%0AI%20saw%20the%20Media%20Flow%20demo%20at%20hafs.dev%2Fmedia-flow%2F.%0A%0AWhat%20caught%20my%20interest%3A%20%0AA%20topic%20or%20lesson%20I%27d%20like%20to%20see%20as%20a%20Short%3A%20%0A%0A%E2%80%94%20Sent%20from%20hafs.dev%2Fmedia-flow%2F"
+                   style="display: inline-flex; align-items: center; gap: 8px; padding: 16px 34px; background: var(--accent); color: white; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1.05rem;">
+                    Say hello / suggest a topic
+                </a>
+                <p style="margin-top: 18px; color: var(--text-muted); font-size: 0.9rem;">
+                    Opens your email app · Nothing sends until you press send
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer style="background: var(--surface); border-top: 1px solid var(--border); padding: 40px 0; margin-top: 80px;">
+        <div class="container" style="max-width: 960px; text-align: center;">
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">
+                Built by <a href="../index.html" style="color: var(--accent);">Hafs Ibrahim</a>
+            </p>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">
+                Questions? Email <a href="mailto:hafs.darwish+mediaflow@gmail.com" style="color: var(--accent);">hafs.darwish+mediaflow@gmail.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
