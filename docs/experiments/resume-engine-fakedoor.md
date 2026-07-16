@@ -4,6 +4,7 @@
 merged/live; this step makes it discoverable.
 **Cards:** `t_946ac540` (page draft PR #24, merged) · `t_2fe0aa48` (this card — homepage entry point + 7-day kill note)
 **Surface:** `resume-engine/index.html` — live URL: `https://hafs.dev/resume-engine/`
+**Deployment note (`t_f6570e4e`):** `/resume-engine/` remains the fallback page; `/resume-engine-tool/` is the dedicated-repo-sourced deployment the homepage card now links to. Same mailto alias and D7 metric unchanged.
 **Entry point:** one card in the homepage "Labs / Experiments" grid (`index.html`) → `resume-engine/index.html`
 **Type:** Fake-door demand test. Static page + mailto CTA. No backend, no upload, no storage, no payment, no tracking.
 
