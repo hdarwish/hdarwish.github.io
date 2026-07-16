@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media Flow — Faceless Shorts Engine</title>
-    <meta name="description" content="Media Flow turns topic packs and Sensei lessons into faceless vertical Shorts — script, voiceover, visuals, captions, and proof artifacts — generated locally. Pilot: language-learning Shorts for Arabic speakers.">
+    <meta name="description" content="Media Flow turns topic packs and Sensei lessons into faceless vertical Shorts — now with a character/storytelling engine (Creative V2) that renders animated micro-dramas: script, voiceover, visuals, captions, and proof artifacts, generated locally.">
     <meta property="og:title" content="Media Flow — Faceless Shorts Engine">
-    <meta property="og:description" content="Turn a topic pack or a Sensei lesson into a faceless vertical Short — script, voiceover, visuals, and captions — with a verifiable proof artifact for each render.">
+    <meta property="og:description" content="Now with Creative V2: an animated character micro-drama engine. Meet Sam the Traveler in 'Wrong Word, Wrong Flight' — a story-driven vertical Short with voiceover, bilingual captions, and a verifiable proof artifact.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://hafs.dev/media-flow/">
-    <meta property="og:image" content="https://hafs.dev/media-flow/assets/airport.jpg">
+    <meta property="og:image" content="https://hafs.dev/media-flow/assets/media-flow-creative-v2-airport.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Media Flow — Faceless Shorts Engine">
-    <meta name="twitter:description" content="Topic pack in, faceless vertical Short out — script, voiceover, visuals, captions, and a proof artifact per render.">
-    <meta name="twitter:image" content="https://hafs.dev/media-flow/assets/airport.jpg">
+    <meta name="twitter:description" content="Creative V2 character engine: animated micro-dramas like 'Wrong Word, Wrong Flight' — story-driven vertical Shorts with voiceover, bilingual captions, and a proof artifact per render.">
+    <meta name="twitter:image" content="https://hafs.dev/media-flow/assets/media-flow-creative-v2-airport.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -50,6 +50,42 @@
             color: var(--accent);
             margin-bottom: 10px;
             letter-spacing: 0.03em;
+        }
+        .mf-featured {
+            display: grid;
+            grid-template-columns: minmax(0, 300px) 1fr;
+            gap: 32px;
+            align-items: center;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 40px;
+        }
+        .mf-featured video {
+            width: 100%;
+            aspect-ratio: 9 / 16;
+            background: #000;
+            border-radius: 12px;
+            display: block;
+            object-fit: cover;
+        }
+        .mf-featured-body h3 { font-size: 1.5rem; font-weight: 700; margin: 12px 0; line-height: 1.2; }
+        .mf-featured-body p { color: var(--text-muted); font-size: 1rem; line-height: 1.6; margin: 0 0 14px; }
+        .mf-featured-body .meta { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0; }
+        .mf-badge {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            border-radius: 999px;
+            padding: 5px 13px;
+            letter-spacing: 0.05em;
+        }
+        @media (max-width: 640px) {
+            .mf-featured { grid-template-columns: 1fr; padding: 20px; gap: 22px; }
+            .mf-featured video { max-width: 300px; margin: 0 auto; }
         }
         .mf-pipeline {
             display: grid;
@@ -104,8 +140,9 @@
                 </p>
                 <p style="font-size: 1.3rem; color: var(--text-muted); max-width: 660px; margin: 0 auto 28px; line-height: 1.5;">
                     Media Flow turns a <span class="hl hl-amber">topic pack</span> or a <span class="hl hl-green">Sensei lesson</span>
-                    into a faceless vertical Short — generating the script, voiceover, visuals, and burned-in captions,
-                    and emitting a <span class="hl hl-blue">verifiable proof artifact</span> for every render.
+                    into a faceless vertical Short — now with a <span class="hl hl-rose">character/storytelling engine</span> that
+                    renders animated micro-dramas. It generates the script, voiceover, visuals, and burned-in captions,
+                    and emits a <span class="hl hl-blue">verifiable proof artifact</span> for every render.
                 </p>
                 <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
                     <a href="#examples" style="display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; background: var(--accent); color: white; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 1rem;">
@@ -124,9 +161,35 @@
             <div id="examples" style="margin-bottom: 72px;">
                 <h2 style="font-size: 2rem; font-weight: 700; margin-bottom: 12px; text-align: center;">Example renders</h2>
                 <p style="color: var(--text-muted); font-size: 1.05rem; text-align: center; max-width: 640px; margin: 0 auto 36px; line-height: 1.6;">
-                    Four unedited outputs from the current pipeline — vertical 720&times;1280, ~20&ndash;25s each, with voiceover and
-                    burned-in bilingual captions. Tap to play; they work on a phone.
+                    Unedited outputs straight from the pipeline — vertical, with voiceover and burned-in bilingual captions.
+                    Tap to play; they work on a phone.
                 </p>
+
+                <!-- Featured: Creative V2 character engine -->
+                <div class="mf-featured">
+                    <video controls preload="none" playsinline poster="assets/media-flow-creative-v2-airport.jpg">
+                        <source src="assets/media-flow-creative-v2-airport.mp4" type="video/mp4">
+                    </video>
+                    <div class="mf-featured-body">
+                        <span class="mf-badge">NEW · CREATIVE V2 · CHARACTER ENGINE</span>
+                        <h3>Wrong Word, Wrong Flight</h3>
+                        <p>
+                            A character micro-drama — not a vocabulary card. <strong>Sam the Traveler</strong>, a recurring animated
+                            mascot, sprints to catch his flight and nearly says the wrong word at the gate. It's the storytelling
+                            upgrade to the engine: a real hook&nbsp;&rarr;&nbsp;mistake&nbsp;&rarr;&nbsp;fix&nbsp;&rarr;&nbsp;payoff arc
+                            with a loop-bait ending, built to actually hold attention rather than just list words.
+                        </p>
+                        <p>
+                            Same lesson underneath — <span class="hl hl-amber">PASSPORT&nbsp;=&nbsp;جواز السفر</span> — now told as a
+                            33-second story, still rendered locally with a verifiable proof artifact.
+                        </p>
+                        <p class="meta">Vertical 1080&times;1920 · 32.9s · voiceover + RTL/LTR captions</p>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 1.05rem; font-weight: 600; color: var(--text-muted); text-align: center; margin: 0 0 24px; text-transform: uppercase; letter-spacing: 0.04em;">
+                    Earlier topic-pack &amp; Sensei renders
+                </h3>
 
                 <div class="mf-video-grid">
                     <div class="mf-card">
