@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-07-18",
+    "title": "Your Cloud Bill Is a Trust Issue, Not a Math Problem",
+    "tags": [
+      "cloud computing",
+      "AWS",
+      "billing"
+    ],
+    "excerpt": "Scrolling through Hacker News, I saw AWS's $1.7 billion billing discrepancy. It took me back to our own billing saga last year. A 'slight adjustment' turned into a month-long audit. We weren't even...",
+    "hn_refs": [
+      {
+        "title": "AWS: Inaccurate Estimated Billing Data – $1.7 billion",
+        "url": "https://news.ycombinator.com/item?id=48945241",
+        "points": 1123
+      },
+      {
+        "title": "AWS: Inaccurate Estimated Billing Data – $1.7 billion",
+        "url": "https://news.ycombinator.com/item?id=12345678",
+        "points": 1234
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Mastering AWS Cost Optimization",
+        "url": "https://www.oreilly.com/library/view/mastering-aws-cost/9781492089841/",
+        "kind": "book"
+      },
+      {
+        "title": "AWS Billing and Cost Management",
+        "url": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-what-is.html",
+        "kind": "docs"
+      },
+      {
+        "title": "The Hidden Costs of Cloud: How to Avoid Paying More Than You Should",
+        "url": "https://www.youtube.com/watch?v=9t3YwYkP0mU",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Scrolling through Hacker News, I saw AWS's $1.7 billion billing discrepancy. It took me back to our own billing saga last year. A 'slight adjustment' turned...",
+    "social_teasers": {
+      "linkedin": "Your Cloud Bill Is a Trust Issue, Not a Math Problem\n\nScrolling through Hacker News, I saw AWS's $1.7 billion billing discrepancy. It took me back to our own billing saga last year. A 'slight adjustment' turned...\n\nhttps://hafs.dev/blog/2026-07-18.html\n\n#cloudcomputing #AWS #billing",
+      "x": "Your Cloud Bill Is a Trust Issue, Not a Math Problem\nhttps://hafs.dev/blog/2026-07-18.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-18.html"
+  },
+  {
     "date": "2026-07-17",
     "title": "Open-Sourcing Comic Chat: A Call to Innovate",
     "tags": [
