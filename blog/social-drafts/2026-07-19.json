@@ -1,0 +1,27 @@
+{
+  "share_description": "I came across a discussion about GPT-5.6 solving a long-standing issue in convex optimization. It made me rethink the future of AI in mathematical...",
+  "social_teasers": {
+    "linkedin": "AI Just Solved a Math Problem. What Now?\n\nI came across a discussion about GPT-5.6 solving a long-standing issue in convex optimization. It made me rethink the future of AI in mathematical...\n\nhttps://hafs.dev/blog/2026-07-19.html\n\n#AI #Mathematics #ProblemSolving",
+    "x": "AI Just Solved a Math Problem. What Now?\nhttps://hafs.dev/blog/2026-07-19.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-19.html",
+  "title": "AI Just Solved a Math Problem. What Now?",
+  "tags": [
+    "AI",
+    "Mathematics",
+    "Problem Solving"
+  ],
+  "hn_refs": [
+    {
+      "title": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization",
+      "url": "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a",
+      "points": 540
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

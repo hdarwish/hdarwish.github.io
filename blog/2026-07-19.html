@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Just Solved a Math Problem. What Now? - Hafs Ibrahim</title>
+    <meta name="description" content="I came across a discussion about GPT-5.6 solving a long-standing issue in convex optimization. It made me rethink the future of AI in mathematical...">
+    <meta property="og:title" content="AI Just Solved a Math Problem. What Now?">
+    <meta property="og:description" content="I came across a discussion about GPT-5.6 solving a long-standing issue in convex optimization. It made me rethink the future of AI in mathematical...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-07-19.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Just Solved a Math Problem. What Now?">
+    <meta name="twitter:description" content="I came across a discussion about GPT-5.6 solving a long-standing issue in convex optimization. It made me rethink the future of AI in mathematical...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-07-19">
+            <div class="blog-post-date">July 19, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Mathematics</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Problem Solving</span></div>
+            <h2 class="blog-post-title">AI Just Solved a Math Problem. What Now?</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-07-19-hero.png" alt="AI Just Solved a Math Problem. What Now?" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I came across a discussion about GPT-5.6 solving a long-standing issue in convex optimization. It made me rethink the future of AI in mathematical discovery. A language model closed a 30-year-old gap. That's a big deal.</p><p>This isn't just another AI milestone. It's a shift in how we view human and machine collaboration. Convex optimization is foundational in machine learning, economics, and network theory. GPT-5.6 contributing here is both exciting and unsettling.</p><p>We often see AI as a tool, an assistant. It's great at pattern recognition, automating tasks, even generating art. But cracking a theoretical math problem? That was our domain, our playground of human ingenuity.</p><p>GPT-5.6 was prompted to explore a problem that stumped mathematicians for years. It didn't just find a solution; it generated a proof. Proofs require a creative leap, a spark of insight. They're arguments, not just calculations. Now AI has a seat at that table.</p><p>I've spent nights debugging production systems, scaling databases, and pondering AI's limits. This breakthrough makes me question those limits. Are we moving towards a future where AI not only assists but leads in theoretical exploration?</p><p>In practical terms, this changes problem-solving. Imagine AI as a research partner. You pose a hypothesis, and it tests its validity faster than any human could. It suggests paths you might not have considered, identifies gaps in your logic, and even proposes new questions worth asking.</p><p>There's another angle: democratization of expertise. Traditionally, high-level mathematical problem-solving required years of study, mentorship, and resources. With AI models like GPT-5.6, the barrier to entry might lower. More people could engage in complex fields, driving innovation from unexpected places.</p><p>However, new capabilities bring new responsibilities. AI's involvement in theoretical domains raises ethical and practical questions. Who owns the intellectual property of a proof generated by AI? How do we validate its correctness? Can we trust AI-generated insights without deep, human-led verification?</p><p>These are serious concerns. In engineering, a bug might break software. In mathematics, a flawed proof could mislead entire fields. The rigor of peer review must evolve to include AI-originated work.</p><p>Consider the psychological impact on mathematicians and scientists. Their identity is built around solving the unsolvable. If AI starts encroaching on this space, will it devalue human contribution, or will it free us to focus on even more complex challenges?</p><p>I've seen automation disrupt industries. But the disruption here feels deeper. It touches on what it means to be human—our creativity, our intellectual curiosity, and even our ego.</p><p>Yet, there's relief in this shift too. AI doesn't get tired. It doesn't hit a wall at 3 am when staring at a whiteboard full of equations. It could handle the grunt work of exploration, letting us spend more time on synthesis and application.</p><p>Still, there's a worry about over-reliance. If we lean too heavily on AI for insight, do we risk losing our edge, our ability to innovate without machines?</p><p>AI in mathematics is a new frontier. It's a tool, a partner, perhaps even a competitor. But it's also an opportunity for us to rethink our approach, to collaborate in ways we haven't imagined before.</p><p>This isn't just about solving one problem in convex optimization. It's about redefining the landscape of intellectual exploration. We're on the brink, and it's up to us to decide how we step forward.</p><p>As with any tool, the value depends on how we wield it. GPT-5.6's achievement is a moment to reconsider our strategies, not just in math, but in all fields where human creativity and problem-solving are at play.</p><p>So, what's next? More questions. More challenges. And hopefully, more breakthroughs—human, AI, or both.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">GPT-5.6 used a prompt to close a 30-year gap in convex optimization</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲540</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.basicbooks.com/titles/judea-pearl/the-book-of-why/9780465097616/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Book of Why: The New Science of Cause and Effect</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://www.harvard.com/book/the_myth_of_artificial_intelligence/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Myth of Artificial Intelligence: Why Computers Can&#39;t Think the Way We Do</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://www.youtube.com/watch?v=u12zHjXLClk" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">AI and the Future of Work</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">TALK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-19",
+    "title": "AI Just Solved a Math Problem. What Now?",
+    "tags": [
+      "AI",
+      "Mathematics",
+      "Problem Solving"
+    ],
+    "excerpt": "I came across a discussion about GPT-5.6 solving a long-standing issue in convex optimization. It made me rethink the future of AI in mathematical discovery. A language model closed a 30-year-old...",
+    "hn_refs": [
+      {
+        "title": "GPT-5.6 used a prompt to close a 30-year gap in convex optimization",
+        "url": "https://old.reddit.com/r/math/comments/1uxj3cy/after_openais_cdc_proof_announcement_gpt56_used_a",
+        "points": 540
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Book of Why: The New Science of Cause and Effect",
+        "url": "https://www.basicbooks.com/titles/judea-pearl/the-book-of-why/9780465097616/",
+        "kind": "book"
+      },
+      {
+        "title": "The Myth of Artificial Intelligence: Why Computers Can't Think the Way We Do",
+        "url": "https://www.harvard.com/book/the_myth_of_artificial_intelligence/",
+        "kind": "book"
+      },
+      {
+        "title": "AI and the Future of Work",
+        "url": "https://www.youtube.com/watch?v=u12zHjXLClk",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "I came across a discussion about GPT-5.6 solving a long-standing issue in convex optimization. It made me rethink the future of AI in mathematical...",
+    "social_teasers": {
+      "linkedin": "AI Just Solved a Math Problem. What Now?\n\nI came across a discussion about GPT-5.6 solving a long-standing issue in convex optimization. It made me rethink the future of AI in mathematical...\n\nhttps://hafs.dev/blog/2026-07-19.html\n\n#AI #Mathematics #ProblemSolving",
+      "x": "AI Just Solved a Math Problem. What Now?\nhttps://hafs.dev/blog/2026-07-19.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-19.html"
+  },
+  {
     "date": "2026-07-18",
     "title": "Your Cloud Bill Is a Trust Issue, Not a Math Problem",
     "tags": [
