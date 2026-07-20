@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-07-20",
+    "title": "Your Legacy System is a Ripe Target for ESP32s",
+    "tags": [
+      "legacy systems",
+      "innovation",
+      "cost-efficiency"
+    ],
+    "excerpt": "I read about someone who replaced a $120k bowling alley system with $1,600 in ESP32s. It made me think about how many 'untouchable' systems are just waiting for reinvention.\n\nNiche industries often...",
+    "hn_refs": [
+      {
+        "title": "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s",
+        "url": "https://news.ycombinator.com/item?id=48968606",
+        "points": 1964
+      },
+      {
+        "title": "Show HN: I replaced a $120k bowling center system with $1,600 in ESP32s",
+        "url": "https://news.ycombinator.com/item?id=36589724",
+        "points": 223
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Art of Replacing Legacy Systems",
+        "url": "https://martinfowler.com/articles/replacing-legacy-systems.html",
+        "kind": "article"
+      },
+      {
+        "title": "Embedded Systems Architecture: Explore architectural concepts, pragmatic design patterns, and best practices to produce robust systems",
+        "url": "https://www.packtpub.com/product/embedded-systems-architecture-second-edition/9781838558806",
+        "kind": "book"
+      },
+      {
+        "title": "ESP32: The Complete Guide",
+        "url": "https://randomnerdtutorials.com/esp32-guide/",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "I read about someone who replaced a $120k bowling alley system with $1,600 in ESP32s. It made me think about how many 'untouchable' systems are just waiting...",
+    "social_teasers": {
+      "linkedin": "Your Legacy System is a Ripe Target for ESP32s\n\nI read about someone who replaced a $120k bowling alley system with $1,600 in ESP32s. It made me think about how many 'untouchable' systems are just waiting...\n\nhttps://hafs.dev/blog/2026-07-20.html\n\n#legacysystems #innovation #cost-efficiency",
+      "x": "Your Legacy System is a Ripe Target for ESP32s\nhttps://hafs.dev/blog/2026-07-20.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-20.html"
+  },
+  {
     "date": "2026-07-19",
     "title": "AI Just Solved a Math Problem. What Now?",
     "tags": [

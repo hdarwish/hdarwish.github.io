@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Legacy System is a Ripe Target for ESP32s - Hafs Ibrahim</title>
+    <meta name="description" content="I read about someone who replaced a $120k bowling alley system with $1,600 in ESP32s. It made me think about how many &#39;untouchable&#39; systems are just waiting...">
+    <meta property="og:title" content="Your Legacy System is a Ripe Target for ESP32s">
+    <meta property="og:description" content="I read about someone who replaced a $120k bowling alley system with $1,600 in ESP32s. It made me think about how many &#39;untouchable&#39; systems are just waiting...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-07-20.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your Legacy System is a Ripe Target for ESP32s">
+    <meta name="twitter:description" content="I read about someone who replaced a $120k bowling alley system with $1,600 in ESP32s. It made me think about how many &#39;untouchable&#39; systems are just waiting...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-07-20">
+            <div class="blog-post-date">July 20, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">legacy systems</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">innovation</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">cost-efficiency</span></div>
+            <h2 class="blog-post-title">Your Legacy System is a Ripe Target for ESP32s</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-07-20-hero.png" alt="Your Legacy System is a Ripe Target for ESP32s" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>I read about someone who replaced a $120k bowling alley system with $1,600 in ESP32s. It made me think about how many 'untouchable' systems are just waiting for reinvention.</p>
+
+<p>Niche industries often stick with outdated tech because it's 'good enough.' But 'good enough' usually means just profitable enough for vendors. This bowling system story reminded me of enterprises shackled to legacy systems. Systems where maintenance fees alone could bankroll a small startup. Yet, replacing them feels impossible.</p>
+
+<p>Legacy systems are often over-engineered relics. They're built to withstand the apocalypse, not to be user-friendly or cost-effective. The more a system is entrenched, the less it gets questioned.</p>
+
+<p>Once, I worked on a financial system that still relied on COBOL. It wasn't indelible because it was irreplaceable, but because no one wanted to be the first to suggest it's replaceable.</p>
+
+<p>These systems come with massive inertia. They're the technological equivalent of 'if it ain't broke, don't fix it.' But a system doesn't have to be broken to be obsolete. It just has to be out of step with current capabilities.</p>
+
+<p>Companies spend millions maintaining outdated tech, while the solution to their problems could cost thousands. But it requires the courage to think differently.</p>
+
+<p>The ESP32 guy didn't have a magic formula. What he had was common sense coupled with technical savvy and a willingness to disrupt. He didn't need a degree in bowling alley technology; he needed the guts to apply what he did know.</p>
+
+<p>I've seen teams apply off-the-shelf components to solve problems that had been treated as black boxes for years. The key is approaching the problem not as a domain expert, but as an outsider willing to challenge the status quo.</p>
+
+<p>The ESP32 microcontroller, with its low power consumption, built-in Wi-Fi, and Bluetooth capabilities, costs about $4 to $5 per unit. Connect a few of these to a Raspberry Pi running simple scripts, and suddenly you've got a system that's more flexible than the old monolith.</p>
+
+<p>Yet, there are risks. Replacing an existing system isn't just about tech. It's about culture, processes, and sometimes politics. Over my career, I've seen proposals for new tech shot down because they threatened someone's turf.</p>
+
+<p>That's where leadership comes in. Leaders need to champion innovation, even when it's uncomfortable. Especially when it's uncomfortable.</p>
+
+<p>On the technical side, consider the integration challenges. New systems might require data migration, which is often not straightforward. I remember a project where we had to migrate data from a relational database to a NoSQL one. The schema changes alone were a nightmare, not to mention the data integrity checks.</p>
+
+<p>But the real barrier isn't technical. It never was. It's about overcoming the fear of change. The fear that doing something new might fail. But not doing anything is failing already—it's just less visible.</p>
+
+<p>Every legacy system was once a new system. Replacing them isn't a matter of tech, it's a matter of priorities. It's about valuing long-term savings over short-term convenience.</p>
+
+<p>What systems in your organization are hundred-thousand-dollar problems waiting for a thousand-dollar solution? They're out there, sitting right under your nose.</p>
+
+<p>Don't let the fear of disruption blind you to the real opportunities for innovation. Your legacy systems might not be as untouchable as they appear.</p>
+
+<p>The guts to replace them with ESP32-level ingenuity might just be what sets your company apart.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:0 0 0.75rem 0;">Further Reading</div><a href="https://martinfowler.com/articles/replacing-legacy-systems.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Art of Replacing Legacy Systems</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.packtpub.com/product/embedded-systems-architecture-second-edition/9781838558806" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Embedded Systems Architecture: Explore architectural concepts, pragmatic design patterns, and best practices to produce robust systems</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://randomnerdtutorials.com/esp32-guide/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">ESP32: The Complete Guide</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
