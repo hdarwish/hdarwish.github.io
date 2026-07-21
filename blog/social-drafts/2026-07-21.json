@@ -1,0 +1,27 @@
+{
+  "share_description": "Last week, I was reading Stratechery when an article about Chinese AI models stopped me cold. The technical prowess of China's Kimi K3 model caught my...",
+  "social_teasers": {
+    "linkedin": "Western Tech Needs to Wake Up to China's AI Strategy\n\nLast week, I was reading Stratechery when an article about Chinese AI models stopped me cold. The technical prowess of China's Kimi K3 model caught my...\n\nhttps://hafs.dev/blog/2026-07-21.html\n\n#AI #China #TechnologyStrategy",
+    "x": "Western Tech Needs to Wake Up to China's AI Strategy\nhttps://hafs.dev/blog/2026-07-21.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-21.html",
+  "title": "Western Tech Needs to Wake Up to China's AI Strategy",
+  "tags": [
+    "AI",
+    "China",
+    "Technology Strategy"
+  ],
+  "hn_refs": [
+    {
+      "title": "Who's afraid of Chinese models?",
+      "url": "https://stratechery.com/2026/whos-afraid-of-chinese-models",
+      "points": 486
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
