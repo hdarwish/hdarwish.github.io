@@ -1,0 +1,27 @@
+{
+  "share_description": "I read about a security incident during a model evaluation at OpenAI and Hugging Face. It made me think about the vulnerabilities we often overlook in AI...",
+  "social_teasers": {
+    "linkedin": "Your AI Model Pipeline Has a Security Hole\n\nI read about a security incident during a model evaluation at OpenAI and Hugging Face. It made me think about the vulnerabilities we often overlook in AI...\n\nhttps://hafs.dev/blog/2026-07-22.html\n\n#AIsecurity #modelevaluation #securityprotocols",
+    "x": "Your AI Model Pipeline Has a Security Hole\nhttps://hafs.dev/blog/2026-07-22.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-22.html",
+  "title": "Your AI Model Pipeline Has a Security Hole",
+  "tags": [
+    "AI security",
+    "model evaluation",
+    "security protocols"
+  ],
+  "hn_refs": [
+    {
+      "title": "OpenAI and Hugging Face address security incident during model evaluation",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident",
+      "points": 938
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
