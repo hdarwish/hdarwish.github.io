@@ -1,0 +1,27 @@
+{
+  "share_description": "I stumbled upon a blog post titled 'Everyone Should Know SIMD' and it struck me—our CPUs hold untapped power. We often rely on compilers and standard...",
+  "social_teasers": {
+    "linkedin": "Stop Ignoring the Power of Your CPU\n\nI stumbled upon a blog post titled 'Everyone Should Know SIMD' and it struck me—our CPUs hold untapped power. We often rely on compilers and standard...\n\nhttps://hafs.dev/blog/2026-07-23.html\n\n#SIMD #PerformanceOptimization #HardwareUtilization",
+    "x": "Stop Ignoring the Power of Your CPU\nhttps://hafs.dev/blog/2026-07-23.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-23.html",
+  "title": "Stop Ignoring the Power of Your CPU",
+  "tags": [
+    "SIMD",
+    "Performance Optimization",
+    "Hardware Utilization"
+  ],
+  "hn_refs": [
+    {
+      "title": "Everyone should know SIMD",
+      "url": "https://mitchellh.com/writing/everyone-should-know-simd",
+      "points": 341
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
