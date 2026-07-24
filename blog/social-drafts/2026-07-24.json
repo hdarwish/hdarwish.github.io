@@ -1,0 +1,27 @@
+{
+  "share_description": "I came across a discussion about failing software factories, and it took me back to when our team was buried in a rigid, process-heavy approach. We had...",
+  "social_teasers": {
+    "linkedin": "Your Software Factory is Killing Innovation\n\nI came across a discussion about failing software factories, and it took me back to when our team was buried in a rigid, process-heavy approach. We had...\n\nhttps://hafs.dev/blog/2026-07-24.html\n\n#softwaredevelopment #engineeringculture #innovation",
+    "x": "Your Software Factory is Killing Innovation\nhttps://hafs.dev/blog/2026-07-24.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-24.html",
+  "title": "Your Software Factory is Killing Innovation",
+  "tags": [
+    "software development",
+    "engineering culture",
+    "innovation"
+  ],
+  "hn_refs": [
+    {
+      "title": "Why Software Factories Fail (or: harness engineering is not enough)",
+      "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/wsff.md",
+      "points": 248
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
