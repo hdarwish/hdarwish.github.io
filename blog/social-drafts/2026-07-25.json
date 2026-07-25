@@ -1,0 +1,27 @@
+{
+  "share_description": "Last week, I was knee-deep in a deployment fiasco that spiraled out of control. We were sure we had cracked the nut on 'code quality.' Yet, everything...",
+  "social_teasers": {
+    "linkedin": "Coding Got Better, Software Didn't\n\nLast week, I was knee-deep in a deployment fiasco that spiraled out of control. We were sure we had cracked the nut on 'code quality.' Yet, everything...\n\nhttps://hafs.dev/blog/2026-07-25.html\n\n#softwareengineering #complexity #AIindevelopment",
+    "x": "Coding Got Better, Software Didn't\nhttps://hafs.dev/blog/2026-07-25.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-25.html",
+  "title": "Coding Got Better, Software Didn't",
+  "tags": [
+    "software engineering",
+    "complexity",
+    "AI in development"
+  ],
+  "hn_refs": [
+    {
+      "title": "Nothing Works and Everyone Is Euphoric | ptrchm",
+      "url": "https://ptrchm.com/posts/nothing-works-and-everyone-is-euphoric",
+      "points": 42
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
