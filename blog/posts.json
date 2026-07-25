@@ -1,35 +1,35 @@
 [
   {
     "date": "2026-07-25",
-    "title": "Coding Got Better, Software Didn't",
+    "title": "The camera didn't leak a token. The build pipeline did.",
     "tags": [
-      "software engineering",
-      "complexity",
-      "AI in development"
+      "security",
+      "build-pipelines",
+      "firmware"
     ],
-    "excerpt": "Last week, I was knee-deep in a deployment fiasco that spiraled out of control. We were sure we had cracked the nut on 'code quality.' Yet, everything imaginable broke.I read a post questioning why...",
+    "excerpt": "A consumer security camera shipped a GitHub admin token in its login page. The irony is loud enough to drown out the interesting part.Here's the interesting part: nobody typed that token into a file....",
     "hn_refs": [
       {
-        "title": "Nothing Works and Everyone Is Euphoric | ptrchm",
-        "url": "https://ptrchm.com/posts/nothing-works-and-everyone-is-euphoric",
-        "points": 42
+        "title": "My security camera shipped a GitHub admin token in its login page",
+        "url": "https://hhh.hn/hanwha-github-token",
+        "points": 0
       }
     ],
     "further_reading": [
       {
-        "title": "The Mythical Man-Month: Essays on Software Engineering",
-        "url": "https://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959",
-        "kind": "book"
+        "title": "trufflehog: find leaked credentials",
+        "url": "https://github.com/trufflesecurity/trufflehog",
+        "kind": "docs"
       },
       {
-        "title": "Complexity and the Collapse of Software",
-        "url": "https://www.youtube.com/watch?v=L4N8MNmKcuI",
-        "kind": "talk"
+        "title": "Vite: Env Variables and Modes",
+        "url": "https://vitejs.dev/guide/env-and-mode",
+        "kind": "docs"
       },
       {
-        "title": "Software Engineering at Google: Lessons Learned from Programming Over Time",
-        "url": "https://www.amazon.com/Software-Engineering-Google-Lessons-Programming/dp/1492082791",
-        "kind": "book"
+        "title": "Matt Brown — reverse engineering IP cameras (YouTube)",
+        "url": "https://www.youtube.com/@mattbrwn",
+        "kind": "video"
       }
     ],
     "source_attribution": {
@@ -38,10 +38,10 @@
       "tier": 1,
       "trust_score": 1.0
     },
-    "share_description": "Last week, I was knee-deep in a deployment fiasco that spiraled out of control. We were sure we had cracked the nut on 'code quality.' Yet, everything...",
+    "share_description": "A consumer security camera shipped a GitHub admin token in its login page. The irony is loud enough to drown out the interesting part.Here's the interesting...",
     "social_teasers": {
-      "linkedin": "Coding Got Better, Software Didn't\n\nLast week, I was knee-deep in a deployment fiasco that spiraled out of control. We were sure we had cracked the nut on 'code quality.' Yet, everything...\n\nhttps://hafs.dev/blog/2026-07-25.html\n\n#softwareengineering #complexity #AIindevelopment",
-      "x": "Coding Got Better, Software Didn't\nhttps://hafs.dev/blog/2026-07-25.html"
+      "linkedin": "The camera didn't leak a token. The build pipeline did.\n\nA consumer security camera shipped a GitHub admin token in its login page. The irony is loud enough to drown out the interesting part.Here's the interesting...\n\nhttps://hafs.dev/blog/2026-07-25.html\n\n#security #build-pipelines #firmware",
+      "x": "The camera didn't leak a token. The build pipeline did.\nhttps://hafs.dev/blog/2026-07-25.html"
     },
     "canonical_url": "https://hafs.dev/blog/2026-07-25.html"
   },
