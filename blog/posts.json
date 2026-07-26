@@ -1,13 +1,13 @@
 [
   {
     "date": "2026-07-26",
-    "title": "Two reasonable decisions can build a machine that never stops shaking",
+    "title": "Your autoscaler is not slow. It's an oscillator.",
     "tags": [
       "systems-thinking",
       "control-theory",
-      "feedback-loops"
+      "autoscaling"
     ],
-    "excerpt": "Two individually correct engineering decisions can combine into a system that oscillates forever. That should bother anyone who has tuned a feedback loop.Take a car dealer who wants ten times her...",
+    "excerpt": "A car dealer does everything right and ends up in a permanent boom-bust cycle.She wants her lot to hold ten days of sales. Demand sits at 20 cars a day, jumps to 22, spikes once to 70, then flattens...",
     "hn_refs": [
       {
         "title": "Systems and Delays",
@@ -17,14 +17,19 @@
     ],
     "further_reading": [
       {
-        "title": "Thinking in Systems: A Primer (Donella Meadows)",
-        "url": "https://www.chelseagreen.com/product/thinking-in-systems/",
+        "title": "Thinking in Systems: A Primer — Donella Meadows",
+        "url": "https://donellameadows.org/systems-thinking-book-sales/",
         "kind": "book"
       },
       {
-        "title": "Systems and Delays (Martin Janiczek)",
+        "title": "Systems and Delays — Martin Janiczek",
         "url": "https://martin.janiczek.cz/2026/07/24/systems-and-delays.html",
         "kind": "article"
+      },
+      {
+        "title": "Feedback Control for Computer Systems — Philipp K. Janert",
+        "url": "https://www.oreilly.com/library/view/feedback-control-for/9781449362232/",
+        "kind": "book"
       }
     ],
     "source_attribution": {
@@ -33,10 +38,10 @@
       "tier": 1,
       "trust_score": 1.0
     },
-    "share_description": "Two individually correct engineering decisions can combine into a system that oscillates forever. That should bother anyone who has tuned a feedback...",
+    "share_description": "A car dealer does everything right and ends up in a permanent boom-bust cycle.She wants her lot to hold ten days of sales. Demand sits at 20 cars a day,...",
     "social_teasers": {
-      "linkedin": "Two reasonable decisions can build a machine that never stops shaking\n\nTwo individually correct engineering decisions can combine into a system that oscillates forever. That should bother anyone who has tuned a feedback...\n\nhttps://hafs.dev/blog/2026-07-26.html\n\n#systems-thinking #control-theory #feedback-loops",
-      "x": "Two reasonable decisions can build a machine that never stops shaking\nhttps://hafs.dev/blog/2026-07-26.html"
+      "linkedin": "Your autoscaler is not slow. It's an oscillator.\n\nA car dealer does everything right and ends up in a permanent boom-bust cycle.She wants her lot to hold ten days of sales. Demand sits at 20 cars a day,...\n\nhttps://hafs.dev/blog/2026-07-26.html\n\n#systems-thinking #control-theory #autoscaling",
+      "x": "Your autoscaler is not slow. It's an oscillator.\nhttps://hafs.dev/blog/2026-07-26.html"
     },
     "canonical_url": "https://hafs.dev/blog/2026-07-26.html"
   },
