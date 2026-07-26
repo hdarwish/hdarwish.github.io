@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two reasonable decisions can build a machine that never stops shaking - Hafs Ibrahim</title>
+    <meta name="description" content="Two individually correct engineering decisions can combine into a system that oscillates forever. That should bother anyone who has tuned a feedback...">
+    <meta property="og:title" content="Two reasonable decisions can build a machine that never stops shaking">
+    <meta property="og:description" content="Two individually correct engineering decisions can combine into a system that oscillates forever. That should bother anyone who has tuned a feedback...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-07-26.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Two reasonable decisions can build a machine that never stops shaking">
+    <meta name="twitter:description" content="Two individually correct engineering decisions can combine into a system that oscillates forever. That should bother anyone who has tuned a feedback...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-07-26">
+            <div class="blog-post-date">July 26, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">systems-thinking</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">control-theory</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">feedback-loops</span></div>
+            <h2 class="blog-post-title">Two reasonable decisions can build a machine that never stops shaking</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-07-26-hero.png" alt="Two reasonable decisions can build a machine that never stops shaking" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Two individually correct engineering decisions can combine into a system that oscillates forever. That should bother anyone who has tuned a feedback loop.</p><p>Take a car dealer who wants ten times her daily sales sitting on the lot. Add two delays. Her inventory oscillates forever, even after demand goes flat and stays flat.</p><p>Neither delay is a mistake. That is the disturbing part.</p><p>This comes from Martin Janiczek's walkthrough of the delays chapter in <em>Thinking in Systems</em>. He built a Monte Carlo simulator in Elm just to watch the thing wobble. I can't stop chewing on it.</p><p>The numbers matter, so here they are.</p><p>Demand sits at 20 cars a day, ramps to 22, with one absurd spike of 70. The manager wants inventory at <code>sales * 10</code>. Simple rule, sensible target.</p><p><strong>Delay one: delivery.</strong> Orders take five days to arrive. Cars don't teleport. This is just physics.</p><p><strong>Delay two: response.</strong> When she sees a gap of 30 cars, she doesn't order 30. She orders 15, half the discrepancy. This is deliberate caution against overreacting to that 70-car spike.</p><p>Read those two choices again. Both are the kind of decision you'd praise in a code review.</p><p>The delivery delay is honest about reality. The response delay is prudent restraint. "Don't panic-buy on one weird day" is exactly what a good operator does.</p><p>Combine them and the system oscillates and never settles.</p><p>Here is the mechanism, and it becomes almost funny once you see it.</p><p>She sees a gap. She orders half of it. The cars haven't arrived yet, because of the five-day lag, so tomorrow the gap still looks huge. So she orders again. And again. For five days she keeps ordering into a hole that's already being filled by orders in transit.</p><p>Then the deliveries land. All of them at once. Now she has way too many cars, so she stops ordering entirely and waits for sales to drain the pile.</p><p>Sales drain it below target. Gap reappears. Cycle restarts. Forever.</p><p>The delay doesn't slow the system down. It changes what the system <em>is</em>.</p><p>That is the reframe I want you to carry. We talk about delays as latency, a tax on speed. But a delay inside a feedback loop is not a tax. It is a phase shift. The system is reacting to a past that no longer exists.</p><p>Every correction lands late, so every correction is wrong by the time it arrives, so it triggers the next wrong correction. The math of <em>why</em> this is inevitable lives in control theory, and Janiczek admits he wants a heavier book to explain the poles and phase margins properly. Fair. You don't need the differential equations to feel the trap.</p><p>Here is the part engineers should tattoo somewhere visible. You have built this machine. Probably several times.</p><p><strong>Autoscaling.</strong> Load spikes. New instances take 90 seconds to boot, and that is your delivery delay. The scaler keeps adding capacity into that gap. Instances arrive all at once, the load has already passed, now you're overprovisioned, so you scale down. Then load returns to cold instances. Sawtooth.</p><p>"Only scale by half the deficit" sounds like the responsible fix. It's the response delay. It makes the sawtooth worse, not better.</p><p><strong>Retries.</strong> A service is slow, so clients retry. The retries pile onto a system that was already recovering. The recovery you can't see yet is your delivery delay. You have built a metastable failure loop, and it stays collapsed long after the original trigger is gone.</p><p><strong>Rate limiters</strong> reacting to windowed averages. TCP congestion control before it learned to probe carefully. Thermostats. Supply chains. Same skeleton every time.</p><p>The obvious escape is to kill the delay. Janiczek tries it. Set the response divisor to 1, order the full gap, react as fast as possible.</p><p>It doesn't rescue you. You dropped the very restraint that was protecting you from the 70-car spike. Now you overreact to noise instead. You traded one pathology for another.</p><p>That is the honest, uncomfortable landing. There is often no divisor that is simply "correct." The stability of the loop depends on the <em>relationship</em> between the two delays, not on either one being good or bad alone.</p><p>This points at the real lesson. Stop evaluating your feedback rules one at a time.</p><p>A conservative response and a shipping lag are each defensible. The bug lives in neither. It lives in their product.</p><p>When your system won't stop hunting around its target, don't hunt for the one bad component. There often isn't one. Look at the loop as a loop, total lag against reaction strength, and ask whether the thing is even <em>capable</em> of settling.</p><p>Sometimes the most reasonable people, making the most reasonable calls, assemble a machine whose only stable behavior is to shake. Knowing that is the whole game.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://martin.janiczek.cz/2026/07/24/systems-and-delays.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Systems and Delays</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.chelseagreen.com/product/thinking-in-systems/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Thinking in Systems: A Primer (Donella Meadows)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://martin.janiczek.cz/2026/07/24/systems-and-delays.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Systems and Delays (Martin Janiczek)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

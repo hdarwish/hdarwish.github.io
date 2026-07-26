@@ -1,0 +1,27 @@
+{
+  "share_description": "Two individually correct engineering decisions can combine into a system that oscillates forever. That should bother anyone who has tuned a feedback...",
+  "social_teasers": {
+    "linkedin": "Two reasonable decisions can build a machine that never stops shaking\n\nTwo individually correct engineering decisions can combine into a system that oscillates forever. That should bother anyone who has tuned a feedback...\n\nhttps://hafs.dev/blog/2026-07-26.html\n\n#systems-thinking #control-theory #feedback-loops",
+    "x": "Two reasonable decisions can build a machine that never stops shaking\nhttps://hafs.dev/blog/2026-07-26.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-26.html",
+  "title": "Two reasonable decisions can build a machine that never stops shaking",
+  "tags": [
+    "systems-thinking",
+    "control-theory",
+    "feedback-loops"
+  ],
+  "hn_refs": [
+    {
+      "title": "Systems and Delays",
+      "url": "https://martin.janiczek.cz/2026/07/24/systems-and-delays.html",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
