@@ -1,0 +1,27 @@
+{
+  "share_description": "A phone was handed over at Hartsfield-Jackson. A passcode was entered. The screen went blank, flashed several times, and the device restarted empty. Nothing...",
+  "social_teasers": {
+    "linkedin": "The feature worked perfectly. That's the crime.\n\nA phone was handed over at Hartsfield-Jackson. A passcode was entered. The screen went blank, flashed several times, and the device restarted empty. Nothing...\n\nhttps://hafs.dev/blog/2026-07-27.html\n\n#security #privacy #threat-modeling",
+    "x": "The feature worked perfectly. That's the crime.\nhttps://hafs.dev/blog/2026-07-27.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-27.html",
+  "title": "The feature worked perfectly. That's the crime.",
+  "tags": [
+    "security",
+    "privacy",
+    "threat-modeling"
+  ],
+  "hn_refs": [
+    {
+      "title": "US citizen charged after GrapheneOS phone wipes during airport search",
+      "url": "https://www.techspot.com/news/113236-us-prosecutors-charge-atlanta-man-after-grapheneos-phone.html",
+      "points": 480
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
