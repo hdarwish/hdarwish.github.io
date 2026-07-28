@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-28",
+    "title": "Your agent isn't getting smarter, it's getting wordier",
+    "tags": [
+      "ai-coding-agents",
+      "benchmarks",
+      "software-quality"
+    ],
+    "excerpt": "There is a benchmark for whether an agent's code passes the tests. There is no benchmark for whether the codebase survives the agent.\n\nSlopCodeBench is an attempt to stare straight into that gap, and...",
+    "hn_refs": [
+      {
+        "title": "Benchmarking Opus 5 on SlopCodeBench",
+        "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "A Philosophy of Software Design — John Ousterhout",
+        "url": "https://web.stanford.edu/~ouster/cgi-bin/book.php",
+        "kind": "book"
+      },
+      {
+        "title": "Goodhart's Law and the limits of measurement (Manheim & Garrabrant, Categorizing Variants of Goodhart's Law)",
+        "url": "https://arxiv.org/abs/1803.04585",
+        "kind": "paper"
+      },
+      {
+        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+        "url": "https://arxiv.org/abs/2310.06770",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "There is a benchmark for whether an agent's code passes the tests. There is no benchmark for whether the codebase survives the agent.\n\nSlopCodeBench is an...",
+    "social_teasers": {
+      "linkedin": "Your agent isn't getting smarter, it's getting wordier\n\nThere is a benchmark for whether an agent's code passes the tests. There is no benchmark for whether the codebase survives the agent.\n\nSlopCodeBench is an...\n\nhttps://hafs.dev/blog/2026-07-28.html\n\n#ai-coding-agents #benchmarks #software-quality",
+      "x": "Your agent isn't getting smarter, it's getting wordier\nhttps://hafs.dev/blog/2026-07-28.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-28.html"
+  },
+  {
     "date": "2026-07-27",
     "title": "The feature worked perfectly. That's the crime.",
     "tags": [

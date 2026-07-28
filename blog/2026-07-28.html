@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your agent isn&#39;t getting smarter, it&#39;s getting wordier - Hafs Ibrahim</title>
+    <meta name="description" content="There is a benchmark for whether an agent&#39;s code passes the tests. There is no benchmark for whether the codebase survives the agent.
+
+SlopCodeBench is an...">
+    <meta property="og:title" content="Your agent isn&#39;t getting smarter, it&#39;s getting wordier">
+    <meta property="og:description" content="There is a benchmark for whether an agent&#39;s code passes the tests. There is no benchmark for whether the codebase survives the agent.
+
+SlopCodeBench is an...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-07-28.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your agent isn&#39;t getting smarter, it&#39;s getting wordier">
+    <meta name="twitter:description" content="There is a benchmark for whether an agent&#39;s code passes the tests. There is no benchmark for whether the codebase survives the agent.
+
+SlopCodeBench is an...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-07-28">
+            <div class="blog-post-date">July 28, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">ai-coding-agents</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">benchmarks</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software-quality</span></div>
+            <h2 class="blog-post-title">Your agent isn&#39;t getting smarter, it&#39;s getting wordier</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-07-28-hero.png" alt="Your agent isn&#39;t getting smarter, it&#39;s getting wordier" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>There is a benchmark for whether an agent's code passes the tests. There is no benchmark for whether the codebase survives the agent.</p>
+
+<p>SlopCodeBench is an attempt to stare straight into that gap, and its run on Opus 5 produced the most interesting boring result I've read all year. Correctness went up. So did line count. So did function count. So did complexity — and the write-up's own heading is blunt about how widely: <em>"Complexity grows over time for all models."</em> Not the weak ones. All of them, including the newest.</p>
+
+<p>You should care about this before you fully understand it, because you are probably about to point one of these things at a repository that has to still be legible in three years. Every benchmark score you've used to justify that decision was computed on a codebase nobody had to maintain afterward. The score measured whether the patient survived the operation. It said nothing about how many instruments were left inside.</p>
+
+<p>Here's the machinery. A coding benchmark needs an <strong>oracle</strong>: some automatic procedure that declares an attempt good without a human in the loop. Tests-passed is a magnificent oracle — cheap, decidable, uncheatable in the crude sense, and it emits a number you can drop into a table and sort. "Is this codebase pleasant to work in three years from now" is not an oracle. It's a dinner argument with no referee.</p>
+
+<p>So think about spellcheck. Spellcheck won — it lives in every text box on Earth — not because spelling is the most important property of prose, but because a dictionary is a lookup table and "is this paragraph well-argued" isn't. We built the tool we could grade. Then, quietly, we started treating spelling as the thing writing was <em>for</em>. The analogy breaks in one useful place, and the break is the interesting part: a misspelled word sits there on the page, visible, embarrassing. Excess code hides. It looks like diligence.</p>
+
+<p>Now climb inside the agent's episode. You have a task, a repo, and a test suite that will judge you the moment you stop typing. You hit an input that doesn't quite fit the existing code path. Two moves are available.</p>
+
+<p>Move one: generalize. Find the abstraction that covers both the old case and the new one, rewrite the shared path, delete what you replaced. Move two: add a branch. Or a helper. Or a small parallel function that handles the new shape and leaves every existing caller untouched.</p>
+
+<p>Move one is strictly more dangerous. Touching shared code can break a test that was already passing, and a broken passing test is a <em>visible, scored penalty</em> — a red mark in the only ledger anyone reads. Move two cannot break what currently works; additivity is its whole design. Its cost is redundancy, duplication, a rising complexity number, a fourth function that does almost exactly what the other three do. That cost lands after the episode ends, on a maintainer who does not exist inside the evaluation.</p>
+
+<p>Which means the agent is optimizing with a discount rate of essentially infinity. Everything past the final test run is worth zero.</p>
+
+<p>That asymmetry is the entire engine. Under a test oracle, inside a bounded episode, <strong>adding code is a variance-reduction strategy.</strong> It isn't sloppiness or weak taste. It's a rational bet against the only judge in the room, and it is exactly what you would do if you were graded solely on green checkmarks and knew with certainty you'd never open the file again.</p>
+
+<p>Which is why the SlopCodeBench numbers land the way they do. The write-up doesn't say <em>some</em> of the output was bloated; the heading reads <em>"almost all the code written triggered the slop meter,"</em> alongside <em>"more correctness came at the cost of wayyy more code"</em> and the flat observation that <em>"these models write a lot of functions."</em> Correctness and volume did not trade against each other. Volume was <em>how</em> the correctness got bought.</p>
+
+<p>Here is the part I'd like you to sit with, because the tempting reading — models are crude now, the next release will have better taste — is precisely the wrong lesson. The trend line doesn't bend with scale. It bends with what's measurable, and no amount of capability changes the structural fact that tests-passed has an oracle and codebase quality does not.</p>
+
+<p>Coding agents don't pass benchmarks by writing better code. They pass by writing more of it.</p>
+
+<p>The uncomfortable implication isn't about the models at all. Decades of code review, refactoring culture, and "delete more than you add" folklore exist to teach human engineers to resist one specific instinct: solving a new case by bolting on a new case. Seniority, as far as I can tell, largely <em>is</em> the acquired appetite for the risky generalizing move over the safe additive one — the willingness to break something on purpose in order to leave less behind. And then we built an evaluation regime that rewards the additive move, at scale, monotonically, in every model we ship. We automated the junior engineer's failure mode and reported it as progress on SWE tasks.</p>
+
+<p>So take the portable thing. Stop grading agent output on the snapshot and start grading it on the <strong>trajectory</strong>. A single diff that passes tests tells you almost nothing about judgment. Ten diffs in sequence, viewed through one question — <em>did the codebase get smaller anywhere?</em> — tells you nearly everything. If an agent has touched your repo twenty times and the function count has only ever risen, you don't have a collaborator. You have a very fast sediment layer.</p>
+
+<p>You can make this operational without inventing the perfect quality oracle, which is the trap that keeps people from measuring anything at all. Log lines and function count per merged agent change. Plot complexity across the life of a module rather than per commit. Treat a monotone rise as a defect report about your process, not a law of nature. Then hand the model a task whose only success condition is deletion, and watch closely whether it can find something to remove. That's a real measurement, and unlike the leaderboard, it's yours.</p>
+
+<p>What would change my mind? A model that holds its correctness score while its complexity curve goes flat. That would be the first honest evidence of judgment rather than throughput, and I would celebrate embarrassingly loudly.</p>
+
+<p>Until then the benchmark numbers will keep climbing, and so will the line count, and the only oracle for whether any of it was <em>good</em> is still sitting in your chair, drinking your coffee, reading the diff.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-opus-5-on-slop-code-bench.md" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Benchmarking Opus 5 on SlopCodeBench</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://web.stanford.edu/~ouster/cgi-bin/book.php" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">A Philosophy of Software Design — John Ousterhout</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://arxiv.org/abs/1803.04585" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Goodhart&#39;s Law and the limits of measurement (Manheim &amp; Garrabrant, Categorizing Variants of Goodhart&#39;s Law)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://arxiv.org/abs/2310.06770" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
