@@ -1,0 +1,27 @@
+{
+  "share_description": "Clicking \"Log out\" navigates your page to a logged-out one. It is still a button. Clicking a mailto: link navigates nothing at all &mdash; it pokes some...",
+  "social_teasers": {
+    "linkedin": "Your buttons-versus-links rule died the moment you clicked Log Out\n\nClicking \"Log out\" navigates your page to a logged-out one. It is still a button. Clicking a mailto: link navigates nothing at all &mdash; it pokes some...\n\nhttps://hafs.dev/blog/2026-07-29.html\n\n#html #web-design #accessibility",
+    "x": "Your buttons-versus-links rule died the moment you clicked Log Out\nhttps://hafs.dev/blog/2026-07-29.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-29.html",
+  "title": "Your buttons-versus-links rule died the moment you clicked Log Out",
+  "tags": [
+    "html",
+    "web-design",
+    "accessibility"
+  ],
+  "hn_refs": [
+    {
+      "title": "The Difference Between a Button and a Link",
+      "url": "https://unplannedobsolescence.com/blog/buttons-vs-links",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-07-29",
+    "title": "Your buttons-versus-links rule died the moment you clicked Log Out",
+    "tags": [
+      "html",
+      "web-design",
+      "accessibility"
+    ],
+    "excerpt": "Clicking \"Log out\" navigates your page to a logged-out one. It is still a button. Clicking a mailto: link navigates nothing at all &mdash; it pokes some desktop email client you forgot you installed....",
+    "hn_refs": [
+      {
+        "title": "The Difference Between a Button and a Link",
+        "url": "https://unplannedobsolescence.com/blog/buttons-vs-links",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Triptych Project: Button Actions proposal",
+        "url": "https://triptychjs.com/",
+        "kind": "docs"
+      },
+      {
+        "title": "MDN: <button> element",
+        "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button",
+        "kind": "docs"
+      },
+      {
+        "title": "Hypermedia Systems",
+        "url": "https://hypermedia.systems/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Clicking \"Log out\" navigates your page to a logged-out one. It is still a button. Clicking a mailto: link navigates nothing at all &mdash; it pokes some...",
+    "social_teasers": {
+      "linkedin": "Your buttons-versus-links rule died the moment you clicked Log Out\n\nClicking \"Log out\" navigates your page to a logged-out one. It is still a button. Clicking a mailto: link navigates nothing at all &mdash; it pokes some...\n\nhttps://hafs.dev/blog/2026-07-29.html\n\n#html #web-design #accessibility",
+      "x": "Your buttons-versus-links rule died the moment you clicked Log Out\nhttps://hafs.dev/blog/2026-07-29.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-29.html"
+  },
+  {
     "date": "2026-07-28",
     "title": "Your agent isn't getting smarter, it's getting wordier",
     "tags": [

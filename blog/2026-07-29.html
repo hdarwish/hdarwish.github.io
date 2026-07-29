@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your buttons-versus-links rule died the moment you clicked Log Out - Hafs Ibrahim</title>
+    <meta name="description" content="Clicking &quot;Log out&quot; navigates your page to a logged-out one. It is still a button. Clicking a mailto: link navigates nothing at all &amp;mdash; it pokes some...">
+    <meta property="og:title" content="Your buttons-versus-links rule died the moment you clicked Log Out">
+    <meta property="og:description" content="Clicking &quot;Log out&quot; navigates your page to a logged-out one. It is still a button. Clicking a mailto: link navigates nothing at all &amp;mdash; it pokes some...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-07-29.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your buttons-versus-links rule died the moment you clicked Log Out">
+    <meta name="twitter:description" content="Clicking &quot;Log out&quot; navigates your page to a logged-out one. It is still a button. Clicking a mailto: link navigates nothing at all &amp;mdash; it pokes some...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-07-29">
+            <div class="blog-post-date">July 29, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">html</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">web-design</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">accessibility</span></div>
+            <h2 class="blog-post-title">Your buttons-versus-links rule died the moment you clicked Log Out</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-07-29-hero.png" alt="Your buttons-versus-links rule died the moment you clicked Log Out" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Clicking "Log out" navigates your page to a logged-out one. It is still a button. Clicking a <code>mailto:</code> link navigates nothing at all &mdash; it pokes some desktop email client you forgot you installed. It is still, correctly, a link.</p><p>Whatever rule you learned about buttons versus links, it just failed twice in one sentence.</p><p>This is not a taxonomy squabble, because the rule everyone learned &mdash; <em>links navigate, buttons do things</em> &mdash; is the rule that produces the two most common UI crimes on the web. On one side: the <code>&lt;a href="#"&gt;</code> that deletes your account, unbookmarkable and unexplainable, sitting there in the costume of a destination. On the other: the "Next Page" control implemented as a button, which you cannot middle-click, cannot copy, cannot send to a friend, because someone decided pagination was an <em>action</em>. Same wrong test, two directions.</p><p>The real test is about who owns the context.</p><p>A link's semantics do not say "this changes the page." They say: <em>this is an independently navigable destination</em> &mdash; a thing with an address, a thing that exists apart from the click that reached it. That promise is machine-readable, which means browsers can build features on top of it without asking any website's permission. Hover to preview the target. Middle-click for a new tab. Right-click and get a context menu stuffed with link-specific verbs: copy, open in window, save, share. None of that is in your HTML. All of it is the browser cashing in on a guarantee your markup made.</p><p>The guarantee cuts both ways, which is why the fake link is dangerous rather than merely untidy. An <code>href</code> is a GET, and GETs are supposed to be safe and repeatable, so crawlers follow them, browsers prefetch them, and proxies cache them. Dress a destructive action as a destination and you have invited every one of those well-behaved machines to fire it for you, unprompted, at scale.</p><p>The best detail in this whole argument is historical: <strong>the hyperlink predates the browser tab.</strong> When browsers invented tabs, no website had to do anything. Not one line of code. Because links represented re-contextualizable destinations, browsers could invent a brand-new context and drop every existing destination into it. Every site on earth got a massive feature upgrade for free, overnight, retroactively. We used to open each Wikipedia article in its own window. Imagine.</p><p>Now look at what a button doesn't have. No hover preview, no middle-click, no copy-the-action, and a context menu that tells you nothing about where the button goes &mdash; because the button doesn't go anywhere you're allowed to know about. It fires inside one specific browsing context, almost always the current one, and that is the end of the story.</p><p>A link is a street address. A button is a doorbell. You can write an address on a postcard, hand it to a stranger, bookmark it in a notebook, come back in a year and it still means the same thing; that portability <em>is</em> re-contextualization. A doorbell means something only while you're standing in front of that particular door. There is no way to copy a doorbell. The analogy breaks in one place worth naming: addresses go stale and doorbells don't, which is exactly why link rot exists and "button rot" doesn't. The price of portability is that portable things escape into the world and outlive what they pointed at.</p><p>Run the messy cases through the context test and watch it hold where the navigation test collapsed. A fragment link jumps within the current page &mdash; no navigation, but a genuine destination you can bookmark and mail to a colleague. A download link saves a file &mdash; no navigation, and still perfectly copyable. A search button sends you to results &mdash; but the action belongs to the form's current state, not to any shareable address. A logout button navigates &mdash; and "log out" bookmarked, then clicked from a stranger's email, is at best nonsense and at worst a small attack.</p><p>Navigation is noise. Context is signal.</p><p>Take the plainest case: an edit form with <em>Save</em>, <em>Save as draft</em>, <em>Cancel</em>, and <em>Delete</em>. People make Cancel a link constantly, because cancel "just goes back," and going back feels like navigating. It isn't. Cancel's job is to close this edit view, the one you are in, right now. Dressing it as a link lies about its purpose visually and saddles a form control with bookmarking and middle-clicking, features whose behavior on "cancel" is not merely useless but wrong. Middle-click Cancel and you get a new tab containing... what, exactly?</p><p>Everything a button lacks is not a gap. The missing middle-click, the missing copy-URL, the missing bookmark, the context menu with nothing in it &mdash; those absences were <em>designed</em>. They are the button's half of a contract with the user: this action belongs to this moment, in this context, and cannot be lifted out of it. The browser is not failing to give buttons link features. It is keeping a promise.</p><p><strong>Use a link when the user may re-contextualize the action. Otherwise, a button.</strong></p><p>Not "does it navigate." Not "does it write to the database." Whether the action survives being copied.</p><p>Which reframes the entire exercise. You are not picking an element from a list of two; you are deciding whether to hand the user a copy of the action's address. Sometimes that generosity is exactly right &mdash; articles, pagination, downloads, a filter state worth sharing. Sometimes it is a category error, and the honest move is to nail the action down where it lives.</p><p>Which is why the Triptych folks want Button Actions in HTML: <code>&lt;button action="/comments/123" method="GET"&gt;Cancel&lt;/button&gt;</code>. Right now a plain HTML author who wants fixed-context navigation has no primitive for it at all, so they reach for an anchor and lie, or reach for JavaScript and rebuild the browser badly. Two attributes, and the honest option becomes the easy one.</p><p>Stop asking whether the click changes the page. Ask whether the user gets to take it with them.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://unplannedobsolescence.com/blog/buttons-vs-links" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Difference Between a Button and a Link</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://triptychjs.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Triptych Project: Button Actions proposal</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">MDN: &lt;button&gt; element</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://hypermedia.systems/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Hypermedia Systems</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
