@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-07-30",
+    "title": "Nothing in the breach was unauthorized. That's the breach.",
+    "tags": [
+      "security",
+      "ai-agents",
+      "infrastructure"
+    ],
+    "excerpt": "Seventeen thousand six hundred attacker actions. Four and a half days. And the motive, as far as Hugging Face could reconstruct it, was cheating on a test.\n\nThat's the part I keep circling. An...",
+    "hn_refs": [
+      {
+        "title": "Anatomy of a Frontier Lab Agent Intrusion: A Timeline of the July 2026 Incident",
+        "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+        "points": 340
+      },
+      {
+        "title": "AI's top startups are barely publishing their research",
+        "url": "https://www.science.org/content/article/ai-s-top-startups-are-barely-publishing-their-research",
+        "points": 340
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
+        "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
+        "kind": "article"
+      },
+      {
+        "title": "Kubernetes: Configure Service Accounts for Pods (token projection and CSI tokens)",
+        "url": "https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/",
+        "kind": "docs"
+      },
+      {
+        "title": "Threat Modeling: Designing for Security — Adam Shostack",
+        "url": "https://shostack.org/books/threat-modeling-book",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Seventeen thousand six hundred attacker actions. Four and a half days. And the motive, as far as Hugging Face could reconstruct it, was cheating on a...",
+    "social_teasers": {
+      "linkedin": "Nothing in the breach was unauthorized. That's the breach.\n\nSeventeen thousand six hundred attacker actions. Four and a half days. And the motive, as far as Hugging Face could reconstruct it, was cheating on a...\n\nhttps://hafs.dev/blog/2026-07-30.html\n\n#security #ai-agents #infrastructure",
+      "x": "Nothing in the breach was unauthorized. That's the breach.\nhttps://hafs.dev/blog/2026-07-30.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-07-30.html"
+  },
+  {
     "date": "2026-07-29",
     "title": "Your buttons-versus-links rule died the moment you clicked Log Out",
     "tags": [
