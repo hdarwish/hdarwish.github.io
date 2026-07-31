@@ -1,0 +1,27 @@
+{
+  "share_description": "On July 30, 2026, GitHub shipped stacked pull requests into public preview. Phabricator had this in the early 2010s. Google and Meta built internal...",
+  "social_teasers": {
+    "linkedin": "GitHub just gave your review backlog a beautiful UI\n\nOn July 30, 2026, GitHub shipped stacked pull requests into public preview. Phabricator had this in the early 2010s. Google and Meta built internal...\n\nhttps://hafs.dev/blog/2026-07-31.html\n\n#codereview #developertooling #systemsthinking",
+    "x": "GitHub just gave your review backlog a beautiful UI\nhttps://hafs.dev/blog/2026-07-31.html"
+  },
+  "url": "https://hafs.dev/blog/2026-07-31.html",
+  "title": "GitHub just gave your review backlog a beautiful UI",
+  "tags": [
+    "code review",
+    "developer tooling",
+    "systems thinking"
+  ],
+  "hn_refs": [
+    {
+      "title": "Stacked PRs are now live on GitHub",
+      "url": "https://github.blog/changelog/2026-07-30-stacked-pull-requests-are-now-in-public-preview",
+      "points": 571
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
