@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-01",
+    "title": "Your clever scheduler only works when nobody needs it",
+    "tags": [
+      "scheduling",
+      "systems-design",
+      "performance"
+    ],
+    "excerpt": "Otis has a scheduling algorithm called RSR — Relative System Response — and it is exactly the sort of thing you would write. It scores every car for every call: estimated time to pickup, plus a...",
+    "hn_refs": [
+      {
+        "title": "Elevators",
+        "url": "https://john.fun/elevators",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Elevators — interactive simulations of SCAN, LOOK, RSR and destination dispatch",
+        "url": "https://john.fun/elevators",
+        "kind": "article"
+      },
+      {
+        "title": "The Art of Computer Systems Performance Analysis (Raj Jain)",
+        "url": "https://www.cse.wustl.edu/~jain/books/perfbook.htm",
+        "kind": "book"
+      },
+      {
+        "title": "Systems Performance (Brendan Gregg)",
+        "url": "https://www.brendangregg.com/systems-performance-2nd-edition-book.html",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Otis has a scheduling algorithm called RSR — Relative System Response — and it is exactly the sort of thing you would write. It scores every car for every...",
+    "social_teasers": {
+      "linkedin": "Your clever scheduler only works when nobody needs it\n\nOtis has a scheduling algorithm called RSR — Relative System Response — and it is exactly the sort of thing you would write. It scores every car for every...\n\nhttps://hafs.dev/blog/2026-08-01.html\n\n#scheduling #systems-design #performance",
+      "x": "Your clever scheduler only works when nobody needs it\nhttps://hafs.dev/blog/2026-08-01.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-01.html"
+  },
+  {
     "date": "2026-07-31",
     "title": "GitHub just gave your review backlog a beautiful UI",
     "tags": [

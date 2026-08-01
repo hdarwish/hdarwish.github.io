@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your clever scheduler only works when nobody needs it - Hafs Ibrahim</title>
+    <meta name="description" content="Otis has a scheduling algorithm called RSR — Relative System Response — and it is exactly the sort of thing you would write. It scores every car for every...">
+    <meta property="og:title" content="Your clever scheduler only works when nobody needs it">
+    <meta property="og:description" content="Otis has a scheduling algorithm called RSR — Relative System Response — and it is exactly the sort of thing you would write. It scores every car for every...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-01.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your clever scheduler only works when nobody needs it">
+    <meta name="twitter:description" content="Otis has a scheduling algorithm called RSR — Relative System Response — and it is exactly the sort of thing you would write. It scores every car for every...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-01">
+            <div class="blog-post-date">August 01, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">scheduling</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">systems-design</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">performance</span></div>
+            <h2 class="blog-post-title">Your clever scheduler only works when nobody needs it</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-01-hero.png" alt="Your clever scheduler only works when nobody needs it" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Otis has a scheduling algorithm called RSR — Relative System Response — and it is exactly the sort of thing you would write. It scores every car for every call: estimated time to pickup, plus a penalty for how loaded the car already is, plus an anti-bunching penalty if another car is already heading to that floor in that direction, minus a bonus if the car is already moving your way, minus a bonus if it's idle within two floors of you, minus a bonus for being lightly loaded. Lowest score wins. And then, every five seconds, it throws the whole assignment away and does it again.</p>
+
+<p>Benchmark it against the dumb thing — nearest car, LOOK, the algorithm you learned in an operating systems course, patented in 1961 — and RSR wins.</p>
+
+<p>Until the building gets busy. At high flow rates, LOOK starts beating RSR. It also beats RSR in small buildings with few cars per bank.</p>
+
+<p>That result is not a quirk of elevators. It is the shape of every scheduler you have ever written, and if you haven't seen it in your own system it's because you only ever load-tested the middle of the curve.</p>
+
+<p>Start with what LOOK actually is, because the naming hides the idea. SCAN runs the car from lobby to top floor and back, forever, picking up and dropping off whoever it passes — a bus route with no timetable. LOOK is SCAN with one improvement: reverse at the highest floor anyone actually asked for, not the top of the shaft. That's it. With multiple cars you bolt on the crudest possible coordination: assign each new call to the closest elevator. No load awareness, no lookahead, no regret.</p>
+
+<p>How would you know if that's bad? Averages lie here, and the source is right to insist on distributions. Nobody remembers their mean wait. They remember the morning they stood in the lobby watching four cars refuse to come down, and that memory lives at p90 — the wait that 90% of riders come in under. Morning rush is notoriously the worst, because traffic collapses into a single pattern: everyone entering at the lobby, everyone going up, nobody generating the return trips that would naturally scatter the cars back down the shaft. Evening flips it. Lunch is both at once. Interfloor traffic — the boring rest of the day — is the friendliest, because demand is spread across floors and directions and there is always somewhere useful for a car to be.</p>
+
+<p>What RSR buys you is not intelligence. It's <em>optionality</em>.</p>
+
+<p>Every term in that scoring function is a bet about the near future. The idle-nearby bonus is a bet that an idle car will still be idle when it reaches you. The anti-bunching penalty is a bet that two cars converging on floor 3 is waste, because one of them could be serving somewhere else. The load penalty is a bet that a full car will be slow. And the five-second re-optimization is the mechanism that makes the bets survivable: if car A gets delayed, your call is silently reassigned to car B, and you never learn that a decision was reversed. The source is blunt about it — this re-optimization turns out to be key.</p>
+
+<p>Picture a chess player allowed to take back any move as long as the position hasn't resolved yet. Devastating. Now picture the same player in a forced sequence, where every move is the only legal move. The takeback is worthless — not weaker, worthless — because there was never a second option to switch to. RSR at saturation is that player. Every car is full, everyone is going the same direction, so the load penalty is uniform, the anti-bunching term fires on every call, the idle bonus never applies because nothing is idle, and the reassignment has nowhere to reassign to.</p>
+
+<p>The analogy breaks in one honest place: chess costs nothing to think. RSR still runs its scoring, still spends decisions, and buys nothing with them.</p>
+
+<p>Small banks fail the same way from the other side. With two cars, the entire space of possible assignments has two elements. A scoring function with six weighted terms is a very elaborate coin flip — and the anti-bunching penalty, designed to spread cars out, now spends its whole life steering the only other car away from where the demand actually is.</p>
+
+<p>Which means the gain in RSR was never the scoring function at all. It was the freedom to change its mind every five seconds — and that freedom is exactly what evaporates under the load you built the scheduler for. A scheduler with no choices left is just a queue with extra math attached.</p>
+
+<p><strong>Smarter scheduling only pays off in the middle of the load curve.</strong></p>
+
+<p>Sit with that, because it's worse than it sounds. Your work-stealing scheduler, your least-connections load balancer, your cost-based query planner, your bin-packing pod scheduler — every one of them is tuned for the regime where the system was already fine. At low load any car is close enough, so everything wins. At high load, physics takes the wheel: elevator throughput is set by round-trip time, which is dominated by doors opening, people shuffling, doors closing, at every stop — and no assignment policy edits that. Substitute disk seeks, or cores, or wire. Cleverness has a window, and the window sits precisely where you weren't worried.</p>
+
+<p>The same logic sinks destination dispatch — the lobby kiosks where you type your floor before boarding. Perfect information about every rider's destination, and it is <em>generally worse</em> for wait times than up-and-down buttons, winning only in very tall buildings with 8+ cars per bank. You get more information, committed earlier, in exchange for less ability to rebalance later. That trade loses almost everywhere, and it loses hardest exactly when the lobby is packed.</p>
+
+<p>So the portable thing isn't "keep it simple." It's this: before you add a term to a scoring function, ask what freedom that term is spending, and then check whether the freedom still exists at the load you actually fear. Benchmark the ends of the curve, never the middle. The middle is where every algorithm looks like a genius.</p>
+
+<p>A scheduler is not a brain. It's a set of open doors — and cleverness is only ever the art of noticing which ones are still open.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://john.fun/elevators" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Elevators</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://john.fun/elevators" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Elevators — interactive simulations of SCAN, LOOK, RSR and destination dispatch</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.cse.wustl.edu/~jain/books/perfbook.htm" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Art of Computer Systems Performance Analysis (Raj Jain)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://www.brendangregg.com/systems-performance-2nd-edition-book.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Systems Performance (Brendan Gregg)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
