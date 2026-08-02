@@ -1,0 +1,27 @@
+{
+  "share_description": "Go find the worst page in your documentation. Not the empty one — the full one. The page with the working example, the config table, the paragraph about why...",
+  "social_teasers": {
+    "linkedin": "Your docs aren't missing information. They're two documents fighting.\n\nGo find the worst page in your documentation. Not the empty one — the full one. The page with the working example, the config table, the paragraph about why...\n\nhttps://hafs.dev/blog/2026-08-02.html\n\n#documentation #technical-writing #information-architecture",
+    "x": "Your docs aren't missing information. They're two documents fighting.\nhttps://hafs.dev/blog/2026-08-02.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-02.html",
+  "title": "Your docs aren't missing information. They're two documents fighting.",
+  "tags": [
+    "documentation",
+    "technical-writing",
+    "information-architecture"
+  ],
+  "hn_refs": [
+    {
+      "title": "Diátaxis",
+      "url": "https://diataxis.fr/",
+      "points": 267
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

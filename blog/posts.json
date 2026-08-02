@@ -1,5 +1,46 @@
 [
   {
+    "date": "2026-08-02",
+    "title": "Your docs aren't missing information. They're two documents fighting.",
+    "tags": [
+      "documentation",
+      "technical-writing",
+      "information-architecture"
+    ],
+    "excerpt": "Go find the worst page in your documentation. Not the empty one — the full one. The page with the working example, the config table, the paragraph about why the architecture ended up like this, and...",
+    "hn_refs": [
+      {
+        "title": "Diátaxis",
+        "url": "https://diataxis.fr/",
+        "points": 267
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Diátaxis: A systematic approach to technical documentation authoring",
+        "url": "https://diataxis.fr/",
+        "kind": "docs"
+      },
+      {
+        "title": "What nobody tells you about documentation (Daniele Procida, PyCon Australia)",
+        "url": "https://www.youtube.com/watch?v=t4vKPhjcMZg",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Go find the worst page in your documentation. Not the empty one — the full one. The page with the working example, the config table, the paragraph about why...",
+    "social_teasers": {
+      "linkedin": "Your docs aren't missing information. They're two documents fighting.\n\nGo find the worst page in your documentation. Not the empty one — the full one. The page with the working example, the config table, the paragraph about why...\n\nhttps://hafs.dev/blog/2026-08-02.html\n\n#documentation #technical-writing #information-architecture",
+      "x": "Your docs aren't missing information. They're two documents fighting.\nhttps://hafs.dev/blog/2026-08-02.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-02.html"
+  },
+  {
     "date": "2026-08-01",
     "title": "Your clever scheduler only works when nobody needs it",
     "tags": [

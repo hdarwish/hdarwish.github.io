@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your docs aren&#39;t missing information. They&#39;re two documents fighting. - Hafs Ibrahim</title>
+    <meta name="description" content="Go find the worst page in your documentation. Not the empty one — the full one. The page with the working example, the config table, the paragraph about why...">
+    <meta property="og:title" content="Your docs aren&#39;t missing information. They&#39;re two documents fighting.">
+    <meta property="og:description" content="Go find the worst page in your documentation. Not the empty one — the full one. The page with the working example, the config table, the paragraph about why...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-02.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your docs aren&#39;t missing information. They&#39;re two documents fighting.">
+    <meta name="twitter:description" content="Go find the worst page in your documentation. Not the empty one — the full one. The page with the working example, the config table, the paragraph about why...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-02">
+            <div class="blog-post-date">August 02, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">documentation</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">technical-writing</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">information-architecture</span></div>
+            <h2 class="blog-post-title">Your docs aren&#39;t missing information. They&#39;re two documents fighting.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-02-hero.png" alt="Your docs aren&#39;t missing information. They&#39;re two documents fighting." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Go find the worst page in your documentation. Not the empty one — the <em>full</em> one. The page with the working example, the config table, the paragraph about why the architecture ended up like this, and the aside that starts "if you're using Kubernetes, note that…". Everything a reader could possibly need is on that page. Nobody can use it.</p><p>That's the part that should bother you. Missing docs are a work item; you write them and they're done. This is something else: a page where the effort went in, the accuracy is fine, the examples actually run — and it still fails the person reading it. Diátaxis, Daniele Procida's framework, gets adopted by projects that have slammed into exactly this wall, and a great many of them adopt it wrong, because they think they've been handed a filing system.</p><p>They've been handed a diagnosis.</p><p>The actual claim is about readers, not topics. Diátaxis identifies four distinct <em>needs</em> a documentation user can have, and four forms that answer them: tutorials, how-to guides, reference, explanation. Four <strong>modes of the reader</strong>. The framework's two axes make it crisp — one axis is action versus cognition (are you <em>doing</em> or <em>thinking</em>?), the other is acquisition versus application (are you <em>studying</em> or <em>working</em>?). Tutorial: doing, while studying. How-to: doing, while working. Explanation: thinking, while studying. Reference: thinking, while working.</p><p>And here's the bit that does the work: your mode isn't a preference, it's a circumstance. It's set by what you're holding, what's broken, and what you already know. You can't be asked to switch it halfway down a page.</p><p>Watch what happens when you put two modes on one anyway.</p><p>A tutorial's job is to guarantee success for someone who doesn't yet know what they're doing. That makes it ruthlessly narrow by necessity: one path, no options, no "you could also." The learner cannot evaluate a choice — they don't have the concepts yet, which is the entire reason they are reading you. So the moment you slip in a completeness-flavoured aside ("if you prefer Postgres, adjust the connection string accordingly"), you have handed a decision to the one person in your audience who is structurally incapable of making it. You didn't add information. You added a place to fail.</p><p>A how-to guide has the opposite duty. Its reader is competent, mid-task, and needs the shape of the solution loose enough to fit a situation you have never seen — so for them, options and caveats are the entire value. The two pages therefore want physically incompatible things from the same sentence: the tutorial needs it pinned down, the how-to needs it adaptable. Write it once, for both, and you land on a sentence that is vague to the beginner and patronising to the expert. That sentence is not a compromise. It's a casualty.</p><p>Reference and explanation collide just as hard, and much more quietly. Reference is a map: neutral, austere, shaped to mirror the thing it describes, optimised for someone who already knows what they want and needs it in four seconds. Explanation is a conversation: it wanders, argues, admits alternatives, tells you why the API is a bit ugly for historical reasons. Drop a lovely three-paragraph rationale into a parameter table and you have done two kinds of damage — you slowed the lookup for every single person scanning, and you buried your best thinking in the one place on earth nobody reads prose.</p><p>The map analogy is worth pushing on, because it breaks somewhere useful. A street map is not a failed travel essay; it's a different artifact with a different contract, and no one has ever filed a complaint that the map declined to cover the city's zoning history. Where it breaks: maps are physically separate objects, so the confusion is impossible to commit. Documentation lives in files. Files are infinitely willing to hold anything you type. Nothing in your Markdown will stop you, and nothing in review will either, because every individual sentence you added was true and helpful to somebody.</p><p>Which is why four folders don't save you. Copying a taxonomy is free. Accepting the constraint costs something, and the constraint is this: <strong>a page serves exactly one mode, and therefore a page must be allowed to be incomplete.</strong> You have to let a tutorial be wrong-by-omission on purpose. You have to let a reference page refuse to be friendly. Teams that keep the folders and quietly reject the incompleteness end up with four directories of the same hybrid mush, now with better labels on the mush.</p><p>Once you can see the collision you can't unsee it, because documentation is not where you built it first. You built it in the runbook that opens with the history of the failure mode when the reader at 3am needs step three. You built it in the PR template asking for a changelog entry, a rationale, a test plan and a reviewer checklist in one text box. You built it in the onboarding doc that is simultaneously a tour, a task list and a philosophy. You built it in your <code>AGENTS.md</code>, where project explanation and non-negotiable operating rules sit in one undifferentiated wall, and the model — quite reasonably — treats both as suggestions.</p><p>Bad documentation is two documents fighting for the same page.</p><p>Sit with that. It was never a writing-talent problem, and it was never a style problem.</p><p>What this buys you is an editing question that can actually be answered. "Is this page good?" is unanswerable and invites committees. "Who is the reader of this sentence, and what are their hands doing right now?" takes about two seconds, and every mismatch lights up like a dead pixel. Diátaxis calls itself a compass rather than a blueprint, and that distinction is doing real work: a blueprint demands you know the finished building, while a compass only tells you which way to step from wherever you happen to be standing. So you can fix documentation one paragraph at a time, forever, with no rewrite project and no permission.</p><p>Then do the disloyal thing. Take the best sentence on your worst page — the one you're secretly proud of — and move it somewhere it can breathe. Not because it was bad. Because it was standing in the wrong room, shouting over someone else's answer.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://diataxis.fr/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Diátaxis</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲267</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://diataxis.fr/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Diátaxis: A systematic approach to technical documentation authoring</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.youtube.com/watch?v=t4vKPhjcMZg" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">What nobody tells you about documentation (Daniele Procida, PyCon Australia)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">TALK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
