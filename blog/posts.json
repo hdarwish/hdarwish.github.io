@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-04",
+    "title": "Terence Tao isn't prompting better than you. He's reading better.",
+    "tags": [
+      "AI",
+      "expertise",
+      "prompting"
+    ],
+    "excerpt": "Terence Tao and you are running the same model. Same weights, same sampler, same blinking cursor, same monthly bill. And yet his transcript about the counterexample to the Jacobian Conjecture reads...",
+    "hn_refs": [
+      {
+        "title": "LLMs reward expertise",
+        "url": "https://www.seangoedecke.com/llms-reward-expertise",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Terence Tao's blog (including his notes on using AI tools in mathematics)",
+        "url": "https://terrytao.wordpress.com/",
+        "kind": "article"
+      },
+      {
+        "title": "Sean Goedecke: system design problems are dominated by concrete specifics",
+        "url": "https://www.seangoedecke.com/",
+        "kind": "article"
+      },
+      {
+        "title": "Thinking, Fast and Slow — Kahneman, on expert intuition and where it fails",
+        "url": "https://us.macmillan.com/books/9780374533557/thinkingfastandslow",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Terence Tao and you are running the same model. Same weights, same sampler, same blinking cursor, same monthly bill. And yet his transcript about the...",
+    "social_teasers": {
+      "linkedin": "Terence Tao isn't prompting better than you. He's reading better.\n\nTerence Tao and you are running the same model. Same weights, same sampler, same blinking cursor, same monthly bill. And yet his transcript about the...\n\nhttps://hafs.dev/blog/2026-08-04.html\n\n#AI #expertise #prompting",
+      "x": "Terence Tao isn't prompting better than you. He's reading better.\nhttps://hafs.dev/blog/2026-08-04.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-04.html"
+  },
+  {
     "date": "2026-08-03",
     "title": "The bugs were the spec, and nobody wrote them down",
     "tags": [

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terence Tao isn&#39;t prompting better than you. He&#39;s reading better. - Hafs Ibrahim</title>
+    <meta name="description" content="Terence Tao and you are running the same model. Same weights, same sampler, same blinking cursor, same monthly bill. And yet his transcript about the...">
+    <meta property="og:title" content="Terence Tao isn&#39;t prompting better than you. He&#39;s reading better.">
+    <meta property="og:description" content="Terence Tao and you are running the same model. Same weights, same sampler, same blinking cursor, same monthly bill. And yet his transcript about the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-04.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terence Tao isn&#39;t prompting better than you. He&#39;s reading better.">
+    <meta name="twitter:description" content="Terence Tao and you are running the same model. Same weights, same sampler, same blinking cursor, same monthly bill. And yet his transcript about the...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-04">
+            <div class="blog-post-date">August 04, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">expertise</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">prompting</span></div>
+            <h2 class="blog-post-title">Terence Tao isn&#39;t prompting better than you. He&#39;s reading better.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-04-hero.png" alt="Terence Tao isn&#39;t prompting better than you. He&#39;s reading better." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Terence Tao and you are running the same model. Same weights, same sampler, same blinking cursor, same monthly bill. And yet his transcript about the counterexample to the Jacobian Conjecture reads like a different product entirely — tight replies, no throat-clearing, no bulleted "key considerations," just mathematics moving forward. Sean Goedecke, reading that conversation, says the quiet thing out loud: <em>this is not the same ChatGPT I talk to.</em></p>
+
+<p>The tempting explanation is technique. A secret phrasing, a magic preamble, a prompt worth screenshotting.</p>
+
+<p>It isn't. Look at what Tao actually does and the decisive move is not something he writes — it's something he <em>notices</em>. Which matters, because the entire folk theory of "AI skill" is aimed at the wrong half of the loop. If prompting is a writing skill, you can learn it in an afternoon from a listicle. If it's something else, a great many people are currently practicing the wrong thing with impressive diligence.</p>
+
+<p>Start with the observable surface, the part Goedecke catalogues. Tao's messages are short and to the point. He doesn't respond point-by-point to the model, only to the gist. The replies come back dramatically more concise than they do for the rest of us. And when the model produces something he doesn't like, he doesn't declare it wrong — he says <em>"this looks more complex than I was hoping for."</em></p>
+
+<p>Sit with that sentence, because it's the whole argument in miniature. It isn't a correction; it's a <strong>taste judgment</strong>, delivered as a mild aesthetic complaint. It functions as steering only because Tao knows what a good proof looks like well enough to feel the wrongness of an ugly one before he can say why. He isn't supplying information the model lacks. He's supplying a preference function.</p>
+
+<p>Now the deeper question, the one the prompt-tips genre never asks: where does the conciseness come from? Nobody requested it. Tao never writes "be brief, I'm a mathematician." The brevity is <em>inferred</em>. His register, his elisions, the questions he doesn't bother to ask because they're beneath him — all of that is evidence about who is on the other end, and the model conditions on evidence. That's the only thing it does.</p>
+
+<p>And consider why the default is bloat. Facing an unknown reader, hedging and scaffolding and "here are three key considerations" is the expected-value-maximizing move: it can't be wrong, it flatters everyone, it survives contact with a beginner and a professor alike. Verbosity is what a system emits when it genuinely does not know how much you already know. Tao's register removes the uncertainty, so the hedges stop paying for themselves and fall away. You cannot fake this with an instruction, because an instruction is a claim and a register is a demonstration.</p>
+
+<p>The model has read a very great deal of both.</p>
+
+<p>Here's an analogy, and I'll tell you where it breaks. This is not a search engine you query; it's an orchestra you conduct. The orchestra can play almost anything. What it actually plays depends on whether the person waving the stick can <em>hear</em> that the second violins came in early. A conductor who can't hear the error still gets music — technically — but never better than the ensemble's own default. Where the analogy breaks: an orchestra doesn't quietly estimate your expertise and adjust its playing to match, and this thing absolutely does. That inference is real, and in Tao's transcript it is doing enormous work.</p>
+
+<p>The same mechanism runs in far less glamorous rooms. Goedecke's version is a codebase you own: because you have a theory of the system, you can say <em>"no, I think it could be simpler here,"</em> or <em>"but don't we already do X?"</em>, or <em>"can we express this in the terms we already use?"</em> Those are Tao's moves transposed down an octave. He can't ask specific questions about the Jacobian Conjecture; he can ask them about the systems he knows at GitHub. Hence his ranking, which sounds anti-intellectual until you see the mechanism: he'd rather have familiarity with a particular codebase than a deep general understanding of software systems. Specifics beat principles here, because specifics are what let you recognize a wrong answer that looks right.</p>
+
+<p>This is where the cheerful version of the story turns over. We were promised that LLMs make everyone a generalist — you can't write CSS, so you delegate, and out comes sort-of-okay CSS. That's true, and the floor genuinely rose, for everyone, everywhere, all at once. But a raised floor is not a closed gap. The ceiling only rises where somebody can tell good from good-enough, and telling is precisely the faculty that took ten years to grow.</p>
+
+<p>Everyone gets the mediocre answer now. Only the expert gets the great one.</p>
+
+<p><strong>Prompting skill is mostly the ability to evaluate answers, not the ability to write requests.</strong></p>
+
+<p>Which means the gap between novice output and expert output is widening, not narrowing. The Hacker News commenters caught the obvious objection, and it's a fair one: this is a suspiciously comforting conclusion for knowledge workers to reach about themselves. Goedecke grants the suspicion, then takes on the strongest challenge — that OpenAI's own mathematical prompts were unexpert, so expertise evidently isn't required. His answer is that OpenAI had a team of expert mathematicians checking and filtering the model's suggested discoveries, and nobody has found a way to skip that step. The expertise didn't disappear. It moved downstream, from the asking to the judging. Which is the claim.</p>
+
+<p>So here's what I'd hand you. Stop grading yourself on your prompts and start grading yourself on your rejections — keep a private tally of the times you sent something back, and why. In any domain where you're strong, catch the moment you thought <em>hm, too complicated</em>; that flinch is the most valuable thing you own, and it does not travel to domains where you're weak. And where you're weak, be honest that you're buying floor, not ceiling. Use the output. Just don't mistake your inability to see the flaws for the absence of flaws.</p>
+
+<p>The bottleneck was never the asking. What you need is already sitting in there, latent, patient, indifferent — and it takes a very good reader to draw it out.</p>
+
+<p>Learn to read. The machine will meet you exactly where you are.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.seangoedecke.com/llms-reward-expertise" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">LLMs reward expertise</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://terrytao.wordpress.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Terence Tao&#39;s blog (including his notes on using AI tools in mathematics)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.seangoedecke.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Sean Goedecke: system design problems are dominated by concrete specifics</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://us.macmillan.com/books/9780374533557/thinkingfastandslow" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Thinking, Fast and Slow — Kahneman, on expert intuition and where it fails</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "share_description": "Terence Tao and you are running the same model. Same weights, same sampler, same blinking cursor, same monthly bill. And yet his transcript about the...",
+  "social_teasers": {
+    "linkedin": "Terence Tao isn't prompting better than you. He's reading better.\n\nTerence Tao and you are running the same model. Same weights, same sampler, same blinking cursor, same monthly bill. And yet his transcript about the...\n\nhttps://hafs.dev/blog/2026-08-04.html\n\n#AI #expertise #prompting",
+    "x": "Terence Tao isn't prompting better than you. He's reading better.\nhttps://hafs.dev/blog/2026-08-04.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-04.html",
+  "title": "Terence Tao isn't prompting better than you. He's reading better.",
+  "tags": [
+    "AI",
+    "expertise",
+    "prompting"
+  ],
+  "hn_refs": [
+    {
+      "title": "LLMs reward expertise",
+      "url": "https://www.seangoedecke.com/llms-reward-expertise",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
