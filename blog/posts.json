@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-05",
+    "title": "Your model isn't expensive. Your harness is.",
+    "tags": [
+      "ai-agents",
+      "cost-engineering",
+      "context-management"
+    ],
+    "excerpt": "Databricks took one model, held the thinking effort constant, and ran it through different agent harnesses on tasks pulled from their own multi-million-line codebase. Same model. Same effort. Quality...",
+    "hn_refs": [
+      {
+        "title": "Pi's Minimalism Is Its Advantage",
+        "url": "https://earendil.com/posts/pi-autoresearch-and-databricks",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Benchmarking Coding Agents on Databricks' Multi-Million Line Codebase",
+        "url": "https://www.databricks.com/blog",
+        "kind": "article"
+      },
+      {
+        "title": "Anthropic: Building effective agents",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents",
+        "kind": "article"
+      },
+      {
+        "title": "pi-autoresearch (Shopify)",
+        "url": "https://github.com/Shopify",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Databricks took one model, held the thinking effort constant, and ran it through different agent harnesses on tasks pulled from their own multi-million-line...",
+    "social_teasers": {
+      "linkedin": "Your model isn't expensive. Your harness is.\n\nDatabricks took one model, held the thinking effort constant, and ran it through different agent harnesses on tasks pulled from their own multi-million-line...\n\nhttps://hafs.dev/blog/2026-08-05.html\n\n#ai-agents #cost-engineering #context-management",
+      "x": "Your model isn't expensive. Your harness is.\nhttps://hafs.dev/blog/2026-08-05.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-05.html"
+  },
+  {
     "date": "2026-08-04",
     "title": "Terence Tao isn't prompting better than you. He's reading better.",
     "tags": [

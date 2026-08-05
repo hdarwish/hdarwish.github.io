@@ -1,0 +1,27 @@
+{
+  "share_description": "Databricks took one model, held the thinking effort constant, and ran it through different agent harnesses on tasks pulled from their own multi-million-line...",
+  "social_teasers": {
+    "linkedin": "Your model isn't expensive. Your harness is.\n\nDatabricks took one model, held the thinking effort constant, and ran it through different agent harnesses on tasks pulled from their own multi-million-line...\n\nhttps://hafs.dev/blog/2026-08-05.html\n\n#ai-agents #cost-engineering #context-management",
+    "x": "Your model isn't expensive. Your harness is.\nhttps://hafs.dev/blog/2026-08-05.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-05.html",
+  "title": "Your model isn't expensive. Your harness is.",
+  "tags": [
+    "ai-agents",
+    "cost-engineering",
+    "context-management"
+  ],
+  "hn_refs": [
+    {
+      "title": "Pi's Minimalism Is Its Advantage",
+      "url": "https://earendil.com/posts/pi-autoresearch-and-databricks",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
