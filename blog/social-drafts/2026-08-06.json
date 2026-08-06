@@ -1,0 +1,27 @@
+{
+  "share_description": "Filter a million random floats. Keep 1% of them: 0.59 ms. Keep 50%: 3.94 ms. Keep 99% — nearly a hundred times more output than the first case, almost twice...",
+  "social_teasers": {
+    "linkedin": "The `if` was free. Your data was the problem.\n\nFilter a million random floats. Keep 1% of them: 0.59 ms. Keep 50%: 3.94 ms. Keep 99% — nearly a hundred times more output than the first case, almost twice...\n\nhttps://hafs.dev/blog/2026-08-06.html\n\n#rust #performance #cpu-architecture",
+    "x": "The `if` was free. Your data was the problem.\nhttps://hafs.dev/blog/2026-08-06.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-06.html",
+  "title": "The `if` was free. Your data was the problem.",
+  "tags": [
+    "rust",
+    "performance",
+    "cpu-architecture"
+  ],
+  "hn_refs": [
+    {
+      "title": "Branchless Rust: Making a Filter 4x Faster by Removing an If",
+      "url": "https://www.greyblake.com/blog/branchless-rust",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
