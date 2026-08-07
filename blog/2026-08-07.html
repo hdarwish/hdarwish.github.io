@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You already ship hardcoded models. Silicon just sends the bill. - Hafs Ibrahim</title>
+    <meta name="description" content="Taalas&#39; first test chip served Llama 3.1 8B at 16,960 tokens per second. Forty-eight times faster than Nvidia&#39;s GPUs at the time of announcement, eight and...">
+    <meta property="og:title" content="You already ship hardcoded models. Silicon just sends the bill.">
+    <meta property="og:description" content="Taalas&#39; first test chip served Llama 3.1 8B at 16,960 tokens per second. Forty-eight times faster than Nvidia&#39;s GPUs at the time of announcement, eight and...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-07.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="You already ship hardcoded models. Silicon just sends the bill.">
+    <meta name="twitter:description" content="Taalas&#39; first test chip served Llama 3.1 8B at 16,960 tokens per second. Forty-eight times faster than Nvidia&#39;s GPUs at the time of announcement, eight and...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-07">
+            <div class="blog-post-date">August 07, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI hardware</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">inference</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">chip design</span></div>
+            <h2 class="blog-post-title">You already ship hardcoded models. Silicon just sends the bill.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-07-hero.png" alt="You already ship hardcoded models. Silicon just sends the bill." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Taalas' first test chip served Llama 3.1 8B at 16,960 tokens per second. Forty-eight times faster than Nvidia's GPUs at the time of announcement, eight and a half times faster than Cerebras. And it will never run another model, ever, because the weights aren't <em>stored</em> in that chip — they <em>are</em> that chip. Mask ROM. Etched into the metal. AMD just bought the company.</p>
+
+<p>The fastest inference silicon anyone has demonstrated is running a model from mid-2024. Not out of nostalgia, and not because the engineers weren't paying attention. Because a model you etch is a model you chose eighteen months ago.</p>
+
+<p>That's not a footnote. That's the product.</p>
+
+<p>If you serve tokens for a living, this matters to you even if you never touch one of these wafers, because the trade Taalas is making explicit is a trade you have already made implicitly — and yours also has an expiry date you have never written down anywhere.</p>
+
+<p>Start with the mechanism, because the mechanism is genuinely beautiful. A GPU generating tokens spends most of its energy and most of its clock doing something faintly absurd: moving numbers around. The weights sit in HBM, the multipliers sit on the die, and for each single token you drag a large fraction of those weights across a memory bus, use each one exactly once against a skinny vector, and throw them away. The arithmetic intensity of that operation is close to the worst it can possibly be. Bandwidth is the wall; math is not. Groq's answer was to keep weights in on-die SRAM and stream dataflow past them. Cerebras' answer was to make the die preposterously large so there is more SRAM. Taalas' answer is different in kind: <strong>don't store the weights anywhere — build them into the wiring.</strong></p>
+
+<p>A mask-ROM weight is not fetched. It has no address, no read port, no bus to cross. It is the presence or absence of a connection between metal layers, which means the value is geometry, and the fetch step simply ceases to exist as a category. Their chip has two regions: the mask-ROM recall fabric holding the model, and an SRAM recall fabric holding the things that genuinely must change at runtime — KV caches, fine-tuning adapters. That split is the entire design philosophy in one line. Anything that varies per request lives in mutable memory. Anything that is <em>the model</em> is a topological fact about a piece of rock.</p>
+
+<p>The useful analogy here is a music box against a record player. The record player is general-purpose: a needle reads a groove, and you can swap the groove for any groove ever pressed. A music box has the tune in the arrangement of pins on its cylinder — there is no reading step at all, because the melody and the machine are the same object, which is exactly why music boxes are so mechanically simple and so ruthlessly efficient at their one job. Where the analogy breaks: you can swap a music box cylinder in four seconds, and Taalas needs a mask re-spin at a foundry. Though — and this is the clever part — they claim only two metal layers need to change, not the whole stack. Much cheaper than starting over. Still not four seconds.</p>
+
+<p>Scale it and the arithmetic turns seductive. HC2 targets 20 billion parameters per chip; pipeline-parallel fifty of those and you are serving a trillion-parameter model. The comparison offered is a few dozen Nvidia LPX systems plus at least 2,000 Groq LPUs for the same job. Fifty chips against two thousand. AMD owns Helios racks and an in-house system design team, so the obvious play is disaggregation: prompt processing on Instinct GPUs where you need flexibility and raw compute, token generation on etched silicon where you only need throughput. There's even a plausible tick-tock — validate the model on GPUs, and then, once you're sure, commit it to rock.</p>
+
+<p>Once you're <em>sure</em>. Sit with that word for a moment. Frontier models are shipping roughly monthly, four years into this boom, and the industry has spent every one of those months proving that architectures refuse to hold still: attention variants, MoE routing, quantization schemes, context windows that grew by two orders of magnitude. To etch weights is to sign a contract stating that this model, in this shape, will still be worth the wafer in 2029.</p>
+
+<p>Now look at your own stack, because this is where the story rearranged itself for me. You already ship hardcoded models. Every INT4 checkpoint pinned to a hand-tuned kernel that only exists for one layer shape. Every compiled graph frozen into the serving path. Every prompt template your downstream code parses by position. Every eval suite quietly encoding one model's quirks as ground truth. You have been etching for years — in software, where the mask re-spin is called a sprint and nobody sends you an invoice for the wafer.</p>
+
+<p>Etching weights into silicon prices the assumption that models stop changing.</p>
+
+<p>Taalas didn't invent that bet. Everyone serving tokens made it already. What Taalas invented is the invoice.</p>
+
+<p>Which is a gift, if you'll take it as one, because a bet with a visible price is a bet you can actually reason about. The question a Taalas customer is forced to answer — <em>is this model still worth running in three years?</em> — is a question you should be asking about every frozen artifact in your pipeline, and you haven't been, because the cost was never itemized. So go find your own mask ROM. Which kernel dies if the layer shape shifts? What breaks if attention gets weirder again? How long is the fuse on the assumption you made in a hurry last quarter?</p>
+
+<p>The honest version of the industry's objection is not "models change too fast to etch." It is "we prefer our commitments illegible." Silicon merely has the decency to be readable.</p>
+
+<p>Rock is only permanent relative to how fast you're moving. Nobody in this field knows how fast that is — which is precisely why watching someone stake a foundry run on an answer is the most interesting thing happening in inference right now.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">AMD acquires Taalas to boost inference performance by etching models in silicon</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲528</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://arxiv.org/abs/2007.00072" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Data Movement Is All You Need: A Case Study on Optimizing Transformers</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://arxiv.org/abs/2211.05102" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Efficiently Scaling Transformer Inference</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://shop.elsevier.com/books/computer-architecture/hennessy/978-0-12-811905-1" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Computer Architecture: A Quantitative Approach (Hennessy &amp; Patterson)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
