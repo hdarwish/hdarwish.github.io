@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-09",
+    "title": "Redis wasn't too slow. It was too weak to keep a promise.",
+    "tags": [
+      "databases",
+      "distributed-systems",
+      "architecture"
+    ],
+    "excerpt": "Shopify took inventory reservations off Redis, put them on MySQL, and hit their throughput targets during peak Black Friday 2025 traffic — the peak where merchants on the platform did a record $5.1...",
+    "hn_refs": [
+      {
+        "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
+        "url": "https://shopify.engineering/scaling-inventory-reservations",
+        "points": 130
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Designing Data-Intensive Applications — Martin Kleppmann (Ch. 7–9, transactions and consistency)",
+        "url": "https://dataintensive.net/",
+        "kind": "book"
+      },
+      {
+        "title": "Shopify Engineering: We replaced Redis with MySQL for inventory reservations—and it scaled",
+        "url": "https://shopify.engineering/scaling-inventory-reservations",
+        "kind": "article"
+      },
+      {
+        "title": "MySQL 8 documentation: Locking Reads (FOR UPDATE, SKIP LOCKED, NOWAIT)",
+        "url": "https://dev.mysql.com/doc/refman/8.0/en/innodb-locking-reads.html",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Shopify took inventory reservations off Redis, put them on MySQL, and hit their throughput targets during peak Black Friday 2025 traffic — the peak where...",
+    "social_teasers": {
+      "linkedin": "Redis wasn't too slow. It was too weak to keep a promise.\n\nShopify took inventory reservations off Redis, put them on MySQL, and hit their throughput targets during peak Black Friday 2025 traffic — the peak where...\n\nhttps://hafs.dev/blog/2026-08-09.html\n\n#databases #distributed-systems #architecture",
+      "x": "Redis wasn't too slow. It was too weak to keep a promise.\nhttps://hafs.dev/blog/2026-08-09.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-09.html"
+  },
+  {
     "date": "2026-08-08",
     "title": "The knitting needles are the whole argument",
     "tags": [

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redis wasn&#39;t too slow. It was too weak to keep a promise. - Hafs Ibrahim</title>
+    <meta name="description" content="Shopify took inventory reservations off Redis, put them on MySQL, and hit their throughput targets during peak Black Friday 2025 traffic — the peak where...">
+    <meta property="og:title" content="Redis wasn&#39;t too slow. It was too weak to keep a promise.">
+    <meta property="og:description" content="Shopify took inventory reservations off Redis, put them on MySQL, and hit their throughput targets during peak Black Friday 2025 traffic — the peak where...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-09.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Redis wasn&#39;t too slow. It was too weak to keep a promise.">
+    <meta name="twitter:description" content="Shopify took inventory reservations off Redis, put them on MySQL, and hit their throughput targets during peak Black Friday 2025 traffic — the peak where...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-09">
+            <div class="blog-post-date">August 09, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">databases</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">distributed-systems</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">architecture</span></div>
+            <h2 class="blog-post-title">Redis wasn&#39;t too slow. It was too weak to keep a promise.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-09-hero.png" alt="Redis wasn&#39;t too slow. It was too weak to keep a promise." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Shopify took inventory reservations off Redis, put them on MySQL, and hit their throughput targets during peak Black Friday 2025 traffic — the peak where merchants on the platform did a record $5.1 million in sales <em>per minute</em>. Redis, the in-memory system whose entire personality is speed, lost a throughput fight to a disk-backed relational database.</p>
+
+<p>If latency were the bottleneck, that result is impossible. So latency wasn't the bottleneck.</p>
+
+<p>This matters to you even if you never touch an inventory system, because the mistake buried in the middle of it is the most common architectural error in modern systems design: choosing a component by its benchmark, then paying for its missing guarantees somewhere else entirely, in a part of the codebase where the invoice doesn't say what it's for.</p>
+
+<p>Start with what the system has to do. When a buyer clicks "Complete purchase," the platform must guarantee the unit is still there. Two operations: <strong>reserve</strong>, a short hold lasting several minutes while payment processes; and <strong>claim</strong>, which permanently deducts from the inventory ledger once payment succeeds. Get it wrong one way and two buyers own the same last unit — the merchant cancels an order, writes an apology, eats the support cost. Get it wrong the other way and you tell a buyer "sold out" about something sitting on a shelf, and the merchant loses a sale that was already theirs.</p>
+
+<p>The Redis design was clean and obvious. One quantity key per item, <code>DECR</code> to reserve, <code>INCR</code> to release. Redis handled that concurrency perfectly well — single-threaded, atomic, exactly the job it was built for.</p>
+
+<p>The problem was geography. Reservations lived in Redis. The inventory ledger — the source of truth — lived in MySQL. And the claim step has to touch both: deduct from the ledger, then clean up the hold. Two systems, two writes, and <strong>no way to wrap them in one atomic step</strong>.</p>
+
+<p>Which means you get to choose your bug. Deduct the ledger first and crash before the Redis cleanup, and the unit stays marked reserved forever, quietly withheld from sale by a hold nobody will ever release. Clean Redis first and crash before the deduction, and the item sold without ever being subtracted. Underselling or overselling.</p>
+
+<p>Pick one, because ordering two non-transactional writes isn't a solution, it's a preference.</p>
+
+<p>Here's the analogy I keep coming back to. A single transaction is a promise made in front of a witness who writes it down. Two systems with two writes is a handshake in a hallway — both parties mean it sincerely, and if one of them walks away mid-sentence, there is no authority anywhere that can say what was agreed. The analogy breaks in a place worth naming: Redis <em>can</em> keep promises, atomically, millions of times a second, as long as the promise lives entirely inside Redis. What it couldn't do was keep a promise that spanned the ledger. The weakness was at the seam, not in the tool.</p>
+
+<p>So reservations moved into the same MySQL database as the ledger. Earlier attempts at that had failed, and the reason is the interesting part: a single row with a quantity column cannot survive the contention. Every concurrent checkout for a hot item wants a write lock on the same row, and InnoDB holds that lock for the whole transaction — including whatever network round trips happen inside it. Throughput for that item becomes one divided by the lock hold time, no matter how many application servers you add. A hundred people, one clipboard, one pen.</p>
+
+<p>MySQL 8's <code>SKIP LOCKED</code> made a different shape available. Instead of one row per item carrying a count, one row <em>per sellable unit</em>: an item with 10 units is 10 rows. Reserving three units means selecting three rows nobody else has locked — and <code>SKIP LOCKED</code> means a transaction that encounters a locked row doesn't queue behind it, it excludes it from the result set and keeps walking. Contention stops being a line and becomes a bowl of tokens: take any three, and if someone's hand is on one, take a different one. Shopify credits 37signals' work on database-backed load distribution for the idea, and paired it with composite primary keys and connection visibility to reach their targets.</p>
+
+<p>The honest limit of that trick: it scales with spare rows. A viral item down to its last two units is a clipboard again.</p>
+
+<p>Notice what the design bought beyond throughput. Rows per unit can carry a location, so the system respects multi-location inventory and only reserves from a place that can actually ship. And reservation plus ledger deduction now happen inside a single ACID transaction.</p>
+
+<p>Not coordinated. Not eventually reconciled. <em>One transaction.</em></p>
+
+<p>Which brings us to the thing that should rearrange how you evaluate infrastructure. Every reservation on the Redis path carried invisible freight: reconciliation jobs hunting for drift between two systems, retry logic for claims that half-landed, repair passes for holds that were never released, alerting for all of the above, and an entire separate cluster to keep alive and patched. None of that freight appeared in the p99 of a <code>DECR</code>. All of it was work the system performed anyway, on the way to being correct. The fast path was genuinely fast, and the total path was not, because correctness that a relational database hands you free inside <code>BEGIN</code> and <code>COMMIT</code> had been rebuilt by hand, in application code, and re-paid on every single request.</p>
+
+<p>Redis wasn't too slow for reservations. It was too weak to keep a promise.</p>
+
+<p>The portable idea is this: when you compare two components, you are never comparing their latencies. You are comparing their latencies <em>plus the cost of the guarantees the loser doesn't provide</em> — and that second term is almost never on your dashboard, because it's scattered across cleanup jobs, drift alerts, retry wrappers, and a runbook someone wrote in a hurry that everyone has since stopped reading. Shopify's own account says the hardest lesson wasn't about database design at all; it was discovering that the real bottleneck was not the thing they were observing and measuring. That's the most honest sentence in the whole writeup.</p>
+
+<p>So the better question isn't "which of these is faster." It's: <em>what promise does my system need to make, and which component can make it without help?</em> If the answer is "none of them, we'll coordinate in application code," you haven't chosen an architecture. You've taken out a loan.</p>
+
+<p>Transactions aren't slow. They're just the one place where the bill arrives itemized.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://shopify.engineering/scaling-inventory-reservations" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Shopify replaced Redis with MySQL for inventory reservations–and it scaled</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲130</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://dataintensive.net/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Designing Data-Intensive Applications — Martin Kleppmann (Ch. 7–9, transactions and consistency)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://shopify.engineering/scaling-inventory-reservations" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Shopify Engineering: We replaced Redis with MySQL for inventory reservations—and it scaled</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://dev.mysql.com/doc/refman/8.0/en/innodb-locking-reads.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">MySQL 8 documentation: Locking Reads (FOR UPDATE, SKIP LOCKED, NOWAIT)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
