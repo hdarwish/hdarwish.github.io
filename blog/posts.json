@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-10",
+    "title": "97% approval isn't consent, it's a reflex",
+    "tags": [
+      "ai-agents",
+      "security",
+      "interface-design"
+    ],
+    "excerpt": "Anthropic just published a number that should ruin your afternoon: users approve 97% of permission prompts in Claude Code. When the same users are shown a plan to approve, they reject 39% of...",
+    "hn_refs": [
+      {
+        "title": "Auto mode is now the default in Claude Code",
+        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Design of Everyday Things — Don Norman",
+        "url": "https://www.basicbooks.com/titles/don-norman/the-design-of-everyday-things/9780465050659/",
+        "kind": "book"
+      },
+      {
+        "title": "How Complex Systems Fail — Richard I. Cook",
+        "url": "https://how.complexsystems.fail/",
+        "kind": "article"
+      },
+      {
+        "title": "Claude Code security and permissions documentation",
+        "url": "https://docs.claude.com/en/docs/claude-code/security",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Anthropic just published a number that should ruin your afternoon: users approve 97% of permission prompts in Claude Code. When the same users are shown a...",
+    "social_teasers": {
+      "linkedin": "97% approval isn't consent, it's a reflex\n\nAnthropic just published a number that should ruin your afternoon: users approve 97% of permission prompts in Claude Code. When the same users are shown a...\n\nhttps://hafs.dev/blog/2026-08-10.html\n\n#ai-agents #security #interface-design",
+      "x": "97% approval isn't consent, it's a reflex\nhttps://hafs.dev/blog/2026-08-10.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-10.html"
+  },
+  {
     "date": "2026-08-09",
     "title": "Redis wasn't too slow. It was too weak to keep a promise.",
     "tags": [

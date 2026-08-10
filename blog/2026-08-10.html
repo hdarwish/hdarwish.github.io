@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>97% approval isn&#39;t consent, it&#39;s a reflex - Hafs Ibrahim</title>
+    <meta name="description" content="Anthropic just published a number that should ruin your afternoon: users approve 97% of permission prompts in Claude Code. When the same users are shown a...">
+    <meta property="og:title" content="97% approval isn&#39;t consent, it&#39;s a reflex">
+    <meta property="og:description" content="Anthropic just published a number that should ruin your afternoon: users approve 97% of permission prompts in Claude Code. When the same users are shown a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-10.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="97% approval isn&#39;t consent, it&#39;s a reflex">
+    <meta name="twitter:description" content="Anthropic just published a number that should ruin your afternoon: users approve 97% of permission prompts in Claude Code. When the same users are shown a...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-10">
+            <div class="blog-post-date">August 10, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">ai-agents</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">interface-design</span></div>
+            <h2 class="blog-post-title">97% approval isn&#39;t consent, it&#39;s a reflex</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-10-hero.png" alt="97% approval isn&#39;t consent, it&#39;s a reflex" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Anthropic just published a number that should ruin your afternoon: users approve <strong>97%</strong> of permission prompts in Claude Code. When the same users are shown a <em>plan</em> to approve, they reject 39% of them.</p>
+
+<p>Same humans. Same session. Same stakes. One dialog gets scrutiny, the other gets a thumb.</p>
+
+<p>That gap is the most interesting thing in the whole announcement — more interesting than the headline, which is that auto mode becomes the default on Pro, Max, and Team plans on August 14, and that in Anthropic's testing an automated classifier matched or outperformed manual review on every measure they tested. The uncomfortable part isn't that a classifier turned out to be good at catching dangerous commands. It's what a 3% rejection rate says about every confirmation dialog you have ever shipped, including the ones you're proud of.</p>
+
+<p>If you build software, you have used a confirmation prompt as a safety argument. "The user has to approve it." That sentence has ended design debates, satisfied security reviews, and shipped features. It is doing far less work than you think.</p>
+
+<p>Look at what the prompt actually asks of a person. Claude Code, mid-task, wants to run a command. It stops and asks. The developer is three files deep in a refactor, holding a fragile mental model of the change they're trying to make, and now they must context-switch into an entirely different job: adversarial review of a shell string, with no idea what the next forty commands will be, under time pressure they created themselves by asking for a big task. Anthropic's own framing is blunt about the cost — these prompts ask developers to make dozens or hundreds of security decisions a day, mid-project, which shifts the review burden onto the user.</p>
+
+<p>Now compound it. The 97% approval rate isn't evidence of carelessness; it's evidence of <em>correct calibration</em>. Most of those commands genuinely are fine. A person who approves a routine command nine hundred times and gets away with it nine hundred times has learned, in the most honest empirical way available, that the prompt carries no information. The prior is overwhelming. Approval becomes the maximum-likelihood action, and clicking it fast becomes the rational one.</p>
+
+<p>Which means the interface is training the exact behavior it exists to prevent.</p>
+
+<p>Picture a smoke detector wired to a button you must press to stop the chirping, and it chirps every time you make toast. Within a week your hand knows the way there in the dark. You haven't become reckless — you've become efficient at a task the device made meaningless. The analogy breaks in one place, and the break is the whole point: a smoke detector's false alarms are <em>wrong</em>, whereas Claude Code's prompts are all technically true. Every one of them is a real command about to really run. The failure isn't inaccuracy. It's that truth without discrimination is indistinguishable from noise.</p>
+
+<p>So what replaces it? Auto mode routes each tool call through a classifier aimed at a narrow target: actions that are irreversible, destructive, or reaching outside your environment. Notice what it is <em>not</em> asking. It isn't asking "is this command unusual" — that's a taste question, and neither a classifier nor a tired human answers taste questions well at the two-hundredth repetition. Irreversibility, destruction, and blast radius are properties you can almost read off the shape of the call itself, without knowing the developer's intent. And when the classifier blocks something, Claude usually routes around it or asks directly, which is a far better-shaped question than the original: not "approve this?" but "I hit a wall here, do you want me through it?"</p>
+
+<p>Then there's the fallback rule, and this is the part I keep turning over. If Claude can't make progress — three blocks in a row, or twenty across a session — Claude Code drops back to manual approvals. On its face that's a modest safety valve, graceful degradation, good engineering hygiene. Read it again and it's a confession. The system isn't reverting to manual because humans review better; the 97% figure already demolished that. It reverts because repeated blocks mean the agent has wandered somewhere the designers can't bound, and when you can't bound the damage you go get a human — not as a reviewer, but as a <em>circuit breaker</em>.</p>
+
+<p>Which tells you what both mechanisms were doing all along. The human clicking approve and the classifier blocking commands were never really answering "is this command okay." They were proxies for one question: how much can this thing break that can't be un-broken? That was always the safeguard. Not the reviewer. The radius.</p>
+
+<p>An approval prompt stops being safety the moment answering it becomes a rhythm.</p>
+
+<p>You have shipped that prompt. Probably several. The delete confirmation nobody reads, the "are you sure" on the bulk action, the checkbox in the deploy flow that exists so someone can point at it later.</p>
+
+<p>I'll name what would change my mind. The 97% is an aggregate, and aggregates hide selectivity — it's possible users skim the routine commands and genuinely sharpen up when something looks like it touches production. If approval rates dropped sharply for the genuinely dangerous minority, the prompt would be carrying information after all, just very unevenly. I doubt it, because the 39% plan-rejection rate suggests judgment is available when you ask a question at the right altitude and absent when you don't. But that's the experiment I'd want to see.</p>
+
+<p>The portable version is this: <strong>a control you exercise hundreds of times per session is not a control, it's a metronome.</strong> The number of decisions a safety mechanism demands per hour belongs in its threat model, right next to what it protects. A mechanism firing twenty times a day gets attention. One firing two hundred times a day gets muscle memory, and muscle memory has no opinions. So before you add a confirmation dialog, estimate its frequency, then ask honestly what fraction a competent user will approve. If your answer is north of 90%, you're not building a gate — you're building a rhythm section and calling it a gate in the design doc.</p>
+
+<p>The better move is the boring structural one: sandbox the filesystem, scope the credentials, make the branch cheap to throw away, put the irreversible actions behind a boundary that doesn't depend on anyone's attention span. Then spend your one expensive interruption on the decision that's actually load-bearing — the plan, not the fourteenth <code>grep</code>. Users reject 39% of plans. That's what engaged judgment looks like when you finally ask it something worth answering.</p>
+
+<p>Stop asking people to guard the door two hundred times an hour. Build a smaller room.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://claude.com/blog/auto-mode-default-in-claude-code" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Auto mode is now the default in Claude Code</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.basicbooks.com/titles/don-norman/the-design-of-everyday-things/9780465050659/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Design of Everyday Things — Don Norman</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://how.complexsystems.fail/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">How Complex Systems Fail — Richard I. Cook</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://docs.claude.com/en/docs/claude-code/security" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Claude Code security and permissions documentation</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
