@@ -1,0 +1,27 @@
+{
+  "share_description": "Mark Twain poured roughly ten million dollars — today's money, and a good chunk of it his wife's inherited fortune — into a typesetting machine that worked....",
+  "social_teasers": {
+    "linkedin": "Mark Twain lost a fortune automating the wrong thing\n\nMark Twain poured roughly ten million dollars — today's money, and a good chunk of it his wife's inherited fortune — into a typesetting machine that worked....\n\nhttps://hafs.dev/blog/2026-08-11.html\n\n#automation #history-of-technology #llm-workflows",
+    "x": "Mark Twain lost a fortune automating the wrong thing\nhttps://hafs.dev/blog/2026-08-11.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-11.html",
+  "title": "Mark Twain lost a fortune automating the wrong thing",
+  "tags": [
+    "automation",
+    "history-of-technology",
+    "llm-workflows"
+  ],
+  "hn_refs": [
+    {
+      "title": "The \"mechanical miracle\" that ruined Mark Twain's life",
+      "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
+      "points": 19
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

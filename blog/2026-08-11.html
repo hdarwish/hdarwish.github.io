@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Twain lost a fortune automating the wrong thing - Hafs Ibrahim</title>
+    <meta name="description" content="Mark Twain poured roughly ten million dollars — today&#39;s money, and a good chunk of it his wife&#39;s inherited fortune — into a typesetting machine that worked....">
+    <meta property="og:title" content="Mark Twain lost a fortune automating the wrong thing">
+    <meta property="og:description" content="Mark Twain poured roughly ten million dollars — today&#39;s money, and a good chunk of it his wife&#39;s inherited fortune — into a typesetting machine that worked....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-11.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mark Twain lost a fortune automating the wrong thing">
+    <meta name="twitter:description" content="Mark Twain poured roughly ten million dollars — today&#39;s money, and a good chunk of it his wife&#39;s inherited fortune — into a typesetting machine that worked....">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-11">
+            <div class="blog-post-date">August 11, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">automation</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">history-of-technology</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">llm-workflows</span></div>
+            <h2 class="blog-post-title">Mark Twain lost a fortune automating the wrong thing</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-11-hero.png" alt="Mark Twain lost a fortune automating the wrong thing" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Mark Twain poured roughly ten million dollars — today's money, and a good chunk of it his wife's inherited fortune — into a typesetting machine that <em>worked</em>. It had over 18,000 distinct parts. The patent application was so enormous that examiners at the US Patent Office nicknamed it "The Whale" and took a full thirty days just to read it. Then they asked to see a working machine, and nobody could produce one.</p>
+
+<p>The cheaper machine that beat it won by refusing to imitate the human being it replaced.</p>
+
+<p>Hold onto that sentence, because it is not a story about the 1880s. It is the decision sitting in a planning doc on your team right now, in the paragraph about where the language model goes in the pipeline. There is a version of that decision that produces The Whale.</p>
+
+<p>The work in question: setting metal type by hand meant a compositor standing at a case of sorts, picking individual letters one at a time, arranging them in a composing stick, sliding thin spacers between the words until the line exactly filled its measure — <em>justifying</em> it — then transferring the line to a galley and starting the next one. And afterward, when the printing was done, the whole thing had to be broken apart and every single letter returned to its correct compartment. Distribution, they called it. Roughly half the job, and the half nobody sang songs about. Slow, skilled, unionized, expensive.</p>
+
+<p>James Paige looked at that job and decided to build a machine that did all of it. Selecting. Spacing. Justifying. Distributing the type back into its cells, letter by letter, forever. Every motion the human made, rendered in brass and steel and cams. Twain, a former printer's devil who knew exactly how hard those motions were, was ecstatic: "I never saw such an inspired bugger of a machine. Anybody can set type with it." He wrote to his brother that it would make telephones and locomotives and Babbage's calculators look like "mere toys, simplicities!"</p>
+
+<p>The Linotype did something almost rude by comparison. It didn't handle individual letters at all. You typed a line on a keyboard, brass matrices — molds — dropped into place, and the machine <strong>cast the entire line as a single slug of hot metal</strong>. One piece. When the print run ended you didn't distribute anything; you threw the slug back in the pot and melted it. Distribution stopped being a hard problem and stopped being a problem at all, because it stopped being a category of work.</p>
+
+<p>That is not a faster compositor. That is a different theory of what typesetting is.</p>
+
+<p>You can see the philosophy in the keyboard, which wasn't QWERTY. The Linotype's keys ran in order of letter frequency — the famous ETAOIN SHRDLU down the left — because the machine owed nothing to a typist's habits and everything to the physics of matrices falling into a line. Paige's machine owed everything to habits. If your mechanism must return each letter to its own compartment, it has to <em>recognize</em> each letter, which means channels and keys and notches and sorting logic, and a distinct failure mode for every character in the font. Paige's own attorney said he "became lost in the wilderness of appalling details." Of course he was. He hadn't set out to build a machine; he'd set out to build a machine-shaped copy of a person, and a person is made of ten thousand small accommodations that no single mechanism wants to inherit.</p>
+
+<p>The analogy I keep reaching for is translation. Paige translated the job word by word, faithfully preserving grammar that only made sense in the source language. Mergenthaler's Linotype translated the <em>meaning</em>: get justified lines of printable metal onto a galley. The analogy breaks in one place worth naming — a bad literal translation is merely awkward, whereas Paige's fidelity was load-bearing on his own ruin. Each preserved human gesture demanded parts, and each part demanded a repairman standing in a print shop in Kansas City who did not exist.</p>
+
+<p>What makes this genuinely uncomfortable rather than merely sad is that Paige's machine was, in theory, the <em>better</em> one. More capable. More general. Twain wasn't a fool for admiring it; he was arguably prescient, seeing in it "an immense historical birth," a creature that would one day be as complex "as that machine which it ranks next to" — the human mind. He was watching a nineteenth-century AGI dream and he was right that the automation of written language was coming.</p>
+
+<p>He just bet on the architecture that couldn't be built twice.</p>
+
+<p>Automating a human's exact motions is how ambitious automation projects fail. Not "often fail" — this is a mechanism, not a tendency. Fidelity to an existing workflow imports every accidental feature of that workflow as a hard requirement; accidental requirements multiply parts; and parts are the things you must manufacture, repair, debug, staff, and explain to your investors. Two Paige machines were ever built. One survives in a museum. The other was fed to a scrap drive in the Second World War. The Linotype went everywhere, for seventy years, until computers ate it.</p>
+
+<p>So when someone proposes an agent that reads the ticket the way a support rep reads a ticket, opens the same six tabs a rep opens, and copies the field out of system A into system B the way a human copies it, look closely at what's being proposed. That is a compositor made of prompts. Every tab is a part. Every UI quirk it must tolerate is a cam. Every "and if the page is slow, retry" is a spring somebody will have to replace. It will demo beautifully, because Paige's machine demoed beautifully too, and Twain believed every word of it while Paige was standing in the room. "When he is gone away all the belief evaporates. He is a most daring and majestic liar."</p>
+
+<p>The portable question is not "which of these steps can the model do?" That question takes the step list as sacred, and it guarantees you will build The Whale. Ask the Linotype's question instead: <em>what is the line of type here — the smallest unit of finished output the downstream world actually wants?</em> Then ask what disappears if you cast that unit directly. Something should vanish. A reconciliation step, a handoff, an entire queue. If nothing vanishes, you haven't redesigned the work; you've hired a very expensive apprentice with 18,000 moving parts and no one to service them.</p>
+
+<p>Twain wanted a creature. The world bought a mold.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The &quot;mechanical miracle&quot; that ruined Mark Twain&#39;s life</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲19</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://resobscura.substack.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Res Obscura — Benjamin Breen</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.penguinrandomhouse.com/books/667034/mark-twain-by-ron-chernow/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Mark Twain (Ron Chernow)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://www.youtube.com/watch?v=tCgh1cCsCJs" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Farewell, ETAOIN SHRDLU (1978 documentary on the last Linotype night at the NYT)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">VIDEO</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
