@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-12",
+    "title": "The encryption held. The authorization never existed.",
+    "tags": [
+      "security",
+      "llm-apis",
+      "authorization"
+    ],
+    "excerpt": "Take a reasoning trace from Claude Opus. It comes back as an encrypted signature field — roughly 36,000 characters of ciphertext the client cannot read, cannot modify, and dutifully hands back on the...",
+    "hn_refs": [
+      {
+        "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+        "url": "https://stolen-thoughts.com/",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Stealing Reasoning Traces from Proprietary LLM APIs (paper)",
+        "url": "https://stolen-thoughts.com/",
+        "kind": "paper"
+      },
+      {
+        "title": "OWASP JSON Web Token Cheat Sheet (audience & binding checks)",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html",
+        "kind": "docs"
+      },
+      {
+        "title": "OAuth 2.0 Demonstrating Proof of Possession (DPoP), RFC 9449",
+        "url": "https://www.rfc-editor.org/rfc/rfc9449.html",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Take a reasoning trace from Claude Opus. It comes back as an encrypted signature field — roughly 36,000 characters of ciphertext the client cannot read,...",
+    "social_teasers": {
+      "linkedin": "The encryption held. The authorization never existed.\n\nTake a reasoning trace from Claude Opus. It comes back as an encrypted signature field — roughly 36,000 characters of ciphertext the client cannot read,...\n\nhttps://hafs.dev/blog/2026-08-12.html\n\n#security #llm-apis #authorization",
+      "x": "The encryption held. The authorization never existed.\nhttps://hafs.dev/blog/2026-08-12.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-12.html"
+  },
+  {
     "date": "2026-08-11",
     "title": "Mark Twain lost a fortune automating the wrong thing",
     "tags": [

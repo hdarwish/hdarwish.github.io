@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The encryption held. The authorization never existed. - Hafs Ibrahim</title>
+    <meta name="description" content="Take a reasoning trace from Claude Opus. It comes back as an encrypted signature field — roughly 36,000 characters of ciphertext the client cannot read,...">
+    <meta property="og:title" content="The encryption held. The authorization never existed.">
+    <meta property="og:description" content="Take a reasoning trace from Claude Opus. It comes back as an encrypted signature field — roughly 36,000 characters of ciphertext the client cannot read,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-12.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The encryption held. The authorization never existed.">
+    <meta name="twitter:description" content="Take a reasoning trace from Claude Opus. It comes back as an encrypted signature field — roughly 36,000 characters of ciphertext the client cannot read,...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-12">
+            <div class="blog-post-date">August 12, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">llm-apis</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">authorization</span></div>
+            <h2 class="blog-post-title">The encryption held. The authorization never existed.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-12-hero.png" alt="The encryption held. The authorization never existed." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Take a reasoning trace from Claude Opus. It comes back as an encrypted <code>signature</code> field — roughly 36,000 characters of ciphertext the client cannot read, cannot modify, and dutifully hands back on the next turn. Now paste that same blob into a request to <code>claude-haiku-4-5</code>, a cheaper sibling, and ask it to transcribe the reasoning attached to this turn, verbatim.</p>
+
+<p>It does. In plaintext. The frontier model's hidden thoughts, decrypted by the provider's own infrastructure and read aloud by a model too small to have safeguards worth the name. Nobody attacked the strong model. Nobody broke the cipher.</p>
+
+<p>Panfilov, Schmotz, Shumailov and colleagues did the obvious ugly thing next: they scraped 6,708 publicly available agent trajectories off GitHub and Hugging Face — the kind of artifact people commit without a second thought, precisely <em>because</em> the reasoning blocks are encrypted, so who cares — and ran the pipeline over every signed block they found. <strong>315,320 reconstructed reasoning traces.</strong> Inside them: 704 distinct privacy artifacts, including 62 API keys, 33 passwords, 24 access tokens, and 30 personal email addresses. Sixty-four of those artifacts appeared <em>only</em> in the hidden reasoning and nowhere in the visible transcript. They were leaked by the part everyone assumed was the safe part.</p>
+
+<p>If you have ever pushed an agent trajectory to a public repo and felt fine about it because the thinking was opaque, you were reasoning about the wrong property of that blob.</p>
+
+<p>Reasoning models produce hidden tokens, and providers have two conflicting obligations toward them. Keep them secret — partly competitive advantage, partly anti-distillation, since visible chains of thought are exactly what you'd need to train a cheap clone. But also keep them <em>available</em>, because a multi-step agent loop that forgets its own deliberation between turns is a goldfish with tool access. Storing per-session reasoning server-side means state, eviction policies, capacity planning, and a stateful tier in front of an otherwise beautifully stateless API. So the elegant move: encrypt the reasoning, hand the ciphertext to the client, let the client warehouse it, decrypt it on the way back in. Anthropic, OpenAI, and Google all landed on some version of this. Your client becomes their database, for free.</p>
+
+<p>The question nobody answered tightly enough is: <em>decrypt it for whom?</em></p>
+
+<p>Because the block, as designed, carries no binding. Not to the session it was born in. Not to the account that paid for it. Not to the model that produced it. It is a self-contained artifact whose entire semantic content is <em>here is some valid reasoning</em>, and any endpoint in that provider's family holding the right key will unseal it and pour it into a context window without asking a single question about where it came from. The paper's word for this property is <strong>portable</strong>. The traces replay across sessions, across users, across models. GPT-5.2 Codex traces decoded by a later GPT. Opus traces decoded by Haiku.</p>
+
+<p>And the decoding is faithful rather than lossy paraphrase — they plot decoded token counts against the hidden thinking-token counts the API itself reports, across 120 Codeforces problems, and the two track each other. You are not getting a gist. You are getting the thing.</p>
+
+<p>The jailbreak is the least interesting part of the attack. Sibling models are weaker, cheaper, less hardened, and — the crucial bit — the frontier model's anti-distillation training never fires, because the frontier model is never in the room. You bring the vault's contents to a doorman who happens to carry the same key ring and considerably worse judgment.</p>
+
+<p>Think of it as a coat check. You hand over your coat, you get a numbered tag, and the tag is gorgeous: unforgeable, tamper-evident, cryptographically immaculate. But the attendant will surrender the coat to <em>anyone</em> holding that tag, and there are three attendants on duty, and one of them will cheerfully itemize the contents of the pockets if you ask politely. The analogy breaks in one telling way, and the break is the whole paper: a coat check tag at least implies you walked into the same building. This blob doesn't even require that. It's a tag that redeems at every cloakroom in the chain, forever, for whoever picked it up off the floor.</p>
+
+<p>Which is why every proposed fix that begins with the word "encryption" is theater. Longer keys don't help. Better ciphers don't help. Faster key rotation helps a little, accidentally, by shrinking the window — not by addressing anything. The ciphertext was never the weak link. It did its job flawlessly: kept the client blind, resisted tampering, survived transit — and was then presented to a decryption oracle that had no idea who was asking, or on whose behalf, or why.</p>
+
+<p><strong>This is an authorization bug wearing a cryptography costume.</strong></p>
+
+<p>Which means you have almost certainly built one. Once you can name the pattern — <em>an unbound bearer credential that any holder can present to any verifier</em> — it starts surfacing everywhere in your own systems, and it is not a pleasant afternoon. The signed URL with no audience claim. The JWT whose signature you verify religiously while never comparing <code>aud</code> or <code>sub</code> to the caller in front of you. The password reset token that's valid for any account, because the account ID travels beside it in the request body. The webhook whose HMAC proves the vendor sent it but says nothing about which of your tenants it belongs to. Every time, the crypto is spotless, and the question <em>who is entitled to redeem this</em> was quietly skipped — because the presence of a signature <em>feels</em> like it already answered.</p>
+
+<p>Signatures prove provenance. They say nothing whatsoever about entitlement.</p>
+
+<p>A well-built system asks the second question out loud, at the moment of redemption, every single time: is this token bound to this session, this principal, this model, this tenant, this purpose? The mechanical fix is unglamorous and well understood — fold the context into the cryptography itself, so a session identifier, an account ID, and a model name become associated data in the AEAD, or derive the key from them, and a blob presented from the wrong place simply fails to open. Not "fails a policy check." Fails to decrypt. Make the wrong context mathematically unable to read the plaintext, and portability stops being a property you have to remember to forbid.</p>
+
+<p>So the portable lesson isn't really about reasoning traces. It's a reflex: whenever you hand state to an untrusted party and feel safe because it's encrypted, ask what happens when a stranger hands it back. Not a tampered version — the exact bytes, unmodified, presented from the wrong place by the wrong party for the wrong purpose. That is the entire attack surface of a bearer token, and it is the one that survives perfect cryptography with its confidence fully intact.</p>
+
+<p>Opacity is not a security boundary. It's a curtain, and curtains have edges.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://stolen-thoughts.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Stealing Reasoning Traces from Proprietary LLM APIs</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://stolen-thoughts.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Stealing Reasoning Traces from Proprietary LLM APIs (paper)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">OWASP JSON Web Token Cheat Sheet (audience &amp; binding checks)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.rfc-editor.org/rfc/rfc9449.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">OAuth 2.0 Demonstrating Proof of Possession (DPoP), RFC 9449</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

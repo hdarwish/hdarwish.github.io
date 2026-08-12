@@ -1,0 +1,27 @@
+{
+  "share_description": "Take a reasoning trace from Claude Opus. It comes back as an encrypted signature field — roughly 36,000 characters of ciphertext the client cannot read,...",
+  "social_teasers": {
+    "linkedin": "The encryption held. The authorization never existed.\n\nTake a reasoning trace from Claude Opus. It comes back as an encrypted signature field — roughly 36,000 characters of ciphertext the client cannot read,...\n\nhttps://hafs.dev/blog/2026-08-12.html\n\n#security #llm-apis #authorization",
+    "x": "The encryption held. The authorization never existed.\nhttps://hafs.dev/blog/2026-08-12.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-12.html",
+  "title": "The encryption held. The authorization never existed.",
+  "tags": [
+    "security",
+    "llm-apis",
+    "authorization"
+  ],
+  "hn_refs": [
+    {
+      "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+      "url": "https://stolen-thoughts.com/",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
