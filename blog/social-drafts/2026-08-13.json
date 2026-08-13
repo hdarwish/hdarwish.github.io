@@ -1,0 +1,27 @@
+{
+  "share_description": "SQLite ships roughly 590 times more test code than library code. Its proprietary TH3 suite claims 100% branch coverage and MC/DC — the aviation standard,...",
+  "social_teasers": {
+    "linkedin": "\"Battle-tested\" is a statistic about other people, not your code\n\nSQLite ships roughly 590 times more test code than library code. Its proprietary TH3 suite claims 100% branch coverage and MC/DC — the aviation standard,...\n\nhttps://hafs.dev/blog/2026-08-13.html\n\n#sqlite #reliability #debugging",
+    "x": "\"Battle-tested\" is a statistic about other people, not your code\nhttps://hafs.dev/blog/2026-08-13.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-13.html",
+  "title": "\"Battle-tested\" is a statistic about other people, not your code",
+  "tags": [
+    "sqlite",
+    "reliability",
+    "debugging"
+  ],
+  "hn_refs": [
+    {
+      "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
+      "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
+      "points": 934
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

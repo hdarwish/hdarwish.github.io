@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&quot;Battle-tested&quot; is a statistic about other people, not your code - Hafs Ibrahim</title>
+    <meta name="description" content="SQLite ships roughly 590 times more test code than library code. Its proprietary TH3 suite claims 100% branch coverage and MC/DC — the aviation standard,...">
+    <meta property="og:title" content="&quot;Battle-tested&quot; is a statistic about other people, not your code">
+    <meta property="og:description" content="SQLite ships roughly 590 times more test code than library code. Its proprietary TH3 suite claims 100% branch coverage and MC/DC — the aviation standard,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-13.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="&quot;Battle-tested&quot; is a statistic about other people, not your code">
+    <meta name="twitter:description" content="SQLite ships roughly 590 times more test code than library code. Its proprietary TH3 suite claims 100% branch coverage and MC/DC — the aviation standard,...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-13">
+            <div class="blog-post-date">August 13, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">sqlite</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">reliability</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">debugging</span></div>
+            <h2 class="blog-post-title">&quot;Battle-tested&quot; is a statistic about other people, not your code</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-13-hero.png" alt="&quot;Battle-tested&quot; is a statistic about other people, not your code" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>SQLite ships roughly 590 times more test code than library code. Its proprietary TH3 suite claims 100% branch coverage and MC/DC — the aviation standard, the kind of testing you commission when the cost of taking the wrong branch is a crater in a field. It is plausibly the most tested software running on your phone, your browser, and the plane you flew in on.</p>
+
+<p>A corruption bug in its WAL-reset path survived sixteen years anyway, until Tailscale spent months of forensics dragging it into daylight.</p>
+
+<p>This is not a story about insufficient testing, and that's precisely what makes it worth your afternoon. You cannot fix it with more tests. You cannot fix it by choosing a more mature dependency, because in this category there is no more mature dependency. Tailscale did everything the sober-engineering handbook tells you to do — including picking the boring technology on purpose — and still ate <strong>19 separate instances of database corruption over six months</strong>, with early recoveries running over an hour apiece. During those windows the control plane for every tailnet on the affected shard simply ceased to exist. Devices already connected kept talking peer-to-peer over WireGuard, blissfully unaware; anything trying to <em>join</em> got nothing, because a device needs the control plane to learn who its peers are before it can reach them.</p>
+
+<p>Start with the shape of the system, because the shape turns out to be the entire answer. Tailscale's control plane is sharded. Each shard is one Go process with exclusive access to one SQLite database holding tailnet metadata — device lists, config, not keys, not traffic. One writer, one file, no network hop in between. That isn't an abuse of SQLite. That is the reference use case, the deployment the documentation politely begs you to choose.</p>
+
+<p>Now add the operational habit that made them unusual: every few minutes, they snapshot the <em>entire</em> database file and ship it to S3. That pipeline had run without complaint since early 2023. It is a completely defensible backup strategy, and it is also — delightfully — the thing that eventually caught the bug, when a downstream pipeline reading those backups choked, someone ran <code>PRAGMA integrity_check</code>, and the file came back genuinely broken.</p>
+
+<p>Which brings us to why write-ahead logging is where this had to happen. In WAL mode SQLite doesn't edit the main database file during a transaction; it appends new pages to a separate log, and readers learn to check the log before trusting the main file. A checkpoint later folds those pages home. Once every reader has moved past the end of the log, SQLite gets to do something clever instead of letting the WAL grow forever: it rewinds to byte zero and starts overwriting, changing the log's salt values so that no reader mistakes yesterday's pages for today's. That rewind is the WAL reset.</p>
+
+<p>It presents itself as janitorial work. It is structurally the most dangerous instant in the whole design — the one moment when stale garbage and the newest truth occupy the same bytes, and the only thing standing between them is a header field.</p>
+
+<p>Tailscale's write-up doesn't hand you the exact defect and I'm not going to invent one to make this tidier. What I'll assert is the <em>shape</em> of the reachability: you don't get to this path by calling an exotic API. You get there by timing. A process that never restarts. Continuous writes. Repeated whole-file reads of a live database. Years of uptime. Now notice what branch coverage actually promises you — that every decision point in the source was taken both ways — and what MC/DC adds, which is that each condition independently swung the outcome. Neither is a claim about <em>interleavings</em>. A test suite explores the space of code paths; a fleet explores the space of histories, and the second space is combinatorially larger and cannot be enumerated by anyone, ever. Multiply many shards by many months and a one-in-astronomical alignment becomes a Tuesday. Tailscale put it plainly themselves: at scale, even rare events occur with some frequency.</p>
+
+<p>So think of "battle-tested" as herd immunity. You aren't safe because your code was inspected; you're safe because millions of deployments already walked the paths you're walking, crashed on them, and got the bugs retired before you arrived. That inheritance is real, it's enormous, and it remains the best deal available in software. The analogy breaks in exactly one place, and it's the place that decides everything: real herd immunity still protects the individual who does something unusual. This one doesn't. Step off the trodden path and your inherited protection goes to zero, instantly and silently, with no warning label and no change in how confident you feel.</p>
+
+<p>The bug was never hiding from SQLite's tests. It was hiding from everyone's <em>workloads</em>.</p>
+
+<p>"Battle-tested" is a statistic about traffic patterns, not a property of code. Every unusual thing your service does is an untested code path in someone else's library.</p>
+
+<p>Sit with that for a second, because it inverts the usual instinct. The thing that feels like engineering taste — our clever snapshot cadence, our process that gloriously never needs restarting — is the thing quietly walking you off the map.</p>
+
+<p>What would change my mind? If it emerged that the WAL-reset bug fires under a plain single-writer default configuration with no unusual cadence at all, then this was an ordinary coverage failure and my whole framing collapses. But sixteen years of survival is itself the evidence: a bug reachable by ordinary use dies in its first year, murdered by the sheer weight of the herd.</p>
+
+<p>Here's the portable part. Stop reading "nobody else does it quite this way" as a compliment about your cleverness and start reading it as a coverage gap you have volunteered to own. Write down the three or four ways your usage is genuinely weird — the retention window nobody keeps, the process that never restarts, the file you copy while it's being written — because that list is your personal bug surface, and it exists in no one's CI. Then copy the genuinely admirable half of what Tailscale did: verify at the boundary, since <code>integrity_check</code> on the backups is the only reason anyone found this at all, and get brutally good at recovery, because they compressed an hours-long restore across successive incidents while the root cause was still a complete mystery. Fast recovery is the one defense that works against bugs you cannot name yet.</p>
+
+<p>Boring technology is still the right bet. Just be clear about what you're buying: not correctness, but the accumulated luck of a million strangers who happened to be more normal than you.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://tailscale.com/blog/sqlite-wal-reset-bug" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲934</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.sqlite.org/testing.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">How SQLite Is Tested</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.sqlite.org/wal.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Write-Ahead Logging (SQLite documentation)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://tailscale.com/blog/sqlite-wal-reset-bug" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">How we tracked down a 16-year-old SQLite bug (Tailscale)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
