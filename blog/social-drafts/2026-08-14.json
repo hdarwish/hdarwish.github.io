@@ -1,0 +1,27 @@
+{
+  "share_description": "Dan McKinley's line about innovation tokens has been quoted so often it's become wallpaper: every company gets about three, the supply is fixed, and most of...",
+  "social_teasers": {
+    "linkedin": "Boring is not a property of the technology\n\nDan McKinley's line about innovation tokens has been quoted so often it's become wallpaper: every company gets about three, the supply is fixed, and most of...\n\nhttps://hafs.dev/blog/2026-08-14.html\n\n#engineering-culture #architecture #operations",
+    "x": "Boring is not a property of the technology\nhttps://hafs.dev/blog/2026-08-14.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-14.html",
+  "title": "Boring is not a property of the technology",
+  "tags": [
+    "engineering-culture",
+    "architecture",
+    "operations"
+  ],
+  "hn_refs": [
+    {
+      "title": "Choose Boring Technology (2015)",
+      "url": "https://mcfunley.com/choose-boring-technology",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

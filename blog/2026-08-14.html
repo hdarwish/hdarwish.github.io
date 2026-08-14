@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boring is not a property of the technology - Hafs Ibrahim</title>
+    <meta name="description" content="Dan McKinley&#39;s line about innovation tokens has been quoted so often it&#39;s become wallpaper: every company gets about three, the supply is fixed, and most of...">
+    <meta property="og:title" content="Boring is not a property of the technology">
+    <meta property="og:description" content="Dan McKinley&#39;s line about innovation tokens has been quoted so often it&#39;s become wallpaper: every company gets about three, the supply is fixed, and most of...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-14.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boring is not a property of the technology">
+    <meta name="twitter:description" content="Dan McKinley&#39;s line about innovation tokens has been quoted so often it&#39;s become wallpaper: every company gets about three, the supply is fixed, and most of...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-14">
+            <div class="blog-post-date">August 14, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">engineering-culture</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">architecture</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">operations</span></div>
+            <h2 class="blog-post-title">Boring is not a property of the technology</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-14-hero.png" alt="Boring is not a property of the technology" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Dan McKinley's line about innovation tokens has been quoted so often it's become wallpaper: every company gets about three, the supply is fixed, and most of us badly overestimate the contents of our wallet. Everyone reads this as <em>use old software</em>.</p>
+
+<p>Read the actual list. MySQL is boring. Postgres is boring. Cron is boring. And then, in the same essay, a sentence that quietly wrecks the popular interpretation: “<strong>Boring</strong> should not be conflated with <strong>bad</strong>. There is technology out there that is both boring and bad. You should not use any of that.”</p>
+
+<p>So boringness isn't age. It isn't stability. It isn't even quality, because bad old tech is still forbidden. Whatever those three tokens are buying, it lives somewhere other than in the software.</p>
+
+<p>The misreading produces exactly the wrong argument in exactly the wrong meeting. Someone proposes a new datastore, someone else says "boring technology," and the conversation collapses into a maturity contest: how many years old, how many GitHub stars, which large companies run it in production. All defensible-sounding. All beside the point. And a maturity contest leaves the door wide open to the killer counter-move, the one McKinley names and then dismantles: <em>but it's the best tool for the job</em>.</p>
+
+<p>The real mechanism is stranger than the folk version, and it starts with a claim about geometry. Technology choices, McKinley says, are <em>not local</em>: “They have a scope that touches your entire team, organization, and the system that emerges from the sum total of your choices.” The essay draws both pictures. In the fantasy world, problems map one-to-one onto their locally optimal solutions — a tidy fan of arrows, right tool for each job. In the real world, many problems get funnelled into a much smaller set of tools, the arrows get ugly and crossed, and that ugliness is the correct answer.</p>
+
+<p>Why? Because of what he calls the baggage. “We call the baggage ‘operations’ and to a lesser extent ‘cognitive overhead.’ You have to monitor the thing. You have to figure out unit tests. You need to know the first thing about it to hack on it. You need an init script.” It's a deliberately mundane list, and the mundanity is the argument. None of those things are hard. All of them are forever.</p>
+
+<p>Notice that nothing on that list is a <em>risk</em>. Risk is probabilistic — maybe the new thing eats your data, maybe it sails through. Monitoring is not probabilistic. You will build the dashboards, and then you will keep them honest through three versions of the client library, and then a security advisory will land and someone who has never heard of this service will need to know its upgrade path by Friday.</p>
+
+<p>The cost isn't a dice roll. It's rent.</p>
+
+<p>Which makes adding a technology less like placing a bet and more like adopting a dog. The purchase price is trivial and the paperwork takes an afternoon. The dog does not stop needing walks because the quarter ended, or because priorities shifted, or because the person who wanted a dog left. And the walks aren't optional the way features are optional — you cannot deprioritize a dog. Where the analogy breaks is important: a dog is visibly, embarrassingly yours, whereas a service quietly becomes <em>everyone's</em>. The person paying is rarely the person who signed the adoption papers.</p>
+
+<p>The known/unknown structure in the essay slots into this cleanly. A known unknown: we don't know what happens when this database hits 100% CPU. An unknown unknown: “geez it didn't even occur to us that writing stats would cause GC pauses.” McKinley is careful here — both sets are non-empty even for decades-old tech. Boring things surprise you too. What changes with new tech is the <em>magnitude</em> of the unknown-unknown set, and magnitude of unknown unknowns is just another name for how much attention a thing will demand from humans who cannot predict when it will demand it.</p>
+
+<p>Which is why the token metaphor is denominated so strangely. Not in dollars. Not in risk-adjusted expected loss. In something fixed, small, and non-transferable.</p>
+
+<p>Attention. Specifically, the operational attention of a finite team — the attention that gets spent reading logs at 3am, that cannot be borrowed from next quarter, hired around, or bought back with a migration. Novelty isn't expensive because it might blow up. <strong>Novelty is expensive because it's permanent overhead.</strong></p>
+
+<p>Sit with what that implies.</p>
+
+<p>It means “boring” is not a property of the technology at all. It is a property of the <em>relationship</em> between a technology and an organization. Postgres is boring at your company because enough people have already watched it fail, the runbook exists, and someone recognizes the shape of a vacuum falling behind before the disk fills. The identical Postgres, dropped into a shop that has never run a relational database, costs a full token. MongoDB in 2015 cost a token; MongoDB at a place that has already survived its own MongoDB outages costs nothing. Two technically identical decisions, at two companies — one prudent, one reckless. Both readings correct, because the budget was never about the software.</p>
+
+<p>This also explains the boring-and-bad prohibition, which the maturity reading can never explain. Bad tech consumes attention <em>continuously</em> and never becomes interesting enough to justify it. It's rent with no dog.</p>
+
+<p>So here is the portable thing, the one worth carrying into your next architecture argument. Stop asking whether the technology is mature. Start asking who will be paying attention to it in eighteen months, and whether that person has agreed to the arrangement. McKinley's own conclusion points exactly here: “new tech eventually has company-wide effects, so adding tech is a decision that requires company-wide visibility.” Not approval. Visibility. The bill is being charged to an account you do not own, and the least you can do is show it to the account holder.</p>
+
+<p>And when someone reaches for “best tool for the job,” you now have the reply, which is McKinley's and which I have not managed to improve on: <em>your job is keeping the company in business</em>. The best tool is the least-worst one that covers the most ground.</p>
+
+<p>Three tokens. Small, non-transferable, drawn on the attention of people you probably haven't asked. Spend them on the thing your company is actually for.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://mcfunley.com/choose-boring-technology" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Choose Boring Technology (2015)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://mcfunley.com/choose-boring-technology" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Choose Boring Technology (Dan McKinley)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://web.stanford.edu/~ouster/cgi-bin/book.php" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">A Philosophy of Software Design — John Ousterhout</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://sre.google/books/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Site Reliability Engineering (Google, free online)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
