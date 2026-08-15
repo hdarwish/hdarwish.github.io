@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-15",
+    "title": "Cheap exploits, not good arguments, kept your encryption legal",
+    "tags": [
+      "cryptography",
+      "security-policy",
+      "memory-safety"
+    ],
+    "excerpt": "A working cryptographer just published a worry that no cryptographer is supposed to have. Matthew Green, coming off a few days at Usenix Security in his hometown of Baltimore, sat down and wrote that...",
+    "hn_refs": [
+      {
+        "title": "Going Dark, and the era of law enforcement hacking",
+        "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Everything is about to \"go dark\" — Matthew Green",
+        "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark",
+        "kind": "article"
+      },
+      {
+        "title": "Keys Under Doormats: Mandating insecurity by requiring government access to all data and communications",
+        "url": "https://dspace.mit.edu/handle/1721.1/97690",
+        "kind": "paper"
+      },
+      {
+        "title": "This Machine Kills Secrets — Andy Greenberg",
+        "url": "https://www.penguinrandomhouse.com/books/310295/this-machine-kills-secrets-by-andy-greenberg/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "A working cryptographer just published a worry that no cryptographer is supposed to have. Matthew Green, coming off a few days at Usenix Security in his...",
+    "social_teasers": {
+      "linkedin": "Cheap exploits, not good arguments, kept your encryption legal\n\nA working cryptographer just published a worry that no cryptographer is supposed to have. Matthew Green, coming off a few days at Usenix Security in his...\n\nhttps://hafs.dev/blog/2026-08-15.html\n\n#cryptography #security-policy #memory-safety",
+      "x": "Cheap exploits, not good arguments, kept your encryption legal\nhttps://hafs.dev/blog/2026-08-15.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-15.html"
+  },
+  {
     "date": "2026-08-14",
     "title": "Boring is not a property of the technology",
     "tags": [
