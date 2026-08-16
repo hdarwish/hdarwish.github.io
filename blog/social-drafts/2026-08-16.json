@@ -1,0 +1,27 @@
+{
+  "share_description": "For most of its life, DuckDB got away with the most old-fashioned data access path imaginable: a worker thread asks for bytes and then sits there, blocked,...",
+  "social_teasers": {
+    "linkedin": "DuckDB's async I/O isn't an I/O feature. It's a scheduler rewrite.\n\nFor most of its life, DuckDB got away with the most old-fashioned data access path imaginable: a worker thread asks for bytes and then sits there, blocked,...\n\nhttps://hafs.dev/blog/2026-08-16.html\n\n#databases #concurrency #systems-design",
+    "x": "DuckDB's async I/O isn't an I/O feature. It's a scheduler rewrite.\nhttps://hafs.dev/blog/2026-08-16.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-16.html",
+  "title": "DuckDB's async I/O isn't an I/O feature. It's a scheduler rewrite.",
+  "tags": [
+    "databases",
+    "concurrency",
+    "systems-design"
+  ],
+  "hn_refs": [
+    {
+      "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
+      "url": "https://duckdb.org/2026/07/31/asynchronous-io",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

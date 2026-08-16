@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DuckDB&#39;s async I/O isn&#39;t an I/O feature. It&#39;s a scheduler rewrite. - Hafs Ibrahim</title>
+    <meta name="description" content="For most of its life, DuckDB got away with the most old-fashioned data access path imaginable: a worker thread asks for bytes and then sits there, blocked,...">
+    <meta property="og:title" content="DuckDB&#39;s async I/O isn&#39;t an I/O feature. It&#39;s a scheduler rewrite.">
+    <meta property="og:description" content="For most of its life, DuckDB got away with the most old-fashioned data access path imaginable: a worker thread asks for bytes and then sits there, blocked,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-16.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="DuckDB&#39;s async I/O isn&#39;t an I/O feature. It&#39;s a scheduler rewrite.">
+    <meta name="twitter:description" content="For most of its life, DuckDB got away with the most old-fashioned data access path imaginable: a worker thread asks for bytes and then sits there, blocked,...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-16">
+            <div class="blog-post-date">August 16, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">databases</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">concurrency</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">systems-design</span></div>
+            <h2 class="blog-post-title">DuckDB&#39;s async I/O isn&#39;t an I/O feature. It&#39;s a scheduler rewrite.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-16-hero.png" alt="DuckDB&#39;s async I/O isn&#39;t an I/O feature. It&#39;s a scheduler rewrite." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>For most of its life, DuckDB got away with the most old-fashioned data access path imaginable: a worker thread asks for bytes and then sits there, blocked, until the bytes arrive. Not because nobody noticed. Because it genuinely didn't matter. Filter and projection pushdown meant the engine barely read anything — prune the row groups, skip the columns, and the query touches a sliver of the file — and a local SSD forgave whatever was left. The bottleneck lived somewhere respectable: joins, aggregations, subqueries.</p>
+
+<p>Then the same engine got pointed at S3.</p>
+
+<p>Here is the part that should make you slightly uncomfortable. Nobody had written down the assumption "storage is close." It wasn't in a design doc as a constraint to be revisited someday. It was <em>implied</em> — baked into the shape of the execution model, where a task that needs data simply takes the thread it's running on and stops. That's a perfectly reasonable thing to do when a read costs microseconds. It becomes a catastrophe when a read costs an HTTP round trip, because now your worker threads, one per CPU, spend most of their lives holding a socket and thinking about nothing.</p>
+
+<p>And you cannot patch that locally. That's the whole story.</p>
+
+<p>Take the query from DuckDB's own write-up: <code>FROM read_parquet('s3://bucket/file.parquet')</code>, and for simplicity assume a single thread. A Parquet scan gets partitioned into row-group-based jobs, and each job contains one or more fetch tasks that issue byte-range requests. Synchronously, the sequence is: issue request, block, receive bytes, decode, aggregate, repeat. The thread is a single-track railway, and everything downstream waits on the slowest segment. On a remote object store, the slowest segment is not close.</p>
+
+<p>The arithmetic here is brutal and it has nothing to do with code quality. The number of requests you can have in flight is what determines the throughput you extract from a high-latency store — throughput is in-flight requests divided by latency, and latency is a property of the internet, not of your engine. A thread that issues one request and then blocks keeps exactly one request in flight. So your ceiling on outstanding reads is your worker count, which is your CPU count, which was never chosen to be a concurrency budget for the network. It was chosen to be a parallelism budget for arithmetic. Two completely different jobs, accidentally sharing one number.</p>
+
+<p>The naive fix — "use a non-blocking read call" — sounds like it solves this, and it doesn't, because the interesting question is not <em>how do I issue a request without blocking</em>. It's <em>what does the thread do next</em>. A syscall that returns immediately hands you a hot potato: a thread with no work and an obligation to eventually collect a result. Something has to own that potato. Something has to decide, at the scheduler level, who runs while the network is thinking.</p>
+
+<p>DuckDB's answer is two thread pools. The <strong>REGULAR</strong> pool holds the worker threads — one per available CPU thread by default — and these do the real work: decoding, joins, aggregations. They prioritise regular work but will pick up I/O tasks when idle. The <strong>ASYNC</strong> pool exists for the blocking stuff, primarily remote reads. And the sizing is the tell: the default is <strong>4× system threads, capped at 256</strong>.</p>
+
+<p>Sit with that number. You are deliberately oversubscribing threads fourfold, which is precisely the thing every performance guide tells you never to do — and it's correct here, because these threads have almost no CPU utilisation. They exist to be blocked. A thread waiting on an HTTP response isn't competing for the CPU; it's competing for nothing at all. Concurrency and parallelism are different currencies, and DuckDB is buying the first with something that merely looks like the second.</p>
+
+<p>Two pools alone still leaves latency on the floor, though, because if you only issue a read when a worker asks for it, the worker still waits — you've moved the wait, not removed it. So DuckDB schedules <em>ahead</em>: a read-ahead queue that issues fetch tasks for work further along than what the regular workers currently need. The stated goal is to keep as many ASYNC threads busy as possible. Speculation, promoted to a scheduling policy.</p>
+
+<p>Which immediately creates a new problem, and I love that the design says it out loud: read-ahead buys throughput by holding memory. Prefetch faster than you decode and the buffers pile up until you fall over. So there's asynchronous memory governance sitting on top of the queue, throttling the prefetcher when it gets greedy. You did not receive a free optimisation. You received a control system — with a feedback loop, a tuning surface, and its own characteristic failure mode — where previously you had a blocking call.</p>
+
+<p>The clearest sign of what actually changed is one sentence buried in the design: during the initial warm-up, the scan task <em>parks</em>, leaving the worker thread free to run other pipeline tasks. Not "the scan waits efficiently." The scan stops being a thing that occupies a thread. It becomes a thing that can suspend itself mid-flight, hand its worker back to the query to go do something unrelated, and be resumed later when its bytes have landed.</p>
+
+<p>Async I/O is a scheduler change wearing an I/O change as a costume.</p>
+
+<p>Everything else in that design is downstream of that one reclassification — the two pools, the read-ahead queue, the memory governor, the parking. Nobody made an I/O call faster. They changed what a task is permitted to be.</p>
+
+<p>A synchronous scan is a chef who puts a pot on to boil and then stands there watching it, which was entirely rational in the original kitchen where the water boiled in two seconds. Move that kitchen into a building where water takes four minutes, and the fix isn't a faster kettle — it's a chef who can walk away and be called back. Notice where the analogy breaks, because it breaks somewhere expensive: the chef remembers what she was doing. A parked task has to have its resumption state made explicit — where in the row group it was, which buffers it owns, what it's waiting on — and that explicitness <em>is</em> the engineering cost of the whole feature. The thread's stack was doing that bookkeeping for free, invisibly, by accident of how function calls work. The price of async is doing it by hand.</p>
+
+<p>So here's the portable thing, and it has nothing to do with Parquet. Every system you have built encodes assumptions about latency that were never stated as assumptions, because at the time they were simply <em>true</em>. Storage is close. The network is reliable. The call returns fast enough that blocking is free. These aren't bugs. They're good engineering decisions that got compiled into a concurrency model and then quietly lost their comments.</p>
+
+<p>When you move a system into a new environment and it goes mysteriously slow, resist the urge to hunt for the slow function. Ask instead which unwritten latency assumption just got violated — and then ask the harder question, the one that actually pays: what does my scheduler believe about waiting? Usually the thing that has to change is not the call that got slower.</p>
+
+<p>It's what your system thinks a thread is for.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://duckdb.org/2026/07/31/asynchronous-io" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Asynchronous I/O in DuckDB: Work, Thread, Work</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://duckdb.org/2026/07/31/asynchronous-io" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Asynchronous I/O in DuckDB: Work, Thread, Work</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://db.in.tum.de/~leis/papers/morsels.pdf" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Morsel-Driven Parallelism: A NUMA-Aware Query Evaluation Framework for the Many-Core Age</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://dataintensive.net/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Designing Data-Intensive Applications</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
