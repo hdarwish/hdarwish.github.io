@@ -152,25 +152,58 @@
     <script src="../script.js"></script>
     <!--
       Zero-infra campaign attribution (no tracking, no pixel, no network call).
-      Progressive enhancement only: if a visitor arrives with ?utm_campaign=<video-slug>,
-      reflect that slug into the mailto SUBJECT so an inbound inquiry is attributable to the
-      source video. If JS is off, the CTA still lands in the +hire alias (funnel-level
+      Progressive enhancement only: if a visitor arrives with ?utm_campaign=<video-id>,
+      reflect that id into the mailto SUBJECT so an inbound inquiry is attributable to the
+      source video. utm_campaign must be an 11-char [A-Za-z0-9_-] YouTube video id — the
+      SAME grammar the landing #consulting attribution uses. Underscore is a legal id
+      character, so the whole id is validated as a unit and reflected byte-for-byte; any
+      malformed value leaves the mailto unchanged rather than reflecting a mangled
+      fragment. If JS is off, the CTA still lands in the +hire alias (funnel-level
       attribution survives). Nothing is stored, measured, or sent anywhere by this page.
     -->
     <script>
         (function () {
+            // Pure and side-effect-free: given the original hire mailto href and a URL
+            // query string, return the tagged href for a valid YouTube video id in
+            // utm_campaign, or the ORIGINAL href unchanged for anything else. Exported
+            // for automated tests.
+            function hireInquiryMailto(originalHref, search) {
+                try {
+                    var p = new URLSearchParams(search || '');
+                    // A repeated utm_campaign key is ambiguous — do not attribute.
+                    if (p.getAll('utm_campaign').length > 1) return originalHref;
+                    var id = p.get('utm_campaign') || '';
+                    // utm_campaign must be an 11-char YouTube video id. Underscore is a
+                    // legal id character: validate the full shape and reflect NOTHING on
+                    // failure rather than a sanitised, wrong-length fragment.
+                    if (!/^[A-Za-z0-9_-]{11}$/.test(id)) return originalHref;
+                    // Only rewrite when the known subject literal is present, so a partial
+                    // markup change can never yield a half-rewritten href.
+                    if (originalHref.indexOf('subject=Hire%20inquiry') === -1) return originalHref;
+                    // id is strictly allow-listed above, so the tag contains only URL-safe
+                    // characters — encodeURIComponent is a no-op for this set (byte-exact
+                    // reflection) and there is no injection surface.
+                    return originalHref.replace(
+                        'subject=Hire%20inquiry',
+                        'subject=Hire%20inquiry%20%5B' + encodeURIComponent(id) + '%5D'
+                    );
+                } catch (e) {
+                    return originalHref;
+                }
+            }
+
+            // Export for the Node test harness; no-op in the browser.
+            if (typeof module !== 'undefined' && module.exports) {
+                module.exports = hireInquiryMailto;
+            }
+            if (typeof document === 'undefined' || typeof window === 'undefined') return;
+
             try {
-                var params = new URLSearchParams(window.location.search);
-                var campaign = (params.get('utm_campaign') || '').replace(/[^a-z0-9-]/gi, '').slice(0, 40);
-                if (!campaign) return;
                 var cta = document.getElementById('hire-cta');
                 if (!cta) return;
                 var href = cta.getAttribute('href');
-                // Tag the subject: "Hire inquiry" -> "Hire inquiry [<slug>]"
-                cta.setAttribute('href', href.replace(
-                    'subject=Hire%20inquiry',
-                    'subject=Hire%20inquiry%20%5B' + encodeURIComponent(campaign) + '%5D'
-                ));
+                var next = hireInquiryMailto(href, window.location.search);
+                if (next !== href) cta.setAttribute('href', next);
             } catch (e) { /* no-op: attribution is best-effort, never blocks the mailto */ }
         })();
     </script>
