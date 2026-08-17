@@ -882,7 +882,7 @@
                     </div>
                 </div>
                 <div class="consulting-cta">
-                    <a href="mailto:hafs.darwish@gmail.com?subject=Consulting%20Inquiry&body=Hi%20Hafs%2C%0A%0AI'm%20interested%20in%20discussing%20a%20project.%0A%0A" class="btn btn-primary">
+                    <a id="consulting-cta" href="mailto:hafs.darwish@gmail.com?subject=Consulting%20Inquiry&body=Hi%20Hafs%2C%0A%0AI'm%20interested%20in%20discussing%20a%20project.%0A%0A" class="btn btn-primary">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                         Get in Touch
                     </a>
@@ -1019,5 +1019,94 @@
 
 
     <script src="script.js"></script>
+
+    <!--
+      Zero-infra YouTube inquiry attribution. No cookie, no localStorage, no pixel,
+      no tracker, no backend, no form, no network call — nothing is stored or sent by
+      this block. Progressive enhancement only: when a visitor arrives from a vetted
+      YouTube link the consulting mailto is rewritten so the inbound email itself
+      carries source identity — recipient becomes a Gmail plus-address
+      (hafs.darwish+yt-<id>@gmail.com) and the subject is tagged
+      "Consulting Inquiry [youtube/<short|long>/<id>]".
+
+      Accepted link shapes (utm_source must be youtube; utm_campaign must be an
+      11-char [A-Za-z0-9_-] video id in every case):
+        - canonical:         utm_medium=description  &  utm_content=short|long
+        - legacy short-form: utm_medium=short        (utm_content absent -> short)
+        - legacy long-form:  utm_medium=episode      (utm_content absent -> long)
+      A legacy link that also carries utm_content, any conflicting/mixed combination,
+      and any duplicated utm_* key are treated as unattributed. Any missing / malformed
+      / non-YouTube parameter leaves the original mailto byte-for-byte unchanged.
+      Strict allow-listing means no arbitrary query value can inject CR/LF, extra
+      recipients, or additional mailto fields. If JS is off, the untagged mailto
+      still works.
+    -->
+    <script>
+        (function () {
+            // Pure and side-effect-free: given the original consulting mailto href and a
+            // URL query string, return the tagged href for a valid YouTube source, or the
+            // ORIGINAL href unchanged for anything else. Exported for automated tests.
+            function ytConsultingMailto(originalHref, search) {
+                try {
+                    var p = new URLSearchParams(search || '');
+                    // Reject duplicate attribution keys byte-for-byte: a repeated utm_*
+                    // key is ambiguous and a classic parser-confusion evasion, so such a
+                    // link is not attributed at all.
+                    var attrKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+                    for (var k = 0; k < attrKeys.length; k++) {
+                        if (p.getAll(attrKeys[k]).length > 1) return originalHref;
+                    }
+                    if (p.get('utm_source') !== 'youtube') return originalHref;
+                    // Resolve short|long from either the canonical medium=description
+                    // (which carries an explicit utm_content) or a legacy medium that
+                    // implies the form. A legacy link must NOT also carry utm_content —
+                    // any conflicting/mixed combination is rejected byte-for-byte.
+                    var medium = p.get('utm_medium');
+                    var rawContent = p.get('utm_content'); // null when the key is absent
+                    var content;
+                    if (medium === 'description') {
+                        if (rawContent !== 'short' && rawContent !== 'long') return originalHref;
+                        content = rawContent;
+                    } else if (medium === 'short') {
+                        if (rawContent !== null) return originalHref;
+                        content = 'short';
+                    } else if (medium === 'episode') {
+                        if (rawContent !== null) return originalHref;
+                        content = 'long';
+                    } else {
+                        return originalHref;
+                    }
+                    var id = p.get('utm_campaign') || '';
+                    if (!/^[A-Za-z0-9_-]{11}$/.test(id)) return originalHref;
+                    // Only rewrite when both known literals are present, so a partial
+                    // markup change can never yield a half-rewritten href.
+                    if (originalHref.indexOf('mailto:hafs.darwish@gmail.com') === -1) return originalHref;
+                    if (originalHref.indexOf('subject=Consulting%20Inquiry') === -1) return originalHref;
+                    // id and content are strictly allow-listed above, so this tag contains
+                    // only URL-safe characters — no injection surface.
+                    var tag = encodeURIComponent(' [youtube/' + content + '/' + id + ']');
+                    return originalHref
+                        .replace('mailto:hafs.darwish@gmail.com', 'mailto:hafs.darwish+yt-' + id + '@gmail.com')
+                        .replace('subject=Consulting%20Inquiry', 'subject=Consulting%20Inquiry' + tag);
+                } catch (e) {
+                    return originalHref;
+                }
+            }
+
+            // Export for the Node test harness; no-op in the browser.
+            if (typeof module !== 'undefined' && module.exports) {
+                module.exports = ytConsultingMailto;
+            }
+            if (typeof document === 'undefined' || typeof window === 'undefined') return;
+
+            try {
+                var cta = document.getElementById('consulting-cta');
+                if (!cta) return;
+                var href = cta.getAttribute('href');
+                var next = ytConsultingMailto(href, window.location.search);
+                if (next !== href) cta.setAttribute('href', next);
+            } catch (e) { /* no-op: attribution is best-effort, never blocks the mailto */ }
+        })();
+    </script>
 </body>
 </html>
