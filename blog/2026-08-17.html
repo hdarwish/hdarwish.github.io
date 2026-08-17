@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The best RISC-V takedown of the year proves the opposite case - Hafs Ibrahim</title>
+    <meta name="description" content="The most serious technical criticism RISC-V has taken in a while hands over its own defeat in a single clause, and its author appears to think he&#39;s being...">
+    <meta property="og:title" content="The best RISC-V takedown of the year proves the opposite case">
+    <meta property="og:description" content="The most serious technical criticism RISC-V has taken in a while hands over its own defeat in a single clause, and its author appears to think he&#39;s being...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-17.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The best RISC-V takedown of the year proves the opposite case">
+    <meta name="twitter:description" content="The most serious technical criticism RISC-V has taken in a while hands over its own defeat in a single clause, and its author appears to think he&#39;s being...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-17">
+            <div class="blog-post-date">August 17, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">risc-v</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">embedded</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">hardware-economics</span></div>
+            <h2 class="blog-post-title">The best RISC-V takedown of the year proves the opposite case</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-17-hero.png" alt="The best RISC-V takedown of the year proves the opposite case" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>The most serious technical criticism RISC-V has taken in a while hands over its own defeat in a single clause, and its author appears to think he's being generous: <em>"I am 100% sure that RISC-V will own the cheap-as-dirt single-use microcontroller space eventually."</em></p><p>An embedded engineer in Trinidad and Tobago read that sentence and recognized it as the thesis. Not the concession — the whole argument, delivered by accident, before the encoding complaints even begin.</p><p>Read it from there and the geometry changes. When he wants a development board, he is not clicking next-day delivery; he is checking whether the seller ships to Trinidad and Tobago at all, what customs will do to the package if it arrives, and what the total lands at in TT dollars. He reports paying somewhere between US $60 and US $200 to ship one-dollar chips that most of the world gets for free. A PCB company approached him about sponsorship and then withdrew — the reason given was shipping to his location.</p><p>Now do the arithmetic on a classroom.</p><p>Thirty students. If the part costs a dollar, the fixed cost of getting anything at all into the country dominates so completely that you buy one board and thirty people watch a demo over someone's shoulder. If the part costs ten cents, you amortize that same brutal freight charge across enough silicon that every student holds their own chip and is free to destroy it. Same customs officer, same shipping quote, same unforgiving logistics — and a factor of ten in unit price flips the pedagogy from spectator sport into something people can break in their hands.</p><p>The encoding complaints are, for the record, largely correct, and he grants them freely. The compressed store offsets really are strange. <code>Zicsr</code> really should not be a separate extension you have to remember to ask for. He has collided with every one of these writing a book — roughly 80% finished — on the CH32V003, which is precisely the sort of RV32E part the critique holds up as evidence of the mess.</p><p>So the disagreement is not about whether the complaints are true. It is about which variable the critique decided to optimize, and which one it never named.</p><p>Watch the critique's own construction, because it is genuinely careful work, and the care is what makes it fatal to itself. Before any of the interrupt-arithmetic grievances, Grinberg asks a good engineering question: what is a cheap microcontroller core actually <em>for</em>? His answer is that it sits inside a larger chip poking registers and configuring hardware blocks — the little brain in an MP3 player, an SD card, a USB stick — while the real work happens in custom silicon around it.</p><p>From that use case he derives requirements cleanly, from first principles. Low interrupt latency, because the core's whole job is responding to hardware. Small die area, because the core is a rounding error next to the peripherals and should stay that way. Good code density, because the code lives in ROM or SRAM and both cost real money per byte. No hardware divider, possibly not even a multiplier, since there is barely any arithmetic to do. No privilege separation, because nothing untrusted ever runs there. It is a real derivation, the kind you would be pleased to produce on a whiteboard.</p><p>Then he writes the punchline himself, as an anticipated objection: <em>"But," you might say, "you just described RV32IC (or RV32EC)!"</em></p><p>Sit with the shape of that. The most credible RISC-V critic of the month reasoned out from scratch what a cheap microcontroller core ought to be, landed exactly on the instruction set that a ten-cent chip already implements, stated in writing that this segment belongs to RISC-V — and then spent the remainder of the article annoyed that the chip exists. He built the case for the part, and then litigated whether the part <em>deserved</em> to win.</p><p>Availability, not elegance, decides which architecture a generation learns on.</p><p>Deservingness is a real question. It is also entirely irrelevant to anyone choosing what to learn this year, because the chip is on the shelf either way.</p><p>And notice what actually put it there: not a technical property of the architecture at all, but a licensing one. An open ISA means a fab can ship a $0.10 part without negotiating a core license from anybody, and $0.10 is the price point that survives a $60 shipping charge with dignity intact. The critique has no vocabulary for this. Not because its author is careless — he plainly isn't — but because the entire analytical frame, encodings and orthogonality and interrupt latency and aesthetic coherence, measures the chip and never once measures the distance between the chip and the student.</p><p>An analogy, and I'll tell you where it snaps. Arguing ISA elegance while ignoring landed cost is like reviewing municipal water infrastructure on the mineral composition of the water. The chemistry is real, the review can be flawless, and it is still the wrong document if the question on the table is whether pipes reach the neighborhood. Where it breaks: bad ISA design is not cosmetic. Awkward encodings cost code density, code density costs ROM, ROM costs die area, and die area costs money — so the aesthetics and the price are coupled, tightly. That coupling is exactly why the critique's own derivation terminated at RV32EC.</p><p>Take this with you. When you read a technical critique — of an ISA, a framework, a protocol, a language — the interesting question is almost never whether the complaints are true. Grant them. Ask instead: <strong>what variable is this argument optimizing, and who is standing outside its coordinate system?</strong> An analysis is not neutral because it is accurate. It is neutral about everything it declined to measure, which is a very different thing.</p><p>The best critiques often hand you the counterargument for free, in a sentence they thought was a throwaway. Somebody in Trinidad picked it up.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://rvembedded.com/blog_post/12" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">A third world engineer responds to &quot;RISC-V: They should have known better&quot;</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://dmitry.gr/?r=05.Projects&amp;proj=40.%20RISC-V%20Rant" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">RISC-V: They Should Have Known Better — Dmitry Grinberg</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.wch-ic.com/products/CH32V003.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">WCH CH32V003 Datasheet and Reference Manual</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://riscv.org/technical/specifications/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The RISC-V Instruction Set Manual (official specifications)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

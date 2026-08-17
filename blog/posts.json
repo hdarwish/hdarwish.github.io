@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-17",
+    "title": "The best RISC-V takedown of the year proves the opposite case",
+    "tags": [
+      "risc-v",
+      "embedded",
+      "hardware-economics"
+    ],
+    "excerpt": "The most serious technical criticism RISC-V has taken in a while hands over its own defeat in a single clause, and its author appears to think he's being generous: \"I am 100% sure that RISC-V will...",
+    "hn_refs": [
+      {
+        "title": "A third world engineer responds to \"RISC-V: They should have known better\"",
+        "url": "https://rvembedded.com/blog_post/12",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "RISC-V: They Should Have Known Better — Dmitry Grinberg",
+        "url": "https://dmitry.gr/?r=05.Projects&proj=40.%20RISC-V%20Rant",
+        "kind": "article"
+      },
+      {
+        "title": "WCH CH32V003 Datasheet and Reference Manual",
+        "url": "https://www.wch-ic.com/products/CH32V003.html",
+        "kind": "docs"
+      },
+      {
+        "title": "The RISC-V Instruction Set Manual (official specifications)",
+        "url": "https://riscv.org/technical/specifications/",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "The most serious technical criticism RISC-V has taken in a while hands over its own defeat in a single clause, and its author appears to think he's being...",
+    "social_teasers": {
+      "linkedin": "The best RISC-V takedown of the year proves the opposite case\n\nThe most serious technical criticism RISC-V has taken in a while hands over its own defeat in a single clause, and its author appears to think he's being...\n\nhttps://hafs.dev/blog/2026-08-17.html\n\n#risc-v #embedded #hardware-economics",
+      "x": "The best RISC-V takedown of the year proves the opposite case\nhttps://hafs.dev/blog/2026-08-17.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-17.html"
+  },
+  {
     "date": "2026-08-16",
     "title": "DuckDB's async I/O isn't an I/O feature. It's a scheduler rewrite.",
     "tags": [
