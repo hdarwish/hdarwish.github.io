@@ -86,8 +86,33 @@ test('short and long, and different video ids, produce distinct tags', () => {
   assert.ok(otherVid.includes('yt-' + VALID_ID_2 + '@gmail.com'), otherVid);
 });
 
+// --- Legacy mediums (no utm_content) map to short|long ---
+test('legacy short-form (utm_medium=short, no content) produces short tag', () => {
+  const out = rewrite(ORIGINAL_HREF, q({ utm_source: 'youtube', utm_medium: 'short', utm_campaign: VALID_ID }));
+  assert.ok(out.startsWith('mailto:hafs.darwish+yt-' + VALID_ID + '@gmail.com?'), 'recipient not plus-addressed: ' + out);
+  assert.ok(out.includes('subject=Consulting%20Inquiry%20%5Byoutube%2Fshort%2F' + VALID_ID + '%5D'), 'short tag missing: ' + out);
+});
+
+test('legacy long-form (utm_medium=episode, no content) produces long tag', () => {
+  const out = rewrite(ORIGINAL_HREF, q({ utm_source: 'youtube', utm_medium: 'episode', utm_campaign: VALID_ID }));
+  assert.ok(out.startsWith('mailto:hafs.darwish+yt-' + VALID_ID + '@gmail.com?'), 'recipient not plus-addressed: ' + out);
+  assert.ok(out.includes('subject=Consulting%20Inquiry%20%5Byoutube%2Flong%2F' + VALID_ID + '%5D'), 'long tag missing: ' + out);
+});
+
+test('underscore/dash video id is accepted and tagged verbatim', () => {
+  const uid = 'abc_def-hij'; // 11 chars, all in [A-Za-z0-9_-]
+  const out = rewrite(ORIGINAL_HREF, q({ utm_source: 'youtube', utm_medium: 'short', utm_campaign: uid }));
+  assert.ok(out.startsWith('mailto:hafs.darwish+yt-' + uid + '@gmail.com?'), 'underscore id not preserved in recipient: ' + out);
+  assert.ok(out.includes('%2Fshort%2F' + uid + '%5D'), 'underscore id not preserved in tag: ' + out);
+});
+
 // --- Invalid / missing params leave the href byte-for-byte unchanged ---
 const unchangedCases = {
+  'legacy short with conflicting content (long)': q({ utm_source: 'youtube', utm_medium: 'short', utm_campaign: VALID_ID, utm_content: 'long' }),
+  'legacy short with redundant content (short)': q({ utm_source: 'youtube', utm_medium: 'short', utm_campaign: VALID_ID, utm_content: 'short' }),
+  'legacy episode with conflicting content (short)': q({ utm_source: 'youtube', utm_medium: 'episode', utm_campaign: VALID_ID, utm_content: 'short' }),
+  'legacy medium with invalid id': q({ utm_source: 'youtube', utm_medium: 'episode', utm_campaign: 'too-short' }),
+  'unknown legacy medium (clip)': q({ utm_source: 'youtube', utm_medium: 'clip', utm_campaign: VALID_ID }),
   'plain visitor (no query)': '',
   'missing all utm params but has other query': 'ref=hn&foo=bar',
   'wrong source (google)': q({ utm_source: 'google', utm_medium: 'description', utm_campaign: VALID_ID, utm_content: 'short' }),
@@ -133,6 +158,27 @@ test('any valid rewrite has exactly one @ and no raw CR/LF or added mailto field
   const query = out.split('?')[1];
   const keys = [...new URLSearchParams(query).keys()];
   assert.deepStrictEqual(keys.sort(), ['body', 'subject'], 'unexpected mailto fields: ' + keys);
+});
+
+// --- Duplicate attribution keys are ambiguous -> rejected (unchanged) ---
+test('duplicate utm_medium keys are rejected (unchanged)', () => {
+  const out = rewrite(ORIGINAL_HREF, 'utm_source=youtube&utm_medium=description&utm_medium=short&utm_campaign=' + VALID_ID + '&utm_content=short');
+  assert.strictEqual(out, ORIGINAL_HREF);
+});
+
+test('duplicate utm_campaign keys are rejected (unchanged)', () => {
+  const out = rewrite(ORIGINAL_HREF, 'utm_source=youtube&utm_medium=description&utm_campaign=' + VALID_ID + '&utm_campaign=' + VALID_ID_2 + '&utm_content=short');
+  assert.strictEqual(out, ORIGINAL_HREF);
+});
+
+test('duplicate utm_content keys are rejected (unchanged)', () => {
+  const out = rewrite(ORIGINAL_HREF, 'utm_source=youtube&utm_medium=description&utm_campaign=' + VALID_ID + '&utm_content=short&utm_content=long');
+  assert.strictEqual(out, ORIGINAL_HREF);
+});
+
+test('duplicate utm_source keys are rejected (unchanged)', () => {
+  const out = rewrite(ORIGINAL_HREF, 'utm_source=youtube&utm_source=youtube&utm_medium=description&utm_campaign=' + VALID_ID + '&utm_content=short');
+  assert.strictEqual(out, ORIGINAL_HREF);
 });
 
 // --- Report ---

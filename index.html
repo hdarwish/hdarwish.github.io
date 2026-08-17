@@ -1024,15 +1024,21 @@
       Zero-infra YouTube inquiry attribution. No cookie, no localStorage, no pixel,
       no tracker, no backend, no form, no network call — nothing is stored or sent by
       this block. Progressive enhancement only: when a visitor arrives from a vetted
-      YouTube description link
-        ?utm_source=youtube&utm_medium=description&utm_campaign=<11-char video id>&utm_content=short|long
-      the consulting mailto is rewritten so the inbound email itself carries source
-      identity — recipient becomes a Gmail plus-address (hafs.darwish+yt-<id>@gmail.com)
-      and the subject is tagged "Consulting Inquiry [youtube/<short|long>/<id>]". Any
-      missing / malformed / non-YouTube parameter leaves the original mailto byte-for-byte
-      unchanged. Strict allow-listing (exact source & medium, an 11-char [A-Za-z0-9_-]
-      video id, and a short|long enum) means no arbitrary query value can inject CR/LF,
-      extra recipients, or additional mailto fields. If JS is off, the untagged mailto
+      YouTube link the consulting mailto is rewritten so the inbound email itself
+      carries source identity — recipient becomes a Gmail plus-address
+      (hafs.darwish+yt-<id>@gmail.com) and the subject is tagged
+      "Consulting Inquiry [youtube/<short|long>/<id>]".
+
+      Accepted link shapes (utm_source must be youtube; utm_campaign must be an
+      11-char [A-Za-z0-9_-] video id in every case):
+        - canonical:         utm_medium=description  &  utm_content=short|long
+        - legacy short-form: utm_medium=short        (utm_content absent -> short)
+        - legacy long-form:  utm_medium=episode      (utm_content absent -> long)
+      A legacy link that also carries utm_content, any conflicting/mixed combination,
+      and any duplicated utm_* key are treated as unattributed. Any missing / malformed
+      / non-YouTube parameter leaves the original mailto byte-for-byte unchanged.
+      Strict allow-listing means no arbitrary query value can inject CR/LF, extra
+      recipients, or additional mailto fields. If JS is off, the untagged mailto
       still works.
     -->
     <script>
@@ -1043,10 +1049,33 @@
             function ytConsultingMailto(originalHref, search) {
                 try {
                     var p = new URLSearchParams(search || '');
+                    // Reject duplicate attribution keys byte-for-byte: a repeated utm_*
+                    // key is ambiguous and a classic parser-confusion evasion, so such a
+                    // link is not attributed at all.
+                    var attrKeys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'];
+                    for (var k = 0; k < attrKeys.length; k++) {
+                        if (p.getAll(attrKeys[k]).length > 1) return originalHref;
+                    }
                     if (p.get('utm_source') !== 'youtube') return originalHref;
-                    if (p.get('utm_medium') !== 'description') return originalHref;
-                    var content = p.get('utm_content');
-                    if (content !== 'short' && content !== 'long') return originalHref;
+                    // Resolve short|long from either the canonical medium=description
+                    // (which carries an explicit utm_content) or a legacy medium that
+                    // implies the form. A legacy link must NOT also carry utm_content —
+                    // any conflicting/mixed combination is rejected byte-for-byte.
+                    var medium = p.get('utm_medium');
+                    var rawContent = p.get('utm_content'); // null when the key is absent
+                    var content;
+                    if (medium === 'description') {
+                        if (rawContent !== 'short' && rawContent !== 'long') return originalHref;
+                        content = rawContent;
+                    } else if (medium === 'short') {
+                        if (rawContent !== null) return originalHref;
+                        content = 'short';
+                    } else if (medium === 'episode') {
+                        if (rawContent !== null) return originalHref;
+                        content = 'long';
+                    } else {
+                        return originalHref;
+                    }
                     var id = p.get('utm_campaign') || '';
                     if (!/^[A-Za-z0-9_-]{11}$/.test(id)) return originalHref;
                     // Only rewrite when both known literals are present, so a partial
