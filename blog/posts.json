@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-18",
+    "title": "Your autofix bot is an attacker you gave commit rights to",
+    "tags": [
+      "security",
+      "ci-cd",
+      "ai-agents"
+    ],
+    "excerpt": "On June 18, 2026, a commit landed in snowflakedb/snowflake-connector-net that took a safe pattern out of a CI workflow and put an injectable one in its place. The squash commit credits a co-author:...",
+    "hn_refs": [
+      {
+        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
+        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "points": 349
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "GitHub Actions: Security hardening for GitHub Actions",
+        "url": "https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions",
+        "kind": "docs"
+      },
+      {
+        "title": "Wiz Blog: Red Agent Finds Its Way Into Snowflake's Internal Jira",
+        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "kind": "article"
+      },
+      {
+        "title": "Keeping your GitHub Actions and workflows secure: Untrusted input (GitHub Security Lab)",
+        "url": "https://securitylab.github.com/resources/github-actions-untrusted-input/",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "On June 18, 2026, a commit landed in snowflakedb/snowflake-connector-net that took a safe pattern out of a CI workflow and put an injectable one in its...",
+    "social_teasers": {
+      "linkedin": "Your autofix bot is an attacker you gave commit rights to\n\nOn June 18, 2026, a commit landed in snowflakedb/snowflake-connector-net that took a safe pattern out of a CI workflow and put an injectable one in its...\n\nhttps://hafs.dev/blog/2026-08-18.html\n\n#security #ci-cd #ai-agents",
+      "x": "Your autofix bot is an attacker you gave commit rights to\nhttps://hafs.dev/blog/2026-08-18.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-18.html"
+  },
+  {
     "date": "2026-08-17",
     "title": "The best RISC-V takedown of the year proves the opposite case",
     "tags": [
