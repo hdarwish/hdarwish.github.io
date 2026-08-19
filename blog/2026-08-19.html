@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The GPU driver is the one thing you were never allowed to link - Hafs Ibrahim</title>
+    <meta name="description" content="A fully static musl binary cannot dlopen() the host&#39;s glibc-linked Vulkan driver. There is no dynamic section in the ELF, no interpreter, no ld.so sitting...">
+    <meta property="og:title" content="The GPU driver is the one thing you were never allowed to link">
+    <meta property="og:description" content="A fully static musl binary cannot dlopen() the host&#39;s glibc-linked Vulkan driver. There is no dynamic section in the ELF, no interpreter, no ld.so sitting...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-19.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The GPU driver is the one thing you were never allowed to link">
+    <meta name="twitter:description" content="A fully static musl binary cannot dlopen() the host&#39;s glibc-linked Vulkan driver. There is no dynamic section in the ELF, no interpreter, no ld.so sitting...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-19">
+            <div class="blog-post-date">August 19, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">linux</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">static-linking</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">elf</span></div>
+            <h2 class="blog-post-title">The GPU driver is the one thing you were never allowed to link</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-19-hero.png" alt="The GPU driver is the one thing you were never allowed to link" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>A fully static musl binary cannot <code>dlopen()</code> the host's glibc-linked Vulkan driver. There is no dynamic section in the ELF, no interpreter, no <code>ld.so</code> sitting in the address space to ask. The one dependency the machine <em>insists</em> on providing is the one your beautiful single-file executable has no mouth with which to accept.</p>
+
+<p>That sentence — narrow, unglamorous, entirely technical — is why an enormous amount of Linux software ships as a container, an AppImage, a Flatpak, or a 400MB tarball with somebody else's Ubuntu inside it.</p>
+
+<p>Consider how much engineering lives downstream of it. Whole packaging ecosystems, image registries, layer caches, base-image CVE scanners, "works on my machine" arguments that end with shipping the machine. The standard explanation is that Linux dependency management is intrinsically hopeless, so the grown-up move is to surrender and bundle a userland. But look at which dependency is actually doing the forcing. It isn't libpng. It isn't the C++ runtime. It's the graphics driver — code that must match the kernel module and the silicon in front of it, code you cannot vendor even in principle, because you do not know what GPU the user bought.</p>
+
+<p>SoLo, which hit the HN front page at 309 points, takes that observation and does something heretical with it: keep the static binary, and become the dynamic loader yourself.</p>
+
+<p>The mechanism is more audacious than the README's calm tone suggests. SoLo exposes a <code>dlfcn</code>-shaped source API — your code calls something that looks like <code>dlopen</code> and <code>dlsym</code> — but behind that API sits <em>its own ELF loader</em>, for x86-64 and aarch64. It maps the host's shared object, walks its program headers, applies its relocations, and resolves its symbols. That is the easy half, and it is not easy. The hard half is that the object you just mapped was compiled and linked against glibc, so it does not merely want glibc functions; it wants glibc <em>behavior</em>. So SoLo carries a glibc ABI bridge built on top of musl.</p>
+
+<p>Think about what such a bridge has to absorb. glibc versions its symbols, so a driver's imports may name <code>GLIBC_2.17</code> or <code>GLIBC_2.34</code> and expect the loader to pick the right one. glibc ships IFUNC relocations, where the "address" of <code>memcpy</code> is a resolver function that must be called at load time to choose a CPU-specific variant. Thread-local storage has its own relocation types and its own quiet assumptions about who allocates the block and where. Get any of that wrong and you don't get a clean error — you get a driver that runs for a while and then dies inside a lock.</p>
+
+<p>The critical design choice is what SoLo refuses to do: it does not smuggle a second libc into the process. Two libcs in one address space is a haunted house — two heaps, so memory allocated by one is freed by the other; two views of <code>errno</code>; two opinions about who owns TLS. One libc wearing a convincing glibc mask is merely very difficult. Difficult is a thing engineering can finish.</p>
+
+<p>An analogy, and I'll tell you where it breaks. A dynamic loader is a customs office. Normally the host country runs it: <code>ld.so</code> checks papers, stamps symbols, decides which library satisfies which import. A static binary is a country that abolished customs — nothing crosses, ever, which is wonderfully simple right up until you need something that only grows on the other side of the border. SoLo doesn't reopen the old office. It builds a small private one on its own soil, staffs it with its own inspectors, and issues a phrasebook — the ABI bridge — so glibc-speaking cargo can be understood by musl-speaking clerks. Where it breaks: real customs can refuse entry. SoLo's loader must <em>satisfy</em> every symbol the driver asks for, or the driver simply doesn't work. Less a border, more a promise to answer every question correctly.</p>
+
+<p>Which invites the obvious objection: fine, it loads one hand-picked driver in a demo. Everyone's clever loader works on the library they tested it against.</p>
+
+<p>So look at what's in CI. On every commit, SoLo loads the shared libraries of the 1,000 most-installed Debian packages — over 2,100 host objects — through its own loader, on both x86-64 and aarch64. That isn't a demo; it's a continuously re-tested empirical claim about how much glibc-ABI weirdness actually exists in the wild. The end-to-end proof is the honest kind too: a fully static executable enters a statically linked Khronos Vulkan loader, pulls in the host's unmodified ICD and its non-glibc dependencies through SoLo, builds a device, a storage buffer, a descriptor set and a compute pipeline, dispatches a checked-in SPIR-V shader, then maps the result and writes a PNG through statically linked libpng. AMD radv, radeonsi, Intel, NVIDIA — and an Apple M1 under Asahi. You can <code>readelf -dW</code> the released binary and find no dynamic section at all.</p>
+
+<p>Which means this was never a rebellion against dynamic linking, and never a trick for sneaking static binaries past a limitation. It's a redrawing of a line that a tool drew for us decades ago and we never questioned. Exactly one category of code legitimately belongs to the host: the code that knows what hardware is physically present. Drivers. Your app, your renderer, your image codecs, your terminal emulator have no business being renegotiated at install time on a stranger's machine.</p>
+
+<p><strong>Static linking fails only where the host must own the code. So bridge — don't containerize.</strong></p>
+
+<p>If that's right, then containers-as-deployment were never solving a dependency problem. They were solving a <em>boundary</em> problem, and solving it by moving the boundary out so far that it swallowed an entire operating system. The real boundary was always thin. It was the driver. Everything else was collateral damage, dutifully packaged and shipped.</p>
+
+<p>Here's the portable part. When a system forces you toward a heavyweight solution, go find which single dependency is actually applying the force. Usually there's one. Usually it's small. Usually it is genuinely irreducible for an excellent reason — and the right response is a precise bridge across that one gap, not a bulldozer that flattens the neighborhood until the gap is no longer visible from the road. Bundling is what you do when you've stopped asking where the line is.</p>
+
+<p>The host keeps the hardware. You ship one boring file.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://github.com/pg83/solo" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Solo – a .so loader for static Linux binaries</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲309</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://github.com/pg83/solo" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">SoLo — Portable Linux binaries, solved</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.akkadia.org/drepper/dsohowto.pdf" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">How To Write Shared Libraries (Ulrich Drepper)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://musl.libc.org/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">musl libc — Design and Comparison to glibc</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
