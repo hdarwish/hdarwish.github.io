@@ -1,0 +1,27 @@
+{
+  "share_description": "Open a fast AVX2 implementation of sin and look at the very first thing it does — before any polynomial, before any bit-twiddling. It multiplies the input...",
+  "social_teasers": {
+    "linkedin": "Your sin() function undoes the pi you just multiplied in\n\nOpen a fast AVX2 implementation of sin and look at the very first thing it does — before any polynomial, before any bit-twiddling. It multiplies the input...\n\nhttps://hafs.dev/blog/2026-08-20.html\n\n#floating-point #api-design #numerical-computing",
+    "x": "Your sin() function undoes the pi you just multiplied in\nhttps://hafs.dev/blog/2026-08-20.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-20.html",
+  "title": "Your sin() function undoes the pi you just multiplied in",
+  "tags": [
+    "floating-point",
+    "api-design",
+    "numerical-computing"
+  ],
+  "hn_refs": [
+    {
+      "title": "Turns are Better than Radians (2022)",
+      "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

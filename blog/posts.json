@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-20",
+    "title": "Your sin() function undoes the pi you just multiplied in",
+    "tags": [
+      "floating-point",
+      "api-design",
+      "numerical-computing"
+    ],
+    "excerpt": "Open a fast AVX2 implementation of sin and look at the very first thing it does — before any polynomial, before any bit-twiddling. It multiplies the input by 1.27323954473516. That constant has a...",
+    "hn_refs": [
+      {
+        "title": "Turns are Better than Radians (2022)",
+        "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Turns are Better than Radians — Casey Muratori",
+        "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
+        "kind": "article"
+      },
+      {
+        "title": "What Every Computer Scientist Should Know About Floating-Point Arithmetic — David Goldberg",
+        "url": "https://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html",
+        "kind": "paper"
+      },
+      {
+        "title": "CUDA Math API: single and double precision intrinsics (sincospi)",
+        "url": "https://docs.nvidia.com/cuda/cuda-math-api/",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Open a fast AVX2 implementation of sin and look at the very first thing it does — before any polynomial, before any bit-twiddling. It multiplies the input...",
+    "social_teasers": {
+      "linkedin": "Your sin() function undoes the pi you just multiplied in\n\nOpen a fast AVX2 implementation of sin and look at the very first thing it does — before any polynomial, before any bit-twiddling. It multiplies the input...\n\nhttps://hafs.dev/blog/2026-08-20.html\n\n#floating-point #api-design #numerical-computing",
+      "x": "Your sin() function undoes the pi you just multiplied in\nhttps://hafs.dev/blog/2026-08-20.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-20.html"
+  },
+  {
     "date": "2026-08-19",
     "title": "The GPU driver is the one thing you were never allowed to link",
     "tags": [
