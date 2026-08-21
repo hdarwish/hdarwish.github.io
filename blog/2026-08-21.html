@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust checks your program. Nobody checks your build. - Hafs Ibrahim</title>
+    <meta name="description" content="On August 20, 2026, someone pushed arrayref 0.3.10 to crates.io. The crate does one boring, beloved thing — it hands you references to fixed-size array...">
+    <meta property="og:title" content="Rust checks your program. Nobody checks your build.">
+    <meta property="og:description" content="On August 20, 2026, someone pushed arrayref 0.3.10 to crates.io. The crate does one boring, beloved thing — it hands you references to fixed-size array...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-21.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rust checks your program. Nobody checks your build.">
+    <meta name="twitter:description" content="On August 20, 2026, someone pushed arrayref 0.3.10 to crates.io. The crate does one boring, beloved thing — it hands you references to fixed-size array...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-21">
+            <div class="blog-post-date">August 21, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">supply-chain-security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">rust</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">ci-cd</span></div>
+            <h2 class="blog-post-title">Rust checks your program. Nobody checks your build.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-21-hero.png" alt="Rust checks your program. Nobody checks your build." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>On August 20, 2026, someone pushed <code>arrayref</code> 0.3.10 to crates.io. The crate does one boring, beloved thing — it hands you references to fixed-size array slices — and it is buried somewhere in an enormous number of dependency trees. The new version added exactly one thing: a dependency on a crate called <code>proc-macro1</code>. Not <code>proc-macro2</code>, the real one that every macro author in the ecosystem depends on. <code>proc-macro1</code>. Published by <code>dtolney</code>, which is not <code>dtolnay</code>, with a <code>Cargo.toml</code> that forged <code>authors = ["David Tolnay &lt;…&gt;"]</code> and pointed <code>repository</code> at a <code>dtolnay/proc-macro1</code> URL that 404s.</p>
+
+<p>Its <code>src/</code> directory was a genuine, working copy of <code>proc-macro2</code>. So your build succeeded. Your tests passed. Your binary was fine.</p>
+
+<p>The malware was in <code>build.rs</code>, and it ran while <code>rustc</code> was still working.</p>
+
+<p>Rust's entire safety proposition is enforced at compile time. Borrow checking, lifetimes, aliasing rules, the whole magnificent apparatus — it all happens <em>before</em> your program exists. That is precisely the window in which this payload executed. On your machine. As your user. With your SSH agent, your cloud credentials, your registry tokens, your <code>~/.cargo</code>, all sitting right there. The compiler was busy proving that your code couldn't have a use-after-free while a detached process it had just spawned phoned home to an IP address in Kansas.</p>
+
+<p>Notice that nobody had to make a typo. The typosquat wasn't aimed at your fingers; it was aimed at a <code>Cargo.toml</code> deep in your tree that you have never opened. A caret requirement like <code>arrayref = "0.3"</code> — which is what almost everyone writes, because that is what the tooling encourages — happily accepts 0.3.10 the moment it exists. One <code>cargo update</code>, one cold CI cache, one fresh clone, and a crate you have never heard of gets a shell on the machine. The lockfile is the only thing standing between you and that, and lockfiles are routinely regenerated by people trying to be tidy.</p>
+
+<p>The gears themselves are worth examining, mostly for how ordinary they are.</p>
+
+<p>The payload, quoted in RustSec advisory-db #3161, lives in <code>proc-macro1-1.0.107/build.rs</code>. It stores its server address as base64 fragments — <code>"aHR0cHM6Ly8="</code>, <code>"MjMuMjU0Lg=="</code>, <code>"MTY1Lg=="</code> and so on — and reassembles them at build time. Decoded, they yield a payload host at <code>23.254.165.112:9089</code> and a command-and-control endpoint at <code>23.254.165.112:443</code>. Split across five string literals, no host anywhere in the source, nothing a grep for a domain would catch. Then it fetches an architecture-specific binary over TLS — and here is my favorite grim detail — over a TLS connection <strong>configured to accept any certificate without validation</strong>. The malware author wanted encryption for opacity, not for trust. They were hiding from you, not verifying the server.</p>
+
+<p>On Unix it writes and runs <code>/tmp/rust-setup</code>. The name is not an accident; it is the sort of thing you'd glance at in a process list and assume was toolchain business. On Windows it drops a PowerShell script plus a VBScript launcher into <code>%TEMP%</code>, starts them hidden, and then abandons the child process — so the compile finishes clean, the exit code is zero, and the malware outlives the build that created it.</p>
+
+<p>The account behind <code>arrayref</code>, <code>droundy</code>, appears to have been compromised. The same account also pushed poisoned <code>internment</code> 0.8.7 and <code>append-only-vec</code> 0.1.9. Every associated GitHub repository — and the entire <code>github.com/droundy</code> account — now returns 404, so the upstream code you'd want to diff against has evaporated. crates.io has pulled the malicious versions, along with a cluster of supporting typosquats: <code>proc-macro-en</code>, <code>aovine</code>, <code>arone</code>, <code>aronenao</code>, <code>tinymember</code>.</p>
+
+<p>Try this analogy on. Memory safety is an extraordinarily rigorous inspection of the car at the end of the assembly line: every weld measured, every bolt torqued, and the inspector genuinely will not let a bad unit through. This attack did not tamper with the car. It gave the night-shift cleaning contractor a key to the plant. The inspection was flawless and completely irrelevant, because the target was never the product. The analogy breaks in one place worth naming: a real factory intruder would eventually show up in the cars. This one has no reason to bother. The car is a distraction.</p>
+
+<p>So ask what a build machine actually contains. Not a running service with a scoped IAM role and a read-only replica — that is what we spend our security budget hardening. A build machine holds the keys to <em>make things</em>: signing keys, publish tokens, container registry pushes, deploy credentials, the private repos of everything you own, and — increasingly — API keys for whatever model your coding agent talks to. Production is monitored, alarmed, and deliberately impoverished. CI is trusted, chatty, and rich. The payload's real target was never your users.</p>
+
+<p><strong>Memory safety protects your binary. Nothing protects the machine that builds it.</strong></p>
+
+<p>Because <code>cargo build</code> is not a compiler invocation. It is a remote code execution primitive that we have collectively agreed not to think about, and it always has been. <code>build.rs</code> is arbitrary code, compiled and executed before your crate is even looked at, unsandboxed, with your full ambient authority, from every transitive dependency you have never read. There is no permission model. There is no <code>allow-network = false</code>. A build script that links a C library and a build script that exfiltrates <code>~/.aws/credentials</code> are, to Cargo, the same kind of event. And this is not a Rust failing — <code>npm</code> has <code>postinstall</code>, Python has <code>setup.py</code>, and Make has had this property since the 1970s. Rust is simply an unusually sharp place to see it, because Rust is the language that taught a generation to expect the compiler to have their back.</p>
+
+<p>The gift here is a better question. Stop asking "are my dependencies safe?" — you cannot audit a dependency tree by reading it, and the attacker already knows that. Ask instead: <strong>what can the build steal?</strong> That question has answers you can act on this afternoon. Give CI credentials that expire in minutes, not hours. Deny build containers outbound network by default, so a reassembled base64 IP literal has nowhere to go. Pin and vendor, so a fresh 0.3.10 cannot appear underneath you overnight. Keep publish and signing tokens on a machine that never compiles third-party code. Notice that <code>--offline</code> is a security feature.</p>
+
+<p>None of that requires guessing which crate is next. It only requires admitting that your compiler is a guest with root, and treating it accordingly.</p>
+
+<p>Rust proved you can make the program trustworthy. The room it was written in is still wide open.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://safedep.io/arrayref-proc-macro1-rust-build-time-malware" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Malicious Rust crate Arrayref runs a build-time payload</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲447</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://github.com/rustsec/advisory-db" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">RustSec Advisory Database</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://doc.rust-lang.org/cargo/reference/build-scripts.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Cargo Book: Build Scripts</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://dl.acm.org/doi/10.1145/358198.358210" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Reflections on Trusting Trust — Ken Thompson</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
