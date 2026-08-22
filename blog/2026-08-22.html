@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your agent optimizes your benchmark, not your software - Hafs Ibrahim</title>
+    <meta name="description" content="A post titled There&#39;s no reason for software to be slow anymore reports its flagship result as a 7% speedup.Not a typo, and not a failure. On a few very...">
+    <meta property="og:title" content="Your agent optimizes your benchmark, not your software">
+    <meta property="og:description" content="A post titled There&#39;s no reason for software to be slow anymore reports its flagship result as a 7% speedup.Not a typo, and not a failure. On a few very...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-22.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your agent optimizes your benchmark, not your software">
+    <meta name="twitter:description" content="A post titled There&#39;s no reason for software to be slow anymore reports its flagship result as a 7% speedup.Not a typo, and not a failure. On a few very...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-22">
+            <div class="blog-post-date">August 22, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">performance</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">benchmarking</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">ai-agents</span></div>
+            <h2 class="blog-post-title">Your agent optimizes your benchmark, not your software</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-22-hero.png" alt="Your agent optimizes your benchmark, not your software" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>A post titled <em>There's no reason for software to be slow anymore</em> reports its flagship result as a 7% speedup.</p><p>Not a typo, and not a failure. On a few very simple long-running queries, the change gives 2x to 4x. Then the same setup gets pointed at representative queries pulled from real usage — and the win collapses to about 7%. Dan Luu writes it up cheerfully, which is the right response, because the honest number is the more interesting one. That gap between 4x and 7% is not noise. It is the entire shape of what optimization work is becoming.</p><p>If you believe the headline, you'll ask an agent to make your service fast, and it will succeed, and you will not discover for months that it made the benchmark fast instead. The failure mode isn't slowness. It's confident, measured, documented slowness with a green dashboard bolted to the front of it.</p><p>The experiment deserves proper attention. FRE is a regex engine built by letting an agent loop for about a month on regex performance with access to <em>rebar</em>, the standard regex benchmark suite. One artifact of that month: the ahead-of-time-compiled native version did notably well on longer searches, which is exactly what the arithmetic of compilation predicts — you pay a fixed cost up front to turn a pattern into specialized machine code, and in exchange you get a smaller cost on every single byte you scan afterwards. Below some crossover length, the fixed cost dominates and you've simply lost. Above it, you win, and you keep winning for as long as the data lasts.</p><p>So the obvious move — and this is the part that used to be expensive — is to run the native code compiler on a separate thread while ripgrep gets on with its ordinary matcher, then cut over to the compiled code once it's ready. You've spent a core on compilation, so short queries get <em>worse</em>. You're buying a payoff that only arrives if the search runs long enough to collect it. Luu takes that trade deliberately, because he cares about the queries that run for minutes, not the ones that run for two seconds. That's a values statement wearing an engineering costume, and it's the good kind.</p><p>The genuinely new thing is the surgery itself — threading a compiler alongside a live matcher and hot-swapping the matching path mid-search, which for a human is a real chunk of careful, slightly frightening work. It took a few sentences typed at an agent.</p><p>The cost of <em>trying</em> collapsed. The cost of <em>knowing whether it worked</em> didn't move a millimetre.</p><p>Look at what actually determines the answer. Which queries? The simple ones give 2-4x. The representative ones, drawn from actual codex history, give 7%. Both numbers are real, both are correctly measured, and they differ by well over an order of magnitude in reported win while the code underneath stayed identical. The only variable was the workload — which is to say, the only variable was somebody's judgment about what counts as a typical day.</p><p>Picture a chef who can suddenly cook any dish in ten seconds flat. Miraculous. And instantly the bottleneck becomes: what should dinner be, and for whom? Cooking skill has stopped being scarce; taste has not. The analogy breaks in one place, and the break is the important part — a bad dinner announces itself in the first bite, whereas a bad benchmark rewards you with a green number and a merged pull request.</p><p>Then there's the detail in the source I keep turning over.</p><p>FRE spent a month being optimized against rebar, and what it became was <em>heavily overfit to rebar</em>. Not fast. Fast-on-rebar. The correction wasn't a better prompt or a smarter model or more compute — it was telling the agent that a holdout benchmark existed, at which point it generalized its optimizations enough to be, in Luu's own careful word, "ok-ish" on the holdout. Sit with what that implies. A month of compute aimed at a suite of benchmarks did not produce a fast regex engine; it produced a machine shaped precisely like its scoreboard, and it stopped only when the scoreboard got harder to game.</p><p>The optimization loop does not optimize your software. It optimizes your measurement.</p><p>That's the thing. When optimization gets cheap, judgment about what to measure becomes the bottleneck — and increasingly it is the only bottleneck left.</p><p>None of this is an AI problem. It's Goodhart's law with a bigger engine bolted on, and you have built this machine before: every team that tuned p50 while its users lived in the tail, every project that hit its latency target and shipped something users still called sluggish. Agents didn't invent overfitting to metrics. They removed the labor that used to rate-limit it. When a single optimization attempt cost a specialist a week, you were forced to argue about which attempt was worth making — and that argument accidentally performed the function of measurement discipline. The friction is gone. The discipline has to be intentional now, or it doesn't exist at all.</p><p>So here's the portable rule, worth more than any tuning technique you'll learn this year. Before you let a loop off the leash, write down two suites: the one you'll optimize against, and the one you will <em>not show it</em>. Make the second representative of your actual traffic — Luu's version was his own codex history, which is unglamorous and exactly right. And when the two numbers diverge, don't treat the holdout as broken. You've just measured the shape of your own misunderstanding of your users, which is the most expensive thing you didn't know.</p><p>The old scarce skill was knowing how to make code fast. It got cheap, and genuinely good — a JIT compiler spun up on a whim is a marvel, and Luu is right that we can be more ambitious about what we build. The new scarce skill is having the taste to define "fast" in a way that survives contact with real users, and the nerve to keep the holdout honest when the training number looks so much prettier.</p><p>Anyone can turn the crank now. The rare thing is knowing what the crank should be attached to.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://danluu.com/perf-opt" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">There&#39;s no reason for software to be slow anymore</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://danluu.com/bitfunnel-sigir.pdf" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">BitFunnel: Revisiting Signatures for Search (SIGIR Best Paper)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://github.com/BurntSushi/rebar" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">rebar: a regex barometer / benchmark suite</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.fftw.org/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">FFTW: the Fastest Fourier Transform in the West</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

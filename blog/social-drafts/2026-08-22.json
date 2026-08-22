@@ -1,0 +1,27 @@
+{
+  "share_description": "A post titled There's no reason for software to be slow anymore reports its flagship result as a 7% speedup.Not a typo, and not a failure. On a few very...",
+  "social_teasers": {
+    "linkedin": "Your agent optimizes your benchmark, not your software\n\nA post titled There's no reason for software to be slow anymore reports its flagship result as a 7% speedup.Not a typo, and not a failure. On a few very...\n\nhttps://hafs.dev/blog/2026-08-22.html\n\n#performance #benchmarking #ai-agents",
+    "x": "Your agent optimizes your benchmark, not your software\nhttps://hafs.dev/blog/2026-08-22.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-22.html",
+  "title": "Your agent optimizes your benchmark, not your software",
+  "tags": [
+    "performance",
+    "benchmarking",
+    "ai-agents"
+  ],
+  "hn_refs": [
+    {
+      "title": "There's no reason for software to be slow anymore",
+      "url": "https://danluu.com/perf-opt",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
