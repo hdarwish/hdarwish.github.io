@@ -1,0 +1,27 @@
+{
+  "share_description": "The same file. Byte-identical weights, same checksum, sitting on disk. Load it in one runtime and it reasons its way through a long tool-calling task; load...",
+  "social_teasers": {
+    "linkedin": "Your local model isn't dumber. Your defaults are.\n\nThe same file. Byte-identical weights, same checksum, sitting on disk. Load it in one runtime and it reasons its way through a long tool-calling task; load...\n\nhttps://hafs.dev/blog/2026-08-23.html\n\n#local-llm #inference #evaluation",
+    "x": "Your local model isn't dumber. Your defaults are.\nhttps://hafs.dev/blog/2026-08-23.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-23.html",
+  "title": "Your local model isn't dumber. Your defaults are.",
+  "tags": [
+    "local-llm",
+    "inference",
+    "evaluation"
+  ],
+  "hn_refs": [
+    {
+      "title": "Why your local LLM feels dumber than it is",
+      "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+      "points": 265
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

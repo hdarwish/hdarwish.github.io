@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-23",
+    "title": "Your local model isn't dumber. Your defaults are.",
+    "tags": [
+      "local-llm",
+      "inference",
+      "evaluation"
+    ],
+    "excerpt": "The same file. Byte-identical weights, same checksum, sitting on disk. Load it in one runtime and it reasons its way through a long tool-calling task; load it in another and it starts talking to...",
+    "hn_refs": [
+      {
+        "title": "Why your local LLM feels dumber than it is",
+        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "points": 265
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Why your local LLM feels dumber than it is (Level1Techs forum thread)",
+        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "kind": "article"
+      },
+      {
+        "title": "Hugging Face Transformers: Chat templating documentation",
+        "url": "https://huggingface.co/docs/transformers/main/en/chat_templating",
+        "kind": "docs"
+      },
+      {
+        "title": "llama.cpp repository (quantization formats and perplexity/KLD tooling)",
+        "url": "https://github.com/ggml-org/llama.cpp",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "The same file. Byte-identical weights, same checksum, sitting on disk. Load it in one runtime and it reasons its way through a long tool-calling task; load...",
+    "social_teasers": {
+      "linkedin": "Your local model isn't dumber. Your defaults are.\n\nThe same file. Byte-identical weights, same checksum, sitting on disk. Load it in one runtime and it reasons its way through a long tool-calling task; load...\n\nhttps://hafs.dev/blog/2026-08-23.html\n\n#local-llm #inference #evaluation",
+      "x": "Your local model isn't dumber. Your defaults are.\nhttps://hafs.dev/blog/2026-08-23.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-23.html"
+  },
+  {
     "date": "2026-08-22",
     "title": "Your agent optimizes your benchmark, not your software",
     "tags": [
