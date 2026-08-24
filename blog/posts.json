@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-08-24",
+    "title": "Your model isn't the bottleneck. Your loop is.",
+    "tags": [
+      "ai-agents",
+      "systems-design",
+      "llm-engineering"
+    ],
+    "excerpt": "The strongest model on the market is losing users to cheaper tools. The FT reported it, and Hacker News spent 385 points arguing over whether the benchmarks are wrong or it's just price. Both answers...",
+    "hn_refs": [
+      {
+        "title": "What Is a Harness?",
+        "url": "https://earendil.com/posts/what-is-a-harness",
+        "points": 391
+      },
+      {
+        "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
+        "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
+        "points": 385
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "What is a Harness? (Earendil)",
+        "url": "https://earendil.com/posts/what-is-a-harness",
+        "kind": "article"
+      },
+      {
+        "title": "Building Effective Agents (Anthropic Engineering)",
+        "url": "https://www.anthropic.com/engineering/building-effective-agents",
+        "kind": "article"
+      },
+      {
+        "title": "Designing Data-Intensive Applications — Martin Kleppmann",
+        "url": "https://dataintensive.net/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "The strongest model on the market is losing users to cheaper tools. The FT reported it, and Hacker News spent 385 points arguing over whether the benchmarks...",
+    "social_teasers": {
+      "linkedin": "Your model isn't the bottleneck. Your loop is.\n\nThe strongest model on the market is losing users to cheaper tools. The FT reported it, and Hacker News spent 385 points arguing over whether the benchmarks...\n\nhttps://hafs.dev/blog/2026-08-24.html\n\n#ai-agents #systems-design #llm-engineering",
+      "x": "Your model isn't the bottleneck. Your loop is.\nhttps://hafs.dev/blog/2026-08-24.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-24.html"
+  },
+  {
     "date": "2026-08-23",
     "title": "Your local model isn't dumber. Your defaults are.",
     "tags": [
