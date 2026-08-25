@@ -1,0 +1,27 @@
+{
+  "share_description": "Your laptop can generate the picture without the cloud doing any of the math. It still won't hand you the file without the cloud's permission slip.\n\nThe...",
+  "social_teasers": {
+    "linkedin": "Local inference isn't local when a server issues the identity\n\nYour laptop can generate the picture without the cloud doing any of the math. It still won't hand you the file without the cloud's permission slip.\n\nThe...\n\nhttps://hafs.dev/blog/2026-08-25.html\n\n#reverse-engineering #on-device-ai #provenance",
+    "x": "Local inference isn't local when a server issues the identity\nhttps://hafs.dev/blog/2026-08-25.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-25.html",
+  "title": "Local inference isn't local when a server issues the identity",
+  "tags": [
+    "reverse-engineering",
+    "on-device-ai",
+    "provenance"
+  ],
+  "hn_refs": [
+    {
+      "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
+      "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

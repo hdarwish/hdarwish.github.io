@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local inference isn&#39;t local when a server issues the identity - Hafs Ibrahim</title>
+    <meta name="description" content="Your laptop can generate the picture without the cloud doing any of the math. It still won&#39;t hand you the file without the cloud&#39;s permission slip.
+
+The...">
+    <meta property="og:title" content="Local inference isn&#39;t local when a server issues the identity">
+    <meta property="og:description" content="Your laptop can generate the picture without the cloud doing any of the math. It still won&#39;t hand you the file without the cloud&#39;s permission slip.
+
+The...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-25.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Local inference isn&#39;t local when a server issues the identity">
+    <meta name="twitter:description" content="Your laptop can generate the picture without the cloud doing any of the math. It still won&#39;t hand you the file without the cloud&#39;s permission slip.
+
+The...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-25">
+            <div class="blog-post-date">August 25, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">reverse-engineering</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">on-device-ai</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">provenance</span></div>
+            <h2 class="blog-post-title">Local inference isn&#39;t local when a server issues the identity</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-25-hero.png" alt="Local inference isn&#39;t local when a server issues the identity" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Your laptop can generate the picture without the cloud doing any of the math. It still won't hand you the file without the cloud's permission slip.</p>
+
+<p>The local part is entirely real, which is what makes this worth staring at. Xusheng Li pulled four <code>.onnxe</code> files out of the Paint app directory, XORed them against a key registry in <code>segapi.dll</code>, and got valid ONNX graphs back — <code>mager.onnx</code> alone is 15,284 nodes. Actual weights, actual Stable Diffusion, executing on the NPU in your machine, sitting on your disk in <code>C:\Program Files\WindowsApps\</code>. Nobody is faking the inference.</p>
+
+<p>And then Paint declines to give you the image unless a remote server has first handed back a GUID to stamp invisibly into the pixels. If that stamping step fails, the successfully generated bitmap is thrown away and you get an error.</p>
+
+<p>One failure path tells you more about how a feature was designed than any privacy disclosure ever will.</p>
+
+<p>You almost certainly evaluate "local" as a privacy property: does my data leave the machine? That's the question everyone asks, and it's the wrong shape. The question that actually predicts behavior is about <em>dependency</em> — what must be reachable for the operation to complete — and those two questions come apart in precisely the way this feature demonstrates.</p>
+
+<p>Walk the call tree. <code>CocreatorViewModel::GenerateImageAsync</code> calls into <code>StableDiffusionHelpers::GenerateAsync</code>, and look at the argument list: it already takes a <code>watermarkId</code>. The identity exists <em>before</em> a single tensor has been multiplied. It came from the prompt moderation round-trip — the server returns two things, the moderated prompt and a GUID. Sixteen bytes of server-issued identity, riding shotgun into a local inference call.</p>
+
+<p>Generation happens on your silicon. <code>Microsoft.ImageCreation.ImageGenerator</code> produces the result, output safety checks run, and then <code>Paint::AI::AddWatermark(bitmap, watermarkId)</code> hands the pixels and the GUID to <code>Watermarker.dll!WmkWriteWatermark</code>. Success gives you a watermarked bitmap and a <code>StableDiffusionResult</code>. Failure turns a completed generation into an error.</p>
+
+<p>The encoder is charmingly, revealingly picky. Payload under 16 bytes returns <code>-6</code>; over 16 bytes returns <code>-5</code> — two distinct error codes for the same wrongness, which I enjoy more than I should — and then the copy loop ignores the length parameter entirely and hard-codes <code>i &lt; 16</code>. The GUID isn't embedded raw, either. The wrapper builds an 18-byte, 144-bit message: <code>0x4c</code>, the sixteen GUID bytes, then a checksum that is simply the sum of those bytes mod 256. That checksum is the tell — you only add one when something downstream intends to <em>read</em> the message back and needs to know it read it correctly.</p>
+
+<p>The core encoder rounds usable image dimensions down to multiples of eight, keeps 144 counters, one per bit, and requires <em>every</em> bit to find a home.</p>
+
+<p>Every bit. No partial credit. Which means a small or awkwardly-shaped canvas can simply lack the room to carry 144 bits of message — and a canvas that can't carry the message is a canvas you don't get to keep.</p>
+
+<p>Now notice what this path is <em>not</em> wired to. Paint has a visible-watermark setting — Never, AskEveryTime, Always — which drives a completely separate route through <code>GetPerceptibleWatermarkSvg</code> and <code>AddPerceptibleWatermark</code> to composite a little Copilot logo into the corner. That's the one with a toggle. The GUID path goes through <code>AddWatermark</code>, has no setting anywhere, and is load-bearing.</p>
+
+<p>An analogy, and I'll tell you where it breaks. Picture a print shop that owns its own press: all the machinery is on-site, nothing gets faxed to headquarters, the ink is yours. But every sheet must carry a serial number, the serial numbers arrive from head office one at a time, and the press physically will not release a sheet it couldn't stamp. The press is local. The <em>press run</em> is not. Where the analogy breaks: a serial number on paper announces itself as a serial number, whereas this one lives in the pixel statistics, spread across 144 counters, invisible in whatever you post next.</p>
+
+<p>So forget the watermark for a moment and look only at the control flow. A successful NPU generation — weights loaded from your disk, tensors computed on your hardware, no cloud round-trip for the expensive part — gets <em>discarded</em> because a stamping step couldn't complete using a token that a server minted. That isn't a privacy architecture. It isn't even primarily a moderation architecture. It is a system that has concluded the artifact is invalid without an externally-issued identity, and has said so in the most emphatic way software can say anything: by failing.</p>
+
+<p>Local inference isn't local when a server issues the identity.</p>
+
+<p>Sit with that. It generalizes a long way past Paint.</p>
+
+<p>The portable idea: <strong>read the failure paths, not the feature list.</strong> Marketing describes the happy path, and the happy path only tells you what a system wants to be. The error branches tell you what it actually depends on. A component whose absence degrades the result is optional. A component whose absence destroys the result is the spine. In Paint, watermarking is the spine and the NPU is a performance optimization.</p>
+
+<p>Which sharpens the whole on-device pitch into two claims that sound alike and aren't. "Runs locally" is a statement about where the FLOPs happen. "Works offline" is a statement about the dependency graph. A vendor can say the first with a completely straight face while quietly declining to say the second — and provenance machinery, C2PA metadata, restricted save formats, invisible payloads, is exactly the kind of thing that lives in the second graph and never shows up in the first.</p>
+
+<p>None of which makes provenance a bad goal. Being able to tell what a machine made is going to matter enormously, possibly more than most privacy fights of the last decade. But provenance-first architecture means the artifact belongs to the chain of custody before it belongs to you, and that ordering is not a policy paragraph you can argue with. It's an <code>if</code> statement.</p>
+
+<p>Your NPU did the work. The server signed the receipt. Guess which one the code treats as mandatory.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">MS Paint and Photos inivisibly watermark even locally generated output with GUID</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://c2pa.org/specifications/specifications/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">C2PA Content Credentials Technical Specification</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Xusheng Li — Microsoft Paint and Photos Embed Server-Issued GUIDs as Invisible Watermarks</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://docs.binary.ninja/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Binary Ninja Documentation</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
