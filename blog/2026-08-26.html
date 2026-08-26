@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is the checksum of a binary that logs to itself? - Hafs Ibrahim</title>
+    <meta name="description" content="There is a webserver whose visitor log lives inside its own executable. Not beside it. Not in /var/log. Inside the file you typed to start the process. You...">
+    <meta property="og:title" content="What is the checksum of a binary that logs to itself?">
+    <meta property="og:description" content="There is a webserver whose visitor log lives inside its own executable. Not beside it. Not in /var/log. Inside the file you typed to start the process. You...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-26.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What is the checksum of a binary that logs to itself?">
+    <meta name="twitter:description" content="There is a webserver whose visitor log lives inside its own executable. Not beside it. Not in /var/log. Inside the file you typed to start the process. You...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-26">
+            <div class="blog-post-date">August 26, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">sqlite</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">executables</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">systems-design</span></div>
+            <h2 class="blog-post-title">What is the checksum of a binary that logs to itself?</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-26-hero.png" alt="What is the checksum of a binary that logs to itself?" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>There is a webserver whose visitor log lives <em>inside its own executable</em>. Not beside it. Not in <code>/var/log</code>. Inside the file you typed to start the process. You <code>curl</code> the homepage, and the binary gets one row longer.</p>
+
+<p>Farid Zakaria's SELF format does this with a completely straight face: the program <em>is</em> a SQLite database, <code>file server</code> reports <code>SQLite 3.x database, application id 1397050438</code>, and <code>sqlite3 server 'SELECT count(*) FROM presses'</code> answers <code>0</code> until somebody clicks the button. Then it answers <code>1</code>. Same file. Still executable.</p>
+
+<p>Take the party trick seriously for one minute and it starts eating your operational assumptions from the inside. What do you back up? What do you diff? What does it mean for two machines to be running "the same build"? Every deployment system, every integrity check, every <code>sha256sum</code> in a CI pipeline rests on an assumption nobody bothered to write down — and this format breaks it on the first HTTP request.</p>
+
+<p>Here's the machinery, because the machinery is the argument. SELF stores an ELF's segments as rows in a <code>segments</code> table. <code>binfmt_misc</code> matches the file, and the kernel does not <code>execve</code> your program at all — it execs an interpreter, <code>self-exec</code>, and hands it the path. The interpreter opens the database, maps the segments, jumps to the entry point, and passes <code>argv + 1</code> through, so the program's own <code>argv[0]</code> is the path to the file it came from. Crucially, the interpreter <em>releases its SQLite connection</em> before jumping. It hands the program the keys and steps out of the room.</p>
+
+<p>Which means the entire capability fits in one line of C:</p>
+
+<pre><code>int main(int argc, char **argv) {
+  sqlite3 *db;
+  /* the file the kernel just executed */
+  sqlite3_open(argv[0], &amp;db);
+}</code></pre>
+
+<p>That's it. That's the whole exotic new power. A program that can open itself with write access.</p>
+
+<p>The proof-of-concept, <code>self-httpd</code>, is three tables: <code>routes</code> (the website, inserted after compilation with <code>readfile()</code>), <code>visits</code>, and <code>presses</code>. Serving a page is <code>SELECT body FROM routes</code>. Logging a visit is <code>INSERT INTO visits</code>. The build pipeline is <code>cc -O2 server.c -o server.elf</code>, then <code>elf2self</code>, then a couple of <code>sqlite3</code> invocations. New endpoint? Not a redeploy — a row: <code>INSERT INTO handlers VALUES ('/api/busiest', 'SELECT path, count(*) FROM visits GROUP BY path ...')</code>. Redbean needed an embedded ZIP and Lua hooks to reach the equivalent. Here the container <em>is</em> the database and the hook <em>is</em> a row.</p>
+
+<p>I find this genuinely delightful, and I want that on the record before I start pulling on the loose thread.</p>
+
+<p>The loose thread is in the flag. The demo starts with <code>./server --journal wal 8080</code>, and if you know SQLite you already flinched, because write-ahead logging means there is now a <code>server-wal</code> and a <code>server-shm</code> sitting next to your "single file." The one-file promise leaks the instant you want decent write concurrency. Fine — that's a solvable annoyance.</p>
+
+<p>The unsolvable one is what happens to the pages <em>inside</em> the file. SQLite owns that space. It allocates b-tree pages as the visitor log grows, splits them when they fill, parks freed ones on a freelist, and reuses them later for whatever needs room; a <code>VACUUM</code> will happily rewrite the entire file into a new page order. Your machine code and your visitor log are now roommates in one page-allocation arena, and the librarian deciding who sits where is a general-purpose database engine tuned for throughput, with no opinion whatsoever about the sanctity of your <code>.text</code> segment.</p>
+
+<p>And the program keeps working perfectly, which is the part that should unsettle you. The interpreter doesn't seek to byte offset 0x1000; it asks for rows. Ask by key and you don't care where the bytes moved. So <em>correctness</em> survives the shuffling completely intact, and <em>identity</em> does not survive it at all. Those two properties have been welded together for your whole career by nothing more than the fact that files don't rearrange themselves, and SELF quietly unwelds them.</p>
+
+<p>Think of a hardcover book that writes its own marginalia. Beautiful object, genuinely useful, and the ISBN on the back no longer identifies the copy in your hands. The analogy breaks in an important place — marginalia stays in the margins, whereas SQLite is free to rearrange the whole binding — and that break is exactly the problem.</p>
+
+<p>Picture two servers, same <code>elf2self</code> output, deployed together. Give them a few minutes of real traffic and their checksums diverge. Neither is corrupted. Both are correct. Your fleet-integrity dashboard is now a random number generator, your backups contain production user data laminated into the code artifact, and rolling back the binary rolls back the visitor log with it. You cannot revert the program without reverting the state, because there is no seam left to cut along.</p>
+
+<p>Sit with the fact that a running process holds its own executable open read-write, and something reorganizes. Immutable text pages, code signing, dm-verity, container image digests, <code>diff</code>ing two builds, the entire question "is this the binary I shipped" — none of those are things we invented. Every one of them is a <em>consequence</em> of an invariant nobody ever had to argue for, defend in a design review, or even notice, because the filesystem was enforcing it for free the whole time.</p>
+
+<p>Making the executable writable collapses code and state into one artifact you cannot defend.</p>
+
+<p>Now the gift, which is better than the warning. SELF doesn't so much destroy that invariant as <em>hand it to you</em>, unbundled and explicit. The old one was file-shaped, which made it all-or-nothing and invisible. The new one is schema-shaped: hash the <code>segments</code> table and the <code>routes</code> table, ignore <code>visits</code> and <code>presses</code>, and you have a build identity that survives traffic. Backups become a query. "Are these two machines running the same code?" becomes a <code>SELECT</code> over a named subset of rows instead of a prayer about bytes.</p>
+
+<p>Integrity stops being a property of the container and becomes a property you have to <em>name</em>. That's harder. It's also honest, and it generalizes far past one weekend project: most of the invariants holding your system upright are not in your code at all. They live in the substrate — the filesystem, the network, the scheduler, the clock — and you will never enumerate them by rereading your own repo, because you didn't write them and nothing reminds you they're load-bearing.</p>
+
+<p>You find a load-bearing wall the way everyone finds one. Someone removes it, and the ceiling tells you.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://fzakaria.com/2026/08/24/actually-queryable-executables" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Queryable Executables</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://redbean.dev/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">redbean: single-file distributable web server (Justine Tunney)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.sqlite.org/wal.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">SQLite: Write-Ahead Logging</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://docs.kernel.org/admin-guide/binfmt-misc.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Kernel docs: binfmt_misc — Using miscellaneous binary formats</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
