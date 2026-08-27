@@ -1,0 +1,27 @@
+{
+  "share_description": "Somewhere in your repo there is a line that looks like AutoModel.from_pretrained(\"bert-base-uncased\"). One string. No version, no hash, no hostname, no...",
+  "social_teasers": {
+    "linkedin": "The lock-in was never the weights. It was the name.\n\nSomewhere in your repo there is a line that looks like AutoModel.from_pretrained(\"bert-base-uncased\"). One string. No version, no hash, no hostname, no...\n\nhttps://hafs.dev/blog/2026-08-27.html\n\n#supply-chain #ml-infrastructure #vendor-lock-in",
+    "x": "The lock-in was never the weights. It was the name.\nhttps://hafs.dev/blog/2026-08-27.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-27.html",
+  "title": "The lock-in was never the weights. It was the name.",
+  "tags": [
+    "supply-chain",
+    "ml-infrastructure",
+    "vendor-lock-in"
+  ],
+  "hn_refs": [
+    {
+      "title": "Nvidia agrees to acquire Hugging Face for $13B",
+      "url": "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8",
+      "points": 722
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

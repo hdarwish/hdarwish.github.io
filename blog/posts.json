@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-27",
+    "title": "The lock-in was never the weights. It was the name.",
+    "tags": [
+      "supply-chain",
+      "ml-infrastructure",
+      "vendor-lock-in"
+    ],
+    "excerpt": "Somewhere in your repo there is a line that looks like AutoModel.from_pretrained(\"bert-base-uncased\"). One string. No version, no hash, no hostname, no vendor. It resolves at build time, over the...",
+    "hn_refs": [
+      {
+        "title": "Nvidia agrees to acquire Hugging Face for $13B",
+        "url": "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8",
+        "points": 722
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Hugging Face Hub docs: downloading files and pinning revisions",
+        "url": "https://huggingface.co/docs/huggingface_hub/index",
+        "kind": "docs"
+      },
+      {
+        "title": "Reflections on Trusting Trust (Ken Thompson)",
+        "url": "https://dl.acm.org/doi/10.1145/358198.358210",
+        "kind": "paper"
+      },
+      {
+        "title": "Securing the Software Supply Chain: SLSA framework",
+        "url": "https://slsa.dev/",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Somewhere in your repo there is a line that looks like AutoModel.from_pretrained(\"bert-base-uncased\"). One string. No version, no hash, no hostname, no...",
+    "social_teasers": {
+      "linkedin": "The lock-in was never the weights. It was the name.\n\nSomewhere in your repo there is a line that looks like AutoModel.from_pretrained(\"bert-base-uncased\"). One string. No version, no hash, no hostname, no...\n\nhttps://hafs.dev/blog/2026-08-27.html\n\n#supply-chain #ml-infrastructure #vendor-lock-in",
+      "x": "The lock-in was never the weights. It was the name.\nhttps://hafs.dev/blog/2026-08-27.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-27.html"
+  },
+  {
     "date": "2026-08-26",
     "title": "What is the checksum of a binary that logs to itself?",
     "tags": [
