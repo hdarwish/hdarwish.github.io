@@ -1,0 +1,27 @@
+{
+  "share_description": "Cloudflare freed roughly 100 terabytes of RAM across their 1.1.1.1 DNS cache without evicting a single extra record. Same hit rate. Same data. Same TTLs....",
+  "social_teasers": {
+    "linkedin": "Your cache is a metadata museum, not a data warehouse\n\nCloudflare freed roughly 100 terabytes of RAM across their 1.1.1.1 DNS cache without evicting a single extra record. Same hit rate. Same data. Same TTLs....\n\nhttps://hafs.dev/blog/2026-08-28.html\n\n#Caching #MemoryOptimization #DistributedSystems",
+    "x": "Your cache is a metadata museum, not a data warehouse\nhttps://hafs.dev/blog/2026-08-28.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-28.html",
+  "title": "Your cache is a metadata museum, not a data warehouse",
+  "tags": [
+    "Caching",
+    "Memory Optimization",
+    "Distributed Systems"
+  ],
+  "hn_refs": [
+    {
+      "title": "Saving 100 terabytes of memory by optimizing 1.1.1.1's DNS cache",
+      "url": "https://blog.cloudflare.com/dns-cache-memory-optimization-1111",
+      "points": 646
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

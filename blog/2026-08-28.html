@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your cache is a metadata museum, not a data warehouse - Hafs Ibrahim</title>
+    <meta name="description" content="Cloudflare freed roughly 100 terabytes of RAM across their 1.1.1.1 DNS cache without evicting a single extra record. Same hit rate. Same data. Same TTLs....">
+    <meta property="og:title" content="Your cache is a metadata museum, not a data warehouse">
+    <meta property="og:description" content="Cloudflare freed roughly 100 terabytes of RAM across their 1.1.1.1 DNS cache without evicting a single extra record. Same hit rate. Same data. Same TTLs....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-28.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your cache is a metadata museum, not a data warehouse">
+    <meta name="twitter:description" content="Cloudflare freed roughly 100 terabytes of RAM across their 1.1.1.1 DNS cache without evicting a single extra record. Same hit rate. Same data. Same TTLs....">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-28">
+            <div class="blog-post-date">August 28, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Caching</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Memory Optimization</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">Distributed Systems</span></div>
+            <h2 class="blog-post-title">Your cache is a metadata museum, not a data warehouse</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-28-hero.png" alt="Your cache is a metadata museum, not a data warehouse" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Cloudflare freed roughly 100 terabytes of RAM across their 1.1.1.1 DNS cache without evicting a single extra record. Same hit rate. Same data. Same TTLs. They just changed the shape of the entries.</p>
+
+<p>That number should make you suspicious of every cache-sizing conversation you have ever sat through, because almost all of them are arguments about eviction policy, and eviction policy was not the lever.</p>
+
+<p>Here is what is at stake: if the memory in your cache is mostly not your data, then every hour you spend tuning LRU versus LFU versus TinyLFU is an hour spent choosing which items to throw out of a room that was never full of items in the first place. You will get single-digit percentage wins and feel clever. Meanwhile the actual multiple sits untouched in the layout of the entry.</p>
+
+<p>So let's look at what a cache entry actually is, because "the cached value" is a fiction we tell ourselves.</p>
+
+<p>Picture a DNS cache holding an A record. The payload you care about is four bytes — an IPv4 address. Around it: the key, which is the domain name; an expiry timestamp; the time it was inserted; the TTL as served; a last-access stamp or a frequency counter so the eviction policy has something to reason about; two pointers to splice the entry into an LRU list; one more pointer to hang it off a hash bucket; a length field; a type field; flags. On a 64-bit machine each of those pointers and timestamps is eight bytes, and none of them is optional if you want the cache to be searchable, expirable, and evictable.</p>
+
+<p>Then the allocator gets involved. Ask for 47 bytes and a size-class allocator hands you 64, quietly billing you for the difference. Ask for 65 and you may get 128. Add the hash table itself, which needs slack — a table run at full occupancy degrades into linear scanning, so you keep empty slots on purpose, and empty slots are RAM you are paying for in order to store nothing. Add struct padding, because the compiler aligns fields and eats the gaps.</p>
+
+<p>Now multiply by hundreds of millions of entries and notice the structure of the cost: the overhead is <em>per entry</em>, not per byte. Your data volume scales with how big your values are. Your bookkeeping scales with how <em>many</em> values you have. For a cache of many tiny things — DNS records, session tokens, feature flags, permission bits, ID-to-name lookups — those two curves are not close. The bookkeeping wins, and it wins by a factor, not a margin.</p>
+
+<p>Think of it as a suitcase. The clothes are your data: light, small, the whole reason for the trip. But every suitcase in this system arrives with its own dedicated baggage carousel, its own conveyor belt, its own numbered claim ticket and scanner and staff. For a few shirts, you are running an airport. Cloudflare's move was not to pack fewer shirts or throw suitcases away sooner. They redesigned the terminal.</p>
+
+<p>Where the analogy breaks — and this matters — is that you cannot simply abandon the carousel. The pointers and timestamps are not waste; they are the machinery that makes the entry findable and expirable at all. You do not delete overhead. You restructure so that one piece of machinery serves many suitcases: shared arenas instead of per-entry allocations, packed integer fields instead of eight-byte stamps, an index that stores offsets instead of pointers, expiry handled in bulk rather than stamped on every record. The bookkeeping gets amortized rather than removed.</p>
+
+<p>Which brings us to the uncomfortable part. If you have ever built a cache out of a hash map of small structs, added a timestamp field for TTL, added a counter field because you wanted smarter eviction, then sized the thing by counting entries and multiplying by "about what a record costs" — you have built the airport. Probably several times. I would bet the ratio in your service is worse than you think, and nobody has ever measured it, because there is no dashboard for bytes-per-entry.</p>
+
+<p><strong>Cache memory is a schema problem, not an eviction problem.</strong></p>
+
+<p>Sit with that for a second before reaching for the code.</p>
+
+<p>The portable move is a change of unit. Stop reporting cache size in entries and start reporting it in bytes-per-entry, then divide: what fraction of that is payload? If the answer is a third, you are not running a cache, you are running a filing system that happens to contain some files. That single ratio tells you whether your next optimization should be a policy or a struct — and it takes an afternoon to measure, versus weeks to argue about admission algorithms.</p>
+
+<p>There is a deeper habit hiding here, too. Eviction policy is <em>interesting</em> — it has papers, benchmarks, elegant math, a whole literature of clever. Memory layout is <em>tedious</em> — it has alignment rules and size classes and no leaderboard. We drift toward the interesting knob and mistake our attention for importance. The 100 terabytes were sitting in the tedious place the entire time.</p>
+
+<p>Every cache is a bet about the future, and you have been calculating the odds beautifully while ignoring the cost of the chips.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://blog.cloudflare.com/dns-cache-memory-optimization-1111" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Saving 100 terabytes of memory by optimizing 1.1.1.1&#39;s DNS cache</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲646</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Design and Implementation of Modern Caching Systems</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://blog.cloudflare.com/dns-cache-memory-optimization-1111" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Cloudflare&#39;s article on DNS caching improvements</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
