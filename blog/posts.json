@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-29",
+    "title": "Your agent can add beliefs. It cannot retract them.",
+    "tags": [
+      "llm-agents",
+      "datalog",
+      "knowledge-representation"
+    ],
+    "excerpt": "Tell a model that an assumption was wrong. It will apologize, gracefully, and agree with you. Then it will keep reasoning from everything that assumption produced.Not because it's stubborn. Because...",
+    "hn_refs": [
+      {
+        "title": "I accidentally turned LLM memory into program analysis",
+        "url": "https://pwning.systems/posts/llm-memory-program-analysis",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Foundations of Databases (Abiteboul, Hull, Vianu) — the canonical Datalog chapters",
+        "url": "http://webdam.inria.fr/Alice/",
+        "kind": "book"
+      },
+      {
+        "title": "Soufflé: a Datalog engine built for large-scale program analysis",
+        "url": "https://souffle-lang.github.io/",
+        "kind": "docs"
+      },
+      {
+        "title": "Truth Maintenance Systems (Doyle's dependency-directed backtracking)",
+        "url": "https://dspace.mit.edu/handle/1721.1/6933",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Tell a model that an assumption was wrong. It will apologize, gracefully, and agree with you. Then it will keep reasoning from everything that assumption...",
+    "social_teasers": {
+      "linkedin": "Your agent can add beliefs. It cannot retract them.\n\nTell a model that an assumption was wrong. It will apologize, gracefully, and agree with you. Then it will keep reasoning from everything that assumption...\n\nhttps://hafs.dev/blog/2026-08-29.html\n\n#llm-agents #datalog #knowledge-representation",
+      "x": "Your agent can add beliefs. It cannot retract them.\nhttps://hafs.dev/blog/2026-08-29.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-29.html"
+  },
+  {
     "date": "2026-08-28",
     "title": "Your cache is a metadata museum, not a data warehouse",
     "tags": [

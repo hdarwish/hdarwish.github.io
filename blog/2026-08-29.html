@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your agent can add beliefs. It cannot retract them. - Hafs Ibrahim</title>
+    <meta name="description" content="Tell a model that an assumption was wrong. It will apologize, gracefully, and agree with you. Then it will keep reasoning from everything that assumption...">
+    <meta property="og:title" content="Your agent can add beliefs. It cannot retract them.">
+    <meta property="og:description" content="Tell a model that an assumption was wrong. It will apologize, gracefully, and agree with you. Then it will keep reasoning from everything that assumption...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-29.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your agent can add beliefs. It cannot retract them.">
+    <meta name="twitter:description" content="Tell a model that an assumption was wrong. It will apologize, gracefully, and agree with you. Then it will keep reasoning from everything that assumption...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-29">
+            <div class="blog-post-date">August 29, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">llm-agents</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">datalog</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">knowledge-representation</span></div>
+            <h2 class="blog-post-title">Your agent can add beliefs. It cannot retract them.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-29-hero.png" alt="Your agent can add beliefs. It cannot retract them." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Tell a model that an assumption was wrong. It will apologize, gracefully, and agree with you. Then it will keep reasoning from everything that assumption produced.</p><p>Not because it's stubborn. Because nothing in the system knows that a conclusion had a <em>parent</em>. You corrected a fact; the children of that fact are still out there, wearing the fact's clothes, sounding exactly as confident as they did an hour ago.</p><p>An agent that can accumulate beliefs but never withdraw them doesn't degrade gracefully over a long session. It degrades <em>invisibly</em>. The falsified premise quietly drops out of the running summary while its descendants stay in, now unmoored from the only thing that ever justified them. Those descendants are hallucinations of the worst possible kind: hallucinations with citations, traceable to a real earlier turn in the transcript, which is precisely what lets them survive review by a careful human.</p><p>Jordy Zomer walked into this from the least forgiving direction available: multi-hour vulnerability research with an LLM. His complaint is precise, not vibes. The model would propose approaches already ruled out, forget that an assumption had been falsified, and keep reasoning confidently from an observation that no longer held. His example is worth sitting with, because it is small enough to hold in one hand and structured enough to break cleanly.</p><p>During an investigation you establish three things: the attacker controls <code>object_a</code>; <code>object_a</code> points to <code>object_b</code>; <code>object_b</code> is a kernel object. Conclusion: the attacker can control a kernel object. Good. Real progress, the kind you'd write down.</p><p>Two hours later, LLDB says <code>object_a</code> does not point to <code>object_b</code>.</p><p>Look at what a conventional memory system is holding at that moment. Four documents: the control claim, the pointer claim, the derived claim that the attacker reaches a kernel object, and the fresh observation that the pointer claim is false. All four are text. All four are embeddable. All four are retrievable, and none of them outranks another on the grounds of being <em>true</em>. When the agent next asks "is this exploitable?", it gets back some subset chosen by cosine similarity, and you are hoping — genuinely hoping, as a load-bearing element of your architecture — that the model notices the contradiction and works out on the fly which conclusions survived it.</p><p>Zomer's move is to notice this is a solved problem wearing an unfamiliar hat. It's program analysis. You have base facts, you have rules that derive further facts, you compute a fixed point, and — critically — when an input fact changes there is decades of technique for updating only the affected results instead of recomputing the world.</p><p>So he wrote a Datalog engine for agent memory and called it Lemmalog. You don't store prose, you store facts and rules: <code>controls(attacker, object_a)</code>, <code>points_to(object_a, object_b)</code>, <code>kernel_object(object_b)</code>, plus a rule saying an attacker controls a kernel object if it controls something that points to one. The engine derives <code>controls_kernel_object(attacker)</code> on its own. That part is unremarkable — first-week Datalog, the sort of thing textbooks use to introduce recursion.</p><p>The remarkable part is what happens when <code>points_to</code> turns out to be wrong. Because the conclusion was <em>derived</em>, the engine knows what it was derived <em>from</em>. Retract the parent and the child is invalidated automatically — not deprioritized, not out-ranked by a fresher document, not left hoping for a diligent reader.</p><p>Gone from what the system currently believes.</p><p>The division of labour is the elegant bit, and it inverts how most memory products are built. The LLM does the fuzzy work it's genuinely superhuman at: reading debugger output, source, and prose, and turning "LLDB shows the freed object is later reused as the destination of the write" into <code>freed(object_a)</code> and <code>reused_as(object_a, write_target)</code>. Then it stops. The deterministic work — what follows from what, and what stops following when something changes — belongs to the database. The model is a translator, not a bookkeeper.</p><p>A search index is a filing cabinet. You can add papers forever, including a paper that says "the paper in folder three is wrong," and the cabinet will hold both without discomfort, because a cabinet has no opinion about which of its contents are currently true. A spreadsheet is a different animal entirely: change one cell and every formula downstream moves with it, because the dependency was recorded at write time rather than reconstructed at read time. Most agent memory is a filing cabinet marketed as a spreadsheet.</p><p>The analogy breaks, and the break teaches you something. Spreadsheets forbid cycles; Datalog is built for them. <code>reach(A,C) :- calls(A,B), reach(B,C)</code> is the entire point of the tool, and recursive derivation is exactly why naive invalidation gets hard — a fact can support a conclusion that helps support the fact. Zomer flags retraction as one of the first genuinely interesting problems he ran into. Adding facts is easy. Removing them is the research.</p><p>Which brings us to the thing that reframes the whole category. Embedding-based memory has no representation for <em>false</em>. Not a weak one — none. No slot, no operator, no type. It can express "less similar to your query." It cannot express "this is no longer the case." So when you tell your agent it was wrong, that correction deletes nothing; it walks into the arena as one more document competing for top-k against the belief it was supposed to kill.</p><p>Contradiction becomes a ranking problem.</p><p>Which is why the fix was never a bigger context window or a more stern prompt. Agent memory needs retraction, not retrieval. Store derivations, not conversations.</p><p>The portable version is a question you can ask of any system, including the one you're building: <strong>when a belief in here turns out to be false, what else stops being true — and does any component know the answer?</strong> If the answer is "the model will probably catch it," you don't have memory. You have an archive with excellent manners. Run the test on a memory product's own documentation sometime; most of them fail it in the very section where they explain relevance scoring, and they fail it proudly.</p><p>You don't need to rewrite your stack in Datalog. You need to find the handful of claims your agent's reasoning actually stands on, give them names, and record what depends on what. Everything else can stay as fuzzy prose — prose is fine for texture. The skeleton has to be a graph.</p><p>Knowledge isn't a pile of things you were once told. It's the set of things that still follow.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://pwning.systems/posts/llm-memory-program-analysis" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">I accidentally turned LLM memory into program analysis</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="http://webdam.inria.fr/Alice/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Foundations of Databases (Abiteboul, Hull, Vianu) — the canonical Datalog chapters</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://souffle-lang.github.io/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Soufflé: a Datalog engine built for large-scale program analysis</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://dspace.mit.edu/handle/1721.1/6933" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Truth Maintenance Systems (Doyle&#39;s dependency-directed backtracking)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
