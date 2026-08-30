@@ -1,0 +1,27 @@
+{
+  "share_description": "Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...",
+  "social_teasers": {
+    "linkedin": "Your bug backlog measures your patience, not your software\n\nDan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...\n\nhttps://hafs.dev/blog/2026-08-30.html\n\n#softwarequality #perception #engineeringculture",
+    "x": "Your bug backlog measures your patience, not your software\nhttps://hafs.dev/blog/2026-08-30.html"
+  },
+  "url": "https://hafs.dev/blog/2026-08-30.html",
+  "title": "Your bug backlog measures your patience, not your software",
+  "tags": [
+    "software quality",
+    "perception",
+    "engineering culture"
+  ],
+  "hn_refs": [
+    {
+      "title": "Bug Blindness",
+      "url": "https://danluu.com/bug-blind",
+      "points": 163
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

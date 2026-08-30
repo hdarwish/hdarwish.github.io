@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-08-30",
+    "title": "Your bug backlog measures your patience, not your software",
+    "tags": [
+      "software quality",
+      "perception",
+      "engineering culture"
+    ],
+    "excerpt": "Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used computers strangely — some...",
+    "hn_refs": [
+      {
+        "title": "Bug Blindness",
+        "url": "https://danluu.com/bug-blind",
+        "points": 163
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Bug blindness — Dan Luu",
+        "url": "https://danluu.com/bug-blind/",
+        "kind": "article"
+      },
+      {
+        "title": "Some of my favorite technical bugs (and how software gets bad)",
+        "url": "https://danluu.com/",
+        "kind": "article"
+      },
+      {
+        "title": "The Design of Everyday Things — Don Norman",
+        "url": "https://www.basicbooks.com/titles/don-norman/the-design-of-everyday-things/9780465050659/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...",
+    "social_teasers": {
+      "linkedin": "Your bug backlog measures your patience, not your software\n\nDan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...\n\nhttps://hafs.dev/blog/2026-08-30.html\n\n#softwarequality #perception #engineeringculture",
+      "x": "Your bug backlog measures your patience, not your software\nhttps://hafs.dev/blog/2026-08-30.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-30.html"
+  },
+  {
     "date": "2026-08-29",
     "title": "Your agent can add beliefs. It cannot retract them.",
     "tags": [

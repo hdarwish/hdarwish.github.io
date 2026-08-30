@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your bug backlog measures your patience, not your software - Hafs Ibrahim</title>
+    <meta name="description" content="Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...">
+    <meta property="og:title" content="Your bug backlog measures your patience, not your software">
+    <meta property="og:description" content="Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-30.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your bug backlog measures your patience, not your software">
+    <meta name="twitter:description" content="Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-30">
+            <div class="blog-post-date">August 30, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software quality</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">perception</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">engineering culture</span></div>
+            <h2 class="blog-post-title">Your bug backlog measures your patience, not your software</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-30-hero.png" alt="Your bug backlog measures your patience, not your software" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used computers strangely — some corner-case-generating personal style. Then he noticed something much worse: the other people were hitting <em>the same bugs</em>. They just weren't seeing them.</p>
+
+<p>And when he started pointing bugs out to friends, something happened that should genuinely unsettle you. After a few weeks, the ones so inclined started seeing them too. The bugs didn't change. The people did.</p>
+
+<p>Which means bug perception is not a property of software. It's a trained skill, it can be installed in a few weeks, and — this is the part that should make you nervous about your own team — it can also be <em>uninstalled</em>.</p>
+
+<p>Every prioritization decision you make is downstream of what your team can still perceive. Your backlog, your severity labels, your "P3 — cosmetic," your confident internal chorus of <em>the thing works well</em>: all of it rests on human perception, and human perception is the least stable instrument anywhere in your stack. A load balancer degrades loudly. A nervous system degrades silently and keeps reporting nominal.</p>
+
+<p>The mechanism is mundane, which is exactly what makes it so effective. Perception isn't a camera; it's a prediction machine that spends its limited attention on surprises. When a stimulus stops carrying information — when it becomes fully predicted — your brain stops paying for it. You do not feel the glasses on your face. You do not hear your fridge until it stops. This is not laziness or stupidity; it is a superb adaptation, because a creature that consciously registered every unchanging input would be paralyzed by the weight of its own socks.</p>
+
+<p>Now point that machinery at a broken button. The first time the form eats your input you notice sharply, and with feeling. The tenth time, less. By the fiftieth, your hands have quietly grown a workaround — you copy the text before you hit submit, without deciding to, the way you step over the loose floorboard on the stairs without once thinking the words <em>loose floorboard</em>.</p>
+
+<p>The bug is still firing. Your report of it has stopped.</p>
+
+<p>The workaround is the crucial move, because it does two things at once: it fixes the symptom for you, and it destroys the evidence. Worse, it migrates the knowledge out of the part of you that can write tickets and into the part of you that ties shoes. You cannot file a bug against your own motor memory. Luu describes finding products that only work if you perform quite a few non-intuitive workarounds — products a normal person simply could not operate — while the internal comment history says the thing is great. Nobody in that thread was lying. Everyone in it had hands that already knew the way through.</p>
+
+<p>Watch the same effect in public, with fandom, where it's easier to see because there's a scoreboard. Luu wrote up search results from Google, Bing, and Kagi and found all three returning SEO spam and, in some cases, outright scams. Almost nobody defended Google or Bing. Kagi fans told him he was wrong — and then sent him their own search results as proof, results that contained no good answer and were full of spam. One person had pinned GitHub to the top of their results, which works beautifully for queries where you want software hosted on GitHub and does precisely nothing for everything else. He calls out his own Volvo forums the same way: the reliability data has been mediocre-to-poor for over a decade, and the forums insist Volvos are among the most reliable cars and the data must be wrong.</p>
+
+<p>Sensory adaptation and motivated fandom are different machines with the same output. Both convert defects into invisibility.</p>
+
+<p>So ask who on earth is maximally exposed to both. Your engineers use the product more than any customer ever will. They use it daily, they have the deepest possible investment in believing it's good, and they have had more opportunities than any living human to grow calluses over its rough edges. They know which field to fill first. They know which retry works. They have been marinating in the failure modes since before the failure modes had ticket numbers.</p>
+
+<p>Which means the practice universally recommended for quality — use your own product, live in it, dogfood it — is also the most efficient known method for going blind to your own product's failures. Same practice. Same mechanism. The exposure that teaches you the product is the exposure that adapts you to its pain.</p>
+
+<p><strong>Your bug count measures your team's tolerance, not your software's defects.</strong></p>
+
+<p>Which reframes the backlog entirely. It is not an inventory of what's broken; it's a log of the moments when someone's irritation briefly exceeded their adaptation — and irritation is a depleting resource. Late in a project, on a tired team, on a product everyone has used for three years, the reported defect rate falls. Not because quality rose. Because the sensors saturated. You are reading a thermometer that has slowly stopped responding to heat, and congratulating yourself on the weather.</p>
+
+<p>The thermometer breaks as an analogy in one place worth naming: a thermometer has no opinions. Your team does, and opinions accelerate the drift. The Kagi fans weren't merely desensitized; they were <em>defending</em>. Adaptation plus loyalty is much faster than adaptation alone, which is why the strongest blindness sits exactly where the strongest ownership sits.</p>
+
+<p>The portable move, then: stop treating bug reports as a measurement and start treating them as a reading from an instrument that needs calibration. Calibrate it the way Luu did with his friends — perception is trainable in weeks by someone pointing and saying <em>that, right there, is broken</em>. Import a fresh nervous system on purpose: a person who has never touched the thing, doing a real task, watched in silence. Every workaround they don't know is a bug you have lost the ability to see. Write down what your own fingers do automatically; that list is your true defect report, and it is longer than your backlog.</p>
+
+<p>And when a stranger says your product is bad, kill the reflex to explain what they did wrong. They are describing something your team can no longer physically perceive — and the bug you've stopped feeling is still there, still firing, still being paid for. Just not by you.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://danluu.com/bug-blind" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Bug Blindness</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲163</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://danluu.com/bug-blind/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Bug blindness — Dan Luu</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://danluu.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Some of my favorite technical bugs (and how software gets bad)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.basicbooks.com/titles/don-norman/the-design-of-everyday-things/9780465050659/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Design of Everyday Things — Don Norman</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
