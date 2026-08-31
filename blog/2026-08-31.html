@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The crawlers aren&#39;t eating bandwidth. They&#39;re ending anonymous reads. - Hafs Ibrahim</title>
+    <meta name="description" content="Kernel.org now spends more CPU turning git commits into HTML for scrapers than it spends on every legitimate request combined — including the git clones,...">
+    <meta property="og:title" content="The crawlers aren&#39;t eating bandwidth. They&#39;re ending anonymous reads.">
+    <meta property="og:description" content="Kernel.org now spends more CPU turning git commits into HTML for scrapers than it spends on every legitimate request combined — including the git clones,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-08-31.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The crawlers aren&#39;t eating bandwidth. They&#39;re ending anonymous reads.">
+    <meta name="twitter:description" content="Kernel.org now spends more CPU turning git commits into HTML for scrapers than it spends on every legitimate request combined — including the git clones,...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-08-31">
+            <div class="blog-post-date">August 31, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">web-infrastructure</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">ai-crawlers</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">decentralization</span></div>
+            <h2 class="blog-post-title">The crawlers aren&#39;t eating bandwidth. They&#39;re ending anonymous reads.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-31-hero.png" alt="The crawlers aren&#39;t eating bandwidth. They&#39;re ending anonymous reads." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Kernel.org now spends more CPU turning git commits into HTML for scrapers than it spends on every legitimate request combined — including the git clones, which are the entire reason the machine exists. That's Konstantin Ryabitsev's own accounting, published by the person who has to pay the bill.</p>
+
+<p>The part that should make you sit up: everything those scrapers want is available as a single <code>git clone</code>. The whole history, every object, one transfer, done. LKML too — it's git repositories all the way down. The efficient path was left wide open on purpose, by people who wanted the archive to outlive them.</p>
+
+<p>Nobody took it.</p>
+
+<p>You should care about this even if you will never run a git host, because the fix kernel.org is being shoved toward is the fix everyone is being shoved toward, and it is not "better rate limiting." It is the quiet retirement of the idea that a stranger with no account and no name can read your public thing.</p>
+
+<p>Start with the asymmetry, because that's the engine. A GET for a commit page costs the client a few hundred bytes and a millisecond of attention. Answering it means cgit opens a repository, locates the object, computes a diff against a parent, decorates the syntax, and renders HTML. Cheap to ask, expensive to answer — and the ratio between those two numbers is the entire story. Multiply that ratio by indifference and you get a machine that works full time for robots.</p>
+
+<p>Now the combinatorics, which are funny in a way that hurts. <code>linux.git</code> holds roughly 1.48 million commits. There are about 922 forks of it on git.kernel.org, and on the backend those forks are nearly free because they share objects — genuinely lovely engineering. To a crawler walking URLs, though, 922 forks × 1.48 million commits is several <em>billion</em> distinct valid addresses resolving to 922 duplicate copies of the same bytes. Commits are only the opening move. cgit will also serve patches, plain renders, and diffs between <em>arbitrary pairs</em> of commits — and that last one is quadratic. Ryabitsev's estimate for one fork is "1.2 metric bajillion" URLs, which is the correct unit.</p>
+
+<p>Think of cgit as a public library that will photocopy any two pages in its collection side by side, on request, for free, no card required. Wonderful institution. Right up until someone asks for every pair.</p>
+
+<p>The analogy breaks in exactly the place that matters, and hold onto that, because we'll come back to it: a librarian can see the face at the desk.</p>
+
+<p>Watch how each defense fails, because the pattern matters more than the details. Ban by user-agent — the bots announced themselves, until they didn't. Ban by IP, because an address methodically enumerating every commit in an eight-year-old abandoned fork is not a lone Chrome user with an unusually strong clicking arm. Ban by ASN, because traffic claiming to be Firefox while originating in a cloud compute range is self-refuting. Every step widened the blast radius, caught a few real humans, and worked for a while.</p>
+
+<p>Then the requests started arriving from millions of residential and mobile addresses, four or five requests each, then gone forever. The industry term is "proxy SDK monetization" — apps quietly reselling your home connection as scraping capacity — and it is a real, funded business. There is nobody left to ban. By the time an address is identifiable as a bot it is already finished with you, and your firewall has grown one rule that will never match again.</p>
+
+<p>So kernel.org tried economics: Anubis, a proof-of-work challenge at the perimeter. Burn some cycles — find a string whose hash starts with four zeroes — before I burn mine. It worked instantly and completely; the bots simply left, for months. Then they came back solving difficulty 4. Difficulty went to 5, which on a phone takes several seconds and makes the handset uncomfortably warm. That bought a few more months.</p>
+
+<p>Then the bots started solving difficulty 5.</p>
+
+<p>Notice who paid that toll and who could afford it. A proof-of-work wall taxes both sides symmetrically, and only one side has capital, amortization, and a revenue model that makes the electricity a line item.</p>
+
+<p>Look at which endpoints got weaponized. Arbitrary commit-to-commit diffs. Per-commit HTML. Plain-text renders. Every fork independently addressable. Not one of those was built as an attack surface. They exist because someone reviewing a patch wanted to send a colleague a link to a specific diff instead of telling them to clone eight gigabytes and figure it out. Each one is a courtesy: a tiny request that triggers real work on a stranger's behalf, offered freely because that was the decent thing to do.</p>
+
+<p>Which means the crawler crisis was never a bandwidth problem, and the CPU numbers were always a distraction. Bandwidth you can buy. What you cannot buy at any price is the ability to tell a curious human from a distributed scraper wearing a million residential IPs — and once that capability is gone, every remaining defense works the same way: challenge pages, login walls, API keys, Cloudflare. All of them refuse to serve unidentified strangers, because refusing is the only lever left.</p>
+
+<p><strong>The crawlers aren't exhausting bandwidth. They're ending anonymous read access.</strong></p>
+
+<p>Sit with that for a second.</p>
+
+<p>And then follow it out, because the endgame is structural rather than local. A small operator who can no longer distinguish humans from swarms has exactly one practical escape: stand behind a handful of very large gatekeepers who <em>can</em> tell the difference, because they see enough of the world's traffic to fingerprint it. That is how an abuse problem metabolizes into a centralization problem. It's the same road that ran from NAT to "everyone is a client, nobody is a host" — walked again, this time with reads instead of writes.</p>
+
+<p>Here is the portable version, and it's a design question rather than a lament. Go find the places in your own service where a cheap request causes expensive work: the arbitrary-range query, the on-demand render, the report generator, the combinatorial URL space that is safe only because nobody has ever bothered to walk it. Ask what it costs you if something walks all of it, forever, from ten million addresses. You did not build an amplifier. You built a kindness — and kindness at internet scale, aimed at an audience that cannot be identified, is indistinguishable from an amplifier pointed at yourself.</p>
+
+<p>The generous design was never the mistake. That's the sting of it: it was right, exactly right, up until the readers stopped being people.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://people.kernel.org/monsieuricon/creepy-crawlies" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Creepy Crawlies</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲1028</span></a><a href="https://dreamstation.systems/personal/ntppost.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Internet centralization and the original sin of NAT</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲28</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://people.kernel.org/monsieuricon/creepy-crawlies" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Creepy crawlies — Konstantin Ryabitsev</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://anubis.techaro.lol/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Anubis — Weighs the soul of incoming HTTP requests</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://git.zx2c4.com/cgit/about/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">cgit documentation</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

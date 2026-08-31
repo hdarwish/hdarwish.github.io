@@ -1,5 +1,56 @@
 [
   {
+    "date": "2026-08-31",
+    "title": "The crawlers aren't eating bandwidth. They're ending anonymous reads.",
+    "tags": [
+      "web-infrastructure",
+      "ai-crawlers",
+      "decentralization"
+    ],
+    "excerpt": "Kernel.org now spends more CPU turning git commits into HTML for scrapers than it spends on every legitimate request combined — including the git clones, which are the entire reason the machine...",
+    "hn_refs": [
+      {
+        "title": "Creepy Crawlies",
+        "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
+        "points": 1028
+      },
+      {
+        "title": "Internet centralization and the original sin of NAT",
+        "url": "https://dreamstation.systems/personal/ntppost.html",
+        "points": 28
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Creepy crawlies — Konstantin Ryabitsev",
+        "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
+        "kind": "article"
+      },
+      {
+        "title": "Anubis — Weighs the soul of incoming HTTP requests",
+        "url": "https://anubis.techaro.lol/",
+        "kind": "docs"
+      },
+      {
+        "title": "cgit documentation",
+        "url": "https://git.zx2c4.com/cgit/about/",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Kernel.org now spends more CPU turning git commits into HTML for scrapers than it spends on every legitimate request combined — including the git clones,...",
+    "social_teasers": {
+      "linkedin": "The crawlers aren't eating bandwidth. They're ending anonymous reads.\n\nKernel.org now spends more CPU turning git commits into HTML for scrapers than it spends on every legitimate request combined — including the git clones,...\n\nhttps://hafs.dev/blog/2026-08-31.html\n\n#web-infrastructure #ai-crawlers #decentralization",
+      "x": "The crawlers aren't eating bandwidth. They're ending anonymous reads.\nhttps://hafs.dev/blog/2026-08-31.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-08-31.html"
+  },
+  {
     "date": "2026-08-30",
     "title": "Your bug backlog measures your patience, not your software",
     "tags": [
