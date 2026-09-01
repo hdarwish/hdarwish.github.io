@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuneScape&#39;s combat isn&#39;t design. It&#39;s a bandwidth budget you can feel. - Hafs Ibrahim</title>
+    <meta name="description" content="In 2004, RuneScape kept a live 3D world in sync — a couple of thousand players per server, dozens visible on your screen at once, all of it running inside a...">
+    <meta property="og:title" content="RuneScape&#39;s combat isn&#39;t design. It&#39;s a bandwidth budget you can feel.">
+    <meta property="og:description" content="In 2004, RuneScape kept a live 3D world in sync — a couple of thousand players per server, dozens visible on your screen at once, all of it running inside a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-01.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RuneScape&#39;s combat isn&#39;t design. It&#39;s a bandwidth budget you can feel.">
+    <meta name="twitter:description" content="In 2004, RuneScape kept a live 3D world in sync — a couple of thousand players per server, dozens visible on your screen at once, all of it running inside a...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-01">
+            <div class="blog-post-date">September 01, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">networking</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">game-development</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">systems-design</span></div>
+            <h2 class="blog-post-title">RuneScape&#39;s combat isn&#39;t design. It&#39;s a bandwidth budget you can feel.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-01-hero.png" alt="RuneScape&#39;s combat isn&#39;t design. It&#39;s a bandwidth budget you can feel." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>In 2004, RuneScape kept a live 3D world in sync — a couple of thousand players per server, dozens visible on your screen at once, all of it running inside a browser applet — over a 56k modem that died the instant your mum picked up the phone. Call it 5 kilobytes per second down, and considerably less up. That is less headroom than the <em>headers</em> of a single modern HTTP request, before the response body has cleared its throat.</p>
+
+<p>It worked. Not "worked with caveats." Worked well enough that millions of children spent their adolescence picking flax in it.</p>
+
+<p>The reflex is to file this under nostalgia — engineers were tougher, the world was simpler, we've all gone soft. That reflex is wrong, and believing it will cost you something real. The interesting thing about RuneScape isn't that Jagex squeezed a game through a narrow pipe. It's that the pipe wrote the game.</p>
+
+<p>Follow one click. You tap the tile one square north of where you're standing, and before a single byte leaves your machine the client runs a breadth-first search over its local collision map and builds the entire path itself. Then it writes a packet: an opcode byte, a length byte, four bytes for the absolute start position (<code>x</code> and <code>z</code> as two-byte shorts), then <em>two bytes per subsequent waypoint</em> — deltas against that first coordinate, not absolutes — and one final byte for whether Ctrl is held. Body length: <code>4 + 2 * (pathLength - 1) + 1</code>.</p>
+
+<p>Sit with the deltas for a second. Absolute coordinates would have cost four bytes per step; deltas cost two. Someone looked at a walk packet and decided that halving the per-waypoint cost was worth extra arithmetic on both ends, forever, in every version of the protocol. That is not an optimization pass bolted on at the end. That is a person with a number in their head.</p>
+
+<p>Now notice the <em>length byte</em> — carried only by packets whose bodies vary in size, absent everywhere else, because for fixed-size packets the opcode already tells the reader how many bytes to consume. A modern protocol would put a length field on everything, because uniformity is pleasant and one byte is nothing.</p>
+
+<p>Here, one byte is one byte, multiplied by every packet, every tick, every player, on every server.</p>
+
+<p>The environment made that ruthlessness non-negotiable. Java applets in 2004 ran inside a security sandbox with no access to raw native sockets, which meant <strong>no UDP</strong>. Movement, combat, chat, the entire visible world travelled down one TCP connection, in order, paying per-segment overhead, with head-of-line blocking baked in by design. You cannot fire-and-forget a position update. You cannot let a dropped packet be somebody else's problem, because every byte you send is a byte the next byte waits behind.</p>
+
+<p>Then there's the clock. The server advances in discrete cycles of roughly 600 milliseconds, and within each cycle, <em>for every connected player</em>, it must work out everything that player can now see and get it onto the wire before the next cycle begins. Not eventually. Before the next tick.</p>
+
+<p>Even the single piece of cryptography in the stack is a bandwidth decision wearing a disguise. After login, an ISAAC stream cipher is initialised in both directions — two streams seeded from four shared integers, with the server-to-client seed being the same words plus 50 so the two directions never share a keystream. And what does it encrypt? The opcode byte. Just that. <code>putByte(opcode + this.outboundCipher.value())</code> going out, subtract-and-mask coming in, body in the clear. A stream cipher was the only choice that fit the budget, because unlike a block cipher with padding or a MAC on every message, it adds exactly zero bytes.</p>
+
+<p>Which sounds absurd until you notice what the opcode <em>is</em>: the byte that tells you how to parse everything after it, and therefore where this packet ends and the next one starts. Encipher that, and a third-party parser is staring at an undifferentiated wall of numbers. It's the difference between stealing a filing cabinet and stealing a filing cabinet with the labels peeled off and the folders welded shut. The analogy breaks, and honestly so did the scheme — a determined person reconstructs the labels, and people did — but measured in bytes spent per unit of attacker annoyance, nothing else in the stack comes close.</p>
+
+<p>Put the pieces side by side. The 600ms tick isn't a server implementation detail; it's the heartbeat of combat, the reason attacks land on a rhythm you can count, the unit in which every weapon speed and prayer drain and teleport delay is denominated. The number of players you can see at once isn't a rendering choice; it's whatever fits in the per-player, per-tick byte allowance. And the pacing of the whole game — deliberate, tactical, turn-flavoured rather than twitchy — is the shape of a protocol that had to fit through 5 KB/s of ordered TCP with no UDP escape hatch.</p>
+
+<p>The tick rate wasn't chosen to make the combat feel good. The combat feels the way it does <em>because</em> of the tick rate. Millions of people hold strong opinions about RuneScape's combat as a design decision; they are holding opinions about an arithmetic problem someone solved in 2004.</p>
+
+<p>A byte budget isn't a constraint on the design. It <em>is</em> the design.</p>
+
+<p>Your systems have byte budgets too. Latency budgets, memory budgets, round-trip budgets — they exist whether or not anyone has looked at them. The difference is that RuneScape's were written down, defended, and consciously spent, while yours were set implicitly by whatever your framework does by default, discovered months later as "the app feels sluggish on mobile," and then quietly promoted into product decisions. Nobody wrote a spec saying the dashboard refreshes every thirty seconds instead of live. The budget decided that, and you called it a requirement.</p>
+
+<p>So here's the portable move, and it costs nothing but nerve. Pick your tightest resource — bytes on the wire, milliseconds to first paint, queries per request — and write down a number before you design anything. Not as a target to hit later. As a currency, where every feature has a price and you have to say out loud what you just bought and what you gave up for it.</p>
+
+<p>You will hate it. You will also, possibly for the first time, know what your system actually is.</p>
+
+<p>Constraints don't limit designs. Unowned constraints design for you — badly, in the dark, while you're busy naming things.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://jkm.dev/posts/how-2004-runescape-fit-a-multiplayer-rpg-into-56k-dialup" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">2004 RuneScape fit a multiplayer RPG into 56k dial-up</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲83</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://jkm.dev/posts/how-2004-runescape-fit-a-multiplayer-rpg-into-56k-dialup" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">How 2004 RuneScape fit a multiplayer RPG into 56k dial-up</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://runescapearchive.net/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">RuneScape Archive Project</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.gabrielgambetta.com/client-server-game-architecture.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Fast-Paced Multiplayer (Client-Server Game Architecture)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

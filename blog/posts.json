@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-09-01",
+    "title": "RuneScape's combat isn't design. It's a bandwidth budget you can feel.",
+    "tags": [
+      "networking",
+      "game-development",
+      "systems-design"
+    ],
+    "excerpt": "In 2004, RuneScape kept a live 3D world in sync — a couple of thousand players per server, dozens visible on your screen at once, all of it running inside a browser applet — over a 56k modem that...",
+    "hn_refs": [
+      {
+        "title": "2004 RuneScape fit a multiplayer RPG into 56k dial-up",
+        "url": "https://jkm.dev/posts/how-2004-runescape-fit-a-multiplayer-rpg-into-56k-dialup",
+        "points": 83
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "How 2004 RuneScape fit a multiplayer RPG into 56k dial-up",
+        "url": "https://jkm.dev/posts/how-2004-runescape-fit-a-multiplayer-rpg-into-56k-dialup",
+        "kind": "article"
+      },
+      {
+        "title": "RuneScape Archive Project",
+        "url": "https://runescapearchive.net/",
+        "kind": "docs"
+      },
+      {
+        "title": "Fast-Paced Multiplayer (Client-Server Game Architecture)",
+        "url": "https://www.gabrielgambetta.com/client-server-game-architecture.html",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "In 2004, RuneScape kept a live 3D world in sync — a couple of thousand players per server, dozens visible on your screen at once, all of it running inside a...",
+    "social_teasers": {
+      "linkedin": "RuneScape's combat isn't design. It's a bandwidth budget you can feel.\n\nIn 2004, RuneScape kept a live 3D world in sync — a couple of thousand players per server, dozens visible on your screen at once, all of it running inside a...\n\nhttps://hafs.dev/blog/2026-09-01.html\n\n#networking #game-development #systems-design",
+      "x": "RuneScape's combat isn't design. It's a bandwidth budget you can feel.\nhttps://hafs.dev/blog/2026-09-01.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-01.html"
+  },
+  {
     "date": "2026-08-31",
     "title": "The crawlers aren't eating bandwidth. They're ending anonymous reads.",
     "tags": [
