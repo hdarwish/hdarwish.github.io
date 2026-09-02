@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Most of your inference tuning isn&#39;t optimization. It&#39;s budgeting. - Hafs Ibrahim</title>
+    <meta name="description" content="Two verbs, and only one of them is impressiveThere are exactly two things you can do to an inference deployment: choose a point on a curve, or move the...">
+    <meta property="og:title" content="Most of your inference tuning isn&#39;t optimization. It&#39;s budgeting.">
+    <meta property="og:description" content="Two verbs, and only one of them is impressiveThere are exactly two things you can do to an inference deployment: choose a point on a curve, or move the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-02.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Most of your inference tuning isn&#39;t optimization. It&#39;s budgeting.">
+    <meta name="twitter:description" content="Two verbs, and only one of them is impressiveThere are exactly two things you can do to an inference deployment: choose a point on a curve, or move the...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-02">
+            <div class="blog-post-date">September 02, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">llm-inference</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">performance</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">systems-engineering</span></div>
+            <h2 class="blog-post-title">Most of your inference tuning isn&#39;t optimization. It&#39;s budgeting.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-02-hero.png" alt="Most of your inference tuning isn&#39;t optimization. It&#39;s budgeting." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><h2>Two verbs, and only one of them is impressive</h2><p>There are exactly two things you can do to an inference deployment: choose a point on a curve, or move the curve. Nearly everything teams announce as “optimization” is the first one — and the first one is zero-sum by construction, because every millisecond you claw back for one user is throughput you just took away from everyone else.</p><p>Baseten's write-up on the efficient frontier of LLM inference draws that line cleanly: techniques that <em>manage</em> tradeoffs versus techniques that <em>push out</em> the frontier. Batch size, parallelism strategy, quantization on one side. Kernels, speculative decoding, prefill/decode disaggregation on the other. But the sentence in that piece that should reorganize how you work is much quieter, and it's about geometry.</p><p>If you can't say which side of that line your last win came from, you don't know whether you got faster or simply picked a favorite customer.</p><h2>What the tradeoff knobs really do</h2><p>Start with batch size, because it's the cleanest instrument on the board. Decode is memory-bandwidth bound: to emit one token, the GPU has to stream the model's weights out of HBM, and it pays that cost whether one request is in flight or sixty. Batching amortizes the read — the same weight traffic now serves many sequences — so tokens per second per GPU climbs and cost per token falls, while each individual request waits longer for its turn through a fatter kernel. Continuous batching at the token level means nobody sits waiting for a batch window to fill, but the configured size still decides the split. Same silicon, same weights, same traffic. You moved the accounting, not the machine.</p><p>Parallelism is the same story wearing more expensive clothes. Models in the hundreds of billions to trillions of parameters have to be spread across GPUs, and <em>how</em> you spread them decides which metric wins. Tensor Parallelism pays for expensive all-to-all communication, but over NVLink those collectives are fast enough that TP is the lever you reach for when latency is the product. Expert Parallelism can help both, though the shape matters: a low EP degree leans latency, a wide EP — up to a full rack — leans throughput. Attention Data Parallelism replicates attention layers to compute in parallel, buying system throughput at the direct expense of per-request speed.</p><p>Notice what none of those did. None of them made the GPU faster at anything.</p><p>Quantization is the honest hybrid, and it deserves better than being lumped in with the knobs. Running weights, activations, or KV cache at lower precision cuts the bytes you must move per token, which improves latency <em>and</em> throughput at once — that is genuinely pushing the serving frontier outward. What it also does is open a <em>second</em> frontier, between output quality and serving efficiency, and hand you a fresh slider to fiddle with there. The bill doesn't vanish. It gets transferred to a different account.</p><h2>The word that changes the job</h2><p>Here is the line that matters: in practice, the efficient frontier is <strong>very jagged</strong>. Not a graceful arc trading latency against throughput. Small config changes have outsized effects, the cutoff points are unintuitive, and they have to be found empirically through sweeps.</p><p>Sit with how strange that is. The economist's frontier is drawn smooth because it's an abstraction over infinitely divisible resources — and real inference has none of that. It has discrete GPU counts, kernels selected by tensor shape, memory that either fits or spills, interconnect topology that either keeps a collective on NVLink or drops it onto something slower. The “curve” is a staircase with landings and cliffs, and its exact shape is a fact about your hardware, your model architecture, and today's traffic mix. Nobody else's staircase is yours.</p><p>The quality frontier for quantization is described as <em>particularly</em> jagged, which is the good news: it means large efficiency gains sit there for little or no quality loss, especially with microscaling formats like MXFP4 and NVFP4. Jaggedness cuts both ways. It is where the free lunches live and where the trapdoors are.</p><h2>Why sweeps beat reasoning, and why that's not an insult</h2><p>Once the frontier is a staircase, “tuning” stops being a search for a better tradeoff and becomes a hunt for a discontinuity — which is a completely different activity. Reasoning is excellent at telling you the direction of a slope: more batch, more throughput, worse latency, yes, fine, you knew that before you opened the config. Reasoning is nearly useless at locating the cliff edge, because the edge is produced by interactions between kernel dispatch, memory fit, and collective placement that no mental model tracks at once. So you sweep. The sweep isn't a confession of ignorance; it's the only instrument that can see the terrain at all.</p><p>Which means the thing you have been calling optimization, presenting in reviews, and putting in the quarterly roll-up has a more honest name, and once you hear it you cannot unhear it.</p><p>Sliding along the latency–throughput frontier is not optimization. It is allocation.</p><p>Not a lesser activity. A different one, and one that doesn't belong to you alone. Allocation is a product decision wearing a config file: surrender per-user speed and you can run a cheap high-throughput batch pipeline; surrender throughput and you can serve latency-sensitive users who will pay a premium for the privilege. That is pricing and positioning. It belongs to whoever owns the business model, informed by someone holding a sweep.</p><h2>What to do with this on Monday</h2><p>Stop reporting allocation as a win. “We cut p99 by tuning batch size” means “we bought latency with throughput,” and until you name the price, you have reported half a transaction. An honest inference dashboard shows both axes at all times, because a single-axis improvement is indistinguishable from a transfer.</p><p>Then notice where the compounding lives — entirely on the far side of the line. Frontier-moving work stacks multiplicatively: double performance in hardware, double it again in software, and you now have four times the efficiency to allocate however you please. That's the real argument for pouring engineer-years into kernels, into speculative decoding, into pulling prefill apart from decode. Not that it's glamorous. That it's the only work that arrives with interest.</p><p>The analogy I keep reaching for is a household budget, and it's worth naming where it breaks. Shifting money between rent and groceries is allocation; earning more is frontier-moving — that part holds beautifully. It breaks because your grocery budget has no cliffs in it: one more dollar buys one more dollar of food. Inference isn't like that. Add one more request to the batch and you may cross a threshold where a kernel swaps implementations or a tensor stops fitting in memory, and the entire system relocates to a different landing on the staircase.</p><p>So sweep the terrain, because it is terrain and not a line. Name your tradeoffs as tradeoffs, because dressing them as gains is how a team spends two quarters redistributing the same GPU-hour.</p><p>And when you want a real win, don't move along the curve. Move it.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The efficient frontier of LLM inference</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://arxiv.org/abs/2309.06180" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Efficient Memory Management for Large Language Model Serving with PagedAttention (vLLM)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://arxiv.org/abs/2211.17192" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Fast Inference from Transformers via Speculative Decoding</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://nvidia.github.io/TensorRT-LLM/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">NVIDIA TensorRT-LLM documentation</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
