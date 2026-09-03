@@ -1,0 +1,27 @@
+{
+  "share_description": "215,128 pages, and none of them were written for you\nTwo of the sites doing the grounding for AI buying advice have given their homepages the HTML title...",
+  "social_teasers": {
+    "linkedin": "Spam no longer needs to rank. It only needs to exist.\n\n215,128 pages, and none of them were written for you\nTwo of the sites doing the grounding for AI buying advice have given their homepages the HTML title...\n\nhttps://hafs.dev/blog/2026-09-03.html\n\n#retrieval #adversarial-systems #llm-search",
+    "x": "Spam no longer needs to rank. It only needs to exist.\nhttps://hafs.dev/blog/2026-09-03.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-03.html",
+  "title": "Spam no longer needs to rank. It only needs to exist.",
+  "tags": [
+    "retrieval",
+    "adversarial-systems",
+    "llm-search"
+  ],
+  "hn_refs": [
+    {
+      "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
+      "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations",
+      "points": 359
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
