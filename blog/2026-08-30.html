@@ -4,215 +4,214 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your bug backlog measures your patience, not your software - Hafs Ibrahim</title>
-    <meta name="description" content="Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...">
+    <meta name="description" content="Bug perception is a trained skill — installable in weeks, and quietly uninstalled by the people who use your product most.">
     <meta property="og:title" content="Your bug backlog measures your patience, not your software">
-    <meta property="og:description" content="Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...">
+    <meta property="og:description" content="Bug perception is a trained skill — installable in weeks, and quietly uninstalled by the people who use your product most.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://hafs.dev/blog/2026-08-30.html">
     <meta property="og:image" content="https://hafs.dev/og-blog.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Your bug backlog measures your patience, not your software">
-    <meta name="twitter:description" content="Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used...">
+    <meta name="twitter:description" content="Bug perception is a trained skill — installable in weeks, and quietly uninstalled by the people who use your product most.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        .blog-hero {
-            padding: 8rem 0 3rem;
-            text-align: center;
-            position: relative;
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
         }
-        .blog-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .blog-post-card {
-            background: var(--surface);
-            border: 1px solid rgba(59, 130, 246, 0.35);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .blog-post-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
-        }
-        .blog-post-date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-        .blog-post-title {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 1.5rem;
-        }
-        .blog-post-body {
-            font-family: 'Lora', Georgia, serif;
-        }
-        .blog-post-body p {
-            margin-bottom: 1.25rem;
-        }
-        .blog-post-body p:last-child {
-            margin-bottom: 0;
-        }
-        .blog-post-body code {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85em;
-            background: rgba(59, 130, 246, 0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: var(--accent-hover);
-        }
-        .blog-post-body pre {
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem 1.25rem;
-            overflow-x: auto;
-            margin: 1.25rem 0;
-        }
-        .blog-post-body pre code {
-            background: none;
-            padding: 0;
-            font-size: 0.85rem;
-            line-height: 1.6;
-        }
-        .blog-post-body strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-        .blog-post-body em {
-            color: var(--text);
-            font-style: italic;
-        }
-        .blog-post-body h3 {
-            font-family: 'Playfair Display', Georgia, serif;
-            color: var(--text);
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin: 1.75rem 0 0.75rem;
-        }
-        .post-nav {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 6rem 1.5rem 1rem;
-        }
-        .post-nav a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .post-nav a:hover {
-            color: var(--accent);
-        }
-        .post-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1rem 1.5rem 4rem;
-        }
-        @media (max-width: 768px) {
-            .blog-post-card {
-                padding: 1.25rem;
-            }
-            .blog-post-title {
-                font-size: 1.25rem;
-            }
-        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
     </style>
 </head>
-<body>
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../index.html#projects">Projects</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
-                <li><a href="../blog.html" class="active">Blog</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="post-nav">
-        <a href="../blog.html">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-            All Posts
-        </a>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
     </div>
-
-    <main class="post-content">
-
-        <article class="blog-post-card" id="post-2026-08-30">
-            <div class="blog-post-date">August 30, 2026</div>
-            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software quality</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">perception</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">engineering culture</span></div>
-            <h2 class="blog-post-title">Your bug backlog measures your patience, not your software</h2>
-            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-08-30-hero.png" alt="Your bug backlog measures your patience, not your software" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
-            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Dan Luu claims he observes hundreds to thousands of bugs per week. Most people he talks to see almost none. For years he assumed this was because he used computers strangely — some corner-case-generating personal style. Then he noticed something much worse: the other people were hitting <em>the same bugs</em>. They just weren't seeing them.</p>
-
-<p>And when he started pointing bugs out to friends, something happened that should genuinely unsettle you. After a few weeks, the ones so inclined started seeing them too. The bugs didn't change. The people did.</p>
-
-<p>Which means bug perception is not a property of software. It's a trained skill, it can be installed in a few weeks, and — this is the part that should make you nervous about your own team — it can also be <em>uninstalled</em>.</p>
-
-<p>Every prioritization decision you make is downstream of what your team can still perceive. Your backlog, your severity labels, your "P3 — cosmetic," your confident internal chorus of <em>the thing works well</em>: all of it rests on human perception, and human perception is the least stable instrument anywhere in your stack. A load balancer degrades loudly. A nervous system degrades silently and keeps reporting nominal.</p>
-
-<p>The mechanism is mundane, which is exactly what makes it so effective. Perception isn't a camera; it's a prediction machine that spends its limited attention on surprises. When a stimulus stops carrying information — when it becomes fully predicted — your brain stops paying for it. You do not feel the glasses on your face. You do not hear your fridge until it stops. This is not laziness or stupidity; it is a superb adaptation, because a creature that consciously registered every unchanging input would be paralyzed by the weight of its own socks.</p>
-
-<p>Now point that machinery at a broken button. The first time the form eats your input you notice sharply, and with feeling. The tenth time, less. By the fiftieth, your hands have quietly grown a workaround — you copy the text before you hit submit, without deciding to, the way you step over the loose floorboard on the stairs without once thinking the words <em>loose floorboard</em>.</p>
-
-<p>The bug is still firing. Your report of it has stopped.</p>
-
-<p>The workaround is the crucial move, because it does two things at once: it fixes the symptom for you, and it destroys the evidence. Worse, it migrates the knowledge out of the part of you that can write tickets and into the part of you that ties shoes. You cannot file a bug against your own motor memory. Luu describes finding products that only work if you perform quite a few non-intuitive workarounds — products a normal person simply could not operate — while the internal comment history says the thing is great. Nobody in that thread was lying. Everyone in it had hands that already knew the way through.</p>
-
-<p>Watch the same effect in public, with fandom, where it's easier to see because there's a scoreboard. Luu wrote up search results from Google, Bing, and Kagi and found all three returning SEO spam and, in some cases, outright scams. Almost nobody defended Google or Bing. Kagi fans told him he was wrong — and then sent him their own search results as proof, results that contained no good answer and were full of spam. One person had pinned GitHub to the top of their results, which works beautifully for queries where you want software hosted on GitHub and does precisely nothing for everything else. He calls out his own Volvo forums the same way: the reliability data has been mediocre-to-poor for over a decade, and the forums insist Volvos are among the most reliable cars and the data must be wrong.</p>
-
-<p>Sensory adaptation and motivated fandom are different machines with the same output. Both convert defects into invisibility.</p>
-
-<p>So ask who on earth is maximally exposed to both. Your engineers use the product more than any customer ever will. They use it daily, they have the deepest possible investment in believing it's good, and they have had more opportunities than any living human to grow calluses over its rough edges. They know which field to fill first. They know which retry works. They have been marinating in the failure modes since before the failure modes had ticket numbers.</p>
-
-<p>Which means the practice universally recommended for quality — use your own product, live in it, dogfood it — is also the most efficient known method for going blind to your own product's failures. Same practice. Same mechanism. The exposure that teaches you the product is the exposure that adapts you to its pain.</p>
-
-<p><strong>Your bug count measures your team's tolerance, not your software's defects.</strong></p>
-
-<p>Which reframes the backlog entirely. It is not an inventory of what's broken; it's a log of the moments when someone's irritation briefly exceeded their adaptation — and irritation is a depleting resource. Late in a project, on a tired team, on a product everyone has used for three years, the reported defect rate falls. Not because quality rose. Because the sensors saturated. You are reading a thermometer that has slowly stopped responding to heat, and congratulating yourself on the weather.</p>
-
-<p>The thermometer breaks as an analogy in one place worth naming: a thermometer has no opinions. Your team does, and opinions accelerate the drift. The Kagi fans weren't merely desensitized; they were <em>defending</em>. Adaptation plus loyalty is much faster than adaptation alone, which is why the strongest blindness sits exactly where the strongest ownership sits.</p>
-
-<p>The portable move, then: stop treating bug reports as a measurement and start treating them as a reading from an instrument that needs calibration. Calibrate it the way Luu did with his friends — perception is trainable in weeks by someone pointing and saying <em>that, right there, is broken</em>. Import a fresh nervous system on purpose: a person who has never touched the thing, doing a real task, watched in silence. Every workaround they don't know is a bug you have lost the ability to see. Write down what your own fingers do automatically; that list is your true defect report, and it is longer than your backlog.</p>
-
-<p>And when a stranger says your product is bad, kill the reflex to explain what they did wrong. They are describing something your team can no longer physically perceive — and the bug you've stopped feeling is still there, still firing, still being paid for. Just not by you.</p></div>
-            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://danluu.com/bug-blind" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Bug Blindness</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲163</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://danluu.com/bug-blind/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Bug blindness — Dan Luu</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://danluu.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Some of my favorite technical bugs (and how software gets bad)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.basicbooks.com/titles/don-norman/the-design-of-everyday-things/9780465050659/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Design of Everyday Things — Don Norman</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
-        </article>
-
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-08-30">
+<header class="seminar__head"><p class="seminar__date">August 30, 2026</p><h1 class="seminar__title">Your bug backlog measures your patience, not your software</h1><p class="seminar__deck">Bug perception is a trained skill — installable in weeks, and quietly uninstalled by the people who use your product most.</p></header>
+<div class="seminar__tags"><span>software quality</span><span>perception</span><span>engineering culture</span></div>
+<div class="seminar__premise"><p>Dan Luu sees hundreds to thousands of bugs a week; most people he talks to see almost none — and they are hitting the same bugs, just not perceiving them. For years he assumed the cause was that he used computers strangely. The truth turned out to be worse.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>A bug count is not a property of your software. It is a reading off the least stable instrument in your stack: human perception.</p>
+<section class="seminar__section" id="sec-1-the-people-changed-not-the-softw"><div class="seminar__section-index">01</div><h2>The people changed, not the software</h2><p>When Luu started pointing bugs out to friends, the ones so inclined started seeing them too. Nothing about the software had changed — the same defects sat in the same code, firing at the same rate as before. Yet over a few weeks a person who had noticed almost nothing became someone who noticed almost everything.</p>
+<p>The bugs did not change; the people did.</p>
+<p>Which means bug perception is a trained skill. It can be installed in a few weeks. And, just as quietly, it can be uninstalled — most efficiently by the people who use your product every single day.</p></section>
+<section class="seminar__section" id="sec-2-attention-is-a-budget-for-surpri"><div class="seminar__section-index">02</div><h2>Attention is a budget for surprises</h2><p>Perception isn&#x27;t a camera that faithfully records whatever sits in front of it. It is a prediction machine, and it spends its limited attention on surprises. When a stimulus stops carrying new information — when your brain can already predict exactly what it will feel like — it quietly stops paying for the update.</p>
+<p>Picture the glasses resting on your face, or the fridge you stop hearing until the moment it clicks off: present the entire time, and invisible the entire time, because nothing about them surprises you anymore.</p>
+<figure class="dgm-figure"><div class="dgm dgm--pipeline" data-diagram="pipeline" id="d20260830-dgm-1"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 1056 128" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20260830-dgm-1-d-t d20260830-dgm-1-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20260830-dgm-1-d-t">Attention withdraws from the predictable</title><desc id="d20260830-dgm-1-d-d">A stimulus that becomes fully predicted loses your attention, so your hands grow a workaround and the bug report stops even though the bug keeps firing.</desc><rect x="16" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="100.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Stimulus</text><text x="100.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">form eats input</text><line x1="184" y1="64.0" x2="222" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M230 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="230" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="314.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Predicted</text><text x="314.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">seen it before</text><line x1="398" y1="64.0" x2="436" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M444 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="444" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="528.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Attention off</text><text x="528.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">brain stops paying</text><line x1="612" y1="64.0" x2="650" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M658 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="658" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="742.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Workaround</text><text x="742.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">hands adapt</text><line x1="826" y1="64.0" x2="864" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M872 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="872" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="956.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Report stops</text><text x="956.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">bug still fires</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 484" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20260830-dgm-1-m-t d20260830-dgm-1-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20260830-dgm-1-m-t">Attention withdraws from the predictable</title><desc id="d20260830-dgm-1-m-d">A stimulus that becomes fully predicted loses your attention, so your hands grow a workaround and the bug report stops even though the bug keeps firing.</desc><rect x="12" y="12" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="39.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Stimulus</text><text x="28" y="58.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">form eats input</text><line x1="172.0" y1="72" x2="172.0" y2="104" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 112 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="112" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="139.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Predicted</text><text x="28" y="158.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">seen it before</text><line x1="172.0" y1="172" x2="172.0" y2="204" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 212 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="212" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="239.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Attention off</text><text x="28" y="258.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">brain stops paying</text><line x1="172.0" y1="272" x2="172.0" y2="304" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 312 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="312" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="339.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Workaround</text><text x="28" y="358.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">hands adapt</text><line x1="172.0" y1="372" x2="172.0" y2="404" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 412 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="412" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="439.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Report stops</text><text x="28" y="458.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">bug still fires</text></svg></div></div><figcaption>The mechanism, end to end: prediction buys silence.</figcaption></figure>
+<p>Point that same machinery at a broken button and the number that moves is not the defect rate — it is your report rate. The button fails on every attempt. Your filing of it decays toward zero. The mechanism runs in silence, and silence reads, from the inside, as quality.</p></section>
+<section class="seminar__section" id="sec-3-the-workaround-destroys-the-evid"><div class="seminar__section-index">03</div><h2>The workaround destroys the evidence</h2><p>The first time the form eats your input, you notice sharply. By the tenth time you notice less. By the fiftieth your hands have grown a workaround — you copy the text before you hit submit — and you never once decided to.</p>
+<figure class="dgm-figure"><div class="dgm dgm--timeline" data-diagram="timeline" id="d20260830-dgm-2"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 670 150" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20260830-dgm-2-d-t d20260830-dgm-2-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20260830-dgm-2-d-t">Desensitisation curve</title><desc id="d20260830-dgm-2-d-d">Across repeated encounters the same defect draws sharp attention first, less each time, and by the fiftieth an automatic workaround replaces any conscious report.</desc><line x1="69" y1="78" x2="597" y2="78" stroke="var(--dgm-line, #b9a894)" stroke-width="2"/><circle cx="69" cy="78" r="7" fill="var(--dgm-accent, #b5541f)" stroke="var(--dgm-paper, #faf5ea)" stroke-width="2"/><text x="69" y="58" font-size="13" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">1st</text><text x="69" y="108" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Notice sharply</text><circle cx="245" cy="78" r="7" fill="var(--dgm-accent, #b5541f)" stroke="var(--dgm-paper, #faf5ea)" stroke-width="2"/><text x="245" y="58" font-size="13" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">10th</text><text x="245" y="108" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Notice less</text><circle cx="421" cy="78" r="7" fill="var(--dgm-accent, #b5541f)" stroke="var(--dgm-paper, #faf5ea)" stroke-width="2"/><text x="421" y="58" font-size="13" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">50th</text><text x="421" y="108" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Auto workaround</text><circle cx="597" cy="78" r="7" fill="var(--dgm-accent, #b5541f)" stroke="var(--dgm-paper, #faf5ea)" stroke-width="2"/><text x="597" y="58" font-size="13" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">years in</text><text x="597" y="108" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Fully invisible</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 242" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20260830-dgm-2-m-t d20260830-dgm-2-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20260830-dgm-2-m-t">Desensitisation curve</title><desc id="d20260830-dgm-2-m-d">Across repeated encounters the same defect draws sharp attention first, less each time, and by the fiftieth an automatic workaround replaces any conscious report.</desc><line x1="34" y1="24" x2="34" y2="210" stroke="var(--dgm-line, #b9a894)" stroke-width="2"/><circle cx="34" cy="24" r="7" fill="var(--dgm-accent, #b5541f)" stroke="var(--dgm-paper, #faf5ea)" stroke-width="2"/><text x="54" y="20" font-size="13" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">1st</text><text x="54" y="39" font-size="15" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Notice sharply</text><circle cx="34" cy="86" r="7" fill="var(--dgm-accent, #b5541f)" stroke="var(--dgm-paper, #faf5ea)" stroke-width="2"/><text x="54" y="82" font-size="13" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">10th</text><text x="54" y="101" font-size="15" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Notice less</text><circle cx="34" cy="148" r="7" fill="var(--dgm-accent, #b5541f)" stroke="var(--dgm-paper, #faf5ea)" stroke-width="2"/><text x="54" y="144" font-size="13" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">50th</text><text x="54" y="163" font-size="15" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Auto workaround</text><circle cx="34" cy="210" r="7" fill="var(--dgm-accent, #b5541f)" stroke="var(--dgm-paper, #faf5ea)" stroke-width="2"/><text x="54" y="206" font-size="13" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">years in</text><text x="54" y="225" font-size="15" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Fully invisible</text></svg></div></div><figcaption>Same defect, falling salience across encounters.</figcaption></figure>
+<p>The workaround fixes the symptom for you and destroys the evidence for everyone else.</p>
+<p>It migrates the knowledge out of the part of you that can write a ticket and into the part of you that ties your shoes. The defect is still firing. It has simply stopped being something you can report, because it has stopped being something you notice.</p></section>
+<section class="seminar__section" id="sec-4-two-machines-one-output"><div class="seminar__section-index">04</div><h2>Two machines, one output</h2><p>Sensory adaptation is one machine: repeated exposure, attention withdrawn, the defect faded into the background of a life. Motivated fandom is a different machine altogether: ownership, loyalty, and the reflex to defend a thing rather than see it clearly. They run on completely unrelated fuel.</p>
+<p>Yet they converge on exactly the same output: invisibility.</p>
+<figure class="dgm-figure"><div class="dgm dgm--split_process" data-diagram="split_process" id="d20260830-dgm-3"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 680 256" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20260830-dgm-3-d-t d20260830-dgm-3-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20260830-dgm-3-d-t">Two machines, one output</title><desc id="d20260830-dgm-3-d-d">Sensory adaptation and motivated fandom run different processes but both end at the same place: a real defect becomes invisible to the person living with it.</desc><rect x="16" y="16" width="300" height="44" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="166.0" y="43.0" font-size="16" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Sensory adaptation</text><rect x="16" y="78" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="106.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Repeated exposure</text><rect x="16" y="136" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="164.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Attention withdraws</text><rect x="16" y="194" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="222.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Defect fades</text><line x1="340.0" y1="16" x2="340.0" y2="240" stroke="var(--dgm-line, #b9a894)" stroke-width="1" stroke-dasharray="4 5"/><rect x="364" y="16" width="300" height="44" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="514.0" y="43.0" font-size="16" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Motivated fandom</text><rect x="364" y="78" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="106.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Ownership + loyalty</text><rect x="364" y="136" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="164.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Defend, don't see</text><rect x="364" y="194" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="222.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Defect fades</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 236" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20260830-dgm-3-m-t d20260830-dgm-3-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20260830-dgm-3-m-t">Two machines, one output</title><desc id="d20260830-dgm-3-m-d">Sensory adaptation and motivated fandom run different processes but both end at the same place: a real defect becomes invisible to the person living with it.</desc><rect x="12" y="12" width="150" height="40" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="37.0" font-size="12" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Sensory adaptation</text><rect x="12" y="66" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="93.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Repeated exposure</text><rect x="12" y="122" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="149.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Attention withdraws</text><rect x="12" y="178" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="205.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Defect fades</text><line x1="172.0" y1="12" x2="172.0" y2="224" stroke="var(--dgm-line, #b9a894)" stroke-width="1" stroke-dasharray="4 5"/><rect x="182" y="12" width="150" height="40" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="37.0" font-size="12" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Motivated fandom</text><rect x="182" y="66" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="93.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Ownership + loyalty</text><rect x="182" y="122" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="149.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Defend, don't see</text><rect x="182" y="178" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="205.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Defect fades</text></svg></div></div><figcaption>Different processes, identical failure mode.</figcaption></figure>
+<p>Both take a real, still-firing defect and remove it from the perception of the person living closest to it. Same destination, reached down two different roads.</p></section>
+<section class="seminar__section" id="sec-5-dogfooding-is-efficient-blindnes"><div class="seminar__section-index">05</div><h2>Dogfooding is efficient blindness</h2><p>Your engineers use the product more than any customer ever will, and they use it with the deepest possible investment in believing it is good. They have had more opportunities than any living human to grow calluses over its rough edges. Every edge they have stopped feeling is an edge they can no longer put on the backlog.</p>
+<figure class="dgm-figure"><div class="dgm dgm--layered_system" data-diagram="layered_system" id="d20260830-dgm-4"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 640 294" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20260830-dgm-4-d-t d20260830-dgm-4-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20260830-dgm-4-d-t">Exposure ladder</title><desc id="d20260830-dgm-4-d-d">The more someone uses a product the more adapted to its defects they become, so engineers sit at the blindest layer and never-users at the most perceptive.</desc><rect x="16" y="16" width="608" height="58" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="50.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Engineers</text><text x="606" y="50.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">daily · most adapted</text><rect x="16" y="84" width="608" height="58" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="118.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Power users</text><text x="606" y="118.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">workarounds learned</text><rect x="16" y="152" width="608" height="58" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="186.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Casual users</text><text x="606" y="186.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">some friction felt</text><rect x="16" y="220" width="608" height="58" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="254.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Fresh eyes</text><text x="606" y="254.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">sees every bug</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 318" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20260830-dgm-4-m-t d20260830-dgm-4-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20260830-dgm-4-m-t">Exposure ladder</title><desc id="d20260830-dgm-4-m-d">The more someone uses a product the more adapted to its defects they become, so engineers sit at the blindest layer and never-users at the most perceptive.</desc><rect x="12" y="12" width="320" height="66" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="42.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Engineers</text><text x="28" y="61.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">daily · most adapted</text><rect x="12" y="88" width="320" height="66" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="118.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Power users</text><text x="28" y="137.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">workarounds learned</text><rect x="12" y="164" width="320" height="66" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="194.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Casual users</text><text x="28" y="213.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">some friction felt</text><rect x="12" y="240" width="320" height="66" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="270.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Fresh eyes</text><text x="28" y="289.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">sees every bug</text></svg></div></div><figcaption>Exposure and blindness rise together.</figcaption></figure>
+<p>And every prioritization decision the team makes is downstream of that. The backlog, the severity labels, the confident internal chorus that the thing works well — all of it is a readout from nervous systems that have been quietly adapting to the product for years.</p>
+<p>The practice everyone recommends for quality is also the most efficient way to go blind to it.</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>The advice is not wrong. Dogfood it, live in it, feel what your users feel — all good. It is simply incomplete in a dangerous direction: the very exposure that teaches you the product is the same exposure that adapts you to its pain, and the adaptation is invisible from the inside. You cannot feel yourself going numb.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> Your bug count is a thermometer for your product&#x27;s defects: read it and you learn how broken things are.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> A thermometer has no opinions. Your team does, and loyalty accelerates the drift — the strongest blindness sits exactly where the strongest ownership sits.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You&#x27;re triaging a backlog on a mature product with a tenured team and the reported defect rate is falling.</dd><dt>Prefer</dt><dd>Import a fresh nervous system on purpose: someone who has never touched it, doing a real task, watched in silence.</dd><dt>Avoid</dt><dd>Reading a falling defect rate as rising quality. The sensors saturated; the heat didn&#x27;t drop.</dd></dl></div>
+<p class="seminar__finish">The bug you have stopped feeling is still there, still firing, still being paid for on every single use. Just not by you.</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://danluu.com/bug-blind/" target="_blank" rel="noopener">Bug blindness — Dan Luu</a><span class="kind">ARTICLE</span></li><li id="src-2"><span class="num">[2]</span><a href="https://www.basicbooks.com/titles/don-norman/the-design-of-everyday-things/9780465050659/" target="_blank" rel="noopener">The Design of Everyday Things — Don Norman</a><span class="kind">BOOK</span></li></ol></footer>
+</article>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>Built by Hafs Ibrahim</p>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
 </body>
 </html>
