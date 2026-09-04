@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect precision, unmoved recall: the number everyone skipped - Hafs Ibrahim</title>
+    <meta name="description" content="A tool so good the agent won&#39;t touch itGive a coding agent semantically precise code navigation — real references, real definitions, the kind of thing that...">
+    <meta property="og:title" content="Perfect precision, unmoved recall: the number everyone skipped">
+    <meta property="og:description" content="A tool so good the agent won&#39;t touch itGive a coding agent semantically precise code navigation — real references, real definitions, the kind of thing that...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-04.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Perfect precision, unmoved recall: the number everyone skipped">
+    <meta name="twitter:description" content="A tool so good the agent won&#39;t touch itGive a coding agent semantically precise code navigation — real references, real definitions, the kind of thing that...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-04">
+            <div class="blog-post-date">September 04, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">coding-agents</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">developer-tools</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">evaluation</span></div>
+            <h2 class="blog-post-title">Perfect precision, unmoved recall: the number everyone skipped</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-04-hero.png" alt="Perfect precision, unmoved recall: the number everyone skipped" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><h2>A tool so good the agent won't touch it</h2><p>Give a coding agent semantically precise code navigation — real references, real definitions, the kind of thing that can tell a function call from the same word sitting in a comment — and on simple localization tasks it will pick that tool between 0% and 6% of the time. Force it down the semantic path first and task success <em>falls</em>, from 100% to 89%. Pengcheng Xu's small study measured exactly this across three Claude models and a handful of Python and TypeScript repositories.</p><p>The comfortable reading is that models are lazy, or badly trained, or sentimentally attached to <code>grep</code> because the internet is full of it. That reading is wrong, and buried in the same study is a pair of numbers considerably more uncomfortable for anyone building retrieval for agents.</p><h2>Precision is the thing that demos well</h2><p>Semantic search, AST indexes, LSP bridges, embeddings over the monorepo — whatever you are building, you are almost certainly optimizing precision. Precision is legible. Precision goes on a chart and the chart goes up. And on the task you care most about, this study suggests precision was never the constraint.</p><h2>The agent isn't lazy, it's routing</h2><p>Kill the laziness story first, because the data won't support it. On reference-completeness tasks — <em>find every caller of this function</em> — the same models chose semantic navigation 45% to 57% of the time, unprompted: Opus at 45%, Sonnet at 50%, Haiku at 57%. Same tools, same free choice, and the routing flips completely with the shape of the request. Localization: 0-6%. References: roughly half. That is not a habit. That is a policy, and it is a defensible one.</p><p>The repository mattered as much as the task. On <code>remeda</code>, a clean TypeScript project where <code>grep</code>'s precision was already 1.00, LSP-backed navigation delivered <strong>+0.000 F1</strong> and cost 16% more tokens. On <code>hono</code> — same language, same tooling — <code>grep</code>'s precision collapsed to 0.51, and semantic navigation bought +0.246 F1 while spending 12% <em>fewer</em> tokens. Python's <code>requests</code> landed in between: grep precision 0.76, +0.072 F1, +19% tokens.</p><p>Read those three rows again, because together they demolish a folk theory. The predictor of semantic navigation's value is not whether the language has strong static types — two TypeScript repos, opposite verdicts. It is <strong>how lexically noisy the codebase is</strong>: how many places a symbol's name shows up meaning something else. Short generic names, heavy re-export barrels, docs and fixtures full of the same tokens, and <code>grep</code>'s precision falls through the floor while the semantic tool suddenly earns its keep.</p><p>So you cannot ship the fancy retrieval path as a global default; its value is a property of the repo, and you can measure it in an afternoon.</p><h2>The interface was doing more work than the backend</h2><p>The next finding is the one I find genuinely delightful, because it isolates a variable so cleanly you could teach an experimental design class with it.</p><p>The LSP-backed tools initially returned a location and nothing else: file, line, column. Correct, precise, and useless on arrival — the agent had to open the file to find out what was actually sitting there. <code>grep</code>, by contrast, hands back the matching line immediately: <code>src/auth.ts:42: return validateToken(token)</code>. Xu changed the semantic tool to include the source text in that same shape. Same backend, same set of references, identical precision. Only the payload changed.</p><p>Pass@1 on multi-file rename went from 0.67 to 0.83. Follow-up file reads per episode fell from 15.2 to 3.2.</p><p>A tool that returns a pointer instead of a value has outsourced its own work to the caller. Picture a librarian who answers "where's the passage about tariffs?" with a shelf coordinate, versus one who hands you the open book with a finger on the line. Both are accurate. One costs you a walk across the building, fifteen times. The analogy breaks in exactly the instructive place: the librarian's walk merely wastes time, whereas the agent's walk burns <em>context window</em> — and context is the substrate the agent thinks in. Making it fetch isn't just slow. It makes it stupider on arrival.</p><h2>The number nobody put in the headline</h2><p>On reference-completeness, semantic navigation lifted precision from 0.76 to a flawless 1.00. Every false match gone. If retrieval quality were the thing standing between an agent and a complete list of callers, that intervention should have cracked the task open — and it should have paid for itself in tokens saved rather than tokens spent.</p><p>Recall stayed near 0.66 in both arms.</p><p>Both arms. Perfect precision surfaced not one additional true caller that noisy text search had missed. The gap was never made of bad matches getting in the way; it was made of callers the agent never went looking for — the re-export it didn't follow, the test directory it didn't consider part of the job, the second package in the workspace. When precision goes to 1.00 and recall refuses to budge, the subject has quietly changed from tools to effort.</p><p><strong>Better retrieval precision cannot fix an agent that stops looking too early.</strong></p><p>Hold there a beat, because it relocates the entire bug. One third of the callers are missing and the index is innocent.</p><h2>What this frees you to build instead</h2><p>The missing third lives in the harness. It is a question of whether the loop has a stopping criterion worth respecting: does the agent enumerate candidate files before it starts, keep a ledger of what it has covered, notice that a symbol is re-exported under another name, get asked "are you finished, and how would you know?" No retrieval tool can answer that, because a retrieval tool only ever sees the queries it was handed. Thoroughness is not a property of search. It is a property of the search <em>policy</em>.</p><p>Which gives you a triage order, if you have a clever tool and a disappointing eval. Measure your <code>grep</code> baseline's precision on your actual repository — if it sits near 1.00, your semantic layer is 16% token overhead in a lab coat. Then check whether your tool returns values or coordinates, since that fix cost nothing but a payload change and moved pass@1 by 0.16. Only after both of those should you go hunting precision, and when you do, watch recall like a hawk. If recall doesn't move with it, you have been sharpening the knife while the cook keeps wandering out of the kitchen.</p><p>Precision is a promise about what you found. Recall is a confession about when you stopped.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.agentconnect.md/blog/grep-beat-lsp-harness" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Grep beats LSP? Why coding agents ignore your fancier tools</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://microsoft.github.io/language-server-protocol/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Language Server Protocol Specification</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://arxiv.org/abs/2310.06770" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://nlp.stanford.edu/IR-book/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Introduction to Information Retrieval (precision, recall, and their trade-offs)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
