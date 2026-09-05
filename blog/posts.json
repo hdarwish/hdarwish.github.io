@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-09-05",
+    "title": "Nobody will ever read those 13 million lines. That's the result.",
+    "tags": [
+      "AI agents",
+      "formal verification",
+      "software engineering"
+    ],
+    "excerpt": "Eleven days. 13 million lines of Lean. 29,500 intermediate theorems used in the final proof, out of 30,300 proved along the way. Dozens of Claude agents working largely without supervision. And no...",
+    "hn_refs": [
+      {
+        "title": "Formalizing Fermat's Last Theorem",
+        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+        "points": 0
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Fermat's Last Theorem formalization project (Kevin Buzzard)",
+        "url": "https://imperialcollegelondon.github.io/FLT/",
+        "kind": "docs"
+      },
+      {
+        "title": "Theorem Proving in Lean 4",
+        "url": "https://leanprover.github.io/theorem_proving_in_lean4/",
+        "kind": "docs"
+      },
+      {
+        "title": "Fermat's Enigma — Simon Singh",
+        "url": "https://simonsingh.net/books/fermats-last-theorem/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Eleven days. 13 million lines of Lean. 29,500 intermediate theorems used in the final proof, out of 30,300 proved along the way. Dozens of Claude agents...",
+    "social_teasers": {
+      "linkedin": "Nobody will ever read those 13 million lines. That's the result.\n\nEleven days. 13 million lines of Lean. 29,500 intermediate theorems used in the final proof, out of 30,300 proved along the way. Dozens of Claude agents...\n\nhttps://hafs.dev/blog/2026-09-05.html\n\n#AIagents #formalverification #softwareengineering",
+      "x": "Nobody will ever read those 13 million lines. That's the result.\nhttps://hafs.dev/blog/2026-09-05.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-05.html"
+  },
+  {
     "date": "2026-09-04",
     "title": "Perfect precision, unmoved recall: the number everyone skipped",
     "tags": [

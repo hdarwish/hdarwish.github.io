@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobody will ever read those 13 million lines. That&#39;s the result. - Hafs Ibrahim</title>
+    <meta name="description" content="Eleven days. 13 million lines of Lean. 29,500 intermediate theorems used in the final proof, out of 30,300 proved along the way. Dozens of Claude agents...">
+    <meta property="og:title" content="Nobody will ever read those 13 million lines. That&#39;s the result.">
+    <meta property="og:description" content="Eleven days. 13 million lines of Lean. 29,500 intermediate theorems used in the final proof, out of 30,300 proved along the way. Dozens of Claude agents...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-05.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nobody will ever read those 13 million lines. That&#39;s the result.">
+    <meta name="twitter:description" content="Eleven days. 13 million lines of Lean. 29,500 intermediate theorems used in the final proof, out of 30,300 proved along the way. Dozens of Claude agents...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-05">
+            <div class="blog-post-date">September 05, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI agents</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">formal verification</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software engineering</span></div>
+            <h2 class="blog-post-title">Nobody will ever read those 13 million lines. That&#39;s the result.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-05-hero.png" alt="Nobody will ever read those 13 million lines. That&#39;s the result." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Eleven days. 13 million lines of Lean. 29,500 intermediate theorems used in the final proof, out of 30,300 proved along the way. Dozens of Claude agents working largely without supervision. And no human being will ever read a line of it.</p>
+
+<p>We believe it anyway.</p>
+
+<p>That asymmetry — total trust in an artifact nobody will inspect — is the actual engineering result here. Not the theorem. Fermat's Last Theorem has been proved since Wiles published in 1995. What changed is that an AI was permitted to work unattended, for eleven days, on a problem where being wrong was <em>structurally impossible to hide</em>.</p>
+
+<h2>Wiles needed two months of human eyes. This needed none.</h2>
+
+<p>Go back to 1993. Three days of lectures, a proof Wiles believed was correct, and then several mathematicians spending two months in intensive verification — until one reviewer's question opened a critical gap. Wiles spent a <em>year</em> patching it, alone and then with Richard Taylor, and by Anthropic's account came close to abandoning the whole thing before remembering an approach he had previously discarded.</p>
+
+<p>Notice the shape of that cost. The proof was 129 pages. Verification took months of expert human attention, it was serial, it was expensive, and it was <strong>partial</strong> — it found one gap, and nobody could promise it had found the last one. That is the normal condition of mathematics: 621 wrong proofs of FLT were submitted in the first year after the Wolfskehl prize was announced in 1908, and every single one had to be read by a person in order to be killed.</p>
+
+<p>Lean changes exactly one variable, and it is not intelligence. Lean makes rejection <em>total, cheap, and non-negotiable</em>. Every step must be present — a human proof skips what's obvious to another human; Lean skips nothing. And the answer is binary. Feed it 13 million lines with one broken link in the chain and it says no. It does not say "probably fine," it does not get tired at line nine million, and it cannot be talked around by a confident author.</p>
+
+<p>The reason you can trust that no is architectural. Lean's kernel — the part that actually checks — is deliberately tiny, and everything else, all the clever automation and tactics and search, is untrusted machinery whose only job is to emit a proof term the kernel will accept. So the size of the artifact doesn't dilute the guarantee. Thirteen million lines of output are checked by the same few thousand lines of checker that would check thirteen. You do not have to trust the agent. You have to trust the pawl.</p>
+
+<p>Follow that to the metric. Verification cost per candidate proof falls from <em>months of scarce expert attention</em> to <em>compute</em>, and that single move in the cost curve is what buys the eleven days. When rejection is nearly free, you can afford to generate garbage at industrial volume, because garbage costs only electricity. Claude proved 30,300 theorems and used 29,500 — roughly 800 dead ends. In a human workflow, 800 dead ends are a reviewer's year, burned. In Lean they are noise the checker eats without complaint.</p>
+
+<h2>The gradient is the whole trick</h2>
+
+<p>A second property matters as much as totality, and it is easy to skip past: Lean's rejections are <em>local</em>. The checker does not say "this 13-million-line artifact is wrong." It says which lemma failed to typecheck. That locality is what makes the thing layerable, and Kevin Buzzard's comment on the proof points straight at it: "AI autoformalization artefacts are now robust enough to be built upon; the proof is multi-layered."</p>
+
+<p>Consider what that unlocks. An agent proves a lemma, the checker blesses it, and the lemma becomes ground to stand on for the next one. The verified surface grows monotonically — no backsliding, no silent rot. Dozens of agents can work in parallel precisely because the checker, not a human coordinator, adjudicates whether each contribution is real.</p>
+
+<p>A total, local checker is a ratchet: motion in one direction is free, motion backward is mechanically blocked, so you can shake the apparatus as violently as you like and it only ever climbs. Autonomy is not the agent's cleverness. It's the pawl. Where the analogy breaks is direction: a ratchet has no opinion about <em>what</em> you ratchet toward. Lean will cheerfully certify a flawless proof of a theorem you did not mean to state. It checks the proof, never the intent. A human still had to write the statement of FLT correctly, and a human still chose to follow the simplified Wiles proof from Darmon, Diamond and Taylor rather than the original.</p>
+
+<h2>Now look at your repository</h2>
+
+<p>Here is the part that arrives quietly and then refuses to leave. Thirteen million lines of machine-written code, five times the size of Mathlib — the community library the whole edifice rests on — with no reviewer, no walkthrough, no design doc, and nobody alive who could tell you what is in file 40,000. In mathematics, that is a triumph. In your codebase, it would be a catastrophe you'd be explaining for a year. Same artifact, same process, opposite verdict. And the difference is not the model.</p>
+
+<p>Agents can only run unsupervised where a machine can reject their output.</p>
+
+<p>Your test suite is not that machine. It is a sampler. It says "none of the behaviors I happen to know about broke," which is a completely different sentence from "this is correct," and the gap between those two sentences is exactly where bugs live. Your type system catches a real class of error and has nothing whatsoever to say about whether the invoice total is right. Your linter has opinions about whitespace. None of them are total, so none of them can absorb unbounded machine output, so a human has to read the diff — and the instant a human has to read the diff, the eleven-day autonomous run is off the table. Not because the agent is too weak. Because your rejection function has holes and someone warm has to stand in them.</p>
+
+<h2>What to build instead of a better prompt</h2>
+
+<p>The useful question stops being "can the model do this?" and becomes: <strong>what in my system can say no without me?</strong> Where do I already have a total, cheap, local checker — and where have I been quietly treating a partial one as total?</p>
+
+<p>Most codebases have small pockets of Lean-like conditions and enormous stretches of nothing. A pure function with property-based tests over its full input domain. A migration with an invariant you can assert on both sides. A compiler pass with a differential oracle. A parser with a fuzzer that crashes on any malformed state. Those pockets are precisely where you could let an agent run unattended tonight, and they are narrower than the demos let on.</p>
+
+<p>Which means the leverage was never in prompting. It is in enlarging the set of things a machine can refuse. Every invariant you make executable, every spec you make checkable, every oracle you build converts human attention into compute — permanently, and for every agent that comes after. It is unglamorous, deeply unfashionable plumbing, and it is the entire bottleneck.</p>
+
+<p>Fermat said the margin was too narrow to contain his proof. The margin was never the constraint. The reader was.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.anthropic.com/research/formalizing-fermats-last-theorem" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Formalizing Fermat&#39;s Last Theorem</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://imperialcollegelondon.github.io/FLT/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Fermat&#39;s Last Theorem formalization project (Kevin Buzzard)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://leanprover.github.io/theorem_proving_in_lean4/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Theorem Proving in Lean 4</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://simonsingh.net/books/fermats-last-theorem/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Fermat&#39;s Enigma — Simon Singh</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
