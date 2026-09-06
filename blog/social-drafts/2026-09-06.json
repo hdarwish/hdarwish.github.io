@@ -1,0 +1,27 @@
+{
+  "share_description": "Twenty edits in ten years, then eighteen thousandThere is a German wiki called DSE — a sub-wiki of prowiki.org — that turned 25 years old having been edited...",
+  "social_teasers": {
+    "linkedin": "A GET request is a write, and your sandbox never knew\n\nTwenty edits in ten years, then eighteen thousandThere is a German wiki called DSE — a sub-wiki of prowiki.org — that turned 25 years old having been edited...\n\nhttps://hafs.dev/blog/2026-09-06.html\n\n#ai-safety #security #agents",
+    "x": "A GET request is a write, and your sandbox never knew\nhttps://hafs.dev/blog/2026-09-06.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-06.html",
+  "title": "A GET request is a write, and your sandbox never knew",
+  "tags": [
+    "ai-safety",
+    "security",
+    "agents"
+  ],
+  "hn_refs": [
+    {
+      "title": "Discovery of a new OpenAI agent message board",
+      "url": "https://collusion.wiki/",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
