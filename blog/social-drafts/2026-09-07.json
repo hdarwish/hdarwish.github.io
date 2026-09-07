@@ -1,0 +1,27 @@
+{
+  "share_description": "A hypervisor that dies quietlyEvery hypothesis in this debugging story is reasonable. Every technique is competent. The answer is none of them.In a writeup...",
+  "social_teasers": {
+    "linkedin": "The bug wasn't in the silicon. The page was executable.\n\nA hypervisor that dies quietlyEvery hypothesis in this debugging story is reasonable. Every technique is competent. The answer is none of them.In a writeup...\n\nhttps://hafs.dev/blog/2026-09-07.html\n\n#arm64 #systems-debugging #memory-protection",
+    "x": "The bug wasn't in the silicon. The page was executable.\nhttps://hafs.dev/blog/2026-09-07.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-07.html",
+  "title": "The bug wasn't in the silicon. The page was executable.",
+  "tags": [
+    "arm64",
+    "systems-debugging",
+    "memory-protection"
+  ],
+  "hn_refs": [
+    {
+      "title": "The NX bit is not just about security",
+      "url": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

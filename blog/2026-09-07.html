@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The bug wasn&#39;t in the silicon. The page was executable. - Hafs Ibrahim</title>
+    <meta name="description" content="A hypervisor that dies quietlyEvery hypothesis in this debugging story is reasonable. Every technique is competent. The answer is none of them.In a writeup...">
+    <meta property="og:title" content="The bug wasn&#39;t in the silicon. The page was executable.">
+    <meta property="og:description" content="A hypervisor that dies quietlyEvery hypothesis in this debugging story is reasonable. Every technique is competent. The answer is none of them.In a writeup...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-07.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The bug wasn&#39;t in the silicon. The page was executable.">
+    <meta name="twitter:description" content="A hypervisor that dies quietlyEvery hypothesis in this debugging story is reasonable. Every technique is competent. The answer is none of them.In a writeup...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-07">
+            <div class="blog-post-date">September 07, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">arm64</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">systems-debugging</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">memory-protection</span></div>
+            <h2 class="blog-post-title">The bug wasn&#39;t in the silicon. The page was executable.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-07-hero.png" alt="The bug wasn&#39;t in the silicon. The page was executable." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><h2>A hypervisor that dies quietly</h2><p>Every hypothesis in this debugging story is reasonable. Every technique is competent. The answer is none of them.</p><p>In a writeup published on purplesyringa's blog, Sonya is building a bare-metal ARM64 hypervisor for postmarketOS. Enable the <code>CTR_EL0</code> intercept — the entire point of the project, so not optional — and the phone randomly locks up. Watchdog fires, system resets. Disable the watchdog and it hangs instead, which at least kills the "boot just got slow" theory. Then comes the real work: singlestepping the whole exception handler in QEMU, where it behaves exactly as written; auditing the stack allocation; padding out all sixteen slots of <code>vbar_el2</code> with <code>bl unknown_trap</code> so that <em>any</em> unexpected exception prints <code>X30</code> and <code>ELR_EL2</code> and confesses itself; reading <code>/proc/last_kmsg</code> from the corpse of the previous boot; grepping a stripped kernel image with <code>objdump -D -b binary</code> for <code>ctr_el0</code> and hand-patching all 22 matches.</p><p>None of it finds the bug.</p><h2>The failure mode emulation cannot reach</h2><p>You have very likely shipped this class of bug without knowing, because it didn't crash. The failure mode isn't "wrong answer." It's "the CPU cheerfully executes bytes that no longer exist anywhere except a cache" — behavior that is not merely incorrect but unreproducible under emulation, because QEMU models an instruction cache that is coherent with memory and real ARM cores do not promise you one. Your debug prints can't rescue you either, since the handler that would print them isn't the handler actually running.</p><h2>Three different programs, all of them yours</h2><p>The immediate cause is a two-line architectural detail with an enormous blast radius. On AArch64, instruction caches are not coherent with data caches. Write bytes through the normal data path and they land in the D-cache; the I-cache has no idea and no obligation to find out. The architecture requires you to say so explicitly — clean the data cache to the point of unification, invalidate the instruction cache, insert the barriers — or the fetch unit keeps serving whatever it remembers from the last time it looked.</p><p>Now the offender:</p><pre><code>msr_accessor_sort(
+  msr_accessors,
+  ((uintptr_t)msr_accessors_end - (uintptr_t)msr_accessors)
+    / sizeof(struct msr_accessor)
+);</code></pre><p>That array contained machine instructions. Sorting it at runtime rewrote executable code through the data path. So the phone ran the pre-sort layout out of the instruction cache while the D-cache and RAM held the post-sort layout: the code that was compiled, the code in memory, and the code being executed were three different programs, and no component in the system considered this worth mentioning.</p><p>Sonya finds it, moves the sort to build time, and the debug prints finally show the handlers working as intended. The system still doesn't boot. That's the cruelest available outcome — correct diagnosis, correct fix, bug survives — because the same structural mistake was sitting somewhere else, in the stack, declared in <code>.data</code>:</p><pre><code>.section .data.stack
+.p2align 12
+.long 0
+.p2align 12
+stack:</code></pre><p>Nothing wrong with that code. Everything wrong with that section's permissions.</p><h2>The oracle you already own and refuse to switch on</h2><p>Think about what a page-permission bit actually is. We market NX as a wall: attacker sprays shellcode into a buffer, the buffer is non-executable, the exploit dies. True, and boring. Structurally it is something else entirely — a machine-checked assertion about your own program. <em>Instructions never come from here.</em> An <code>assert()</code> the hardware re-evaluates on every single fetch, at zero marginal cost, forever.</p><p>Compare it to a type system. A type annotation doesn't stop a malicious caller; it stops <em>you</em>, in the moment you confuse two kinds of thing. NX is that idea projected onto physical address space, with one upgrade: no cast gets around it. The analogy breaks in a way worth naming — a type error is caught before you ship, an NX fault is caught at runtime, on device, possibly in someone's pocket. But that's precisely the trade you want here, because a coherency bug is invisible to static analysis and invisible to emulation. Runtime is the only place it exists.</p><p>Here is what NX buys in this specific hunt. Mark the data section non-executable and the first fetch from that region raises a permission fault; the fault lands in one of those sixteen <code>bl unknown_trap</code> slots that were already wired up; the address prints. Instrumentation Sonya had already built. A report she never received, because the hardware had been given permission to stay quiet.</p><p>Without NX, the fetch succeeds. It returns whatever the icache happens to be holding — stale bytes, plausible-looking nonsense — and the CPU executes it. No exception, no log line, just a phone that stops and a watchdog reset, and an engineer forming the entirely rational hypothesis that ARM vendors ship out-of-spec silicon.</p><p>So the difference between "three days of suspecting the CPU" and "one fault with an address in it" was not a debugger, not a logic analyzer, not a better mental model of cache maintenance. It was one bit in a page table entry that the project had skipped, because the threat model contained no attacker.</p><p><strong>Security bits earn their keep as debugging oracles, not as attack mitigations.</strong></p><h2>Sort your hardening by the faults it makes loud</h2><p>Stop ranking mitigations by threat model and start ranking them by <em>which invariant they convert into a loud fault</em>. W^X isn't only anti-exploitation; it's the cheapest available detector for "my program is executing memory it never intended as code." Guard pages don't merely stop overflow attacks; they turn a stack overflow from silent corruption of whatever was adjacent into an immediate fault with an address attached. Read-only <code>.rodata</code> catches your own stray writes long before it catches anyone else's. Every one of these is a nondeterminism-to-determinism converter that we have mislabeled as a lock.</p><p>The reframe worth carrying: when you skip a hardening feature on a bare-metal or embedded target because there's no adversary in the picture, hear what you are actually choosing. <em>I am making my future bugs invisible.</em> On a platform that gives you no cache coherency guarantee, that is close to self-harm.</p><p>The best security features were never really about the adversary. They're about the fact that a CPU will do exactly what you permitted, including everything you never meant — and the only way to be told is to have said no in advance.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The NX bit is not just about security</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://developer.arm.com/documentation/ddi0487/latest/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Arm Architecture Reference Manual for A-profile architecture (cache maintenance and instruction cache coherency)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://developer.arm.com/documentation/den0024/latest/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Caches and Self-Modifying Code — Arm developer documentation on cache maintenance requirements</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
