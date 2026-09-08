@@ -1,0 +1,27 @@
+{
+  "share_description": "A Certificate Authority can be dead for decades and still confess exactly when its security margin vanished.In March 1999, Netscape 4.51 shipped two...",
+  "social_teasers": {
+    "linkedin": "Your Key Size Is Secretly a Deadline\n\nA Certificate Authority can be dead for decades and still confess exactly when its security margin vanished.In March 1999, Netscape 4.51 shipped two...\n\nhttps://hafs.dev/blog/2026-09-08.html\n\n#cryptography #RSA #PKI",
+    "x": "Your Key Size Is Secretly a Deadline\nhttps://hafs.dev/blog/2026-09-08.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-08.html",
+  "title": "Your Key Size Is Secretly a Deadline",
+  "tags": [
+    "cryptography",
+    "RSA",
+    "PKI"
+  ],
+  "hn_refs": [
+    {
+      "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
+      "url": "https://mcpherrin.ca/2026/09/07/rsa.html",
+      "points": 235
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
