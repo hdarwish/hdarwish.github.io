@@ -1,0 +1,16 @@
+{
+  "share_description": "The rows that knew too muchA self-generated safety-tuning pipeline dropped 8,009 prompts because it could not produce refusals that passed verification. The...",
+  "social_teasers": {
+    "linkedin": "Deleted Prompts Teach Models to Fear Nouns\n\nThe rows that knew too muchA self-generated safety-tuning pipeline dropped 8,009 prompts because it could not produce refusals that passed verification. The...\n\nhttps://hafs.dev/blog/2026-09-09.html\n\n#LLMsafety #alignment #machinelearning",
+    "x": "Deleted Prompts Teach Models to Fear Nouns\nhttps://hafs.dev/blog/2026-09-09.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-09.html",
+  "title": "Deleted Prompts Teach Models to Fear Nouns",
+  "tags": [
+    "LLM safety",
+    "alignment",
+    "machine learning"
+  ],
+  "hn_refs": [],
+  "source_attribution": null
+}

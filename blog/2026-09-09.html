@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleted Prompts Teach Models to Fear Nouns - Hafs Ibrahim</title>
+    <meta name="description" content="The rows that knew too muchA self-generated safety-tuning pipeline dropped 8,009 prompts because it could not produce refusals that passed verification. The...">
+    <meta property="og:title" content="Deleted Prompts Teach Models to Fear Nouns">
+    <meta property="og:description" content="The rows that knew too muchA self-generated safety-tuning pipeline dropped 8,009 prompts because it could not produce refusals that passed verification. The...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-09.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Deleted Prompts Teach Models to Fear Nouns">
+    <meta name="twitter:description" content="The rows that knew too muchA self-generated safety-tuning pipeline dropped 8,009 prompts because it could not produce refusals that passed verification. The...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-09">
+            <div class="blog-post-date">September 09, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">LLM safety</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">alignment</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">machine learning</span></div>
+            <h2 class="blog-post-title">Deleted Prompts Teach Models to Fear Nouns</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-09-hero.png" alt="Deleted Prompts Teach Models to Fear Nouns" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><h2>The rows that knew too much</h2><p>A self-generated safety-tuning pipeline dropped 8,009 prompts because it could not produce refusals that passed verification. The pipeline did not resolve those difficult cases. It made them disappear.</p><p>Those rows may contain the lesson.</p><p>The hardest safety prompts rarely arrive wearing little villain hats. They sit beside legitimate requests in medicine, chemistry, cybersecurity, politics, and other fields where the same knowledge can educate, diagnose, defend, deceive, or injure. Block the subject and you reject useful work; permit the subject without examining the requested action and you enable harmful work. The distinction lives inside the request, precisely where coarse training pipelines are least comfortable looking.</p><h2>Nouns make terrible policies</h2><p>Picture two prompts about phishing. One asks how employees can recognize credential-stealing messages; the other asks for help creating one. Their vocabulary, domain, and relevant technical facts overlap, but their verbs point in opposite directions. A topic classifier sees two cybersecurity prompts. A useful safety policy sees defense in one and harmful enablement in the other.</p><p>Subject matter is not motive.</p><p>Topic-level guardrails behave like a building that decides who may enter by checking only which room they mention. “Laboratory” means no entry; “kitchen” means entry. This is wonderfully easy to administer and spectacularly silly once kitchens contain knives and laboratories contain safety showers. The analogy breaks because prompts are language, not rooms, and their meaning can depend on context outside the text. The structural error survives: location is standing in for purpose.</p><p>That proxy can move visible metrics quickly. Refusal rates rise on flagged subjects, and obvious harmful completions fall because the model stops discussing the domain altogether. On a benchmark whose dangerous examples are grouped by topic, this can look like excellent safety work. Meanwhile, benign-answer rates fall in the same domains, while paraphrases that conceal suspicious vocabulary but preserve the harmful goal may slip through. The guardrail has learned the label on the drawer, not what someone intends to do with its contents.</p><h2>How a clean dataset loses its judgment</h2><p>A self-generated safety pipeline has three interacting decisions: which prompts to present, which candidate responses to generate, and which outputs a verifier accepts as policy-compliant. Accepted examples become training data. When the generator cannot produce a refusal that satisfies the verifier, dropping the prompt keeps the machinery moving and leaves a reassuringly tidy dataset behind.</p><p>The dataset becomes clean by becoming incomplete.</p><p>That missingness is not random. Explicitly malicious requests are more likely to elicit conventional refusals full of familiar safety language, which an automated verifier can confidently approve. Ambiguous prompts, dual-use questions, unusual phrasing, and requests requiring a narrow safe answer are more likely to produce disagreement. Filtering therefore reshapes the training distribution: it preserves cases where the existing system already performs comfortably and removes cases nearest the policy boundary.</p><p>Imagine training a smoke detector after discarding every recording on which two inspectors disagreed. Scores on the remaining recordings may improve, but the disputed sounds—burnt toast, steam, an early electrical fire—are exactly where discrimination matters. The analogy has a limit: safety judgments can depend on intent, social context, user capability, and deployment conditions rather than a physical signal alone. Its useful lesson is narrower and sharper: disagreement marks the boundary; it is not rubbish beside it.</p><p>Verification introduces a second trap. A verified refusal proves only that the response matched the verifier’s interpretation of the policy. It does not prove that refusal was the correct action. If the verifier treats certain vocabulary as inherently dangerous, the generator is rewarded for refusing harmless requests containing that vocabulary. The metric improves—verifier agreement rises—while the real capability, appropriate assistance under uncertainty, quietly decays.</p><p>Now let prompt generation, response generation, and verification inherit roughly the same coarse assumptions. The prompt generator overproduces obvious cases, the response generator emits blanket refusals, the verifier rewards familiar wording, and the filtering stage deletes whatever exposes disagreement among them. Each component appears to be doing its job. Together they build a machine that cannot see its own blind spot.</p><h2>The deletion is the training signal</h2><p>Once difficult examples are systematically removed, the pipeline is no longer merely failing to teach subtle distinctions; it is selecting a world in which those distinctions appear unnecessary, then training the model to succeed inside that simpler fiction.</p><p>Discarding disputed prompts trains topic avoidance instead of safety judgment.</p><p>A high retention rate cannot rescue this design. The important question is not how many examples survived, but which distinctions vanished: defense versus enablement, explanation versus instruction, analysis versus persuasion, benign transformation versus operational assistance. Those are not edge decorations on a safety policy. They are the policy.</p><p>The problem grows larger at deployment. A consumer assistant, a clinical system, and a security tool may draw different boundaries around identical technical content because they have different users, available context, expected capabilities, and consequences of error. A universal topic ban cannot express those distinctions. It substitutes administrative convenience for a threat model, then sends the bill to every benign user whose work contains a suspicious noun.</p><h2>Keep the argument, not only the verdict</h2><p>Failed and disputed cases should become a first-class evaluation set rather than a waste stream. Record the requested action, apparent intent, relevant context, permitted transformation, and reason for the decision. Then measure harmful compliance alongside benign refusal within the same subject, because an aggregate refusal rate happily hides both cowardice and recklessness.</p><p>Paired prompts are especially revealing: hold the topic and technical detail nearly constant while changing the goal from explanation or defense to harmful enablement. The resulting contrast tests whether the model found the hinge instead of memorizing the door. Where automated judges disagree, use clearer policy criteria, adversarial paraphrases, narrowly constructed counterexamples, and human review where the stakes justify it. These steps cost more than deleting troublesome rows because discrimination costs more than avoidance.</p><p>When a safety pipeline rejects an example, ask a better question than “How do we make this pass?” Ask what distinction the failure exposed, whether the verifier can represent it, and what future request will exploit the same confusion.</p><p>A good guardrail does not fear the map. It reads the traveler’s verb.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:0 0 0.75rem 0;">Further Reading</div><a href="https://arxiv.org/abs/2212.08073" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Constitutional AI: Harmlessness from AI Feedback</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://arxiv.org/abs/2202.03286" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Red Teaming Language Models with Language Models</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

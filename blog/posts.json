@@ -1,5 +1,35 @@
 [
   {
+    "date": "2026-09-09",
+    "title": "Deleted Prompts Teach Models to Fear Nouns",
+    "tags": [
+      "LLM safety",
+      "alignment",
+      "machine learning"
+    ],
+    "excerpt": "The rows that knew too muchA self-generated safety-tuning pipeline dropped 8,009 prompts because it could not produce refusals that passed verification. The pipeline did not resolve those difficult...",
+    "hn_refs": [],
+    "further_reading": [
+      {
+        "title": "Constitutional AI: Harmlessness from AI Feedback",
+        "url": "https://arxiv.org/abs/2212.08073",
+        "kind": "paper"
+      },
+      {
+        "title": "Red Teaming Language Models with Language Models",
+        "url": "https://arxiv.org/abs/2202.03286",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": null,
+    "share_description": "The rows that knew too muchA self-generated safety-tuning pipeline dropped 8,009 prompts because it could not produce refusals that passed verification. The...",
+    "social_teasers": {
+      "linkedin": "Deleted Prompts Teach Models to Fear Nouns\n\nThe rows that knew too muchA self-generated safety-tuning pipeline dropped 8,009 prompts because it could not produce refusals that passed verification. The...\n\nhttps://hafs.dev/blog/2026-09-09.html\n\n#LLMsafety #alignment #machinelearning",
+      "x": "Deleted Prompts Teach Models to Fear Nouns\nhttps://hafs.dev/blog/2026-09-09.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-09.html"
+  },
+  {
     "date": "2026-09-08",
     "title": "Your Key Size Is Secretly a Deadline",
     "tags": [
