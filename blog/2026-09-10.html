@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheap GPUs Cannot Explain a Bad Run - Hafs Ibrahim</title>
+    <meta name="description" content="Six days of A100 compute produced an 858-million-parameter model that performed worse than the 124-million-parameter GPT-2 released in 2019. Then five...">
+    <meta property="og:title" content="Cheap GPUs Cannot Explain a Bad Run">
+    <meta property="og:description" content="Six days of A100 compute produced an 858-million-parameter model that performed worse than the 124-million-parameter GPT-2 released in 2019. Then five...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-10.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cheap GPUs Cannot Explain a Bad Run">
+    <meta name="twitter:description" content="Six days of A100 compute produced an 858-million-parameter model that performed worse than the 124-million-parameter GPT-2 released in 2019. Then five...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-10">
+            <div class="blog-post-date">September 10, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">LLM training</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">ML infrastructure</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">optimization</span></div>
+            <h2 class="blog-post-title">Cheap GPUs Cannot Explain a Bad Run</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-10-hero.png" alt="Cheap GPUs Cannot Explain a Bad Run" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Six days of A100 compute produced an 858-million-parameter model that performed worse than the 124-million-parameter GPT-2 released in 2019. Then five engineering changes helped turn roughly $1,000 of compute into a capable 3.8-billion-parameter model.</p>
+<p>More parameters did not buy more intelligence. They bought a larger place to hide wasted updates.</p>
+<h2>The invoice conceals the experiment</h2>
+<p>The seductive interpretation is that language-model training has become cheap. The useful interpretation is harsher: inexpensive accelerators merely lower the admission price. If your data pipeline, optimizer, schedule, evaluation loop, and logging cannot reveal why a run is failing, bargain hardware will happily manufacture a larger failure at impressive speed.</p>
+<p>A cheap failed run is still a failed run.</p>
+<h2>A GPU can be busy while learning badly</h2>
+<p>Start with the difference between <em>throughput</em> and <em>convergence</em>. Throughput asks how many tokens pass through the model per second. Convergence asks how much useful reduction in loss those tokens purchase. Faster kernels, mixed precision, fused operations, and an input pipeline that keeps the accelerator fed improve the first metric; they do not guarantee the second. A utilization graph can glow green while the model spends its budget learning almost nothing.</p>
+<p>Picture a bakery whose conveyor belt doubles in speed while the oven temperature is wrong. More dough passes through, the equipment looks splendidly occupied, and the bread remains dreadful. The analogy breaks because gradient updates are not independent loaves: each update changes the model that receives the next one. But the accounting lesson survives intact—activity is not progress.</p>
+<p>The optimizer is the mechanism that converts gradients into movement through parameter space. With AdamW, moving averages of gradients and squared gradients scale the update, while weight decay is applied separately from the gradient step. Learning rate, momentum coefficients, clipping, numerical precision, and decay therefore alter both the distance and direction travelled. The useful metric is not tokens processed but validation loss reached per token—or, when the meter is running, per dollar. That metric changes the engineering decision from “How do we keep the GPU busier?” to “Which update rule buys the most learning from this budget?”</p>
+<p>The learning-rate schedule is part of that machine, not decorative configuration tucked beside the serious code. An aggressive early rate can scramble useful signal before the optimizer’s running statistics settle; an excessively cautious rate spends expensive tokens taking microscopic steps. Warmup, peak rate, and decay determine when the model moves quickly and when it begins refining. If loss improves too slowly, adding GPUs merely lets you waste money in parallel, which is a wonderfully modern way to remain wrong.</p>
+<h2>Failed runs must leave fingerprints</h2>
+<p>Experiment infrastructure stops being administrative furniture the moment a run misbehaves. Training loss, validation loss, gradient norms, learning rate, token throughput, memory pressure, and data-loading time must be recorded on a shared timeline, because their relationships identify different failure modes. A loss spike beside a gradient-norm spike points toward unstable updates. Flat loss beside low accelerator utilization points toward a starving machine. Similar disappointment; different repair.</p>
+<p>That is observability applied to learning itself.</p>
+<p>Evaluation must also arrive early enough to change the run. Training loss can keep falling while held-out performance stalls, contamination flatters a benchmark, or one capability improves as another degrades. Periodic evaluation turns those possibilities into trajectories rather than end-of-run autopsies. The critical metric becomes <em>where the run began bending away from the intended result</em>; the consequence is that you can stop, revise, or resume instead of discovering at the end that your expensive artifact learned the wrong lesson beautifully.</p>
+<p>Checkpointing completes the feedback loop. A checkpoint is not merely insurance against hardware failure; it is a preserved branch point from which a revised schedule, an added evaluation, or a debugging probe can continue. Reliable resumption lowers the compute cost of testing a hypothesis, while reproducible configuration records ensure that two runs differ deliberately rather than accidentally. Without those pieces, every experiment becomes a detective story in which someone has thoughtfully burned the evidence.</p>
+<p>Now put the whole machine against a fixed budget: every token consumed under a doomed learning rate, every accelerator cycle hidden behind a blocked data loader, every evaluation performed too late to redirect the run, and every configuration difference that cannot be reconstructed subtracts from the experiment that might have answered the real question.</p>
+<p><strong>Cheap compute only helps when infrastructure makes failure legible.</strong></p>
+<p>The larger model is not the main character here. The feedback loop is. Cheap hardware changes how many experiments you can attempt; legible failures change how much each experiment teaches the next one.</p>
+<h2>Buy answers, not accelerator-hours</h2>
+<p>Judge training infrastructure by how quickly it separates hypotheses. Did the larger batch improve hardware utilization without worsening loss per token? Did the schedule stabilize early learning? Did a data change improve held-out performance rather than merely training loss? A system that answers those questions turns failure into information. One that records only the final checkpoint turns failure into an invoice.</p>
+<p>This changes how you plan a constrained run. Do not begin by asking how large a model the budget can physically squeeze into memory. Ask which measurements will expose instability early, which checkpoints preserve optionality, and which smaller experiments can eliminate bad optimizer or scheduling choices before the full run. Compute is fuel, but uncertainty is the terrain; pouring in more fuel does not tell you whether the road leads anywhere. The analogy ends where exploration creates new terrain, yet the planning principle holds: allocate first to uncertainty reduction.</p>
+<p>Better infrastructure cannot guarantee that an idea will work. No dashboard can rescue corrupted data, a mismatched architecture, or a hypothesis that reality simply dislikes. Its value is more modest and more powerful: it lets reality reject your mistakes while they are still cheap.</p>
+<p>The bargain is not the GPU. It is hearing the answer before the meter goes dark.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:0 0 0.75rem 0;">Further Reading</div><a href="https://arxiv.org/abs/2203.15556" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Training Compute-Optimal Large Language Models</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://github.com/karpathy/nanoGPT" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">nanoGPT</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://pytorch.org/docs/stable/profiler.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">PyTorch Profiler</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-09-10",
+    "title": "Cheap GPUs Cannot Explain a Bad Run",
+    "tags": [
+      "LLM training",
+      "ML infrastructure",
+      "optimization"
+    ],
+    "excerpt": "Six days of A100 compute produced an 858-million-parameter model that performed worse than the 124-million-parameter GPT-2 released in 2019. Then five engineering changes helped turn roughly $1,000...",
+    "hn_refs": [],
+    "further_reading": [
+      {
+        "title": "Training Compute-Optimal Large Language Models",
+        "url": "https://arxiv.org/abs/2203.15556",
+        "kind": "paper"
+      },
+      {
+        "title": "nanoGPT",
+        "url": "https://github.com/karpathy/nanoGPT",
+        "kind": "docs"
+      },
+      {
+        "title": "PyTorch Profiler",
+        "url": "https://pytorch.org/docs/stable/profiler.html",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Six days of A100 compute produced an 858-million-parameter model that performed worse than the 124-million-parameter GPT-2 released in 2019. Then five...",
+    "social_teasers": {
+      "linkedin": "Cheap GPUs Cannot Explain a Bad Run\n\nSix days of A100 compute produced an 858-million-parameter model that performed worse than the 124-million-parameter GPT-2 released in 2019. Then five...\n\nhttps://hafs.dev/blog/2026-09-10.html\n\n#LLMtraining #MLinfrastructure #optimization",
+      "x": "Cheap GPUs Cannot Explain a Bad Run\nhttps://hafs.dev/blog/2026-09-10.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-10.html"
+  },
+  {
     "date": "2026-09-09",
     "title": "Deleted Prompts Teach Models to Fear Nouns",
     "tags": [
