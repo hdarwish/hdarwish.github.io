@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Codebase Was Never One Platform - Hafs Ibrahim</title>
+    <meta name="description" content="Shopify went all-in on React Native in 2020 and later called the bet extremely successful. It reaffirmed that direction in January 2025—and is now moving...">
+    <meta property="og:title" content="One Codebase Was Never One Platform">
+    <meta property="og:description" content="Shopify went all-in on React Native in 2020 and later called the bet extremely successful. It reaffirmed that direction in January 2025—and is now moving...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-11.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="One Codebase Was Never One Platform">
+    <meta name="twitter:description" content="Shopify went all-in on React Native in 2020 and later called the bet extremely successful. It reaffirmed that direction in January 2025—and is now moving...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-11">
+            <div class="blog-post-date">September 11, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">mobile-engineering</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">react-native</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software-architecture</span></div>
+            <h2 class="blog-post-title">One Codebase Was Never One Platform</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-11-hero.png" alt="One Codebase Was Never One Platform" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Shopify went all-in on React Native in 2020 and later called the bet extremely successful. It reaffirmed that direction in January 2025—and is now moving its mobile future back to Swift and Kotlin.</p><p>What became more expensive than maintaining two codebases?</p><p>Not React Native, exactly. Shopify says its apps are fast and the framework delivered what it promised: features built once, broader developer participation, and less effort spent chasing parity. What changed was the price of the alternative. Coding agents made duplicated native implementation cheaper, exposing costs that the shared codebase had never abolished.</p><h2>The seductive arithmetic of one</h2><p>The original calculation was sensible. If iOS and Android require separate implementations, every feature appears twice in the engineering ledger: twice to write, twice to review, twice to keep aligned. A shared React Native implementation reduces duplicated code, lowers the risk that one platform trails the other, and lets more developers contribute without first mastering both native stacks. If implementation effort and feature parity dominate the decision, centralizing the code is excellent arithmetic.</p><p>But “write once” describes where product logic is authored, not where the product must behave. The application still lands on two operating systems with different capabilities, first-party tools, performance characteristics, release machinery, accessibility behavior, and evolving APIs. React Native stands between shared code and those platforms, translating enough of their differences to make one implementation useful.</p><p>Picture two countries with different tax laws. A cross-platform framework is not a treaty abolishing both tax codes; it is an excellent accounting firm that gives you one interface and handles much of the translation. You still pay when either country changes its rules, when a case falls outside the common form, and when the translation machinery itself must be updated. The analogy breaks because React Native supplies real runtime and UI machinery, not merely paperwork—but the ownership pattern is the same.</p><p>The laws remain.</p><h2>Where the second codebase went</h2><p>Shopify names the deferred bill plainly: significant time and resources went into performance optimization, foundational React Native work, framework updates, and external dependencies. None of that means the framework failed. It means duplication was exchanged for mediation. Instead of implementing every feature twice, engineers maintained the layer that allowed one implementation to serve two platforms.</p><p>That exchange moved different metrics in opposite directions. Shared implementation reduced feature-building effort and parity drift; mediation increased framework maintenance, dependency coordination, and distance from first-party platform tooling. As long as the first saving outweighed the second cost, React Native won—and Shopify says that for years it did.</p><p>Architecture diagrams are shameless little accountants. They count visible boxes and ignore obligations. A single shared feature box looks cheaper than separate iOS and Android boxes, while framework upgrades, dependency compatibility, performance tuning, platform-specific foundations, and escape hatches disappear into one innocent arrow labelled “React Native.” The complexity is not gone; it has merely acquired less legible stationery.</p><p>A codebase count is not a cost model.</p><h2>Agents changed the denominator</h2><p>By late 2025, Shopify found that coding models were no longer merely accelerating isolated tasks. In prototypes, agents could implement an Android feature using its iOS version as a reference, or travel in the other direction. Shared specifications, tests, and review checkpoints reduced the human work required to preserve parity, while developers could contribute beyond their primary stack more effectively.</p><p>The duplication got cheaper without pretending the platforms were identical.</p><p>Think of a musical score performed by two orchestras. React Native shares more of the performance machinery; the agent-assisted native approach shares the score, then produces platform-specific parts for strings here and brass there. The analogy breaks because software specifications are rarely as complete as musical notation, which is precisely why Shopify still names testing and review as part of the process. Translation is cheaper, not infallible, and the conductor has not been replaced by a cheerful autocomplete.</p><p>Native still means building and maintaining software twice. Shopify explicitly says that cost has not disappeared. What changed is the machinery around that duplication: implementation and cross-stack translation can be assisted, while specifications, tests, and review checkpoints help detect divergence. The relevant metric is no longer raw file count but scarce human attention; the consequence is that duplicate native code may cost less than maintaining a central abstraction between the product and both platforms.</p><p>Once shared implementation stops dominating the cost equation, years of perfectly rational investment in a framework can become less attractive than letting each platform own its implementation, because the framework must continue absorbing platform change while its largest economic advantage quietly shrinks.</p><p>A shared codebase defers platform complexity; it does not eliminate it.</p><h2>Price the boundary, not the files</h2><p>The useful question is no longer “Do we want one codebase or two?” That counts artifacts rather than obligations. Ask where platform differences are handled, how often that boundary must adapt, what distance from first-party tools costs, and whether duplicated implementation still consumes primarily scarce human attention. Then ask the impolite question architecture discussions often avoid: which cost is falling fastest?</p><p>This prevents the silly conclusion that Shopify has proved React Native bad. Its account says nearly the opposite: the framework succeeded under the economics of 2020. A later capability changed one of the decision’s load-bearing assumptions, so the correct architecture changed with it. Refusing to revisit a successful choice would not be consistency; it would be loyalty to an expired price tag.</p><p>The portable idea is to separate shared intent from shared implementation. Specifications, tests, review checkpoints, and platform examples can carry parity without requiring both platforms to inhabit the same abstraction. Whether that model works elsewhere depends on the quality of those artifacts, the frequency of platform divergence, and the real maintenance cost of native code—not on fashionable declarations that agents have eaten software engineering.</p><p>Complexity always sends an invoice. Read the return address.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://shopify.engineering/back-to-native" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Shopify is moving from React Native back to Swift and Kotlin</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲945</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://shopify.engineering/back-to-native" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Native is now the future of mobile at Shopify</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://reactnative.dev/architecture/overview" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">React Native Architecture Overview</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

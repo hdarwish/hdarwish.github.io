@@ -1,5 +1,46 @@
 [
   {
+    "date": "2026-09-11",
+    "title": "One Codebase Was Never One Platform",
+    "tags": [
+      "mobile-engineering",
+      "react-native",
+      "software-architecture"
+    ],
+    "excerpt": "Shopify went all-in on React Native in 2020 and later called the bet extremely successful. It reaffirmed that direction in January 2025—and is now moving its mobile future back to Swift and...",
+    "hn_refs": [
+      {
+        "title": "Shopify is moving from React Native back to Swift and Kotlin",
+        "url": "https://shopify.engineering/back-to-native",
+        "points": 945
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Native is now the future of mobile at Shopify",
+        "url": "https://shopify.engineering/back-to-native",
+        "kind": "article"
+      },
+      {
+        "title": "React Native Architecture Overview",
+        "url": "https://reactnative.dev/architecture/overview",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Shopify went all-in on React Native in 2020 and later called the bet extremely successful. It reaffirmed that direction in January 2025—and is now moving...",
+    "social_teasers": {
+      "linkedin": "One Codebase Was Never One Platform\n\nShopify went all-in on React Native in 2020 and later called the bet extremely successful. It reaffirmed that direction in January 2025—and is now moving...\n\nhttps://hafs.dev/blog/2026-09-11.html\n\n#mobile-engineering #react-native #software-architecture",
+      "x": "One Codebase Was Never One Platform\nhttps://hafs.dev/blog/2026-09-11.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-11.html"
+  },
+  {
     "date": "2026-09-10",
     "title": "Cheap GPUs Cannot Explain a Bad Run",
     "tags": [
