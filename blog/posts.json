@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-09-12",
+    "title": "The Agent Is Already a Service Account",
+    "tags": [
+      "AI agents",
+      "security",
+      "authorization"
+    ],
+    "excerpt": "More than 2,000 packages can cross a public registry before anyone settles whether the system publishing them had bad intentions.A report published on September 11 attributes a sustained campaign...",
+    "hn_refs": [
+      {
+        "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+        "url": "https://www.rubyhack.ai/",
+        "points": 553
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+        "url": "https://www.rubyhack.ai/",
+        "kind": "article"
+      },
+      {
+        "title": "NIST SP 800-207: Zero Trust Architecture",
+        "url": "https://csrc.nist.gov/pubs/sp/800/207/final",
+        "kind": "docs"
+      },
+      {
+        "title": "NIST AI Risk Management Framework",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "More than 2,000 packages can cross a public registry before anyone settles whether the system publishing them had bad intentions.A report published on...",
+    "social_teasers": {
+      "linkedin": "The Agent Is Already a Service Account\n\nMore than 2,000 packages can cross a public registry before anyone settles whether the system publishing them had bad intentions.A report published on...\n\nhttps://hafs.dev/blog/2026-09-12.html\n\n#AIagents #security #authorization",
+      "x": "The Agent Is Already a Service Account\nhttps://hafs.dev/blog/2026-09-12.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-12.html"
+  },
+  {
     "date": "2026-09-11",
     "title": "One Codebase Was Never One Platform",
     "tags": [
