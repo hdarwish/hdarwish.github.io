@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="no-referrer">
+<title>SPIKE · Portfolio A — AI Systems Constellation</title>
+<!--
+  SPIKE ARTIFACT — card t_c7e28ec6. Standalone; NOT wired into hdarwish.github.io.
+  Concept: signature procedural "AI systems control-plane" constellation as the hero
+  spectacle layer. Reproduces the REAL portfolio hero content/tokens; only the
+  radial-gradient + floating-emoji spectacle layer is replaced.
+  Inspiration: MengTo/threeui (MIT) — clean-room 2D reimplementation, no code copied.
+-->
+<style>
+  :root{
+    --bg:#0a0a0c;--bg-alt:#111114;--surface:#101114;--border:#2a2a2e;
+    --text:#e4e4e7;--text-muted:#a1a1aa;--accent:#3b82f6;--accent-hover:#60a5fa;
+    --accent-glow:rgba(59,130,246,0.15);
+    --node-a:#f59e0b;--node-b:#22c55e;--node-c:#3b82f6;--node-d:#a855f7;--node-e:#ec4899;
+    --font:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+    --mono:'JetBrains Mono',ui-monospace,monospace;
+  }
+  html[data-theme="light"]{
+    --bg:#faf8f5;--bg-alt:#f0ece6;--surface:#fff;--border:#e2ddd5;
+    --text:#1a1a1e;--text-muted:#5c5c66;--accent:#2563eb;--accent-hover:#1d4ed8;
+    --accent-glow:rgba(37,99,235,0.10);
+  }
+  html[data-theme="xterm"]{
+    --bg:#000;--bg-alt:#020a02;--surface:#020a02;--border:#0f3d0f;
+    --text:#00ff00;--text-muted:#3fbf3f;--accent:#00ff00;--accent-hover:#7dff7d;
+    --accent-glow:rgba(0,255,0,0.12);
+    --node-a:#00ff00;--node-b:#00ff00;--node-c:#00ff00;--node-d:#00ff00;--node-e:#00ff00;
+    --font:var(--mono);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .nav{position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;
+    padding:.9rem 1.5rem;background:color-mix(in srgb,var(--bg) 92%,transparent);border-bottom:1px solid var(--border);backdrop-filter:blur(8px)}
+  .nav strong{letter-spacing:-.02em}
+  .theme-switch{display:flex;gap:.35rem}
+  .theme-switch button{font:inherit;font-size:.72rem;padding:.3rem .6rem;border:1px solid var(--border);
+    background:var(--surface);color:var(--text-muted);border-radius:999px;cursor:pointer}
+  .theme-switch button[aria-pressed="true"]{color:var(--accent);border-color:var(--accent)}
+
+  /* HERO */
+  .hero{position:relative;min-height:82vh;display:flex;align-items:center;overflow:hidden}
+  .hero-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:0}
+  .hero-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(90deg,var(--bg) 0%,color-mix(in srgb,var(--bg) 55%,transparent) 42%,transparent 78%)}
+  .container{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:0 1.5rem;width:100%}
+  .hero-content{max-width:640px;padding:90px 0 48px}
+  .hero-accent-bar{display:flex;gap:4px;margin-bottom:26px}
+  .bar-seg{height:4px;border-radius:2px}
+  .bar-amber{width:48px;background:#f59e0b}.bar-green{width:36px;background:#22c55e}
+  .bar-blue{width:28px;background:#3b82f6}.bar-dark{width:20px;background:#6b7280}
+  .hero-name{font-size:clamp(2.5rem,6vw,4rem);font-weight:700;line-height:1.08;letter-spacing:-.02em;margin-bottom:14px}
+  .hero-name .accent{color:var(--accent)}
+  .hero-label{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.15em;color:var(--node-e);margin-bottom:12px}
+  .hero-definition{font-size:clamp(1.2rem,3vw,1.6rem);font-weight:600;line-height:1.55;color:var(--text)}
+  .hero-definition .hl{padding:0 .15em;border-radius:3px}
+  .hl-amber{color:#f59e0b}.hl-rose{color:#ec4899}.hl-green{color:#22c55e}.hl-blue{color:var(--accent-hover)}.hl-purple{color:#a855f7}
+  .hero-cta{margin-top:30px;display:flex;gap:.75rem;flex-wrap:wrap}
+  .btn{font:inherit;font-weight:600;font-size:.92rem;padding:.7rem 1.2rem;border-radius:10px;text-decoration:none;border:1px solid var(--border)}
+  .btn-primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn-ghost{background:transparent;color:var(--text)}
+  .hero-links{display:flex;gap:1rem;margin-top:22px}
+  .hero-links a{color:var(--text-muted)}
+  .motion-toggle{position:absolute;z-index:3;right:1rem;bottom:1rem;font:inherit;font-size:.72rem;
+    padding:.4rem .7rem;border:1px solid var(--border);background:color-mix(in srgb,var(--surface) 85%,transparent);
+    color:var(--text-muted);border-radius:999px;cursor:pointer}
+  .legend{position:absolute;z-index:3;left:1.5rem;bottom:1rem;display:flex;gap:.9rem;font-family:var(--mono);font-size:.66rem;color:var(--text-muted);flex-wrap:wrap;max-width:60%}
+  .legend span{display:inline-flex;align-items:center;gap:.35rem}
+  .legend i{width:8px;height:8px;border-radius:2px;display:inline-block}
+  main{max-width:1080px;margin:0 auto;padding:2rem 1.5rem 4rem}
+  .note{font-size:.85rem;color:var(--text-muted);border-left:2px solid var(--accent);padding:.4rem 0 .4rem .9rem}
+  @media (max-width:640px){.hero{min-height:78vh;padding-bottom:80px}.legend{bottom:4.5rem;max-width:calc(100% - 3rem)}}
+</style>
+</head>
+<body>
+<aside aria-label="Preview notice" style="padding:12px 20px;background:#17202f;color:#e4e4e7;font:13px/1.5 system-ui,sans-serif;border-bottom:1px solid #3c4e68"><strong>Design preview · A · Systems Constellation</strong> · <a href="index.html" style="color:#93c5fd">Compare variants</a> · <a href="https://hafs.dev/" style="color:#93c5fd">Live site</a><br>Partial prototype only. Project content, metrics and navigation include placeholders; not verified achievements.</aside>
+  <nav class="nav">
+    <strong>Hafs Ibrahim<span style="color:var(--accent)">.</span></strong>
+    <div class="theme-switch" role="group" aria-label="Theme">
+      <button data-set="dark" aria-pressed="true">dark</button>
+      <button data-set="light" aria-pressed="false">light</button>
+      <button data-set="xterm" aria-pressed="false">xterm</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <!-- Poster fallback (revealed when reduced-motion / Save-Data / no-2d). Also the static preview artifact. -->
+    <img class="hero-poster" hidden src="posters/portfolio-a.svg" alt="AI systems constellation — static preview">
+    <canvas class="hero-canvas" id="c" aria-hidden="true"></canvas>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-accent-bar" aria-hidden="true">
+          <span class="bar-seg bar-amber"></span><span class="bar-seg bar-green"></span>
+          <span class="bar-seg bar-blue"></span><span class="bar-seg bar-dark"></span>
+        </div>
+        <h1 class="hero-name">Hafs Ibrahim<span class="accent">.</span></h1>
+        <p class="hero-label">DEFINITION</p>
+        <p class="hero-definition">
+          Engineer who builds the <span class="hl hl-amber">production layer</span> of
+          <span class="hl hl-rose">AI products</span> — turning model capabilities into
+          <span class="hl hl-green">reliable</span>, <span class="hl hl-blue">observable</span>,
+          <span class="hl hl-purple">actually useful</span> systems.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#work">View selected work</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
+        </div>
+        <div class="hero-links">
+          <a href="#" aria-label="GitHub">GitHub</a><a href="#" aria-label="LinkedIn">LinkedIn</a><a href="#" aria-label="Email">Email</a>
+        </div>
+      </div>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i style="background:var(--node-a)"></i>ingest</span>
+      <span><i style="background:var(--node-b)"></i>eval</span>
+      <span><i style="background:var(--node-c)"></i>orchestrator</span>
+      <span><i style="background:var(--node-d)"></i>serving</span>
+      <span><i style="background:var(--node-e)"></i>model</span>
+    </div>
+    <button class="motion-toggle" id="toggle" aria-pressed="true" hidden>❚❚ pause motion</button>
+  </header>
+
+  <main>
+    <p class="note">Spike Portfolio&nbsp;A — the hero spectacle is a single procedural "AI systems control-plane":
+    labelled nodes (ingest → model → orchestrator → eval → serving) with live data pulses travelling the edges.
+    Everything below the fold is unchanged. One canvas, HTML headline over it, theme-aware, poster fallback.</p>
+  </main>
+
+<script src="lib/wow-canvas.js"></script>
+<script>
+(function(){
+  // Theme switch (demonstrates theme-awareness; canvas reads CSS vars live).
+  var root=document.documentElement;
+  document.querySelectorAll('.theme-switch button').forEach(function(b){
+    b.addEventListener('click',function(){
+      root.setAttribute('data-theme',b.dataset.set);
+      document.querySelectorAll('.theme-switch button').forEach(function(x){x.setAttribute('aria-pressed',x===b);});
+    });
+  });
+
+  var canvas=document.getElementById('c');
+  function cssVar(n){return getComputedStyle(root).getPropertyValue(n).trim();}
+
+  // Scene: 5 labelled system nodes in a control-plane topology + travelling pulses.
+  var NODES=[
+    {x:.30,y:.30,r:20,label:'INGEST',c:'--node-a'},
+    {x:.62,y:.22,r:26,label:'MODEL',c:'--node-e'},
+    {x:.78,y:.52,r:22,label:'ORCHESTRATOR',c:'--node-c'},
+    {x:.55,y:.74,r:18,label:'EVAL',c:'--node-b'},
+    {x:.30,y:.62,r:20,label:'SERVING',c:'--node-d'}
+  ];
+  var EDGES=[[0,1],[1,2],[2,3],[3,4],[4,0],[0,2],[1,3]];
+  var pulses=[], W=0, H=0, seedT=0;
+
+  function init(ctx,w,h){
+    W=w;H=h;
+    pulses=[];
+    // one pulse per edge, phase-staggered — bounded particle count (7).
+    EDGES.forEach(function(e,i){ pulses.push({e:e,base:(i/EDGES.length)}); });
+  }
+
+  function nodeXY(n){return {x:n.x*W,y:n.y*H};}
+
+  function drawScene(ctx,w,h,t){
+    ctx.clearRect(0,0,w,h);
+    var accent=cssVar('--accent');
+    // faint control-plane grid
+    ctx.globalAlpha=0.06; ctx.strokeStyle=accent; ctx.lineWidth=1;
+    var step=Math.max(48,w/22);
+    for(var x=step;x<w;x+=step){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,h);ctx.stroke();}
+    for(var y=step;y<h;y+=step){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(w,y);ctx.stroke();}
+    ctx.globalAlpha=1;
+
+    // edges
+    ctx.lineWidth=1.2;
+    EDGES.forEach(function(e){
+      var a=nodeXY(NODES[e[0]]),b=nodeXY(NODES[e[1]]);
+      ctx.strokeStyle=accent; ctx.globalAlpha=0.22;
+      ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();
+    });
+    ctx.globalAlpha=1;
+
+    // pulses along edges
+    pulses.forEach(function(pl){
+      var p=(pl.base + t*0.00007) % 1; // time-based → deterministic still frame
+      var a=nodeXY(NODES[pl.e[0]]),b=nodeXY(NODES[pl.e[1]]);
+      var px=a.x+(b.x-a.x)*p, py=a.y+(b.y-a.y)*p;
+      var col=cssVar(NODES[pl.e[1]].c)||accent;
+      ctx.fillStyle=col; ctx.shadowColor=col; ctx.shadowBlur=10;
+      ctx.beginPath();ctx.arc(px,py,2.6,0,Math.PI*2);ctx.fill();
+      ctx.shadowBlur=0;
+    });
+
+    // nodes + labels
+    NODES.forEach(function(n){
+      var p=nodeXY(n), col=cssVar(n.c)||accent;
+      var pulse=1+0.10*Math.sin((t/700)+(n.x*6));
+      ctx.beginPath();ctx.arc(p.x,p.y,n.r*pulse,0,Math.PI*2);
+      ctx.fillStyle=col; ctx.globalAlpha=0.14; ctx.fill();
+      ctx.globalAlpha=1; ctx.lineWidth=1.6; ctx.strokeStyle=col;
+      ctx.beginPath();ctx.arc(p.x,p.y,n.r,0,Math.PI*2);ctx.stroke();
+      ctx.beginPath();ctx.arc(p.x,p.y,3,0,Math.PI*2);ctx.fillStyle=col;ctx.fill();
+      ctx.font='600 10px '+(cssVar('--mono')||'monospace');
+      ctx.fillStyle=cssVar('--text-muted')||'#999';
+      ctx.textAlign='center';
+      ctx.fillText(n.label,p.x,p.y+n.r+14);
+    });
+  }
+
+  WowCanvas.mount({
+    canvas:canvas,
+    poster:document.querySelector('.hero-poster'),
+    toggle:document.getElementById('toggle'),
+    init:init,
+    frame:function(ctx,w,h,t){ drawScene(ctx,w,h,t); },
+    still:function(ctx,w,h){ drawScene(ctx,w,h,3000); } // representative static frame
+  });
+})();
+</script>
+</body>
+</html>

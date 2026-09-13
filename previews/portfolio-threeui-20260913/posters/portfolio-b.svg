@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380">
+  <rect width="1200" height="380" fill="#0a0a0c"/>
+  <!-- perspective floor -->
+  <g stroke="#3b82f6" stroke-opacity="0.10">
+    <line x1="600" y1="122" x2="0" y2="380"/><line x1="600" y1="122" x2="200" y2="380"/>
+    <line x1="600" y1="122" x2="400" y2="380"/><line x1="600" y1="122" x2="600" y2="380"/>
+    <line x1="600" y1="122" x2="800" y2="380"/><line x1="600" y1="122" x2="1000" y2="380"/>
+    <line x1="600" y1="122" x2="1200" y2="380"/>
+  </g>
+  <g stroke="#3b82f6" stroke-opacity="0.14">
+    <line x1="0" y1="170" x2="1200" y2="170"/><line x1="0" y1="220" x2="1200" y2="220"/>
+    <line x1="0" y1="290" x2="1200" y2="290"/><line x1="0" y1="360" x2="1200" y2="360"/>
+  </g>
+  <!-- beacon columns -->
+  <defs>
+    <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#3b82f6" stop-opacity="0.35"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" x2="1"><stop offset="0" stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#3b82f6" stop-opacity="0.5"/><stop offset="1" stop-color="#3b82f6" stop-opacity="0"/></linearGradient>
+  </defs>
+  <g>
+    <rect x="262" y="0" width="4" height="122" fill="url(#beam)"/><circle cx="264" cy="122" r="3" fill="#60a5fa"/>
+    <rect x="526" y="0" width="4" height="122" fill="url(#beam)"/><circle cx="528" cy="122" r="3" fill="#60a5fa"/>
+    <rect x="754" y="0" width="4" height="122" fill="url(#beam)"/><circle cx="756" cy="122" r="3" fill="#60a5fa"/>
+    <rect x="982" y="0" width="4" height="122" fill="url(#beam)"/><circle cx="984" cy="122" r="3" fill="#60a5fa"/>
+  </g>
+  <rect x="700" y="0" width="120" height="130" fill="url(#sweep)" opacity="0.5"/>
+</svg>
