@@ -1,5 +1,35 @@
 [
   {
+    "date": "2026-09-13",
+    "title": "Your Coding Agent Is Taking an Archaeology Exam",
+    "tags": [
+      "coding-agents",
+      "software-evaluation",
+      "enterprise-software"
+    ],
+    "excerpt": "The leading agent in Real-SWE resolves only 38.8% of tasks. One of those “coding” tasks requires reconstructing tax exemptions, jurisdiction rules, calls to an external authority, invoice state, and...",
+    "hn_refs": [],
+    "further_reading": [
+      {
+        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+        "url": "https://arxiv.org/abs/2310.06770",
+        "kind": "paper"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "The leading agent in Real-SWE resolves only 38.8% of tasks. One of those “coding” tasks requires reconstructing tax exemptions, jurisdiction rules, calls to...",
+    "social_teasers": {
+      "linkedin": "Your Coding Agent Is Taking an Archaeology Exam\n\nThe leading agent in Real-SWE resolves only 38.8% of tasks. One of those “coding” tasks requires reconstructing tax exemptions, jurisdiction rules, calls to...\n\nhttps://hafs.dev/blog/2026-09-13.html\n\n#coding-agents #software-evaluation #enterprise-software",
+      "x": "Your Coding Agent Is Taking an Archaeology Exam\nhttps://hafs.dev/blog/2026-09-13.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-13.html"
+  },
+  {
     "date": "2026-09-12",
     "title": "The Agent Is Already a Service Account",
     "tags": [
