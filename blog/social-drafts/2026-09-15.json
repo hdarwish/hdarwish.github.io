@@ -1,0 +1,27 @@
+{
+  "share_description": "A supposedly dead protocol quietly carries Brazil’s electronic fiscal documents between businesses and tax authorities.SOAP survived here by becoming much...",
+  "social_teasers": {
+    "linkedin": "SOAP Survived Because Commerce Needs a Constitution\n\nA supposedly dead protocol quietly carries Brazil’s electronic fiscal documents between businesses and tax authorities.SOAP survived here by becoming much...\n\nhttps://hafs.dev/blog/2026-09-15.html\n\n#distributed-systems #government-technology #API-design",
+    "x": "SOAP Survived Because Commerce Needs a Constitution\nhttps://hafs.dev/blog/2026-09-15.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-15.html",
+  "title": "SOAP Survived Because Commerce Needs a Constitution",
+  "tags": [
+    "distributed-systems",
+    "government-technology",
+    "API-design"
+  ],
+  "hn_refs": [
+    {
+      "title": "Every invoice in Brazil's economy runs on SOAP 1.2. We mapped it all",
+      "url": "https://github.com/stoix-dev/sefaz-webservices-postman",
+      "points": 49
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
