@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let the LLM Testify, Not Judge - Hafs Ibrahim</title>
+    <meta name="description" content="An LLM can improve a classification system while being a worse classifier than the system built around it.That sounds contradictory only if you assume the...">
+    <meta property="og:title" content="Let the LLM Testify, Not Judge">
+    <meta property="og:description" content="An LLM can improve a classification system while being a worse classifier than the system built around it.That sounds contradictory only if you assume the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-17.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Let the LLM Testify, Not Judge">
+    <meta name="twitter:description" content="An LLM can improve a classification system while being a worse classifier than the system built around it.That sounds contradictory only if you assume the...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-17">
+            <div class="blog-post-date">September 17, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">machine-learning</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">llms</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">classification</span></div>
+            <h2 class="blog-post-title">Let the LLM Testify, Not Judge</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-17-hero.png" alt="Let the LLM Testify, Not Judge" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>An LLM can improve a classification system while being a worse classifier than the system built around it.</p><p>That sounds contradictory only if you assume the model’s verdict is its most valuable output. Often it is not. The valuable part is its ability to notice evidence buried in unruly language: a complaint describing coercion without naming it, a message implying cancellation without using the word, a contract hiding an exception inside otherwise ordinary prose. The LLM may detect those clues brilliantly and still combine them into a badly calibrated decision.</p><h2>Fluency is not measurement</h2><p>Picture a service deciding which cases deserve human review. If the LLM returns only a hard label, the useful uncertainty has already been crushed: you cannot cleanly choose a threshold that favors recall today and precision tomorrow. Token log probabilities are available in some systems, but they should not be mistaken for calibrated class probabilities without validation. Asking the model how confident it feels is worse; that produces another fluent sentence, not a trustworthy measuring device.</p><p>A confident verdict is not a calibrated score.</p><p>The distinction matters because a final label contains policy, whether you acknowledge it or not. Which errors are expensive? How common is the positive class in this population? How much review capacity exists? A prompt can recite those facts, but the model does not have to use them consistently—or at all—so the precision-recall trade-off becomes entangled with prose whose operational meaning cannot be inspected, estimated, or adjusted directly.</p><h2>Convert the verdict into evidence</h2><p>Suppose the LLM emits a binary signal, <code>LLM(x)</code>, indicating whether it found a relevant pattern. Instead of accepting that signal as the decision, feed it into an ordinary logistic regression:</p><pre><code>p(y = 1 | x) = sigmoid(alpha + beta * LLM(x))</code></pre><p>If the outer model is forced to copy the LLM, you have merely added decorative mathematics around the original verdict. Estimate <code>alpha</code> and <code>beta</code> from labeled examples instead, and the system learns how much the observation deserves to count in the population you actually care about. If the signal predicts the label strongly, it receives weight. If it is weak, reversed, or useless, the fitted model can reveal that too.</p><p>With one binary LLM feature, the model has only two groups to understand: examples where the LLM said yes and examples where it said no. An unregularized fit, when the data are not completely separated, corresponds to estimating a positive rate for each group. The output is now an estimated probability rather than an inscrutable command, so you can evaluate calibration and discrimination separately, then select an operating threshold according to precision, recall, cost, and review load.</p><p>The LLM has become a witness rather than the judge.</p><p>This resembles replacing an oracle with a laboratory instrument. The instrument may detect something ordinary tools miss, but a separate process interprets its reading using standards that can be checked and changed. The analogy has a sharp limit: an LLM is not physically stable like a thermometer. Change the prompt, model version, or input distribution and you may have changed the instrument itself—which is exactly why its output must be measured downstream rather than granted authority upstream.</p><h2>Give the rest of the evidence a vote</h2><p>Once the LLM output is merely a feature, structured covariates can enter without being translated into a polite paragraph and offered to the model in the hope that it pays attention. Account state, document type, source population, and other available signals can be combined directly with the semantic feature. The outer classifier can estimate interactions, respond to baseline prevalence in the training data, and expose whether the LLM’s observation adds discrimination beyond what the structured variables already provide.</p><p>Different target population? Reweight or refit on representative data. Different tolerance for false positives? Move the threshold. Suspect the LLM signal fails for a subgroup? Measure calibration and error rates there. Each question has a corresponding metric and an explicit engineering control; none requires bargaining with a prompt as though it were a minor woodland deity.</p><p>The same framing makes iteration less superstitious. When the LLM owns the verdict, disappointing performance invites prompt fiddling: change the wording, rerun the evaluation, squint at the aggregate score, repeat until morale improves. When the model produces named observations instead, residual errors can reveal which evidence is missing. You can request several distinct signals, test token probabilities as additional inputs, inspect whether each feature predicts the intended target, and discard features that merely sound intelligent.</p><p>Feature engineering gives failure somewhere to stand.</p><h2>Policy belongs outside the prose</h2><p>Once you separate the component that reads slippery language from the component that must respect prevalence, asymmetric costs, operating thresholds, subgroup behavior, and finite review capacity, an architectural fact becomes impossible to ignore: asking one generative model to perform both jobs does not simplify the system; it hides the decision rule inside a mechanism you cannot properly tune.</p><p><strong>LLMs should supply evidence, not own the classification decision.</strong></p><p>This is larger than a modeling preference. It is a boundary between perception and policy. The LLM handles the part at which it is unusually useful—extracting semantic clues from text—while the outer system handles the part that must remain measurable: combining evidence, estimating probabilities, choosing thresholds, and changing behavior when costs or populations change.</p><p>The price is labeled data, which punctures the charming fantasy of a training-free classifier. Good. A consequential classification system already needs representative evaluation data if you intend to know whether it works. Fitting and calibrating a small outer model is not bureaucratic backsliding; it is admitting that performance claims require evidence, and that a test set cannot rescue a decision rule whose policy remains trapped inside a prompt.</p><p>So replace the seductive question, <em>“Can the LLM decide this?”</em> with the more useful one: <em>“What can the LLM observe here that my existing features cannot express?”</em> Name that observation, validate it as a target, measure its stability, combine it with the rest of the evidence, and keep the operating threshold somewhere humans can inspect and alter.</p><p>Let the strange machine read the fog. Keep the steering wheel.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://minimallysufficient.com/posts/llm-classification-is-feature-extraction" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">LLM Classification Is Feature Engineering</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲23</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://minimallysufficient.com/posts/llm-classification-is-feature-extraction" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">LLM Classification Is Feature Engineering</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://scikit-learn.org/stable/modules/calibration.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Probability Calibration</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
