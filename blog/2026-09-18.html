@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Proof Passed. The Law Was Wrong. - Hafs Ibrahim</title>
+    <meta name="description" content="A theorem can make one forbidden game state impossible while proving almost nothing about whether the game is correct.Picture a generated board game with a...">
+    <meta property="og:title" content="The Proof Passed. The Law Was Wrong.">
+    <meta property="og:description" content="A theorem can make one forbidden game state impossible while proving almost nothing about whether the game is correct.Picture a generated board game with a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-18.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Proof Passed. The Law Was Wrong.">
+    <meta name="twitter:description" content="A theorem can make one forbidden game state impossible while proving almost nothing about whether the game is correct.Picture a generated board game with a...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-18">
+            <div class="blog-post-date">September 18, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">formal-verification</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI-code-generation</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software-specification</span></div>
+            <h2 class="blog-post-title">The Proof Passed. The Law Was Wrong.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-18-hero.png" alt="The Proof Passed. The Law Was Wrong." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>A theorem can make one forbidden game state impossible while proving almost nothing about whether the game is correct.</p><p>Picture a generated board game with a law saying that no move may occur after victory. The implementation arrives with a valid proof: once the state is marked terminal, every attempted move is rejected. Splendid. Unfortunately, the code recognizes victory using the wrong pattern, so the terminal flag itself is nonsense. The theorem has guarded the drawbridge while somebody quietly moved the castle.</p><h2>A proof answers exactly one question</h2><p>Proof-checked AI code invites a dangerously comfortable sentence: <em>the code is verified</em>. Verified against what? If that question receives a vague answer, mathematical confidence starts laundering ordinary ambiguity into something much grander—and much harder to challenge.</p><p>In a Bend-style workflow, generated code is accompanied by proofs that its stated laws hold. A checker does not inspect the programmer’s intentions, infer the product requirements, or squint thoughtfully at the interface. It checks whether a formal proposition follows from specified assumptions under the system’s rules. That reduces one important metric—the number of implementations violating those propositions—but says nothing by itself about defects the propositions failed to name.</p><p>The checker is doing real work.</p><p>Suppose the game law is written schematically as <code>terminal(s) → apply(s, move) = error</code>. A proof may establish this for every representable state and move, not merely for the examples someone remembered to test. A test suite samples executions; the theorem covers the entire modeled state space. For this property, you no longer need to hope that testing happened to visit the embarrassing corner.</p><p>That guarantee is enormous—and exactly bounded.</p><h2>The loopholes are inside the law</h2><p>Now inspect the nouns. What makes a state <code>terminal</code>? Which states are representable? What counts as <code>apply</code>? If the definition of victory omits diagonal wins, the theorem remains valid. If malformed boards are excluded by an overly strong precondition, the theorem says nothing about them. If the model contains no time, storage failure, concurrency, or external service, no proof inside that model can constrain those absent things.</p><p>The modeled state space is not reality. It is a fenced garden cut from reality, and the proof tells you—with extraordinary precision—what can grow inside the fence. It cannot tell you whether the fence was put in the right place. This analogy breaks where all physical gardens do: formal boundaries can be perfectly exact, while wooden fences decidedly cannot. The useful point is omission, not carpentry.</p><p>Specification incompleteness has a particularly mischievous cousin: vacuity. A law of the form “for every valid request, property P holds” is effortless to prove if <code>valid</code> accidentally rejects every request. The implication is true because its premise never occurs. Proof success rises while useful behavioral coverage falls through the floor.</p><p>A green checker measures derivability, not relevance.</p><p>Think of a proof checker as an impossibly strict contract court. If the contract says the contractor must paint every listed door blue, the court can establish that every listed door is blue; it cannot object that the kitchen door was omitted from the list. The analogy breaks in the proof system’s favor: within a formal model, the guarantee can be absolute rather than dependent on testimony, evidence, or enforcement. Yet omission remains omission, even when certified with exquisite rigor.</p><p>Incorrect laws are worse than incomplete ones because they can make the wrong behavior mandatory. A mistaken invariant may forbid a legitimate state. A postcondition may encode the wrong rounding rule. A security policy may prove that only “authorized” callers gain access while defining authorization too broadly. Conformance improves while the product deteriorates—a nasty inversion that proof-pass rates will cheerfully report as progress.</p><h2>AI can agree with itself perfectly</h2><p>Generative systems add another gear. If the same model drafts the implementation, proposes the laws, and repairs the proof whenever checking fails, it can produce a beautifully coherent account of one misconception. The code and specification are no longer independent witnesses; they are two copies of the same story wearing different hats. Agreement looks impressive, but correlated agreement is weak evidence.</p><p>This is why tests still matter, although their job changes. Property-based tests can attack whether formal predicates match executable examples. Mutation testing can alter the implementation or specification and ask whether the surrounding laws notice. Counterexample search can expose states that satisfy the formal preconditions but violate an external oracle. These techniques test specification sensitivity: whether a plausible mistake is detected, not merely whether today’s proof term type-checks.</p><p>Once the checker has removed a large class of implementation slips, the failures left standing are omissions, mistranslated requirements, vacuous assumptions, and models that politely exclude reality’s untidy edges; the certificate is strongest exactly where the question has become weakest, because the remaining uncertainty sits in what humans or models chose to ask.</p><p><strong>Proof-carrying AI code moves software risk from implementation into specification.</strong></p><p>The proof did not remove uncertainty. It concentrated it.</p><h2>Review the claim, not the certificate</h2><p>The portable habit is to review every proof obligation adversarially. Ask what behavior would still be disastrously wrong while satisfying this law. Try weakening the precondition. Check whether the postcondition distinguishes every outcome users care about. Write a second formulation independently and see whether the two claims agree. Review effort should follow the risk, and the risk now lives in the sentence being proved.</p><p>This also changes what you should demand from tools such as Bend. A proof dashboard should not merely celebrate accepted theorems; it should expose assumptions, highlight unmentioned state, detect vacuous implications, generate counterexamples to nearby stronger claims, and show which requirement supplied each law. Proof latency matters for developer flow. Traceability and mutation sensitivity determine whether the proof deserves belief.</p><p>Machine-checked proof does not become smaller under this scrutiny. It becomes useful enough to treat seriously. Tests catch witnessed failures; types exclude broad families of nonsense; proofs rule out formally named behaviors. Each instrument is magnificent precisely where it reaches—and silent where it does not.</p><p>The machine can certify the law. You still have to hear what the law never said.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:0 0 0.75rem 0;">Further Reading</div><a href="https://softwarefoundations.cis.upenn.edu/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Software Foundations</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://lean-lang.org/theorem_proving_in_lean4/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Theorem Proving in Lean 4</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://dl.acm.org/doi/10.1145/363235.363259" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">An Axiomatic Basis for Computer Programming</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

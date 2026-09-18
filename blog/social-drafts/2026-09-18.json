@@ -1,0 +1,21 @@
+{
+  "share_description": "A theorem can make one forbidden game state impossible while proving almost nothing about whether the game is correct.Picture a generated board game with a...",
+  "social_teasers": {
+    "linkedin": "The Proof Passed. The Law Was Wrong.\n\nA theorem can make one forbidden game state impossible while proving almost nothing about whether the game is correct.Picture a generated board game with a...\n\nhttps://hafs.dev/blog/2026-09-18.html\n\n#formal-verification #AI-code-generation #software-specification",
+    "x": "The Proof Passed. The Law Was Wrong.\nhttps://hafs.dev/blog/2026-09-18.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-18.html",
+  "title": "The Proof Passed. The Law Was Wrong.",
+  "tags": [
+    "formal-verification",
+    "AI-code-generation",
+    "software-specification"
+  ],
+  "hn_refs": [],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
