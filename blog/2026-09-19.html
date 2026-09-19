@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliasing Isn&#39;t Noise. It&#39;s Identity Theft. - Hafs Ibrahim</title>
+    <meta name="description" content="Point a recorder at a 9 kHz whistle and at a 1 kHz hum — far apart on the audible spectrum. Set it to take 8,000 snapshots a second, and it will return the...">
+    <meta property="og:title" content="Aliasing Isn&#39;t Noise. It&#39;s Identity Theft.">
+    <meta property="og:description" content="Point a recorder at a 9 kHz whistle and at a 1 kHz hum — far apart on the audible spectrum. Set it to take 8,000 snapshots a second, and it will return the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-19.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aliasing Isn&#39;t Noise. It&#39;s Identity Theft.">
+    <meta name="twitter:description" content="Point a recorder at a 9 kHz whistle and at a 1 kHz hum — far apart on the audible spectrum. Set it to take 8,000 snapshots a second, and it will return the...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-19">
+            <div class="blog-post-date">September 19, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">aliasing</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">dsp</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">measurement</span></div>
+            <h2 class="blog-post-title">Aliasing Isn&#39;t Noise. It&#39;s Identity Theft.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-19-hero.png" alt="Aliasing Isn&#39;t Noise. It&#39;s Identity Theft." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Point a recorder at a 9 kHz whistle and at a 1 kHz hum — far apart on the audible spectrum. Set it to take 8,000 snapshots a second, and it will return the exact same file for both.</p><p>Identical bits. Not similar: the same. And no reconstruction algorithm, however clever, will ever recover the whistle — because the recorder didn't lose it. The recorder swapped it for something else.</p><h2>One file, two worlds</h2><p>You might file that under “one weird trick in DSP.” It's not a quirk, and it's not about audio. It's the general rule of every measurement that takes a finite number of snapshots — which is every measurement you have ever made. The moment you discretize anything, you open a door, and through that door can walk things that were never there, wearing the faces of the things that were.</p><p>That's why this failure is so dangerous: it is the one error you cannot see in your data, because the data shows you nothing wrong. No anomaly detector, no p99 chart, no residual plot, no “unexpected spike” will flag it.</p><p>The lie is bit-for-bit identical to the truth it replaced.</p><h2>The fold</h2><p>Take a sine wave and sample it at rate fs — one measurement every T = 1/fs seconds, so the Nth sample is just the wave's value at time N·T. Nothing slippery yet. But take a second sine wave whose frequency is fs − f, and compute its samples: identical arithmetic, identical sequence. Two different continuous signals produce one discrete record. The fast wave folded over the frequency fs/2 — the Nyquist frequency — and landed exactly on top of a slow one.</p><p>Work it out. The pattern is always the same: frequencies above half the sample rate fold into the range below it, landing on a doppelgänger.</p><ul><li>A 9 kHz tone sampled at 8 kHz lands on 1 kHz.</li><li>A 7 kHz tone sampled at 8 kHz lands on 1 kHz.</li><li>A 10 kHz vibration sampled at 6 kHz lands on 2 kHz.</li></ul><p>You've seen the result a hundred times: wagon wheels in old movies appearing to turn backward. The wheel has eight spokes, the film shoots 24 frames a second, and at just the right rotation speed every frame catches a spoke where the previous one was — so the wheel's actual speed impersonates a slower, backward one. The same machinery works in space: a camera photographing a fine fence returns slow rolling moiré bands that exist nowhere in the world. Now picture a vibration sensor sampling at 6 kHz: a real 10 kHz gear shriek arrives as a calm 2 kHz wobble, present in every sample, invisible to every check.</p><p>Picture the spectrum as a paper strip marked with frequency, zero to 100 kHz. Sampling folds the strip at the halfway mark — 50 kHz — and presses everything above it down onto everything below. The paper version keeps both layers; the sampled version doesn't. It smears the layers into one, and the samples carry no record of which layer a value came from.</p><p>Two different worlds — one with a real 1 kHz tone, one with a real 9 kHz tone — produce the same evidence.</p><p>The evidence is a function of the world. The world is not a function of the evidence. Even with unlimited computation, the original is unrecoverable, because nothing in the file distinguishes it. This is not the usual sense in which measurements are imperfect.</p><h2>The crime has no evidence</h2><p>We have a word for losing detail: blur, noise, smearing, degradation. Call it “information loss” and you picture a lower-resolution copy of reality — fuzzier, but still pointing at the same thing.</p><p>Aliasing is not that. Aliasing is the case where the data points, perfectly and unambiguously, at the wrong thing. Detail wasn't blurred.</p><p>It was replaced.</p><p>Call it a fold, an alias, a doppelgänger — the word matters less than the shape of the crime. The data is perfect, and the data is wrong.</p><p>Sampling doesn't lose detail. It destroys identity.</p><p>Hold that for a second, because the consequence is stranger than “be more careful with your sensor.” After the sampler, the question “was it fast or slow?” has no answer — not an unknown answer: no answer. The file doesn't contain the signal at all. It contains a different signal that passes the same tests.</p><h2>Decide what's real before you sample</h2><p>So every honest digitizer — a microphone pre-amp, a camera, an ADC chip — does something that sounds like a precaution and is actually the whole point: a low-pass filter placed before the sampler, attenuating everything above Nyquist so there's nothing left to fold. That's why CDs sample at 44.1 kHz, just past twice the 20 kHz ceiling of human hearing. The engineers put the filter first because you must decide what the signal is allowed to be before the sampler decides for you.</p><p>The principle is portable. Downsampling a time series? Low-pass first, then decimate — never just take every tenth point. That is literally what decimation filters like <code>scipy.signal.decimate</code> exist to do. Building an image sensor? You either carry an optical low-pass filter or accept moiré as a trade for sharpness. Monitoring a machine? A control loop that reads a sensor too slowly can ride a real high-frequency oscillation as if it were a slow drift — until the day the machine shakes itself apart over a value the data swore was flat.</p><p>Carry this out with you: <strong>before you sample anything — a signal, a metric, a behavior, a world — decide which frequencies you believe in.</strong> Whatever you refuse to believe in will not disappear. It will come back as something else.</p><p>Aliasing isn't noise. It's the signal lying about who it is — flawlessly, consistently, with perfect grammar — and the only witness who could have caught it is the filter you were tempted to skip.</p><p>The sampler never lies — it just never tells you which world it was sampling.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:0 0 0.75rem 0;">Further Reading</div><a href="https://www.dspguide.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Scientist and Engineer&#39;s Guide to Digital Signal Processing</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://people.math.harvard.edu/~ctm/home/text/class/shannon/information.pdf" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">A Mathematical Theory of Communication (Shannon, 1948)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Nyquist–Shannon sampling theorem</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

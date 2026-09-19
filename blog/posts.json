@@ -1,5 +1,40 @@
 [
   {
+    "date": "2026-09-19",
+    "title": "Aliasing Isn't Noise. It's Identity Theft.",
+    "tags": [
+      "aliasing",
+      "dsp",
+      "measurement"
+    ],
+    "excerpt": "Point a recorder at a 9 kHz whistle and at a 1 kHz hum — far apart on the audible spectrum. Set it to take 8,000 snapshots a second, and it will return the exact same file for both.Identical bits....",
+    "hn_refs": [],
+    "further_reading": [
+      {
+        "title": "The Scientist and Engineer's Guide to Digital Signal Processing",
+        "url": "https://www.dspguide.com/",
+        "kind": "book"
+      },
+      {
+        "title": "A Mathematical Theory of Communication (Shannon, 1948)",
+        "url": "https://people.math.harvard.edu/~ctm/home/text/class/shannon/information.pdf",
+        "kind": "paper"
+      },
+      {
+        "title": "Nyquist–Shannon sampling theorem",
+        "url": "https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": null,
+    "share_description": "Point a recorder at a 9 kHz whistle and at a 1 kHz hum — far apart on the audible spectrum. Set it to take 8,000 snapshots a second, and it will return the...",
+    "social_teasers": {
+      "linkedin": "Aliasing Isn't Noise. It's Identity Theft.\n\nPoint a recorder at a 9 kHz whistle and at a 1 kHz hum — far apart on the audible spectrum. Set it to take 8,000 snapshots a second, and it will return the...\n\nhttps://hafs.dev/blog/2026-09-19.html\n\n#aliasing #dsp #measurement",
+      "x": "Aliasing Isn't Noise. It's Identity Theft.\nhttps://hafs.dev/blog/2026-09-19.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-19.html"
+  },
+  {
     "date": "2026-09-18",
     "title": "The Proof Passed. The Law Was Wrong.",
     "tags": [

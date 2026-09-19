@@ -1,0 +1,16 @@
+{
+  "share_description": "Point a recorder at a 9 kHz whistle and at a 1 kHz hum — far apart on the audible spectrum. Set it to take 8,000 snapshots a second, and it will return the...",
+  "social_teasers": {
+    "linkedin": "Aliasing Isn't Noise. It's Identity Theft.\n\nPoint a recorder at a 9 kHz whistle and at a 1 kHz hum — far apart on the audible spectrum. Set it to take 8,000 snapshots a second, and it will return the...\n\nhttps://hafs.dev/blog/2026-09-19.html\n\n#aliasing #dsp #measurement",
+    "x": "Aliasing Isn't Noise. It's Identity Theft.\nhttps://hafs.dev/blog/2026-09-19.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-19.html",
+  "title": "Aliasing Isn't Noise. It's Identity Theft.",
+  "tags": [
+    "aliasing",
+    "dsp",
+    "measurement"
+  ],
+  "hn_refs": [],
+  "source_attribution": null
+}
