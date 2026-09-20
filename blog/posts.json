@@ -1,5 +1,47 @@
 [
   {
+    "date": "2026-09-20",
+    "title": "Your AI posters look bad because you're not a designer",
+    "tags": [],
+    "excerpt": "Every AI-generated poster for a village fete or beer festival looks like the same pastel gradient blob. A now-famous Facebook post shows a collage of them; the Independent wrote it up. But the...",
+    "hn_refs": [
+      {
+        "title": "AI-generated posters don’t have to be horrible",
+        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "points": 1506
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Boring Designer's Guide to AI Image Prompts",
+        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "kind": "article"
+      },
+      {
+        "title": "Why AI-Generated Art Looks the Same (and How to Fix It)",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "kind": "talk"
+      },
+      {
+        "title": "Designing with Type: The Essential Guide to Typography",
+        "url": "https://www.amazon.com/Designing-Type-Essential-Guide-Typography/dp/0823014134",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Every AI-generated poster for a village fete or beer festival looks like the same pastel gradient blob. A now-famous Facebook post shows a collage of them;...",
+    "social_teasers": {
+      "linkedin": "Your AI posters look bad because you're not a designer\n\nEvery AI-generated poster for a village fete or beer festival looks like the same pastel gradient blob. A now-famous Facebook post shows a collage of them;...\n\nhttps://hafs.dev/blog/2026-09-20.html",
+      "x": "Your AI posters look bad because you're not a designer\nhttps://hafs.dev/blog/2026-09-20.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-20.html"
+  },
+  {
     "date": "2026-09-19",
     "title": "Aliasing Isn't Noise. It's Identity Theft.",
     "tags": [

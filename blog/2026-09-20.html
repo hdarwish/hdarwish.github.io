@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI posters look bad because you&#39;re not a designer - Hafs Ibrahim</title>
+    <meta name="description" content="Every AI-generated poster for a village fete or beer festival looks like the same pastel gradient blob. A now-famous Facebook post shows a collage of them;...">
+    <meta property="og:title" content="Your AI posters look bad because you&#39;re not a designer">
+    <meta property="og:description" content="Every AI-generated poster for a village fete or beer festival looks like the same pastel gradient blob. A now-famous Facebook post shows a collage of them;...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-20.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your AI posters look bad because you&#39;re not a designer">
+    <meta name="twitter:description" content="Every AI-generated poster for a village fete or beer festival looks like the same pastel gradient blob. A now-famous Facebook post shows a collage of them;...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-20">
+            <div class="blog-post-date">September 20, 2026</div>
+            
+            <h2 class="blog-post-title">Your AI posters look bad because you&#39;re not a designer</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-20-hero.png" alt="Your AI posters look bad because you&#39;re not a designer" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Every AI-generated poster for a village fete or beer festival looks like the same pastel gradient blob. A now-famous Facebook post shows a collage of them; the Independent wrote it up. But the problem isn't the model. It's the brief.</p>
+
+<h2>Why they all look the same</h2>
+
+<p>When you ask a generative model for a poster, it does what any good mimic does: it returns the most probable version of its training data. For a "spring fayre," that's bunting, hand-drawn florals, pastel palettes, and the "craft fair" aesthetic. The model isn't being lazy. It's being statistically honest.</p>
+
+<p>Here's the mechanism: every token in the generated image is conditioned on the prompt and on what came before. If the prompt is just "spring fayre poster," the probability distribution over styles is heavily peaked on that clichéd look. You get the same poster because the average of a thousand mediocre designs is itself mediocre—and because repetition is literally built into the sampling.</p>
+
+<p>The consequence: the model has no sense of context, audience, or standing out. It has never been to a village fete-drunk on cider while a dhol band plays. It's just guessing from a mountain of pastel squares.</p>
+
+<h2>The power of a naming</h2>
+
+<p>John Hartnup, the author of the source post, decided to fight back. He gave ChatGPT invented event details and asked for a poster, but with an unusual constraint: "avoid pastel/airbrush/oil style art or images of people." The first result was better, but still recognizably the default template.</p>
+
+<p>So he pushed harder. He asked for "a completely different design aesthetic of your choice," and got a Bauhaus-inspired geometric modernist poster. It was flat, asymmetrical, high-contrast, typographically bold. It stood out for exactly the reason the cliché didn't: it was not the most probable thing.</p>
+
+<p>Then he asked the crucial question: "What is this design style you've used called?" And here's the magic—the model didn't just hand him a style; it handed him a vocabulary. "Bauhaus / Modernist," "Swiss Style," "Risograph Print Style," "90s Rave Flyer," "Japanese Minimal." Now he had names for things he could see but couldn't articulate. Names are handles. With a handle, you can pull.</p>
+
+<h2>Prompting is a design skill</h2>
+
+<p>Think of the prompt as a design brief. A brief that says "make me a poster" is a brief to a designer who has never met you, never seen the venue, never heard the music. It's a brief that says "surprise me" to a stranger.</p>
+
+<p>A good brief names the audience, the context, the emotional target, the things to avoid synthesis. It constrains the space enough that the designer's choices become meaningful. The model's choices are no different.</p>
+
+<p>When you name a style—"Bauhaus," "brutalist," "wayfinding signage"—you are not just picking a look. You are choosing a grammar, a set of rules about shape, color, typography, and hierarchy that the model can hang its decisions on. That's why the Bauhaus poster works where the default fails: it has an underlying system, not just a surface.</p>
+
+<p>The metric here is not quality; it's distinctiveness. In a world where everyone defaults to pastel fluff, a single sharp-edged geometric poster wins simply by being different. The consequence for anyone who wants to stand out: your first prompt is always a hypothesis, not a result.</p>
+
+<h2>Augment, don't replace</h2>
+
+<p>Here's the turn. The reason AI posters are horrible isn't that the technology is weak. It's that most people use it as a replacement for design thinking instead of an amplifier.</p>
+
+<p>The model will happily produce the same mediocre thing forever. That's not a failure. It's a mirror reflecting your own indifference.</p>
+
+<p>But when you approach it as a collaborator—when you ask for a Bauhaus fayre poster, or a risograph print with one accent color, or a Japanese minimal layout with a single cherry blossom—you inject intent, and the model's job becomes to execute that intent at scale.</p>
+
+<p>That's the difference between a lazy replacement and a powerful tool. A lazy replacement asks for a posterched. A powerful tool asks for a poster by a specific designer, in a specific tradition, with specific constraints, and it uses the model's speed and range to explore options a human might never have imagined.</p>
+
+<p>This is not a metaphor; it's the literal mechanics of text-to-image. The model has a latent space of virtually every style in its training data—from Bauhaus to brutalist to botanical illustration. Your prompt selects a path through that space. A vague prompt takes the shortest path to the most probable point. A precise prompt takes a longer, more deliberate path, and the result is a design with intention.</p>
+
+<p>So the next time you need a poster, think about what you're actually asking for. Name the style, name the constraints, name the things you don't want. Then let the machine amplify your intent rather than substitute for it.</p>
+
+<p>Ask for Bauhaus, not for a poster. The model will fill in the rest—but only if you teach it where to look.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://john.hartnup.uk/2026/06/07/ai-event-posters.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">AI-generated posters don’t have to be horrible</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲1506</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://john.hartnup.uk/2026/06/07/ai-event-posters.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Boring Designer&#39;s Guide to AI Image Prompts</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Why AI-Generated Art Looks the Same (and How to Fix It)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">TALK</span></a><a href="https://www.amazon.com/Designing-Type-Essential-Guide-Typography/dp/0823014134" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Designing with Type: The Essential Guide to Typography</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

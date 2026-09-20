@@ -1,0 +1,23 @@
+{
+  "share_description": "Every AI-generated poster for a village fete or beer festival looks like the same pastel gradient blob. A now-famous Facebook post shows a collage of them;...",
+  "social_teasers": {
+    "linkedin": "Your AI posters look bad because you're not a designer\n\nEvery AI-generated poster for a village fete or beer festival looks like the same pastel gradient blob. A now-famous Facebook post shows a collage of them;...\n\nhttps://hafs.dev/blog/2026-09-20.html",
+    "x": "Your AI posters look bad because you're not a designer\nhttps://hafs.dev/blog/2026-09-20.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-20.html",
+  "title": "Your AI posters look bad because you're not a designer",
+  "tags": [],
+  "hn_refs": [
+    {
+      "title": "AI-generated posters don’t have to be horrible",
+      "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+      "points": 1506
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
