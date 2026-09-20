@@ -1,0 +1,1404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hafs Ibrahim — Lead AI Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   DESIGN TOKENS
+   Palette: #0a0a0a / #e8e8e8 / #777 / #b4ff39
+   Type: IBM Plex Mono only
+   Spacing: 8px base grid
+   ============================================ */
+
+:root {
+  --bg: #0a0a0a;
+  --bg-raised: #111111;
+  --bg-card: #161616;
+  --fg: #e8e8e8;
+  --fg-dim: #777777;
+  --fg-muted: #555555;
+  --accent: #b4ff39;
+  --accent-dim: rgba(180, 255, 57, 0.12);
+  --border: #222222;
+  --border-strong: #333333;
+  --font: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+  --gap: 8px;
+  --gap-lg: 16px;
+  --gap-xl: 32px;
+  --gap-2xl: 64px;
+  --max-w: 1200px;
+  --col: 12;
+}
+
+/* RESET */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gap-xl);
+}
+
+/* ============================================
+   NAV
+   ============================================ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+}
+
+.nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--gap-xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+}
+
+.nav-logo {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--fg);
+  letter-spacing: 0.05em;
+}
+.nav-logo .dot { color: var(--accent); }
+
+.nav-links {
+  display: flex;
+  gap: var(--gap-lg);
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--fg-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.15s;
+}
+.nav-links a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: var(--fg);
+  margin: 4px 0;
+  transition: 0.2s;
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 48px;
+  border-bottom: 3px solid var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-xl);
+}
+
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--gap-xl);
+}
+
+.hero-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: var(--gap);
+}
+
+.hero-name {
+  font-size: clamp(48px, 8vw, 96px);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--fg);
+}
+.hero-name .accent { color: var(--accent); }
+
+.hero-definition {
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--fg-dim);
+  max-width: 680px;
+  margin-top: var(--gap-xl);
+}
+.hero-definition strong {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.hero-meta {
+  display: flex;
+  gap: var(--gap-xl);
+  margin-top: var(--gap-2xl);
+  flex-wrap: wrap;
+}
+
+.hero-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hero-meta-label {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--fg-muted);
+}
+
+.hero-meta-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--fg);
+}
+
+.hero-status {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  font-size: 11px;
+  color: var(--fg-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero-links {
+  display: flex;
+  gap: var(--gap-lg);
+  margin-top: var(--gap-xl);
+}
+
+.hero-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-strong);
+  color: var(--fg-dim);
+  transition: 0.15s;
+}
+.hero-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ============================================
+   TICKER
+   ============================================ */
+
+.ticker-wrap {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  padding: 10px 0;
+  margin-top: var(--gap-2xl);
+}
+
+.ticker {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 30s linear infinite;
+}
+
+.ticker span {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  padding: 0 var(--gap-xl);
+}
+
+.ticker .dot {
+  color: var(--accent);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ============================================
+   SECTION
+   ============================================ */
+
+.section {
+  padding: var(--gap-2xl) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-label {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent);
+  margin-bottom: var(--gap-lg);
+}
+
+.section-title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: var(--gap-xl);
+}
+
+.section-divider {
+  width: 64px;
+  height: 3px;
+  background: var(--accent);
+  margin-bottom: var(--gap-xl);
+}
+
+/* ============================================
+   JOURNEY / TIMELINE
+   ============================================ */
+
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+
+.journey-city {
+  background: var(--bg);
+  padding: var(--gap-xl);
+  position: relative;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.journey-city:hover {
+  background: var(--bg-raised);
+}
+
+.journey-city.current {
+  background: var(--accent-dim);
+  border-left: 3px solid var(--accent);
+}
+
+.journey-city-year {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--fg-muted);
+  line-height: 1;
+  margin-bottom: var(--gap);
+}
+
+.journey-city.current .journey-city-year {
+  color: var(--accent);
+}
+
+.journey-city-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: var(--gap);
+}
+
+.journey-city-role {
+  font-size: 12px;
+  color: var(--fg-dim);
+  line-height: 1.5;
+}
+
+.journey-city-company {
+  font-size: 11px;
+  color: var(--fg-muted);
+  margin-top: 4px;
+}
+
+/* ============================================
+   EXPERIENCE DETAIL
+   ============================================ */
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: var(--gap-xl);
+  padding: var(--gap-xl) 0;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.exp-item:last-child { border-bottom: none; }
+
+.exp-period {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--fg-muted);
+  padding-top: 2px;
+}
+
+.exp-content h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-bottom: 2px;
+}
+
+.exp-company {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: var(--gap);
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--gap);
+}
+
+.exp-tag {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border: 1px solid var(--border-strong);
+  color: var(--fg-dim);
+}
+
+.exp-details {
+  list-style: none;
+}
+
+.exp-details li {
+  font-size: 13px;
+  color: var(--fg-dim);
+  line-height: 1.6;
+  padding-left: 16px;
+  position: relative;
+  margin-bottom: 6px;
+}
+
+.exp-details li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--fg-muted);
+}
+
+.exp-details li strong {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+/* ============================================
+   PROJECTS
+   ============================================ */
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--gap-xl);
+}
+
+.projects-category {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--fg-muted);
+  margin-bottom: var(--gap-lg);
+  margin-top: var(--gap-xl);
+  padding-bottom: var(--gap);
+  border-bottom: 1px solid var(--border);
+}
+
+.projects-category:first-of-type {
+  margin-top: 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1px;
+  background: var(--border);
+}
+
+.project-card {
+  background: var(--bg);
+  padding: var(--gap-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  transition: background 0.15s;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+}
+
+.project-card:hover {
+  background: var(--bg-raised);
+  text-decoration: none;
+}
+
+.project-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.project-status {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border: 1px solid;
+}
+
+.project-status.live { color: var(--accent); border-color: var(--accent); }
+.project-status.oss { color: #6ec1e4; border-color: #6ec1e4; }
+.project-status.building { color: #f0a030; border-color: #f0a030; }
+.project-status.offer { color: #c084fc; border-color: #c084fc; }
+.project-status.waitlist { color: var(--fg-dim); border-color: var(--fg-muted); }
+
+.project-subtitle {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.project-desc {
+  font-size: 13px;
+  color: var(--fg-dim);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: var(--gap);
+}
+
+.project-tags span {
+  font-size: 10px;
+  color: var(--fg-muted);
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+}
+
+.project-link {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--fg-dim);
+  margin-top: var(--gap);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.project-link::after { content: '→'; }
+.project-card:hover .project-link { color: var(--accent); }
+
+/* ============================================
+   SKILLS
+   ============================================ */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+}
+
+.skill-group {
+  background: var(--bg);
+  padding: var(--gap-xl);
+}
+
+.skill-group-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin-bottom: var(--gap);
+}
+
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-pills span {
+  font-size: 12px;
+  color: var(--fg-dim);
+  padding: 3px 8px;
+  border: 1px solid var(--border-strong);
+}
+
+/* ============================================
+   CONSULTING / CTA
+   ============================================ */
+
+.cta-section {
+  padding: var(--gap-2xl) 0;
+  border-bottom: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-2xl);
+  align-items: center;
+}
+
+.cta-content h2 {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: var(--gap-lg);
+}
+
+.cta-content p {
+  font-size: 14px;
+  color: var(--fg-dim);
+  line-height: 1.6;
+  margin-bottom: var(--gap-xl);
+}
+
+.cta-services {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.cta-service {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  font-size: 13px;
+  color: var(--fg-dim);
+}
+
+.cta-service .bullet {
+  color: var(--accent);
+  font-size: 8px;
+}
+
+.cta-action {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap);
+  padding: 14px 28px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s;
+  text-decoration: none;
+}
+
+.cta-btn:hover {
+  opacity: 0.85;
+  text-decoration: none;
+}
+
+.cta-note {
+  font-size: 11px;
+  color: var(--fg-muted);
+}
+
+/* ============================================
+   CONTACT / FOOTER
+   ============================================ */
+
+.footer {
+  padding: var(--gap-2xl) 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--gap-2xl);
+  align-items: start;
+}
+
+.footer h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: var(--gap);
+}
+
+.footer p {
+  font-size: 13px;
+  color: var(--fg-dim);
+  max-width: 480px;
+  line-height: 1.6;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  align-items: flex-end;
+}
+
+.footer-links a {
+  font-size: 13px;
+  color: var(--fg-dim);
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.footer-links a:hover { color: var(--accent); }
+
+.footer-bottom {
+  margin-top: var(--gap-2xl);
+  padding-top: var(--gap-lg);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-copy {
+  font-size: 11px;
+  color: var(--fg-muted);
+}
+
+.footer-built {
+  font-size: 10px;
+  color: var(--fg-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 900px) {
+  .journey-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .exp-item {
+    grid-template-columns: 1fr;
+  }
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-links { align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --gap-xl: 20px;
+    --gap-2xl: 40px;
+  }
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: var(--gap-lg) var(--gap-xl);
+    gap: var(--gap);
+  }
+  .journey-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-meta {
+    flex-direction: column;
+    gap: var(--gap);
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">H<span class="dot">.</span>I</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#consulting">Consulting</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-top">
+        <div>
+          <p class="hero-label">Lead AI Engineer</p>
+          <h1 class="hero-name">Hafs Ibrahim<span class="accent">.</span></h1>
+          <p class="hero-definition">
+            Engineer who builds the <strong>production layer</strong> of
+            <strong>AI products</strong> — turning model capabilities into
+            <strong>reliable</strong>, <strong>observable</strong>,
+            <strong>actually useful</strong> systems.
+          </p>
+        </div>
+        <div class="hero-status">
+          <span class="hero-status-dot"></span>
+          Available for projects
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Experience</span>
+          <span class="hero-meta-value">10+ years</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Location</span>
+          <span class="hero-meta-value">Abu Dhabi, UAE</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Industries</span>
+          <span class="hero-meta-value">6 sectors</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Focus</span>
+          <span class="hero-meta-value">Multi-agent AI systems</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-label">Stack</span>
+          <span class="hero-meta-value">Python / TypeScript / AWS</span>
+        </div>
+      </div>
+
+      <div class="hero-links">
+        <a href="https://github.com/hdarwish" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+        </a>
+        <a href="https://linkedin.com/in/hafs-ibrahim-33645ba3" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </a>
+        <a href="mailto:hafs.darwish@gmail.com" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker" aria-hidden="true">
+    <span>Biomedical Engineering → Software → AI</span>
+    <span class="dot">◆</span>
+    <span>Cairo → London → Dubai → Abu Dhabi</span>
+    <span class="dot">◆</span>
+    <span>MCIT → Vodafone → BBC → Talabat → Careem → Shory</span>
+    <span class="dot">◆</span>
+    <span>10+ Years</span>
+    <span class="dot">◆</span>
+    <span>6 Industries</span>
+    <span class="dot">◆</span>
+    <span>Multi-Agent Systems</span>
+    <span class="dot">◆</span>
+    <span>Production Reliability</span>
+    <span class="dot">◆</span>
+    <span>Biomedical Engineering → Software → AI</span>
+    <span class="dot">◆</span>
+    <span>Cairo → London → Dubai → Abu Dhabi</span>
+    <span class="dot">◆</span>
+    <span>MCIT → Vodafone → BBC → Talabat → Careem → Shory</span>
+    <span class="dot">◆</span>
+    <span>10+ Years</span>
+    <span class="dot">◆</span>
+    <span>6 Industries</span>
+    <span class="dot">◆</span>
+    <span>Multi-Agent Systems</span>
+    <span class="dot">◆</span>
+    <span>Production Reliability</span>
+    <span class="dot">◆</span>
+  </div>
+</div>
+
+<!-- JOURNEY -->
+<section class="section" id="journey">
+  <div class="container">
+    <p class="section-label">Career Path</p>
+    <h2 class="section-title">The Journey</h2>
+    <div class="section-divider"></div>
+
+    <div class="journey-grid">
+      <div class="journey-city">
+        <div class="journey-city-year">2010</div>
+        <div class="journey-city-name">Cairo</div>
+        <div class="journey-city-role">Software Engineer</div>
+        <div class="journey-city-company">Ministry of Communications and IT</div>
+        <div class="journey-city-role" style="margin-top: 12px;">Senior Software Engineer</div>
+        <div class="journey-city-company">Vodafone</div>
+      </div>
+      <div class="journey-city">
+        <div class="journey-city-year">2019</div>
+        <div class="journey-city-name">London</div>
+        <div class="journey-city-role">Senior Software Engineer</div>
+        <div class="journey-city-company">BBC</div>
+      </div>
+      <div class="journey-city">
+        <div class="journey-city-year">2021</div>
+        <div class="journey-city-name">Dubai</div>
+        <div class="journey-city-role">Senior Software Engineer</div>
+        <div class="journey-city-company">Talabat — Delivery Hero</div>
+        <div class="journey-city-role" style="margin-top: 12px;">Senior Software Engineer</div>
+        <div class="journey-city-company">Careem</div>
+      </div>
+      <div class="journey-city current">
+        <div class="journey-city-year">2025</div>
+        <div class="journey-city-name">Abu Dhabi</div>
+        <div class="journey-city-role">Lead AI Engineer</div>
+        <div class="journey-city-company">Shory — First Tech</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="experience">
+  <div class="container">
+    <p class="section-label">Work History</p>
+    <h2 class="section-title">Experience</h2>
+    <div class="section-divider"></div>
+
+    <div class="exp-list">
+
+      <div class="exp-item">
+        <div class="exp-period">May 2025<br>— Present</div>
+        <div class="exp-content">
+          <h3>Lead AI Engineer</h3>
+          <div class="exp-company">Shory — First Tech</div>
+          <div class="exp-tags">
+            <span class="exp-tag">LLMs</span>
+            <span class="exp-tag">Multi-Agent</span>
+            <span class="exp-tag">LangGraph</span>
+            <span class="exp-tag">GitOps</span>
+            <span class="exp-tag">AWS + Azure</span>
+            <span class="exp-tag">Terraform</span>
+          </div>
+          <ul class="exp-details">
+            <li><strong>AIDA:</strong> Multi-agent insurance assistant — infers specialties from symptoms, finds in-network providers, books appointments via browser automation.</li>
+            <li><strong>Nexes-ADE:</strong> Document extraction pipeline — OCR meets LLMs to process insurance documents at scale with full audit logging.</li>
+            <li><strong>Quote Compare:</strong> LangGraph-powered policy comparison engine for insurance quote analysis.</li>
+            <li><strong>Platform:</strong> Designed GitOps foundation from scratch — ArgoCD app-of-apps, shared Helm charts, AWS EKS + Azure AKS, full LGTM observability stack.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">May 2023<br>— May 2025</div>
+        <div class="exp-content">
+          <h3>Senior Software Engineer</h3>
+          <div class="exp-company">Careem</div>
+          <div class="exp-tags">
+            <span class="exp-tag">Algorithms</span>
+            <span class="exp-tag">Real-time</span>
+            <span class="exp-tag">Location</span>
+            <span class="exp-tag">Data Science</span>
+          </div>
+          <ul class="exp-details">
+            <li>Rider-driver matching engine — real-time location, dynamic supply-demand balancing across Gulf traffic.</li>
+            <li>Partnered with data scientists to analyze ride patterns and improve dispatch efficiency.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">May 2021<br>— May 2023</div>
+        <div class="exp-content">
+          <h3>Senior Software Engineer</h3>
+          <div class="exp-company">Talabat — Delivery Hero</div>
+          <div class="exp-tags">
+            <span class="exp-tag">Data Pipelines</span>
+            <span class="exp-tag">ETL</span>
+            <span class="exp-tag">Microservices</span>
+            <span class="exp-tag">IaC</span>
+          </div>
+          <ul class="exp-details">
+            <li><strong>Order Transmission Engine:</strong> Refactored to Grade A code quality. Brought data quality incidents to zero. Not "near zero." Zero.</li>
+            <li><strong>Data Integration Pipeline:</strong> Cloud-native pipeline that centralized collection. Auto-generated stream services brought data consistency to 100%.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Jan 2019<br>— May 2021</div>
+        <div class="exp-content">
+          <h3>Senior Software Engineer</h3>
+          <div class="exp-company">BBC</div>
+          <div class="exp-tags">
+            <span class="exp-tag">Graph Data</span>
+            <span class="exp-tag">Analytics</span>
+            <span class="exp-tag">Cloud</span>
+            <span class="exp-tag">Data Pipelines</span>
+          </div>
+          <ul class="exp-details">
+            <li>Data pipelines connecting disparate media systems into graph representations — giving journalists tools to find connections across stories.</li>
+            <li>Cloud analytics solutions for content performance at BBC scale.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Nov 2016<br>— Dec 2018</div>
+        <div class="exp-content">
+          <h3>Senior Software Engineer</h3>
+          <div class="exp-company">Vodafone</div>
+          <div class="exp-tags">
+            <span class="exp-tag">eSIM</span>
+            <span class="exp-tag">API Design</span>
+            <span class="exp-tag">Team Lead</span>
+          </div>
+          <ul class="exp-details">
+            <li>Led a team of 3 on Vodafone's Remote SIM Provisioning platform — eSIM management for 20,000+ users worldwide. Early eSIM days: building the spec while building the product.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-period">Mar 2010<br>— Nov 2016</div>
+        <div class="exp-content">
+          <h3>Software Engineer</h3>
+          <div class="exp-company">Ministry of Communications and IT, Egypt</div>
+          <div class="exp-tags">
+            <span class="exp-tag">Full Stack</span>
+            <span class="exp-tag">Team Lead</span>
+            <span class="exp-tag">Digital Transformation</span>
+          </div>
+          <ul class="exp-details">
+            <li>Led a team of 4 building automated project management across multiple ministries.</li>
+            <li>Built alazharmemory.eg — a digital archive for the Al-Azhar library collection, launched at the Cairo ICT international fair.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section" id="projects">
+  <div class="container">
+    <p class="section-label">Selected Work</p>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-divider"></div>
+
+    <div class="projects-category">Featured — Production Systems</div>
+    <div class="projects-grid">
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">CareNex AI</div>
+          <div class="project-status building">Building</div>
+        </div>
+        <div class="project-subtitle">Self-improving healthcare AI agent platform</div>
+        <div class="project-desc">Multi-agent diagnostic consultation — Patient, Doctor, Examiner, and Medical Director collaborate on cases. Dynamic specialty assignment, evolutionary learning engine (SEAL) with RAG retrieval for continuous improvement.</div>
+        <div class="project-tags">
+          <span>Multi-Agent</span><span>Healthcare AI</span><span>RAG</span><span>FastAPI</span><span>WebSocket</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">DocForge</div>
+          <div class="project-status live">Live</div>
+        </div>
+        <div class="project-subtitle">AI document extraction platform</div>
+        <div class="project-desc">Define document profiles with field schemas, upload files, get structured JSON back. Multi-engine OCR (PaddleOCR, Claude Vision, GPT Vision, Gemini) paired with LLM extraction pipelines.</div>
+        <div class="project-tags">
+          <span>Document AI</span><span>OCR</span><span>FastAPI</span><span>Next.js</span><span>LLMs</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="projects-category">Live / Public Systems</div>
+    <div class="projects-grid">
+
+      <a href="https://ccat-guru.hafs.dev/" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">CCAT Guru</div>
+          <div class="project-status live">Live</div>
+        </div>
+        <div class="project-subtitle">Cognitive aptitude test prep platform</div>
+        <div class="project-desc">Practice app for the Criteria Cognitive Aptitude Test. Timed simulations, detailed answer explanations, performance analytics.</div>
+        <div class="project-tags">
+          <span>Aptitude Prep</span><span>FastAPI</span><span>Next.js</span><span>Postgres</span>
+        </div>
+        <div class="project-link">Try it live</div>
+      </a>
+
+      <a href="https://herald.hafs.dev/" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">Herald</div>
+          <div class="project-status live">Live</div>
+        </div>
+        <div class="project-subtitle">Daily AI-generated morning command center</div>
+        <div class="project-desc">City briefs across 4 cities, live weather from 12 global cities, 20 daily interview Q&A, plus a Hacker News AI digest. Auto-generated at 10 AM Dubai time.</div>
+        <div class="project-tags">
+          <span>Morning Brief</span><span>Python</span><span>OpenAI</span><span>Cron</span>
+        </div>
+        <div class="project-link">View live</div>
+      </a>
+
+    </div>
+
+    <div class="projects-category">Labs / Experiments</div>
+    <div class="projects-grid">
+
+      <a href="https://github.com/hdarwish/smart-product-assistant" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">ShelfMind</div>
+          <div class="project-status oss">Open Source</div>
+        </div>
+        <div class="project-subtitle">Natural language product search</div>
+        <div class="project-desc">"I need a modern blue sofa under $900" — GPT parses that into structured MongoDB queries, returns real products.</div>
+        <div class="project-tags">
+          <span>Natural Language</span><span>OpenAI</span><span>MongoDB</span><span>React</span>
+        </div>
+      </a>
+
+      <a href="https://github.com/hdarwish/og-production-analytics" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">WellPulse</div>
+          <div class="project-status oss">Open Source</div>
+        </div>
+        <div class="project-subtitle">Oil &amp; gas production analytics</div>
+        <div class="project-desc">Interactive charts, regional distribution maps, well location mapping with Leaflet, date/region/well filters, and a built-in chatbot.</div>
+        <div class="project-tags">
+          <span>Analytics</span><span>FastAPI</span><span>Angular</span><span>PostgreSQL</span>
+        </div>
+      </a>
+
+      <a href="https://apps.apple.com/us/app/tinytell/id6771931037" target="_blank" rel="noopener" class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">TinyTell</div>
+          <div class="project-status live">Live</div>
+        </div>
+        <div class="project-subtitle">Private baby cry analyzer</div>
+        <div class="project-desc">iOS app that listens to a baby's cry, classifies what they need, and gives actionable care advice. Private inference, free on the App Store.</div>
+        <div class="project-tags">
+          <span>iOS App</span><span>React Native</span><span>Supabase</span><span>Expo</span>
+        </div>
+        <div class="project-link">App Store</div>
+      </a>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">The Fountain of Life</div>
+          <div class="project-status building">Building</div>
+        </div>
+        <div class="project-subtitle">3D multiplayer social environment</div>
+        <div class="project-desc">Real-time player synchronization, spatial audio, chat, and a persistent world. Built on PlayCanvas engine with Node.js backend.</div>
+        <div class="project-tags">
+          <span>3D Multiplayer</span><span>PlayCanvas</span><span>Node.js</span><span>WebGL</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">CodeReview Bot</div>
+          <div class="project-status waitlist">Waitlist</div>
+        </div>
+        <div class="project-subtitle">Zero-config AI code review GitHub App</div>
+        <div class="project-desc">Install once, get inline comments on every PR — catches bugs, security issues, and style problems. Launching Q3 2026.</div>
+        <div class="project-tags">
+          <span>GitHub App</span><span>Code Review</span><span>AI</span><span>SaaS</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-card-top">
+          <div class="project-title">Voga</div>
+          <div class="project-status building">Building</div>
+        </div>
+        <div class="project-subtitle">AI wardrobe stylist app</div>
+        <div class="project-desc">Photo-based wardrobe cataloging with AI outfit suggestions from your own closet. CLIP embeddings, pgvector for semantic search.</div>
+        <div class="project-tags">
+          <span>AI Stylist</span><span>React Native</span><span>Supabase</span><span>CLIP</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top: var(--gap-xl); text-align: center;">
+      <a href="https://github.com/hdarwish?tab=repositories" target="_blank" rel="noopener" class="cta-btn" style="display: inline-flex;">
+        View All on GitHub →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section" id="skills">
+  <div class="container">
+    <p class="section-label">Technical Arsenal</p>
+    <h2 class="section-title">Skills &amp; Technologies</h2>
+    <div class="section-divider"></div>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-pills">
+          <span>Python</span><span>TypeScript</span><span>JavaScript</span><span>Node.js</span><span>Kotlin</span><span>C#</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">AI &amp; ML</div>
+        <div class="skill-pills">
+          <span>Multi-Agent</span><span>LangGraph</span><span>RAG</span><span>OpenAI</span><span>Claude</span><span>Gemini</span><span>OCR</span><span>ONNX</span><span>TensorFlow</span><span>Browser-Use</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Backend</div>
+        <div class="skill-pills">
+          <span>FastAPI</span><span>SQLAlchemy</span><span>WebSockets</span><span>REST</span><span>GraphQL</span><span>PostgreSQL</span><span>Redis</span><span>ETL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Frontend</div>
+        <div class="skill-pills">
+          <span>React</span><span>Next.js</span><span>Angular</span><span>SWR</span><span>Leaflet</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Cloud &amp; Platform</div>
+        <div class="skill-pills">
+          <span>AWS EKS</span><span>Azure AKS</span><span>Terraform</span><span>Docker</span><span>Helm</span><span>ArgoCD</span><span>Kubernetes</span><span>GitOps</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-group-title">Observability</div>
+        <div class="skill-pills">
+          <span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Tempo</span><span>OpenTelemetry</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONSULTING -->
+<section class="cta-section" id="consulting">
+  <div class="container">
+    <div class="cta-grid">
+      <div class="cta-content">
+        <p class="section-label">Available for Select Projects</p>
+        <h2>Let's build something that works.</h2>
+        <div class="section-divider"></div>
+        <p>I work with companies building AI products that need to actually ship. Multi-agent systems, document extraction pipelines, production ML infrastructure — the kind of work where the demo needs to become a reliable system people trust.</p>
+        <div class="cta-services">
+          <div class="cta-service">
+            <span class="bullet">◆</span>
+            <span>iOS Development &amp; App Architecture</span>
+          </div>
+          <div class="cta-service">
+            <span class="bullet">◆</span>
+            <span>AI Integration &amp; Multi-Agent Systems</span>
+          </div>
+          <div class="cta-service">
+            <span class="bullet">◆</span>
+            <span>Full-Stack Prototyping &amp; Production Pipelines</span>
+          </div>
+        </div>
+      </div>
+      <div class="cta-action">
+        <a href="mailto:hafs.darwish@gmail.com?subject=Consulting%20Inquiry" class="cta-btn">
+          Get in Touch
+        </a>
+        <div class="cta-note">Typical engagements: $100-200/hr · 2-12 week projects</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER / CONTACT -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h2>Say Hello</h2>
+        <p>Whether it's an interesting AI problem, a collaboration idea, or just a good conversation about why Beethoven's approach to composition mirrors functional programming — I'd love to hear from you.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:hafs.darwish@gmail.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          hafs.darwish@gmail.com
+        </a>
+        <a href="https://github.com/hdarwish" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          github.com/hdarwish
+        </a>
+        <a href="https://linkedin.com/in/hafs-ibrahim-33645ba3" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          LinkedIn
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Hafs Ibrahim</span>
+      <span class="footer-built">Built with intent, not templates</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Mobile nav toggle
+const toggle = document.getElementById('nav-toggle');
+const links = document.getElementById('nav-links');
+toggle.addEventListener('click', () => {
+  links.classList.toggle('open');
+});
+
+// Close mobile nav on link click
+links.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => links.classList.remove('open'));
+});
+</script>
+
+</body>
+</html>
