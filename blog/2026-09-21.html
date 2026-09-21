@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your tokenizer is the bottleneck, and that&#39;s the point - Hafs Ibrahim</title>
+    <meta name="description" content="Here&#39;s a number that should not be true: a tokenizer that runs 1000x faster than the standard one. Not by being clever about attention, not by shrinking the...">
+    <meta property="og:title" content="Your tokenizer is the bottleneck, and that&#39;s the point">
+    <meta property="og:description" content="Here&#39;s a number that should not be true: a tokenizer that runs 1000x faster than the standard one. Not by being clever about attention, not by shrinking the...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-21.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your tokenizer is the bottleneck, and that&#39;s the point">
+    <meta name="twitter:description" content="Here&#39;s a number that should not be true: a tokenizer that runs 1000x faster than the standard one. Not by being clever about attention, not by shrinking the...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-21">
+            <div class="blog-post-date">September 21, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">performance</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">llm</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">tokenization</span></div>
+            <h2 class="blog-post-title">Your tokenizer is the bottleneck, and that&#39;s the point</h2>
+            
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Here's a number that should not be true: a tokenizer that runs 1000x faster than the standard one. Not by being clever about attention, not by shrinking the model, but by doing something so obvious in retrospect that the only real mystery is why it took us this long.</p><p>Which means the transformer was never the thing slowing you down. It just looked that way, because it's the part with the paper and the math and the terrifying FLOP count. And sitting right in front of it, like a toll booth on the only road into town, is a function that takes a string of text and chops it into pieces. That function is <em>tokenization</em>, and it has been running the same way since before any of us heard the word "transformer."</p><h2>The toll booth at the edge of town</h2><p>Most tokenizers are glorified regex engines. They scan the input character by character, building up a vocabulary of subword units, and they do it all in a single-threaded, instruction-by-instruction slog that would make a 1980s spreadsheet blush. It's a sequential dependency, a single point of failure where the entire request queues up before the "intelligence" even gets a chance to start.</p><p>This isn't a minor inefficiency. It's a structural bottleneck, and it's been hiding in plain sight since the very first transformer paper. You've built a high-speed rail line for the model, and then you make every passenger walk through a single turnstile that can only process one ticket at a time.</p><h2>The 1000x speedup and what it proves</h2><p>So when a new tokenizer comes along and claims a 1000x speedup, the reaction shouldn't be "wow, that's fast." It should be "holy hell, how bad were we letting it get?" The problem wasn't that tokenization is hard. The problem was that we assumed it had to be slow, so we never looked at it.</p><p>The fix is almost embarrassingly simple. You load the entire input string into a register, and you let the hardware chew through sixteen characters at a time with a single instruction. The ship doesn't go faster, but it carries a lot more per trip.</p><p>This is exactly the argument that Mitchell Hashimoto makes in his post about why everyone should know SIMD: that the biggest wins in systems programming are often not in the clever algorithms, but in the boring, mechanical act of using the hardware the way it was designed to be used. The tokenizer wasn't slow because it was doing something hard. It was slow because it was doing something easy, one character at a time, on a machine that can do sixteen at once. They just finally started using the hardware that was already sitting there.</p><h2>You've built this machine</h2><p>Now here's the part that should make you uncomfortable. It's not that the tokenizer is slow. It's that every production LLM pipeline already has this same bottleneck hiding somewhere.</p><p>You have built this machine. Probably several times.</p><p>Every time you serialize an object to JSON, you're running a sequential parser. Every time you parse a log line with a regex, you're running a state machine that could be a lookup table. Every time you process a string with a loop, you're leaving performance on the table that a vectorized instruction could have picked up.</p><p>The first thing is to stop trusting your intuition about where the time goes. Not the happy-path benchmarks, but the production traces with real user inputs and real latency targets. The profiler is the only honest broker in the performance game, and it will tell you exactly which of your assumptions are structural and which are just habits.</p><p>The second thing is broader. When you see a claim like "1000x faster tokenizer," don't just file it under "cool, someone else's problem." Ask yourself what else you're doing the slow way out of habit. What's the regex that you've always used because it's easy and never felt slow enough to justify the fuss?</p><p>The march of progress doesn't come from making the big, obvious thing 10% faster. It comes from finding the toll booth you didn't know you had, and realizing the road was always wide enough to let everyone through at once. And that's a much more hopeful place to start, because it means the next 1000x is out there, waiting for you to profile your own turnstile.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://github.com/marcelroed/gigatoken" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">GigaToken: ~1000x faster Language model tokenization</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲434</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

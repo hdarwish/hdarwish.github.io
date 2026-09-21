@@ -1,5 +1,35 @@
 [
   {
+    "date": "2026-09-21",
+    "title": "Your tokenizer is the bottleneck, and that's the point",
+    "tags": [
+      "performance",
+      "llm",
+      "tokenization"
+    ],
+    "excerpt": "Here's a number that should not be true: a tokenizer that runs 1000x faster than the standard one. Not by being clever about attention, not by shrinking the model, but by doing something so obvious...",
+    "hn_refs": [
+      {
+        "title": "GigaToken: ~1000x faster Language model tokenization",
+        "url": "https://github.com/marcelroed/gigatoken",
+        "points": 434
+      }
+    ],
+    "further_reading": [],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Here's a number that should not be true: a tokenizer that runs 1000x faster than the standard one. Not by being clever about attention, not by shrinking the...",
+    "social_teasers": {
+      "linkedin": "Your tokenizer is the bottleneck, and that's the point\n\nHere's a number that should not be true: a tokenizer that runs 1000x faster than the standard one. Not by being clever about attention, not by shrinking the...\n\nhttps://hafs.dev/blog/2026-09-21.html\n\n#performance #llm #tokenization",
+      "x": "Your tokenizer is the bottleneck, and that's the point\nhttps://hafs.dev/blog/2026-09-21.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-21.html"
+  },
+  {
     "date": "2026-09-20",
     "title": "Your AI posters look bad because you're not a designer",
     "tags": [],
