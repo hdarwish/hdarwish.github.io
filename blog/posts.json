@@ -1,5 +1,92 @@
 [
   {
+    "date": "2026-09-24",
+    "title": "Your remote editor is a remote-access tool in disguise",
+    "tags": [
+      "remote-development",
+      "ssh",
+      "vscode"
+    ],
+    "excerpt": "Open VSCode, connect to a server, and you have just installed a full Node.js binary on that machine. You didn't click anything. You didn't approve anything. You just wanted to edit a file.Millions of...",
+    "hn_refs": [
+      {
+        "title": "VSCode's SSH Agent Is Bananas (2025)",
+        "url": "https://fly.io/blog/vscode-ssh-wtf",
+        "points": 188
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "VSCode's SSH Agent Is Bananas (original post)",
+        "url": "https://fly.io/blog/vscode-ssh-wtf",
+        "kind": "article"
+      },
+      {
+        "title": "Tramp Manual",
+        "url": "https://www.gnu.org/software/tramp/",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Open VSCode, connect to a server, and you have just installed a full Node.js binary on that machine. You didn't click anything. You didn't approve anything....",
+    "social_teasers": {
+      "linkedin": "Your remote editor is a remote-access tool in disguise\n\nOpen VSCode, connect to a server, and you have just installed a full Node.js binary on that machine. You didn't click anything. You didn't approve anything....\n\nhttps://hafs.dev/blog/2026-09-24.html\n\n#remote-development #ssh #vscode",
+      "x": "Your remote editor is a remote-access tool in disguise\nhttps://hafs.dev/blog/2026-09-24.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-24.html"
+  },
+  {
+    "date": "2026-09-22",
+    "title": "A Fields Medalist reached for ChatGPT. The math was the least interesting part.",
+    "tags": [
+      "mathematics",
+      "AI",
+      "research"
+    ],
+    "excerpt": "Terence Tao — one of the greatest living mathematicians — shared a ChatGPT conversation as a working artifact. Not as a curiosity. Not as a cautionary tale. As a legitimate research partner.The most...",
+    "hn_refs": [
+      {
+        "title": "Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample",
+        "url": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
+        "points": 748
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Terence Tao's ChatGPT conversation on the Jacobian Conjecture",
+        "url": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
+        "kind": "article"
+      },
+      {
+        "title": "The Jacobian Conjecture (Wikipedia)",
+        "url": "https://en.wikipedia.org/wiki/Jacobian_conjecture",
+        "kind": "article"
+      },
+      {
+        "title": "Terence Tao's blog",
+        "url": "https://terrytao.wordpress.com/",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Terence Tao — one of the greatest living mathematicians — shared a ChatGPT conversation as a working artifact. Not as a curiosity. Not as a cautionary tale....",
+    "social_teasers": {
+      "linkedin": "A Fields Medalist reached for ChatGPT. The math was the least interesting part.\n\nTerence Tao — one of the greatest living mathematicians — shared a ChatGPT conversation as a working artifact. Not as a curiosity. Not as a cautionary tale....\n\nhttps://hafs.dev/blog/2026-09-22.html\n\n#mathematics #AI #research",
+      "x": "A Fields Medalist reached for ChatGPT. The math was the least interesting part.\nhttps://hafs.dev/blog/2026-09-22.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-22.html"
+  },
+  {
     "date": "2026-09-21",
     "title": "Your tokenizer is the bottleneck, and that's the point",
     "tags": [

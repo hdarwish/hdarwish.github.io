@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your remote editor is a remote-access tool in disguise - Hafs Ibrahim</title>
+    <meta name="description" content="Open VSCode, connect to a server, and you have just installed a full Node.js binary on that machine. You didn&#39;t click anything. You didn&#39;t approve anything....">
+    <meta property="og:title" content="Your remote editor is a remote-access tool in disguise">
+    <meta property="og:description" content="Open VSCode, connect to a server, and you have just installed a full Node.js binary on that machine. You didn&#39;t click anything. You didn&#39;t approve anything....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-24.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your remote editor is a remote-access tool in disguise">
+    <meta name="twitter:description" content="Open VSCode, connect to a server, and you have just installed a full Node.js binary on that machine. You didn&#39;t click anything. You didn&#39;t approve anything....">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-24">
+            <div class="blog-post-date">September 24, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">remote-development</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">ssh</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">vscode</span></div>
+            <h2 class="blog-post-title">Your remote editor is a remote-access tool in disguise</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-24-hero.png" alt="Your remote editor is a remote-access tool in disguise" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Open VSCode, connect to a server, and you have just installed a full Node.js binary on that machine. You didn't click anything. You didn't approve anything. You just wanted to edit a file.</p><p>Millions of developers do this every day, and the tool is so smooth that nobody looks under the hood. The engineers at Fly.io finally did — because they wanted to plug their own platform into the same flow — and what they found reads like a nature documentary with a body count.</p>
+
+<h2>The Way We Thought It Worked</h2>
+<p>Emacs has been doing remote editing forever with a tool called Tramp. The design philosophy is elegant: it lives off the land on the remote connection, running Bourne shell commands over your SSH session to extend your editor into that environment. Lightweight, clever, entirely within the spirit of SSH itself.</p>
+<p>You'd think VSCode would take Tramp as a starting point, simplify it, swap the Elisp for TypeScript.</p>
+<p>You'd think wrong.</p>
+
+<h2>The Full-Scale Invasion</h2>
+<p>VSCode doesn't send a few commands. It mounts an invasion. When you connect, it runs a Bash snippet stager that downloads an entire agent — including a binary installation of Node.js — onto your remote machine. This is not a light-touch protocol.</p>
+<p>This is a full deployment.</p>
+<p>The agent opens a WebSockets connection back to your running VSCode front-end. Through that connection it can do absolutely everything: wander the filesystem, edit arbitrary files, launch its own shell PTY processes, and persist itself — it doesn't clean up after itself.</p>
+<p>In security circles, there's a name for tools that work this way. It's the same name as a small rodent. You don't need a lab coat to see the resemblance.</p>
+
+<h2>What This Means For You</h2>
+<p>Say you're using VSCode to remote-edit something on a dev server. Right now, on that server, a full Node.js process is running that can do anything your user can do. It can modify files. It can run processes. It persists. This is the price of smooth remote editing.</p>
+<p>On a dev server, maybe that's acceptable. Point it at production during an incident and the word <em>apoplectic</em> starts to feel personal.</p>
+
+<h2>The Trap</h2>
+<p>Every piece of this system makes sense in isolation. The stager bootstraps, so it downloads Node. The agent needs to communicate, so it opens WebSockets. The connection needs to edit files, so it gets full filesystem access. Each step is a reasonable engineering decision.</p>
+<p>But together they form a Rube Goldberg machine — an absurd chain where the ball rolls down a ramp, hits a lever, drops a weight, and finally types a character into a file.</p>
+<p><strong>You are not running a text editor. You are running a remote-access tool dressed as one.</strong></p>
+<p>The smoothness is the trap.</p>
+
+<h2>What To Do With This</h2>
+<p>The Rube Goldberg comparison breaks in one important place: a Rube Goldberg machine is built to be watched. This one is built to be invisible. The whole point is that you never see the ball rolling or hear the lever click — you just type, and the character appears.</p>
+<p>So you don't abandon VSCode. You stop treating it like a fancy text editor and start treating it like what it is: a deployment you never signed for. Before you point remote development at something important, ask whether it's a clean-slate instance, and whether the blast radius is one you can live with.</p>
+<p>The convenience is real. So is the invasion. The only way to keep the machine from working against you is to know exactly what it's doing when it works for you.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://fly.io/blog/vscode-ssh-wtf" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">VSCode&#39;s SSH Agent Is Bananas (2025)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲188</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://fly.io/blog/vscode-ssh-wtf" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">VSCode&#39;s SSH Agent Is Bananas (original post)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.gnu.org/software/tramp/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Tramp Manual</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

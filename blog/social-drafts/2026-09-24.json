@@ -1,0 +1,27 @@
+{
+  "share_description": "Open VSCode, connect to a server, and you have just installed a full Node.js binary on that machine. You didn't click anything. You didn't approve anything....",
+  "social_teasers": {
+    "linkedin": "Your remote editor is a remote-access tool in disguise\n\nOpen VSCode, connect to a server, and you have just installed a full Node.js binary on that machine. You didn't click anything. You didn't approve anything....\n\nhttps://hafs.dev/blog/2026-09-24.html\n\n#remote-development #ssh #vscode",
+    "x": "Your remote editor is a remote-access tool in disguise\nhttps://hafs.dev/blog/2026-09-24.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-24.html",
+  "title": "Your remote editor is a remote-access tool in disguise",
+  "tags": [
+    "remote-development",
+    "ssh",
+    "vscode"
+  ],
+  "hn_refs": [
+    {
+      "title": "VSCode's SSH Agent Is Bananas (2025)",
+      "url": "https://fly.io/blog/vscode-ssh-wtf",
+      "points": 188
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
