@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your cache is a promise about the past. It&#39;s already broken. - Hafs Ibrahim</title>
+    <meta name="description" content="Every cache is a promise about the past. The promise says: what I saw is what you&#39;ll see. And every promise breaks. The interesting question is how it...">
+    <meta property="og:title" content="Your cache is a promise about the past. It&#39;s already broken.">
+    <meta property="og:description" content="Every cache is a promise about the past. The promise says: what I saw is what you&#39;ll see. And every promise breaks. The interesting question is how it...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-25.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your cache is a promise about the past. It&#39;s already broken.">
+    <meta name="twitter:description" content="Every cache is a promise about the past. The promise says: what I saw is what you&#39;ll see. And every promise breaks. The interesting question is how it...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-25">
+            <div class="blog-post-date">September 25, 2026</div>
+            
+            <h2 class="blog-post-title">Your cache is a promise about the past. It&#39;s already broken.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-09-25-hero.png" alt="Your cache is a promise about the past. It&#39;s already broken." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Every cache is a promise about the past. The promise says: <em>what I saw is what you'll see.</em> And every promise breaks. The interesting question is how it breaks, and what the break does to the system around it.</p>
+
+<h2>The promise has a shape</h2>
+
+<p>A cache sits between a request and the slow thing that answers it. On a miss, you pay the full cost of the slow thing, and then you make a promise to yourself: <em>don't pay it again.</em> That promise has a deadline. It's called TTL, and it's the most under-thought number in all of systems engineering. It's not a performance knob. It's a bet about the rate at which the world changes.</p>
+
+<h2>Where the promise breaks</h2>
+
+<p>Here's the part that's actually strange. Most reads hit fresh data. Some reads hit data that's slightly stale. The system feels healthy right up until the moment it serves a price, a seat, or a health record that stopped being true while everyone was looking at the dashboard.</p>
+
+<p>That's not a bug you can catch in testing. It's a lie you've agreed to tell yourself, in exchange for speed. And the lie has a shape: it's not a flat error, it's a cliff. The data doesn't decay gradually. It's true, then it's not, and the TTL is the only thing standing between you and the moment the world moved on without your cache noticing.</p>
+
+<h2>Why the cliff is worse than the average</h2>
+
+<p>Say you're running a service that returns a user's session token. The cache holds a token that's valid for ten minutes. The TTL is set to five. For five minutes, the token is a lie — it's expired, but the cache doesn't know. The user's request goes through, the system feels healthy, and then the token is rejected. The user is logged out. The dashboard shows green. The user sees red.</p>
+
+<p>That's not a performance problem. That's a security incident wearing a performance costume.</p>
+
+<h2>The turn: a delay is not a slowdown</h2>
+
+<p>Here's what the textbooks skip. A cache is not a speed optimization. It's a <em>temporal</em> optimization. It's a way of saying: <em>the past is good enough for now.</em> The mechanism that makes the system fast — the cache — is the same mechanism that makes it wrong. The faster you want the reads, the more you have to trust the past. The more you trust the past, the more you're betting that the world hasn't changed in the last few seconds. And the world, as it turns out, is not a static database.</p>
+
+<p>It's not hard because the code is complex. It's hard because invalidation is an <em>admission</em>: the present has arrived, and the past is over. And the engineering world has collectively decided to hold fewer funerals and just let the corpses pile up until the TTL sweeps them away.</p>
+
+<p>The cache is a promise. The TTL is the moment you're allowed to break it. The problem is that the promise is broken by the world, not by you.</p>
+
+<h2>What to do with the lie</h2>
+
+<p>First, stop treating TTL as a performance knob. It's a correctness boundary. Change it only with the same gravity you'd change a schema.</p>
+
+<p>Second, make the lie visible. If you're serving cached data, stamp it with its own age. Let the consumer see that they're holding yesterday's truth. Let them decide if yesterday is good enough. The best engineers I can imagine don't write better caches. They write more honest ones.</p>
+
+<p>The data will age. The only question is whether you'll be the one to say so.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">F-Droid 2.0</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲1107</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://martinfowler.com/bliki/TwoHardThings.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Cache invalidation is a hard problem</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.youtube.com/watch?v=BHq2zPqI4N4" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Consistency in Distributed Systems (CAP theorem and staleness)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">TALK</span></a><a href="https://dataintensive.net/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Designing Data-Intensive Applications — Chapter on Caching and Staleness</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

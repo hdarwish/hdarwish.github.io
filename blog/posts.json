@@ -1,5 +1,47 @@
 [
   {
+    "date": "2026-09-25",
+    "title": "Your cache is a promise about the past. It's already broken.",
+    "tags": [],
+    "excerpt": "Every cache is a promise about the past. The promise says: what I saw is what you'll see. And every promise breaks. The interesting question is how it breaks, and what the break does to the system...",
+    "hn_refs": [
+      {
+        "title": "F-Droid 2.0",
+        "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
+        "points": 1107
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Cache invalidation is a hard problem",
+        "url": "https://martinfowler.com/bliki/TwoHardThings.html",
+        "kind": "article"
+      },
+      {
+        "title": "Consistency in Distributed Systems (CAP theorem and staleness)",
+        "url": "https://www.youtube.com/watch?v=BHq2zPqI4N4",
+        "kind": "talk"
+      },
+      {
+        "title": "Designing Data-Intensive Applications — Chapter on Caching and Staleness",
+        "url": "https://dataintensive.net/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Every cache is a promise about the past. The promise says: what I saw is what you'll see. And every promise breaks. The interesting question is how it...",
+    "social_teasers": {
+      "linkedin": "Your cache is a promise about the past. It's already broken.\n\nEvery cache is a promise about the past. The promise says: what I saw is what you'll see. And every promise breaks. The interesting question is how it...\n\nhttps://hafs.dev/blog/2026-09-25.html",
+      "x": "Your cache is a promise about the past. It's already broken.\nhttps://hafs.dev/blog/2026-09-25.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-25.html"
+  },
+  {
     "date": "2026-09-24",
     "title": "Your remote editor is a remote-access tool in disguise",
     "tags": [
