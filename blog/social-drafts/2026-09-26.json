@@ -1,0 +1,27 @@
+{
+  "share_description": "Ask any engineer what operating system their app runs on and you'll get the same reflexive answer: Linux. And they're not wrong, exactly — the kernel is...",
+  "social_teasers": {
+    "linkedin": "The kernel is plumbing. The platform is the OS.\n\nAsk any engineer what operating system their app runs on and you'll get the same reflexive answer: Linux. And they're not wrong, exactly — the kernel is...\n\nhttps://hafs.dev/blog/2026-09-26.html\n\n#operating-systems #cloud #platform-engineering",
+    "x": "The kernel is plumbing. The platform is the OS.\nhttps://hafs.dev/blog/2026-09-26.html"
+  },
+  "url": "https://hafs.dev/blog/2026-09-26.html",
+  "title": "The kernel is plumbing. The platform is the OS.",
+  "tags": [
+    "operating-systems",
+    "cloud",
+    "platform-engineering"
+  ],
+  "hn_refs": [
+    {
+      "title": "What even is an OS now?",
+      "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now",
+      "points": 147
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

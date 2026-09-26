@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-09-26",
+    "title": "The kernel is plumbing. The platform is the OS.",
+    "tags": [
+      "operating-systems",
+      "cloud",
+      "platform-engineering"
+    ],
+    "excerpt": "Ask any engineer what operating system their app runs on and you'll get the same reflexive answer: Linux. And they're not wrong, exactly — the kernel is there, scheduling threads, shuffling pages,...",
+    "hn_refs": [
+      {
+        "title": "What even is an OS now?",
+        "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now",
+        "points": 147
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "What Even Is An OS Now? — sockpuppet.org",
+        "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now/",
+        "kind": "article"
+      },
+      {
+        "title": "Designing Data-Intensive Applications — Martin Kleppmann",
+        "url": "https://dataintensive.net/",
+        "kind": "book"
+      },
+      {
+        "title": "The Evolution of Linux and the Cloud — Brendan Gregg's talk",
+        "url": "https://www.youtube.com/watch?v=7I2rL9hB1Vk",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Ask any engineer what operating system their app runs on and you'll get the same reflexive answer: Linux. And they're not wrong, exactly — the kernel is...",
+    "social_teasers": {
+      "linkedin": "The kernel is plumbing. The platform is the OS.\n\nAsk any engineer what operating system their app runs on and you'll get the same reflexive answer: Linux. And they're not wrong, exactly — the kernel is...\n\nhttps://hafs.dev/blog/2026-09-26.html\n\n#operating-systems #cloud #platform-engineering",
+      "x": "The kernel is plumbing. The platform is the OS.\nhttps://hafs.dev/blog/2026-09-26.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-26.html"
+  },
+  {
     "date": "2026-09-25",
     "title": "Your cache is a promise about the past. It's already broken.",
     "tags": [],
