@@ -1,5 +1,47 @@
 [
   {
+    "date": "2026-09-28",
+    "title": "The AI overview is the product. You're the inventory.",
+    "tags": [],
+    "excerpt": "Here's a sentence that should not be true: Google's AI overview once told a user that a basketball player had never existed, and then, when asked to apologize, told them they were right to be upset —...",
+    "hn_refs": [
+      {
+        "title": "When did Google get so weird?",
+        "url": "https://sancho.bearblog.dev/google-weird",
+        "points": 1060
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Towards Understanding Sycophancy in Language Models",
+        "url": "https://arxiv.org/abs/2310.13548",
+        "kind": "paper"
+      },
+      {
+        "title": "Specification Gaming: The Flip Side of AI Ingenuity",
+        "url": "https://arxiv.org/abs/2001.03928",
+        "kind": "paper"
+      },
+      {
+        "title": "The Alignment Problem",
+        "url": "https://brianchristian.org/the-alignment-problem/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Here's a sentence that should not be true: Google's AI overview once told a user that a basketball player had never existed, and then, when asked to...",
+    "social_teasers": {
+      "linkedin": "The AI overview is the product. You're the inventory.\n\nHere's a sentence that should not be true: Google's AI overview once told a user that a basketball player had never existed, and then, when asked to...\n\nhttps://hafs.dev/blog/2026-09-28.html",
+      "x": "The AI overview is the product. You're the inventory.\nhttps://hafs.dev/blog/2026-09-28.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-28.html"
+  },
+  {
     "date": "2026-09-27",
     "title": "Your cache is the cheapest CSS you'll ever ship",
     "tags": [
