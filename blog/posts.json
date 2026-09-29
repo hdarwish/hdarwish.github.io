@@ -1,5 +1,42 @@
 [
   {
+    "date": "2026-09-29",
+    "title": "The code that saves you is the code you never run",
+    "tags": [],
+    "excerpt": "There is a server in a bank, or a hospital, or a government basement — pick your favorite — that has been running since 1993. Thirty-three years of uptime. Nobody has touched it because nobody dares....",
+    "hn_refs": [
+      {
+        "title": "The systems that no one will test",
+        "url": "https://blog.christianperone.com/2026/09/the-systems-that-no-one-will-test",
+        "points": 37
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Chaos Engineering",
+        "url": "https://www.oreilly.com/library/view/chaos-engineering/9781492043867/",
+        "kind": "book"
+      },
+      {
+        "title": "Designing Data-Intensive Applications",
+        "url": "https://dataintensive.net/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "There is a server in a bank, or a hospital, or a government basement — pick your favorite — that has been running since 1993. Thirty-three years of uptime....",
+    "social_teasers": {
+      "linkedin": "The code that saves you is the code you never run\n\nThere is a server in a bank, or a hospital, or a government basement — pick your favorite — that has been running since 1993. Thirty-three years of uptime....\n\nhttps://hafs.dev/blog/2026-09-29.html",
+      "x": "The code that saves you is the code you never run\nhttps://hafs.dev/blog/2026-09-29.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-09-29.html"
+  },
+  {
     "date": "2026-09-28",
     "title": "The AI overview is the product. You're the inventory.",
     "tags": [],
