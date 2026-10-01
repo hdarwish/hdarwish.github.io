@@ -1,20 +1,26 @@
 {
-  "share_description": "Terence Tao just used ChatGPT to find a counterexample to a 40-year-old conjecture. The interesting part isn't that the model was right. It's that it was...",
+  "share_description": "Your CPU can add sixteen numbers in a single clock cycle. The code you wrote last week treated that hardware like a typewriter with one key. It wasn’t a...",
   "social_teasers": {
-    "linkedin": "Tao didn't beat the model. He beat the oracle.\n\nTerence Tao just used ChatGPT to find a counterexample to a 40-year-old conjecture. The interesting part isn't that the model was right. It's that it was...\n\nhttps://hafs.dev/blog/2026-10-01.html\n\n#LLMs #mathematics",
-    "x": "Tao didn't beat the model. He beat the oracle.\nhttps://hafs.dev/blog/2026-10-01.html"
+    "linkedin": "Your scalar loops are fighting the hardware\n\nYour CPU can add sixteen numbers in a single clock cycle. The code you wrote last week treated that hardware like a typewriter with one key. It wasn’t a...\n\nhttps://hafs.dev/blog/2026-10-01.html\n\n#SIMD #Performance #CPUArchitecture",
+    "x": "Your scalar loops are fighting the hardware\nhttps://hafs.dev/blog/2026-10-01.html"
   },
   "url": "https://hafs.dev/blog/2026-10-01.html",
-  "title": "Tao didn't beat the model. He beat the oracle.",
+  "title": "Your scalar loops are fighting the hardware",
   "tags": [
-    "LLMs",
-    "mathematics"
+    "SIMD",
+    "Performance",
+    "CPU Architecture"
   ],
   "hn_refs": [
     {
-      "title": "Terence Tao on ChatGPT and the Jacobian Conjecture",
-      "url": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
-      "points": 120
+      "title": "Everyone should know SIMD",
+      "url": "https://mitchellh.com/writing/everyone-should-know-simd",
+      "points": 341
+    },
+    {
+      "title": "GigaToken: ~1000x faster Language model tokenization",
+      "url": "https://github.com/marcelroed/gigatoken",
+      "points": 434
     }
   ],
   "source_attribution": {
