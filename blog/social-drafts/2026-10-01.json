@@ -1,0 +1,26 @@
+{
+  "share_description": "Terence Tao just used ChatGPT to find a counterexample to a 40-year-old conjecture. The interesting part isn't that the model was right. It's that it was...",
+  "social_teasers": {
+    "linkedin": "Tao didn't beat the model. He beat the oracle.\n\nTerence Tao just used ChatGPT to find a counterexample to a 40-year-old conjecture. The interesting part isn't that the model was right. It's that it was...\n\nhttps://hafs.dev/blog/2026-10-01.html\n\n#LLMs #mathematics",
+    "x": "Tao didn't beat the model. He beat the oracle.\nhttps://hafs.dev/blog/2026-10-01.html"
+  },
+  "url": "https://hafs.dev/blog/2026-10-01.html",
+  "title": "Tao didn't beat the model. He beat the oracle.",
+  "tags": [
+    "LLMs",
+    "mathematics"
+  ],
+  "hn_refs": [
+    {
+      "title": "Terence Tao on ChatGPT and the Jacobian Conjecture",
+      "url": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
+      "points": 120
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
