@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-02",
+    "title": "Your AI Agent Is Just A Loop That Pays To Think",
+    "tags": [
+      "ai-architecture",
+      "software-engineering",
+      "llm-evals"
+    ],
+    "excerpt": "The Pelican Problem\nSimon Willison has been asking every new AI model to draw a pelican riding a bicycle for years. It is a stupid, wonderful benchmark. It tests nothing useful in production, yet it...",
+    "hn_refs": [
+      {
+        "title": "Are AI labs pelicanmaxxing?",
+        "url": "https://dylancastillo.co/posts/pelicanmaxxing.html",
+        "points": 454
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Are AI labs pelicanmaxxing?",
+        "url": "https://dylancastillo.co/posts/pelicanmaxxing.html",
+        "kind": "article"
+      },
+      {
+        "title": "Simon Willison's Pelican Benchmark",
+        "url": "https://simonwillison.net/",
+        "kind": "article"
+      },
+      {
+        "title": "The Myth of The Autonomous Agent",
+        "url": "https://www.latent.space/p/agents",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "The Pelican Problem\nSimon Willison has been asking every new AI model to draw a pelican riding a bicycle for years. It is a stupid, wonderful benchmark. It...",
+    "social_teasers": {
+      "linkedin": "Your AI Agent Is Just A Loop That Pays To Think\n\nThe Pelican Problem\nSimon Willison has been asking every new AI model to draw a pelican riding a bicycle for years. It is a stupid, wonderful benchmark. It...\n\nhttps://hafs.dev/blog/2026-10-02.html\n\n#ai-architecture #software-engineering #llm-evals",
+      "x": "Your AI Agent Is Just A Loop That Pays To Think\nhttps://hafs.dev/blog/2026-10-02.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-02.html"
+  },
+  {
     "date": "2026-10-01",
     "title": "Your scalar loops are fighting the hardware",
     "tags": [

@@ -1,0 +1,27 @@
+{
+  "share_description": "The Pelican Problem\nSimon Willison has been asking every new AI model to draw a pelican riding a bicycle for years. It is a stupid, wonderful benchmark. It...",
+  "social_teasers": {
+    "linkedin": "Your AI Agent Is Just A Loop That Pays To Think\n\nThe Pelican Problem\nSimon Willison has been asking every new AI model to draw a pelican riding a bicycle for years. It is a stupid, wonderful benchmark. It...\n\nhttps://hafs.dev/blog/2026-10-02.html\n\n#ai-architecture #software-engineering #llm-evals",
+    "x": "Your AI Agent Is Just A Loop That Pays To Think\nhttps://hafs.dev/blog/2026-10-02.html"
+  },
+  "url": "https://hafs.dev/blog/2026-10-02.html",
+  "title": "Your AI Agent Is Just A Loop That Pays To Think",
+  "tags": [
+    "ai-architecture",
+    "software-engineering",
+    "llm-evals"
+  ],
+  "hn_refs": [
+    {
+      "title": "Are AI labs pelicanmaxxing?",
+      "url": "https://dylancastillo.co/posts/pelicanmaxxing.html",
+      "points": 454
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
