@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-10-03",
+    "title": "A law demanding the impossible is a trap, not a law",
+    "tags": [
+      "law",
+      "privacy",
+      "networking"
+    ],
+    "excerpt": "Utah's new VPN law would have required adult websites to be both blind and omniscient at the same time. A federal court just called that what it is: a technical impossibility, on pain of legal...",
+    "hn_refs": [
+      {
+        "title": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
+        "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
+        "points": 582
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "EFF: Court Agrees with EFF: Utah's VPN Law Demands a Technical Impossibility",
+        "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Utah's new VPN law would have required adult websites to be both blind and omniscient at the same time. A federal court just called that what it is: a...",
+    "social_teasers": {
+      "linkedin": "A law demanding the impossible is a trap, not a law\n\nUtah's new VPN law would have required adult websites to be both blind and omniscient at the same time. A federal court just called that what it is: a...\n\nhttps://hafs.dev/blog/2026-10-03.html\n\n#law #privacy #networking",
+      "x": "A law demanding the impossible is a trap, not a law\nhttps://hafs.dev/blog/2026-10-03.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-03.html"
+  },
+  {
     "date": "2026-10-02",
     "title": "Your AI Agent Is Just A Loop That Pays To Think",
     "tags": [
