@@ -1,5 +1,41 @@
 [
   {
+    "date": "2026-10-04",
+    "title": "Your agent's failure mode is a $10,000 bill",
+    "tags": [
+      "ai-agents",
+      "reliability",
+      "cost-control"
+    ],
+    "excerpt": "The midnight email you never want to read\nPicture this: you've set up a coding agent to handle a small side project. It's been humming along, saving you hours. Then one night, an API call loops. Not...",
+    "hn_refs": [
+      {
+        "title": "We're going to need default hard budget caps on pretty much everything",
+        "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps",
+        "points": 325
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Release It! Design and Deploy Production-Ready Software",
+        "url": "https://pragprog.com/titles/mnee2/release-it-second-edition/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "The midnight email you never want to read\nPicture this: you've set up a coding agent to handle a small side project. It's been humming along, saving you...",
+    "social_teasers": {
+      "linkedin": "Your agent's failure mode is a $10,000 bill\n\nThe midnight email you never want to read\nPicture this: you've set up a coding agent to handle a small side project. It's been humming along, saving you...\n\nhttps://hafs.dev/blog/2026-10-04.html\n\n#ai-agents #reliability #cost-control",
+      "x": "Your agent's failure mode is a $10,000 bill\nhttps://hafs.dev/blog/2026-10-04.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-04.html"
+  },
+  {
     "date": "2026-10-03",
     "title": "A law demanding the impossible is a trap, not a law",
     "tags": [
