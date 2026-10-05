@@ -1,0 +1,27 @@
+{
+  "share_description": "Here is a number that should not be true: a 125-billion-parameter model, running on a $1,600 consumer GPU, generating 100 tokens per second — faster than...",
+  "social_teasers": {
+    "linkedin": "Your GPU was never the bottleneck. The architecture was.\n\nHere is a number that should not be true: a 125-billion-parameter model, running on a $1,600 consumer GPU, generating 100 tokens per second — faster than...\n\nhttps://hafs.dev/blog/2026-10-05.html\n\n#llm-inference #mixture-of-experts #local-ai",
+    "x": "Your GPU was never the bottleneck. The architecture was.\nhttps://hafs.dev/blog/2026-10-05.html"
+  },
+  "url": "https://hafs.dev/blog/2026-10-05.html",
+  "title": "Your GPU was never the bottleneck. The architecture was.",
+  "tags": [
+    "llm-inference",
+    "mixture-of-experts",
+    "local-ai"
+  ],
+  "hn_refs": [
+    {
+      "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+      "url": "https://github.com/Niko1221/Strata",
+      "points": 721
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
