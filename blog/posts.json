@@ -1,5 +1,46 @@
 [
   {
+    "date": "2026-10-06",
+    "title": "The internet's most boring page just got an opinion",
+    "tags": [
+      "web development",
+      "design",
+      "example.com"
+    ],
+    "excerpt": "You've never visited example.com. But you've seen it a thousand times — in every tutorial, every config file, every API doc that needed a placeholder URL. It's the most-visited page on the internet...",
+    "hn_refs": [
+      {
+        "title": "Example.com just launched the biggest redesign in decades",
+        "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
+        "points": 168
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Example.com Just Launched The Biggest Redesign In Decades",
+        "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
+        "kind": "article"
+      },
+      {
+        "title": "RFC 2606 - Reserved Top Level DNS Names",
+        "url": "https://www.rfc-editor.org/rfc/rfc2606",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "You've never visited example.com. But you've seen it a thousand times — in every tutorial, every config file, every API doc that needed a placeholder URL....",
+    "social_teasers": {
+      "linkedin": "The internet's most boring page just got an opinion\n\nYou've never visited example.com. But you've seen it a thousand times — in every tutorial, every config file, every API doc that needed a placeholder URL....\n\nhttps://hafs.dev/blog/2026-10-06.html\n\n#webdevelopment #design #example.com",
+      "x": "The internet's most boring page just got an opinion\nhttps://hafs.dev/blog/2026-10-06.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-06.html"
+  },
+  {
     "date": "2026-10-05",
     "title": "Your GPU was never the bottleneck. The architecture was.",
     "tags": [
