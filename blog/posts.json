@@ -1,5 +1,37 @@
 [
   {
+    "date": "2026-10-07",
+    "title": "Open weights aren't the demo. They're the product.",
+    "tags": [],
+    "excerpt": "The recipe is the productMistral just released its flagship model as open weights. If you read that as a promotional move — a taste before you pay for the API — you're looking at it backwards. The...",
+    "hn_refs": [
+      {
+        "title": "Mistral Large 4",
+        "url": "https://mistral.ai/news/mistral-large-4/\\",
+        "points": 1698
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Economic Case for Open Models",
+        "url": "https://a16z.com/the-economic-case-for-open-models/",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "The recipe is the productMistral just released its flagship model as open weights. If you read that as a promotional move — a taste before you pay for the...",
+    "social_teasers": {
+      "linkedin": "Open weights aren't the demo. They're the product.\n\nThe recipe is the productMistral just released its flagship model as open weights. If you read that as a promotional move — a taste before you pay for the...\n\nhttps://hafs.dev/blog/2026-10-07.html",
+      "x": "Open weights aren't the demo. They're the product.\nhttps://hafs.dev/blog/2026-10-07.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-07.html"
+  },
+  {
     "date": "2026-10-06",
     "title": "The internet's most boring page just got an opinion",
     "tags": [
