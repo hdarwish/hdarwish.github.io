@@ -1,35 +1,30 @@
 [
   {
     "date": "2026-10-08",
-    "title": "AI didn't solve it. It made it findable.",
+    "title": "Your slide deck is a program you never ran",
     "tags": [
-      "AI",
-      "mathematics",
-      "research"
+      "web-architecture",
+      "document-systems",
+      "frontend"
     ],
-    "excerpt": "In October 2025, Terence Tao — a Fields Medalist, one of the most careful minds in mathematics — sat down with a chatbot and, over a long conversation, produced a counterexample to the Jacobian...",
+    "excerpt": "Bento just shipped a PowerPoint that is also an editor, a data store, a collaboration layer, and a viewer, all compressed into a single HTML file. The HN crowd gave it 743 upvotes, but they are...",
     "hn_refs": [
       {
-        "title": "Terence Tao's ChatGPT conversation about the Jacobian Conjecture counterexample",
-        "url": "https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56",
-        "points": 748
+        "title": "Show HN: Bento - An entire PowerPoint in one HTML file (edit+view+data+collab)",
+        "url": "https://bento.page/slides",
+        "points": 743
       }
     ],
     "further_reading": [
       {
-        "title": "Terence Tao's blog post on the Jacobian Conjecture",
-        "url": "https://terrytao.wordpress.com/",
-        "kind": "article"
+        "title": "Bento Slides Documentation",
+        "url": "https://bento.page/slides",
+        "kind": "docs"
       },
       {
-        "title": "The Jacobian Conjecture (Wikipedia)",
-        "url": "https://en.wikipedia.org/wiki/Jacobian_conjecture",
-        "kind": "article"
-      },
-      {
-        "title": "On the Mathematical Challenges of AI (Tao's talk)",
-        "url": "https://www.youtube.com/watch?v=G4R6t_2J4eI",
-        "kind": "talk"
+        "title": "The Document as a System",
+        "url": "https://www.oreilly.com/library/view/continuous-delivery/9781935182957/",
+        "kind": "book"
       }
     ],
     "source_attribution": {
@@ -38,10 +33,10 @@
       "tier": 1,
       "trust_score": 1.0
     },
-    "share_description": "In October 2025, Terence Tao — a Fields Medalist, one of the most careful minds in mathematics — sat down with a chatbot and, over a long conversation,...",
+    "share_description": "Bento just shipped a PowerPoint that is also an editor, a data store, a collaboration layer, and a viewer, all compressed into a single HTML file. The HN...",
     "social_teasers": {
-      "linkedin": "AI didn't solve it. It made it findable.\n\nIn October 2025, Terence Tao — a Fields Medalist, one of the most careful minds in mathematics — sat down with a chatbot and, over a long conversation,...\n\nhttps://hafs.dev/blog/2026-10-08.html\n\n#AI #mathematics #research",
-      "x": "AI didn't solve it. It made it findable.\nhttps://hafs.dev/blog/2026-10-08.html"
+      "linkedin": "Your slide deck is a program you never ran\n\nBento just shipped a PowerPoint that is also an editor, a data store, a collaboration layer, and a viewer, all compressed into a single HTML file. The HN...\n\nhttps://hafs.dev/blog/2026-10-08.html\n\n#web-architecture #document-systems #frontend",
+      "x": "Your slide deck is a program you never ran\nhttps://hafs.dev/blog/2026-10-08.html"
     },
     "canonical_url": "https://hafs.dev/blog/2026-10-08.html"
   },
