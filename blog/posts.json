@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-09",
+    "title": "Your coffee maker is a data center with a spout",
+    "tags": [
+      "IoT",
+      "privacy",
+      "telemetry"
+    ],
+    "excerpt": "A man named Nomad checked his parents' home network and found their coffee machine had pushed 1 terabyte of data in 10 days. That's more than most households use in a year — and he only noticed...",
+    "hn_refs": [
+      {
+        "title": "Man discovers his parents' coffee machine used 1TB of data in 10 days",
+        "url": "https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399",
+        "points": 586
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Internet of Things: Do-It-Yourself at Home Projects",
+        "url": "https://www.oreilly.com",
+        "kind": "book"
+      },
+      {
+        "title": "RFC 4941: Privacy Extensions for Stateless Address Autoconfiguration in IPv6",
+        "url": "https://datatracker.ietf.org/doc/html/rfc4941",
+        "kind": "docs"
+      },
+      {
+        "title": "A Bug in the Machine: The Hidden Costs of Connected Devices",
+        "url": "https://www.acm.org",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "A man named Nomad checked his parents' home network and found their coffee machine had pushed 1 terabyte of data in 10 days. That's more than most...",
+    "social_teasers": {
+      "linkedin": "Your coffee maker is a data center with a spout\n\nA man named Nomad checked his parents' home network and found their coffee machine had pushed 1 terabyte of data in 10 days. That's more than most...\n\nhttps://hafs.dev/blog/2026-10-09.html\n\n#IoT #privacy #telemetry",
+      "x": "Your coffee maker is a data center with a spout\nhttps://hafs.dev/blog/2026-10-09.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-09.html"
+  },
+  {
     "date": "2026-10-08",
     "title": "Your slide deck is a program you never ran",
     "tags": [
