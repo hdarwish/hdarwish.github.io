@@ -1,5 +1,46 @@
 [
   {
+    "date": "2026-10-10",
+    "title": "Cloudflare didn't buy Deno. It bought Node.js.",
+    "tags": [
+      "JavaScript",
+      "Serverless",
+      "Acquisitions"
+    ],
+    "excerpt": "In 2018, Ryan Dahl stood in front of a room at JSConf EU and delivered what amounted to a public autopsy of his own creation. Node.js, the runtime that made JavaScript a server language, was riddled...",
+    "hn_refs": [
+      {
+        "title": "Cloudflare acquires Deno",
+        "url": "https://deno.com/blog/cloudflare",
+        "points": 1152
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Cloudflare acquires Deno — official announcement",
+        "url": "https://deno.com/blog/cloudflare",
+        "kind": "article"
+      },
+      {
+        "title": "Ryan Dahl: 10 Things I Regret About Node.js (JSConf EU 2018)",
+        "url": "https://www.youtube.com/watch?v=M3BM9TB-8yA",
+        "kind": "talk"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "In 2018, Ryan Dahl stood in front of a room at JSConf EU and delivered what amounted to a public autopsy of his own creation. Node.js, the runtime that made...",
+    "social_teasers": {
+      "linkedin": "Cloudflare didn't buy Deno. It bought Node.js.\n\nIn 2018, Ryan Dahl stood in front of a room at JSConf EU and delivered what amounted to a public autopsy of his own creation. Node.js, the runtime that made...\n\nhttps://hafs.dev/blog/2026-10-10.html\n\n#JavaScript #Serverless #Acquisitions",
+      "x": "Cloudflare didn't buy Deno. It bought Node.js.\nhttps://hafs.dev/blog/2026-10-10.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-10.html"
+  },
+  {
     "date": "2026-10-09",
     "title": "Your coffee maker is a data center with a spout",
     "tags": [
