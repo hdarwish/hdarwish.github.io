@@ -1,5 +1,50 @@
 [
   {
+    "date": "2026-10-11",
+    "title": "A delay doesn't slow a system down. It changes what the system is.",
+    "tags": [
+      "control theory",
+      "systems thinking"
+    ],
+    "excerpt": "Here's a fact that should bother you: a thermostat with a bimetallic strip doesn't measure the temperature. It measures the temperature a moment ago, because metal takes time to bend. And yet your...",
+    "hn_refs": [
+      {
+        "title": "Nix wrote half of my debugger",
+        "url": "https://fzakaria.com/2026/10/07/nix-wrote-half-of-my-debugger",
+        "points": 170
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Nature of Delay in Feedback Systems",
+        "url": "https://www.youtube.com/watch?v=QrQJ7jrLrWs",
+        "kind": "talk"
+      },
+      {
+        "title": "Designing Data-Intensive Applications",
+        "url": "https://dataintensive.net/",
+        "kind": "book"
+      },
+      {
+        "title": "Feedback Control for Computer Systems",
+        "url": "https://www.oreilly.com/library/view/feedback-control-for/9781449362034/",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Here's a fact that should bother you: a thermostat with a bimetallic strip doesn't measure the temperature. It measures the temperature a moment ago,...",
+    "social_teasers": {
+      "linkedin": "A delay doesn't slow a system down. It changes what the system is.\n\nHere's a fact that should bother you: a thermostat with a bimetallic strip doesn't measure the temperature. It measures the temperature a moment ago,...\n\nhttps://hafs.dev/blog/2026-10-11.html\n\n#controltheory #systemsthinking",
+      "x": "A delay doesn't slow a system down. It changes what the system is.\nhttps://hafs.dev/blog/2026-10-11.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-11.html"
+  },
+  {
     "date": "2026-10-10",
     "title": "Cloudflare didn't buy Deno. It bought Node.js.",
     "tags": [
