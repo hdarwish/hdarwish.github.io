@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fingerprinting doesn&#39;t replace cookies — it replaces consent - Hafs Ibrahim</title>
+    <meta name="description" content="Try refreshing the page. Clear the cookies. Connect to a VPN. You&#39;re still the …. Open it on your phone and your nickname changes — but it&#39;s just as...">
+    <meta property="og:title" content="Fingerprinting doesn&#39;t replace cookies — it replaces consent">
+    <meta property="og:description" content="Try refreshing the page. Clear the cookies. Connect to a VPN. You&#39;re still the …. Open it on your phone and your nickname changes — but it&#39;s just as...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-12.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Fingerprinting doesn&#39;t replace cookies — it replaces consent">
+    <meta name="twitter:description" content="Try refreshing the page. Clear the cookies. Connect to a VPN. You&#39;re still the …. Open it on your phone and your nickname changes — but it&#39;s just as...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-12">
+            <div class="blog-post-date">October 12, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">privacy</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">fingerprinting</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">adtech</span></div>
+            <h2 class="blog-post-title">Fingerprinting doesn&#39;t replace cookies — it replaces consent</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-12-hero.png" alt="Fingerprinting doesn&#39;t replace cookies — it replaces consent" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Try refreshing the page. Clear the cookies. Connect to a VPN. You're still the <em>…</em>. Open it on your phone and your nickname changes — but it's just as consistent there. Incognito? Same. That consistency is not a bug. It's the product.</p>
+<p>We spent a decade arguing about consent banners, and the web quietly built a tracking system that doesn't need your permission at all. It can't be blocked, it can't be cleared, and it doesn't even need to know your name. This is the story of how the death of the cookie became the birth of the fingerprint.</p>
+<h2>The script that knows you</h2>
+<p>Here's how it works. You visit a website. Your browser sends a request to the server, and the server sends back code for the browser to run. That request already leaks a surprising amount: your browser, your OS, your language, your IP address. But the real magic happens when the code runs.</p>
+<p>The code can measure your hardware — the GPU's behavior, the CPU's thread count, your memory size, your display's resolution and refresh rate, even the audio processing model — all without asking permission. No popup, no prompt, no consent. The browser's sandbox was designed to isolate websites from your files, not to stop them from measuring the machine you're standing on.</p>
+<p>Millions of devices run the latest Chrome. Millions of Macs have an M4 chip. Millions of browsers are set to French. But a device running latest Chrome <em>in French</em> on an M4? The number drops fast. Add a few hardware measurements, and the combination becomes practically unique. The fingerprint doesn't need to be globally unique — it just needs to be unique enough to tell you apart in the sample of everyone else visiting the same site.</p>
+<p>This is not a cookie. A cookie is a labeled box the server leaves on your machine, and you can throw it away. A fingerprint is a property of the machine itself. You can't delete your GPU's driver.</p>
+<h2>The illusion of choice</h2>
+<p>Remember the consent banner? That was the EU's greatest invention — a little dialog that asked, politely, whether you'd like to be tracked. It was a beautiful fiction: the web pretending that tracking was a choice you could make.</p>
+<p>Google — the biggest ad company on Earth — spent five years performing that fiction. In 2019, they pledged to destroy cookies, to usher in a privacy-first reign. Five years later, their replacement (Privacy Sandbox) kinda sucked and raised antitrust concerns, so nobody used it. So they quietly said: <em>let's just keep the cookies</em>. And then, in the same breath, they announced that you could now use device fingerprinting in their ad products.</p>
+<p>The cookie was never the point. The point was the illusion that you had a say.</p>
+<h2>The real trade</h2>
+<p>So what does the fingerprint actually buy? The script on that website can decide what ads you see. But more importantly — if you've made an account on that site, the site can sell your data: your name, your activity, even your conversations with an AI. The fingerprint is the key that ties your anonymous browsing to your named account. Pretty soon, the data broker knows more about you than your friends do. Perhaps more than you know yourself.</p>
+<p>And if you think "I have nothing to hide," consider this: it's not about you at all. It's not even about the ads. The data is a pattern — a digital fractal of the economy, society, and the human psyche. And that pattern goes to the highest bidder. Police, governments, anyone with money. You're not a customer. You're not even a product. You're a volunteer.</p>
+<p>This is the shift nobody consented to. The cookie at least asked. The fingerprint just <em>measures</em>.</p>
+<h2>What you can actually do</h2>
+<p>There are only two defenses, and both are imperfect. Brave feeds a little noise into your measurements — a technique called <em>farbling</em> — to make your fingerprint inconsistent. Tor and Mullvad Browser go the other way: they make everyone look the same, so there's no telling anyone apart. Both are a fight against physics, not a fix.</p>
+<p>Because here's the uncomfortable truth: the browser runs code on <em>your</em> hardware. As long as that's true, the hardware can be measured. The sandbox was built to keep the code out of your files, not to keep it from looking around the room.</p>
+<p>So what do you do? You stop pretending the consent banner matters. You use a privacy-first browser, you accept that you're a pattern in someone's database, and you demand better from the people who build the web. The fingerprint isn't a workaround. It's a declaration: consent was never the product.</p>
+<p>The cookie asked for permission. The fingerprint just takes. And the only answer is to build a web that doesn't need to ask.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://royfish.dev/fingerprints-are-the-new-cookies" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Fingerprints are the new cookies</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲256</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://panopticlick.eff.org/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Panopticlick: How Unique — and Trackable — Is Your Browser?</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.eff.org/wp/behind-the-scenes" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Web Never Forgets (EFF)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://brave.com/privacy-updates/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Brave Browser: Fingerprinting Defenses</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

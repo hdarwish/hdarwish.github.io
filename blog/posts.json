@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-12",
+    "title": "Fingerprinting doesn't replace cookies — it replaces consent",
+    "tags": [
+      "privacy",
+      "fingerprinting",
+      "adtech"
+    ],
+    "excerpt": "Try refreshing the page. Clear the cookies. Connect to a VPN. You're still the …. Open it on your phone and your nickname changes — but it's just as consistent there. Incognito? Same. That...",
+    "hn_refs": [
+      {
+        "title": "Fingerprints are the new cookies",
+        "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+        "points": 256
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Panopticlick: How Unique — and Trackable — Is Your Browser?",
+        "url": "https://panopticlick.eff.org/",
+        "kind": "article"
+      },
+      {
+        "title": "The Web Never Forgets (EFF)",
+        "url": "https://www.eff.org/wp/behind-the-scenes",
+        "kind": "article"
+      },
+      {
+        "title": "Brave Browser: Fingerprinting Defenses",
+        "url": "https://brave.com/privacy-updates/",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Try refreshing the page. Clear the cookies. Connect to a VPN. You're still the …. Open it on your phone and your nickname changes — but it's just as...",
+    "social_teasers": {
+      "linkedin": "Fingerprinting doesn't replace cookies — it replaces consent\n\nTry refreshing the page. Clear the cookies. Connect to a VPN. You're still the …. Open it on your phone and your nickname changes — but it's just as...\n\nhttps://hafs.dev/blog/2026-10-12.html\n\n#privacy #fingerprinting #adtech",
+      "x": "Fingerprinting doesn't replace cookies — it replaces consent\nhttps://hafs.dev/blog/2026-10-12.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-12.html"
+  },
+  {
     "date": "2026-10-11",
     "title": "A delay doesn't slow a system down. It changes what the system is.",
     "tags": [
