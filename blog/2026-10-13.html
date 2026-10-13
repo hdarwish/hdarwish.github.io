@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The defrost button was already someone else&#39;s code - Hafs Ibrahim</title>
+    <meta name="description" content="Someone turned on automatic defrosting in supermarket fridges across Europe. The fridges thawed, the milk warmed, the freezers wept. It&#39;s being called an...">
+    <meta property="og:title" content="The defrost button was already someone else&#39;s code">
+    <meta property="og:description" content="Someone turned on automatic defrosting in supermarket fridges across Europe. The fridges thawed, the milk warmed, the freezers wept. It&#39;s being called an...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-13.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The defrost button was already someone else&#39;s code">
+    <meta name="twitter:description" content="Someone turned on automatic defrosting in supermarket fridges across Europe. The fridges thawed, the milk warmed, the freezers wept. It&#39;s being called an...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-13">
+            <div class="blog-post-date">October 13, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">IoT security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">operational technology</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">supply chain</span></div>
+            <h2 class="blog-post-title">The defrost button was already someone else&#39;s code</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-13-hero.png" alt="The defrost button was already someone else&#39;s code" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Someone turned on automatic defrosting in supermarket fridges across Europe. The fridges thawed, the milk warmed, the freezers wept. It's being called an "unprecedented" cyberattack, and it's easy to laugh — until you realize that the scary part isn't the hack at all.</p>
+<p>The scary part is that the defrost button was already wired into someone else's code.</p>
+<h2>Why a thaw is worse than a lockout</h2>
+<p>Ransomware locks you out. A defrost cycle ruins the product. When a fridge's control system is told to run its defrost cycle on repeat, the temperature inside climbs past safe thresholds, the stock spoils, and the store loses not just a day of sales but an entire cold chain's worth of inventory. The Tom's Hardware report notes the attack also hit delivery systems and store prices — so the blast radius isn't one walk-in cooler; it's the whole logistics spine of a supermarket.</p>
+<p>But the defrosting was never the point.</p>
+<p>The attackers had been inside the fridge management platform all along. Defrost was just the loudest thing they could do.</p>
+<h2>The boring feature is the door</h2>
+<p>Here's what makes this attack so quietly devastating: automatic defrosting is not exotic. It's a maintenance convenience — a timer, a heater, a relay — designed so someone doesn't have to climb behind the dairy section with a scraper. It's the kind of feature that gets a checkbox in the manual and no security review whatsoever. Who threatens a defrost cycle? It's the operational equivalent of the janitor's closet key.</p>
+<p>Picture a building where every door is locked with a high-security deadbolt, but the janitor's closet has a push-button latch because nobody keeps anything valuable in there. The attacker doesn't need to pick the deadbolt. They walk in through the closet, find the master switch for the whole HVAC system, and turn the heat on.</p>
+<p>The analogy breaks where the closet door is actually a network protocol. The defrost feature lives in the same management platform that controls temperatures, alerts, and diagnostics — and that platform is reachable from somewhere. Once an attacker gets a foothold in that management layer, they don't need a custom exploit for each fridge. They have the same console the store manager uses, only they're not following the manual.</p>
+<h2>From mechanism to metric to consequence</h2>
+<p>Let's trace the full chain, because that's where the lesson hides.</p>
+<p>Mechanism: the attacker sends a command to the fridge management platform that triggers the defrost cycle. The platform forwards that command to the fridge's controller, which energizes the heating element. The fridge stops cooling and starts warming.</p>
+<p>Metric: temperature. The source doesn't give exact numbers, but the mechanism is clear — a defrost cycle that runs too long or too often pushes the internal temperature past safe storage thresholds. For dairy, that's a matter of hours, not days. The metric that matters is not bytes exfiltrated; it's degrees Celsius.</p>
+<p>Consequence: spoiled inventory, disrupted delivery, and a store that can't sell what it can't keep cold. But the deeper consequence is what this reveals about your own operational features. If an attacker can toggle a defrost cycle, they can probably toggle anything in that management platform — alarms, temperature setpoints, compressor schedules. The defrost was just the most visible, most damaging option they picked.</p>
+<h2>You have built this machine</h2>
+<p>Now here's the turn, and it's aimed squarely at anyone who has ever deployed a "management" interface for anything.</p>
+<p>Every operational feature you add — a remote reboot, a firmware update button, a diagnostic endpoint, an auto-defrost toggle — is a new command your system will accept. And every command your system accepts is a capability you are handing to whoever else can reach that interface. Security teams spend fortunes protecting the crown jewels while the janitor's closet door stays unlocked, because the boring feature is the one nobody thought to secure.</p>
+<p><strong>A defrost cycle is a weapon when firmware is someone else's.</strong></p>
+<p>Let that sit for a second. The feature you added for convenience is now a denial-of-service switch, a data-destruction tool, a way to turn a supermarket into a public health incident — all without touching a single lock.</p>
+<h2>What you can actually do</h2>
+<p>The fix isn't to remove the defrost feature. The fix is to stop treating operational features as if they exist in a vacuum.</p>
+<ul>
+<li><strong>Treat every command as a capability.</strong> Before you add a remote toggle, ask: what is the worst thing this toggle can do, and who can reach it? If the answer is "melt a store's inventory," it deserves the same access controls as the payment system.</li>
+<li><strong>Separate the management plane.</strong> The fridge platform should not be on the same network as the point-of-sale system, the delivery scheduling, or the public internet. Segmentation is boring, but it's the difference between a defrost cycle and a full supply-chain takeover.</li>
+<li><strong>Log the boring stuff.</strong> A defrost cycle that runs at 3 a.m. for five minutes is normal. A defrost cycle that runs every ten minutes for an hour is a scream. Anomaly detection on operational telemetry would have caught this before the milk went warm.</li>
+</ul>
+<p>None of this is glamorous. That's precisely the point. The most dangerous attack surface in your system is not the one with the flashiest exploit — it's the one with the most boring name, the one that shipped in a maintenance update, the one nobody ever thought to secure because it was just doing its job.</p>
+<p>The attackers didn't break the fridge. They used it the way it was designed to be used. The only mistake was assuming that a defrost button could never be a weapon.</p>
+<p>Somewhere, a supermarket manager is staring at a case of warm yogurt and learning the same lesson the rest of us should learn now: the janitor's closet key opens everything. And you left it under the mat.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Hackers activate automatic defrosting in supermarket fridges across Europe</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲577</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.simonandschuster.com/books/The-Cuckoos-Egg/Clifford-Stoll/9781416507787" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Cuckoo&#39;s Egg</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://attack.mitre.org/matrices/ics/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">MITRE ATT&amp;CK: ICS Matrix</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,5 +1,46 @@
 [
   {
+    "date": "2026-10-13",
+    "title": "The defrost button was already someone else's code",
+    "tags": [
+      "IoT security",
+      "operational technology",
+      "supply chain"
+    ],
+    "excerpt": "Someone turned on automatic defrosting in supermarket fridges across Europe. The fridges thawed, the milk warmed, the freezers wept. It's being called an \"unprecedented\" cyberattack, and it's easy to...",
+    "hn_refs": [
+      {
+        "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
+        "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
+        "points": 577
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Cuckoo's Egg",
+        "url": "https://www.simonandschuster.com/books/The-Cuckoos-Egg/Clifford-Stoll/9781416507787",
+        "kind": "book"
+      },
+      {
+        "title": "MITRE ATT&CK: ICS Matrix",
+        "url": "https://attack.mitre.org/matrices/ics/",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Someone turned on automatic defrosting in supermarket fridges across Europe. The fridges thawed, the milk warmed, the freezers wept. It's being called an...",
+    "social_teasers": {
+      "linkedin": "The defrost button was already someone else's code\n\nSomeone turned on automatic defrosting in supermarket fridges across Europe. The fridges thawed, the milk warmed, the freezers wept. It's being called an...\n\nhttps://hafs.dev/blog/2026-10-13.html\n\n#IoTsecurity #operationaltechnology #supplychain",
+      "x": "The defrost button was already someone else's code\nhttps://hafs.dev/blog/2026-10-13.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-13.html"
+  },
+  {
     "date": "2026-10-12",
     "title": "Fingerprinting doesn't replace cookies — it replaces consent",
     "tags": [
