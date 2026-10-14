@@ -1,0 +1,27 @@
+{
+  "share_description": "In May 2026, Anthropic merged about 2,500 code changes per day. By September: over 30,000. They say the latent demand for merging code is practically...",
+  "social_teasers": {
+    "linkedin": "Your repo became a dataset. Git is the wrong abstraction.\n\nIn May 2026, Anthropic merged about 2,500 code changes per day. By September: over 30,000. They say the latent demand for merging code is practically...\n\nhttps://hafs.dev/blog/2026-10-14.html\n\n#versioncontrol #monorepos #AIcoding",
+    "x": "Your repo became a dataset. Git is the wrong abstraction.\nhttps://hafs.dev/blog/2026-10-14.html"
+  },
+  "url": "https://hafs.dev/blog/2026-10-14.html",
+  "title": "Your repo became a dataset. Git is the wrong abstraction.",
+  "tags": [
+    "version control",
+    "monorepos",
+    "AI coding"
+  ],
+  "hn_refs": [
+    {
+      "title": "Redesigning source control at Anthropic",
+      "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+      "points": 675
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

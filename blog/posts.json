@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-14",
+    "title": "Your repo became a dataset. Git is the wrong abstraction.",
+    "tags": [
+      "version control",
+      "monorepos",
+      "AI coding"
+    ],
+    "excerpt": "In May 2026, Anthropic merged about 2,500 code changes per day. By September: over 30,000. They say the latent demand for merging code is practically infinite — remove one bottleneck and the merge...",
+    "hn_refs": [
+      {
+        "title": "Redesigning source control at Anthropic",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "points": 675
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Anthropic Engineering: Redesigning source control at Anthropic",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "kind": "article"
+      },
+      {
+        "title": "Google Piper: The Scale of the Problem",
+        "url": "https://cacm.acm.org/research/why-google-stores-billions-of-lines-of-code-in-a-single-repository/",
+        "kind": "article"
+      },
+      {
+        "title": "Meta Sapling: Source control at scale",
+        "url": "https://engineering.fb.com/2022/11/22/open-source/sapling-source-control-scalable/",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "In May 2026, Anthropic merged about 2,500 code changes per day. By September: over 30,000. They say the latent demand for merging code is practically...",
+    "social_teasers": {
+      "linkedin": "Your repo became a dataset. Git is the wrong abstraction.\n\nIn May 2026, Anthropic merged about 2,500 code changes per day. By September: over 30,000. They say the latent demand for merging code is practically...\n\nhttps://hafs.dev/blog/2026-10-14.html\n\n#versioncontrol #monorepos #AIcoding",
+      "x": "Your repo became a dataset. Git is the wrong abstraction.\nhttps://hafs.dev/blog/2026-10-14.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-14.html"
+  },
+  {
     "date": "2026-10-13",
     "title": "The defrost button was already someone else's code",
     "tags": [
