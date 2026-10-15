@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-15",
+    "title": "Your bug-fixing leaderboard is a memory test",
+    "tags": [
+      "LLM benchmarks",
+      "data contamination",
+      "software engineering"
+    ],
+    "excerpt": "LLM bug-fixing leaderboards may be lying to you. A new forensic method for checking benchmark credibility suggests that more than a fifth of reported “successful repairs” could just be memorized...",
+    "hn_refs": [
+      {
+        "title": "Things to know when you get cancer",
+        "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer",
+        "points": 1101
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+        "url": "https://openreview.net/forum?id=VTF8yNQM66",
+        "kind": "paper"
+      },
+      {
+        "title": "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?",
+        "url": "https://dl.acm.org/doi/10.1145/3442188.3445922",
+        "kind": "paper"
+      },
+      {
+        "title": "The Bitter Lesson",
+        "url": "http://www.incompleteideas.net/IncIdeas/BitterLesson.html",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "LLM bug-fixing leaderboards may be lying to you. A new forensic method for checking benchmark credibility suggests that more than a fifth of reported...",
+    "social_teasers": {
+      "linkedin": "Your bug-fixing leaderboard is a memory test\n\nLLM bug-fixing leaderboards may be lying to you. A new forensic method for checking benchmark credibility suggests that more than a fifth of reported...\n\nhttps://hafs.dev/blog/2026-10-15.html\n\n#LLMbenchmarks #datacontamination #softwareengineering",
+      "x": "Your bug-fixing leaderboard is a memory test\nhttps://hafs.dev/blog/2026-10-15.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-15.html"
+  },
+  {
     "date": "2026-10-14",
     "title": "Your repo became a dataset. Git is the wrong abstraction.",
     "tags": [

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your bug-fixing leaderboard is a memory test - Hafs Ibrahim</title>
+    <meta name="description" content="LLM bug-fixing leaderboards may be lying to you. A new forensic method for checking benchmark credibility suggests that more than a fifth of reported...">
+    <meta property="og:title" content="Your bug-fixing leaderboard is a memory test">
+    <meta property="og:description" content="LLM bug-fixing leaderboards may be lying to you. A new forensic method for checking benchmark credibility suggests that more than a fifth of reported...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-15.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your bug-fixing leaderboard is a memory test">
+    <meta name="twitter:description" content="LLM bug-fixing leaderboards may be lying to you. A new forensic method for checking benchmark credibility suggests that more than a fifth of reported...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-15">
+            <div class="blog-post-date">October 15, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">LLM benchmarks</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">data contamination</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software engineering</span></div>
+            <h2 class="blog-post-title">Your bug-fixing leaderboard is a memory test</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-15-hero.png" alt="Your bug-fixing leaderboard is a memory test" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>LLM bug-fixing leaderboards may be lying to you. A new forensic method for checking benchmark credibility suggests that more than a fifth of reported “successful repairs” could just be memorized answers from training data.</p>
+<p>That number — over 20% — isn't a rounding error. It's the difference between “models can fix bugs” and “models have seen these bugs before.”</p>
+<h2>The benchmark that flatters</h2>
+<p>We all want to know: can LLMs actually fix software bugs? The standard answer comes from benchmarks like SWE-bench, where a model is handed a GitHub issue and asked to produce a patch that passes the hidden tests. When a model scores 40% or 50% on these, it feels like progress.</p>
+<p>But there's a dirty secret. Benchmarks are built from real repositories, and those repositories are public. If a model's training data included the repository, the model may have memorized the fix rather than derived it. That's not repair. That's recall.</p>
+<p>BenchChecker is a method designed to test exactly this. It systematically checks whether benchmark samples are contaminated — whether the answer is present in the model's training data — and then measures what happens when you remove those samples.</p>
+<h2>The forensic method</h2>
+<p>The approach is clever. Instead of just asking “did the model fix it?”, BenchChecker looks for evidence of memorization. It compares the model's output against the training corpus, checking for verbatim patches, near-identical code, or telltale patterns that indicate the model didn't reason its way there.</p>
+<p>Imagine a student taking an open-book exam where the textbook contains the exact answers. They'll score perfectly — not because they understand the material, but because they've memorized it. BenchChecker is the proctor who confiscates the answer key.</p>
+<p>When the contaminated samples are removed, the reported resolution rates drop by more than 20% on medium-difficulty tasks. That's not a small correction. That's a fundamental recalibration.</p>
+<p>The metric that matters here isn't the raw pass rate. It's the <em>contamination-adjusted</em> pass rate — the rate you'd see if the model had to solve the bug from scratch, without having seen the answer in training.</p>
+<h2>Why this changes everything</h2>
+<p>If a leaderboard reports 50% and the true rate is 30%, then every engineering decision built on that number is suspect. You might deploy a model that fails a third of the time in production, where bugs are novel by definition.</p>
+<p>The consequence is concrete: teams using these models for real bug-fixing will overestimate their reliability. They'll trust automation with tasks it can't handle, and they'll be blindsided when the model fails on a genuinely new bug.</p>
+<p>This isn't just a research problem. It's a deployment problem. Every time you read a headline about “AI fixing bugs,” you should ask: <em>did it fix this bug, or did it remember this bug?</em></p>
+<h2>The turn: the leaderboard is a memory test</h2>
+<p>So here's the uncomfortable realization, stated plainly: <strong>bug-fixing benchmark scores are inflated by data contamination, often by over 20%.</strong></p>
+<p>That single fact flips the entire narrative. It's not “models can fix bugs.” It's “models have memorized the fixes.” And the gap between those two statements is the gap between a tool you can trust and a parlor trick.</p>
+<p>The analogy breaks honestly, though: a student who memorizes the answer key at least saw the key. An LLM that memorized a patch from a GitHub repo may not even understand the bug — it just learned to reproduce the token sequence that follows the issue text.</p>
+<h2>What you can do about it</h2>
+<p>The lesson isn't to abandon benchmarks. It's to demand better ones. If you're evaluating a model for bug-fixing, you need to check for contamination yourself. Ask: was this repo in the training data? Was this exact issue in the public dataset? If yes, treat the score with suspicion.</p>
+<p>Build your own private evaluation set — bugs that weren't in any public corpus. That's the only way to measure true generalization. The cost is real, but the alternative is a 20% inflated confidence that will bite you in production.</p>
+<p>There's a parallel here to something utterly unrelated: getting a medical diagnosis. When you're told you have cancer, you learn quickly that the standard of care isn't always enough. You push for second opinions, for comprehensive genetic testing, for answers from people who treat your condition daily. The lesson is: don't trust a single source of truth, even one that looks authoritative.</p>
+<p>Your benchmark is your first opinion. It's not your final one.</p>
+<p>So before you trust a leaderboard, ask the same question you'd ask a doctor: <em>how do you know this is true, and what would you do if it weren't?</em></p>
+<p>The best models will still be good — the drop of 20% doesn't mean all fixes are memorized. But the ones that survive the filter are the ones you can actually trust. And that's the benchmark that matters.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Things to know when you get cancer</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲1101</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://openreview.net/forum?id=VTF8yNQM66" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://dl.acm.org/doi/10.1145/3442188.3445922" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Bitter Lesson</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
