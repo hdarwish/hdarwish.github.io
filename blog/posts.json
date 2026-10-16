@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-16",
+    "title": "Your Neural Net Isn't a Black Box. It's Unfurnished.",
+    "tags": [
+      "interpretability",
+      "neural-networks",
+      "alignment"
+    ],
+    "excerpt": "For a decade, the story went like this: neural networks are inscrutable knots. Concepts get folded together, packed arbitrarily, hidden in high-dimensional shadows. The only way to study them was to...",
+    "hn_refs": [
+      {
+        "title": "Neural networks are clean",
+        "url": "https://already-clean.goodfire.com/",
+        "points": 607
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Neural Networks Are Already Clean",
+        "url": "https://already-clean.goodfire.com/",
+        "kind": "article"
+      },
+      {
+        "title": "Zoom In: An Introduction to Circuits",
+        "url": "https://distill.pub/2020/circuits/zoom-in/",
+        "kind": "article"
+      },
+      {
+        "title": "Towards Monosemanticity: Decomposing Language Models With Dictionary Learning",
+        "url": "https://transformer-circuits.pub/2023/monosemantic-features/index.html",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "For a decade, the story went like this: neural networks are inscrutable knots. Concepts get folded together, packed arbitrarily, hidden in high-dimensional...",
+    "social_teasers": {
+      "linkedin": "Your Neural Net Isn't a Black Box. It's Unfurnished.\n\nFor a decade, the story went like this: neural networks are inscrutable knots. Concepts get folded together, packed arbitrarily, hidden in high-dimensional...\n\nhttps://hafs.dev/blog/2026-10-16.html\n\n#interpretability #neural-networks #alignment",
+      "x": "Your Neural Net Isn't a Black Box. It's Unfurnished.\nhttps://hafs.dev/blog/2026-10-16.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-16.html"
+  },
+  {
     "date": "2026-10-15",
     "title": "Your bug-fixing leaderboard is a memory test",
     "tags": [
