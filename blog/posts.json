@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-17",
+    "title": "Your 'Nothing Up My Sleeve' Numbers Were Never Random",
+    "tags": [
+      "cryptography",
+      "LLM",
+      "security"
+    ],
+    "excerpt": "For thirty years, the most important constants in modern cryptography were supposed to be random. The seed for NIST P-256 — the curve that secures Bitcoin, TLS, and half the internet — was published...",
+    "hn_refs": [
+      {
+        "title": "Claude reveals ECDSA curve origins",
+        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+        "points": 795
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "A Riddle Wrapped in an Enigma (Koblitz & Menezes)",
+        "url": "https://www.iacr.org/archive/crypto2004/31520365/31520365.pdf",
+        "kind": "paper"
+      },
+      {
+        "title": "NIST FIPS 186-2 Digital Signature Standard",
+        "url": "https://csrc.nist.gov/publications/detail/fips/186/2/final",
+        "kind": "docs"
+      },
+      {
+        "title": "Anthropic research on ECDSA curve origins",
+        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "For thirty years, the most important constants in modern cryptography were supposed to be random. The seed for NIST P-256 — the curve that secures Bitcoin,...",
+    "social_teasers": {
+      "linkedin": "Your 'Nothing Up My Sleeve' Numbers Were Never Random\n\nFor thirty years, the most important constants in modern cryptography were supposed to be random. The seed for NIST P-256 — the curve that secures Bitcoin,...\n\nhttps://hafs.dev/blog/2026-10-17.html\n\n#cryptography #LLM #security",
+      "x": "Your 'Nothing Up My Sleeve' Numbers Were Never Random\nhttps://hafs.dev/blog/2026-10-17.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-17.html"
+  },
+  {
     "date": "2026-10-16",
     "title": "Your Neural Net Isn't a Black Box. It's Unfurnished.",
     "tags": [

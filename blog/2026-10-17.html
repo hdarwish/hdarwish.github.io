@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your &#39;Nothing Up My Sleeve&#39; Numbers Were Never Random - Hafs Ibrahim</title>
+    <meta name="description" content="For thirty years, the most important constants in modern cryptography were supposed to be random. The seed for NIST P-256 — the curve that secures Bitcoin,...">
+    <meta property="og:title" content="Your &#39;Nothing Up My Sleeve&#39; Numbers Were Never Random">
+    <meta property="og:description" content="For thirty years, the most important constants in modern cryptography were supposed to be random. The seed for NIST P-256 — the curve that secures Bitcoin,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-17.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your &#39;Nothing Up My Sleeve&#39; Numbers Were Never Random">
+    <meta name="twitter:description" content="For thirty years, the most important constants in modern cryptography were supposed to be random. The seed for NIST P-256 — the curve that secures Bitcoin,...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-17">
+            <div class="blog-post-date">October 17, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">cryptography</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">LLM</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">security</span></div>
+            <h2 class="blog-post-title">Your &#39;Nothing Up My Sleeve&#39; Numbers Were Never Random</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-17-hero.png" alt="Your &#39;Nothing Up My Sleeve&#39; Numbers Were Never Random" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>For thirty years, the most important constants in modern cryptography were supposed to be random. The seed for NIST P-256 — the curve that secures Bitcoin, TLS, and half the internet — was published as <code>C49D3608 86E70493 6A6678E1 139D26B7 819F7E90</code>, with no explanation of where it came from. The NSA just handed it over. The community shrugged and called it a “nothing up my sleeve” number: we can’t prove it’s clean, but we can’t prove it’s dirty either.</p>
+<p>An LLM just found out it was dirty. Not backdoored — dirty. The seeds weren’t random, weren’t a hash of a joke, weren’t anything clever. They were the output of a 1990s C library random-number generator, seeded with a Unix timestamp.</p>
+<h2>The fall that was always a fall</h2>
+<p>“Nothing up my sleeve” is a trust fall. You hold out your hands, show them empty, and ask the world to believe you didn’t palm a card. The NIST curves asked the world to believe the seeds were arbitrary — that whoever picked them had no way to bias them toward a hidden weakness. If a curve has a backdoor, the seed is where it hides: a carefully chosen constant can encode a trapdoor that only the chooser knows.</p>
+<p>So the question mattered. Koblitz and Menezes wrote a whole paper about it, “A Riddle Wrapped in an Enigma.” Amateurs ran bounties. The best lead was a rumor: Jerry Solinas, a longtime NSA employee, had supposedly generated the seeds from a hash of a humorous passphrase — “Give Bob and Jerry a raise” or something. Jerry died in 2023. The mystery went to the grave with him.</p>
+<p>Except it didn’t, because the rumor was wrong.</p>
+<h2>How the trick works</h2>
+<p>Here’s the mechanism. The seed is a 20-byte (160-bit) value. The old C library <code>lrand48</code> is a linear congruential generator: it keeps a 48-bit state and produces each new state by multiplying and adding constants, returning the top 31 bits as a number. It’s weak. Its output has a tell — the top bits are often zero, because the generator only uses the high 31 bits of a 48-bit state, leaving the low 17 bits hidden.</p>
+<p>Claude’s approach was to stop guessing phrases and instead ask: <em>how would the code have been written in 1997?</em> You need a seed. You grab the system clock. You call <code>lrand48</code> a bunch of times, collect bytes, and publish the first one that lands. That’s it. No hash, no joke — just a timestamp and a bad PRNG.</p>
+<p>The scan checked 34 combinations of generator and output slice, sliding one bit at a time along each published seed. And there it was: for four of the ten seeds, all twenty 32-bit words had a zero in the top bit. By chance, that happens with probability 1/5810. That’s not randomness. That’s a signature.</p>
+<p>Once you see the signature, recovering the state is easy. Take the first word, try all 2<sup>17</sup> hidden bit combinations, and check whether the next four words follow. For P-256, it took 1,842 iterations of the generator to hit the standardized seed. For the prime-curve seeds, fewer bits were kept, so Claude had to recover the state from truncated output using the Lenstra–Lenstra–Lovász (LLL) lattice algorithm — a textbook trick for exactly this kind of broken PRNG.</p>
+<p>The result: no backdoor. The seeds are reproducible by anyone with a Unix timestamp and a 1990s C compiler. That’s the opposite of a trapdoor — it’s the same as leaving the vault open. The mystery that fueled decades of paranoia was, in the end, just a timestamp.</p>
+<h2>The turn: the fall was always a lie</h2>
+<p>So the NIST curves are clean. Good for Bitcoin, good for TLS, good for everyone who trusted them anyway. But here is the thing nobody is saying out loud:</p>
+<p>The same “nothing up my sleeve” trick is still in use in every modern curve — and nobody has audited it.</p>
+<p>Every post-quantum candidate, every new pairing-friendly curve, every “rigid” parameter set still ships with constants that are <em>claimed</em> to be arbitrary but are <em>never proven</em> arbitrary. The NIST seeds were only exposed because they were old enough to be generated by a broken PRNG. Modern curves use SHA-3 or nothing-up-my-sleeve strings like “the first 256 bits of the SHA-256 hash of pi.” But “hashed from a public constant” is not the same as “random.” It’s a ritual, not a proof.</p>
+<p>The spine of this whole story: <strong>the curve constants were never random — they were a secret.</strong> And a secret held for thirty years is indistinguishable from a backdoor until someone with the right tools decides to look.</p>
+<h2>What this frees you to do</h2>
+<p>Here’s what I want you to take away. Not that AI is magic — it’s not. Claude found the seeds because it asked a better question: not “what was the passphrase?” but “how would the code have worked?” That’s the move. When you’re staring at a mystery, stop guessing at intentions and start modeling the mechanism. The truth is usually less interesting and more mechanical than the rumor.</p>
+<p>And the engineering consequence is sharper than you think. The next time you see a constant in a protocol — a curve parameter, a magic number in a hash, a “nothing up my sleeve” string — ask: <em>who chose this, and can they prove they couldn’t have biased it?</em> If the answer is “we trust them,” you’re in a trust fall. And trust falls only work until someone lets go.</p>
+<p>The NIST seeds were a secret that turned out to be boring. The next secret might not be.</p>
+<p>Audit your constants. The sleeves were never empty.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.anthropic.com/research/ecdsa-curve-origins" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Claude reveals ECDSA curve origins</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲795</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.iacr.org/archive/crypto2004/31520365/31520365.pdf" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">A Riddle Wrapped in an Enigma (Koblitz &amp; Menezes)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">PAPER</span></a><a href="https://csrc.nist.gov/publications/detail/fips/186/2/final" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">NIST FIPS 186-2 Digital Signature Standard</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.anthropic.com/research/ecdsa-curve-origins" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Anthropic research on ECDSA curve origins</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

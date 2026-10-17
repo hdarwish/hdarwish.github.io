@@ -1,0 +1,27 @@
+{
+  "share_description": "For thirty years, the most important constants in modern cryptography were supposed to be random. The seed for NIST P-256 — the curve that secures Bitcoin,...",
+  "social_teasers": {
+    "linkedin": "Your 'Nothing Up My Sleeve' Numbers Were Never Random\n\nFor thirty years, the most important constants in modern cryptography were supposed to be random. The seed for NIST P-256 — the curve that secures Bitcoin,...\n\nhttps://hafs.dev/blog/2026-10-17.html\n\n#cryptography #LLM #security",
+    "x": "Your 'Nothing Up My Sleeve' Numbers Were Never Random\nhttps://hafs.dev/blog/2026-10-17.html"
+  },
+  "url": "https://hafs.dev/blog/2026-10-17.html",
+  "title": "Your 'Nothing Up My Sleeve' Numbers Were Never Random",
+  "tags": [
+    "cryptography",
+    "LLM",
+    "security"
+  ],
+  "hn_refs": [
+    {
+      "title": "Claude reveals ECDSA curve origins",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+      "points": 795
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
