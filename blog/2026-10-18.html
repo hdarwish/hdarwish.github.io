@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You don&#39;t own code you can&#39;t explain - Hafs Ibrahim</title>
+    <meta name="description" content="Here&#39;s a scene that probably happened to you this week: you reviewed a pull request, the diff looked reasonable, the tests passed, so you hit approve....">
+    <meta property="og:title" content="You don&#39;t own code you can&#39;t explain">
+    <meta property="og:description" content="Here&#39;s a scene that probably happened to you this week: you reviewed a pull request, the diff looked reasonable, the tests passed, so you hit approve....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-18.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="You don&#39;t own code you can&#39;t explain">
+    <meta name="twitter:description" content="Here&#39;s a scene that probably happened to you this week: you reviewed a pull request, the diff looked reasonable, the tests passed, so you hit approve....">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-18">
+            <div class="blog-post-date">October 18, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI-assisted development</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">code review</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">developer tools</span></div>
+            <h2 class="blog-post-title">You don&#39;t own code you can&#39;t explain</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-18-hero.png" alt="You don&#39;t own code you can&#39;t explain" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Here's a scene that probably happened to you this week: you reviewed a pull request, the diff looked reasonable, the tests passed, so you hit approve. Somewhere in that diff was code you didn't fully understand — maybe a subtle retry handler, maybe an idempotency guard — and you shipped it anyway. The most dangerous code in your codebase is the code you didn't write. And you just shipped it.</p>
+
+<p>This is the quiet crisis of AI-assisted development. It's not that the code is wrong — it's that you can't explain it, and that's a skill you're losing. Every time you let an agent write code you don't understand, you're not just shipping a risk. You're handing over ownership.</p>
+
+<h2>Why “it works” isn't enough</h2>
+
+<p>Code review used to be a conversation. You'd read a diff, and if you didn't understand why a change was correct, you'd ask. The author would explain, you'd push back, and together you'd build a shared mental model. That conversation is the last line of defense against subtle bugs — the ones that only appear when the system misbehaves, not when it behaves.</p>
+
+<p>But when the author is an AI, the conversation doesn't happen. The agent doesn't have a mental model to share. It has a probability distribution over tokens. It generated the code because it looked plausible, not because it understood the invariants of your system. So when you approve that diff, the only person who could have explained it is you — and you didn't.</p>
+
+<p>The stakes are higher than a code review bottleneck. Every time you ship code you can't explain, you're building a system that no one in the room can reason about. That's not technical debt. That's a liability that compounds with every agent-generated commit.</p>
+
+<h2>The hook that makes you think</h2>
+
+<p>This is where <strong>Sphinx</strong> comes in. It's a Git hook for agent-assisted development, and its promise is blunt: “Outsource your thinking, not your understanding.” Before your agent's code ships, it asks you a question about what that code actually does. You answer. Get it wrong, and it tells you why, then asks a new scenario. Get it right, and the push continues.</p>
+
+<p>Let me show you how it works, because the mechanism is the message. You push to a protected branch, and Git pauses. Sphinx takes the diff — the actual changes your agent made — and generates a question about a subtle behavior. Not “what does this function do?” but something like: “Your webhook handler now saves the event ID before calling <code>charge()</code>. Stripe times out and sends the same event again. What happens on the retry?”</p>
+
+<p>If you're like most developers, your first instinct is to answer from the code's happy path. “It runs twice, so the customer is charged twice.” Sphinx says, not quite — the retry finds the saved ID and returns 200 without charging. Then it pushes deeper: “But that ID is stored before the charge succeeds. If <code>charge()</code> fails, what does the next retry do?”</p>
+
+<p>That's the whole trick. It's not a quiz about syntax or trivia. It's a probe into the failure modes — the places where understanding actually lives. It's a reviewer that never saw your chat, reading the diff and asking what happens when things go wrong.</p>
+
+<p>Here's a structural analogy: think of Sphinx as a <em>co-pilot checkride</em>. A pilot doesn't get to fly passengers just because they passed a written test. They get a checkride where an examiner asks, “What do you do if the engine fails on takeoff?” and watches them work through it. The checkride isn't about the happy path. It's about the edge cases, because that's where the plane actually crashes. Your code is the plane, and Sphinx is the examiner. The analogy breaks a little because Sphinx never leaves the ground — it only asks questions, it doesn't test your reflexes. But the spirit is identical: before you take on the responsibility, prove you can handle the abnormal.</p>
+
+<h2>The mirror in the pull request</h2>
+
+<p>Now, the part that matters. The quiz isn't a gate for the AI — it's a mirror for how little you actually understand your own codebase.</p>
+
+<p>Every question Sphinx asks is a reflection of the gap between what the code does and what you think it does. If you answer correctly, you've confirmed that you own that code. If you stumble, you've just discovered a spot where your ownership is thinner than your confidence. That's not a failure — that's the most valuable information a developer can get before shipping.</p>
+
+<p>The consequences are measurable. Every correct answer is a reduction in the risk of a production incident. Every wrong answer is a learning moment that costs you thirty seconds now instead of a four-hour incident later. The metric isn't latency or throughput — it's <em>understanding</em>, and it's the only metric that matters when the code is about to go live.</p>
+
+<p>And this isn't just about the moment of shipping. It's about the skill you're building or losing. If you can explain the retry logic, the idempotency guard, the race condition — you can maintain it, debug it, and teach it to the next person. If you can't, you're just a passenger in your own codebase, and the AI is the pilot.</p>
+
+<h2>What you're actually shipping</h2>
+
+<p>Here's what Sphinx understands that most tooling doesn't: the problem isn't that AI writes bad code. The problem is that it writes <em>good-looking</em> code that you can't defend. A human reviewer can challenge a bad design. A human operator can debug a crash. But neither can do any of that if the original author — you — can't explain the invariants under pressure.</p>
+
+<p>The tool doesn't just test your knowledge. It <em>builds</em> it. Each failed attempt teaches you the failure mode, and the next time you see a similar pattern in a diff, you'll recognize it. You're not just passing a quiz; you're accumulating the mental map that makes you the author of the code, even when the agent wrote the tokens.</p>
+
+<p>So here's the portable principle: <strong>before you approve any agent-generated code, ask yourself the Sphinx question.</strong> Not “does it work?” but “what happens when it doesn't?” If you can't answer, you have a choice: go read the code until you can, or decline to ship it. There is no third option that doesn't end with you owning a problem you don't understand at 3 a.m.</p>
+
+<p>The next time your agent pushes a diff and the tests pass, don't celebrate. Open the diff, pick the scariest line, and ask yourself what happens when the world misbehaves. If you can't answer, you've just found the line you don't own.</p>
+
+<p>Ship code you can explain. Everything else is just a liability with a green checkmark.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://sphinx-six-theta.vercel.app/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Show HN: Sphinx – a hook that quizzes you on your AI&#39;s code before shipping</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲49</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Pragmatic Programmer</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://www.microsoftpressstore.com/store/code-complete-9780735619678" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Code Complete</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a><a href="https://github.com/sphinx-understand/sphinx" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Sphinx GitHub repository</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

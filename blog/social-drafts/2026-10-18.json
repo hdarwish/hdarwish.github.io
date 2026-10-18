@@ -1,0 +1,27 @@
+{
+  "share_description": "Here's a scene that probably happened to you this week: you reviewed a pull request, the diff looked reasonable, the tests passed, so you hit approve....",
+  "social_teasers": {
+    "linkedin": "You don't own code you can't explain\n\nHere's a scene that probably happened to you this week: you reviewed a pull request, the diff looked reasonable, the tests passed, so you hit approve....\n\nhttps://hafs.dev/blog/2026-10-18.html\n\n#AI-assisteddevelopment #codereview #developertools",
+    "x": "You don't own code you can't explain\nhttps://hafs.dev/blog/2026-10-18.html"
+  },
+  "url": "https://hafs.dev/blog/2026-10-18.html",
+  "title": "You don't own code you can't explain",
+  "tags": [
+    "AI-assisted development",
+    "code review",
+    "developer tools"
+  ],
+  "hn_refs": [
+    {
+      "title": "Show HN: Sphinx – a hook that quizzes you on your AI's code before shipping",
+      "url": "https://sphinx-six-theta.vercel.app/",
+      "points": 49
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

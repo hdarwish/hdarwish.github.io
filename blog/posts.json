@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-18",
+    "title": "You don't own code you can't explain",
+    "tags": [
+      "AI-assisted development",
+      "code review",
+      "developer tools"
+    ],
+    "excerpt": "Here's a scene that probably happened to you this week: you reviewed a pull request, the diff looked reasonable, the tests passed, so you hit approve. Somewhere in that diff was code you didn't fully...",
+    "hn_refs": [
+      {
+        "title": "Show HN: Sphinx – a hook that quizzes you on your AI's code before shipping",
+        "url": "https://sphinx-six-theta.vercel.app/",
+        "points": 49
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Pragmatic Programmer",
+        "url": "https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/",
+        "kind": "book"
+      },
+      {
+        "title": "Code Complete",
+        "url": "https://www.microsoftpressstore.com/store/code-complete-9780735619678",
+        "kind": "book"
+      },
+      {
+        "title": "Sphinx GitHub repository",
+        "url": "https://github.com/sphinx-understand/sphinx",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "Here's a scene that probably happened to you this week: you reviewed a pull request, the diff looked reasonable, the tests passed, so you hit approve....",
+    "social_teasers": {
+      "linkedin": "You don't own code you can't explain\n\nHere's a scene that probably happened to you this week: you reviewed a pull request, the diff looked reasonable, the tests passed, so you hit approve....\n\nhttps://hafs.dev/blog/2026-10-18.html\n\n#AI-assisteddevelopment #codereview #developertools",
+      "x": "You don't own code you can't explain\nhttps://hafs.dev/blog/2026-10-18.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-18.html"
+  },
+  {
     "date": "2026-10-17",
     "title": "Your 'Nothing Up My Sleeve' Numbers Were Never Random",
     "tags": [
