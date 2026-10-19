@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You&#39;ll never meet the person who built your software. That&#39;s the point. - Hafs Ibrahim</title>
+    <meta name="description" content="You will never know the name of the person who decided your app&#39;s delete button should ask twice. You will never know who chose the exact gray that makes...">
+    <meta property="og:title" content="You&#39;ll never meet the person who built your software. That&#39;s the point.">
+    <meta property="og:description" content="You will never know the name of the person who decided your app&#39;s delete button should ask twice. You will never know who chose the exact gray that makes...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-19.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="You&#39;ll never meet the person who built your software. That&#39;s the point.">
+    <meta name="twitter:description" content="You will never know the name of the person who decided your app&#39;s delete button should ask twice. You will never know who chose the exact gray that makes...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-19">
+            <div class="blog-post-date">October 19, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software-craft</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">product-design</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">human-labor</span></div>
+            <h2 class="blog-post-title">You&#39;ll never meet the person who built your software. That&#39;s the point.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-19-hero.png" alt="You&#39;ll never meet the person who built your software. That&#39;s the point." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>You will never know the name of the person who decided your app's delete button should ask twice. You will never know who chose the exact gray that makes the empty state feel calm instead of empty. That anonymity isn't a bug in the industry's design — it's a feature. The software you use daily was built by someone whose name you'll never know, and the industry works hard to keep it that way.</p>
+<p>That matters more than you think, because if we can't see the people behind the software, we can't see what they're actually deciding. And once we can't see the decisions, we start to believe the software makes itself.</p>
+<h2>The factory that isn't</h2>
+<p>Listen to how the industry talks about building software. You collect requirements. You build features. You measure whether they worked. Follow the process and you get a good result. It sounds like a factory floor, and now we're told the factory can run itself — just add agents to the pipeline and let them churn out changes.</p>
+<p>But here's what Karri Saarinen noticed while building Linear: two teams can talk to the same customers, use the same technology, and make wildly different products. The difference isn't the process. It's the <em>understanding</em> — how each team reads what they see, what they decide to care about, and what they refuse to build. That's not a factory. That's a point of view.</p>
+<p>Saarinen calls it intuition, and he's careful to say what he doesn't mean: not a gut feeling pulled from thin air, but judgment forged through experience. You work on something, talk to customers, make mistakes, and learn what deserves your attention. Intuition is the accumulated weight of all those small decisions, and it's what forces you to use your judgment instead of hiding behind faceless data.</p>
+<h2>The soul of a product</h2>
+<p>Here's a thought experiment. Picture two teams building the same note-taking app. Team A adds a tagging system because the data shows users ask for it. Team B adds tags because they noticed their own notes sprawl into chaos, and they think a gentle hierarchy would help. Same feature. Different reasons. Different outcomes.</p>
+<p>Team B's version will feel considered. Team A's will feel bolted on. That feeling — you can't measure it directly, but it's the difference between a product that has a character and one that's just a collection of abilities. Saarinen calls it the soul of a product: the sense that someone cared about how the whole thing comes together.</p>
+<p>And here's the part that should make every engineer squirm: a feature can work perfectly well on its own and still make the product worse. Recognizing that requires a belief about what the product should be. Someone has to make the call, then stay close enough to customers to see whether they were right. That's the human labor the industry erases when it talks about "shipping features."</p>
+<h2>Frankenstein's monster</h2>
+<p>Now look at what's happening as we hand more of this work to agents. Saarinen's worry is specific: individuals work with agents to produce changes independently, each operating a small software factory. Each change might make sense on its own. But together they start to resemble Frankenstein's monster rather than a carefully shaped sculpture.</p>
+<p>The mechanism is additive: it's easier to add a new capability than to rethink an existing one. So products become collections of abilities, each added by a different agent, none of them holding the whole shape in their head. The shared perspective that once gave the product character gets diluted by the day. More things work. It just becomes harder to feel anyone behind them.</p>
+<p>And that's the hitting point.</p>
+<p>Every engineer reading this has shipped code that made someone else's invisible labor — a designer, a support agent, a user — the real bottleneck. The feature you added without asking whether it belonged was a decision about what the product should be, and you made it by not making it. Software hides the human; the human is the product.</p>
+<h2>What you can actually do</h2>
+<p>So what do you do with this? First, stop pretending your taste is irrelevant. The next time you're about to add a feature because "the data supports it," ask yourself: <em>does this make the product more itself, or just bigger?</em> That's not a soft question. It's the question that separates a sculpture from a pile of additions.</p>
+<p>Second, when you review a change — yours or an agent's — ask what it assumes about the product's point of view. A change that doesn't know what the product is for is a change that's erasing someone's labor. You don't have to be the person with the vision. You just have to be the person who refuses to let the vision drown in a thousand reasonable additions.</p>
+<p>The tools are getting easier. That's not a threat. It's room to develop a perspective and follow it further — to understand a problem deeply and keep shaping an answer until the pieces belong together. The factories are getting faster. The humans are getting rarer.</p>
+<p>Be one of the humans.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://karrisaarinen.com/posts/someone-behind-the-software" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Someone behind the software</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲383</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://karrisaarinen.com/posts/someone-behind-the-software" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Someone behind the software</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Design of Everyday Things</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

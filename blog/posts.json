@@ -1,5 +1,46 @@
 [
   {
+    "date": "2026-10-19",
+    "title": "You'll never meet the person who built your software. That's the point.",
+    "tags": [
+      "software-craft",
+      "product-design",
+      "human-labor"
+    ],
+    "excerpt": "You will never know the name of the person who decided your app's delete button should ask twice. You will never know who chose the exact gray that makes the empty state feel calm instead of empty....",
+    "hn_refs": [
+      {
+        "title": "Someone behind the software",
+        "url": "https://karrisaarinen.com/posts/someone-behind-the-software",
+        "points": 383
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Someone behind the software",
+        "url": "https://karrisaarinen.com/posts/someone-behind-the-software",
+        "kind": "article"
+      },
+      {
+        "title": "The Design of Everyday Things",
+        "url": "https://www.amazon.com/Design-Everyday-Things-Revised-Expanded/dp/0465050654",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "You will never know the name of the person who decided your app's delete button should ask twice. You will never know who chose the exact gray that makes...",
+    "social_teasers": {
+      "linkedin": "You'll never meet the person who built your software. That's the point.\n\nYou will never know the name of the person who decided your app's delete button should ask twice. You will never know who chose the exact gray that makes...\n\nhttps://hafs.dev/blog/2026-10-19.html\n\n#software-craft #product-design #human-labor",
+      "x": "You'll never meet the person who built your software. That's the point.\nhttps://hafs.dev/blog/2026-10-19.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-19.html"
+  },
+  {
     "date": "2026-10-18",
     "title": "You don't own code you can't explain",
     "tags": [
