@@ -1,0 +1,27 @@
+{
+  "share_description": "WhatsApp's help pages secretly told its AI assistant not to recommend a data protection regulator, and not to mention privacy law once a user said the word...",
+  "social_teasers": {
+    "linkedin": "Your help page is now a control plane\n\nWhatsApp's help pages secretly told its AI assistant not to recommend a data protection regulator, and not to mention privacy law once a user said the word...\n\nhttps://hafs.dev/blog/2026-10-20.html\n\n#AIsafety #promptinjection #LLMsupport",
+    "x": "Your help page is now a control plane\nhttps://hafs.dev/blog/2026-10-20.html"
+  },
+  "url": "https://hafs.dev/blog/2026-10-20.html",
+  "title": "Your help page is now a control plane",
+  "tags": [
+    "AI safety",
+    "prompt injection",
+    "LLM support"
+  ],
+  "hn_refs": [
+    {
+      "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+      "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+      "points": 235
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}

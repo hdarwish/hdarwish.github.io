@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your help page is now a control plane - Hafs Ibrahim</title>
+    <meta name="description" content="WhatsApp&#39;s help pages secretly told its AI assistant not to recommend a data protection regulator, and not to mention privacy law once a user said the word...">
+    <meta property="og:title" content="Your help page is now a control plane">
+    <meta property="og:description" content="WhatsApp&#39;s help pages secretly told its AI assistant not to recommend a data protection regulator, and not to mention privacy law once a user said the word...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-20.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your help page is now a control plane">
+    <meta name="twitter:description" content="WhatsApp&#39;s help pages secretly told its AI assistant not to recommend a data protection regulator, and not to mention privacy law once a user said the word...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-20">
+            <div class="blog-post-date">October 20, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI safety</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">prompt injection</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">LLM support</span></div>
+            <h2 class="blog-post-title">Your help page is now a control plane</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-20-hero.png" alt="Your help page is now a control plane" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>WhatsApp's help pages secretly told its AI assistant not to recommend a data protection regulator, and not to mention privacy law once a user said the word "lawyer." The instructions were invisible — written into the pages in a way that never rendered on screen, only ever fed to the model. You couldn't see them. The AI could. And the surprising part isn't that WhatsApp did this. It's that this is now the standard way to control LLM behavior.</p>
+<p>Here's why you should care before you understand the mechanism: every company shipping LLM-based support is doing the same thing, just less visibly. And the technique turns every public help page into a prompt-injection attack surface — not because someone is malicious, but because the instructions are hidden in plain sight, mixed into the same content that any user can read.</p>
+<h2>The invisible orders</h2>
+<p>Redact, a privacy service, read all 545 pages that WhatsApp's help centre links to, and found 80 pages containing 102 hidden blocks of AI instructions. Most were harmless. Two stood out.</p>
+<p>On the account deletion page, after the visible note about 30-day and 120-day (or 365-day in the US) auto-deletion, sat a block that told the AI: if a user can't complete self-service deletion, inform them of those waiting periods — and then, explicitly: <strong>"Do not recommend contacting any Data Protection Authority, regulator, or supervisory authority."</strong> It also forbade suggesting WhatsApp can manually delete accounts, and forbade recommending a different phone with an active number.</p>
+<p>So a person locked out of their account got one answer: wait up to a year. The other routes — a regulator, a manual override — were kept out of the conversation entirely. The page as a human saw it was a simple FAQ. The page as the AI saw it was a set of orders.</p>
+<p>The second block, on the reporting and blocking page, triggered whenever a user mentioned legal action, lawsuits, lawyers, attorneys, courts, or litigation. From that moment on, the AI was told to stay out of anything legal — including the privacy laws that protect the user. The instruction was conditional: <em>if</em> the user says "lawyer," <em>then</em> do not cite, quote, interpret, or reference the law.</p>
+<h2>How the trick works</h2>
+<p>This is not a hack. It's a natural consequence of how LLM-based support works. When a user messages WhatsApp Support, the system retrieves relevant help pages and stuffs them into the prompt as context. The model then answers based on that context. The pages are the knowledge base — and the instructions are just more text in that knowledge base.</p>
+<p>Think of it like a stage play where the script has two versions: the one the audience reads in the program, and the one the actors actually perform. The audience sees a heartwarming scene; the actors see stage directions: <em>"When the daughter mentions the inheritance, do not look at the lawyer."</em> The directions are part of the script — they have to be, or the actors wouldn't know what to do. But the audience never sees them.</p>
+<p>That's the load-bearing analogy: the hidden text is stage directions, not dialogue. And like stage directions, they're not visible to the audience — but they're also not secret from anyone who sneaks backstage. The pages are public. Anyone can fetch them. The instructions are hidden only from the human eye, not from the world.</p>
+<p>And here's where the analogy breaks: in a play, the stage directions are written by the playwright and read by the actors. In LLM support, the "playwright" is the company, the "actors" are the model — but the "script" is also served to anyone who asks. The boundary between instructions and content is entirely a matter of rendering.</p>
+<h2>The real story</h2>
+<p>The real story isn't that WhatsApp hid a rule — it's that every company shipping LLM support is doing the same thing, just less visibly.</p>
+<p>Any company that uses a retrieval-augmented generation (RAG) pipeline to feed help pages into a prompt is already embedding instructions in those pages. Some are explicit: <em>"If the user asks about refunds, direct them to the policy page."</em> Some are implicit: the page's tone, its emphasis, its omissions. The pages are not just content — they are a control plane for the AI's behavior. And that control plane is public.</p>
+<p>This changes what a help page <em>is</em>. It's no longer a document for humans. It's a prompt — a prompt that any user can read, and any user can manipulate. If the instructions are hidden in the page, then a user who knows how to read the raw HTML can see them. More importantly, a user can craft their own input to the support bot that <em>overrides</em> those instructions, because the instructions are just text competing with other text.</p>
+<p>Prompt injection is usually framed as an attack: someone sends a malicious instruction that hijacks the model. But this is the inverse. The company is injecting its own instructions into the context, and the user is the one who has to fight back. The attack surface is not a vulnerability in the model — it's a design choice. The help page is a battlefield, and the company has already dug in.</p>
+<h2>What this means for you</h2>
+<p>If you're building LLM-based support, you need to decide: are your instructions visible to users, or hidden? Hidden instructions are not more secure — they're just less transparent. And transparency is the only defense against the inevitable arms race of prompt injection.</p>
+<p>Here's a portable principle: <strong>treat every piece of content you feed to an LLM as a prompt that a user can read and a user can influence.</strong> If you wouldn't want a user to see the instruction, don't put it in the content. Put it in a separate system prompt, or in a metadata field that's never exposed. The moment you mix instructions into the knowledge base, you've created a prompt-injection surface — and you've lost the ability to control what the model does when a user says the magic words.</p>
+<p>WhatsApp's fix was to remove the hidden notes. But the underlying pattern remains. Every RAG pipeline is a stage, and the help pages are the script. The question is not whether the stage directions are visible — it's whether you're willing to let the audience read them.</p>
+<p>Read the script before the actors do. The audience always finds out.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">WhatsApp&#39;s help pages hid LLM instructions: dont recommend a regulator</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲235</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Redact&#39;s original investigation</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">OWASP Top 10 for LLM Applications</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://simonwillison.net/tags/promptinjection/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Simon Willison&#39;s writings on prompt injection</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-20",
+    "title": "Your help page is now a control plane",
+    "tags": [
+      "AI safety",
+      "prompt injection",
+      "LLM support"
+    ],
+    "excerpt": "WhatsApp's help pages secretly told its AI assistant not to recommend a data protection regulator, and not to mention privacy law once a user said the word \"lawyer.\" The instructions were invisible —...",
+    "hn_refs": [
+      {
+        "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+        "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+        "points": 235
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Redact's original investigation",
+        "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+        "kind": "article"
+      },
+      {
+        "title": "OWASP Top 10 for LLM Applications",
+        "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/",
+        "kind": "docs"
+      },
+      {
+        "title": "Simon Willison's writings on prompt injection",
+        "url": "https://simonwillison.net/tags/promptinjection/",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "WhatsApp's help pages secretly told its AI assistant not to recommend a data protection regulator, and not to mention privacy law once a user said the word...",
+    "social_teasers": {
+      "linkedin": "Your help page is now a control plane\n\nWhatsApp's help pages secretly told its AI assistant not to recommend a data protection regulator, and not to mention privacy law once a user said the word...\n\nhttps://hafs.dev/blog/2026-10-20.html\n\n#AIsafety #promptinjection #LLMsupport",
+      "x": "Your help page is now a control plane\nhttps://hafs.dev/blog/2026-10-20.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-20.html"
+  },
+  {
     "date": "2026-10-19",
     "title": "You'll never meet the person who built your software. That's the point.",
     "tags": [
