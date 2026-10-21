@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-21",
+    "title": "Your CA can revoke a certificate. It can't revoke its own broken trust.",
+    "tags": [
+      "TLS",
+      "PKI",
+      "security"
+    ],
+    "excerpt": "On the 17th of October, a researcher named Wayne signed a message with the private keys of eight eMudhra intermediate CA certificates. Not a crack, not a side-channel, not a supply-chain heist — he...",
+    "hn_refs": [
+      {
+        "title": "eMudhra intermediate CA compromise",
+        "url": "https://emudhra.we-have-a-problem.com/",
+        "points": 798
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Mozilla's CA Certificate Policy",
+        "url": "https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/",
+        "kind": "docs"
+      },
+      {
+        "title": "Certificate Transparency (RFC 6962)",
+        "url": "https://datatracker.ietf.org/doc/html/rfc6962",
+        "kind": "docs"
+      },
+      {
+        "title": "The Security of SSL/TLS: A Survey of the State of the Art",
+        "url": "https://www.usenix.org/publications/login/spring-2015",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "On the 17th of October, a researcher named Wayne signed a message with the private keys of eight eMudhra intermediate CA certificates. Not a crack, not a...",
+    "social_teasers": {
+      "linkedin": "Your CA can revoke a certificate. It can't revoke its own broken trust.\n\nOn the 17th of October, a researcher named Wayne signed a message with the private keys of eight eMudhra intermediate CA certificates. Not a crack, not a...\n\nhttps://hafs.dev/blog/2026-10-21.html\n\n#TLS #PKI #security",
+      "x": "Your CA can revoke a certificate. It can't revoke its own broken trust.\nhttps://hafs.dev/blog/2026-10-21.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-21.html"
+  },
+  {
     "date": "2026-10-20",
     "title": "Your help page is now a control plane",
     "tags": [

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your CA can revoke a certificate. It can&#39;t revoke its own broken trust. - Hafs Ibrahim</title>
+    <meta name="description" content="On the 17th of October, a researcher named Wayne signed a message with the private keys of eight eMudhra intermediate CA certificates. Not a crack, not a...">
+    <meta property="og:title" content="Your CA can revoke a certificate. It can&#39;t revoke its own broken trust.">
+    <meta property="og:description" content="On the 17th of October, a researcher named Wayne signed a message with the private keys of eight eMudhra intermediate CA certificates. Not a crack, not a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-21.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your CA can revoke a certificate. It can&#39;t revoke its own broken trust.">
+    <meta name="twitter:description" content="On the 17th of October, a researcher named Wayne signed a message with the private keys of eight eMudhra intermediate CA certificates. Not a crack, not a...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-21">
+            <div class="blog-post-date">October 21, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">TLS</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">PKI</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">security</span></div>
+            <h2 class="blog-post-title">Your CA can revoke a certificate. It can&#39;t revoke its own broken trust.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-21-hero.png" alt="Your CA can revoke a certificate. It can&#39;t revoke its own broken trust." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>On the 17th of October, a researcher named Wayne signed a message with the private keys of eight eMudhra intermediate CA certificates. Not a crack, not a side-channel, not a supply-chain heist — he just had the keys. To prove it, he published a proof.zip with the message, the certificates, and the signatures, and handed it to the browser root programs. The keys were flawed from birth: generated incorrectly by the CA in April 2025, recoverable by anyone from the public certificates. Every browser on Earth initially trusted them.</p>
+
+<h2>The Keys Were Never Secret</h2>
+
+<p>Let's be precise about what "incorrectly generated" means. A certificate's private key is supposed to be a random number, kept private. eMudhra's generation was so broken that the private key could be <em>recovered from the public certificate itself</em>. The source says it plainly: "anyone can recover them from the certificates." So for roughly eighteen months, an eight-key skeleton key existed in public, and nobody could tell — except by checking whether a signature verified against the public key. Which is exactly what Wayne did.</p>
+
+<p>Now here's the part that should make you uneasy. The certificates chain to roots trusted by the Mozilla, Microsoft, Apple, and Chrome root programs, and to many downstream trust stores. That means an attacker holding one of those keys could mint a TLS certificate for any domain on the internet — <code>yourbank.com</code>, <code>update.apple.com</code>, <code>gmail.com</code> — and every browser, every curl, every TLS client that trusted the chain would accept it. The metric that matters here isn't latency or throughput; it's <em>trust propagation</em>. One broken key at the intermediate level grants the power of the entire root.</p>
+
+<h2>Revocation Is a Patch, Not a Cure</h2>
+
+<p>The root programs did what they do: Firefox and Chrome blocked the intermediates on the 17th, Apple on the 19th, Microsoft on the 20th. The CA has revoked the certificates. But revocation is a story about <em>distribution</em>, not about the certificate itself. Browsers use fast, shrink-wrapped mechanisms — OneCRL, CRLite, CRLSets — that push a list of bad intermediates to clients. That works, for browsers.</p>
+
+<p>Now consider every other TLS client on the planet: <code>curl</code> on a server, a Python script, a Go service, a Java app, an embedded device. These clients don't ship with OneCRL. They rely on a static trust store plus, at best, certificate revocation lists that they rarely check. The source's own checker asks: "Does your client still trust the compromised intermediates?" The answer, for most non-browser clients, is <em>yes</em>, until they get a software update. The source lists patches for Ubuntu, Debian, Arch, Fedora, Alpine, Go, Python's certifi, Rust, Electron, and more — each a separate trust store that must be updated individually. That's the real distribution problem: not one revocation, but a thousand little pushes.</p>
+
+<p>Here's the load-bearing analogy: imagine a bank that gives a branch manager a master key to every vault in the city. The manager is supposed to use it only for legitimate business. Now imagine the master key is duplicated and posted on a public wall. The bank can change the locks — but only if every door's owner hears about it in time. The branch manager isn't a smaller CEO; they're a <em>delegated authority</em> whose power is only as contained as the system that watches them. And the system that watches intermediates? It's mostly faith.</p>
+
+<h2>Where the Scrutiny Isn't</h2>
+
+<p>The middle of a certificate chain is the place where no browser, CA, or customer can tell who is supposed to be watching.</p>
+
+<p>Think about it. The root CA is audited, heavily, by the root programs. The leaf certificate is checked against Certificate Transparency logs — the source notes these intermediates had no CT entries, meaning CT-enforcing browsers couldn't have been attacked. But the intermediate sits in a no-man's-land. It's not audited like a root, and it's not as visible as a leaf. The CA that created it is responsible for its key generation, but who verifies that generation? The root programs can't inspect every intermediate's key-generation ceremony. The customer can't. The browser trusts the chain blindly. The intermediate is delegated trust, and delegation without oversight is just a hand grenade with a long fuse.</p>
+
+<p>The spine lands here: <strong>A CA can revoke a bogus certificate, but not its own delegated trust.</strong> Once an intermediate's key is compromised, the trust it represents is gone — not just for that certificate, but for everything it could have signed. Revocation lists are the fire alarm, not the fire extinguisher. They tell you the building is burning, but they don't rebuild the trust that was lost.</p>
+
+<h2>What This Frees You to Do</h2>
+
+<p>So what do you actually do with this? First, stop treating revocation as a silver bullet. If you're running a service that depends on TLS, ask: <em>does my client check revocation at all?</em> If the answer is no, you're trusting a static snapshot of a trust store that may be stale by months. The source's own workaround for macOS <code>curl</code> is telling: the built-in <code>/usr/bin/curl</code> verifies against <code>/etc/ssl/cert.pem</code> <em>without checking revocation</em>, and that file wasn't even updated. That's not a bug; it's the status quo.</p>
+
+<p>Second, demand better key generation. The root cause here wasn't a sophisticated attack — it was a CA making a simple, catastrophic mistake. The fix isn't more revocation; it's <em>prevention</em>. If you're a CA, your intermediate keys must be generated with hardware security modules, audited, and tested for randomness. If you're a trust store operator, you should be asking your CAs: <em>how do we know your intermediate keys are actually random?</em> The answer, for too long, has been "we don't."</p>
+
+<p>Third, and most practically: when you design a system that delegates trust, build in a way to <em>watch the delegates</em>. Certificate Transparency is a start — it made these compromised intermediates visible in the sense that they were absent — but CT only helps if you enforce it. The source notes that "many clients outside of the browser ecosystem do not enforce Certificate Transparency." That's a choice, and it's a choice you can stop making.</p>
+
+<p>And here's the gift: you don't need to wait for the next compromise. You can start today by updating your trust stores, by checking whether your curl and your Python and your Go clients actually verify revocation, and by asking your CA hard questions about their key generation. The system won't police itself; it never has. The only real defense is the uncomfortable one: <em>verify, don't trust</em>. Because trust, once delegated, is a thing you can't take back — but you can stop giving it blindly.</p>
+
+<p>One final line, with a little music: The chain is only as strong as the weakest link, but the weakest link is the one you never look at.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://emudhra.we-have-a-problem.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">eMudhra intermediate CA compromise</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲798</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/policy/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Mozilla&#39;s CA Certificate Policy</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://datatracker.ietf.org/doc/html/rfc6962" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Certificate Transparency (RFC 6962)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://www.usenix.org/publications/login/spring-2015" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Security of SSL/TLS: A Survey of the State of the Art</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
