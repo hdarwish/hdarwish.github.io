@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your LLM gateway is a master key. Someone just stole it. - Hafs Ibrahim</title>
+    <meta name="description" content="Here&#39;s a strange thing: a Python package whose entire job is to hold API keys for every LLM provider on Earth just shipped a version that hands those keys...">
+    <meta property="og:title" content="Your LLM gateway is a master key. Someone just stole it.">
+    <meta property="og:description" content="Here&#39;s a strange thing: a Python package whose entire job is to hold API keys for every LLM provider on Earth just shipped a version that hands those keys...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-22.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your LLM gateway is a master key. Someone just stole it.">
+    <meta name="twitter:description" content="Here&#39;s a strange thing: a Python package whose entire job is to hold API keys for every LLM provider on Earth just shipped a version that hands those keys...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-22">
+            <div class="blog-post-date">October 22, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">supply-chain-security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">llm</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">credential-stealing</span></div>
+            <h2 class="blog-post-title">Your LLM gateway is a master key. Someone just stole it.</h2>
+            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-22-hero.png" alt="Your LLM gateway is a master key. Someone just stole it." style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Here's a strange thing: a Python package whose entire job is to hold API keys for every LLM provider on Earth just shipped a version that hands those keys to an attacker. Not by breaking encryption. Not by finding a vault. By being installed.</p>
+
+<h2>A choke point with teeth</h2>
+
+<p>LiteLLM is the kind of tool that quietly becomes load-bearing. It sits in front of OpenAI, Anthropic, Gemini, and a hundred other providers, routing calls and — critically — holding the credentials for every one of them. Developers hand it their keys because that's the point of the thing. It's a single choke point for the entire AI stack. And a master key is only interesting if someone can get to it.</p>
+
+<p>Now picture the attacker's shopping list. They don't need to break into your cloud account. They don't need to phish a developer. They just need to get a few lines into a package that thousands of teams install with <code>pip install litellm</code>. That's the whole attack surface. And on October 21st, 2026, someone did exactly that — with a stolen token and a single line of TOML.</p>
+
+<h2>The anatomy of a quiet implant</h2>
+
+<p>Version 1.107.0 on PyPI was not what the GitHub source had. The upstream repository was clean; the wheels were not. All seven wheels — Linux, macOS, Windows — carried three extra files in <code>site-packages</code>. The malicious release was up for hours: PyPI removed it by 13:23 UTC, and Docker images on Docker Hub and GHCR carried it between 11:46 and 14:20 UTC. That's roughly three hours of exposure, which in supply-chain time is an eternity.</p>
+
+<p>Here's how it got in. The <code>pyproject.toml</code> in the source distribution had one extra line in the maturin build section: <code>data = "cook"</code>. That single line told the build tool to copy a <code>cook/</code> folder into the wheel. The sdist itself didn't include the folder, so the only visible change was that line. No public commit in the LiteLLM repo contained it. The attacker had the GitHub CLI credentials of three developers, believed to be harvested from the logs of an exposed internal deployment. With an organization owner's token, they pointed the release workflow at a lookalike repository and let the build system do the rest.</p>
+
+<p>So the mechanism is not complex. It's a classic poisoned build, executed through a stolen token and a single TOML line. The real sophistication is in what the payload does once installed.</p>
+
+<h2>Two files, one master key</h2>
+
+<p>Python has a feature that makes this attack almost too easy: every process that starts on a host runs <code>sitecustomize.py</code> automatically, whether or not it ever imports the malicious package. Combined with <code>cook.pth</code> importing <code>cook.py</code>, the implant executes on every Python startup. No import of <code>litellm</code> required. Your cron job, your CI runner, your web server — all of them run the payload. Think of it as a parasite that doesn't need its host to take a bite; it just needs the host to breathe.</p>
+
+<p>The first payload, <code>cook.py</code>, is a credential stealer. It collects SSH keys, cloud credentials, CI/CD secrets, AI tool tokens, browser passwords, and — the crown jewel — the LLM provider keys stored in the LiteLLM proxy database. It encrypts everything and exfiltrates it to <code>www.litellm[.]dev</code>. The second, <code>sitecustomize.py</code>, starts a background daemon that every hour reads a server address from a GitHub file, runs the stealer again, and downloads and runs whatever code that server provides. That's not a one-time theft; that's a persistent backdoor with a remote control channel.</p>
+
+<p>The engineering consequence lands like a dropped wrench: <strong>your dependency graph is a security boundary, and this package just made it infinitely porous.</strong> The keys you gave LiteLLM weren't just exposed to the library's authors; they were exposed to anyone who could get the library to run code in your process. Which, as we've just seen, is anyone who can slip a line into a build.</p>
+
+<h2>The backdoor was already open</h2>
+
+<p>Here's the thing that makes this more than another supply-chain scare.</p>
+
+<p>LiteLLM is not an ordinary dependency. It's a credential repository that you install into your environment. Every API key for every provider, sitting in a proxy database, waiting to be read. The backdoor didn't need to break encryption or find a vault — it just waited for the app to call the LLM and exfiltrated the key the developer already handed the library.</p>
+
+<p>A dependency compromise is only as interesting as the keys it reaches.</p>
+
+<p>And here's where the turn bites: you have probably built this machine yourself. Not the package — the concentration. Every time you centralize credentials in one tool, you've built a master key and handed it to the supply chain. The attack on LiteLLM is just the loudest version of a quiet pattern: the more convenient the hub, the more damage one compromised line can do. The weight of your entire AI stack now rests on a single TOML line.</p>
+
+<h2>What this frees you to do</h2>
+
+<p>You can't prevent every compromised package. But you can stop treating your LLM gateway as a trusted vault. The moment you install a package that holds keys for every provider, you've created a master key — and you've handed it to anyone who can get code into your environment. The fix isn't to stop using LiteLLM; it's to stop concentrating all your credentials in one place. Rotate keys on a schedule. Store them in a dedicated secrets manager, not in a proxy database. Treat every dependency as a potential exfiltration point, and assume that the package you install today might be malicious tomorrow.</p>
+
+<p>This isn't paranoia; it's the cost of building on top of an ecosystem where a single TOML line can turn a trusted tool into a backdoor. The next time you run <code>pip install</code>, remember: you're not just installing code. You're handing out keys.</p>
+
+<p>And the master key doesn't even need to break the lock — it just needs to wait for you to use it.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲476</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://github.com/BerriAI/litellm/security/advisories" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">LiteLLM Incident Report</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://safedep.io/blog" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">SafeDep Blog</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
