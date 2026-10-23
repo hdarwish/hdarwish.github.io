@@ -1,0 +1,27 @@
+{
+  "share_description": "Quad9 is the internet's closest thing to a neutral utility. Free. Anonymous. No logs. Billions of queries a day, and no record of who asked for what.It just...",
+  "social_teasers": {
+    "linkedin": "Your Resolver Is One Court Order From Lying to You\n\nQuad9 is the internet's closest thing to a neutral utility. Free. Anonymous. No logs. Billions of queries a day, and no record of who asked for what.It just...\n\nhttps://hafs.dev/blog/2026-10-23.html\n\n#DNS #privacy #internetgovernance",
+    "x": "Your Resolver Is One Court Order From Lying to You\nhttps://hafs.dev/blog/2026-10-23.html"
+  },
+  "url": "https://hafs.dev/blog/2026-10-23.html",
+  "title": "Your Resolver Is One Court Order From Lying to You",
+  "tags": [
+    "DNS",
+    "privacy",
+    "internet governance"
+  ],
+  "hn_refs": [
+    {
+      "title": "Quad9 to exit France",
+      "url": "https://quad9.net/news/blog/au-revoir-france",
+      "points": 1108
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
