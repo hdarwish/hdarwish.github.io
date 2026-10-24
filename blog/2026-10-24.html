@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your distributed database is a liar. Choose which lies. - Hafs Ibrahim</title>
+    <meta name="description" content="September 2014. A weekend. Philip O&#39;Toole puts SQLite behind a Raft log, pushes it to GitHub, and for years, nobody else bothers. Today, a dozen projects,...">
+    <meta property="og:title" content="Your distributed database is a liar. Choose which lies.">
+    <meta property="og:description" content="September 2014. A weekend. Philip O&#39;Toole puts SQLite behind a Raft log, pushes it to GitHub, and for years, nobody else bothers. Today, a dozen projects,...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-24.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your distributed database is a liar. Choose which lies.">
+    <meta name="twitter:description" content="September 2014. A weekend. Philip O&#39;Toole puts SQLite behind a Raft log, pushes it to GitHub, and for years, nobody else bothers. Today, a dozen projects,...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-24">
+            <div class="blog-post-date">October 24, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">distributed-systems</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">sqlite</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">raft</span></div>
+            <h2 class="blog-post-title">Your distributed database is a liar. Choose which lies.</h2>
+            
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>September 2014. A weekend. Philip O'Toole puts SQLite behind a Raft log, pushes it to GitHub, and for years, nobody else bothers. Today, a dozen projects, some venture-funded, two acquired. So what was the actual struggle? Not the consensus. Not the Raft. The scariest bugs were in the ordinary SQL—queries that quietly assumed only one writer exists.</p>
+
+<p>This is the story of twelve years of distributed SQLite, and it's not the story you've heard. The story you've heard is about consensus protocols and quorums and leader election. The real story is about a single-machine assumption so deep in SQL's bones that we stopped seeing it.</p>
+
+<h2>Consensus was never the bottleneck</h2>
+
+<p>Raft is a solved problem. You take a log, you replicate it, a majority acknowledges, a partitioned minority refuses writes. That's the CP design rqlite chose in 2014 and never changed. It's the same library InfluxDB and etcd used. The consensus part? Done. Replaced once (from goraft to Hashicorp's Raft in early 2016), but the design decision that mattered most was made in week one.</p>
+
+<p>Every other feature—the HTTP API, the read-consistency levels, the snapshotting—followed from that one choice. It was the easy part. Here's the tell: when Litestream came along in 2021, it didn't bother with consensus at all. It just watched the WAL and streamed it to S3. No Raft, no quorum, no leader. And it was right. For most applications, you don't need a cluster; you need disaster recovery. Consensus is so easy that you can skip it entirely.</p>
+
+<h2>SQL's single-writer fantasy</h2>
+
+<p>Now the hard part. SQLite is a library. It runs inside your process. It assumes it is the only thing touching the database file. It assumes there is exactly one writer, and that writer is you, and you are not confused about that.</p>
+
+<p>Picture a query like <code>INSERT INTO t VALUES (1)</code>. On a single node, fine. Now replicate that write to three nodes via Raft. The leader applies it, the followers apply it. All good. But what about a query that reads the current value, increments it, and writes it back? On a single node, that's a transaction. In a replicated system, that read-modify-write has to go through the leader, and the leader has to serialize it with every other write. That's a throughput bottleneck, sure, but it's also a semantic one. What does <code>SELECT COUNT(*)</code> mean when the answer changes between nodes?</p>
+
+<p>SQL doesn't have a concept of "leader". It has <code>BEGIN</code> and <code>COMMIT</code>. It has isolation levels. It has the implicit assumption that there is one source of truth, and it's the file on disk in front of you. Every distributed database that speaks SQL has to decide what to do with that assumption. dqlite embedded the database in a C library; Turso forked SQLite itself to change the engine. cr-sqlite went AP, letting multiple writers diverge and merge with CRDTs. Each one is a different answer to the same question: how many SQL promises are you willing to break?</p>
+
+<h2>The replication is not the point</h2>
+
+<p>Here's the realization that hits you halfway through the decade: you are not maintaining a replicated database. You are maintaining a carefully curated list of SQL promises you had to break.</p>
+
+<p>You break <code>BEGIN IMMEDIATE</code> because there's no global lock. You break <code>PRAGMA foreign_keys</code> because the constraint check happens on the leader, and the follower doesn't know. You break <code>last_insert_rowid()</code> because it's per-connection, and your connections are now across a network. Each break is small, but each one is a footgun. The user writes a query that works perfectly on their laptop, and it silently does the wrong thing on the cluster. That's the real cost of distributed SQLite: not the consensus, not the replication, but the quiet un-keeping of promises.</p>
+
+<p>The metric that matters isn't p99 write latency. It's the number of SQL features you can keep intact. rqlite's answer was to be conservative: only the leader writes, read-consistency levels give you a choice between strong and eventual. Litestream's answer was to avoid the problem entirely: no cluster, just a WAL stream to S3. The consequence for you, the engineer: before you reach for a distributed database, ask what SQL promises you're willing to break. Because you will break them.</p>
+
+<h2>The gift: a better question</h2>
+
+<p>So what do you do with this? You stop asking "which distributed SQLite should I use?" and start asking "which SQL promises can I live without?" The answer usually is: most of them, if you structure your writes right. If you append-only, if you avoid cross-row transactions, if you treat the database as a log with a cache on top—you can get away with a lot.</p>
+
+<p>Litestream proved that most applications don't need a cluster at all. They need a recovery story. rqlite proved that if you do need a cluster, the consensus is the easy part, and the SQL compatibility is the tax you pay. Turso proved you can fork the engine to change the tax. cr-sqlite proved you can go AP and let the tax be eventual consistency.</p>
+
+<p>The final lesson is this: a distributed database is not a database that runs on many machines. It is a database that has learned to lie about what it is. The best you can do is choose which lies you tell.</p>
+
+<p>Twelve years in, the scariest bugs were never in Raft. They were in the queries we thought we understood.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://philipotoole.com/twelve-years-of-distributed-sqlite" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Twelve years of distributed SQLite</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲116</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://philipotoole.com/twelve-years-of-distributed-sqlite/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Twelve years of distributed SQLite — Philip O&#39;Toole</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://rqlite.io/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">rqlite: Replicating SQLite using Raft Consensus</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a><a href="https://litestream.io/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Litestream: Streaming SQLite Replication</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

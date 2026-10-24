@@ -1,5 +1,51 @@
 [
   {
+    "date": "2026-10-24",
+    "title": "Your distributed database is a liar. Choose which lies.",
+    "tags": [
+      "distributed-systems",
+      "sqlite",
+      "raft"
+    ],
+    "excerpt": "September 2014. A weekend. Philip O'Toole puts SQLite behind a Raft log, pushes it to GitHub, and for years, nobody else bothers. Today, a dozen projects, some venture-funded, two acquired. So what...",
+    "hn_refs": [
+      {
+        "title": "Twelve years of distributed SQLite",
+        "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite",
+        "points": 116
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "Twelve years of distributed SQLite — Philip O'Toole",
+        "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
+        "kind": "article"
+      },
+      {
+        "title": "rqlite: Replicating SQLite using Raft Consensus",
+        "url": "https://rqlite.io/",
+        "kind": "docs"
+      },
+      {
+        "title": "Litestream: Streaming SQLite Replication",
+        "url": "https://litestream.io/",
+        "kind": "docs"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "September 2014. A weekend. Philip O'Toole puts SQLite behind a Raft log, pushes it to GitHub, and for years, nobody else bothers. Today, a dozen projects,...",
+    "social_teasers": {
+      "linkedin": "Your distributed database is a liar. Choose which lies.\n\nSeptember 2014. A weekend. Philip O'Toole puts SQLite behind a Raft log, pushes it to GitHub, and for years, nobody else bothers. Today, a dozen projects,...\n\nhttps://hafs.dev/blog/2026-10-24.html\n\n#distributed-systems #sqlite #raft",
+      "x": "Your distributed database is a liar. Choose which lies.\nhttps://hafs.dev/blog/2026-10-24.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-24.html"
+  },
+  {
     "date": "2026-10-23",
     "title": "Your Resolver Is One Court Order From Lying to You",
     "tags": [
