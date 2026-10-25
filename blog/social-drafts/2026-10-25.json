@@ -1,0 +1,27 @@
+{
+  "share_description": "Somewhere along the way, a multi-billion-dollar industry quietly stopped asking what software could do and started asking only what it already does, faster....",
+  "social_teasers": {
+    "linkedin": "We didn't lose ambition; we engineered it out\n\nSomewhere along the way, a multi-billion-dollar industry quietly stopped asking what software could do and started asking only what it already does, faster....\n\nhttps://hafs.dev/blog/2026-10-25.html\n\n#ambition #softwareengineering #culture",
+    "x": "We didn't lose ambition; we engineered it out\nhttps://hafs.dev/blog/2026-10-25.html"
+  },
+  "url": "https://hafs.dev/blog/2026-10-25.html",
+  "title": "We didn't lose ambition; we engineered it out",
+  "tags": [
+    "ambition",
+    "software engineering",
+    "culture"
+  ],
+  "hn_refs": [
+    {
+      "title": "We should be more ambitious with the software we build",
+      "url": "https://danluu.com/ambitious/",
+      "points": 0
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
