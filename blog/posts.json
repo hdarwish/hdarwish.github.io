@@ -1,47 +1,22 @@
 [
   {
     "date": "2026-10-25",
-    "title": "We didn't lose ambition; we engineered it out",
+    "title": "The creative class isn't dying. It's splitting.",
     "tags": [
-      "ambition",
-      "software engineering",
-      "culture"
+      "AI",
+      "creative economy",
+      "labor",
+      "media",
+      "structural change"
     ],
-    "excerpt": "Somewhere along the way, a multi-billion-dollar industry quietly stopped asking what software could do and started asking only what it already does, faster. The interesting part isn't the...",
-    "hn_refs": [
-      {
-        "title": "We should be more ambitious with the software we build",
-        "url": "https://danluu.com/ambitious/",
-        "points": 0
-      }
-    ],
-    "further_reading": [
-      {
-        "title": "The Rise of Worse is Better",
-        "url": "https://dreamsongs.com/RiseOfWorseIsBetter.html",
-        "kind": "article"
-      },
-      {
-        "title": "Postgres: The Next Generation",
-        "url": "https://www.youtube.com/watch?v=JbH1pU8zH5o",
-        "kind": "talk"
-      },
-      {
-        "title": "Ambitious Software Projects",
-        "url": "https://www.pgbuildfarm.org/",
-        "kind": "article"
-      }
-    ],
-    "source_attribution": {
-      "source_id": "hacker_news",
-      "name": "Hacker News",
-      "tier": 1,
-      "trust_score": 1.0
-    },
-    "share_description": "Somewhere along the way, a multi-billion-dollar industry quietly stopped asking what software could do and started asking only what it already does, faster....",
+    "excerpt": "",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The creative class isn't dying. It's splitting.",
     "social_teasers": {
-      "linkedin": "We didn't lose ambition; we engineered it out\n\nSomewhere along the way, a multi-billion-dollar industry quietly stopped asking what software could do and started asking only what it already does, faster....\n\nhttps://hafs.dev/blog/2026-10-25.html\n\n#ambition #softwareengineering #culture",
-      "x": "We didn't lose ambition; we engineered it out\nhttps://hafs.dev/blog/2026-10-25.html"
+      "linkedin": "The creative class isn't dying. It's splitting.\n\nThe creative class isn't dying. It's splitting.\n\nhttps://hafs.dev/blog/2026-10-25.html\n\n#AI #creativeeconomy #labor",
+      "x": "The creative class isn't dying. It's splitting.\nhttps://hafs.dev/blog/2026-10-25.html"
     },
     "canonical_url": "https://hafs.dev/blog/2026-10-25.html"
   },

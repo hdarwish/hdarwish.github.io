@@ -3,222 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>We didn&#39;t lose ambition; we engineered it out - Hafs Ibrahim</title>
-    <meta name="description" content="Somewhere along the way, a multi-billion-dollar industry quietly stopped asking what software could do and started asking only what it already does, faster....">
-    <meta property="og:title" content="We didn&#39;t lose ambition; we engineered it out">
-    <meta property="og:description" content="Somewhere along the way, a multi-billion-dollar industry quietly stopped asking what software could do and started asking only what it already does, faster....">
+    <title>The creative class isn&#x27;t dying. It&#x27;s splitting. - Hafs Ibrahim</title>
+    <meta name="description" content="The creative class isn&#x27;t dying. It&#x27;s splitting.">
+    <meta property="og:title" content="The creative class isn&#x27;t dying. It&#x27;s splitting.">
+    <meta property="og:description" content="The creative class isn&#x27;t dying. It&#x27;s splitting.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://hafs.dev/blog/2026-10-25.html">
     <meta property="og:image" content="https://hafs.dev/og-blog.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="We didn&#39;t lose ambition; we engineered it out">
-    <meta name="twitter:description" content="Somewhere along the way, a multi-billion-dollar industry quietly stopped asking what software could do and started asking only what it already does, faster....">
+    <meta name="twitter:title" content="The creative class isn&#x27;t dying. It&#x27;s splitting.">
+    <meta name="twitter:description" content="The creative class isn&#x27;t dying. It&#x27;s splitting.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        .blog-hero {
-            padding: 8rem 0 3rem;
-            text-align: center;
-            position: relative;
+    body.v2-notebook {
+        background: #efe6d3;
+        color: #33291d;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
         }
-        .blog-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .blog-post-card {
-            background: var(--surface);
-            border: 1px solid rgba(59, 130, 246, 0.35);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .blog-post-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
-        }
-        .blog-post-date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-        .blog-post-title {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 1.5rem;
-        }
-        .blog-post-body {
-            font-family: 'Lora', Georgia, serif;
-        }
-        .blog-post-body p {
-            margin-bottom: 1.25rem;
-        }
-        .blog-post-body p:last-child {
-            margin-bottom: 0;
-        }
-        .blog-post-body code {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85em;
-            background: rgba(59, 130, 246, 0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: var(--accent-hover);
-        }
-        .blog-post-body pre {
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem 1.25rem;
-            overflow-x: auto;
-            margin: 1.25rem 0;
-        }
-        .blog-post-body pre code {
-            background: none;
-            padding: 0;
-            font-size: 0.85rem;
-            line-height: 1.6;
-        }
-        .blog-post-body strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-        .blog-post-body em {
-            color: var(--text);
-            font-style: italic;
-        }
-        .blog-post-body h3 {
-            font-family: 'Playfair Display', Georgia, serif;
-            color: var(--text);
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin: 1.75rem 0 0.75rem;
-        }
-        .post-nav {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 6rem 1.5rem 1rem;
-        }
-        .post-nav a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .post-nav a:hover {
-            color: var(--accent);
-        }
-        .post-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1rem 1.5rem 4rem;
-        }
-        @media (max-width: 768px) {
-            .blog-post-card {
-                padding: 1.25rem;
-            }
-            .blog-post-title {
-                font-size: 1.25rem;
-            }
-        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .notebook {
+        max-width: 68rem; margin: 0 auto; padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .notebook__grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    @media (min-width: 900px) {
+        .notebook__grid { grid-template-columns: 15rem minmax(0, 42rem); gap: 3rem; }
+    }
+    .notebook__rail { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    @media (min-width: 900px) {
+        .notebook__rail { position: sticky; top: 6rem; align-self: start; max-height: calc(100vh - 7rem); overflow: auto; }
+    }
+    .notebook__rail-title {
+        font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.16em;
+        color: #a06a3a; margin: 0 0 0.8rem;
+    }
+    .notebook__rail ol { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
+    .notebook__rail li { counter-increment: toc; margin: 0 0 0.55rem; line-height: 1.35; }
+    .notebook__rail a {
+        color: #5c4a34; text-decoration: none; font-size: 0.78rem;
+        display: flex; gap: 0.5rem; border-left: 2px solid #d8c7a8; padding-left: 0.7rem;
+    }
+    .notebook__rail a::before { content: counter(toc, decimal-leading-zero); color: #b5541f; }
+    .notebook__rail a:hover { color: #b5541f; border-left-color: #b5541f; }
+    .notebook__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.72rem;
+        letter-spacing: 0.14em; text-transform: uppercase; color: #a06a3a; margin: 0 0 0.8rem;
+    }
+    .notebook__title {
+        font-family: 'Playfair Display', Georgia, serif; font-weight: 700;
+        font-size: clamp(2rem, 4.5vw, 2.9rem); line-height: 1.1; color: #2a2013;
+        margin: 0 0 0.8rem; letter-spacing: -0.01em;
+    }
+    .notebook__deck { font-size: 1.2rem; font-style: italic; color: #6a5843; line-height: 1.5; margin: 0 0 1.6rem; }
+    .notebook__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2rem; }
+    .notebook__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.66rem;
+        padding: 3px 9px; border: 1px solid #d3c2a3; border-radius: 3px; color: #8a745a;
+    }
+    .notebook__premise {
+        border-left: 3px solid #b5541f; padding-left: 1.1rem; margin: 0 0 1.6rem;
+        font-size: 1.15rem; line-height: 1.7; color: #3a2e1f;
+    }
+    .notebook__spine { margin: 0 0 2.4rem; font-size: 1.05rem; line-height: 1.6; }
+    .notebook__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .notebook__section { margin: 0 0 2.8rem; scroll-margin-top: 6rem; }
+    .notebook__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.72rem;
+        letter-spacing: 0.1em; color: #a06a3a; margin-bottom: 0.5rem;
+    }
+    .notebook h2 {
+        font-family: 'Playfair Display', Georgia, serif; font-size: 1.7rem; font-weight: 700;
+        color: #2a2013; margin: 0 0 1rem; line-height: 1.18;
+    }
+    .notebook h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.18rem; color: #3a2e1f; margin: 1.6rem 0 0.6rem; }
+    .notebook p { font-size: 1.08rem; line-height: 1.8; margin: 0 0 1.2rem; }
+    .notebook ul, .notebook ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.75; }
+    .notebook li { margin-bottom: 0.45rem; }
+    .notebook code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.85em;
+        background: #e3d5bb; color: #8a3f14; padding: 1px 6px; border-radius: 4px;
+    }
+    /* tactile diagram card */
+    .notebook .dgm-figure .dgm {
+        --dgm-paper:#fdfaf2; --dgm-ink:#2a2013; --dgm-line:#c6b299;
+        --dgm-box:#f6efe0; --dgm-box-2:#eaddc4; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border: 1px solid #d8c7a8; border-radius: 6px;
+        padding: 1.1rem 1rem; box-shadow: 0 6px 18px rgba(120,90,50,0.18);
+    }
+    .notebook .dgm-figure figcaption { color: #5f4c34; }
+    .notebook__turn { border-top: 1px solid #d3c2a3; padding-top: 1.4rem; margin: 0 0 2rem; }
+    .notebook__turn .kicker, .notebook__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .notebook__turn p { font-size: 1.18rem; line-height: 1.7; color: #33291d; }
+    .notebook__aside { background: #f6efe0; border: 1px solid #d8c7a8; border-radius: 6px; padding: 1.1rem 1.2rem; margin: 0 0 2rem; }
+    .notebook__decision dl { margin: 0.6rem 0 0; }
+    .notebook__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .notebook__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .notebook__analogy .analogy__limit { color: #6a5843; }
+    .notebook__finish {
+        font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; line-height: 1.5;
+        color: #2a2013; border-top: 1px solid #d3c2a3; padding-top: 1.5rem; margin: 2.4rem 0;
+    }
+    .notebook__sources { border-top: 1px solid #d3c2a3; padding-top: 1.2rem; }
+    .notebook__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #75603f; margin: 0 0 0.9rem;
+    }
+    .notebook__sources ol { list-style: none; margin: 0; padding: 0; }
+    .notebook__sources li { display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem; }
+    .notebook__sources .num { font-family: 'JetBrains Mono', ui-monospace, monospace; color: #a8481a; flex-shrink: 0; }
+    .notebook__sources a { color: #4a3b28; text-decoration: underline; text-decoration-color: #bfa682; }
+    .notebook__sources a:hover { color: #a8481a; }
+    .notebook__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #6f5a3c; flex-shrink: 0;
+    }
     </style>
 </head>
-<body>
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../index.html#projects">Projects</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
-                <li><a href="../blog.html" class="active">Blog</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="post-nav">
-        <a href="../blog.html">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-            All Posts
-        </a>
+<body class="v2-notebook">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
     </div>
-
-    <main class="post-content">
-
-        <article class="blog-post-card" id="post-2026-10-25">
-            <div class="blog-post-date">October 25, 2026</div>
-            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">ambition</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">software engineering</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">culture</span></div>
-            <h2 class="blog-post-title">We didn&#39;t lose ambition; we engineered it out</h2>
-            <div class="blog-hero-image-wrapper" style="margin:-0.5rem 0 1.5rem;border-radius:10px;overflow:hidden;border:1px solid rgba(59, 130, 246, 0.2);box-shadow:0 2px 8px rgba(0, 0, 0, 0.3);"><img src="assets/2026-10-25-hero.png" alt="We didn&#39;t lose ambition; we engineered it out" style="width:100%;height:auto;max-height:240px;object-fit:cover;display:block;opacity:1;"/></div>
-            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Somewhere along the way, a multi-billion-dollar industry quietly stopped asking what software <em>could</em> do and started asking only what it already does, faster. The interesting part isn't the decline—it's that we watched it happen and called it maturity.</p>
-
-<p>We called it discipline. We called it "scoping." We called it "avoiding risk." But the software we build today is a fraction of what we could build, and the gap is not technical. The gap is cultural, and it is costing us real bugs, real performance, and real architectural knowledge.</p>
-
-<h2>The ambition we have normalized away</h2>
-
-<p>Take <a href="https://github.com/pgcentralfoundation/pgrust"><code>pgrust</code></a>. It's a rewrite of Postgres in Rust—not a toy, but a genuine attempt to build a database that is faster and safer. The project's test suite is thorough enough that it keeps uncovering <em>actual bugs in Postgres</em>: a numerical bug in SP-GiST, a format-cache bug in JSONPath, memory-safety issues in the dictionary loader.</p>
-
-<p>If <code>pgrust</code> never ships, the attempt alone improves Postgres. Every bug found is a patch to the original. That is not failure; it is a contribution. Yet when a project like this lands on a news aggregator, the reflex is to call it "vibeslop," because most rewrites are slop and nobody has time to check which one this is.</p>
-
-<p>Fair. But the reflex is not the problem. The problem is what the reflex does to the next person who was about to propose something ambitious.</p>
-
-<h2>The cost of "reasonable"</h2>
-
-<p>Dan Luu, in <a href="https://danluu.com/ambitious/">We should be more ambitious with the software we build</a>, points out something that should sting: with modern tooling, he built a regex engine, a fork of ripgrep, a faster Rust compiler, and more—all in a "low single-digit number of hours." For someone who says he "doesn't know anything about regexes, compilers, interpreters." Not a decade of toil. An afternoon.</p>
-
-<p>That is not an argument that everyone can do everything. It is an argument that the ceiling is much higher than our scoping rituals assume. The capability is there. The ambition is what we cut.</p>
-
-<h2>What "pragmatic" actually does</h2>
-
-<p>Picture a planning meeting. Someone proposes something genuinely ambitious—a rewrite, a new architecture, a leap. The room goes quiet. Someone says "we need to be pragmatic." The ticket is downsized. The ambition is scoped out. The meeting moves on.</p>
-
-<p>That's not discipline. That's fear dressed up as experience.</p>
-
-<p>Every "reasonable" scoping decision is a small act of pruning. Pruning is good for a tree—but a gardener who only prunes gets a bonsai, not a forest. The analogy breaks where precision genuinely is the goal; the point is that we rarely even let ourselves ask what the forest would look like. We have been pruning anyway, one meeting at a time, and calling it maturity.</p>
-
-<p>This is the machine. You have sat through the meeting that builds it. Probably many times.</p>
-
-<p>We didn't lose ambition. We engineered it out.</p>
-
-<p>And the cost is not just the projects we don't build. It is the bugs we don't find, the performance we don't unlock, the architectures we don't explore. It is the durable improvements to Postgres that only happen because someone was ambitious enough to attempt a rewrite in the first place.</p>
-
-<h2>Engineering it back in</h2>
-
-<p>The good news: the tools have changed. Direct I/O instead of the filesystem API is no longer absurd. A SOTA model running 10x faster? The bottleneck is not the model—it's the <em>ripgrep</em>, the <em>Rust compiler</em>, the <em>syscalls</em> around it. Those are doors, not a wall.</p>
-
-<p>So next time you catch yourself saying "that's not realistic," pause. Ask: is it impossible, or is it just outside the shape of what the last ten meetings have trained you to propose?</p>
-
-<p>Build the thing that feels slightly too ambitious. The bugs you'll find might be someone else's.</p></div>
-            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://danluu.com/ambitious/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">We should be more ambitious with the software we build</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲0</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://dreamsongs.com/RiseOfWorseIsBetter.html" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Rise of Worse is Better</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.youtube.com/watch?v=JbH1pU8zH5o" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Postgres: The Next Generation</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">TALK</span></a><a href="https://www.pgbuildfarm.org/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Ambitious Software Projects</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
-        </article>
-
+    <main>
+<article class="notebook" data-mode="deep_dive" id="post-2026-10-25"><div class="notebook__grid"><aside class="notebook__rail"><nav aria-label="Table of contents"><p class="notebook__rail-title">Contents</p><ol><li><a href="#sec-1-the-numbers-that-should-make-you">The numbers that should make you suspicious</a></li><li><a href="#sec-2-the-internet-already-did-this-on">The internet already did this once</a></li><li><a href="#sec-3-this-time-the-workers-are-alread">This time, the workers are already disposable</a></li><li><a href="#sec-4-the-question-that-would-actually">The question that would actually matter</a></li></ol></nav></aside><div class="notebook__main"><header><p class="notebook__date">October 25, 2026 · Deep dive</p><h1 class="notebook__title">The creative class isn&#x27;t dying. It&#x27;s splitting.</h1><p class="notebook__deck">Two hundred thousand creative jobs vanished in four years. But the real story isn&#x27;t AI — it&#x27;s that the industry is restructuring into a two-tier system of AI-augmented elites and disposable gig workers.</p></header><div class="notebook__tags"><span>AI</span><span>creative economy</span><span>labor</span><span>media</span><span>structural change</span></div><div class="notebook__premise"><p>The creative economy has always been a pyramid, not a ladder. But AI is not just eroding the base — it&#x27;s accelerating a split that was already underway: a thin layer of stars and studios who own the means of production, and a vast, replaceable workforce of gig workers who never had much leverage to begin with.</p></div><p class="notebook__spine"><span class="kicker">The distinction</span>The relevant distinction is not &#x27;AI vs. human&#x27; but &#x27;owners of the means of production vs. those who rent their labor to it.&#x27; The question &#x27;how much is AI?&#x27; obscures the structural shift in who captures the value.</p><section class="notebook__section" id="sec-1-the-numbers-that-should-make-you"><div class="notebook__section-index">01 / 04</div><h2>The numbers that should make you suspicious</h2><p>Two hundred thousand creative jobs lost in four years. Fifty thousand in the last year alone. The movie and sound recording sector — Hollywood — shed more than a hundred thousand jobs, nearly a third of its workforce, the worst stretch in thirty years. That&#x27;s the kind of collapse you&#x27;d expect from a recession. There is no recession.</p>
+<p>The obvious suspect is AI, and the media has been asking &#x27;how much is AI to blame?&#x27; for months. But the question is wrong. It assumes AI is a force that arrived from outside and started pushing people out of their jobs. The data tells a different, stranger story.</p>
+<p>Look at the split. Every digital subsector — publishing, broadcasting, graphic design, streaming — is losing jobs. But in-person entertainment is still growing. Live theater, concerts, museums, theme parks: fine. The job losses are concentrated in the industries that can be digitized and distributed at near-zero marginal cost.</p>
+<p>That&#x27;s not a coincidence. It&#x27;s a clue.</p></section><section class="notebook__section" id="sec-2-the-internet-already-did-this-on"><div class="notebook__section-index">02 / 04</div><h2>The internet already did this once</h2><p>To understand what&#x27;s happening now, you have to look at the first digital disruption. The source article reminds us: when Napster arrived, Metallica sued, won, and bankrupted the service. But they won the battle and lost the war. The internet made copying music trivial, and no lawsuit could put that genie back in the bottle.</p>
+<p>The result wasn&#x27;t the death of music. It was a massive transfer of value. The price of a single Metallica album in 2000 now buys you a month of access to nearly all human-made music. For consumers, this is a miracle. For musicians, it&#x27;s an economic catastrophe — streaming revenue has never come close to the CD-era paydays, even before adjusting for inflation.</p>
+<p>And that&#x27;s the key: <strong>the internet didn&#x27;t just make music cheaper. It changed what music was for.</strong> Music became a loss-leading advertisement for live shows, merchandise, and brand deals. The value didn&#x27;t disappear — it moved. And it moved away from the people who made the music and toward the platforms that distributed it.</p>
+<figure class="dgm-figure"><div class="dgm dgm--pipeline" data-diagram="pipeline" id="d20261025-dgm-1"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 842 128" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261025-dgm-1-d-t d20261025-dgm-1-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261025-dgm-1-d-t">The value chain after Napster</title><desc id="d20261025-dgm-1-d-d">The value chain shifts from artists selling records to platforms aggregating catalogs and artists monetizing attention through live shows and merch.</desc><rect x="16" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="100.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Artist creates</text><text x="100.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Music, video, words</text><line x1="184" y1="64.0" x2="222" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M230 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="230" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="314.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Platform aggregates</text><text x="314.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Spotify, YouTube, Netflix</text><line x1="398" y1="64.0" x2="436" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M444 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="444" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="528.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Consumer pays</text><text x="528.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Subscription, not per-unit</text><line x1="612" y1="64.0" x2="650" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M658 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="658" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="742.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Artist monetizes</text><text x="742.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Live, merch, brand deals</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 384" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261025-dgm-1-m-t d20261025-dgm-1-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261025-dgm-1-m-t">The value chain after Napster</title><desc id="d20261025-dgm-1-m-d">The value chain shifts from artists selling records to platforms aggregating catalogs and artists monetizing attention through live shows and merch.</desc><rect x="12" y="12" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="39.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Artist creates</text><text x="28" y="58.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Music, video, words</text><line x1="172.0" y1="72" x2="172.0" y2="104" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 112 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="112" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="139.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Platform aggregates</text><text x="28" y="158.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Spotify, YouTube, Netflix</text><line x1="172.0" y1="172" x2="172.0" y2="204" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 212 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="212" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="239.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Consumer pays</text><text x="28" y="258.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Subscription, not per-unit</text><line x1="172.0" y1="272" x2="172.0" y2="304" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 312 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="312" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="339.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Artist monetizes</text><text x="28" y="358.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Live, merch, brand deals</text></svg></div></div><figcaption>The first digital transition: value moves from artists to platforms.</figcaption></figure></section><section class="notebook__section" id="sec-3-this-time-the-workers-are-alread"><div class="notebook__section-index">03 / 04</div><h2>This time, the workers are already disposable</h2><p>Now look at the current creative economy. It&#x27;s not a ladder where you start at the bottom and climb to the top. It&#x27;s a pyramid with a very thin top — a few thousand people who own IP, studios, and platforms — and a very wide base of gig workers, freelancers, and contract staff who have always been treated as replaceable.</p>
+<p>The source article notes that media firms are &#x27;decidedly coy&#x27; about their AI use, both to avoid public backlash and to protect their copyrights. But the real tell is what they&#x27;re doing: they&#x27;re not laying off the people who own the ideas. They&#x27;re laying off the people who execute them — the editors, the sound engineers, the junior designers, the staff writers.</p>
+<p>AI didn&#x27;t cause this. It just made it cheaper to do what the industry was already doing: treating creative labor as a cost to be minimized, not a value to be invested in. The two-tier system is the natural endpoint of a business model that has been squeezing the middle for decades.</p>
+<figure class="dgm-figure"><div class="dgm dgm--layered_system" data-diagram="layered_system" id="d20261025-dgm-2"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 640 158" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261025-dgm-2-d-t d20261025-dgm-2-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261025-dgm-2-d-t">The two-tier creative class</title><desc id="d20261025-dgm-2-d-d">A thin layer of IP owners and stars sits above a vast base of gig workers and contractors who are now replaceable by AI.</desc><rect x="16" y="16" width="608" height="58" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="50.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">IP owners &amp; stars</text><text x="606" y="50.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">Studios, platforms, a few thousan…</text><rect x="16" y="84" width="608" height="58" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="118.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">The gig base</text><text x="606" y="118.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">Freelancers, contractors, staff —…</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 166" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261025-dgm-2-m-t d20261025-dgm-2-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261025-dgm-2-m-t">The two-tier creative class</title><desc id="d20261025-dgm-2-m-d">A thin layer of IP owners and stars sits above a vast base of gig workers and contractors who are now replaceable by AI.</desc><rect x="12" y="12" width="320" height="66" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="42.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">IP owners &amp; stars</text><text x="28" y="61.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Studios, platforms, a few thousan…</text><rect x="12" y="88" width="320" height="66" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="118.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">The gig base</text><text x="28" y="137.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Freelancers, contractors, staff —…</text></svg></div></div><figcaption>The pyramid was already steep. AI just made the base cheaper to replace.</figcaption></figure></section><section class="notebook__section" id="sec-4-the-question-that-would-actually"><div class="notebook__section-index">04 / 04</div><h2>The question that would actually matter</h2><p>The media keeps asking &#x27;how much is AI to blame?&#x27; because it&#x27;s a clean, quantifiable question. But it&#x27;s the wrong one. The right question is: <strong>who is capturing the value that AI creates?</strong></p>
+<p>When a studio uses AI to generate a script, the value doesn&#x27;t vanish. It flows to the studio that owns the output. When a platform uses AI to recommend content, the value flows to the platform. The workers who used to do that work are not the ones who benefit.</p>
+<p>The source article&#x27;s own framing is telling: it asks &#x27;Can the Arts Business Model Survive?&#x27; But the business model is surviving just fine. Hollywood is still making billions. The top earners are making more than ever. What&#x27;s dying is the middle — the staff jobs, the stable careers, the path from gig to tenure.</p>
+<p>That&#x27;s not a technology problem. It&#x27;s a power problem.</p></section><div class="notebook__turn"><span class="kicker">The turn</span><p>The real story isn&#x27;t that AI is stealing jobs. It&#x27;s that the creative class was already being restructured into a two-tier system — a thin layer of AI-augmented elites who own the means of production, and a disposable gig workforce that has never had much leverage. AI didn&#x27;t create that split. It just made it cheaper to accelerate it.</p></div><div class="notebook__aside notebook__analogy"><p><span class="kicker">Analogy</span> The creative economy is like a farm that used to need a hundred field hands. The tractor didn&#x27;t kill the farm — it just meant the farm needed ten people who owned tractors and ninety people who owned nothing.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> The analogy breaks because a tractor is a tool anyone can buy. AI is a tool that is owned by the platforms that deploy it, and the &#x27;field hands&#x27; don&#x27;t get to buy the AI — they get to rent it from the same people who are replacing them.</p></div><div class="notebook__aside notebook__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You are a creative professional watching your industry shed jobs and wondering if you&#x27;re next.</dd><dt>Prefer</dt><dd>Ask who owns the output. Invest in ownership — IP, audience, a distinctive voice — not just skill.</dd><dt>Avoid</dt><dd>The trap is to keep optimizing for employability within a system that is actively devaluing your labor. &#x27;Learn AI tools&#x27; is not a strategy; it&#x27;s a survival tactic.</dd></dl></div><p class="notebook__finish">The question isn&#x27;t &#x27;how much is AI to blame?&#x27; It&#x27;s &#x27;who gets to own the machine?&#x27; Answer that, and you&#x27;ll know what the creative class looks like in ten years.</p><footer class="notebook__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class" target="_blank" rel="noopener">AI and the Fall? of the Creative Class</a><span class="kind">ARTICLE</span></li></ol></footer></div></div></article>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>Built by Hafs Ibrahim</p>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
 </body>
 </html>
