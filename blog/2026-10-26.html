@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your open tabs are actively decaying - Hafs Ibrahim</title>
+    <meta name="description" content="The Neglect Clock
+Your browser isn’t running out of memory; it’s running out of your attention, one forgotten tab at a time. Charlie Gerard noticed this...">
+    <meta property="og:title" content="Your open tabs are actively decaying">
+    <meta property="og:description" content="The Neglect Clock
+Your browser isn’t running out of memory; it’s running out of your attention, one forgotten tab at a time. Charlie Gerard noticed this...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-26.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your open tabs are actively decaying">
+    <meta name="twitter:description" content="The Neglect Clock
+Your browser isn’t running out of memory; it’s running out of your attention, one forgotten tab at a time. Charlie Gerard noticed this...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-10-26">
+            <div class="blog-post-date">October 26, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">cognitive science</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">productivity</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">browser extensions</span></div>
+            <h2 class="blog-post-title">Your open tabs are actively decaying</h2>
+            
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><h2>The Neglect Clock</h2>
+<p>Your browser isn’t running out of memory; it’s running out of your attention, one forgotten tab at a time. Charlie Gerard noticed this while playing with the word “overgrowth.” He thought of apocalypse movies, where nature reclaims abandoned buildings. He looked at his browser. He saw the same thing.</p>
+
+<p>He built a Chrome extension called Overgrown. It does one thing: it makes the decay visible.</p>
+
+<h2>Active Decay, Not Passive Storage</h2>
+<p>We treat open tabs like bookmarks. We assume they are static, frozen in time, waiting for us to return. This is a lie. A tab is not a file on a disk. It is a living process. When you open a page, JavaScript executes. Timers fire. Network requests hang in the air. The DOM mutates. The tab is not “saved”; it is “running.”</p>
+
+<p>Gerard’s extension imposes a “neglect clock.” It runs while the tab is out of view. It stops while you look at it. The longer the tab is neglected, the more plants grow over it. From the edges, toward the middle. This is not a metaphor in the code; it is a literal overlay of SVG vines. But the mechanism it models is cognitive, not just visual.</p>
+
+<p>Here is the key: once a tab is more than 5% overgrown, the page behind the vines is walled off. You can scroll, but you can’t click, select, or drag anything. To free it, you must slash through the vines by dragging your mouse. You have to get the overgrowth down to 5% or less before the last bits fall off. If you abandon the tab again, the jungle starts growing again.</p>
+
+<p>This is the mechanism. Neglect is not neutral. Neglect is an active process that consumes your ability to re-enter the context of that tab.</p>
+
+<h2>The Tax on Working Memory</h2>
+<p>Why does this matter? Because your brain does not treat open tabs as closed files. It treats them as open loops.</p>
+
+<p>Psychologists call this the Zeigarnik effect: the mind remembers uncompleted or interrupted tasks better than completed ones. An open tab is an interrupted task. It is a thread of attention left dangling in the air. Every time you switch to another tab, you are paying a context-switching cost. But worse, you are carrying the weight of the open tab with you. It is a persistent tax on your working memory.</p>
+
+<p>Picture a service that logs an error every time a request times out, but never clears the log. The error count grows. The service still runs, but the metric is screaming. Your brain is that service. Every open tab is an error log entry that never gets cleared. The metric is your cognitive load. It is rising.</p>
+
+<p>Gerard admits he currently has 22 tabs open. Fourteen of them are completely overgrown. He doesn’t know what they are. He can’t click them. They are just… there. Rotting.</p>
+
+<h2>The Turn</h2>
+<p>The moment you realize that every open tab is a small, persistent tax on your working memory, not just a visual annoyance.</p>
+
+<p>It is not a clutter problem. It is a decay problem.</p>
+
+<h2>Slash the Vines</h2>
+<p>The solution is not better memory management. It is not a plugin that organizes your tabs. It is not a “read later” service that you never read.</p>
+
+<p>The solution is to acknowledge that “abandoned” is a state of active decay. If you are not going to use the tab, close it. If you are going to use it, use it now. Do not let it rot.</p>
+
+<p>Gerard’s extension forces this. You cannot ignore the tab. You have to slash it. You have to pay the cost of re-entering it, or you have to pay the cost of closing it. There is no third option. There is no “maybe later.”</p>
+
+<p>This is the portable principle: make the decay visible. If your tools do not make the cost of neglect visible, you will not see it. You will just keep opening tabs, thinking they are saved, when they are actually rotting. Your attention is not a storage medium. It is a garden. And gardens require tending.</p>
+
+<p>Slash the vines. Close the tab. Or read it. But do not let it overgrow.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://charliegerard.dev/blog/overgrown-extension" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Overgrown, when plants invade your abandoned tabs</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲221</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://en.wikipedia.org/wiki/Zeigarnik_effect" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Zeigarnik Effect</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.pearson.com/en-us/subject-catalog/p/attention-and-effort/P200000003168" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Attention and Effort</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
