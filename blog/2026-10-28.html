@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero-config is not zero-risk - Hafs Ibrahim</title>
+    <meta name="description" content="Zero-config is not zero-risk">
+    <meta property="og:title" content="Zero-config is not zero-risk">
+    <meta property="og:description" content="Zero-config is not zero-risk">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-28.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Zero-config is not zero-risk">
+    <meta name="twitter:description" content="Zero-config is not zero-risk">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
+    </style>
+</head>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
+    </div>
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-10-28">
+<header class="seminar__head"><p class="seminar__date">October 28, 2026</p><h1 class="seminar__title">Zero-config is not zero-risk</h1><p class="seminar__deck">Tailscale’s SSH flaw isn’t about a bad hacker. It’s about what happens when we mistake the absence of a configuration screen for the absence of a security model.</p></header>
+<div class="seminar__tags"><span>security</span><span>abstraction</span><span>zero-config</span><span>operational-risk</span></div>
+<div class="seminar__premise"><p>When a tool removes the need to configure security, we stop thinking about it. The abstraction doesn’t remove the risk; it removes our awareness of it.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>The difference between a system that is *configured to be secure* and a system that is *assumed to be secure* because it is easy to use.</p>
+<section class="seminar__section" id="sec-1-the-hole-in-the-magic"><div class="seminar__section-index">01</div><h2>The hole in the magic</h2><p>Tailscale SSH just admitted a flaw. Not a trivial one. In some circumstances, a user already authorized to connect could perform actions beyond their configured permissions, potentially gaining elevated privileges. This is a privilege escalation vector in a tool marketed as the easy, safe way to access infrastructure.
+
+The immediate reaction is to check your configs. But that misses the point. You didn’t misconfigure this. The tool was supposed to handle it for you. That is precisely the problem.</p></section>
+<section class="seminar__section" id="sec-2-what-secure-by-default-actually-"><div class="seminar__section-index">02</div><h2>What &#x27;secure by default&#x27; actually means</h2><p>&quot;Secure by default&quot; is a marketing phrase that does real work in our minds. It tells us: *you don’t need to think about this.* And because Tailscale is built on WireGuard, a well-regarded protocol, and because the setup is genuinely frictionless, we extend that trust to every layer above it. We assume that if the tunnel is encrypted and the identity is verified, the rest—permissions, forwarding, privilege boundaries—must be similarly airtight.
+
+But security is not a monolith. It is a stack of assumptions, each one load-bearing. When you remove the configuration step, you don’t remove the attack surface. You just make it invisible to the person who would have noticed it. The mechanism here is simple: privilege escalation happens because the boundary between &quot;authenticated user&quot; and &quot;authorized action&quot; is not as rigid as the UI suggests. The metric is the gap between what the user thinks they can do and what the system actually allows. The consequence is that your least-privileged user is now, in practice, more privileged than you intended.</p>
+<figure class="dgm-figure"><div class="dgm dgm--layered_system" data-diagram="layered_system" id="d20261028-dgm-1"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 640 294" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261028-dgm-1-d-t d20261028-dgm-1-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261028-dgm-1-d-t">Tailscale SSH Trust Layers</title><desc id="d20261028-dgm-1-d-d">Each layer depends on the one below; the top layer (permissions) is hidden by the simplicity of the bottom layers</desc><rect x="16" y="16" width="608" height="58" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="50.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">User Trust</text><text x="606" y="50.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">"It’s Tailscale, it’s safe" — no…</text><rect x="16" y="84" width="608" height="58" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="118.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Protocol Trust</text><text x="606" y="118.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">WireGuard encryption — well-audit…</text><rect x="16" y="152" width="608" height="58" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="186.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Identity Trust</text><text x="606" y="186.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">AuthN is solid — but AuthZ is whe…</text><rect x="16" y="220" width="608" height="58" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="254.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Permission Boundary</text><text x="606" y="254.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">The actual enforcement point — of…</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 318" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261028-dgm-1-m-t d20261028-dgm-1-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261028-dgm-1-m-t">Tailscale SSH Trust Layers</title><desc id="d20261028-dgm-1-m-d">Each layer depends on the one below; the top layer (permissions) is hidden by the simplicity of the bottom layers</desc><rect x="12" y="12" width="320" height="66" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="42.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">User Trust</text><text x="28" y="61.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">"It’s Tailscale, it’s safe" — no…</text><rect x="12" y="88" width="320" height="66" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="118.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Protocol Trust</text><text x="28" y="137.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">WireGuard encryption — well-audit…</text><rect x="12" y="164" width="320" height="66" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="194.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Identity Trust</text><text x="28" y="213.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">AuthN is solid — but AuthZ is whe…</text><rect x="12" y="240" width="320" height="66" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="270.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Permission Boundary</text><text x="28" y="289.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">The actual enforcement point — of…</text></svg></div></div><figcaption>The trust stack: where abstraction hides the seam</figcaption></figure></section>
+<section class="seminar__section" id="sec-3-the-silent-assumption"><div class="seminar__section-index">03</div><h2>The silent assumption</h2><p>Here is the uncomfortable truth: the most dangerous part of this incident is not the vulnerability. It is the fact that it took a public investigation to surface it. Not an internal audit. Not a red team. A public report, followed by a public update.
+
+Why? Because the tool’s design encouraged a specific failure mode: *operational amnesia.* When you don’t configure SSH, you don’t think about SSH. You don’t review forwarding rules. You don’t question what &quot;authorized to connect&quot; actually entails. The abstraction did its job too well. It made you forget that there was a thing to protect.</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>You have built this machine. Probably several times. Every time you chose a &quot;zero-config&quot; solution over a &quot;configure-it-yourself&quot; one, you traded visibility for convenience. And every time, you assumed the trade was fair. It isn’t. The convenience is real. The risk is just quieter.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> It’s like a house with a locked front door but no locks on the windows. The front door is the WireGuard tunnel—impressive, well-built, and giving you confidence. The windows are the permission boundaries. If you never look at them because you’re admiring the front door, you don’t know they’re unlocked.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> This breaks down because in software, the &quot;windows&quot; aren’t just absent locks—they’re sometimes actively open by default for usability. The analogy implies negligence; the reality is often intentional design trade-offs that become visible only under adversarial pressure.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You adopt a tool that promises security through simplicity, especially one that handles identity or access control</dd><dt>Prefer</dt><dd>Assume the abstraction has seams. Ask: what does &quot;authorized&quot; actually mean here? What can happen after authentication? Review the permission model explicitly, even if the UI doesn’t prompt you to.</dd><dt>Avoid</dt><dd>Letting the absence of a configuration screen become a proxy for the absence of risk. That is not security. That is silence.</dd></dl></div>
+<p class="seminar__finish">The next time a tool says &quot;secure by default,&quot; ask yourself: what is it defaulting? And who is looking at the windows?</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://tailscale.com/ssh-investigation-update" target="_blank" rel="noopener">Tailscale SSH: Investigation and remediation update</a><span class="kind">ARTICLE</span></li></ol></footer>
+</article>
+    </main>
+</body>
+</html>
