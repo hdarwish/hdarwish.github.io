@@ -30,9 +30,13 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-// Observe elements for animation
+// Observe elements for animation. Add .fade-in AND an initial hidden state in
+// the same pass so the element is never left permanently invisible if the
+// observer or a later script fails (the v2 stylesheet only hides .fade-in
+// when it also carries .pre, so a failed add('pre') is safe).
 document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .about-text, .contact-box').forEach(el => {
-    el.classList.add('fade-in');
+    el.classList.add('fade-in', 'pre');
+    requestAnimationFrame(() => el.classList.remove('pre'));
     observer.observe(el);
 });
 
@@ -221,8 +225,18 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
     }
 })();
 
-// Theme cycle — single button that rotates through themes
+// Theme cycle — single button that rotates through themes.
+//
+// v2 portfolio themes (swiss/paper/blueprint/seminar) are owned by the
+// inline switcher on index.html, which persists under the 'portfolio-theme'
+// key and re-renders the nav button from there. To keep the two from
+// fighting over data-theme, this block only acts on pages that still use the
+// legacy single-button cycler (i.e. pages WITHOUT the v2 switcher). On the
+// restyled index.html the switcher has already set data-theme, so we skip.
 (function() {
+    // If the v2 switcher is present, it owns the theme — do nothing.
+    if (document.querySelector('.thm') || window.__setTheme) return;
+
     var themes = [
         { id: 'dark',  icon: '🌑', name: 'dark' },
         { id: 'light', icon: '🌞', name: 'light' },
@@ -233,6 +247,7 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
 
     var saved = localStorage.getItem('theme') || 'dark';
     var idx = Math.max(0, themes.findIndex(function(t) { return t.id === saved; }));
+    if (idx === -1) idx = 0;
     document.documentElement.setAttribute('data-theme', themes[idx].id);
 
     var btn = document.getElementById('theme-cycle');
@@ -242,8 +257,8 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
     var nameEl = btn.querySelector('.theme-name');
 
     function update() {
-        iconEl.textContent = themes[idx].icon;
-        nameEl.textContent = themes[idx].name;
+        if (iconEl) iconEl.textContent = themes[idx].icon;
+        if (nameEl) nameEl.textContent = themes[idx].name;
     }
 
     update();

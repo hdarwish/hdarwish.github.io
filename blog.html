@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,187 +18,200 @@
     <meta name="twitter:image" content="https://hafs.dev/og-blog.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="v2.css">
     <style>
-        .blog-hero {
-            padding: 8rem 0 3rem;
-            text-align: center;
-            position: relative;
-        }
-        .blog-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .blog-hero h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 0.75rem;
-        }
-        .blog-hero p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 1.5rem;
-        }
-        .back-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 10px 24px;
-            border-radius: 8px;
-            background: transparent;
-            color: var(--text);
-            border: 1px solid var(--border);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 500;
-            font-family: var(--font);
-            transition: all 0.25s ease;
-            cursor: pointer;
-        }
-        .back-btn:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.1);
-        }
-        .blog-posts {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem 2rem;
-        }
-        .blog-card {
-            display: block;
-            background: var(--surface);
-            border: 1px solid rgba(59, 130, 246, 0.35);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-            transition: border-color 0.3s, transform 0.2s, box-shadow 0.2s;
-            text-decoration: none;
-            color: inherit;
-        }
-        .blog-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
-        }
-        .blog-card-date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-        .blog-card-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .blog-card-tag {
-            font-size: 0.7rem;
-            font-family: 'JetBrains Mono', monospace;
-            padding: 3px 10px;
-            border-radius: 20px;
-            background: var(--accent-glow);
-            color: var(--accent-hover);
-        }
-        .blog-card-title {
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 0.75rem;
-            line-height: 1.3;
-        }
-        .blog-card-excerpt {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-        .blog-card-read {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--accent);
-            transition: gap 0.2s;
-        }
-        .blog-card:hover .blog-card-read {
-            gap: 0.7rem;
-        }
+    /* ============ v2 blog index — editorial index, notebook idiom ============
+       Consumes the shared v2 tokens from v2.css. This is the index to the
+       journal: a single editorial hero, then the post list as notebook cards. */
 
-        /* Pagination */
-        .blog-pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 0.75rem;
-            padding: 2rem 1.5rem 4rem;
-            max-width: 800px;
-            margin: 0 auto;
+    /* -- Nav (paper) ---------------------------------------------------- */
+    .nav {
+        position: sticky; top: 0; z-index: 40;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+        max-width: var(--max-w); margin: 0 auto; padding: 0 1.25rem;
+        height: 3.4rem; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo {
+        font-family: var(--font-display); font-weight: 700; font-size: 1.1rem;
+        color: var(--ink); text-decoration: none; letter-spacing: -0.01em;
+    }
+    .nav-logo .dot { color: var(--accent); }
+    .nav-links { display: flex; align-items: center; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+    .nav-links a {
+        font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase;
+        letter-spacing: 0.12em; color: var(--ink-soft); text-decoration: none;
+        padding: 0.3rem 0; border-bottom: 2px solid transparent; transition: color 0.2s, border-color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a.active { color: var(--accent); border-bottom-color: var(--accent); }
+    .nav-toggle {
+        display: none; background: none; border: 0; cursor: pointer; padding: 0.5rem;
+        flex-direction: column; gap: 5px;
+    }
+    .nav-toggle span {
+        display: block; width: 22px; height: 2px; background: var(--ink);
+        transition: transform 0.25s ease, opacity 0.2s ease;
+    }
+    @media (max-width: 760px) {
+        .nav-toggle { display: flex; }
+        .nav-links {
+            position: fixed; inset: 3.4rem 0 auto 0; flex-direction: column; align-items: flex-start;
+            gap: 0; background: var(--bg); border-bottom: 1px solid var(--line);
+            padding: 0.5rem 1.25rem 1rem; transform: translateY(-8px); opacity: 0;
+            pointer-events: none; transition: transform 0.25s ease, opacity 0.2s ease;
         }
-        .blog-pagination button {
-            padding: 8px 20px;
-            border-radius: 8px;
-            background: var(--surface);
-            color: var(--text);
-            border: 1px solid var(--border);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .blog-pagination button:hover:not(:disabled) {
-            border-color: var(--accent);
-            color: var(--accent);
-        }
-        .blog-pagination button:disabled {
-            opacity: 0.3;
-            cursor: not-allowed;
-        }
-        .blog-pagination .page-info {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--text-muted);
-        }
+        .nav-links.open { transform: translateY(0); opacity: 1; pointer-events: auto; }
+        .nav-links li { width: 100%; }
+        .nav-links a { display: block; padding: 0.8rem 0; font-size: 0.82rem; border-bottom: 1px solid var(--line); }
+        .nav-links a.active { border-bottom-color: var(--line); color: var(--accent); }
+    }
 
-        .no-posts {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: var(--text-muted);
-        }
-        .no-posts p {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
+    /* -- Hero ----------------------------------------------------------- */
+    .journal-hero {
+        max-width: var(--max-w); margin: 0 auto; padding: 4.5rem 1.25rem 2.5rem;
+    }
+    .journal-hero__kicker { margin-bottom: 1.1rem; }
+    .journal-hero__title {
+        font-family: var(--font-display); font-weight: 700;
+        font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.06; letter-spacing: -0.015em;
+        color: var(--ink-strong); margin: 0 0 1rem;
+    }
+    .journal-hero__deck {
+        font-family: var(--font-body); font-size: 1.18rem; font-style: italic;
+        color: var(--ink-soft); line-height: 1.55; max-width: 40rem; margin: 0 0 1.8rem;
+    }
+    .journal-hero__meta {
+        display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;
+        font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em;
+        text-transform: uppercase; color: var(--ink-faint);
+    }
+    .journal-hero__meta .count { color: var(--accent); }
+    .journal-hero__meta .sep { opacity: 0.5; }
+    .journal-hero__meta a { color: var(--ink-soft); text-decoration: none; }
+    .journal-hero__meta a:hover { color: var(--accent); }
 
-        @media (max-width: 768px) {
-            .blog-card {
-                padding: 1.25rem;
-            }
-            .blog-card-title {
-                font-size: 1.15rem;
-            }
+    /* -- Post list (notebook cards) ------------------------------------ */
+    .journal {
+        max-width: var(--max-w); margin: 0 auto; padding: 0 1.25rem 4rem;
+        border-top: 1px solid var(--line);
+    }
+    .journal__section-label {
+        display: flex; align-items: baseline; gap: 0.7rem;
+        padding: 2rem 0 0.4rem;
+    }
+    .journal__section-index {
+        font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em;
+        color: var(--kicker);
+    }
+    .journal__section-label h2 {
+        font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+        text-transform: uppercase; letter-spacing: 0.14em; color: var(--ink-soft); margin: 0;
+    }
+    .post-list { list-style: none; margin: 0; padding: 0; }
+    .post-card {
+        display: block; text-decoration: none; color: inherit;
+        padding: 1.6rem 0.5rem 1.6rem 0; border-bottom: 1px solid var(--line);
+        transition: background-color 0.25s ease, padding-left 0.25s ease;
+    }
+    .post-card:hover { background: color-mix(in srgb, var(--accent-soft) 55%, transparent); padding-left: 0.9rem; }
+    .post-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    @media (min-width: 820px) {
+        .post-card {
+            display: grid; grid-template-columns: 9.5rem 1fr auto; gap: 1.6rem; align-items: start;
         }
+    }
+    .post-card__date {
+        font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em;
+        text-transform: uppercase; color: var(--kicker);
+    }
+    @media (min-width: 820px) { .post-card__date { padding-top: 0.45rem; } }
+    .post-card__title {
+        font-family: var(--font-display); font-weight: 700;
+        font-size: clamp(1.3rem, 2.4vw, 1.7rem); line-height: 1.18; letter-spacing: -0.01em;
+        color: var(--ink-strong); margin: 0 0 0.5rem; transition: color 0.2s ease;
+    }
+    .post-card:hover .post-card__title { color: var(--accent); }
+    .post-card__deck {
+        font-family: var(--font-body); font-size: 1rem; color: var(--ink-soft);
+        line-height: 1.6; margin: 0 0 0.7rem;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .post-card__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .post-card__tags span {
+        font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.04em;
+        padding: 2px 8px; border: 1px solid var(--line); border-radius: 3px;
+        color: var(--ink-faint); background: var(--card-bg);
+    }
+    .post-card__read {
+        font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em;
+        color: var(--accent); padding-top: 0.5rem; white-space: nowrap;
+        display: inline-flex; align-items: center; gap: 0.4rem;
+        opacity: 0; transform: translateX(-4px); transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .post-card:hover .post-card__read, .post-card:focus-visible .post-card__read { opacity: 1; transform: none; }
+    @media (max-width: 819px) {
+        .post-card { padding-left: 0.5rem; padding-right: 0.5rem; }
+        .post-card:hover { padding-left: 0.7rem; }
+        .post-card__read { margin-top: 0.8rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        .post-card__read { opacity: 1; transform: none; }
+    }
+
+    /* -- Pagination (mono) --------------------------------------------- */
+    .journal-pagination {
+        display: flex; justify-content: center; align-items: center; gap: 1rem;
+        padding: 2rem 1.5rem 1rem; max-width: var(--max-w); margin: 0 auto;
+    }
+    .journal-pagination[hidden] { display: none; }
+    .journal-pagination button {
+        font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+        padding: 0.55rem 1.2rem; background: transparent; color: var(--ink-soft);
+        border: 1px solid var(--line-strong); border-radius: 4px; cursor: pointer;
+        transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+    }
+    .journal-pagination button:hover:not(:disabled) {
+        color: var(--accent); border-color: var(--accent); background: var(--accent-soft);
+    }
+    .journal-pagination button:disabled { opacity: 0.35; cursor: not-allowed; }
+    .journal-pagination .page-info {
+        font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.1em; color: var(--ink-faint);
+    }
+
+    /* -- No posts ------------------------------------------------------- */
+    .no-posts { text-align: center; padding: 4rem 2rem; color: var(--ink-soft); }
+    .no-posts p { font-family: var(--font-body); font-size: 1.1rem; margin: 0 0 0.4rem; }
+    .no-posts span { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-faint); }
+
+    /* -- Footer --------------------------------------------------------- */
+    .journal-footer {
+        border-top: 1px solid var(--line);
+        max-width: var(--max-w); margin: 0 auto; padding: 2rem 1.25rem 3rem;
+        display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.8rem;
+        font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em;
+        text-transform: uppercase; color: var(--ink-faint);
+    }
+    .journal-footer a { color: inherit; text-decoration: none; }
+    .journal-footer a:hover { color: var(--accent); }
     </style>
+    <script>document.documentElement.classList.remove('no-js');</script>
 </head>
-<body>
+<body class="v2-notebook">
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo">H<span class="accent">.</span>I</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+            <a href="index.html" class="nav-logo">H<span class="dot">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
             <ul class="nav-links" id="nav-links">
@@ -212,18 +225,28 @@
         </div>
     </nav>
 
-    <header class="blog-hero">
-        <div class="container">
-            <h1>Daily Insights<span class="accent">.</span></h1>
-            <p>Curated tech knowledge and interesting discussions from across the web</p>
-            <a href="index.html" class="back-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-                Back to Portfolio
-            </a>
+    <header class="journal-hero">
+        <p class="kicker journal-hero__kicker">The Journal — Daily Insights</p>
+        <h1 class="journal-hero__title">Notes on AI, engineering &amp; systems</h1>
+        <p class="journal-hero__deck">Curated knowledge and the occasional unhinged opinion on software architecture — written for the people who build the thing.</p>
+        <div class="journal-hero__meta">
+            <span><span class="count" id="post-count">—</span> entries</span>
+            <span class="sep">/</span>
+            <a href="index.html">← Back to portfolio</a>
         </div>
     </header>
 
-    <main class="blog-posts" id="blog-posts">
+    <main class="journal" id="blog-posts">
+        <div class="journal__section-label" id="section-label" hidden>
+            <span class="journal__section-index" id="section-index">01 / 01</span>
+            <h2>Latest entries</h2>
+        </div>
+        <ol class="post-list" id="post-list">
+            <li class="no-posts" id="loading">
+                <p>Loading the journal…</p>
+                <span>this should be a second</span>
+            </li>
+        </ol>
         <noscript>
             <div class="no-posts">
                 <p>JavaScript is required to load blog posts.</p>
@@ -231,100 +254,137 @@
         </noscript>
     </main>
 
-    <div class="blog-pagination" id="blog-pagination" style="display:none;">
-        <button id="prev-btn" onclick="changePage(-1)">← Newer</button>
+    <div class="journal-pagination" id="blog-pagination" hidden>
+        <button id="prev-btn" onclick="changePage(-1)" type="button">← Newer</button>
         <span class="page-info" id="page-info"></span>
-        <button id="next-btn" onclick="changePage(1)">Older →</button>
+        <button id="next-btn" onclick="changePage(1)" type="button">Older →</button>
     </div>
 
-    <footer class="footer">
-        <div class="container">
-            <p>Built by Hafs Ibrahim</p>
-        </div>
+    <footer class="journal-footer">
+        <span>Built by Hafs Ibrahim</span>
+        <a href="index.html">Portfolio ↗</a>
     </footer>
 
+    <script>
+    /* Mobile nav */
+    (function () {
+        var toggle = document.getElementById('nav-toggle');
+        var links = document.getElementById('nav-links');
+        if (!toggle || !links) return;
+        toggle.addEventListener('click', function () {
+            var open = links.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', String(open));
+        });
+        links.querySelectorAll('a').forEach(function (a) {
+            a.addEventListener('click', function () {
+                links.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    })();
+    </script>
     <script src="script.js"></script>
     <script>
-        const POSTS_PER_PAGE = 7;
-        let allPosts = [];
-        let currentPage = 1;
-        let totalPages = 1;
+        /* Journal index — renders posts.json into the notebook card list.
+           Preserves the exact post-link contract: blog/{slug||date}.html */
+        (function () {
+            var POSTS_PER_PAGE = 7;
+            var allPosts = [];
+            var currentPage = 1;
+            var totalPages = 1;
 
-        function escapeHtml(text) {
-            const div = document.createElement('div');
-            div.textContent = text;
-            return div.innerHTML;
-        }
-
-        function formatDate(dateStr) {
-            const [year, month, day] = dateStr.split('-').map(Number);
-            const date = new Date(year, month - 1, day);
-            return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-        }
-
-        function renderPosts() {
-            const container = document.getElementById('blog-posts');
-            const start = (currentPage - 1) * POSTS_PER_PAGE;
-            const end = start + POSTS_PER_PAGE;
-            const pagePosts = allPosts.slice(start, end);
-
-            if (pagePosts.length === 0) {
-                container.innerHTML = '<div class="no-posts"><p>No posts yet.</p><span>Check back soon.</span></div>';
-                document.getElementById('blog-pagination').style.display = 'none';
-                return;
+            function escapeHtml(text) {
+                var div = document.createElement('div');
+                div.textContent = text;
+                return div.innerHTML;
             }
 
-            let html = '';
-            for (const post of pagePosts) {
-                const tagsHtml = post.tags.map(t =>
-                    `<span class="blog-card-tag">${escapeHtml(t)}</span>`
-                ).join('');
-
-                html += `
-                <a href="blog/${post.slug || post.date}.html" class="blog-card">
-                    <div class="blog-card-date">${formatDate(post.date)}</div>
-                    <div class="blog-card-tags">${tagsHtml}</div>
-                    <h2 class="blog-card-title">${escapeHtml(post.title)}</h2>
-                    <p class="blog-card-excerpt">${escapeHtml(post.excerpt)}</p>
-                    <span class="blog-card-read">Read more →</span>
-                </a>`;
-            }
-            container.innerHTML = html;
-
-            // Pagination controls
-            const pagination = document.getElementById('blog-pagination');
-            if (totalPages > 1) {
-                pagination.style.display = 'flex';
-                document.getElementById('page-info').textContent = `${currentPage} / ${totalPages}`;
-                document.getElementById('prev-btn').disabled = currentPage <= 1;
-                document.getElementById('next-btn').disabled = currentPage >= totalPages;
-            } else {
-                pagination.style.display = 'none';
+            function formatDate(dateStr) {
+                var parts = dateStr.split('-').map(Number);
+                var date = new Date(parts[0], parts[1] - 1, parts[2]);
+                return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             }
 
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+            function renderPosts() {
+                var list = document.getElementById('post-list');
+                var label = document.getElementById('section-label');
+                var start = (currentPage - 1) * POSTS_PER_PAGE;
+                var end = start + POSTS_PER_PAGE;
+                var pagePosts = allPosts.slice(start, end);
 
-        function changePage(delta) {
-            const newPage = currentPage + delta;
-            if (newPage >= 1 && newPage <= totalPages) {
-                currentPage = newPage;
-                renderPosts();
+                if (pagePosts.length === 0) {
+                    list.innerHTML = '<li class="no-posts"><p>No posts yet.</p><span>Check back soon.</span></li>';
+                    label.hidden = true;
+                    document.getElementById('blog-pagination').hidden = true;
+                    return;
+                }
+
+                var html = '';
+                for (var i = 0; i < pagePosts.length; i++) {
+                    var post = pagePosts[i];
+                    var tagsHtml = (post.tags || []).map(function (t) {
+                        return '<span>' + escapeHtml(t) + '</span>';
+                    }).join('');
+                    var deck = post.excerpt || post.share_description || post.title || '';
+                    html +=
+                        '<li><a href="blog/' + (post.slug || post.date) + '.html" class="post-card">' +
+                            '<span class="post-card__date">' + formatDate(post.date) + '</span>' +
+                            '<span class="post-card__body">' +
+                                '<h2 class="post-card__title">' + escapeHtml(post.title) + '</h2>' +
+                                '<p class="post-card__deck">' + escapeHtml(deck) + '</p>' +
+                                '<span class="post-card__tags">' + tagsHtml + '</span>' +
+                            '</span>' +
+                            '<span class="post-card__read">Read →</span>' +
+                        '</a></li>';
+                }
+                list.innerHTML = html;
+
+                if (totalPages > 1) {
+                    label.hidden = false;
+                    document.getElementById('section-index').textContent =
+                        '0' + currentPage + ' / 0' + totalPages;
+                    var pagination = document.getElementById('blog-pagination');
+                    pagination.hidden = false;
+                    document.getElementById('page-info').textContent = currentPage + ' / ' + totalPages;
+                    document.getElementById('prev-btn').disabled = currentPage <= 1;
+                    document.getElementById('next-btn').disabled = currentPage >= totalPages;
+                } else {
+                    label.hidden = false;
+                    document.getElementById('section-index').textContent = '01 / 01';
+                    document.getElementById('blog-pagination').hidden = true;
+                }
             }
-        }
 
-        // Load posts
-        fetch('blog/posts.json')
-            .then(r => r.json())
-            .then(posts => {
-                allPosts = posts.sort((a, b) => b.date.localeCompare(a.date));
-                totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE);
-                renderPosts();
-            })
-            .catch(() => {
-                document.getElementById('blog-posts').innerHTML =
-                    '<div class="no-posts"><p>Failed to load posts.</p></div>';
-            });
+            window.changePage = function (delta) {
+                var newPage = currentPage + delta;
+                if (newPage >= 1 && newPage <= totalPages) {
+                    currentPage = newPage;
+                    renderPosts();
+                    var top = document.getElementById('blog-posts');
+                    if (top && window.scrollTo) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }
+            };
+
+            fetch('blog/posts.json')
+                .then(function (r) {
+                    if (!r.ok) throw new Error('HTTP ' + r.status);
+                    return r.json();
+                })
+                .then(function (posts) {
+                    allPosts = posts.sort(function (a, b) { return b.date.localeCompare(a.date); });
+                    var countEl = document.getElementById('post-count');
+                    if (countEl) countEl.textContent = String(allPosts.length);
+                    totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE));
+                    renderPosts();
+                })
+                .catch(function () {
+                    var list = document.getElementById('post-list');
+                    list.innerHTML = '<li class="no-posts"><p>Failed to load posts.</p><span>the journal could not be reached</span></li>';
+                    document.getElementById('section-label').hidden = true;
+                });
+        })();
     </script>
 </body>
 </html>
