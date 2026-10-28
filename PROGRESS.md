@@ -35,7 +35,7 @@ Started: 2026-10-29
 - [x] AC2: 390px + 1440px screenshots — portfolio default (Paper), alternate (Blueprint), blog index — PASS (5 shots captured + vision-verified; attached to card)
 - [~] AC3: Every post link returns 200 on live after merge (spot-check >=3 oldest + newest) — PASS locally (179/180 resolve 200; 6 spot-checked oldest+newest all 200; the 1 miss is a pre-existing master gap, not a regression). Live-after-merge confirmation pending merge.
 - [x] AC4: Theme switcher persists across reload (localStorage), no FOUC, all nav anchors resolve — PASS (localStorage 'portfolio-theme' + head bootstrap before paint; 7/7 nav anchors present)
-- [ ] AC5: DONE proof — git ls-remote + PR number + post-merge curl byte/hash comparison — PENDING (needs push + merge; branch/PR provided below)
+- [~] AC5: DONE proof — git ls-remote + PR number + post-merge curl byte/hash comparison — PARTIAL: `git ls-remote origin bld-70ba8d7b-v2-portfolio` -> 690bdeb54083c1ace5e7aaacc7f39f44a682ad64; PR #36 OPEN (base master). Post-merge live curl byte/hash comparison pending merge (Reviewer/Architect gate).
 - [x] AC6: Rollback documented — single `git revert <merge-sha>` (no pipeline state) — PASS (static HTML/CSS/JS only; no pipeline touched)
 - [x] Keep-intact: og:/twitter meta + SEO, nav anchors + mobile nav, localStorage persistence, no-FOUC, reduced-motion, no horizontal overflow at 390px — PASS (og/twitter/description/canonical present; reduced-motion added to both pages; 390px shots show hamburger + no right-edge overflow)
 
