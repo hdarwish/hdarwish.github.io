@@ -1,0 +1,240 @@
+/* ============================================================
+   v2 editorial design tokens — shared design language
+   ============================================================
+   Source of truth: the live journal detail page (hafs.dev/blog/
+   2026-10-25.html) + the reviewed theme-switcher prototype
+   (previews/portfolio-theme-switcher-20261001, commit 06344d9).
+
+   One token vocabulary, consumed by:
+     - blog.html  (the journal index — fixed Paper surface)
+     - index.html (the portfolio — data-theme swiss|paper|blueprint|seminar)
+     - future pages
+
+   Every visual decision below is a custom property. Components
+   reference var(--token) only — never a hardcoded hex — so a theme
+   swap is a single attribute change on <html> with zero content
+   re-render and no flash-of-wrong-theme.
+   ============================================================ */
+
+/* ---- Shared base: fonts, chrome, reduced-motion ---------------- */
+:root {
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --nav-h: 3.4rem;
+  --bar-h: 40px;
+  --max-w: 68rem;
+  --measure: 42rem;
+
+  /* Status badge tints are theme-agnostic defaults; each theme
+     overrides the ones it needs. */
+}
+
+@media (max-width: 760px) {
+  :root { --bar-h: 36px; }
+}
+
+/* Reduced motion: kill animation/transition globally. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  html { scroll-behavior: auto !important; }
+}
+
+/* ============================================================
+   THEME TOKENS
+   One content/structure system. Four genuinely distinct skins.
+   Each theme is a full token set: palette + type + texture +
+   rhythm. Switching = swapping one data-theme attribute.
+   ============================================================ */
+
+/* ---- PAPER (default) — warm paper, vermilion ink ---------------
+   The journal surface. Matches the detail page notebook mode. */
+:root,
+[data-theme="paper"] {
+  --bg:          #efe6d3;   /* warm paper ground */
+  --bg-raised:   #f6efe0;   /* hover / lifted surfaces */
+  --bg-card:     #fdfaf2;   /* card / figure paper */
+  --nav-bg:      #efe6d3;
+  --ink:         #33291d;   /* primary text */
+  --ink-strong:  #2a2013;   /* headings */
+  --ink-soft:    #6a5843;   /* secondary / deck */
+  --ink-faint:   #8a745a;   /* tertiary / labels */
+  --accent:      #b5541f;   /* vermilion ink accent */
+  --accent-soft: rgba(181, 84, 31, 0.08);
+  --btn-fg:      #efe6d3;
+  --line:        #d8c7a8;   /* hairlines, dividers */
+  --line-strong: #cbb894;   /* interactive borders */
+  --kicker:      #a06a3a;   /* mono kicker labels */
+  --code-bg:     #e3d5bb;
+  --code-ink:    #8a3f14;
+  --card-shadow: 0 6px 18px rgba(120, 90, 50, 0.18);
+
+  /* type rhythm */
+  --hero-size:  clamp(2.4rem, 5.2vw, 3.6rem);
+  --hero-lh:    1.06;
+  --hero-ls:    -0.015em;
+  --title-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  --h2-size:    1.7rem;
+  --body-size:  1.05rem;
+  --body-lh:    1.8;
+  --section-gap: 3.4rem;
+
+  /* status badges (AA on paper) */
+  --st-live:      #1f7a48;
+  --st-oss:       #1f5fa8;
+  --st-building:  #a35a12;
+  --st-offer:     #7c3aa8;
+  --st-waitlist:  #6f665d;
+
+  /* texture: none (clean paper) */
+  --bg-texture: none;
+}
+
+/* ---- SEMINAR (dark) — the detail page's dark mode --------------
+   A true dark companion to Paper, not an inversion: warm ink on
+   deep umber, the same vermilion accent carried through. */
+[data-theme="seminar"] {
+  --bg:          #161009;
+  --bg-raised:   #1e160c;
+  --bg-card:     #211809;
+  --nav-bg:      #161009;
+  --ink:         #e6d8bf;
+  --ink-strong:  #f3e9d4;
+  --ink-soft:    #b7a383;
+  --ink-faint:   #93815f;
+  --accent:      #e08b4e;
+  --accent-soft: rgba(224, 139, 78, 0.10);
+  --btn-fg:      #161009;
+  --line:        #3a2c18;
+  --line-strong: #57422a;
+  --kicker:      #d29a5e;
+  --code-bg:     #2c2110;
+  --code-ink:    #f0b98a;
+  --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+
+  --hero-size:  clamp(2.4rem, 5.2vw, 3.6rem);
+  --hero-lh:    1.06;
+  --hero-ls:    -0.015em;
+  --title-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  --h2-size:    1.7rem;
+  --body-size:  1.05rem;
+  --body-lh:    1.8;
+  --section-gap: 3.4rem;
+
+  --st-live:      #59d6a0;
+  --st-oss:       #6ec1e4;
+  --st-building:  #e0a13f;
+  --st-offer:     #c792ea;
+  --st-waitlist:  #93815f;
+
+  --bg-texture: none;
+}
+
+/* ---- SWISS — near-black canvas, single chartreuse accent --------
+   From the reviewed prototype (commit 06344d9). IBM Plex Mono,
+   1px grid lines, sharp rectangles. */
+[data-theme="swiss"] {
+  --bg:          #0a0a0a;
+  --bg-raised:   #111111;
+  --bg-card:     #161616;
+  --nav-bg:      #0a0a0a;
+  --ink:         #e8e8e8;
+  --ink-strong:  #f2f2f2;
+  --ink-soft:    #9a9a9a;
+  --ink-faint:   #7d7d7d;
+  --accent:      #b4ff39;
+  --accent-soft: rgba(180, 255, 57, 0.12);
+  --btn-fg:      #0a0a0a;
+  --line:        #222222;
+  --line-strong: #333333;
+  --kicker:      #b4ff39;
+  --code-bg:     #1c1c1c;
+  --code-ink:    #b4ff39;
+  --card-shadow: 0 0 0 1px #1f1f1f;
+
+  --font-display: 'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+  --font-body:    'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+  --font-mono:    'IBM Plex Mono', 'Menlo', 'Consolas', monospace;
+  --hero-size:  clamp(2.4rem, 6vw, 4.2rem);
+  --hero-lh:    0.98;
+  --hero-ls:    -0.03em;
+  --title-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  --h2-size:    1.5rem;
+  --body-size:  0.95rem;
+  --body-lh:    1.75;
+  --section-gap: 4rem;
+
+  --st-live:      #b4ff39;
+  --st-oss:       #6ec1e4;
+  --st-building:  #f0a030;
+  --st-offer:     #c084fc;
+  --st-waitlist:  #7d7d7d;
+
+  --bg-texture: none;
+}
+
+/* ---- PAPER-GRID alias is the paper theme above. ---------------- */
+
+/* ---- BLUEPRINT — deep drafting blue, pale drafting-white --------
+   From the reviewed prototype (commit 06344d9). Space Grotesk,
+   1px drafting-grid texture on ground. */
+[data-theme="blueprint"] {
+  --bg:          #0a1b30;
+  --bg-raised:   #0e2138;
+  --bg-card:     #10233d;
+  --nav-bg:      #0a1b30;
+  --ink:         #e3edf7;
+  --ink-strong:  #f2f7fc;
+  --ink-soft:    #a9c0d8;
+  --ink-faint:   #7e97b2;
+  --accent:      #8ab4e8;
+  --accent-soft: rgba(138, 180, 232, 0.12);
+  --btn-fg:      #0a1b30;
+  --line:        #22395c;
+  --line-strong: #31496e;
+  --kicker:      #8ab4e8;
+  --code-bg:     #14314f;
+  --code-ink:    #bcd6f2;
+  --card-shadow: 0 0 0 1px #1b3350;
+
+  --font-display: 'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:    'Space Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  --hero-size:  clamp(2.4rem, 6vw, 4.2rem);
+  --hero-lh:    0.98;
+  --hero-ls:    -0.01em;
+  --title-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  --h2-size:    1.5rem;
+  --body-size:  0.98rem;
+  --body-lh:    1.7;
+  --section-gap: 4rem;
+
+  --st-live:      #59d6a0;
+  --st-oss:       #8ab4e8;
+  --st-building:  #e0a13f;
+  --st-offer:     #c792ea;
+  --st-waitlist:  #7e97b2;
+
+  /* 1px drafting grid, 36px squares */
+  --bg-texture:
+    linear-gradient(rgba(138, 180, 232, 0.075) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(138, 180, 232, 0.075) 1px, transparent 1px);
+}
+
+/* Apply the ground + texture to the body of any themed page. */
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  background-image: var(--bg-texture);
+}
+/* Blueprint uses a fixed-attachment grid for the drafting feel. */
+html[data-theme="blueprint"] body { background-attachment: fixed; }
+
+/* Theme cross-fade on swap (respects reduced-motion via :root rule). */
+html[data-theme] body { transition: background-color 0.3s ease, color 0.3s ease; }
