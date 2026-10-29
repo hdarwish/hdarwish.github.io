@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-10-29",
+    "title": "The status line is the most expensive UI element in your stack",
+    "tags": [
+      "LLM Agents",
+      "Cost Optimization",
+      "Observability",
+      "Claude Code"
+    ],
+    "excerpt": "",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The status line is the most expensive UI element in your stack",
+    "social_teasers": {
+      "linkedin": "The status line is the most expensive UI element in your stack\n\nThe status line is the most expensive UI element in your stack\n\nhttps://hafs.dev/blog/2026-10-29.html\n\n#LLMAgents #CostOptimization #Observability",
+      "x": "The status line is the most expensive UI element in your stack\nhttps://hafs.dev/blog/2026-10-29.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-10-29.html"
+  },
+  {
     "date": "2026-10-28",
     "title": "Zero-config is not zero-risk",
     "tags": [
