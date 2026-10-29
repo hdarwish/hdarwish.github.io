@@ -17,7 +17,7 @@ Started: 2026-10-29
 - [x] Stage exact files only (no git add -A)
 - [x] Push branch + open PR to master
 - [x] Independent re-verification (fresh headless Chromium, all ACs re-run)
-- [ ] Post-merge live curl byte/hash comparison (requires merge)
+- [x] Post-merge live curl byte/hash comparison (requires merge)
 
 ## Independent verification (card t_934ce121, 2026-10-29)
 Re-ran the full acceptance-criteria suite in a fresh headless Chromium (puppeteer-core
@@ -72,7 +72,7 @@ checkout. Results:
 - [x] AC2: 390px + 1440px screenshots — portfolio default (Paper), alternate (Blueprint), blog index — PASS (5 shots captured + vision-verified; attached to card)
 - [x] AC3: Every post link returns 200 on live after merge (spot-check >=3 oldest + newest) — PASS locally (179/180 resolve 200; 6 spot-checked oldest+newest all 200; the 1 miss blog/2026-09-22.html is a pre-existing master data gap, confirmed absent on origin/master, not a regression introduced here).
 - [x] AC4: Theme switcher persists across reload (localStorage), no FOUC, all nav anchors resolve — PASS (localStorage 'portfolio-theme' + head bootstrap before paint; 7/7 nav anchors present)
-- [~] AC5: DONE proof — git ls-remote + PR number + post-merge curl byte/hash comparison — PARTIAL: `git ls-remote origin bld-70ba8d7b-v2-portfolio` -> 690bdeb54083c1ace5e7aaacc7f39f44a682ad64; PR #36 OPEN (base master). Post-merge live curl byte/hash comparison pending merge (Reviewer/Architect gate).
+- [x] AC5: DONE proof — git ls-remote + PR number + post-merge curl byte/hash comparison — PASS: `git ls-remote origin bld-70ba8d7b-v2-portfolio` -> a75765606a8844fd63863625b9875e8d87543aed; PR #36 MERGED (merge commit de69ffc2054e55a26ecc48f5221a30ea2b6a3146 into master). Post-merge live curl -L byte/hash comparison: index.html sha256 0814ec67… (109,564 B) MATCH, blog.html sha256 31f187cb… (19,388 B) MATCH, v2.css sha256 6d927647… (7,841 B) MATCH — all three live bytes identical to merged master. Live index.html carries v2.css/themebar/portfolio-theme/4 data-theme values with 0 old style.css; live blog.html carries v2.css/journal-hero/post-card/posts.json with 0 old style.css.
 - [x] AC6: Rollback documented — single `git revert <merge-sha>` (no pipeline state) — PASS (static HTML/CSS/JS only; no pipeline touched)
 - [x] Keep-intact: og:/twitter meta + SEO, nav anchors + mobile nav, localStorage persistence, no-FOUC, reduced-motion, no horizontal overflow at 390px — PASS (og/twitter/description/canonical present; reduced-motion added to both pages; 390px shots show hamburger + no right-edge overflow)
 
