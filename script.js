@@ -225,51 +225,12 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
     }
 })();
 
-// Theme cycle — single button that rotates through themes.
-//
-// v2 portfolio themes (swiss/paper/blueprint/seminar) are owned by the
-// inline switcher on index.html, which persists under the 'portfolio-theme'
-// key and re-renders the nav button from there. To keep the two from
-// fighting over data-theme, this block only acts on pages that still use the
-// legacy single-button cycler (i.e. pages WITHOUT the v2 switcher). On the
-// restyled index.html the switcher has already set data-theme, so we skip.
-(function() {
-    // If the v2 switcher is present, it owns the theme — do nothing.
-    if (document.querySelector('.thm') || window.__setTheme) return;
-
-    var themes = [
-        { id: 'dark',  icon: '🌑', name: 'dark' },
-        { id: 'light', icon: '🌞', name: 'light' },
-        { id: 'eink',  icon: '📰', name: 'eink' },
-        { id: 'xterm', icon: '💻', name: 'xterm' },
-        { id: 'drunk', icon: '🥴', name: 'drunk' }
-    ];
-
-    var saved = localStorage.getItem('theme') || 'dark';
-    var idx = Math.max(0, themes.findIndex(function(t) { return t.id === saved; }));
-    if (idx === -1) idx = 0;
-    document.documentElement.setAttribute('data-theme', themes[idx].id);
-
-    var btn = document.getElementById('theme-cycle');
-    if (!btn) return;
-
-    var iconEl = btn.querySelector('.theme-icon');
-    var nameEl = btn.querySelector('.theme-name');
-
-    function update() {
-        if (iconEl) iconEl.textContent = themes[idx].icon;
-        if (nameEl) nameEl.textContent = themes[idx].name;
-    }
-
-    update();
-
-    btn.addEventListener('click', function() {
-        idx = (idx + 1) % themes.length;
-        document.documentElement.setAttribute('data-theme', themes[idx].id);
-        localStorage.setItem('theme', themes[idx].id);
-        update();
-    });
-})();
+/* Theme cycling is owned by theme.js (single source of truth, 9-theme set,
+   'portfolio-theme' key, top-right #theme-cycle switcher) on every page
+   that loads script.js (index.html, blog.html). The old v1 5-theme cycler
+   that used to live here was removed: its .thm/__setTheme guard no longer
+   fired once the .themebar row was removed, so it double-advanced the theme
+   on every click by binding a second listener to the same button. */
 
 /* ------------------------------------------------------------------------
    UTM attribution beacon  (card t_8af9487b, 2026-08-16)

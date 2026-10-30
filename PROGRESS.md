@@ -20,6 +20,13 @@ Started: 2026-10-30
 ## Notes
 - localStorage key = 'portfolio-theme' (kept). Cycle: seminar→swiss→paper→blueprint→dark→light→eink→xterm→drunk.
 - Default theme = seminar. :root carries seminar palette so no-js/pre-boot paint is dark.
+- **Bug found + fixed in verification (2026-10-30):** the old v1 5-theme cycler in
+  `script.js` (used the 'theme' key + bound a 2nd click listener to the same
+  #theme-cycle button) had a `.thm`/`__setTheme` guard that stopped firing once
+  the .themebar row was removed, so every click double-advanced the theme
+  (seminar→eink instead of seminar→swiss). Removed that block from script.js —
+  theme.js is now the single source of truth on every page that loads it
+  (index.html + blog.html). Verified: 1 step per click, correct 9-theme order.
 - Post article-body palette is the pre-existing per-mode (Dark Seminar / Notebook) inline CSS — the shared theme system (data-theme + switcher + persistence) IS wired in; the article content palette is out of scope ("do NOT change generated post content"). Documented in previews/t_0839ddff/NOTES.md.
 - favicon.ico 404 is pre-existing (live site 404s it too), not a JS error.
 - Herald render change is on the same branch name bld-0839d-theme-restore in the herald repo.
