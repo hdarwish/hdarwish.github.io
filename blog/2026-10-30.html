@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The capability moat is gone. The margin moat remains. - Hafs Ibrahim</title>
+    <meta name="description" content="The capability moat is gone. The margin moat remains.">
+    <meta property="og:title" content="The capability moat is gone. The margin moat remains.">
+    <meta property="og:description" content="The capability moat is gone. The margin moat remains.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-10-30.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The capability moat is gone. The margin moat remains.">
+    <meta name="twitter:description" content="The capability moat is gone. The margin moat remains.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
+    </style>
+</head>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
+    </div>
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-10-30">
+<header class="seminar__head"><p class="seminar__date">October 30, 2026</p><h1 class="seminar__title">The capability moat is gone. The margin moat remains.</h1><p class="seminar__deck">Mistral Large 4 (Le Chonk) being open-weight isn&#x27;t just a model release; it&#x27;s the moment the &#x27;closed frontier&#x27; stopped being a defensible business model.</p></header>
+<div class="seminar__tags"><span>AI</span><span>Open Weights</span><span>Inference Economics</span><span>Mistral</span></div>
+<div class="seminar__premise"><p>For years, the value of a frontier AI company was assumed to be its access to the best model.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>The distinction is between *capability* (what the model can do) and *economics* (what it costs to run that model at scale). The former has commoditized; the latter has not.</p>
+<section class="seminar__section" id="sec-1-the-good-enough-threshold"><div class="seminar__section-index">01</div><h2>The &#x27;Good Enough&#x27; Threshold</h2><p>For a long time, open-source AI was the lab rat. It was for research, for hobbyists, for people who wanted to see the weights. The promise was always slightly deferred: *wait for the next release, it will be good enough.* That deferred promise has just cashed out. Mistral Large 4, dubbed &#x27;Le Chonk,&#x27; is now open-weight. The tagline isn&#x27;t &#x27;experimental&#x27;; it&#x27;s &#x27;Built for Coders, Trusted by Defenders.&#x27; That is not a research preview. That is a production claim.</p>
+<p>When the open-weight model reaches &#x27;good enough for production,&#x27; the economic center of gravity shifts. It is no longer about who has the smartest model. It is about who can serve that model for the cheapest price.</p></section>
+<section class="seminar__section" id="sec-2-the-collapse-of-the-closed-moat"><div class="seminar__section-index">02</div><h2>The Collapse of the Closed Moat</h2><p>The &#x27;closed frontier&#x27; business model relied on a specific asymmetry: you (the customer) could not access the weights, so you had to buy the inference. Your cost was locked to their price. Your margin was their margin. If you wanted the state-of-the-art, you paid the toll. That toll was the moat.</p>
+<p>Open weights break the toll. If I can download Mistral Large 4, I can run it on my own infrastructure, or on a cheaper inference provider, or in a sovereign cloud that meets my compliance needs. The capability is now a commodity. The differentiator is no longer *access* to intelligence; it is the *efficiency* of serving it.</p>
+<figure class="dgm-figure"><div class="dgm dgm--split_process" data-diagram="split_process" id="d20261030-dgm-1"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 680 314" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261030-dgm-1-d-t d20261030-dgm-1-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261030-dgm-1-d-t">The Moat Shift</title><desc id="d20261030-dgm-1-d-d">Left side shows closed frontier where capability drives price; right side shows open weights where inference cost drives price.</desc><rect x="16" y="16" width="300" height="44" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="166.0" y="43.0" font-size="16" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Closed Frontier Era</text><rect x="16" y="78" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="106.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Model is proprietary</text><rect x="16" y="136" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="164.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Access = toll</text><rect x="16" y="194" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="222.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Value = Capability</text><rect x="16" y="252" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="280.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Moat = Secrecy</text><line x1="340.0" y1="16" x2="340.0" y2="298" stroke="var(--dgm-line, #b9a894)" stroke-width="1" stroke-dasharray="4 5"/><rect x="364" y="16" width="300" height="44" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="514.0" y="43.0" font-size="16" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Open Weights Era</text><rect x="364" y="78" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="106.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Model is open</text><rect x="364" y="136" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="164.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Access = download</text><rect x="364" y="194" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="222.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Value = Economics</text><rect x="364" y="252" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="280.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Moat = Efficiency</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 292" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261030-dgm-1-m-t d20261030-dgm-1-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261030-dgm-1-m-t">The Moat Shift</title><desc id="d20261030-dgm-1-m-d">Left side shows closed frontier where capability drives price; right side shows open weights where inference cost drives price.</desc><rect x="12" y="12" width="150" height="40" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="37.0" font-size="12" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Closed Frontier Era</text><rect x="12" y="66" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="93.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Model is proprietary</text><rect x="12" y="122" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="149.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Access = toll</text><rect x="12" y="178" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="205.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Value = Capability</text><rect x="12" y="234" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="261.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Moat = Secrecy</text><line x1="172.0" y1="12" x2="172.0" y2="280" stroke="var(--dgm-line, #b9a894)" stroke-width="1" stroke-dasharray="4 5"/><rect x="182" y="12" width="150" height="40" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="37.0" font-size="12" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Open Weights Era</text><rect x="182" y="66" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="93.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Model is open</text><rect x="182" y="122" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="149.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Access = download</text><rect x="182" y="178" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="205.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Value = Economics</text><rect x="182" y="234" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="261.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Moat = Efficiency</text></svg></div></div><figcaption>The shift from capability-based to economics-based competition.</figcaption></figure></section>
+<section class="seminar__section" id="sec-3-inference-economics-is-the-new-w"><div class="seminar__section-index">03</div><h2>Inference Economics is the New War</h2><p>If the model is a commodity, the war is fought on the margin. This is where the &#x27;Trusted by Defenders&#x27; tagline matters. Sovereign AI, cybersecurity, and regulated industries don&#x27;t just care about accuracy; they care about data residency, latency, and cost predictability. A model that is 1% better but costs 10x more to run is a worse product for many of these use cases.</p>
+<p>The metric that matters now is not &#x27;benchmarks&#x27; but &#x27;cost per token&#x27; and &#x27;latency per request.&#x27; The mechanism is simple: open weights allow competition in the serving layer. Providers must optimize memory bandwidth, quantization, and batching. The consequence is that the industry is forced to compete on engineering efficiency, not just on the next SOTA benchmark.</p></section>
+<section class="seminar__section" id="sec-4-the-strategic-pivot"><div class="seminar__section-index">04</div><h2>The Strategic Pivot</h2><p>For a company building on AI, this changes the decision calculus. You are no longer choosing between &#x27;best model&#x27; and &#x27;cheapest model.&#x27; You are choosing between &#x27;best value.&#x27; The &#x27;best model&#x27; is often the open one, because it is good enough. The &#x27;cheapest model&#x27; is the one you can self-host or serve through a low-margin provider. The &#x27;best value&#x27; is the one that lets you keep your data, your margin, and your compliance posture.</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>The &#x27;closed frontier&#x27; was never a moat of intelligence; it was a moat of *access*. Once access is commoditized, the moat dries up. The new moat is the ability to serve that intelligence at scale, cheaply, and securely. That is an engineering problem, not a research problem.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> Think of it like the shift from proprietary operating systems to Linux. The OS (capability) became a commodity. The value shifted to the distribution, the support, and the optimization for specific hardware (economics).</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> The analogy breaks because AI inference is not just software; it is a massive compute resource. The &#x27;hardware&#x27; (GPU) is the new moat, and the &#x27;OS&#x27; (model) is the new commodity.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You are evaluating frontier models for production workloads in regulated or cost-sensitive environments.</dd><dt>Prefer</dt><dd>Assess open-weight models (like Mistral Large 4) for their &#x27;good enough&#x27; capability and their inference economics (cost, latency, sovereignty).</dd><dt>Avoid</dt><dd>Assuming that &#x27;closed&#x27; means &#x27;better&#x27; or &#x27;safer.&#x27; Closed now often means &#x27;more expensive&#x27; and &#x27;less flexible.&#x27; Safety and capability can be achieved with open weights.</dd></dl></div>
+<p class="seminar__finish">The capability moat is gone. The margin moat remains. And that is where the real competition begins.</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://mistral.ai/news/mistral-large-4-oss" target="_blank" rel="noopener">Mistral Large 4 (Le Chonk) is now open weight</a><span class="kind">ARTICLE</span></li></ol></footer>
+</article>
+    </main>
+</body>
+</html>
