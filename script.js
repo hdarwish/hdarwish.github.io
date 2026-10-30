@@ -229,8 +229,8 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
    'portfolio-theme' key, top-right #theme-cycle switcher) on every page
    that loads script.js (index.html, blog.html). The old v1 5-theme cycler
    that used to live here was removed: its .thm/__setTheme guard no longer
-   fired once the .themebar row was removed, so it double-advanced the theme
-   on every click by binding a second listener to the same button. */
+   fired once the dedicated theme-row was removed, so it double-advanced the
+   theme on every click by binding a second listener to the same button. */
 
 /* ------------------------------------------------------------------------
    UTM attribution beacon  (card t_8af9487b, 2026-08-16)
