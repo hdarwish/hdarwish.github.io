@@ -20,6 +20,27 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="v2.css">
+    <script>
+    /* Theme bootstrap — runs before first paint: no flash of wrong theme.
+       Slim mirror of the boot in theme.js (shared source of truth). */
+    (function () {
+        var T = 'portfolio-theme';
+        var valid = ['seminar','swiss','paper','blueprint','dark','light','eink','xterm','drunk'];
+        var q = null, t = null;
+        try {
+            q = new URLSearchParams(location.search).get('theme');
+            if (q && valid.indexOf(q) !== -1) {
+                t = q;
+                try { localStorage.setItem(T, t); } catch (e) {}
+            } else {
+                t = localStorage.getItem(T);
+            }
+        } catch (e) {}
+        if (valid.indexOf(t) === -1) t = 'seminar';
+        document.documentElement.setAttribute('data-theme', t);
+    })();
+    </script>
+    <script src="theme.js"></script>
     <style>
     /* ============ v2 blog index — editorial index, notebook idiom ============
        Consumes the shared v2 tokens from v2.css. This is the index to the
@@ -49,6 +70,19 @@
     }
     .nav-links a:hover { color: var(--accent); }
     .nav-links a.active { color: var(--accent); border-bottom-color: var(--accent); }
+    /* theme-cycle: the single top-right theme switcher (theme.js drives it). */
+    .theme-cycle {
+        display: inline-flex; align-items: center; gap: 0.45rem;
+        font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em;
+        color: var(--ink-soft); background: transparent; border: 1px solid var(--line-strong);
+        border-radius: 4px; padding: 0.35rem 0.7rem; cursor: pointer;
+        min-height: 44px; min-width: 44px;
+        transition: color 0.2s, border-color 0.2s;
+    }
+    .theme-cycle:hover { color: var(--accent); border-color: var(--accent); }
+    .theme-cycle .theme-icon { font-size: 0.95rem; line-height: 1; }
+    @media (max-width: 980px) { .theme-cycle .theme-name { display: none; } }
+    @media (max-width: 760px) { .theme-cycle { padding: 0; justify-content: center; } }
     .nav-toggle {
         display: none; background: none; border: 0; cursor: pointer; padding: 0.5rem;
         flex-direction: column; gap: 5px;
@@ -222,6 +256,10 @@
                 <li><a href="blog.html" class="active">Blog</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
+            <button class="theme-cycle" id="theme-cycle" aria-label="Switch theme" title="Switch theme">
+                <span class="theme-icon">◑</span>
+                <span class="theme-name">SEMINAR</span>
+            </button>
         </div>
     </nav>
 

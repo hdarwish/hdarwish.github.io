@@ -19,10 +19,12 @@
     <meta name="twitter:image" content="https://hafs.dev/og-image.png">
     <script>
     /* Theme bootstrap — runs before first paint: no flash of wrong theme.
-       Explicit ?theme= param wins (themed visit / preview links); else localStorage. */
+       Slim mirror of the boot in theme.js (shared source of truth).
+       Explicit ?theme= param wins (themed visit / preview links); else
+       localStorage; else the default. Full cycle list lives in theme.js. */
     (function () {
         var T = 'portfolio-theme';
-        var valid = ['swiss', 'paper', 'blueprint', 'seminar'];
+        var valid = ['seminar','swiss','paper','blueprint','dark','light','eink','xterm','drunk'];
         var q = null, t = null;
         try {
             q = new URLSearchParams(location.search).get('theme');
@@ -33,10 +35,11 @@
                 t = localStorage.getItem(T);
             }
         } catch (e) {}
-        if (valid.indexOf(t) === -1) t = 'paper';
+        if (valid.indexOf(t) === -1) t = 'seminar';
         document.documentElement.setAttribute('data-theme', t);
     })();
     </script>
+    <script src="theme.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -71,7 +74,7 @@
         color: var(--kicker);
     }
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 1.25rem; }
-    .section { padding: var(--section-gap) 0; scroll-margin-top: calc(var(--nav-h) + var(--bar-h) + 1rem); }
+    .section { padding: var(--section-gap) 0; scroll-margin-top: calc(var(--nav-h) + 1rem); }
     .section-title {
         font-family: var(--font-display);
         font-weight: 700;
@@ -121,17 +124,21 @@
         display: block; width: 22px; height: 2px; background: var(--ink);
         transition: transform 0.25s ease, opacity 0.2s ease;
     }
-    /* theme-cycle (kept from v14 markup; re-skinned, still cycles themes) */
+    /* theme-cycle: the single top-right theme switcher (theme.js drives it).
+       Tap target ≥44px; name collapses to icon at ≤980px but the box stays
+       a full square on mobile so the hit area never shrinks below 44px. */
     .theme-cycle {
         display: inline-flex; align-items: center; gap: 0.45rem;
         font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.1em;
         color: var(--ink-soft); background: transparent; border: 1px solid var(--line-strong);
         border-radius: 4px; padding: 0.35rem 0.7rem; cursor: pointer;
+        min-height: 44px; min-width: 44px;
         transition: color 0.2s, border-color 0.2s;
     }
     .theme-cycle:hover { color: var(--accent); border-color: var(--accent); }
-    .theme-cycle .theme-icon { font-size: 0.9rem; line-height: 1; }
+    .theme-cycle .theme-icon { font-size: 0.95rem; line-height: 1; }
     @media (max-width: 980px) { .theme-cycle .theme-name { display: none; } }
+    @media (max-width: 760px) { .theme-cycle { padding: 0; justify-content: center; } }
     @media (max-width: 760px) {
         .nav-toggle { display: flex; }
         .nav-links {
@@ -144,42 +151,6 @@
         .nav-links li { width: 100%; }
         .nav-links a { display: block; padding: 0.8rem 0; font-size: 0.8rem; border-bottom: 1px solid var(--line); }
     }
-
-    /* ---- theme bar (Swiss / Paper / Blueprint / Seminar) -------- */
-    .themebar {
-        position: sticky; top: var(--nav-h); z-index: 49;
-        background: color-mix(in srgb, var(--nav-bg) 86%, transparent);
-        backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-        border-bottom: 1px solid var(--line);
-    }
-    .themebar-inner {
-        max-width: var(--max-w); margin: 0 auto; padding: 0 1.25rem; height: var(--bar-h);
-        display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-    }
-    .themebar-index {
-        font-family: var(--font-mono); font-size: 0.62rem; font-weight: 500;
-        text-transform: uppercase; letter-spacing: 0.12em; color: var(--ink-faint);
-        white-space: nowrap;
-    }
-    .themebar-index b { color: var(--accent); font-weight: 600; }
-    .themebar-controls { display: flex; gap: 6px; }
-    .thm {
-        display: inline-flex; align-items: center; gap: 7px;
-        background: transparent; border: 1px solid var(--line-strong); color: var(--ink-soft);
-        font-family: var(--font-mono); font-size: 0.62rem; font-weight: 500;
-        text-transform: uppercase; letter-spacing: 0.08em; padding: 5px 10px; border-radius: 4px;
-        cursor: pointer; transition: color 0.2s, background-color 0.2s, border-color 0.2s;
-    }
-    .thm:hover { color: var(--ink); border-color: var(--ink-soft); }
-    .thm:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-    .thm[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--btn-fg); }
-    .thm-sw { width: 9px; height: 9px; display: inline-block; flex: none; border-radius: 2px; }
-    .thm[data-theme-btn="swiss"] .thm-sw     { background: #0a0a0a; border: 1px solid #b4ff39; }
-    .thm[data-theme-btn="paper"] .thm-sw     { background: #efe6d3; border: 1px solid #b5541f; }
-    .thm[data-theme-btn="blueprint"] .thm-sw { background: #0a1b30; border: 1px solid #8ab4e8; }
-    .thm[data-theme-btn="seminar"] .thm-sw   { background: #161009; border: 1px solid #e08b4e; }
-    .thm[aria-pressed="true"] .thm-sw { border-color: var(--btn-fg); }
-    @media (max-width: 560px) { .themebar-index { display: none; } }
 
     /* ---- hero -------------------------------------------------- */
     .hero { padding: 4.5rem 0 3rem; border-bottom: 1px solid var(--line); }
@@ -453,8 +424,7 @@
         letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint);
     }
 
-    /* no-js fallback: keep page readable (theme defaults to paper via :root) */
-    .no-js .themebar { display: none; }
+    /* no-js fallback: :root already carries the default (seminar) palette. */
 
     /* ---- scroll fade-in (safe: only hidden when .pre is present) -------- */
     .fade-in.pre { opacity: 0; transform: translateY(14px); }
@@ -491,19 +461,6 @@
             </button>
         </div>
     </nav>
-
-    <div class="themebar" id="themebar" role="region" aria-label="Theme switcher">
-        <div class="themebar-inner">
-            <span class="themebar-index" id="themebar-index"><b>01</b> / 04 — PAPER</span>
-            <div class="themebar-controls">
-                <button type="button" class="thm" data-theme-btn="swiss" aria-pressed="false"><span class="thm-sw"></span>Swiss</button>
-                <button type="button" class="thm" data-theme-btn="paper" aria-pressed="true"><span class="thm-sw"></span>Paper</button>
-                <button type="button" class="thm" data-theme-btn="blueprint" aria-pressed="false"><span class="thm-sw"></span>Blueprint</button>
-                <button type="button" class="thm" data-theme-btn="seminar" aria-pressed="false"><span class="thm-sw"></span>Seminar</button>
-            </div>
-        </div>
-    </div>
-
 
     <header class="hero">
         <div class="hero-bg"></div>
@@ -1575,64 +1532,6 @@
     </script>
 
     <script>
-    /* ============================================
-       THEME SWITCHER — one attribute swap re-skins
-       everything. CSS custom properties per theme,
-       zero content re-render, no flash of wrong theme.
-       ============================================ */
-    (function () {
-        var T = 'portfolio-theme';
-        var ORDER = ['swiss', 'paper', 'blueprint', 'seminar'];
-        var NAMES = { swiss: 'SWISS', paper: 'PAPER', blueprint: 'BLUEPRINT', seminar: 'SEMINAR' };
-        var ICONS = { swiss: '◼', paper: '▤', blueprint: '▦', seminar: '◑' };
-
-        function current() {
-            return document.documentElement.getAttribute('data-theme') || 'paper';
-        }
-        function render() {
-            var t = current();
-            var btns = document.querySelectorAll('.thm');
-            btns.forEach(function (b) {
-                b.setAttribute('aria-pressed', String(b.getAttribute('data-theme-btn') === t));
-            });
-            var idx = ORDER.indexOf(t) + 1;
-            var el = document.getElementById('themebar-index');
-            if (el) el.innerHTML = '<b>0' + idx + '</b> / 0' + ORDER.length + ' — ' + NAMES[t];
-            // keep the nav cycle button in sync too
-            var cyc = document.getElementById('theme-cycle');
-            if (cyc) {
-                var icon = cyc.querySelector('.theme-icon');
-                var name = cyc.querySelector('.theme-name');
-                if (icon) icon.textContent = ICONS[t] || '◑';
-                if (name) name.textContent = t;
-            }
-        }
-        function setTheme(t) {
-            if (ORDER.indexOf(t) === -1 || t === current()) return;
-            document.documentElement.setAttribute('data-theme', t);
-            try { localStorage.setItem(T, t); } catch (e) {}
-            render();
-        }
-        // expose for the nav cycle button
-        window.__setTheme = setTheme;
-
-        document.querySelectorAll('.thm').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                setTheme(btn.getAttribute('data-theme-btn'));
-            });
-        });
-        // nav cycle button: advance to next theme
-        var cycle = document.getElementById('theme-cycle');
-        if (cycle) {
-            cycle.addEventListener('click', function () {
-                var cur = current();
-                var next = ORDER[(ORDER.indexOf(cur) + 1) % ORDER.length];
-                setTheme(next);
-            });
-        }
-        render();
-    })();
-
     /* Mobile nav toggle */
     (function () {
         var toggle = document.getElementById('nav-toggle');
