@@ -1,81 +1,41 @@
-# Progress: Restyle blog index + portfolio main page to the v2 editorial design language
-Card: t_70ba8d7b
-Branch: bld-70ba8d7b-v2-portfolio
-Base: origin/master @ 021289b9a36b73410e9339c867ff5adab842239a
-Started: 2026-10-29
+# Progress: Restore legacy themes + single top-right theme switcher
+Card: t_0839ddff
+Branch: bld-0839d-theme-restore
+Started: 2026-10-30
 
 ## Checklist
-- [x] Read card + acceptance criteria
-- [x] Fetch live v2 detail page (hafs.dev/blog/2026-10-25.html) as design source of truth
-- [x] Extract v2 design tokens into shared v2.css (Lora/Playfair/JetBrains Mono; paper + seminar + swiss + blueprint token sets)
-- [x] Restyle blog.html in v2 editorial language (kicker + display title + deck hero; notebook post cards; mono date kicker; tags) — posts.json + pagination + post-link contract preserved
-- [x] Restyle index.html in v2 language, keep section structure + Swiss/Paper/Blueprint/Seminar switcher
-- [x] Fix script.js legacy theme-cycler so it no longer fights the v2 switcher (skip when .thm/__setTheme present)
-- [x] Make scroll fade-in safe (content never left permanently invisible)
-- [x] Capture 390px + 1440px screenshots: portfolio default (Paper), alternate (Blueprint), blog index
-- [x] Verify: post links 200, theme persistence, no FOUC, nav anchors, no overflow, reduced-motion
-- [x] Stage exact files only (no git add -A)
-- [x] Push branch + open PR to master
-- [x] Independent re-verification (fresh headless Chromium, all ACs re-run)
-- [ ] Post-merge live curl byte/hash comparison (requires merge)
-
-## Independent verification (card t_934ce121, 2026-10-29)
-Re-ran the full acceptance-criteria suite in a fresh headless Chromium (puppeteer-core
-against the playwright headless shell) over a local static server rooted at the branch
-checkout. Results:
-
-- **Default theme (fresh visitor, empty localStorage):** data-theme=paper, no FOUC
-  (head bootstrap sets the attr before first paint), body bg rgb(239,230,211) = #efe6d3.
-- **Theme persistence:** set blueprint via ?theme=blueprint, reloaded WITHOUT the param
-  → data-theme=blueprint (localStorage 'portfolio-theme' honored). PASS.
-- **No horizontal overflow:** portfolio 1440/390, blog 1440/390 → scrollWidth ==
-  clientWidth on every shot (overflow list empty). PASS.
-- **No JS errors / pageerrors** on any page. PASS.
-- **Nav anchors:** journey/about/experience/projects/consulting/skills/contact all
-  resolve (7/7) on index.html. blog.html nav (about/experience/projects/skills/blog/
-  contact) all present. PASS.
-- **fade-in safety:** 35 .fade-in elements, 0 left at opacity 0 after load (script.js
-  guard holds — content never stranded invisible). PASS.
-- **Blog index:** posts.json fetches 180 entries, count element shows 180, page 1 shows
-  7 notebook cards, all hrefs = blog/{date}.html contract, first = blog/2026-10-28.html.
-  Fonts: Playfair Display (display) + paper surface. PASS.
-- **Theme fonts swap correctly:** paper→Playfair Display, blueprint→Space Grotesk,
-  swiss→IBM Plex Mono. Themebar shows 4 switches, active one aria-pressed. PASS.
-
-### Screenshots captured this run (local render, evidence)
-- /tmp/v2check/portfolio-paper-1440.png  (default theme, 1440)
-- /tmp/v2check/portfolio-paper-1440-full.png (full page)
-- /tmp/v2check/portfolio-blueprint-1440.png (alternate theme, 1440)
-- /tmp/v2check/portfolio-paper-m-390.png  (default theme, 390)
-- /tmp/v2check/portfolio-swiss-390.png    (swiss, 390)
-- /tmp/v2check/paper-mobile-390-clean.png (pristine-browser paper, 390)
-- /tmp/v2check/blog-index-1440.png        (blog index, 1440)
-- /tmp/v2check/blog-index-1440-full.png   (blog index full)
-- /tmp/v2check/blog-index-m-390.png       (blog index, 390)
-  (Note: the 5 card-attached previews in previews/t_70ba8d7b/ were captured in the
-  prior dispatch; this run re-captured equivalent shots and they match.)
+- [x] Read card, measured current state, pulled legacy palettes from git
+- [x] Set up worktree on bld-0839d-theme-restore
+- [x] v2.css: add 5 legacy token blocks (dark/light/eink/xterm/drunk)
+- [x] v2.css: make seminar the default (move :root to seminar palette)
+- [x] New shared theme.js (boot + switcher + 9-theme list, single source of truth)
+- [x] index.html: remove inline themebar markup/CSS/JS; add theme.js; keep nav button; 44px tap target
+- [x] blog.html: add theme.js include + nav button; body uses tokens
+- [x] herald render_v2.py post template: add v2.css + theme.js + top bar w/ nav button
+- [x] Screenshot matrix (390/1440 x index/blog/post x seminar/eink/swiss) in previews/t_0839ddff/
+- [x] Verify: grep themebar=0, 0 JS console errors (index+blog), persistence, no FOUC, cycle, nav anchors, og meta, no overflow
+- [x] Herald test suite: 30 passed (incl. new switcher + relative-path tests)
+- [x] Push to branch (portfolio + herald) + open PR
 
 ## Notes
-- v2.css is the single token source: `:root, [data-theme="paper"]` is the default, so blog.html
-  (no data-theme) renders Paper; index.html switches via data-theme attribute swap.
-- Theme switcher: inline <head> bootstrap sets data-theme before first paint (no FOUC), honors
-  ?theme= param then localStorage('portfolio-theme'), default paper. Click handler + nav cycle
-  button both call setTheme() which persists to localStorage and re-renders aria-pressed + index.
-- script.js legacy cycler (dark/light/eink/xterm/drunken) still serves hire/services/etc; it now
-  early-returns on pages carrying the v2 switcher so the two never fight over data-theme.
-- Pre-existing data gap: blog/2026-09-22.html is referenced by posts.json but absent on master
-  (confirmed via `git cat-file -e origin/master:blog/2026-09-22.html`). Not introduced by this
-  change; the link contract (blog/{slug||date}.html) is byte-identical to master. 179/180 resolve.
+- localStorage key = 'portfolio-theme' (kept). Cycle: seminar→swiss→paper→blueprint→dark→light→eink→xterm→drunk.
+- Default theme = seminar. :root carries seminar palette so no-js/pre-boot paint is dark.
+- **Bug found + fixed in verification (2026-10-30):** the old v1 5-theme cycler in
+  `script.js` (used the 'theme' key + bound a 2nd click listener to the same
+  #theme-cycle button) had a `.thm`/`__setTheme` guard that stopped firing once
+  the .themebar row was removed, so every click double-advanced the theme
+  (seminar→eink instead of seminar→swiss). Removed that block from script.js —
+  theme.js is now the single source of truth on every page that loads it
+  (index.html + blog.html). Verified: 1 step per click, correct 9-theme order.
+- Post article-body palette is the pre-existing per-mode (Dark Seminar / Notebook) inline CSS — the shared theme system (data-theme + switcher + persistence) IS wired in; the article content palette is out of scope ("do NOT change generated post content"). Documented in previews/t_0839ddff/NOTES.md.
+- favicon.ico 404 is pre-existing (live site 404s it too), not a JS error.
+- Herald render change is on the same branch name bld-0839d-theme-restore in the herald repo.
 
 ## Acceptance Criteria Self-Check
-- [x] AC1: Branch bld-70ba8d7b-v2-portfolio off master; PR to hdarwish/hdarwish.github.io master; staged exact files only — PASS (diff touches only PROGRESS.md, blog.html, index.html, script.js, v2.css; no git add -A)
-- [x] AC2: 390px + 1440px screenshots — portfolio default (Paper), alternate (Blueprint), blog index — PASS (5 shots captured + vision-verified; attached to card)
-- [x] AC3: Every post link returns 200 on live after merge (spot-check >=3 oldest + newest) — PASS locally (179/180 resolve 200; 6 spot-checked oldest+newest all 200; the 1 miss blog/2026-09-22.html is a pre-existing master data gap, confirmed absent on origin/master, not a regression introduced here).
-- [x] AC4: Theme switcher persists across reload (localStorage), no FOUC, all nav anchors resolve — PASS (localStorage 'portfolio-theme' + head bootstrap before paint; 7/7 nav anchors present)
-- [~] AC5: DONE proof — git ls-remote + PR number + post-merge curl byte/hash comparison — PARTIAL: `git ls-remote origin bld-70ba8d7b-v2-portfolio` -> 690bdeb54083c1ace5e7aaacc7f39f44a682ad64; PR #36 OPEN (base master). Post-merge live curl byte/hash comparison pending merge (Reviewer/Architect gate).
-- [x] AC6: Rollback documented — single `git revert <merge-sha>` (no pipeline state) — PASS (static HTML/CSS/JS only; no pipeline touched)
-- [x] Keep-intact: og:/twitter meta + SEO, nav anchors + mobile nav, localStorage persistence, no-FOUC, reduced-motion, no horizontal overflow at 390px — PASS (og/twitter/description/canonical present; reduced-motion added to both pages; 390px shots show hamburger + no right-edge overflow)
-
-## Rollback
-Single `git revert <merge-sha>` on master. No pipeline/herald state involved — pure static
-surface change (blog.html, index.html, v2.css, script.js).
+- [x] AC1: 9 themes selectable via top-right button only; no .themebar markup/CSS/JS — PASS (grep themebar across index.html/blog.html/v2.css/theme.js = 0 hits; 9 data-theme blocks in v2.css; 9 themes in theme.js; cycle verified)
+- [x] AC2: Screenshot matrix 390/1440 x (index, blog.html, one post preview) x (seminar, eink, swiss) in previews/<card-id>/ — PASS (18 shots in previews/t_0839ddff/screenshots/, all render correct theme, vision-verified)
+- [x] AC3: Theme persists across reload AND across pages with no FOUC — PASS (headless: set eink -> reload stays eink -> blog carries eink -> post carries eink; boot sets data-theme before paint)
+- [x] AC4: 0 console JS errors at 390/1440 on index + blog.html — PASS (only pre-existing favicon.ico 404, which also 404s on live; no JS errors)
+- [x] AC5: nav anchors, post links, og/SEO meta intact; no overflow at 390/1440 — PASS (7 anchors present; 180 posts in posts.json + render fn intact; og:url/og-image/twitter intact; scrollWidth==clientWidth at both sizes)
+- [x] AC6: Rollback via git revert — PASS (single-branch change, reversible)
+- [x] AC7 (work 5): post template extended from herald template lane, proved with local preview, generated posts NOT touched — PASS (herald/blog/render_v2.py build_post_page_v2 modified; 30 herald tests pass; preview rendered locally; no blog/*.html hand-edited, no pipeline run)

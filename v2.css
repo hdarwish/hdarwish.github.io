@@ -53,9 +53,51 @@
    rhythm. Switching = swapping one data-theme attribute.
    ============================================================ */
 
-/* ---- PAPER (default) — warm paper, vermilion ink ---------------
+/* ---- Default fallback: SEMINAR palette on :root -------------------
+   Hafs keeps Seminar as the default. :root carries the fallback so a
+   no-js / pre-boot paint is already dark (seminar), not a paper flash.
+   The full [data-theme="seminar"] block below is the same palette. */
+:root {
+  --bg:          #161009;
+  --bg-raised:   #1e160c;
+  --bg-card:     #211809;
+  --nav-bg:      #161009;
+  --ink:         #e6d8bf;
+  --ink-strong:  #f3e9d4;
+  --ink-soft:    #b7a383;
+  --ink-faint:   #93815f;
+  --accent:      #e08b4e;
+  --accent-soft: rgba(224, 139, 78, 0.10);
+  --btn-fg:      #161009;
+  --line:        #3a2c18;
+  --line-strong: #57422a;
+  --kicker:      #d29a5e;
+  --code-bg:     #2c2110;
+  --code-ink:    #f0b98a;
+  --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+
+  /* type rhythm */
+  --hero-size:  clamp(2.4rem, 5.2vw, 3.6rem);
+  --hero-lh:    1.06;
+  --hero-ls:    -0.015em;
+  --title-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  --h2-size:    1.7rem;
+  --body-size:  1.05rem;
+  --body-lh:    1.8;
+  --section-gap: 3.4rem;
+
+  /* status badges (AA on umber) */
+  --st-live:      #59d6a0;
+  --st-oss:       #6ec1e4;
+  --st-building:  #e0a13f;
+  --st-offer:     #c792ea;
+  --st-waitlist:  #93815f;
+
+  --bg-texture: none;
+}
+
+/* ---- PAPER — warm paper, vermilion ink ----------------------------
    The journal surface. Matches the detail page notebook mode. */
-:root,
 [data-theme="paper"] {
   --bg:          #efe6d3;   /* warm paper ground */
   --bg-raised:   #f6efe0;   /* hover / lifted surfaces */
@@ -97,8 +139,8 @@
 }
 
 /* ---- SEMINAR (dark) — the detail page's dark mode --------------
-   A true dark companion to Paper, not an inversion: warm ink on
-   deep umber, the same vermilion accent carried through. */
+   Default theme. A true dark companion to Paper, not an inversion:
+   warm ink on deep umber, the same vermilion accent carried through. */
 [data-theme="seminar"] {
   --bg:          #161009;
   --bg-raised:   #1e160c;
@@ -225,6 +267,229 @@
   --bg-texture:
     linear-gradient(rgba(138, 180, 232, 0.075) 1px, transparent 1px),
     linear-gradient(90deg, rgba(138, 180, 232, 0.075) 1px, transparent 1px);
+}
+
+/* ============================================================
+   LEGACY THEMES (restored from v1, commit 021289b:style.css)
+   Palettes ported onto the v2 token vocabulary so they re-skin
+   the CURRENT editorial layout (nav, cards, sections), not the
+   dead v1 markup. One token set per theme.
+   ============================================================ */
+
+/* ---- DARK — near-black, cool blue accent (v1 default) ----------- */
+[data-theme="dark"] {
+  --bg:          #0a0a0c;
+  --bg-raised:   #111114;
+  --bg-card:     #101114;
+  --nav-bg:      #0a0a0c;
+  --ink:         #e4e4e7;
+  --ink-strong:  #f4f4f5;
+  --ink-soft:    #a1a1aa;
+  --ink-faint:   #71717a;
+  --accent:      #3b82f6;
+  --accent-soft: rgba(59, 130, 246, 0.15);
+  --btn-fg:      #0a0a0c;
+  --line:        #2a2a2e;
+  --line-strong: #3a3a40;
+  --kicker:      #60a5fa;
+  --code-bg:     #15161a;
+  --code-ink:    #93c5fd;
+  --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+
+  --hero-size:  clamp(2.4rem, 5.2vw, 3.6rem);
+  --hero-lh:    1.06;
+  --hero-ls:    -0.015em;
+  --title-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  --h2-size:    1.7rem;
+  --body-size:  1.05rem;
+  --body-lh:    1.8;
+  --section-gap: 3.4rem;
+
+  --st-live:      #34d399;
+  --st-oss:       #60a5fa;
+  --st-building:  #fbbf24;
+  --st-offer:     #f97316;
+  --st-waitlist:  #a1a1aa;
+
+  --bg-texture: none;
+}
+
+/* ---- LIGHT — cool near-white, blue accent ----------------------- */
+[data-theme="light"] {
+  --bg:          #faf8f5;
+  --bg-raised:   #f0ece6;
+  --bg-card:     #ffffff;
+  --nav-bg:      #faf8f5;
+  --ink:         #1a1a1e;
+  --ink-strong:  #111114;
+  --ink-soft:    #5c5c66;
+  --ink-faint:   #8a8a94;
+  --accent:      #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.10);
+  --btn-fg:      #faf8f5;
+  --line:        #e2ddd5;
+  --line-strong: #d2ccbf;
+  --kicker:      #2563eb;
+  --code-bg:     #f0ece6;
+  --code-ink:    #1d4ed8;
+  --card-shadow: 0 6px 18px rgba(80, 70, 55, 0.12);
+
+  --hero-size:  clamp(2.4rem, 5.2vw, 3.6rem);
+  --hero-lh:    1.06;
+  --hero-ls:    -0.015em;
+  --title-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  --h2-size:    1.7rem;
+  --body-size:  1.05rem;
+  --body-lh:    1.8;
+  --section-gap: 3.4rem;
+
+  --st-live:      #15803d;
+  --st-oss:       #1d4ed8;
+  --st-building:  #a16207;
+  --st-offer:     #c2410c;
+  --st-waitlist:  #6d28d9;
+
+  --bg-texture: none;
+}
+
+/* ---- EINK — grayscale paper, monochrome (e-ink / print friendly) - */
+[data-theme="eink"] {
+  --bg:          #e8e4da;
+  --bg-raised:   #ddd9cf;
+  --bg-card:     #f2efe8;
+  --nav-bg:      #e8e4da;
+  --ink:         #1a1a1a;
+  --ink-strong:  #000000;
+  --ink-soft:    #555555;
+  --ink-faint:   #777777;
+  --accent:      #333333;
+  --accent-soft: rgba(0, 0, 0, 0.06);
+  --btn-fg:      #e8e4da;
+  --line:        #c4bfb5;
+  --line-strong: #b0aa9e;
+  --kicker:      #444444;
+  --code-bg:     #ddd9cf;
+  --code-ink:    #1a1a1a;
+  --card-shadow: 0 4px 14px rgba(60, 55, 45, 0.14);
+
+  --hero-size:  clamp(2.4rem, 5.2vw, 3.6rem);
+  --hero-lh:    1.06;
+  --hero-ls:    -0.015em;
+  --title-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  --h2-size:    1.7rem;
+  --body-size:  1.05rem;
+  --body-lh:    1.8;
+  --section-gap: 3.4rem;
+
+  /* grayscale status badges (v1 eink is monochrome) */
+  --st-live:      #333333;
+  --st-oss:       #444444;
+  --st-building:  #555555;
+  --st-offer:     #444444;
+  --st-waitlist:  #555555;
+
+  --bg-texture: none;
+}
+
+/* ---- XTERM — green phosphor terminal ----------------------------- */
+[data-theme="xterm"] {
+  --bg:          #000000;
+  --bg-raised:   #0a0a0a;
+  --bg-card:     #111111;
+  --nav-bg:      #000000;
+  --ink:         #33ff33;
+  --ink-strong:  #66ff66;
+  --ink-soft:    #20aa20;
+  --ink-faint:   #1d8a1d;
+  --accent:      #00ff00;
+  --accent-soft: rgba(0, 255, 0, 0.08);
+  --btn-fg:      #000000;
+  --line:        #1a3a1a;
+  --line-strong: #265026;
+  --kicker:      #33ff33;
+  --code-bg:     #0a150a;
+  --code-ink:    #33ff33;
+  --card-shadow: 0 0 0 1px #123012;
+
+  --font-display: 'JetBrains Mono', 'Courier New', ui-monospace, monospace;
+  --font-body:    'JetBrains Mono', 'Courier New', ui-monospace, monospace;
+  --font-mono:    'JetBrains Mono', 'Courier New', ui-monospace, monospace;
+  --hero-size:  clamp(2.4rem, 6vw, 4.2rem);
+  --hero-lh:    0.98;
+  --hero-ls:    -0.03em;
+  --title-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  --h2-size:    1.5rem;
+  --body-size:  0.95rem;
+  --body-lh:    1.75;
+  --section-gap: 4rem;
+
+  --st-live:      #33ff33;
+  --st-oss:       #20cc20;
+  --st-building:  #20aa20;
+  --st-offer:     #20cc20;
+  --st-waitlist:  #20aa20;
+
+  /* faint phosphor grid, echoing the v1 xterm body texture */
+  --bg-texture:
+    repeating-linear-gradient(90deg, transparent, transparent 58px, rgba(0,255,0,0.10) 58px, rgba(0,255,0,0.10) 60px),
+    repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(0,255,0,0.08) 38px, rgba(0,255,0,0.08) 40px);
+}
+
+/* ---- DRUNK — neon wobble chaos (purple ground, pink accent) ------ */
+[data-theme="drunk"] {
+  --bg:          #1a0a2e;
+  --bg-raised:   #220e3a;
+  --bg-card:     #2d1350;
+  --nav-bg:      #1a0a2e;
+  --ink:         #ffccff;
+  --ink-strong:  #ffe6ff;
+  --ink-soft:    #cc88dd;
+  --ink-faint:   #a866bb;
+  --accent:      #ff6ec7;
+  --accent-soft: rgba(255, 110, 199, 0.15);
+  --btn-fg:      #1a0a2e;
+  --line:        #4a2080;
+  --line-strong: #6a32a8;
+  --kicker:      #ff99dd;
+  --code-bg:     #2d1350;
+  --code-ink:    #ff99dd;
+  --card-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+
+  --hero-size:  clamp(2.4rem, 5.2vw, 3.6rem);
+  --hero-lh:    1.06;
+  --hero-ls:    -0.015em;
+  --title-size: clamp(1.9rem, 4.2vw, 2.9rem);
+  --h2-size:    1.7rem;
+  --body-size:  1.05rem;
+  --body-lh:    1.8;
+  --section-gap: 3.4rem;
+
+  --st-live:      #ff99dd;
+  --st-oss:       #88ccff;
+  --st-building:  #ffcc33;
+  --st-offer:     #ffaa55;
+  --st-waitlist:  #cc88ff;
+
+  /* crosshatch chaos, echoing the v1 drunk body texture */
+  --bg-texture:
+    repeating-linear-gradient(90deg, transparent, transparent 58px, rgba(255,110,199,0.10) 58px, rgba(255,110,199,0.10) 60px),
+    repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(110,200,255,0.07) 38px, rgba(110,200,255,0.07) 40px);
+}
+
+/* Drunk wobble (v1 chaos). Gated behind the theme so it never runs
+   under any other theme; reduced-motion kills it via the :root rule. */
+@keyframes v2-wobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(0.5deg) translateX(2px); }
+  50% { transform: rotate(-0.3deg) translateY(1px); }
+  75% { transform: rotate(0.4deg) translateX(-1px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html[data-theme="drunk"] .section,
+  html[data-theme="drunk"] .hero-content,
+  html[data-theme="drunk"] .timeline-content {
+    animation: v2-wobble 3s ease-in-out infinite;
+  }
 }
 
 /* Apply the ground + texture to the body of any themed page. */
