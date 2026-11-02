@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-02",
+    "title": "The Bug Finder Is Now The Bottleneck",
+    "tags": [
+      "postgresql",
+      "software-quality",
+      "ai-testing",
+      "engineering-process"
+    ],
+    "excerpt": "",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The Bug Finder Is Now The Bottleneck",
+    "social_teasers": {
+      "linkedin": "The Bug Finder Is Now The Bottleneck\n\nThe Bug Finder Is Now The Bottleneck\n\nhttps://hafs.dev/blog/2026-11-02.html\n\n#postgresql #software-quality #ai-testing",
+      "x": "The Bug Finder Is Now The Bottleneck\nhttps://hafs.dev/blog/2026-11-02.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-02.html"
+  },
+  {
     "date": "2026-11-01",
     "title": "Your CPU is waiting, not working",
     "tags": [
