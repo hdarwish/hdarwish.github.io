@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Fields Medalist reached for ChatGPT. The math was the least interesting part. - Hafs Ibrahim</title>
+    <meta name="description" content="Terence Tao — one of the greatest living mathematicians — shared a ChatGPT conversation as a working artifact. Not as a curiosity. Not as a cautionary tale....">
+    <meta property="og:title" content="A Fields Medalist reached for ChatGPT. The math was the least interesting part.">
+    <meta property="og:description" content="Terence Tao — one of the greatest living mathematicians — shared a ChatGPT conversation as a working artifact. Not as a curiosity. Not as a cautionary tale....">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-09-22.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Fields Medalist reached for ChatGPT. The math was the least interesting part.">
+    <meta name="twitter:description" content="Terence Tao — one of the greatest living mathematicians — shared a ChatGPT conversation as a working artifact. Not as a curiosity. Not as a cautionary tale....">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-09-22">
+            <div class="blog-post-date">September 22, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">mathematics</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">AI</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">research</span></div>
+            <h2 class="blog-post-title">A Fields Medalist reached for ChatGPT. The math was the least interesting part.</h2>
+            
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>Terence Tao — one of the greatest living mathematicians — shared a ChatGPT conversation as a working artifact. Not as a curiosity. Not as a cautionary tale. As a legitimate research partner.</p><p>The most revealing part isn't the math. It's that he reached for the chatbot at all.</p><h2>The wrong question</h2><p>Everyone arguing about whether the AI "really" solved anything is arguing about the wrong thing. The question isn't "can AI do mathematics?" It's "what does it mean that the best human mathematicians now think with a machine?"</p><p>That boundary just moved. And nobody noticed because they were too busy checking the proof.</p><h2>What Tao actually did</h2><p>In the shared conversation, Tao works through a potential counterexample to the Jacobian Conjecture — a famous open problem in algebraic geometry. The conjecture says, roughly, that if a polynomial map from n-dimensional space to itself has a constant Jacobian determinant, then it has a polynomial inverse. It's been open since 1939. It's the kind of problem that eats careers.</p><p>Tao doesn't ask ChatGPT for a proof. He asks it to explore. He proposes a construction, the chatbot pushes back, he refines, it suggests a direction, he checks it, discards it, tries another. The conversation reads like two mathematicians at a blackboard — except one of them is a stochastic parrot with a trillion parameters.</p><p>And that's the point. Tao isn't using ChatGPT as an oracle. He's using it as a <em>sounding board</em> — a tireless, infinitely patient collaborator that will chase any idea, no matter how half-baked, without ever getting bored or defensive.</p><h2>The mechanism: what the chatbot actually does</h2><p>Here's what's happening under the hood. A language model doesn't reason the way a mathematician does. It doesn't hold a proof in its head and check each step against the axioms. It predicts the next token — the next symbol — given everything before it. When Tao writes a polynomial map, the model generates a response that is statistically likely to follow, given the patterns in its training data.</p><p>That sounds useless for mathematics. And for <em>finding</em> a proof, it mostly is. But for <em>exploring</em> a problem — for generating candidate constructions, for pointing out an inconsistency, for suggesting a lemma that might be relevant — it's surprisingly effective. Because mathematics isn't just deduction. It's also <em>search</em>. And search benefits from a partner who will generate a hundred bad ideas so you can discard ninety-nine of them.</p><p>The metric that matters isn't accuracy. It's <em>throughput of ideas per unit of human attention</em>. A human collaborator gives you maybe three good suggestions in an hour, and you have to manage their ego while you're at it. ChatGPT gives you thirty suggestions in a minute, and you can ignore all of them without hurting its feelings.</p><p>The consequence: the bottleneck in mathematical research is no longer generating ideas. It's <em>filtering</em> them.</p><h2>The turn</h2><p>So here's the thing everyone is missing. The Jacobian Conjecture conversation isn't evidence that LLMs can do mathematics. It's evidence that the boundary of what counts as "doing mathematics" just moved.</p><p>When a Fields Medalist reaches for ChatGPT, the math is the least interesting part.</p><p>Think about what that means. Tao — a man who has spent his life pushing the limits of human mathematical intuition — decided that a language model, a machine that has never <em>understood</em> a single equation, was worth bringing into his research process. Not because it could prove theorems. Because it could <em>think alongside him</em>.</p><p>That's not a statement about AI. That's a statement about mathematics. The field has always been a human activity — a dance between intuition and rigor, between the flash of insight and the slow work of checking. What Tao is showing us is that the dance now has a third partner. And the partner doesn't need to understand the music to keep the beat.</p><h2>What this frees you to do</h2><p>Stop asking whether the AI "really" understands. Start asking what you can build with a tool that never gets tired, never gets offended, and never runs out of bad ideas.</p><p>Picture a service that generates candidate solutions to your hardest problem — not because it knows the answer, but because it can produce a thousand paths and let you find the one that doesn't dead-end. That's not delegation. That's <em>amplification</em>. The machine doesn't replace the mathematician. It replaces the part of the mathematician that gets stuck.</p><p>The analogy breaks, of course. A human collaborator brings judgment, taste, and the ability to say "this is beautiful" — things a language model fakes at best. But the point stands: the scarce resource in mathematics was never computation. It was <em>attention</em>. And Tao just showed us a way to buy more of it.</p><p>The next time you see someone arguing about whether an AI "really" solved a problem, ask them a better question: <em>what did the human do with the machine's help that they couldn't do alone?</em> That's the only metric that matters. And by that metric, Tao's conversation is a landmark — not because the chatbot was brilliant, but because the mathematician was.</p><p>The math was the least interesting part. The partnership was the story.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Terence Tao&#39;s ChatGPT conversation about the Jacobian Conjecture counterexample</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲748</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://chatgpt.com/share/6a5fdc7a-d6f8-83e8-bbea-8deb42cfed56" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Terence Tao&#39;s ChatGPT conversation on the Jacobian Conjecture</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://en.wikipedia.org/wiki/Jacobian_conjecture" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Jacobian Conjecture (Wikipedia)</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://terrytao.wordpress.com/" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Terence Tao&#39;s blog</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

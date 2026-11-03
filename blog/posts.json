@@ -1,34 +1,6 @@
 [
   {
     "date": "2026-11-03",
-    "slug": "2026-11-03-the-optimizer-is-now-the-brain",
-    "category": "deep_read",
-    "title": "The optimizer is now the brain",
-    "tags": [
-      "LLMs",
-      "Interpretability",
-      "Neural Networks",
-      "Optimization"
-    ],
-    "excerpt": "Frontier LLMs are no longer just writing code that trains networks. They are reading the raw weights themselves, diagnosing failure modes, and rewriting the parameters directly.",
-    "hn_refs": [],
-    "further_reading": [
-      {
-        "title": "Sparks of Weight-Space Programming: LLMs can natively read & write neural network weights",
-        "url": "https://rikiyat.github.io/blog/weight-space-programming",
-        "kind": "article"
-      }
-    ],
-    "source_attribution": null,
-    "share_description": "Frontier LLMs are no longer just writing code that trains networks. They are reading the raw weights themselves, diagnosing failure modes, and rewriting the par",
-    "social_teasers": {
-      "linkedin": "The optimizer is now the brain\n\nFrontier LLMs are no longer just writing code that trains networks. They are reading the raw weights themselves, diagnosing failure modes, and rewriting the parameters directly.\n\nhttps://hafs.dev/blog/2026-11-03-the-optimizer-is-now-the-brain.html\n\n#LLMs #Interpretability #NeuralNetworks",
-      "x": "The optimizer is now the brain\nhttps://hafs.dev/blog/2026-11-03-the-optimizer-is-now-the-brain.html"
-    },
-    "canonical_url": "https://hafs.dev/blog/2026-11-03-the-optimizer-is-now-the-brain.html"
-  },
-  {
-    "date": "2026-11-03",
     "slug": "2026-11-03-the-optimizer-is-no-longer-the-bottleneck",
     "category": "deep_read",
     "title": "The Optimizer Is No Longer the Bottleneck",

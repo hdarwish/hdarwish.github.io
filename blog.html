@@ -147,6 +147,33 @@
         padding: 2px 8px; border: 1px solid var(--line); border-radius: 3px;
         color: var(--ink-faint); background: var(--card-bg);
     }
+    /* Category badge on the card (only posts that carry one, e.g. Deep Read) */
+    .post-card__cat {
+        display: inline-block; margin-bottom: 0.4rem;
+        font-family: var(--font-mono); font-size: 0.62rem; font-weight: 600;
+        letter-spacing: 0.12em; text-transform: uppercase;
+        color: var(--accent); background: var(--accent-soft);
+        border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+        padding: 2px 8px; border-radius: 3px;
+    }
+
+    /* -- Category filter chips ------------------------------------------- */
+    .journal-filter {
+        max-width: var(--max-w); margin: 0 auto; padding: 0.9rem 1.25rem 0;
+        display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;
+    }
+    .filter-chip {
+        font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.08em;
+        text-transform: uppercase; color: var(--ink-soft);
+        background: transparent; border: 1px solid var(--line); border-radius: 20px;
+        padding: 0.3rem 0.9rem; cursor: pointer;
+        transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+    }
+    .filter-chip:hover { color: var(--accent); border-color: var(--accent); }
+    .filter-chip.active {
+        color: var(--accent); border-color: var(--accent); background: var(--accent-soft);
+    }
+    .filter-chip .chip-count { opacity: 0.55; margin-left: 0.35rem; }
     .post-card__read {
         font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em;
         color: var(--accent); padding-top: 0.5rem; white-space: nowrap;
@@ -237,9 +264,10 @@
     </header>
 
     <main class="journal" id="blog-posts">
+        <div class="journal-filter" id="journal-filter" hidden></div>
         <div class="journal__section-label" id="section-label" hidden>
             <span class="journal__section-index" id="section-index">01 / 01</span>
-            <h2>Latest entries</h2>
+            <h2 id="section-title">Latest entries</h2>
         </div>
         <ol class="post-list" id="post-list">
             <li class="no-posts" id="loading">
@@ -292,6 +320,7 @@
             var allPosts = [];
             var currentPage = 1;
             var totalPages = 1;
+            var activeCategory = null;
 
             function escapeHtml(text) {
                 var div = document.createElement('div');
@@ -305,12 +334,56 @@
                 return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
             }
 
+            function categoryLabel(cat) {
+                return String(cat).replace(/[_-]+/g, ' ').replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+            }
+
+            function visiblePosts() {
+                if (!activeCategory) return allPosts;
+                return allPosts.filter(function (p) { return p.category === activeCategory; });
+            }
+
+            /* Category chips appear only when at least one post carries a
+               category — a purely-daily archive renders exactly as before. */
+            function renderChips() {
+                var wrap = document.getElementById('journal-filter');
+                var counts = {};
+                allPosts.forEach(function (p) {
+                    if (p.category) counts[p.category] = (counts[p.category] || 0) + 1;
+                });
+                var cats = Object.keys(counts).sort();
+                if (cats.length === 0) { wrap.hidden = true; wrap.innerHTML = ''; return; }
+                var html = '<button type="button" class="filter-chip' + (activeCategory === null ? ' active' : '') + '" data-cat="">All entries</button>';
+                cats.forEach(function (c) {
+                    html += '<button type="button" class="filter-chip' + (activeCategory === c ? ' active' : '') + '" data-cat="' + escapeHtml(c) + '">' +
+                        escapeHtml(categoryLabel(c)) + '<span class="chip-count">' + counts[c] + '</span></button>';
+                });
+                wrap.innerHTML = html;
+                wrap.hidden = false;
+                wrap.querySelectorAll('.filter-chip').forEach(function (chip) {
+                    chip.addEventListener('click', function () {
+                        var c = chip.getAttribute('data-cat');
+                        activeCategory = c === '' ? null : c;
+                        currentPage = 1;
+                        renderChips();
+                        renderPosts();
+                    });
+                });
+            }
+
             function renderPosts() {
                 var list = document.getElementById('post-list');
                 var label = document.getElementById('section-label');
+                var posts = visiblePosts();
                 var start = (currentPage - 1) * POSTS_PER_PAGE;
                 var end = start + POSTS_PER_PAGE;
-                var pagePosts = allPosts.slice(start, end);
+                var pagePosts = posts.slice(start, end);
+                var titleEl = document.getElementById('section-title');
+                if (titleEl) {
+                    titleEl.textContent = activeCategory
+                        ? categoryLabel(activeCategory) + ' entries'
+                        : 'Latest entries';
+                }
 
                 if (pagePosts.length === 0) {
                     list.innerHTML = '<li class="no-posts"><p>No posts yet.</p><span>Check back soon.</span></li>';
@@ -319,17 +392,24 @@
                     return;
                 }
 
+                totalPages = Math.max(1, Math.ceil(posts.length / POSTS_PER_PAGE));
+                currentPage = Math.min(currentPage, totalPages);
+
                 var html = '';
                 for (var i = 0; i < pagePosts.length; i++) {
                     var post = pagePosts[i];
                     var tagsHtml = (post.tags || []).map(function (t) {
                         return '<span>' + escapeHtml(t) + '</span>';
                     }).join('');
+                    var catHtml = post.category
+                        ? '<span class="post-card__cat">' + escapeHtml(categoryLabel(post.category)) + '</span>'
+                        : '';
                     var deck = post.excerpt || post.share_description || post.title || '';
                     html +=
                         '<li><a href="blog/' + (post.slug || post.date) + '.html" class="post-card">' +
                             '<span class="post-card__date">' + formatDate(post.date) + '</span>' +
                             '<span class="post-card__body">' +
+                                catHtml +
                                 '<h2 class="post-card__title">' + escapeHtml(post.title) + '</h2>' +
                                 '<p class="post-card__deck">' + escapeHtml(deck) + '</p>' +
                                 '<span class="post-card__tags">' + tagsHtml + '</span>' +
@@ -376,7 +456,7 @@
                     allPosts = posts.sort(function (a, b) { return b.date.localeCompare(a.date); });
                     var countEl = document.getElementById('post-count');
                     if (countEl) countEl.textContent = String(allPosts.length);
-                    totalPages = Math.max(1, Math.ceil(allPosts.length / POSTS_PER_PAGE));
+                    renderChips();
                     renderPosts();
                 })
                 .catch(function () {
