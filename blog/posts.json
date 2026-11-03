@@ -28,6 +28,26 @@
     "canonical_url": "https://hafs.dev/blog/2026-11-03-the-optimizer-is-no-longer-the-bottleneck.html"
   },
   {
+    "date": "2026-11-03",
+    "title": "The black box just opened up",
+    "category": null,
+    "tags": [
+      "Machine Learning",
+      "Interpretability",
+      "LLM Engineering"
+    ],
+    "excerpt": "For a decade, we treated model weights as sacred geometry. Now, an LLM can read them, debug them, and rewrite them without a single gradient step.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The black box just opened up",
+    "social_teasers": {
+      "linkedin": "The black box just opened up\n\nThe black box just opened up\n\nhttps://hafs.dev/blog/2026-11-03.html\n\n#MachineLearning #Interpretability #LLMEngineering",
+      "x": "The black box just opened up\nhttps://hafs.dev/blog/2026-11-03.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-03.html"
+  },
+  {
     "date": "2026-11-02",
     "title": "The Bug Finder Is Now The Bottleneck",
     "tags": [
