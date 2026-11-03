@@ -1,0 +1,9 @@
+{
+  "share_description": "Frontier LLMs are reading and writing neural network weights directly. This isn't just better optimization; it's a shift in who understands the machine.",
+  "url": "https://hafs.dev/blog/2026-11-03-the-optimizer-is-no-longer-the-bottleneck.html",
+  "title": "The Optimizer Is No Longer the Bottleneck",
+  "social_teasers": {
+    "linkedin": "The Optimizer Is No Longer the Bottleneck\n\nFrontier LLMs are reading and writing neural network weights directly. This isn't just better optimization; it's a shift in who understands the machine.\n\nhttps://hafs.dev/blog/2026-11-03-the-optimizer-is-no-longer-the-bottleneck.html\n\n#interpretability #llms #optimization",
+    "x": "The Optimizer Is No Longer the Bottleneck\nhttps://hafs.dev/blog/2026-11-03-the-optimizer-is-no-longer-the-bottleneck.html"
+  }
+}
