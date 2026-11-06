@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-06",
+    "title": "Your AI agent is an untrusted client, not a smart tool",
+    "category": null,
+    "tags": [
+      "ai-agents",
+      "security",
+      "privacy",
+      "networking"
+    ],
+    "excerpt": "The most dangerous bug in AI coding agents isn't hallucination. It's the silent exfiltration of identity metadata that happens because we treat LLMs as 'smart tools' rather than 'untrusted network clients'.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Your AI agent is an untrusted client, not a smart tool",
+    "social_teasers": {
+      "linkedin": "Your AI agent is an untrusted client, not a smart tool\n\nYour AI agent is an untrusted client, not a smart tool\n\nhttps://hafs.dev/blog/2026-11-06.html\n\n#ai-agents #security #privacy",
+      "x": "Your AI agent is an untrusted client, not a smart tool\nhttps://hafs.dev/blog/2026-11-06.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-06.html"
+  },
+  {
     "date": "2026-11-05",
     "title": "Patching is a symptom, not a cure",
     "category": null,

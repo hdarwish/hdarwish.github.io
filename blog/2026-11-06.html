@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your AI agent is an untrusted client, not a smart tool - Hafs Ibrahim</title>
+    <meta name="description" content="Your AI agent is an untrusted client, not a smart tool">
+    <meta property="og:title" content="Your AI agent is an untrusted client, not a smart tool">
+    <meta property="og:description" content="Your AI agent is an untrusted client, not a smart tool">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-11-06.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your AI agent is an untrusted client, not a smart tool">
+    <meta name="twitter:description" content="Your AI agent is an untrusted client, not a smart tool">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
+    </style>
+</head>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
+    </div>
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-11-06">
+<header class="seminar__head"><p class="seminar__date">November 06, 2026</p><h1 class="seminar__title">Your AI agent is an untrusted client, not a smart tool</h1><p class="seminar__deck">The most dangerous bug in AI coding agents isn&#x27;t hallucination. It&#x27;s the silent exfiltration of identity metadata that happens because we treat LLMs as &#x27;smart tools&#x27; rather than &#x27;untrusted network clients&#x27;.</p></header>
+<div class="seminar__tags"><span>ai-agents</span><span>security</span><span>privacy</span><span>networking</span></div>
+<div class="seminar__premise"><p>When an agent makes an HTTP request, it is no longer &#x27;thinking.&#x27; It is a network client. The moment it speaks HTTP, it is subject to the same security constraints as any other client: it must not leak identity, it must not trust the response, and it must not assume the server is well-intentioned.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>The distinction between a *tool* (which you control) and a *client* (which talks to the outside world). A tool operates on local state. A client operates on network state. Treating a network client like a local tool is a category error that leaks data.</p>
+<section class="seminar__section" id="sec-1-the-silent-passenger"><div class="seminar__section-index">01</div><h2>The Silent Passenger</h2><p>Your AI coding assistant is likely sending your email address to every API endpoint it touches, and you probably didn&#x27;t notice because it worked.</p>
+<p>This isn&#x27;t a hypothetical. A GitHub issue on the <code>claude-code</code> repository highlights a privacy violation in the <code>User-Agent</code> header. The agent, in its effort to be a helpful, well-behaved citizen of the web, is broadcasting its identity—and by extension, your identity—into the headers of every request it makes.</p>
+<p>The mechanism is simple. The agent needs to identify itself to servers to handle rate limiting, debugging, or attribution. So it puts its name in the <code>User-Agent</code> string. But in doing so, it often includes metadata that links back to the human user. Your email address. Your session ID. The context of your work.</p></section>
+<section class="seminar__section" id="sec-2-the-category-error"><div class="seminar__section-index">02</div><h2>The Category Error</h2><p>Why does this happen? Because we build agents as *smart tools*. We think of them as the smartest version of our own <code>curl</code> command. We assume that because the agent is &#x27;ours,&#x27; the data it sends is &#x27;ours&#x27; to control. We assume that because the agent is &#x27;smart,&#x27; it knows when to send the email and when not to.</p>
+<p>This is a category error. A <code>User-Agent</code> header is not a private message. It is a public broadcast. It is sent to the server, logged by the server, seen by intermediate proxies, and stored in access logs. It is a network artifact, not a local variable.</p>
+<p>When you treat an agent as a tool, you optimize for *capability*. You want it to be able to talk to any API, any endpoint, any service. You don&#x27;t add friction. You don&#x27;t strip headers. You don&#x27;t sandbox the network calls. You trust the tool to be smart.</p>
+<p>But a *client* is not trusted. A client is an untrusted network peer. It is the same as a browser tab you didn&#x27;t open. It is the same as a script you downloaded. It must be treated as potentially malicious, or at least potentially careless, because it is interacting with a world you do not control.</p></section>
+<section class="seminar__section" id="sec-3-the-leak-is-in-the-headers"><div class="seminar__section-index">03</div><h2>The Leak is in the Headers</h2><p>The specific mechanism here is the <code>User-Agent</code> string. In standard HTTP, this is a low-stakes field. Browsers send it. Curls send it. It&#x27;s usually a string like <code>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)</code>. It&#x27;s not supposed to contain PII.</p>
+<p>But agents are built by developers who want to be &#x27;good citizens.&#x27; They want the server to know who is calling so they can debug issues, adjust rate limits, or provide better support. So they put the client ID, the user ID, or the email address in the header. It feels helpful. It feels like good engineering.</p>
+<p>The metric here is *surface area*. Every header you add is a new channel for data exfiltration. The <code>User-Agent</code> header is one of the most widely logged and stored headers in the web. It is not encrypted in transit if the connection is not TLS (though it should be). It is visible to any intermediary. It is persistent in logs for years.</p>
+<p>The consequence is that your identity is now tied to every API call your agent makes. If the agent calls a third-party API, that third party now knows your email address. If the agent calls a compromised API, the attacker now knows your email address. If the agent calls a server that logs all headers, your email is in that log.</p></section>
+<section class="seminar__section" id="sec-4-the-fix-is-a-mindset-shift"><div class="seminar__section-index">04</div><h2>The Fix is a Mindset Shift</h2><p>The fix is not to remove the <code>User-Agent</code> header. The fix is to treat the agent as an untrusted network client.</p>
+<p>This means: <strong>strip all identity metadata from headers by default.</strong> The <code>User-Agent</code> should be a generic string, like <code>ClaudeCode/1.0</code>. No email. No user ID. No session token. If the server needs to know who you are, it should use an <code>Authorization</code> header with a token, not a <code>User-Agent</code> header with an email.</p>
+<p>This means: <strong>sandbox network calls.</strong> The agent should not have direct access to the internet. It should go through a proxy that filters out sensitive headers. It should not be able to make arbitrary HTTP requests. It should only be able to call pre-approved endpoints.</p>
+<p>This means: <strong>log what the agent sends.</strong> You should be able to see, in real time, every header the agent sends to every endpoint. If you can&#x27;t see it, you can&#x27;t trust it.</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>The bug is not in the code. The bug is in the mental model. We built an agent that thinks in terms of &#x27;helping the user,&#x27; but the network doesn&#x27;t care about your intent. The network only sees bytes. And if you put your email in the bytes, the network will keep it.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> A tool is like a hammer. You control it. You decide what to hit. A client is like a letter you mail. Once it&#x27;s in the post, you don&#x27;t control who sees it, who copies it, or who keeps it.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> A letter is a one-way broadcast. A network client is a two-way conversation. The agent receives data back, which can also be a vector for exfiltration or injection.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>When building or deploying an AI agent that makes network calls</dd><dt>Prefer</dt><dd>Treat the agent as an untrusted client. Strip identity from headers. Sandbox network access. Log all outbound traffic.</dd><dt>Avoid</dt><dd>Treating the agent as a &#x27;smart tool&#x27; that you can trust to make good decisions about what to send over the network.</dd></dl></div>
+<p class="seminar__finish">The next time your agent makes a request, ask yourself: is this a tool I control, or a client I trust? If it&#x27;s the latter, you&#x27;re already leaking.</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://github.com/anthropics/claude-code/issues/107757" target="_blank" rel="noopener">Bug Report: Privacy violation in User-Agent header · Issue #107757 · anthropics/claude-code</a><span class="kind">DOCS</span></li></ol></footer>
+</article>
+    </main>
+</body>
+</html>
