@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-07",
+    "title": "Your AI is lying about who you are",
+    "category": null,
+    "tags": [
+      "ai-security",
+      "privacy",
+      "agentic-ai",
+      "claude-code"
+    ],
+    "excerpt": "Claude Code is broadcasting your email address to strangers in the User-Agent header. The leak is a symptom; the trust model is the disease.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Your AI is lying about who you are",
+    "social_teasers": {
+      "linkedin": "Your AI is lying about who you are\n\nYour AI is lying about who you are\n\nhttps://hafs.dev/blog/2026-11-07.html\n\n#ai-security #privacy #agentic-ai",
+      "x": "Your AI is lying about who you are\nhttps://hafs.dev/blog/2026-11-07.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-07.html"
+  },
+  {
     "date": "2026-11-06",
     "title": "Your AI agent is an untrusted client, not a smart tool",
     "category": null,
