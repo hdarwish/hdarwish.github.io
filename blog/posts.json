@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-08",
+    "title": "The 'Don't Ask Again' button is a security hole",
+    "category": null,
+    "tags": [
+      "security",
+      "ai-coding",
+      "human-factors",
+      "github"
+    ],
+    "excerpt": "1,122 public GitHub repositories now contain exposed passwords, not because of a sophisticated hacker, but because an AI assistant asked for permission to read a file and the user clicked 'Don't Ask Again' without thinking.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The 'Don't Ask Again' button is a security hole",
+    "social_teasers": {
+      "linkedin": "The 'Don't Ask Again' button is a security hole\n\nThe 'Don't Ask Again' button is a security hole\n\nhttps://hafs.dev/blog/2026-11-08.html\n\n#security #ai-coding #human-factors",
+      "x": "The 'Don't Ask Again' button is a security hole\nhttps://hafs.dev/blog/2026-11-08.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-08.html"
+  },
+  {
     "date": "2026-11-07",
     "title": "Your AI is lying about who you are",
     "category": null,

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The &#x27;Don&#x27;t Ask Again&#x27; button is a security hole - Hafs Ibrahim</title>
+    <meta name="description" content="The &#x27;Don&#x27;t Ask Again&#x27; button is a security hole">
+    <meta property="og:title" content="The &#x27;Don&#x27;t Ask Again&#x27; button is a security hole">
+    <meta property="og:description" content="The &#x27;Don&#x27;t Ask Again&#x27; button is a security hole">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-11-08.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The &#x27;Don&#x27;t Ask Again&#x27; button is a security hole">
+    <meta name="twitter:description" content="The &#x27;Don&#x27;t Ask Again&#x27; button is a security hole">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
+    </style>
+</head>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
+    </div>
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-11-08">
+<header class="seminar__head"><p class="seminar__date">November 08, 2026</p><h1 class="seminar__title">The &#x27;Don&#x27;t Ask Again&#x27; button is a security hole</h1><p class="seminar__deck">1,122 public GitHub repositories now contain exposed passwords, not because of a sophisticated hacker, but because an AI assistant asked for permission to read a file and the user clicked &#x27;Don&#x27;t Ask Again&#x27; without thinking.</p></header>
+<div class="seminar__tags"><span>security</span><span>ai-coding</span><span>human-factors</span><span>github</span></div>
+<div class="seminar__premise"><p>Security controls must be friction; if they are frictionless, they are invisible, and if they are invisible, they are gone.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>The difference between a security control that forces a decision and a UI convenience feature that removes the decision.</p>
+<section class="seminar__section" id="sec-1-the-friction-was-the-point"><div class="seminar__section-index">01</div><h2>The Friction Was the Point</h2><p>Every time your operating system asks for a password, it is annoying you. That annoyance is not a bug; it is the mechanism. It is a tax you pay for the privilege of accessing sensitive resources, and it is the only thing standing between your habits and a catastrophic failure. When you click &quot;Yes&quot; to a permission prompt, you are engaging in a micro-transaction of attention. You are acknowledging that something is happening that requires your consent.</p>
+<p>Now, imagine a tool that says, &quot;I will do this, but I don&#x27;t want to annoy you. I will remember that you said yes, so I never have to ask again.&quot; You click it. You feel efficient. You feel smart. You have just disabled the only line of defense against your own future carelessness. This is not a metaphor. This is exactly what happened when 1,122 public GitHub repositories started leaking passwords.</p></section>
+<section class="seminar__section" id="sec-2-the-1-122-file-failure"><div class="seminar__section-index">02</div><h2>The 1,122-File Failure</h2><p>The incident involving Claude Code and the &quot;Don&#x27;t Ask Again&quot; feature is a perfect storm of human psychology and software design. The AI coding tool needed to read files to perform its tasks. To do this, it required permission. The user, tired of clicking &quot;Allow&quot; every time the agent needed to access a new directory or file, selected the option to suppress future prompts for that specific type of action.</p>
+<p>The metric here is not latency or throughput; it is <strong>exposure</strong>. The consequence was that the agent, now free from the friction of permission checks, began reading files it should never have read. It found environment variables containing secrets. It found configuration files with API keys. And because the agent was operating in a context where those secrets were treated as normal data, they ended up in the codebase. That codebase was public. The secrets were in 1,122 files. The friction was the filter, and by removing it, you removed the filter.</p></section>
+<section class="seminar__section" id="sec-3-convenience-as-a-vector"><div class="seminar__section-index">03</div><h2>Convenience as a Vector</h2><p>We treat &quot;Don&#x27;t Ask Again&quot; as a quality-of-life feature. It is, in fact, a security vulnerability. It is a vector for error. When a system removes a decision point, it does not just save you time; it removes your ability to notice when the system is doing something wrong. The prompt was not just an interruption; it was a checkpoint. It was the moment where you could say, &quot;Wait, why is the agent looking in the <code>.env</code> directory?&quot;</p>
+<p>By clicking &quot;Don&#x27;t Ask Again,&quot; you delegated that vigilance to the tool. And the tool, being an AI, does not have the concept of &quot;sensitive.&quot; It has the concept of &quot;accessible.&quot; If a file is accessible, and you have told the tool that it is always okay to access it, the tool will access it. It will read the secret. It will write the secret. It will commit the secret. The mechanism is simple: permission persistence removes the human-in-the-loop, and the human-in-the-loop is the only thing that understands context.</p></section>
+<section class="seminar__section" id="sec-4-the-last-line-of-defense"><div class="seminar__section-index">04</div><h2>The Last Line of Defense</h2><p>The most dangerous security flaw in modern AI coding tools is not prompt injection. It is not model hallucination. It is the UI convenience feature that silently disables the last line of defense against human error. We are building tools that are faster than our attention spans, and we are rewarding speed by removing the checks that keep us honest. The result is a world where a single click, made in a moment of fatigue or convenience, can expose every secret in your organization.</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>The &quot;Don&#x27;t Ask Again&quot; button is not a feature. It is a resignation. It is the user resigning their right to be surprised, and in doing so, they resign their responsibility for the outcome.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> It is like telling your home alarm system to never beep again. The beep is annoying, but the beep is the only thing that tells you the door is open. If you silence it, you can sleep through the break-in.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> The alarm doesn&#x27;t read the files. The AI agent does. The alarm is a passive signal; the agent is an active actor. The analogy holds for the removal of the signal, but the agent&#x27;s action is more complex than a door opening.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You are using an AI coding assistant that asks for file access permissions.</dd><dt>Prefer</dt><dd>Keep the prompts. Treat every permission request as a potential security event. Audit what the agent is accessing.</dd><dt>Avoid</dt><dd>Clicking &quot;Don&#x27;t Ask Again&quot; for broad file access categories. Never suppress prompts for directories containing secrets, configuration, or environment files.</dd></dl></div>
+<p class="seminar__finish">Friction is not the enemy of security. Friction is security. The moment you remove it, you are not saving time. You are saving your future self from having to explain why the database is public.</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again" target="_blank" rel="noopener">Coding Agents Leaking Secrets to GitHub: Don&#x27;t Ask Again</a><span class="kind">ARTICLE</span></li></ol></footer>
+</article>
+    </main>
+</body>
+</html>
