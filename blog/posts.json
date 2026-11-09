@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-09",
+    "title": "The invoice isn't the product. The trust is.",
+    "category": null,
+    "tags": [
+      "software",
+      "business",
+      "trust",
+      "saas"
+    ],
+    "excerpt": "When Harvest died, it wasn't the buttons that vanished. It was the unspoken promise that the tool would remain a tool.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The invoice isn't the product. The trust is.",
+    "social_teasers": {
+      "linkedin": "The invoice isn't the product. The trust is.\n\nThe invoice isn't the product. The trust is.\n\nhttps://hafs.dev/blog/2026-11-09.html\n\n#software #business #trust",
+      "x": "The invoice isn't the product. The trust is.\nhttps://hafs.dev/blog/2026-11-09.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-09.html"
+  },
+  {
     "date": "2026-11-08",
     "title": "The 'Don't Ask Again' button is a security hole",
     "category": null,
