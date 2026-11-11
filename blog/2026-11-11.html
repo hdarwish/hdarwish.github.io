@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your code is clean; your intent is not - Hafs Ibrahim</title>
+    <meta name="description" content="Your code is clean; your intent is not">
+    <meta property="og:title" content="Your code is clean; your intent is not">
+    <meta property="og:description" content="Your code is clean; your intent is not">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-11-11.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your code is clean; your intent is not">
+    <meta name="twitter:description" content="Your code is clean; your intent is not">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
+    </style>
+</head>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
+    </div>
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-11-11">
+<header class="seminar__head"><p class="seminar__date">November 11, 2026</p><h1 class="seminar__title">Your code is clean; your intent is not</h1><p class="seminar__deck">A single patent claim halted Linux display development not by breaking the build, but by breaking the trust.</p></header>
+<div class="seminar__tags"><span>linux</span><span>open-source</span><span>patents</span><span>displaylink</span><span>legal</span></div>
+<div class="seminar__premise"><p>Open source is often treated as a shared commons, but it is actually a legal minefield where the act of understanding a system can be interpreted as an act of infringement.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>The distinction between *copyright* (which protects expression) and *patent* (which protects function) is the single most dangerous blind spot in the open-source ecosystem.</p>
+<section class="seminar__section" id="sec-1-the-rfc-that-became-a-lawsuit"><div class="seminar__section-index">01</div><h2>The RFC that became a lawsuit</h2><p>Mike Lothian wanted a working dock. His Dell station, powered by a DisplayLink chipset, was crashing under Linux. Rather than wait for a vendor fix, he used an LLM to help write a new driver, <code>Vino</code>, and posted it to the <code>dri-devel</code> mailing list as an RFC. He also opened a GitHub issue on the vendor’s own <code>EVDI</code> repository, asking for help with a specific blocker: the DL3 control-plane sequence.</p>
+<p>He got no reply from the developers. Instead, three weeks later, he received an email from Synaptics legal. It didn’t ask for a patch. It didn’t ask for a collaboration. It stated that DisplayLink is not an open standard, that the protocol is proprietary, and that Lothian’s work was moving toward implementing patented technology.</p>
+<p>The mechanism here is not code. It is <strong>intent</strong>. In copyright law, if you write the code from scratch, you are safe. You own the expression. In patent law, if you *understand* the function and replicate it, you are liable. Lothian didn’t copy a line of Synaptics code; he tried to make the hardware work. But to make the hardware work, he had to reverse-engineer the DL3 protocol. That act of understanding is what triggered the legal response.</p></section>
+<section class="seminar__section" id="sec-2-the-125-patent-appendix"><div class="seminar__section-index">02</div><h2>The 125-patent appendix</h2><p>On August 17, the tone shifted from warning to cease-and-desist. Synaptics sent a notice citing 125 patents. The letter noted that Lothian had not &quot;substantially responded&quot; to the earlier warning and had continued &quot;public statements and further development activities.&quot;</p>
+<p>The metric that matters here isn’t the number of lines of code Lothian wrote. It’s the <strong>chilling effect</strong>. One developer, in one country (Scotland, specifically, which explains the UK patent focus), now faces the threat of &quot;expensive legal penalties.&quot; The consequence is immediate: work on <code>Vino</code> has stopped. The <code>dri-devel</code> list, a place where thousands of drivers are born, has effectively lost a contributor who is now legally risked.</p>
+<p>This is the trap. The &quot;open&quot; in open-source does not mean &quot;open to legal risk.&quot; It means &quot;open to inspection.&quot; But inspection, when it leads to functional replication of a patented process, is where the legal shield fails.</p></section>
+<section class="seminar__section" id="sec-3-why-the-kernel-is-a-target"><div class="seminar__section-index">03</div><h2>Why the kernel is a target</h2><p>Synaptics (who acquired DisplayLink in 2022) provides a binary blob for Linux. They do not provide the source for the <code>DL3</code> codec. They provide an out-of-tree kernel module, <code>EVDI</code>, which is open source but only handles the virtual display interface, not the proprietary compression stream.</p>
+<p>This creates a paradox. The hardware is sold to the general public. The software is a closed blob. The kernel driver is a half-open patchwork. When a user tries to fill in the gaps with a clean-room implementation, they are stepping into a zone where the vendor’s legal team sees not a helpful community member, but a potential infringer.</p>
+<p>The mechanism of the <code>DL3</code> protocol involves compressing video, audio, and USB channels into a single stream. To decode it, you must understand the exact sequence of control-plane engagements. Lothian asked for help isolating a &quot;whole-bus timing/ordering property.&quot; That is a technical question. Synaptics answered with a legal one.</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>The danger is not that Synaptics will sue Lothian into bankruptcy. The danger is that every other developer reading the <code>dri-devel</code> list is now asking: &quot;If I try to fix this driver, will I get a letter?&quot; The patent claim didn&#x27;t just stop one driver; it froze the trust in the ecosystem. It turned a technical problem into a legal risk. And legal risk is the one thing that no amount of LLM assistance or community goodwill can mitigate.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> Imagine a library that owns the only copy of a book. You are allowed to read it, but if you write a summary of the plot in your own words and publish it, the library can sue you for copyright infringement of the *story*, even though you didn&#x27;t copy a single sentence.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> This breaks down because patent law is even broader than copyright. You don&#x27;t even need to summarize the story; you just need to achieve the same result using the same method. The library can sue you for *using the book&#x27;s logic*, not just its words.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You are working on a driver for hardware with a proprietary protocol and a closed-source blob.</dd><dt>Prefer</dt><dd>Assume that any reverse-engineering of the control plane is a legal event, not just a technical one. Check for patent portfolios before posting an RFC.</dd><dt>Avoid</dt><dd>The assumption that &quot;clean-room&quot; code is a safe harbor. It is not. Function is protected, not just expression.</dd></dl></div>
+<p class="seminar__finish">The code was clean. The intent was honest. But in the world of patents, the only thing that matters is the function. And that function belongs to them.</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://lwn.net/SubscriberLink/1102549/acbc92e00cee3a3f" target="_blank" rel="noopener">Synaptics patent claims stop work on DisplayLink drivers</a><span class="kind">ARTICLE</span></li></ol></footer>
+</article>
+    </main>
+</body>
+</html>

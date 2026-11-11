@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-11-11",
+    "title": "Your code is clean; your intent is not",
+    "category": null,
+    "tags": [
+      "linux",
+      "open-source",
+      "patents",
+      "displaylink",
+      "legal"
+    ],
+    "excerpt": "A single patent claim halted Linux display development not by breaking the build, but by breaking the trust.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Your code is clean; your intent is not",
+    "social_teasers": {
+      "linkedin": "Your code is clean; your intent is not\n\nYour code is clean; your intent is not\n\nhttps://hafs.dev/blog/2026-11-11.html\n\n#linux #open-source #patents",
+      "x": "Your code is clean; your intent is not\nhttps://hafs.dev/blog/2026-11-11.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-11.html"
+  },
+  {
     "date": "2026-11-10",
     "title": "The AI bubble is a bond market story",
     "category": null,
