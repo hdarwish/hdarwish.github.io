@@ -303,7 +303,7 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
     // The collector. Served on a host that already resolves to conductor and is
     // already inside the live TLS SAN cert, so this needed no new DNS record and
     // no new certificate. Renaming it later is a one-line change here.
-    var COLLECTOR = 'https://kanban.hafs.dev/c';
+    var COLLECTOR = 'https://collect.hafs.dev/c';
 
     function send(params) {
         try {
