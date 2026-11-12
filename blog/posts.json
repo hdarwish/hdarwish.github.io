@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-12",
+    "title": "The Safety System That Nearly Drowned the Server",
+    "category": null,
+    "tags": [
+      "datacenter",
+      "reliability",
+      "safety",
+      "infrastructure"
+    ],
+    "excerpt": "A false smoke alarm triggered a cooling shutdown, which triggered a heat spike, which triggered a flood. The chain wasn't a bug; it was a feature.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The Safety System That Nearly Drowned the Server",
+    "social_teasers": {
+      "linkedin": "The Safety System That Nearly Drowned the Server\n\nThe Safety System That Nearly Drowned the Server\n\nhttps://hafs.dev/blog/2026-11-12.html\n\n#datacenter #reliability #safety",
+      "x": "The Safety System That Nearly Drowned the Server\nhttps://hafs.dev/blog/2026-11-12.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-12.html"
+  },
+  {
     "date": "2026-11-11",
     "title": "Your code is clean; your intent is not",
     "category": null,
