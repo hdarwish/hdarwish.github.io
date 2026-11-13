@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-13",
+    "title": "Your $300 Machine Is Leasing You Your Own Tool",
+    "category": null,
+    "tags": [
+      "open-source",
+      "embroidery",
+      "software-ownership",
+      "local-first"
+    ],
+    "excerpt": "A Brother Skitch PP1 is cheap hardware. But if it needs a subscription to run, you don't own it. You rent it.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Your $300 Machine Is Leasing You Your Own Tool",
+    "social_teasers": {
+      "linkedin": "Your $300 Machine Is Leasing You Your Own Tool\n\nYour $300 Machine Is Leasing You Your Own Tool\n\nhttps://hafs.dev/blog/2026-11-13.html\n\n#open-source #embroidery #software-ownership",
+      "x": "Your $300 Machine Is Leasing You Your Own Tool\nhttps://hafs.dev/blog/2026-11-13.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-13.html"
+  },
+  {
     "date": "2026-11-12",
     "title": "The Safety System That Nearly Drowned the Server",
     "category": null,
