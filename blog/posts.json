@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-14",
+    "title": "When the Supplier Is the Investor",
+    "category": null,
+    "tags": [
+      "AI Infrastructure",
+      "Supply Chain",
+      "Financial Engineering"
+    ],
+    "excerpt": "If the company selling you the GPU is also the one funding the startup buying it, you don't have a supply chain. You have a closed loop where capacity is a financial instrument.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "When the Supplier Is the Investor",
+    "social_teasers": {
+      "linkedin": "When the Supplier Is the Investor\n\nWhen the Supplier Is the Investor\n\nhttps://hafs.dev/blog/2026-11-14.html\n\n#AIInfrastructure #SupplyChain #FinancialEngineering",
+      "x": "When the Supplier Is the Investor\nhttps://hafs.dev/blog/2026-11-14.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-14.html"
+  },
+  {
     "date": "2026-11-13",
     "title": "Your $300 Machine Is Leasing You Your Own Tool",
     "category": null,
