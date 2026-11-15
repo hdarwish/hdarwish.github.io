@@ -285,7 +285,7 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
    access log gives the queryable click record. This function is the page side.
 
    WHAT IT DOES NOT DO -- the guardrails in that spec still hold:
-     * no third-party script, no GA/Plausible/Umami, no pixel;
+     * no pixel; site-wide pageviews and clicks belong to analytics.js;
      * NO COOKIE and NO localStorage -- nothing is stored on the device;
      * no PII: the collector truncates the client IP to /24 before writing;
      * never blocks or delays a click. The mailto keeps working with JS off, and
@@ -352,8 +352,7 @@ document.querySelectorAll('.timeline-item, .project-card, .skill-group, .stat, .
 
     // ---- 1. LANDING -------------------------------------------------------
     // Fired only for tagged arrivals: an untagged visit is not attribution data,
-    // and logging every pageview would turn this into general-purpose analytics,
-    // which the spec's guardrails exclude.
+    // and pageviews are analytics.js's job.
     if (tagged) {
         send({
             e: 'landing',

@@ -32,6 +32,8 @@ tracking install.
 - **NO_FORM / NO_EMAIL_CAPTURE** — CTA is a `mailto:` only; nothing is submitted or parsed by the site.
 - **NO_ANALYTICS_SAAS / NO_PIXEL / NO_TRACKING_INSTALL** — no GA, Plausible, Umami, or third-party
   script. The inline enhancement script (below) makes **zero network calls** and stores nothing.
+  *Superseded 2026-11-16:* Hafs asked for site-wide third-party analytics, so `/analytics.js` now loads
+  Umami Cloud (cookieless) on every page. The inline enhancement script itself is unchanged.
 - **NO_NEW_PII** — attribution reuses Gmail plus-addressing. The only personal data received is what a
   visitor voluntarily types into their own email draft and chooses to send.
 - **NO_AUTH / NO_PAYMENT / NO_SIGNUP_WALL / NO_DARK_PATTERN.**
