@@ -3,204 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your default settings are a breach waiting to happen - Hafs Ibrahim</title>
-    <meta name="description" content="A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...">
-    <meta property="og:title" content="Your default settings are a breach waiting to happen">
-    <meta property="og:description" content="A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...">
+    <title>Your job title is a ghost from 1947 - Hafs Ibrahim</title>
+    <meta name="description" content="Your job title is a ghost from 1947">
+    <meta property="og:title" content="Your job title is a ghost from 1947">
+    <meta property="og:description" content="Your job title is a ghost from 1947">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://hafs.dev/blog/2026-11-15.html">
     <meta property="og:image" content="https://hafs.dev/og-blog.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Your default settings are a breach waiting to happen">
-    <meta name="twitter:description" content="A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...">
+    <meta name="twitter:title" content="Your job title is a ghost from 1947">
+    <meta name="twitter:description" content="Your job title is a ghost from 1947">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        .blog-hero {
-            padding: 8rem 0 3rem;
-            text-align: center;
-            position: relative;
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
         }
-        .blog-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        .blog-post-card {
-            background: var(--surface);
-            border: 1px solid rgba(59, 130, 246, 0.35);
-            border-radius: 12px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
-            transition: border-color 0.3s, box-shadow 0.3s;
-        }
-        .blog-post-card:hover {
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
-        }
-        .blog-post-date {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.8rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-        .blog-post-title {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 1.5rem;
-        }
-        .blog-post-body {
-            font-family: 'Lora', Georgia, serif;
-        }
-        .blog-post-body p {
-            margin-bottom: 1.25rem;
-        }
-        .blog-post-body p:last-child {
-            margin-bottom: 0;
-        }
-        .blog-post-body code {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85em;
-            background: rgba(59, 130, 246, 0.1);
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: var(--accent-hover);
-        }
-        .blog-post-body pre {
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 1rem 1.25rem;
-            overflow-x: auto;
-            margin: 1.25rem 0;
-        }
-        .blog-post-body pre code {
-            background: none;
-            padding: 0;
-            font-size: 0.85rem;
-            line-height: 1.6;
-        }
-        .blog-post-body strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-        .blog-post-body em {
-            color: var(--text);
-            font-style: italic;
-        }
-        .blog-post-body h3 {
-            font-family: 'Playfair Display', Georgia, serif;
-            color: var(--text);
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin: 1.75rem 0 0.75rem;
-        }
-        .post-nav {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 6rem 1.5rem 1rem;
-        }
-        .post-nav a {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .post-nav a:hover {
-            color: var(--accent);
-        }
-        .post-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 1rem 1.5rem 4rem;
-        }
-        @media (max-width: 768px) {
-            .blog-post-card {
-                padding: 1.25rem;
-            }
-            .blog-post-title {
-                font-size: 1.25rem;
-            }
-        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
     </style>
 </head>
-<body>
-    <nav class="nav" id="nav">
-        <div class="nav-inner">
-            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#experience">Experience</a></li>
-                <li><a href="../index.html#projects">Projects</a></li>
-                <li><a href="../index.html#skills">Skills</a></li>
-                <li><a href="../blog.html" class="active">Blog</a></li>
-                <li><a href="../index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="post-nav">
-        <a href="../blog.html">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-            All Posts
-        </a>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
     </div>
-
-    <main class="post-content">
-
-        <article class="blog-post-card" id="post-2026-11-15">
-            <div class="blog-post-date">November 15, 2026</div>
-            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">low-code</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">data-security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">vibe-coding</span></div>
-            <h2 class="blog-post-title">Your default settings are a breach waiting to happen</h2>
-            
-            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a configuration choice made by default, in a tool designed for people who don't think about configuration.</p>
-<p>That is the quiet crisis hiding inside the 'vibe coding' boom. We have handed the world a class of developers who can build production-grade data pipelines without ever developing production-grade security instincts. The tools are so good at removing friction that they have removed the friction that used to keep us safe.</p>
-
-<h2>The Illusion of Competence</h2>
-<p>Think of a modern low-code platform like a self-driving car that only has one setting: 'Go.' You press start, and the car handles the steering, the braking, the lane changes. It is incredibly effective at getting you from A to B. But self-driving cars don't have a gear for 'I am about to drive over a cliff.' If the road ends, the car doesn't stop. It just... continues, until physics intervenes.</p>
-<p>When a non-engineer builds an app with these tools, the 'road' of development is smooth. They don't have to configure a database. They don't have to set up an API gateway. They don't have to write a single line of code to define who can read a record. The platform does it for them. The problem is that the 'default' behavior of these platforms is often 'anyone can read this,' or 'this data is stored in a public bucket,' or 'this endpoint is not authenticated.' The friction of security has been smoothed away, and with it, the guardrails.</p>
-
-<h2>How the Leak Actually Happens</h2>
-<p>Let's look at the mechanism, because it is far more mundane than a hack. Picture a service that stores user messages. In a traditional engineering workflow, a developer would explicitly decide: 'These messages are private. They require an authenticated session to access. They are encrypted at rest. They are not exposed to the public internet.' Every one of those decisions is a point of failure if missed, but they are also checkpoints.</p>
-<p>In a low-code AI environment, the developer asks the AI to 'create a feature where users can chat.' The AI writes the code. It sets up the database table. It creates the API endpoint. It does not pause to ask, 'Should this endpoint be public?' It follows the path of least resistance. The result is an endpoint that returns all messages to any request. The 'security' of the system is now entirely dependent on the default configuration of the underlying platform, not on the intent of the developer, because the developer never had the opportunity to express intent.</p>
-<p>The metric that moves here is not latency or throughput. It is the surface area of exposed data. In a traditional system, the surface area is small because every access path is explicitly defined. In a vibe-coded system, the surface area is maximal because the default is open. The consequence is that a single misconfiguration, or even just a lack of configuration, results in a massive, immediate data leak. The 200,000 messages were not stolen. They were handed over, because the door was left open, and the building was empty.</p>
-
-<h2>The Systemic Shift</h2>
-<p>This is not a bug in one specific tool. This is a structural consequence of making software creation easier. Every time we remove a step from the development process, we remove a chance for a human to catch a mistake. Security is not a feature you add at the end. It is a series of decisions you make at every step. When you automate the steps, you automate the decisions. And the default decision, in most platforms, is 'trust the user' or 'expose the data,' because that is the easiest thing for the platform to do.</p>
-<p>The leak wasn't a sophisticated hack; it was a default configuration in a tool marketed to non-engineers.</p>
-<p>That is the spine of this crisis. We have not just lowered the barrier to building software. We have lowered the barrier to building <em>insecure</em> software, and we have done it so effectively that the insecure version is now the default version.</p>
-
-<h2>What This Means for You</h2>
-<p>If you are using these tools, you must assume that every piece of data you put into them is public until you explicitly prove otherwise. That is the new reality. The onus has shifted from the platform to the user. You are no longer just a builder. You are a security architect, even if you have never written a security policy in your life.</p>
-<p>The portable lesson here is that ease is not safety. In fact, in the realm of data privacy, ease is often the enemy of safety. The more effortless it is to build, the less thought is put into protection. The next time a tool makes something 'easy,' ask yourself: 'What did it decide for me, and was that decision safe?'</p>
-<p>We are building a world where anyone can create an app. That is a beautiful thing. But we are also building a world where anyone can accidentally leak the world's secrets. The door is open. The question is whether we will learn to lock it before the next 200,000 messages walk out.</p></div>
-            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.crissyfield.de/research/lovable-en" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Lovable apps expose passport details and more than 200K private messages</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲743</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://owasp.org" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Security Implications of Low-Code Development</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.amazon.com/Software-Engineering-Scale-Amazon-Com/dp/1449325327" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Software Engineering at Scale</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
-        </article>
-
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-11-15">
+<header class="seminar__head"><p class="seminar__date">November 15, 2026</p><h1 class="seminar__title">Your job title is a ghost from 1947</h1><p class="seminar__deck">We treat software titles as static ranks. They are actually a lineage system where &#x27;Principal&#x27; is the first cousin of &#x27;Director&#x27;, not its parent.</p></header>
+<div class="seminar__tags"><span>career</span><span>software-engineering</span><span>organizational-design</span></div>
+<div class="seminar__premise"><p>Job titles are not labels for what you do today; they are artifacts of how the work was organized when the title was coined, carrying the power dynamics of that era into the present.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>A title is a genealogical marker, not a functional description. It tracks inheritance (where the role came from), not capability (what the role does).</p>
+<section class="seminar__section" id="sec-1-the-clerical-roots-of-coding"><div class="seminar__section-index">01</div><h2>The Clerical Roots of &#x27;Coding&#x27;</h2><p>In 1947, Goldstine and von Neumann split computer work into two parts: mathematicians *planned* the problem, and coders *translated* it. Coding was explicitly clerical. It was lower-status, repetitive, and largely done by women. Today, &#x27;Senior Software Engineer&#x27; is the prestige track, but the title’s DNA is still tied to that clerical translation step. The hierarchy hasn&#x27;t vanished; it just inverted without the titles noticing.</p>
+<p>This matters because when you look at a title like &#x27;Systems Engineer,&#x27; you aren&#x27;t looking at one role. You&#x27;re looking at a name that was recycled. In the 1960s at IBM, it was a pre-sales installation role. In the 1990s, thanks to Microsoft&#x27;s MCSE, it became a design-oriented sysadmin. Same label, zero relation. The title is a container that the organization refills as the power structure shifts.</p></section>
+<section class="seminar__section" id="sec-2-the-see-saw-of-fragmentation"><div class="seminar__section-index">02</div><h2>The See-Saw of Fragmentation</h2><p>Watch the &#x27;Webmaster.&#x27; Around 1993, it was one person: writing HTML, running the server under their desk, answering email, and kicking the site back to life. By the mid-2000s, the title died because it was unfashionably ancient. The work didn&#x27;t disappear; it fractured. Code went to &#x27;Web Developers,&#x27; servers to &#x27;Sysadmins,&#x27; content to &#x27;Designers.&#x27; Then, around 2008, &#x27;Front-end&#x27; and &#x27;Back-end&#x27; merged back into &#x27;Full-Stack.&#x27; This is the centralization/distribution see-saw playing out in HR documents.</p>
+<p>The metric here is <strong>title volatility</strong>. When a role is new, the title is broad and ambiguous (Webmaster). As the industry matures, the title splits to reflect specialization (Front-end/Back-end). When the specialization becomes too narrow for the business need, it merges again (Full-Stack). The title is a lagging indicator of the actual work&#x27;s complexity. If you see a title fragmenting, the work is getting harder. If it&#x27;s merging, the overhead is getting too high.</p></section>
+<section class="seminar__section" id="sec-3-why-devops-was-always-a-misnomer"><div class="seminar__section-index">03</div><h2>Why &#x27;DevOps&#x27; Was Always a Misnomer</h2><p>Ben Treynor Sloss defined SRE as &#x27;what happens when you ask a software engineer to design an operations team.&#x27; DevOps was meant to be a *culture* of collaboration. But by 2011, &#x27;DevOps Engineer&#x27; was a job title. This is the family tree&#x27;s most revealing mistake: it turned a verb (working together) into a noun (a person). You can&#x27;t hire a culture. You can only hire a person who pretends to be one. The title &#x27;DevOps Engineer&#x27; is a ghost of the intent, stripped of the mechanism.</p>
+<p>This is why the title feels unstable. It is. It&#x27;s a cultural mandate wearing a job description. The consequence is that &#x27;DevOps&#x27; roles often end up doing either pure ops (writing scripts) or pure development (building platforms), rarely the actual &#x27;ops&#x27; of collaboration. The title inherits the ambiguity of its origin.</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>The &#x27;family tree&#x27; reveals that most senior titles are just junior roles with a different inheritance path. &#x27;Principal Engineer&#x27; isn&#x27;t a direct parent of &#x27;Staff Engineer&#x27; in a hierarchy of authority; it&#x27;s a cousin branch that emerged when the industry needed to distinguish deep technical influence from people management. The title isn&#x27;t a rank; it&#x27;s a fossil record of the specific power struggle that created it.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> Job titles are like street names. &#x27;Main Street&#x27; might have been a trade route in 1850, a residential area in 1920, and a commercial strip today. The name stays, but the function and the power dynamics of who controls the land shift completely. You don&#x27;t judge the current building by the history of the street name; you judge the building by the blueprints.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> Street names are static; job titles are actively renamed and redefined by companies every year. The &#x27;recycling&#x27; of names (like Systems Engineer) is faster and more chaotic than urban planning.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You are evaluating a job offer or a promotion path based on title.</dd><dt>Prefer</dt><dd>Ask about the *work* and the *inheritance*. What did this role look like 5 years ago? Who did it absorb? What did it shed?</dd><dt>Avoid</dt><dd>Treating the title as a static rank. Assume the title is a lagging indicator, not a leading one. If the title is new, the scope is likely undefined.</dd></dl></div>
+<p class="seminar__finish">The next time you see a title you don&#x27;t recognize, don&#x27;t ask what it does. Ask what it used to be. The answer will tell you more about the company&#x27;s current pain points than any job description ever could.</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://zwischenzugs.com/2026/11/03/a-family-tree-of-software-job-titles" target="_blank" rel="noopener">A Family Tree of Software Job Titles</a><span class="kind">ARTICLE</span></li></ol></footer>
+</article>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>Built by Hafs Ibrahim</p>
-        </div>
-    </footer>
-
-    <script src="../script.js"></script>
 </body>
 </html>

@@ -1,27 +1,16 @@
 {
-  "share_description": "A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...",
+  "share_description": "Your job title is a ghost from 1947",
   "social_teasers": {
-    "linkedin": "Your default settings are a breach waiting to happen\n\nA popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...\n\nhttps://hafs.dev/blog/2026-11-15.html\n\n#low-code #data-security #vibe-coding",
-    "x": "Your default settings are a breach waiting to happen\nhttps://hafs.dev/blog/2026-11-15.html"
+    "linkedin": "Your job title is a ghost from 1947\n\nYour job title is a ghost from 1947\n\nhttps://hafs.dev/blog/2026-11-15.html\n\n#career #software-engineering #organizational-design",
+    "x": "Your job title is a ghost from 1947\nhttps://hafs.dev/blog/2026-11-15.html"
   },
   "url": "https://hafs.dev/blog/2026-11-15.html",
-  "title": "Your default settings are a breach waiting to happen",
+  "title": "Your job title is a ghost from 1947",
   "tags": [
-    "low-code",
-    "data-security",
-    "vibe-coding"
+    "career",
+    "software-engineering",
+    "organizational-design"
   ],
-  "hn_refs": [
-    {
-      "title": "Lovable apps expose passport details and more than 200K private messages",
-      "url": "https://www.crissyfield.de/research/lovable-en",
-      "points": 743
-    }
-  ],
-  "source_attribution": {
-    "source_id": "hacker_news",
-    "name": "Hacker News",
-    "tier": 1,
-    "trust_score": 1.0
-  }
+  "hn_refs": [],
+  "source_attribution": null
 }
