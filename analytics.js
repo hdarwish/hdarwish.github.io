@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var WEBSITE_ID = '';
+    var WEBSITE_ID = 'be036bf9-f66f-40c3-a2a0-f2f9368aadf6';
     var TRACKER = 'https://cloud.umami.is/script.js';
 
     if (window.hafsAnalytics) return;
