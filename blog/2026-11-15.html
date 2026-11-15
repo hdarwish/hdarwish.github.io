@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your default settings are a breach waiting to happen - Hafs Ibrahim</title>
+    <meta name="description" content="A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...">
+    <meta property="og:title" content="Your default settings are a breach waiting to happen">
+    <meta property="og:description" content="A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-11-15.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your default settings are a breach waiting to happen">
+    <meta name="twitter:description" content="A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-11-15">
+            <div class="blog-post-date">November 15, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">low-code</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">data-security</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">vibe-coding</span></div>
+            <h2 class="blog-post-title">Your default settings are a breach waiting to happen</h2>
+            
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><p>A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a configuration choice made by default, in a tool designed for people who don't think about configuration.</p>
+<p>That is the quiet crisis hiding inside the 'vibe coding' boom. We have handed the world a class of developers who can build production-grade data pipelines without ever developing production-grade security instincts. The tools are so good at removing friction that they have removed the friction that used to keep us safe.</p>
+
+<h2>The Illusion of Competence</h2>
+<p>Think of a modern low-code platform like a self-driving car that only has one setting: 'Go.' You press start, and the car handles the steering, the braking, the lane changes. It is incredibly effective at getting you from A to B. But self-driving cars don't have a gear for 'I am about to drive over a cliff.' If the road ends, the car doesn't stop. It just... continues, until physics intervenes.</p>
+<p>When a non-engineer builds an app with these tools, the 'road' of development is smooth. They don't have to configure a database. They don't have to set up an API gateway. They don't have to write a single line of code to define who can read a record. The platform does it for them. The problem is that the 'default' behavior of these platforms is often 'anyone can read this,' or 'this data is stored in a public bucket,' or 'this endpoint is not authenticated.' The friction of security has been smoothed away, and with it, the guardrails.</p>
+
+<h2>How the Leak Actually Happens</h2>
+<p>Let's look at the mechanism, because it is far more mundane than a hack. Picture a service that stores user messages. In a traditional engineering workflow, a developer would explicitly decide: 'These messages are private. They require an authenticated session to access. They are encrypted at rest. They are not exposed to the public internet.' Every one of those decisions is a point of failure if missed, but they are also checkpoints.</p>
+<p>In a low-code AI environment, the developer asks the AI to 'create a feature where users can chat.' The AI writes the code. It sets up the database table. It creates the API endpoint. It does not pause to ask, 'Should this endpoint be public?' It follows the path of least resistance. The result is an endpoint that returns all messages to any request. The 'security' of the system is now entirely dependent on the default configuration of the underlying platform, not on the intent of the developer, because the developer never had the opportunity to express intent.</p>
+<p>The metric that moves here is not latency or throughput. It is the surface area of exposed data. In a traditional system, the surface area is small because every access path is explicitly defined. In a vibe-coded system, the surface area is maximal because the default is open. The consequence is that a single misconfiguration, or even just a lack of configuration, results in a massive, immediate data leak. The 200,000 messages were not stolen. They were handed over, because the door was left open, and the building was empty.</p>
+
+<h2>The Systemic Shift</h2>
+<p>This is not a bug in one specific tool. This is a structural consequence of making software creation easier. Every time we remove a step from the development process, we remove a chance for a human to catch a mistake. Security is not a feature you add at the end. It is a series of decisions you make at every step. When you automate the steps, you automate the decisions. And the default decision, in most platforms, is 'trust the user' or 'expose the data,' because that is the easiest thing for the platform to do.</p>
+<p>The leak wasn't a sophisticated hack; it was a default configuration in a tool marketed to non-engineers.</p>
+<p>That is the spine of this crisis. We have not just lowered the barrier to building software. We have lowered the barrier to building <em>insecure</em> software, and we have done it so effectively that the insecure version is now the default version.</p>
+
+<h2>What This Means for You</h2>
+<p>If you are using these tools, you must assume that every piece of data you put into them is public until you explicitly prove otherwise. That is the new reality. The onus has shifted from the platform to the user. You are no longer just a builder. You are a security architect, even if you have never written a security policy in your life.</p>
+<p>The portable lesson here is that ease is not safety. In fact, in the realm of data privacy, ease is often the enemy of safety. The more effortless it is to build, the less thought is put into protection. The next time a tool makes something 'easy,' ask yourself: 'What did it decide for me, and was that decision safe?'</p>
+<p>We are building a world where anyone can create an app. That is a beautiful thing. But we are also building a world where anyone can accidentally leak the world's secrets. The door is open. The question is whether we will learn to lock it before the next 200,000 messages walk out.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://www.crissyfield.de/research/lovable-en" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Lovable apps expose passport details and more than 200K private messages</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲743</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://owasp.org" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">The Security Implications of Low-Code Development</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://www.amazon.com/Software-Engineering-Scale-Amazon-Com/dp/1449325327" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Software Engineering at Scale</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">BOOK</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,5 +1,47 @@
 [
   {
+    "date": "2026-11-15",
+    "title": "Your default settings are a breach waiting to happen",
+    "category": null,
+    "tags": [
+      "low-code",
+      "data-security",
+      "vibe-coding"
+    ],
+    "excerpt": "A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a configuration choice made by default, in a tool...",
+    "hn_refs": [
+      {
+        "title": "Lovable apps expose passport details and more than 200K private messages",
+        "url": "https://www.crissyfield.de/research/lovable-en",
+        "points": 743
+      }
+    ],
+    "further_reading": [
+      {
+        "title": "The Security Implications of Low-Code Development",
+        "url": "https://owasp.org",
+        "kind": "article"
+      },
+      {
+        "title": "Software Engineering at Scale",
+        "url": "https://www.amazon.com/Software-Engineering-Scale-Amazon-Com/dp/1449325327",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": {
+      "source_id": "hacker_news",
+      "name": "Hacker News",
+      "tier": 1,
+      "trust_score": 1.0
+    },
+    "share_description": "A popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...",
+    "social_teasers": {
+      "linkedin": "Your default settings are a breach waiting to happen\n\nA popular AI app builder just leaked passport details and over 200,000 private messages. The cause was not a sophisticated zero-day exploit. It was a...\n\nhttps://hafs.dev/blog/2026-11-15.html\n\n#low-code #data-security #vibe-coding",
+      "x": "Your default settings are a breach waiting to happen\nhttps://hafs.dev/blog/2026-11-15.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-15.html"
+  },
+  {
     "date": "2026-11-14",
     "title": "When the Supplier Is the Investor",
     "category": null,
