@@ -1,6 +1,39 @@
 [
   {
     "date": "2026-11-15",
+    "slug": "2026-11-15-your-job-title-is-a-fossil-record",
+    "category": "deep_read",
+    "title": "Your job title is a fossil record",
+    "tags": [
+      "software-culture",
+      "job-titles",
+      "engineering-organizational",
+      "history-of-computing"
+    ],
+    "excerpt": "Ian Miell’s 104-node family tree of software roles reveals that titles don’t describe work; they describe the moment a new cost became visible to management.",
+    "hn_refs": [],
+    "further_reading": [
+      {
+        "title": "A Family Tree of Software Job Titles – zwischenzugs.com",
+        "url": "https://zwischenzugs.com/2026-11-03/a-family-tree-of-software-job-titles",
+        "kind": "article"
+      },
+      {
+        "title": "The Site Reliability Workbook",
+        "url": "https://sre.google/workbook/table-of-contents",
+        "kind": "book"
+      }
+    ],
+    "source_attribution": null,
+    "share_description": "Ian Miell’s 104-node family tree of software roles reveals that titles don’t describe work; they describe the moment a new cost became visible to management.",
+    "social_teasers": {
+      "linkedin": "Your job title is a fossil record\n\nIan Miell’s 104-node family tree of software roles reveals that titles don’t describe work; they describe the moment a new cost became visible to management.\n\nhttps://hafs.dev/blog/2026-11-15-your-job-title-is-a-fossil-record.html\n\n#software-culture #job-titles #engineering-organizational",
+      "x": "Your job title is a fossil record\nhttps://hafs.dev/blog/2026-11-15-your-job-title-is-a-fossil-record.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-15-your-job-title-is-a-fossil-record.html"
+  },
+  {
+    "date": "2026-11-15",
     "title": "Your job title is a ghost from 1947",
     "category": null,
     "tags": [

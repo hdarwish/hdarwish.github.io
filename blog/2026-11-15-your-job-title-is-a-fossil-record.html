@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your job title is a fossil record - Hafs Ibrahim</title>
+    <meta name="description" content="Ian Miell’s 104-node family tree of software roles reveals that titles don’t describe work; they describe the moment a new cost became visible to management.">
+    <meta property="og:title" content="Your job title is a fossil record">
+    <meta property="og:description" content="Ian Miell’s 104-node family tree of software roles reveals that titles don’t describe work; they describe the moment a new cost became visible to management.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-11-15-your-job-title-is-a-fossil-record.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your job title is a fossil record">
+    <meta name="twitter:description" content="Ian Miell’s 104-node family tree of software roles reveals that titles don’t describe work; they describe the moment a new cost became visible to management.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    body.v2-notebook {
+        background: #efe6d3;
+        color: #33291d;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .notebook {
+        max-width: 68rem; margin: 0 auto; padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .notebook__grid { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+    @media (min-width: 900px) {
+        .notebook__grid { grid-template-columns: 15rem minmax(0, 42rem); gap: 3rem; }
+    }
+    .notebook__rail { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    @media (min-width: 900px) {
+        .notebook__rail { position: sticky; top: 6rem; align-self: start; max-height: calc(100vh - 7rem); overflow: auto; }
+    }
+    .notebook__rail-title {
+        font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.16em;
+        color: #a06a3a; margin: 0 0 0.8rem;
+    }
+    .notebook__rail ol { list-style: none; margin: 0; padding: 0; counter-reset: toc; }
+    .notebook__rail li { counter-increment: toc; margin: 0 0 0.55rem; line-height: 1.35; }
+    .notebook__rail a {
+        color: #5c4a34; text-decoration: none; font-size: 0.78rem;
+        display: flex; gap: 0.5rem; border-left: 2px solid #d8c7a8; padding-left: 0.7rem;
+    }
+    .notebook__rail a::before { content: counter(toc, decimal-leading-zero); color: #b5541f; }
+    .notebook__rail a:hover { color: #b5541f; border-left-color: #b5541f; }
+    .notebook__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.72rem;
+        letter-spacing: 0.14em; text-transform: uppercase; color: #a06a3a; margin: 0 0 0.8rem;
+    }
+    .notebook__title {
+        font-family: 'Playfair Display', Georgia, serif; font-weight: 700;
+        font-size: clamp(2rem, 4.5vw, 2.9rem); line-height: 1.1; color: #2a2013;
+        margin: 0 0 0.8rem; letter-spacing: -0.01em;
+    }
+    .notebook__deck { font-size: 1.2rem; font-style: italic; color: #6a5843; line-height: 1.5; margin: 0 0 1.6rem; }
+    .notebook__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2rem; }
+    .notebook__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.66rem;
+        padding: 3px 9px; border: 1px solid #d3c2a3; border-radius: 3px; color: #8a745a;
+    }
+    .notebook__premise {
+        border-left: 3px solid #b5541f; padding-left: 1.1rem; margin: 0 0 1.6rem;
+        font-size: 1.15rem; line-height: 1.7; color: #3a2e1f;
+    }
+    .notebook__spine { margin: 0 0 2.4rem; font-size: 1.05rem; line-height: 1.6; }
+    .notebook__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .notebook__section { margin: 0 0 2.8rem; scroll-margin-top: 6rem; }
+    .notebook__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.72rem;
+        letter-spacing: 0.1em; color: #a06a3a; margin-bottom: 0.5rem;
+    }
+    .notebook h2 {
+        font-family: 'Playfair Display', Georgia, serif; font-size: 1.7rem; font-weight: 700;
+        color: #2a2013; margin: 0 0 1rem; line-height: 1.18;
+    }
+    .notebook h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.18rem; color: #3a2e1f; margin: 1.6rem 0 0.6rem; }
+    .notebook p { font-size: 1.08rem; line-height: 1.8; margin: 0 0 1.2rem; }
+    .notebook ul, .notebook ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.75; }
+    .notebook li { margin-bottom: 0.45rem; }
+    .notebook code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.85em;
+        background: #e3d5bb; color: #8a3f14; padding: 1px 6px; border-radius: 4px;
+    }
+    /* tactile diagram card */
+    .notebook .dgm-figure .dgm {
+        --dgm-paper:#fdfaf2; --dgm-ink:#2a2013; --dgm-line:#c6b299;
+        --dgm-box:#f6efe0; --dgm-box-2:#eaddc4; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border: 1px solid #d8c7a8; border-radius: 6px;
+        padding: 1.1rem 1rem; box-shadow: 0 6px 18px rgba(120,90,50,0.18);
+    }
+    .notebook .dgm-figure figcaption { color: #5f4c34; }
+    .notebook__turn { border-top: 1px solid #d3c2a3; padding-top: 1.4rem; margin: 0 0 2rem; }
+    .notebook__turn .kicker, .notebook__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .notebook__turn p { font-size: 1.18rem; line-height: 1.7; color: #33291d; }
+    .notebook__aside { background: #f6efe0; border: 1px solid #d8c7a8; border-radius: 6px; padding: 1.1rem 1.2rem; margin: 0 0 2rem; }
+    .notebook__decision dl { margin: 0.6rem 0 0; }
+    .notebook__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .notebook__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .notebook__analogy .analogy__limit { color: #6a5843; }
+    .notebook__finish {
+        font-family: 'Playfair Display', Georgia, serif; font-size: 1.35rem; line-height: 1.5;
+        color: #2a2013; border-top: 1px solid #d3c2a3; padding-top: 1.5rem; margin: 2.4rem 0;
+    }
+    .notebook__sources { border-top: 1px solid #d3c2a3; padding-top: 1.2rem; }
+    .notebook__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #75603f; margin: 0 0 0.9rem;
+    }
+    .notebook__sources ol { list-style: none; margin: 0; padding: 0; }
+    .notebook__sources li { display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem; }
+    .notebook__sources .num { font-family: 'JetBrains Mono', ui-monospace, monospace; color: #a8481a; flex-shrink: 0; }
+    .notebook__sources a { color: #4a3b28; text-decoration: underline; text-decoration-color: #bfa682; }
+    .notebook__sources a:hover { color: #a8481a; }
+    .notebook__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #6f5a3c; flex-shrink: 0;
+    }
+    </style>
+</head>
+<body class="v2-notebook">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
+    </div>
+    <main>
+<article class="notebook" data-mode="deep_dive" id="post-2026-11-15"><div class="notebook__grid"><aside class="notebook__rail"><nav aria-label="Table of contents"><p class="notebook__rail-title">Contents</p><ol><li><a href="#sec-1-the-clerk-who-became-the-archite">The Clerk Who Became the Architect</a></li><li><a href="#sec-2-why-titles-split-and-rejoin">Why Titles Split and Rejoin</a></li><li><a href="#sec-3-the-recycled-name-problem">The Recycled Name Problem</a></li><li><a href="#sec-4-the-devops-arrow-that-never-reso">The DevOps Arrow That Never Resolves</a></li><li><a href="#sec-5-what-the-tree-can-t-tell-you">What the Tree Can’t Tell You</a></li></ol></nav></aside><div class="notebook__main"><header><p class="notebook__date">November 15, 2026 · Deep Read</p><h1 class="notebook__title">Your job title is a fossil record</h1><p class="notebook__deck">Ian Miell’s 104-node family tree of software roles reveals that titles don’t describe work; they describe the moment a new cost became visible to management.</p></header><div class="notebook__tags"><span>software-culture</span><span>job-titles</span><span>engineering-organizational</span><span>history-of-computing</span></div><div class="notebook__premise"><p>A job title is not a description of what a person does. It is a boundary drawn around a specific, newly visible cost in a system, created to make that cost billable, assignable, or fixable.</p></div><p class="notebook__spine"><span class="kicker">The distinction</span>The difference between a title that names a *function* (what the work is) and a title that names a *boundary* (where the work stops and someone else’s begins). Most titles are boundaries, not functions.</p><section class="notebook__section" id="sec-1-the-clerk-who-became-the-archite"><div class="notebook__section-index">01 / 05</div><h2>The Clerk Who Became the Architect</h2><p>In 1947, the Goldstine–von Neumann report split the work of using a computer into two distinct tracks: mathematicians *planned* the problem, and coders *translated* the plan into machine instructions. Coding was explicitly treated as lower-status clerical work, much of it done by women recruited from the Army’s human computers—people whose job was to compute by hand. The machine was named after the person, and the person was named after the clerical task. This is the first data point in Ian Miell’s 104-title family tree, and it sets the pattern for everything that follows: the title you hold is almost never the most important part of the work. It is the part that got separated out, assigned a label, and handed to a specific person so the rest of the organization could ignore it.</p>
+<p>Miell’s tree, built with Claude and rendered from a single Graphviz file, traces 104 titles from 1947 to 2025. Time runs top to bottom in five-year rows. Seven colored columns track the families: development, operations, data, security, and so on. Solid arrows mean a title grew out of its parent; dashed arrows mean influence or a common career move. The whole thing is one <code>.dot</code> file and one JSON file of descriptions. Adding a title is three small edits: a node, a row placement, and its parent arrows. The dates are best guesses—SRE at Google in 2003, DevOps coined in 2009, Data Scientist in 2008 are well known; the rest are a <code>c.</code> and a shrug. But the structure is the point, not the dates.</p></section><section class="notebook__section" id="sec-2-why-titles-split-and-rejoin"><div class="notebook__section-index">02 / 05</div><h2>Why Titles Split and Rejoin</h2><p>The webmaster appeared around 1993 as a single person who wrote the HTML, ran the webserver (often a box under a desk), answered the email, and kept the site up—sometimes by kicking it, more often by plugging it back in after kicking it. By the mid-2000s the title had vanished as unfashionably ancient. The code went to web developers, the servers to sysadmins, the content to editors and designers. Then the web developer split into front-end and back-end around 2005, and the two rejoined as “full-stack” around 2008. This is not a bug in the labor market. It is a centralization/distribution see-saw playing out in job titles. When a system is small, one person can hold the whole loop. When it grows, the loop breaks at the seams, and each seam gets a name. When the names accumulate overhead, they get merged back together under a new, broader label. The work didn’t change. The *boundary* did.</p>
+<p>The mechanism is cost visibility. A title appears when a cost that was previously internal to a larger role becomes external, measurable, and expensive enough to justify its own line item. The webmaster’s server-kicking was invisible when the site was small. Once traffic made it a real operational risk, “sysadmin” appeared to make that cost explicit. Once sysadmins became a bottleneck, “SRE” appeared to make the *reliability* cost explicit. Each new title is a new accounting category. The work is continuous; the titles are the seams where the organization decided to stop and charge.</p></section><section class="notebook__section" id="sec-3-the-recycled-name-problem"><div class="notebook__section-index">03 / 05</div><h2>The Recycled Name Problem</h2><p>“Systems Engineer” appears twice on the tree, and the two are unrelated. At IBM in the 1960s, it was a pre-sales role: work with customers to design installations and get them running. In the 1990s, thanks largely to Microsoft’s MCSE certification, it meant a more senior, design-oriented sysadmin. Same title, different branch, no relation. “Configuration management” started as a 1960s US defence discipline for tracking hardware changes, became software version control in the 1970s, and then came back decades later as the name for tools like Puppet and Chef. The name survived; the meaning didn’t. This is the most dangerous pattern in the tree, because it means that two people with the same title on a resume may be describing entirely different jobs, and the reader of that resume has no way to tell from the label alone.</p>
+<p>The consequence is that job titles are not a shared language. They are a *family* of languages, each with its own dialect, and the dialects drift. When a hiring manager sees “platform engineer” on a resume, they may be thinking of the 2022 “successor to DevOps” role, or the 1990s systems engineer, or something else entirely. The title is a coordinate, not a description. The description lives in the work, not the label.</p></section><section class="notebook__section" id="sec-4-the-devops-arrow-that-never-reso"><div class="notebook__section-index">04 / 05</div><h2>The DevOps Arrow That Never Resolves</h2><p>Ben Treynor Sloss defined SRE as “what happens when you ask a software engineer to design an operations team.” DevOps was meant as a culture of developers and operations working together, but by about 2011 “DevOps Engineer” had become a job title, usually for whoever did the automation. On the tree, the arrow between SRE and DevOps points both ways. Platform engineering has both of them as parents, and was sold around 2022 as “the successor to DevOps.” The Dev/Ops divide has never been resolved. It just keeps getting new names. This is the most important pattern in the tree, and Miell names it directly: the divide is not a technical problem to be solved. It is a *boundary problem* that gets re-drawn every time the cost of the seam changes. The arrow points both ways because the work is continuous, and the boundary is arbitrary. The title is the boundary, not the work.</p>
+<p>The “forward deployed engineer” (FDE) is one of the hottest titles of 2025, as OpenAI, Anthropic, and AI startups hire FDEs to get AI working inside customers’ organizations. Palantir built its business around them from about 2010: software engineers embedded with a customer, often on site, building whatever is needed to make the product work for that customer’s problem. Which sounds a lot like IBM’s systems engineers of the 1960s. The new thing is an old thing. The boundary moved, the name changed, and the work is recognizably the same: a person who is the single point of contact between the product and the customer’s reality. The title is a fossil. The work is the stratum beneath it.</p></section><section class="notebook__section" id="sec-5-what-the-tree-can-t-tell-you"><div class="notebook__section-index">05 / 05</div><h2>What the Tree Can’t Tell You</h2><p>The tree is a best-guess reconstruction, and Miell says so. The dates are not sourced citations. The arrows are interpretive. The families are a choice of taxonomy that could have been made differently. The tree is a model, not a record. Its power is not in its accuracy but in its *shape*: the way it makes visible the pattern of splitting, rejoining, recycling, and absorbing that is otherwise invisible in a flat list of job postings. The tree is a lens, not a fact. And the lens has a blind spot: it tells you where the boundaries were drawn, but not *why* they were drawn at that moment, by that person, in that organization. The “why” is local, political, and often irrational. The tree captures the geography, not the geology.</p>
+<p>The deepest implication is the one Miell leaves as a closing question. In 1947, coding was the clerical bit, and the real work was in the planning. Wind forward eighty years and you hear much the same said about coding again, because AI. Last time, the coders turned out to be doing the hard part. Miell leaves you to draw that arrow yourself. The tree ends at “AI Agent / Context Engineer” (c. 2025), with the description: “time will tell whether it stays a separate title.” The pattern says it won’t. The work will be absorbed, the boundary will dissolve, and the title will become a fossil in the next generation’s tree. The question is not whether coding will be clerical again. The question is whether the people doing the coding will be the ones who notice, this time.</p></section><div class="notebook__turn"><span class="kicker">The turn</span><p>You have been reading your job title as a description of your work. It is not. It is a boundary someone drew around a cost they wanted to make visible, billable, or assignable. The work is continuous. The title is the seam. And the seam is where the work breaks.</p></div><div class="notebook__aside notebook__analogy"><p><span class="kicker">Analogy</span> A job title is a property line, not a description of the house. The house (the work) is continuous. The property line (the title) is where one owner’s responsibility stops and another’s begins. When the house grows, the line gets redrawn. When the line gets too many segments, they get merged. The house doesn’t care about the line. The tax assessor does.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> The analogy breaks because property lines are legal and fixed. Job titles are social and fluid. They can be crossed, ignored, or re-drawn without a court order. The tax assessor (the hiring manager) is also a person, not a system, and makes errors.</p></div><div class="notebook__aside notebook__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You are hiring, or being hired, or reorganizing a team around job titles</dd><dt>Prefer</dt><dd>Ask what cost this title is making visible. What boundary is it drawing? What work does it stop describing?</dd><dt>Avoid</dt><dd>Treating the title as a description of the work. The title is a coordinate, not a map. Two people with the same title may be describing entirely different jobs.</dd></dl></div><p class="notebook__finish">The tree ends where your career begins. The title you hold is a fossil from the last time someone decided a cost was worth naming. The work you do is the stratum beneath it. Read the fossil. Don’t mistake it for the rock.</p><footer class="notebook__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://zwischenzugs.com/2026-11-03/a-family-tree-of-software-job-titles" target="_blank" rel="noopener">A Family Tree of Software Job Titles – zwischenzugs.com</a><span class="kind">ARTICLE</span></li><li id="src-2"><span class="num">[2]</span><a href="https://sre.google/workbook/table-of-contents" target="_blank" rel="noopener">The Site Reliability Workbook</a><span class="kind">BOOK</span></li></ol></footer></div></div></article>
+    </main>
+</body>
+</html>
