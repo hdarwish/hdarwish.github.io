@@ -1,5 +1,27 @@
 [
   {
+    "date": "2026-11-16",
+    "title": "Your map is not a product. It is a file.",
+    "category": null,
+    "tags": [
+      "maps",
+      "infrastructure",
+      "self-hosting",
+      "protomaps",
+      "pmtiles"
+    ],
+    "excerpt": "For a decade, we treated map tiles like a utility service. Protomaps and PMTiles just turned that utility into a commodity you can hold in your hand.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Your map is not a product. It is a file.",
+    "social_teasers": {
+      "linkedin": "Your map is not a product. It is a file.\n\nYour map is not a product. It is a file.\n\nhttps://hafs.dev/blog/2026-11-16.html\n\n#maps #infrastructure #self-hosting",
+      "x": "Your map is not a product. It is a file.\nhttps://hafs.dev/blog/2026-11-16.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-16.html"
+  },
+  {
     "date": "2026-11-15",
     "slug": "2026-11-15-your-job-title-is-a-fossil-record",
     "category": "deep_read",
