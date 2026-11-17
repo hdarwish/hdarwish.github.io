@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-17",
+    "title": "Your OS is now a workflow spy",
+    "category": null,
+    "tags": [
+      "windows",
+      "privacy",
+      "telemetry",
+      "ai-tools"
+    ],
+    "excerpt": "Windows 11 doesn't just track what you install; it tracks which AI agents you invoke, and it does so via a bitmap, not a log.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Your OS is now a workflow spy",
+    "social_teasers": {
+      "linkedin": "Your OS is now a workflow spy\n\nYour OS is now a workflow spy\n\nhttps://hafs.dev/blog/2026-11-17.html\n\n#windows #privacy #telemetry",
+      "x": "Your OS is now a workflow spy\nhttps://hafs.dev/blog/2026-11-17.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-17.html"
+  },
+  {
     "date": "2026-11-16",
     "title": "Your map is not a product. It is a file.",
     "category": null,

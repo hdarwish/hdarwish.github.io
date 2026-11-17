@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your OS is now a workflow spy - Hafs Ibrahim</title>
+    <meta name="description" content="Your OS is now a workflow spy">
+    <meta property="og:title" content="Your OS is now a workflow spy">
+    <meta property="og:description" content="Your OS is now a workflow spy">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-11-17.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your OS is now a workflow spy">
+    <meta name="twitter:description" content="Your OS is now a workflow spy">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
+    </style>
+    <script defer src="/analytics.js"></script>
+</head>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
+    </div>
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-11-17">
+<header class="seminar__head"><p class="seminar__date">November 17, 2026</p><h1 class="seminar__title">Your OS is now a workflow spy</h1><p class="seminar__deck">Windows 11 doesn&#x27;t just track what you install; it tracks which AI agents you invoke, and it does so via a bitmap, not a log.</p></header>
+<div class="seminar__tags"><span>windows</span><span>privacy</span><span>telemetry</span><span>ai-tools</span></div>
+<div class="seminar__premise"><p>We assumed the privacy boundary of the operating system was the file system and the network stack. We were wrong. The new boundary is the process table.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>The distinction is not between &#x27;collecting data&#x27; and &#x27;not collecting data.&#x27; It is between a passive sensor (the OS observing execution) and an active participant (the OS interpreting intent).</p>
+<section class="seminar__section" id="sec-1-the-list-in-the-dll"><div class="seminar__section-index">01</div><h2>The List in the DLL</h2><p>There is a file on your machine called <code>MissionControlAggregator.dll</code>. Inside it, buried in C++ compiler artifacts, are string literals for <code>codex.exe</code>, <code>claude.exe</code>, <code>copilot.exe</code>, and <code>cursor.exe</code>. They sit next to <code>python.exe</code>, <code>gcc.exe</code>, and <code>code.exe</code>. At first glance, this looks like a compatibility shim. A way for Windows to recognize known applications for taskbar grouping or performance hints. But the code doesn&#x27;t group. It matches.</p>
+<p>The feature guarding these checks is named <code>CLICodingAgentUsage</code>. It subscribes to <code>KernelProcess.AppStateChangeSummary</code> and <code>Win32kTraceLogging.AppInteractivitySummary</code>. These are not high-level application events; they are kernel-level notifications that a process has changed state. The DLL listens to these events, parses the executable name, and runs it against its hardcoded list of agents.</p></section>
+<section class="seminar__section" id="sec-2-the-bitmap-not-the-log"><div class="seminar__section-index">02</div><h2>The Bitmap, Not the Log</h2><p>Here is the mechanism that makes this distinct from traditional telemetry. When a match occurs, the component does not write a log entry saying <code>User launched claude.exe at 14:02</code>. It sets a bit. The report emitted is called <code>Segments.SubCohorts</code>. It is a bitmap: twelve bits for broad tool categories, four bits for CLI agents, five bits for desktop agents. If <code>codex.exe</code> ran, the bit for <code>codex</code> is set to 1. If it didn&#x27;t, it is 0.</p>
+<p>This is a metric of presence, not duration. The source events include runtime and focus time, but the aggregator discards those details. It keeps only the boolean fact of observation. This is efficient. It is also remarkably difficult to argue against. There is no prompt text. There is no source code. There is no specific task. There is only the fact that you used the tool.</p>
+<figure class="dgm-figure"><div class="dgm dgm--pipeline" data-diagram="pipeline" id="d20261117-dgm-1"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 1056 128" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261117-dgm-1-d-t d20261117-dgm-1-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261117-dgm-1-d-t">From Executable to Bit</title><desc id="d20261117-dgm-1-d-d">Process execution triggers kernel events which are filtered by name matchers to set bits in a diagnostic report</desc><rect x="16" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="100.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Process Launch</text><text x="100.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">codex.exe or claude.exe starts</text><line x1="184" y1="64.0" x2="222" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M230 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="230" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="314.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Kernel Event</text><text x="314.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">AppStateChangeSummary emitted</text><line x1="398" y1="64.0" x2="436" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M444 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="444" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="528.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Name Matcher</text><text x="528.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">String comparison in MissionControlAggr…</text><line x1="612" y1="64.0" x2="650" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M658 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="658" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="742.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Bit Set</text><text x="742.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Slot in state object marked as observed</text><line x1="826" y1="64.0" x2="864" y2="64.0" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M872 64.0 l-9 -5 v10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="872" y="27" width="168" height="74" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="956.0" y="60.0" font-size="15" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">ETW Report</text><text x="956.0" y="80.0" font-size="12" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Segments.SubCohorts bitmap sent to Diag…</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 484" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261117-dgm-1-m-t d20261117-dgm-1-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261117-dgm-1-m-t">From Executable to Bit</title><desc id="d20261117-dgm-1-m-d">Process execution triggers kernel events which are filtered by name matchers to set bits in a diagnostic report</desc><rect x="12" y="12" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="39.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Process Launch</text><text x="28" y="58.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">codex.exe or claude.exe starts</text><line x1="172.0" y1="72" x2="172.0" y2="104" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 112 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="112" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="139.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Kernel Event</text><text x="28" y="158.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">AppStateChangeSummary emitted</text><line x1="172.0" y1="172" x2="172.0" y2="204" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 212 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="212" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="239.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Name Matcher</text><text x="28" y="258.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">String comparison in MissionControlAggr…</text><line x1="172.0" y1="272" x2="172.0" y2="304" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 312 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="312" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="339.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Bit Set</text><text x="28" y="358.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Slot in state object marked as observed</text><line x1="172.0" y1="372" x2="172.0" y2="404" stroke="var(--dgm-accent, #b5541f)" stroke-width="2"/><path d="M172.0 412 l-5 -9 h10 z" fill="var(--dgm-accent, #b5541f)"/><rect x="12" y="412" width="320" height="60" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="439.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">ETW Report</text><text x="28" y="458.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Segments.SubCohorts bitmap sent to Diag…</text></svg></div></div><figcaption>The flow from process execution to diagnostic bitmap</figcaption></figure></section>
+<section class="seminar__section" id="sec-3-who-is-watching"><div class="seminar__section-index">03</div><h2>Who Is Watching?</h2><p>The privacy debate usually focuses on content. What data is collected? The answer here is: very little content. No prompts. No code. But the *who* has changed. Previously, if you used an AI coding agent, your employer (via IT monitoring), your cloud provider (via API logs), or the agent vendor (via their own telemetry) knew you used it. Now, your OS vendor knows. And the OS vendor is the one holding the keys to your identity, your device health, and your system integrity.</p>
+<p>This is a shift from monitoring *work* to monitoring *workflow*. The bitmap doesn&#x27;t care what you are building. It cares that you are building with a specific class of tools. It creates a profile of your development environment that is independent of the project. You are not a &#x27;developer working on Project X.&#x27; You are a &#x27;user who invokes Claude and GCC.&#x27;</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>The turn is this: You thought the operating system was the floor. It is now the ceiling, the walls, and the window. It is the only layer that sees everything, and it has decided to start taking notes.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> It is like a library that doesn&#x27;t read your books, but records which section you walk into. They don&#x27;t know what you think. They know you are in the &#x27;Science Fiction&#x27; aisle, not the &#x27;History&#x27; aisle. Over time, that tells them who you are.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> The library analogy breaks because the OS doesn&#x27;t just track location; it tracks the specific &#x27;book&#x27; (executable) you picked up, and it does so for a hardcoded list of &#x27;sensitive&#x27; books, implying a classification of which tools are noteworthy.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You are evaluating enterprise security or personal privacy on Windows 11</dd><dt>Prefer</dt><dd>Treat the OS as a telemetry node, not a neutral host. Assume the process list is visible to the vendor.</dd><dt>Avoid</dt><dd>Assuming that because no &#x27;content&#x27; is collected, the telemetry is benign. The metadata of tool usage is a behavioral fingerprint.</dd></dl></div>
+<p class="seminar__finish">The bit is set. The window is open. You are being watched, not by your boss, but by the machine itself.</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://xusheng.dev/posts/windows-coding-agent-telemetry" target="_blank" rel="noopener">Windows 11 Is Collecting Data on Which Coding Agents and Developer Tools You Use</a><span class="kind">ARTICLE</span></li></ol></footer>
+</article>
+    </main>
+</body>
+</html>
