@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-18",
+    "title": "Base64 is not inert; it is a compiler",
+    "category": null,
+    "tags": [
+      "java",
+      "security",
+      "memory-corruption",
+      "base64"
+    ],
+    "excerpt": "The most boring data format in your stack is the most dangerous because every security tool treats it as text. The JDK disagrees.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Base64 is not inert; it is a compiler",
+    "social_teasers": {
+      "linkedin": "Base64 is not inert; it is a compiler\n\nBase64 is not inert; it is a compiler\n\nhttps://hafs.dev/blog/2026-11-18.html\n\n#java #security #memory-corruption",
+      "x": "Base64 is not inert; it is a compiler\nhttps://hafs.dev/blog/2026-11-18.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-18.html"
+  },
+  {
     "date": "2026-11-17",
     "title": "Your OS is now a workflow spy",
     "category": null,
