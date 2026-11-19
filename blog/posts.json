@@ -1,6 +1,33 @@
 [
   {
     "date": "2026-11-19",
+    "slug": "2026-11-19-the-glue-is-people-not-models",
+    "category": "deep_read",
+    "title": "The Glue Is People, Not Models",
+    "tags": [
+      "complex-systems",
+      "ai-ethics",
+      "infrastructure"
+    ],
+    "excerpt": "Complex systems don't fail because the code is bad. They fail because the humans who know how to break them are being replaced by models that cannot care about the break.",
+    "hn_refs": [],
+    "further_reading": [
+      {
+        "title": "🧠 We Need Smart People Who Give a Shit • VioletPixel",
+        "url": "https://violetpixel.com/blog/2026-11-17-we-need-smart-people-who-give-a-shit",
+        "kind": "article"
+      }
+    ],
+    "source_attribution": null,
+    "share_description": "Complex systems don't fail because the code is bad. They fail because the humans who know how to break them are being replaced by models that cannot care about ",
+    "social_teasers": {
+      "linkedin": "The Glue Is People, Not Models\n\nComplex systems don't fail because the code is bad. They fail because the humans who know how to break them are being replaced by models that cannot care about the break.\n\nhttps://hafs.dev/blog/2026-11-19-the-glue-is-people-not-models.html\n\n#complex-systems #ai-ethics #infrastructure",
+      "x": "The Glue Is People, Not Models\nhttps://hafs.dev/blog/2026-11-19-the-glue-is-people-not-models.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-19-the-glue-is-people-not-models.html"
+  },
+  {
+    "date": "2026-11-19",
     "title": "Your default proxy is the open door",
     "category": null,
     "tags": [
