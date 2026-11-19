@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your default proxy is the open door - Hafs Ibrahim</title>
+    <meta name="description" content="Your default proxy is the open door">
+    <meta property="og:title" content="Your default proxy is the open door">
+    <meta property="og:description" content="Your default proxy is the open door">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-11-19.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Your default proxy is the open door">
+    <meta name="twitter:description" content="Your default proxy is the open door">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
+    </style>
+    <script defer src="/analytics.js"></script>
+</head>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
+    </div>
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-11-19">
+<header class="seminar__head"><p class="seminar__date">November 19, 2026</p><h1 class="seminar__title">Your default proxy is the open door</h1><p class="seminar__deck">NGINX has been the &#x27;safe&#x27; default for a decade. Two new RCEs prove that ubiquity is not security; it is invisibility.</p></header>
+<div class="seminar__tags"><span>security</span><span>infrastructure</span><span>nginx</span><span>vulnerability-management</span></div>
+<div class="seminar__premise"><p>We treat infrastructure components as static foundations, assuming that if the application code is clean, the server is safe.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>The distinction between &#x27;security by obscurity&#x27; (which fails) and &#x27;security by ubiquity&#x27; (which is worse, because it prevents scrutiny).</p>
+<section class="seminar__section" id="sec-1-the-invisible-load-bearing-wall"><div class="seminar__section-index">01</div><h2>The Invisible Load-Bearing Wall</h2><p>For ten years, NGINX has been the unspoken agreement of the web. It is the reverse proxy, the TLS terminator, the traffic router. It is so common it is boring. It powers more than 225 million websites. Because it is boring, it is trusted. Because it is trusted, it is not scrutinized.</p>
+<p>This trust is a liability. When a component is everywhere, it becomes part of the scenery. Threat models are built around the application logic—the SQL injection, the XSS, the API key leak. The proxy is assumed to be a neutral conduit. It is not. It is a complex state machine handling memory, concurrency, and protocol parsing. And it is currently on fire.</p></section>
+<section class="seminar__section" id="sec-2-the-decade-old-bug-in-the-defaul"><div class="seminar__section-index">02</div><h2>The Decade-Old Bug in the Default Path</h2><p>Wiz Research, along with Ikotas Labs, Metnir, Rapid7, and Xint, independently uncovered two critical vulnerabilities in NGINX: CVE-2026-123633 and CVE-2026-123007. Both are rated Critical with a CVSS 4.0 score of 9.2. They require no authentication. They require no backend application. They require only that you enabled HTTP/2.</p>
+<p>HTTP/2 is the default for modern performance. It is the feature you turned on to reduce latency and improve user experience. But inside that feature, an integer underflow vulnerability has been hiding since version 1.9.5 in 2015. A use-after-free flaw has been lurking for nearly six years. These are not edge cases. They are in the code path that serves ordinary static files.</p>
+<figure class="dgm-figure"><div class="dgm dgm--layered_system" data-diagram="layered_system" id="d20261119-dgm-1"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 640 226" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261119-dgm-1-d-t d20261119-dgm-1-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261119-dgm-1-d-t">The Invisible Attack Surface</title><desc id="d20261119-dgm-1-d-d">Traffic enters the NGINX layer where HTTP/2 parsing occurs, bypassing the secure application layer behind it.</desc><rect x="16" y="16" width="608" height="58" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="50.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Client</text><text x="606" y="50.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">Sends malicious HTTP/2 frames</text><rect x="16" y="84" width="608" height="58" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="118.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">NGINX (Vulnerable)</text><text x="606" y="118.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">Parses HTTP/2; memory corruption…</text><rect x="16" y="152" width="608" height="58" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="34" y="186.0" font-size="16" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Application</text><text x="606" y="186.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="end" font-family="'JetBrains Mono', ui-monospace, monospace">Secure code, but irrelevant; the…</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 242" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261119-dgm-1-m-t d20261119-dgm-1-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261119-dgm-1-m-t">The Invisible Attack Surface</title><desc id="d20261119-dgm-1-m-d">Traffic enters the NGINX layer where HTTP/2 parsing occurs, bypassing the secure application layer behind it.</desc><rect x="12" y="12" width="320" height="66" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="42.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Client</text><text x="28" y="61.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Sends malicious HTTP/2 frames</text><rect x="12" y="88" width="320" height="66" rx="8" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="118.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">NGINX (Vulnerable)</text><text x="28" y="137.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Parses HTTP/2; memory corruption…</text><rect x="12" y="164" width="320" height="66" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="28" y="194.0" font-size="17" font-weight="600" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Application</text><text x="28" y="213.0" font-size="13" font-weight="400" fill="var(--dgm-muted, #6b5b4d)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Secure code, but irrelevant; the…</text></svg></div></div><figcaption>The attack surface is not the app; it is the protocol handler.</figcaption></figure></section>
+<section class="seminar__section" id="sec-3-ai-dissolves-the-complexity-barr"><div class="seminar__section-index">03</div><h2>AI Dissolves the Complexity Barrier</h2><p>For years, the reason these bugs survived was complexity. Memory-safety flaws require tracing subtle interactions between memory operations and multiple code paths. It was a practical barrier to discovery. That barrier is gone. Wiz used AI models (Gemini 4 Carbon and ChatGPT 5.6 Sol) to validate the impact of both vulnerabilities. AI is now following code paths that human researchers would not have had the time or patience to trace manually.</p>
+<p>This is not just a discovery tool; it is a weapon. If AI can find a decade-old bug in the world’s most common web server, it can find it in your codebase. The window between a vulnerability existing in code and it being exploited is shrinking to near zero. Complexity can no longer be relied upon as a defense.</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>You built your security model on the assumption that the &#x27;boring&#x27; parts were safe because they were standard. That assumption was not a defense; it was a blind spot. The most dangerous thing in your stack is the thing you stopped looking at.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> Your reverse proxy is like the foundation of a building. You don&#x27;t inspect the foundation because you can&#x27;t see it, and you assume it&#x27;s concrete. But if the concrete is actually hollow blocks that crumble under specific weather patterns, the whole building falls, regardless of how strong the rooms above are.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> Foundations are static; proxies are dynamic. A foundation doesn&#x27;t parse HTTP headers or manage memory buffers in real-time. The proxy is a living machine, not a slab of stone.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>You are assessing risk for a high-traffic web service</dd><dt>Prefer</dt><dd>Treat infrastructure components (NGINX, Apache, etc.) as active attack surfaces, not neutral pipes. Audit their version history and protocol configurations.</dd><dt>Avoid</dt><dd>Assuming that &#x27;default&#x27; configurations are &#x27;safe&#x27; configurations. Defaults are just what everyone else runs.</dd></dl></div>
+<p class="seminar__finish">Stop trusting the default. Start inspecting the boring.</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://www.wiz.io/blog/nginx-http2-rce-vulnerabilities" target="_blank" rel="noopener">Unauthenticated Remote Code Execution in NGINX: CVE-2026-123633 and CVE-2026-123007</a><span class="kind">ARTICLE</span></li></ol></footer>
+</article>
+    </main>
+</body>
+</html>

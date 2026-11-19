@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-19",
+    "title": "Your default proxy is the open door",
+    "category": null,
+    "tags": [
+      "security",
+      "infrastructure",
+      "nginx",
+      "vulnerability-management"
+    ],
+    "excerpt": "NGINX has been the 'safe' default for a decade. Two new RCEs prove that ubiquity is not security; it is invisibility.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Your default proxy is the open door",
+    "social_teasers": {
+      "linkedin": "Your default proxy is the open door\n\nYour default proxy is the open door\n\nhttps://hafs.dev/blog/2026-11-19.html\n\n#security #infrastructure #nginx",
+      "x": "Your default proxy is the open door\nhttps://hafs.dev/blog/2026-11-19.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-19.html"
+  },
+  {
     "date": "2026-11-18",
     "title": "Base64 is not inert; it is a compiler",
     "category": null,
