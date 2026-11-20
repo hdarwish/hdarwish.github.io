@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-20",
+    "title": "The most effective spam filter is a human in the rain",
+    "category": null,
+    "tags": [
+      "local-first",
+      "security",
+      "spam",
+      "hardware"
+    ],
+    "excerpt": "We spent decades building algorithms to stop spam. The only thing that actually worked was making the target too expensive to reach.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The most effective spam filter is a human in the rain",
+    "social_teasers": {
+      "linkedin": "The most effective spam filter is a human in the rain\n\nThe most effective spam filter is a human in the rain\n\nhttps://hafs.dev/blog/2026-11-20.html\n\n#local-first #security #spam",
+      "x": "The most effective spam filter is a human in the rain\nhttps://hafs.dev/blog/2026-11-20.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-20.html"
+  },
+  {
     "date": "2026-11-19",
     "slug": "2026-11-19-the-glue-is-people-not-models",
     "category": "deep_read",
