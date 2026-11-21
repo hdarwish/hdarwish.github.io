@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redis&#39;s fastest structure was its biggest memory hog - Hafs Ibrahim</title>
+    <meta name="description" content="The Sacred Relic
+For over a decade, the Redis skiplist was treated as a monument to high-performance engineering. It was the structure that made sorted sets...">
+    <meta property="og:title" content="Redis&#39;s fastest structure was its biggest memory hog">
+    <meta property="og:description" content="The Sacred Relic
+For over a decade, the Redis skiplist was treated as a monument to high-performance engineering. It was the structure that made sorted sets...">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-11-21.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Redis&#39;s fastest structure was its biggest memory hog">
+    <meta name="twitter:description" content="The Sacred Relic
+For over a decade, the Redis skiplist was treated as a monument to high-performance engineering. It was the structure that made sorted sets...">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
+    <style>
+        .blog-hero {
+            padding: 8rem 0 3rem;
+            text-align: center;
+            position: relative;
+        }
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 0%, var(--accent-glow) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .blog-post-card {
+            background: var(--surface);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 1px rgba(59, 130, 246, 0.15);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        .blog-post-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 2px rgba(59, 130, 246, 0.25);
+        }
+        .blog-post-date {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .blog-post-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .blog-post-body {
+            font-family: 'Lora', Georgia, serif;
+        }
+        .blog-post-body p {
+            margin-bottom: 1.25rem;
+        }
+        .blog-post-body p:last-child {
+            margin-bottom: 0;
+        }
+        .blog-post-body code {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85em;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: var(--accent-hover);
+        }
+        .blog-post-body pre {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            overflow-x: auto;
+            margin: 1.25rem 0;
+        }
+        .blog-post-body pre code {
+            background: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+        .blog-post-body strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+        .blog-post-body em {
+            color: var(--text);
+            font-style: italic;
+        }
+        .blog-post-body h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--text);
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 1.75rem 0 0.75rem;
+        }
+        .post-nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 6rem 1.5rem 1rem;
+        }
+        .post-nav a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .post-nav a:hover {
+            color: var(--accent);
+        }
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem 4rem;
+        }
+        @media (max-width: 768px) {
+            .blog-post-card {
+                padding: 1.25rem;
+            }
+            .blog-post-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+    <script defer src="/analytics.js"></script>
+</head>
+<body>
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="../index.html" class="nav-logo">H<span class="accent">.</span>I</a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html#about">About</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#skills">Skills</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="post-nav">
+        <a href="../blog.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            All Posts
+        </a>
+    </div>
+
+    <main class="post-content">
+
+        <article class="blog-post-card" id="post-2026-11-21">
+            <div class="blog-post-date">November 21, 2026</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.25rem;"><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">data-structures</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">memory-efficiency</span><span style="font-size:0.7rem;font-family:'JetBrains Mono',monospace;padding:3px 10px;border-radius:20px;background:var(--accent-glow);color:var(--accent-hover);">valkey</span></div>
+            <h2 class="blog-post-title">Redis&#39;s fastest structure was its biggest memory hog</h2>
+            
+            <div class="blog-post-body" style="color:var(--text-muted);font-size:0.92rem;line-height:1.85;"><h2>The Sacred Relic</h2>
+<p>For over a decade, the Redis skiplist was treated as a monument to high-performance engineering. It was the structure that made sorted sets fast, the one that survived the original architecture review, and the one that almost no one dared to touch. It was a latency hack that quietly bankrupted memory efficiency.</p>
+<p>That silence was expensive. Every sorted set larger than the listpack threshold was paying a hidden tax on RAM, not in obvious spikes, but in the quiet, constant accumulation of pointer overhead. We optimized for speed so aggressively that we stopped looking at the cost of holding the data in the first place.</p>
+
+<h2>The Invisible Tax</h2>
+<p>Why did this tax go unnoticed? Because the skiplist’s design is architecturally elegant in a specific, narrow sense: it pairs a hashtable for O(1) lookups by member with the skiplist for O(log n) ordered lookups by rank or score. It solves the problem of <em>finding</em> data quickly. It does not solve the problem of <em>storing</em> data cheaply.</p>
+<p>Look at the raw bytes. A standard skiplist node carries a backward pointer (8 bytes), plus an average of 1.33 levels of forward pointers and span values. Since skiplists are probabilistic, each node has a 25% chance of gaining another level. Each level costs 16 bytes (8 for the pointer, 8 for the span). Add the 8-byte score, and you are looking at roughly 37 bytes of overhead per node <em>before</em> you even count the member string itself.</p>
+<p>This isn't just dead weight; it’s a cache killer. Modern CPUs rely on L1, L2, and L3 caches to avoid the ~100 ns penalty of a DRAM access. A skiplist is a chain of separate heap allocations. Following the structure means dependent fetches: you have to read a pointer to know where to read next. A 2025 study of concurrent in-memory indexes found that traditional skiplists suffered 2.4–4.8× more cache misses than comparable B-trees, resulting in 2–8× lower throughput. We were paying for speed in latency, and we were paying for it again in memory.</p>
+
+<h2>fbtree: The 61-Way Fix</h2>
+<p>Valkey 9.2 replaces the skiplist with <code>fbtree</code>, a high-fanout B+ tree variant. The core shift is structural: instead of one element per node, fbtree packs up to 61 entries into a single 512-byte leaf node. This is the difference between a file cabinet where every drawer holds one paper and a warehouse where every shelf holds a box of sixty papers.</p>
+<p>The fanout matters for two reasons. First, it slashes the per-member pointer overhead. Second, and more critically, it reduces the number of levels you must traverse. The skiplist has an effective branching factor of about 4; fbtree’s is 61. Both are O(log n), but the B+ tree has substantially fewer levels to traverse, meaning fewer opportunities for expensive, dependent memory fetches. A 5-million-member test showed a 36–43% reduction in per-member memory overhead, saving up to 109 MB.</p>
+<p>fbtree also optimizes the lookup path. Inner nodes store a four-byte "feature" alongside each anchor, allowing the CPU to use SIMD instructions to compare features in parallel. Often, the correct child is identified before the child node is even fetched. For range scans, leaf nodes are linked in a doubly-linked list, allowing sequential traversal without climbing back up the tree. It is a data structure that has been explicitly designed for the memory hierarchy of modern hardware.</p>
+
+<h2>The Admission</h2>
+<p>We spent years treating the skiplist as the pinnacle of in-memory performance because it was fast to <em>read</em>. We ignored that it was expensive to <em>keep</em>.</p>
+<p>The 43% reduction isn't a minor optimization; it's the admission that the 'fastest' data structure in Redis was actually the most wasteful one in the stack.</p>
+<p>When you optimize for one metric in isolation, you create a liability in another. The skiplist bought us microseconds of lookup time at the cost of megabytes of wasted RAM and cache coherence. We were building castles on sand, and we didn't notice because the sand was very, very fast to walk on.</p>
+
+<h2>The Portable Lesson</h2>
+<p>The lesson isn't that B+ trees are always better than skiplists. The lesson is that "low latency" is not a monolithic goal. It is a vector with multiple components: cache locality, allocation density, and branch prediction. When a data structure trades density for speed, it imposes a tax on every other component of your system's memory budget.</p>
+<p>Next time you reach for a "fast" data structure, ask what it costs to sit idle. The most expensive line of code is often the one that does nothing but hold a pointer to a place that isn't there.</p></div>
+            <div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid var(--border);"><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin-bottom:0.75rem;">Referenced</div><a href="https://valkey.io/blog/from-skiplist-to-b+tree" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Valkey kills the skiplist, cuts sorted set overhead by up to 43%</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--accent);flex-shrink:0;">▲117</span></a><div style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted);margin:1.25rem 0 0.75rem 0;">Further Reading</div><a href="https://valkey.io/blog/from-skiplist-to-b+tree" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">Valkey: From Skiplists to B+ Trees</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">ARTICLE</span></a><a href="https://en.wikipedia.org/wiki/B%2B_tree" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:1rem;color:var(--text-muted);text-decoration:none;font-size:0.85rem;padding:0.4rem 0;transition:color 0.2s;"><span style="text-decoration:underline;text-decoration-color:var(--border);">B+ Tree</span><span style="font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:var(--accent);flex-shrink:0;letter-spacing:0.08em;">DOCS</span></a></div>
+        </article>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Built by Hafs Ibrahim</p>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

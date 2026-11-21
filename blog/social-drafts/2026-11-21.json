@@ -1,0 +1,27 @@
+{
+  "share_description": "The Sacred Relic\nFor over a decade, the Redis skiplist was treated as a monument to high-performance engineering. It was the structure that made sorted sets...",
+  "social_teasers": {
+    "linkedin": "Redis's fastest structure was its biggest memory hog\n\nThe Sacred Relic\nFor over a decade, the Redis skiplist was treated as a monument to high-performance engineering. It was the structure that made sorted sets...\n\nhttps://hafs.dev/blog/2026-11-21.html\n\n#data-structures #memory-efficiency #valkey",
+    "x": "Redis's fastest structure was its biggest memory hog\nhttps://hafs.dev/blog/2026-11-21.html"
+  },
+  "url": "https://hafs.dev/blog/2026-11-21.html",
+  "title": "Redis's fastest structure was its biggest memory hog",
+  "tags": [
+    "data-structures",
+    "memory-efficiency",
+    "valkey"
+  ],
+  "hn_refs": [
+    {
+      "title": "Valkey kills the skiplist, cuts sorted set overhead by up to 43%",
+      "url": "https://valkey.io/blog/from-skiplist-to-b+tree",
+      "points": 117
+    }
+  ],
+  "source_attribution": {
+    "source_id": "hacker_news",
+    "name": "Hacker News",
+    "tier": 1,
+    "trust_score": 1.0
+  }
+}
