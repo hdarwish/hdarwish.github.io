@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-22",
+    "title": "The $300 Monitor Is Your Network Bottleneck",
+    "category": null,
+    "tags": [
+      "networking",
+      "debugging",
+      "usb",
+      "macos"
+    ],
+    "excerpt": "You profiled the kernel, the ISP, and the Wi-Fi. You missed the USB hub on your desk that was silently dropping one in every four packets.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The $300 Monitor Is Your Network Bottleneck",
+    "social_teasers": {
+      "linkedin": "The $300 Monitor Is Your Network Bottleneck\n\nThe $300 Monitor Is Your Network Bottleneck\n\nhttps://hafs.dev/blog/2026-11-22.html\n\n#networking #debugging #usb",
+      "x": "The $300 Monitor Is Your Network Bottleneck\nhttps://hafs.dev/blog/2026-11-22.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-22.html"
+  },
+  {
     "date": "2026-11-21",
     "title": "Redis's fastest structure was its biggest memory hog",
     "category": null,
