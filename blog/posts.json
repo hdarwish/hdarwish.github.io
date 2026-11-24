@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-24",
+    "title": "The browser monopoly is a cost decision, not a physics law",
+    "category": null,
+    "tags": [
+      "browsers",
+      "open-source",
+      "engineering",
+      "monopoly"
+    ],
+    "excerpt": "Ladybird just hit alpha with a new engine built from scratch. The real news isn't that it works—it's that it didn't require a billion dollars to get there.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The browser monopoly is a cost decision, not a physics law",
+    "social_teasers": {
+      "linkedin": "The browser monopoly is a cost decision, not a physics law\n\nThe browser monopoly is a cost decision, not a physics law\n\nhttps://hafs.dev/blog/2026-11-24.html\n\n#browsers #open-source #engineering",
+      "x": "The browser monopoly is a cost decision, not a physics law\nhttps://hafs.dev/blog/2026-11-24.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-24.html"
+  },
+  {
     "date": "2026-11-23",
     "title": "Your 'Hackable' Router Is a Liability, Not a Feature",
     "category": null,
