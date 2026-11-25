@@ -1,5 +1,25 @@
 [
   {
+    "date": "2026-11-25",
+    "title": "Your sandbox is a shared wire, not a wall",
+    "category": null,
+    "tags": [
+      "AI Security",
+      "Side-Channel Attacks",
+      "Inference Infrastructure"
+    ],
+    "excerpt": "We isolate models to prevent data leakage, but the shared inference infrastructure inadvertently creates a high-bandwidth communication channel.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Your sandbox is a shared wire, not a wall",
+    "social_teasers": {
+      "linkedin": "Your sandbox is a shared wire, not a wall\n\nYour sandbox is a shared wire, not a wall\n\nhttps://hafs.dev/blog/2026-11-25.html\n\n#AISecurity #Side-ChannelAttacks #InferenceInfrastructure",
+      "x": "Your sandbox is a shared wire, not a wall\nhttps://hafs.dev/blog/2026-11-25.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-25.html"
+  },
+  {
     "date": "2026-11-24",
     "title": "The browser monopoly is a cost decision, not a physics law",
     "category": null,
