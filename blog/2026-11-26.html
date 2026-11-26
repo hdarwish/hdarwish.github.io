@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The vault was safe. The client was the hole. - Hafs Ibrahim</title>
+    <meta name="description" content="The vault was safe. The client was the hole.">
+    <meta property="og:title" content="The vault was safe. The client was the hole.">
+    <meta property="og:description" content="The vault was safe. The client was the hole.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hafs.dev/blog/2026-11-26.html">
+    <meta property="og:image" content="https://hafs.dev/og-blog.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The vault was safe. The client was the hole.">
+    <meta name="twitter:description" content="The vault was safe. The client was the hole.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    body.v2-seminar {
+        background: #0e0e11;
+        color: #d9d4cc;
+    }
+
+    /* --- v2 shared: diagrams + progressive enhancement --------------- */
+    .dgm { margin: 0; }
+    .dgm__svg { display: block; }
+    .dgm__mobile { display: none; }
+    @media (max-width: 640px) {
+        .dgm__desktop { display: none; }
+        .dgm__mobile { display: block; }
+    }
+    .dgm-figure { margin: 1.75rem 0; }
+    .dgm-figure figcaption {
+        margin-top: 0.6rem;
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.01em;
+        line-height: 1.55;
+    }
+    .kicker {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.68rem;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        display: inline-block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation-duration: 0.001ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.001ms !important;
+            scroll-behavior: auto !important;
+        }
+        html { scroll-behavior: auto !important; }
+    }
+
+    .seminar {
+        max-width: 40rem;              /* narrow reading measure */
+        margin: 0 auto;
+        padding: 1rem 1.25rem 5rem;
+        font-family: 'Lora', Georgia, serif;
+    }
+    .seminar__date {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #b5541f;
+        margin: 0 0 0.9rem;
+    }
+    .seminar__title {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(1.9rem, 5vw, 2.7rem);
+        line-height: 1.12;
+        color: #f4f1ea;
+        margin: 0 0 0.9rem;
+        letter-spacing: -0.01em;
+    }
+    .seminar__deck {
+        font-size: 1.15rem;
+        line-height: 1.5;
+        color: #b7b0a4;
+        font-style: italic;
+        margin: 0 0 1.5rem;
+    }
+    .seminar__tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2.2rem; }
+    .seminar__tags span {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.66rem; letter-spacing: 0.06em;
+        padding: 3px 9px; border: 1px solid #2c2c31; border-radius: 3px; color: #8f887c;
+    }
+    .seminar__premise {
+        border-left: 2px solid #b5541f;
+        padding: 0.1rem 0 0.1rem 1.1rem;
+        margin: 0 0 1.6rem;
+        font-size: 1.12rem;
+        line-height: 1.7;
+        color: #e7e2d8;
+    }
+    .seminar__spine {
+        margin: 0 0 2.6rem;
+        font-size: 1.02rem;
+        line-height: 1.6;
+        color: #cfc9bd;
+    }
+    .seminar__spine .kicker { color: #b5541f; margin-right: 0.5rem; }
+    .seminar__section { margin: 0 0 2.6rem; position: relative; }
+    .seminar__section-index {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.1em; color: #6f6a60;
+        border-top: 1px solid #26262b; padding-top: 0.5rem; margin-bottom: 0.8rem;
+    }
+    .seminar h2 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.55rem; font-weight: 700; color: #f0ece3;
+        margin: 0 0 1rem; line-height: 1.2;
+    }
+    .seminar h3 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.12rem; color: #e7e2d8; margin: 1.6rem 0 0.6rem;
+    }
+    .seminar p { font-size: 1.05rem; line-height: 1.78; margin: 0 0 1.15rem; }
+    .seminar ul, .seminar ol { margin: 0 0 1.3rem; padding-left: 1.3rem; line-height: 1.7; }
+    .seminar li { margin-bottom: 0.45rem; }
+    .seminar code {
+        font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.85em; background: #1b1b20; color: #e0b089;
+        padding: 1px 6px; border-radius: 4px;
+    }
+    /* warm-paper diagram card floating on the near-black surface */
+    .seminar .dgm-figure .dgm {
+        --dgm-paper:#f7efe0; --dgm-ink:#2a1d12; --dgm-line:#c6b299;
+        --dgm-box:#fbf5e9; --dgm-box-2:#efe2cd; --dgm-accent:#b5541f; --dgm-muted:#7a6753;
+        background: var(--dgm-paper); border-radius: 10px; padding: 1.1rem 1rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    }
+    .seminar .dgm-figure figcaption { color: #bdb6a8; }
+    .seminar__aside {
+        border: 1px solid #2b2b31; border-radius: 8px; padding: 1.1rem 1.2rem;
+        margin: 0 0 2rem; background: #141418;
+    }
+    .seminar__turn .kicker, .seminar__aside .kicker { color: #b5541f; margin-bottom: 0.4rem; }
+    .seminar__turn { margin: 0 0 2rem; }
+    .seminar__turn p { font-size: 1.14rem; color: #ece7dd; line-height: 1.7; }
+    .seminar__decision dl { margin: 0.6rem 0 0; }
+    .seminar__decision dt {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.68rem;
+        text-transform: uppercase; letter-spacing: 0.1em; color: #b5541f; margin-top: 0.7rem;
+    }
+    .seminar__decision dd { margin: 0.15rem 0 0; line-height: 1.6; }
+    .seminar__analogy .analogy__limit { color: #b7b0a4; }
+    .seminar__finish {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-size: 1.32rem; line-height: 1.5; color: #f2eee5;
+        border-top: 1px solid #26262b; padding-top: 1.6rem; margin: 2.4rem 0 2.4rem;
+    }
+    .seminar__sources { border-top: 1px solid #26262b; padding-top: 1.2rem; }
+    .seminar__sources h2 {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 0.76rem;
+        text-transform: uppercase; letter-spacing: 0.14em; color: #b0a898; margin: 0 0 0.9rem;
+    }
+    .seminar__sources ol { list-style: none; margin: 0; padding: 0; }
+    .seminar__sources li {
+        display: flex; gap: 0.7rem; align-items: baseline; padding: 0.4rem 0; font-size: 0.95rem;
+    }
+    .seminar__sources .num {
+        font-family: 'JetBrains Mono', ui-monospace, monospace; color: #cf7a3c; flex-shrink: 0;
+    }
+    .seminar__sources a { color: #ddd7cb; text-decoration: underline; text-decoration-color: #55545c; }
+    .seminar__sources a:hover { color: #f0ece3; }
+    .seminar__sources .kind {
+        margin-left: auto; font-family: 'JetBrains Mono', ui-monospace, monospace;
+        font-size: 0.72rem; letter-spacing: 0.08em; color: #a59d8e; flex-shrink: 0;
+    }
+    </style>
+    <script defer src="/analytics.js"></script>
+</head>
+<body class="v2-seminar">
+    <div class="post-nav" style="max-width:68rem;margin:0 auto;padding:6rem 1.5rem 0;">
+        <a href="../blog.html" style="display:inline-flex;align-items:center;gap:0.5rem;color:inherit;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:0.8rem;opacity:0.75;">← All Posts</a>
+    </div>
+    <main>
+<article class="seminar" data-mode="daily" id="post-2026-11-26">
+<header class="seminar__head"><p class="seminar__date">November 26, 2026</p><h1 class="seminar__title">The vault was safe. The client was the hole.</h1><p class="seminar__deck">1Password’s zero-knowledge model held. The breach happened in the unencrypted layer everyone assumes is invisible: the client-side logic and the backend plumbing that supports it.</p></header>
+<div class="seminar__tags"><span>security</span><span>password-managers</span><span>zero-knowledge</span><span>attack-surface</span></div>
+<div class="seminar__premise"><p>A password manager is a cryptographic promise: the server never sees your secrets. But that promise only works if the software that *wraps* the cryptography is just as unbreachable as the cryptography itself.</p></div>
+<p class="seminar__spine"><span class="kicker">The distinction</span>Zero-knowledge encryption protects data *at rest* and *in transit*. It says nothing about the integrity of the client code, the CI/CD pipeline, or the metadata that surrounds the vault.</p>
+<section class="seminar__section" id="sec-1-the-lock-held-the-hinge-didn-t"><div class="seminar__section-index">01</div><h2>The lock held. The hinge didn’t.</h2><p>When the company that sells you the lock to your digital front door gets picked, you don’t just lose the key—you lose the trust in every other lock you bought from them. That’s the fear 1Password’s users felt in November 2026. But the incident wasn’t what most people assumed it was. The vaults didn’t break. The encryption didn’t fail. The attacker never touched your passwords.
+
+What they *did* touch was the thing you probably don’t think about when you imagine a password manager: the backend services, the CI/CD pipeline, the source code, and the metadata that lives alongside the encrypted vault. The attacker compromised an employee’s GitHub account, pushed malicious code to backend services, and exfiltrated account metadata—names, emails, account identifiers, and provisioning tokens. The vault contents? Untouched. The keys? Safe.
+
+This is the uncomfortable truth: <strong>zero-knowledge encryption is a promise about data, not about code.</strong> It guarantees the server can’t read your secrets. It does *not* guarantee the software that manages your secrets is free of vulnerabilities, or that the infrastructure supporting it is isolated from supply-chain attacks.</p></section>
+<section class="seminar__section" id="sec-2-what-zero-knowledge-actually-cov"><div class="seminar__section-index">02</div><h2>What “zero-knowledge” actually covers</h2><p>Let’s be precise, because the confusion is doing real damage to trust. In a zero-knowledge password manager, your master password never leaves your device. It’s used locally to derive a key that encrypts your vault before the vault ever touches the network. The server stores the encrypted blob. It cannot decrypt it. It doesn’t have the key. This is the model 1Password has used for years, and it worked exactly as designed during this incident.
+
+But the client—the macOS app, the browser extension, the iOS app—is *not* encrypted. It’s running code. That code talks to the backend. It handles provisioning tokens, account recovery flows, and SSO integrations. It’s a large, complex, constantly updated piece of software that must be both responsive and feature-rich. And like all large, complex software, it has an attack surface.
+
+The attacker didn’t need to crack the encryption. They didn’t need to reverse-engineer the key derivation. They needed a GitHub account, a CI/CD pipeline with secrets, and a backend service that trusted the code being deployed to it. They got all three. The encryption was irrelevant to the exploit because the exploit was *outside* the encrypted boundary.</p>
+<figure class="dgm-figure"><div class="dgm dgm--split_process" data-diagram="split_process" id="d20261126-dgm-1"><div class="dgm__desktop"><svg class="dgm__svg dgm__svg--desktop" role="img" viewBox="0 0 680 372" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261126-dgm-1-d-t d20261126-dgm-1-d-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261126-dgm-1-d-t">What’s protected vs. what’s exposed</title><desc id="d20261126-dgm-1-d-d">Left side shows encrypted vault data protected by client-side keys; right side shows unencrypted client logic, CI/CD pipeline, and backend metadata as the actual attack surface</desc><rect x="16" y="16" width="300" height="44" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="166.0" y="43.0" font-size="16" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Protected by zero-knowledge</text><rect x="16" y="78" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="106.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Vault contents</text><rect x="16" y="136" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="164.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Encryption keys</text><rect x="16" y="194" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="222.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Master password (never stored)</text><rect x="16" y="252" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="30" y="280.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Recovery keys (client-held)</text><line x1="340.0" y1="16" x2="340.0" y2="356" stroke="var(--dgm-line, #b9a894)" stroke-width="1" stroke-dasharray="4 5"/><rect x="364" y="16" width="300" height="44" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="514.0" y="43.0" font-size="16" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Attack surface (unencrypted)</text><rect x="364" y="78" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="106.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Client app code</text><rect x="364" y="136" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="164.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Browser extension</text><rect x="364" y="194" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="222.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">CI/CD pipeline</text><rect x="364" y="252" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="280.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">Backend metadata &amp; tokens</text><rect x="364" y="310" width="300" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="378" y="338.0" font-size="14" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="start" font-family="'JetBrains Mono', ui-monospace, monospace">GitHub account / source code</text></svg></div><div class="dgm__mobile"><svg class="dgm__svg dgm__svg--mobile" role="img" viewBox="0 0 344 348" width="100%" height="auto" preserveAspectRatio="xMidYMid meet" aria-labelledby="d20261126-dgm-1-m-t d20261126-dgm-1-m-d" xmlns="http://www.w3.org/2000/svg" focusable="false"><title id="d20261126-dgm-1-m-t">What’s protected vs. what’s exposed</title><desc id="d20261126-dgm-1-m-d">Left side shows encrypted vault data protected by client-side keys; right side shows unencrypted client logic, CI/CD pipeline, and backend metadata as the actual attack surface</desc><rect x="12" y="12" width="150" height="40" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="37.0" font-size="12" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Protected by zero-knowledge</text><rect x="12" y="66" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="93.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Vault contents</text><rect x="12" y="122" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="149.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Encryption keys</text><rect x="12" y="178" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="205.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Master password (never stored)</text><rect x="12" y="234" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="87.0" y="261.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Recovery keys (client-held)</text><line x1="172.0" y1="12" x2="172.0" y2="336" stroke="var(--dgm-line, #b9a894)" stroke-width="1" stroke-dasharray="4 5"/><rect x="182" y="12" width="150" height="40" rx="10" fill="var(--dgm-box-2, #e7dbc7)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="37.0" font-size="12" font-weight="700" fill="var(--dgm-accent, #b5541f)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Attack surface (unencrypted)</text><rect x="182" y="66" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="93.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Client app code</text><rect x="182" y="122" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="149.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Browser extension</text><rect x="182" y="178" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="205.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">CI/CD pipeline</text><rect x="182" y="234" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="261.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">Backend metadata &amp; tokens</text><rect x="182" y="290" width="150" height="46" rx="8" fill="var(--dgm-box, #f4ecdf)" stroke="var(--dgm-line, #b9a894)" stroke-width="1.5"/><text x="257.0" y="317.0" font-size="11" font-weight="500" fill="var(--dgm-ink, #241a12)" text-anchor="middle" font-family="'JetBrains Mono', ui-monospace, monospace">GitHub account / source code</text></svg></div></div><figcaption>The zero-knowledge boundary vs. the actual attack surface</figcaption></figure></section>
+<section class="seminar__section" id="sec-3-the-metadata-is-the-new-password"><div class="seminar__section-index">03</div><h2>The metadata is the new password</h2><p>Here’s the part that should change how you think about password managers. The attacker exfiltrated account metadata: names, emails, account creation dates, last sign-in times, and—critically—provisioning and recovery tokens. 1Password was quick to note that these tokens *cannot* access your account on their own; they require SSO sign-in or a six-digit code sent to your registered email. And as a precaution, they expanded that code from six digits to ten alphanumeric characters, making brute-force guessing “practically impossible.”
+
+But consider the *mechanism*: these tokens are the glue that holds the account together. They’re how you invite a teammate, how you recover access, how you provision a new device. They live in the backend, in the clear, because they need to be validated by the server. They are *not* encrypted by your vault key, because they aren’t vault contents. They’re account infrastructure.
+
+The metric here is <strong>trust scope</strong>. When a password manager is breached, the question isn’t “did they get my passwords?” It’s “did they get the ability to *impersonate* me, to *reset* my account, to *invite* someone else into my vault?” The metadata they stole doesn’t give them your secrets. But it gives them the *leverage* to attempt account takeover, phishing, or social engineering with a level of specificity that a generic attacker wouldn’t have. They know your name, your email, when you signed up, and that you’re using 1Password. That’s not nothing. That’s a head start.</p></section>
+<section class="seminar__section" id="sec-4-the-client-is-the-vault"><div class="seminar__section-index">04</div><h2>The client is the vault</h2><p>This is where the architectural assumption breaks down. The industry—and most users—treat the password manager as two things: the encrypted vault (the good part, the zero-knowledge part) and the client (the boring part, the UI, the autofill, the sync). The client is assumed to be *trusted* because it’s on your device. But the client is also a large, complex, constantly updated piece of software that talks to a backend, manages tokens, handles SSO, and integrates with browsers. It’s a *massive* attack surface, and it’s *not* protected by zero-knowledge encryption because it isn’t data—it’s code.
+
+The consequence is stark: <strong>you can have perfect cryptography and still be compromised by a GitHub account.</strong> The encryption protects your secrets from the server. It does not protect your account from the developer who pushes malicious code, from the CI/CD pipeline that deploys it, or from the backend service that trusts the deployment. The client-side logic is the *actual* trust boundary, and it’s far more fragile than the cryptographic one.
+
+This isn’t a 1Password problem. It’s a *category* problem. Every password manager, every zero-knowledge system, every “the server can’t see your data” model, has this same structural weakness: the cryptography is airtight, but the software around it is a moving target. The more features the client has, the larger the attack surface. The more integrations it supports, the more tokens, the more backend dependencies, the more ways to be compromised without ever touching the encrypted vault.</p></section>
+<div class="seminar__turn"><span class="kicker">The turn</span><p>You’ve been evaluating password managers on the strength of their encryption. You should be evaluating them on the strength of their client code, their CI/CD hygiene, and their metadata isolation. The vault was never the risk. The client was.</p></div>
+<div class="seminar__aside seminar__analogy"><p><span class="kicker">Analogy</span> Zero-knowledge encryption is like a safe with a combination only you know. The bank can’t open it. But the safe sits in a building with a lobby, a front desk, and a keycard system for employees. The attacker doesn’t crack the safe. They compromise the front desk, get the employee keycard, and walk in during business hours. The safe is still locked. But the attacker now knows which customer it belongs to, when they last visited, and how to call them and pretend to be the bank.</p><p class="analogy__limit"><span class="kicker">Where it breaks</span> The analogy breaks down because the client isn’t just a “lobby”—it’s the *entire building*, including the plumbing, the HVAC, and the electrical system. The attack surface is much larger than a single front desk.</p></div>
+<div class="seminar__aside seminar__decision"><span class="kicker">If you're deciding</span><dl><dt>When</dt><dd>Choosing or trusting a password manager after a security incident</dd><dt>Prefer</dt><dd>Ask: “What’s the attack surface of the client, not just the vault?” Look for code audits, CI/CD security, and how metadata is isolated from encrypted data.</dd><dt>Avoid</dt><dd>Assuming “zero-knowledge” means “unbreachable.” It means the server can’t read your secrets. It says nothing about the software that manages them.</dd></dl></div>
+<p class="seminar__finish">The lock held. The hinge didn’t. And the next time you choose a password manager, you’ll know what to ask: not “is my vault encrypted?” but “is your client as unbreachable as your cryptography?”</p>
+<footer class="seminar__sources"><h2>Sources</h2><ol><li id="src-1"><span class="num">[1]</span><a href="https://1password.com/blog/update-on-nov-2026-security-incident" target="_blank" rel="noopener">1Password Security Incident</a><span class="kind">ARTICLE</span></li></ol></footer>
+</article>
+    </main>
+</body>
+</html>

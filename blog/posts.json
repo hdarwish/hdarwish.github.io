@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-26",
+    "title": "The vault was safe. The client was the hole.",
+    "category": null,
+    "tags": [
+      "security",
+      "password-managers",
+      "zero-knowledge",
+      "attack-surface"
+    ],
+    "excerpt": "1Password’s zero-knowledge model held. The breach happened in the unencrypted layer everyone assumes is invisible: the client-side logic and the backend plumbing that supports it.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "The vault was safe. The client was the hole.",
+    "social_teasers": {
+      "linkedin": "The vault was safe. The client was the hole.\n\nThe vault was safe. The client was the hole.\n\nhttps://hafs.dev/blog/2026-11-26.html\n\n#security #password-managers #zero-knowledge",
+      "x": "The vault was safe. The client was the hole.\nhttps://hafs.dev/blog/2026-11-26.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-26.html"
+  },
+  {
     "date": "2026-11-25",
     "title": "Your sandbox is a shared wire, not a wall",
     "category": null,
