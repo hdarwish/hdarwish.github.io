@@ -1,5 +1,26 @@
 [
   {
+    "date": "2026-11-27",
+    "title": "Your infrastructure was never the bottleneck; your attention was",
+    "category": null,
+    "tags": [
+      "self-hosting",
+      "ai-agents",
+      "infrastructure",
+      "cognitive-load"
+    ],
+    "excerpt": "AI didn't fix your Docker Compose files. It removed the cognitive tax of maintaining them, turning a punishing hobby into a sustainable practice.",
+    "hn_refs": [],
+    "further_reading": [],
+    "source_attribution": null,
+    "share_description": "Your infrastructure was never the bottleneck; your attention was",
+    "social_teasers": {
+      "linkedin": "Your infrastructure was never the bottleneck; your attention was\n\nYour infrastructure was never the bottleneck; your attention was\n\nhttps://hafs.dev/blog/2026-11-27.html\n\n#self-hosting #ai-agents #infrastructure",
+      "x": "Your infrastructure was never the bottleneck; your attention was\nhttps://hafs.dev/blog/2026-11-27.html"
+    },
+    "canonical_url": "https://hafs.dev/blog/2026-11-27.html"
+  },
+  {
     "date": "2026-11-26",
     "title": "The vault was safe. The client was the hole.",
     "category": null,
